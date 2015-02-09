@@ -1,0 +1,72 @@
+ <style>
+ table
+ {
+ border-collapse: collapse;
+ }
+  table,th,td {
+    border: 1px solid black;
+	text-align:center;
+	color:#FF0066;
+}
+h2{
+color:#CC0000;
+}
+td{ 
+padding:5px;
+}
+	header {
+    background-color:Orange;
+    color:purple;
+    text-align:center;
+    padding:5px;	 
+    }
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color:#E0E0E0;
+  color:#660000;
+}
+footer {
+    position:fixed;
+    bottom:0;
+	text-align:center;
+	float:right;
+    margin-top:25px;
+	background-color:#484848;
+    color:#00FF33;
+	width:100%;
+}
+.informationContainer{
+float:left;
+margin-left:25px;
+width:400px;
+height: 300px;
+margin-bottom:25px;
+overflow:auto;
+
+}
+.first
+{
+	float:left;
+	width:100px;
+	height:80px;
+	}
+.second
+{
+	float:right;
+	width:100px;
+	height:80px;
+	}
+	.third
+{
+	
+	width:100px;
+	height:80px;
+	}
+pre{
+margin-left:20px;
+margin-right:20px;
+background-color:#FFFF66;
+color:#990033;
+}
+</style>

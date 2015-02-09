@@ -1,20 +1,51 @@
 <!doctype html>
 <html lang="en">
  <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>XAVICA SOFTWARE SOLUTIONS</title>
+<link rel="stylesheet" type="text/css" href="First.css">
+
  </head>
  <body>
-  HOME PAGE
+ <header>
+ <img class="first" src="wel.png" alt="image missing">
+  <img class="second" src="quote.jpg" alt="image missing">	
+<h1><u>XAVICA PROGRAMMERS CHASE</u></h1>
+<img class="third" src="team.jpg" alt="image missing">
+ </header> 
+
+<div>
+<pre>
+<h3>
+     The Kind of Work that has your Fingerprints all over it. The Kind of Work that you'd never Compromise on. you can do that kind of work at <b><i><u>XAVICA.</b></i></u>
+     people don't come here to play it safe. They come here to Swim in the Deep End..They want their work to add up SomeThing...
+
+     Something <b> BIG..</b>Something that Couldn't Happen Anywhere Else..
+
+                                                    	  Welcome to <strong>XAVICA...</strong> 
+</h3></pre>
+</div>
+
+<div class="informationContainer">
+  <h2> GAYATRI S </h1>
+  <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
+	<tr>
+		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
+		<td>   Description about site navigation example </td>
+	</tr>
+	
+</table>
+</div>
  
-
-  <div>
-  <h1> Gayatri </h1>
+<div class="informationContainer">
+ <h2> DHANA LAKSHMI </h1>
   <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
@@ -22,9 +53,13 @@
 </table>
 </div>
 
-<div>
-  <h1> Gayatri </h1>
+<div class="informationContainer">
+  <h2> KIRAN K </h1>
   <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
@@ -32,9 +67,13 @@
 </table>
 </div>
 
-<div>
-  <h1> Dhana Laxmi </h1>
+<div class="informationContainer">
+  <h2> ANURADHA G </h1>
   <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
@@ -42,9 +81,13 @@
 </table>
 </div>
 
-<div>
-  <h1> Kiran </h1>
+<div class="informationContainer">
+  <h2> SIVA J </h1>
   <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
@@ -52,36 +95,26 @@
 </table>
 </div>
 
-<div>
-  <h1> AnooRadha </h1>
+<div class="informationContainer">
+  <h2> JAGAN J </h1>
   <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
 	</tr>
-</table>
-</div>
 
-<div>
-  <h1> Siva J </h1>
-  <table>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
-</table>
-</div>
-
-<div>
-  <h1> Jagan J </h1>
-  <table>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
 </table>
 </div>
 
 
- </body>
+
+ <footer>
+Copyright © xavica.com
+</footer>
+
+</body>
 </html>
