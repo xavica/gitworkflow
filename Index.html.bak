@@ -67,7 +67,10 @@
     <td>  <a href="dhana/myamcat.html"> myamcat </a></td>
     <td>   another Example on developing amcat site </td>
   </tr>
-
+<tr>
+    <td>  <a href="Jagan/photo.html"> smpl page </a></td>
+    <td>   page for photoshop</td>
+  </tr>
 </table>
 </div>
 
@@ -154,6 +157,10 @@
   <tr>
     <td>  <a href="Jagan/first.html"> simple page </a></td>
     <td>   first html code </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/photo.html"> smpl page </a></td>
+    <td>   page for photoshop</td>
   </tr>
 </table>
 </div>
