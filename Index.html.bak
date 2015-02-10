@@ -85,6 +85,15 @@
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
 	</tr>
+  <tr>
+    <td>  <a href="dhana/amcat.html"> amcat </a></td>
+    <td>   Example on developing amcat site </td>
+  </tr>
+  <tr>
+    <td>  <a href="dhana/myamcat.html"> myamcat </a></td>
+    <td>   another Example on developing amcat site </td>
+  </tr>
+
 </table>
 </div>
 
@@ -131,6 +140,10 @@
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
 	</tr>
+   <tr>
+    <td>  <a href="Siva/myamcat.html"> myamcat </a></td>
+    <td>    Example on developing amcat site </td>
+  </tr>
 </table>
 </div>
 
