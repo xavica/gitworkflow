@@ -15,7 +15,7 @@
 <div>
 <pre>
 <h3>
-     The Kind of Work that has your Fingerprints all over it. The Kind of Work that you'd never Compromise on. you can do that kind of work at <b><i><u>XAVICA.</b></i></u>
+     The Kind of Work that has your Fingerprints all over it. The Kind of Work that you'd never Compromise on. you can do that kind of work at Here...
      people don't come here to play it safe. They come here to Swim in the Deep End..They want their work to add up SomeThing...
 
      Something <b> BIG..</b>Something that Couldn't Happen Anywhere Else..
@@ -35,7 +35,42 @@
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
 	</tr>
-	
+	<tr>
+	     <td>  <a href="gayatri/test.html"> Test </a></td>
+		 <td>   this is a test file </td>
+	</tr>
+	<tr>
+		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
+		<td>   Description about site navigation example </td>
+	</tr>
+	<tr>
+	     <td>  <a href="gayatri/test.html"> Test </a></td>
+		 <td>   this is a test file </td>
+	</tr>
+	<tr>
+		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
+		<td>   Description about site navigation example </td>
+	</tr>
+	<tr>
+	     <td>  <a href="gayatri/test.html"> Test </a></td>
+		 <td>   this is a test file </td>
+	</tr>
+	<tr>
+		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
+		<td>   Description about site navigation example </td>
+	</tr>
+	<tr>
+	     <td>  <a href="gayatri/test.html"> Test </a></td>
+		 <td>   this is a test file </td>
+	</tr>
+	<tr>
+		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
+		<td>   Description about site navigation example </td>
+	</tr>
+	<tr>
+	     <td>  <a href="gayatri/test.html"> Test </a></td>
+		 <td>   this is a test file </td>
+	</tr>
 </table>
 </div>
  
@@ -77,6 +112,10 @@
 	<tr>
 		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
 		<td>   Description about site navigation example </td>
+	</tr>
+	<tr>
+		<td>  <a href="gayatri/frames.html"> frames </a></td>
+		<td>   Description on frames example </td>
 	</tr>
 </table>
 </div>

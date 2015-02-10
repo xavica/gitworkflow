@@ -3,13 +3,14 @@
  {
  border-collapse: collapse;
  }
-  table,th,td {
+  th,td {
     border: 1px solid black;
 	text-align:center;
 	}
 	th
 	{color:#FF0066;
 	}
+
 h2{
 color:#CC0000;
 }
@@ -32,7 +33,6 @@ footer {
     position:fixed;
     bottom:0;
 	text-align:center;
-	float:right;
     margin-top:25px;
 	background-color:#484848;
     color:#00FF33;
