@@ -199,6 +199,10 @@
     <td>  <a href="Jagan/div.html"> div page</a></td>
     <td>   partioning using #</td>
   </tr>
+  <tr>
+    <td>  <a href="Jagan/mous.html"> div page mouseover</a></td>
+    <td>    text highligthng with colors </td>
+  </tr>
 </table>
 </div>
 <div class="informationContainer">
