@@ -86,6 +86,14 @@
     <td>  <a href="kiran/myamcat.html">myamcat </a></td>
     <td>   have done an example on myamcat site </td>
   </tr>
+  <tr>
+    <td>  <a href="kiran/div,paragraph.html">tag </a></td>
+    <td>   have done an example on tags </td>
+     <tr>
+    <td>  <a href="kiran/sub,sup,u,em,strong,br,hr.html">tags </a></td>
+    <td>   have done an example on tags </td>
+  </tr>
+  </tr>
 </table>
 </div>
 
