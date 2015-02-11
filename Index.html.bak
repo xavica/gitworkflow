@@ -7,7 +7,7 @@
  <body>
  <header>
  <img class="first" src="wel.png" alt="image missing">
-  <img class="second" src="quote.jpg" alt="image missing">	
+  <img class="second" src="quote.jpg" alt="image missing">  
 <h1><u>XAVICA PROGRAMMERS CHASE</u></h1>
 <img class="third" src="team.jpg" alt="image missing">
  </header> 
@@ -20,7 +20,7 @@
 
      Something <b> BIG..</b>Something that Couldn't Happen Anywhere Else..
 
-                                                    	  Welcome to <strong>XAVICA...</strong> 
+                                                        Welcome to <strong>XAVICA...</strong> 
 </h3></pre>
 </div>
 
@@ -31,11 +31,20 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
-	
+
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+       <td>  <a href="gayatri/test.html"> Test </a></td>
+     <td>   this is a test file </td>
+  
+  <tr>
+    <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
+    <td>   Replica of ClearTrip.com </td>
+  </tr>
+  
 </table>
 </div>
  
@@ -46,10 +55,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
   <tr>
     <td>  <a href="dhana/amcat.html"> amcat </a></td>
     <td>   Example on developing amcat site </td>
@@ -69,10 +78,14 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+    <td>  <a href="kiran/myamcat.html">myamcat </a></td>
+    <td>   have done an example on myamcat site </td>
+  </tr>
 </table>
 </div>
 
@@ -83,10 +96,21 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
+
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/frames.html"> fr </a></td>
+    <td>   Description on frames example </td>
+  </tr>
+=======
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+
 </table>
 </div>
 
@@ -97,10 +121,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
    <tr>
     <td>  <a href="Siva/myamcat.html"> myamcat </a></td>
     <td>    Example on developing amcat site </td>
@@ -115,11 +139,22 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
-
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/fir.html"> Result page </a></td>
+    <td>   displaying hallticket number </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/result.html"> Result  marks page </a></td>
+    <td>   displaying the student result </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/first.html"> simple page </a></td>
+    <td>   first html code </td>
+  </tr>
 </table>
 </div>
 
