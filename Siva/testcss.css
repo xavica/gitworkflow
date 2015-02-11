@@ -85,3 +85,93 @@ background-color: buttonface;
 box-sizing: border-box;
 }
 }
+
+/* styling classes For bbc website */
+.hero2 ..hero_image_link .hero_image_overlay .hero_image_overlay_text .hero_title .hero_summary
+{display: block;
+-webkit-font-smoothing:antialiased;
+font-family: arial,sans-serif;
+}
+
+.hero2
+{
+	margin-bottom: 16px;
+	line-height: 1.308em;
+	    font-size: 1.4em;
+    color: #3c3c3c;
+    font: 62.5%/1 verdana,helvetica,arial,sans-serif;
+}
+.hero_image_link
+{
+	color: #000;
+font-weight: bold;
+letter-spacing: -0.4px;
+
+position: relative;
+margin-bottom: 4px;
+text-decoration: none;
+cursor: auto;
+line-height: 1.308em;
+zoom: 1;
+
+font-size: 1.4em;
+}
+.hero_image_overlay
+{
+
+position: absolute;
+width: 100%;
+z-index: 10;
+color: #000;
+font-weight: bold;
+letter-spacing: -0.4px;
+cursor: auto;
+line-height: 1.308em;
+zoom: 1;
+
+font-size: 1.4em;
+font: 62.5%/1 verdana,helvetica,arial,sans-serif;
+}
+.hero_image_overlay_text
+{
+	
+position: absolute;
+width: 100%;
+z-index: 10;color: #000;
+font-weight: bold;
+letter-spacing: -0.4px
+cursor: auto;
+line-height: 1.308em;
+zoom: 1;
+
+font-size: 1.4em;
+font: 62.5%/1 verdana,helvetica,arial,sans-serif;
+}
+.hero_title
+{
+font-weight: bold;
+letter-spacing: -1px;
+font-size: 1.714em;
+
+color: #fff;
+line-height: 1.222em;
+cursor: auto;
+zoom: 1;
+
+font: 62.5%/1 verdana,helvetica,arial,sans-serif;
+}
+.hero_summary
+{
+
+color: rgb(60, 60, 60);
+
+font-size: 14px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 32px;
+letter-spacing: normal;
+line-height: 16.996000289917px;
+width: 624px;
+zoom: 1;
+}
