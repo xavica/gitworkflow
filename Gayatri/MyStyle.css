@@ -1,42 +1,16 @@
 <style>
-div
-{
 
-}
-h1 {
-font-weight: bold;
-font-size: 36px;
-margin-bottom: 10px;
-line-height: 30px;
-font-style: normal;
-font-family: inherit;
-text-align: center;
+body div h1
+{
+	text-align: center;
 }
 .subTitle {
 font-size: 20px;
 color: #999;
+margin-top: -10px;
 margin-bottom: 15px;
 text-align: center;
 }
-strong {
-margin: 0;
-padding: 0;
-border: 0;
-font-style: normal;
-font-size: 100%;
-line-height: 1;
-font-family: inherit;
-}
-strong, b {
-font-weight: bold;
-}
-col6.andAhalf {
-width: 25.66%;
-}
-fieldset { overflow:hidden }
-.controls{ 
-	float:left; 
-	clear:none; }
 strong{
  float:left; 
  clear:none; 
@@ -45,15 +19,19 @@ strong{
   margin-right: 25px;
  
 }
+.controls {
+float: left;
+clear: none;
+}
+div {
+display: block;
+}
 input[type=radio],
  input.radio { 
  	float:left; 
  	clear:none; 
  	margin: 2px 0 0 2px; }
- 	.inlinediv
- 	{
- 		display: inline;
- 	}
+ 	
  	dt {
 float: left; 
 width: 300px; 
@@ -63,27 +41,82 @@ select
   width:80px;
 margin-right:25px;
 }
-table
-{
-text-align:left;
-}
+
 small
 {
 	color:grey;
 }
 .button
 {
-	
-margin-left: 500px;
-border-top: 1px dotted #ddd;
-border-bottom: 1px dotted #ddd;
+
+margin-left: 450px;
 padding-top: 10px;
-text-align: right;
+padding-bottom: 10px;
+text-align: center;
 background-color: #ff9333;
 font-weight: bold;
 color: white;
 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-border-radius:5px;
+border-radius:10px;
+width: 120px;
 
 }
+.more
+{
+	color:#0066CC;
+	text-decoration: none;
+
+}
+.hdr
+{
+	height: 47px;
+	background-color: lightgrey;
+	color: #777;
+}
+	#nav
+	{
+	line-height: 47px;
+background-color: #eeeeee;
+width: 100px;
+float: left;
+padding: 5px;
+width: 250;
+margin-left: -400;
+}
+#section {
+    width:600px;
+    float:left;
+    padding:10px;
+    margin-left: -120px;	 	 
+}
+#footer {
+    position:fixed;
+    bottom:0;
+	text-align:center;
+    margin-top:25px;
+	background-color:white;
+   	width:100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#right {
+    line-height:47px;
+    background-color:#eeeeee;
+    width:300px;
+    float:left;
+    padding:5px;	      
+}
+#header {
+    background-color:#eeeeee;
+    color:white;
+    text-align:center;
+    padding:5px;
+    height: 35px;
+}
+.logo
+{
+	float:left;
+	width:100px;
+	height:120px;
+	}
 
