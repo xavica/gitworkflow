@@ -175,6 +175,10 @@
     <td>  <a href="Jagan/first.html"> simple page </a></td>
     <td>   first html code </td>
   </tr>
+  <tr>
+    <td>  <a href="Jagan/div.html"> div page</a></td>
+    <td>   partioning using #</td>
+  </tr>
 </table>
 </div>
 
