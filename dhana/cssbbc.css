@@ -1,0 +1,49 @@
+<style>
+.first
+{
+	display: block;
+	font-weight: normal;
+color: #4c4c4c;
+margin-bottom: 20px;
+background-color: #dcdcdc;
+}
+.media_image img {
+display: block;
+font-weight: normal;
+color: #4c4c4c;
+}
+img
+ {
+width: 250px;
+height: 100px;
+}
+
+.container {
+zoom: 1;
+}
+.media_link {
+
+line-height: 1.214em;
+
+
+}
+.module2 a {
+
+letter-spacing: -0.4px;
+}
+a:-webkit-any-link {
+cursor: auto;
+}
+img[Attributes Style] {
+width: 144px;
+height: 81px;
+}
+.wwhp {
+-webkit-font-smoothing: antialiased;
+
+}
+body {
+
+font: 62.5%/1 verdana,helvetica,arial,sans-serif;
+}
+</style>
