@@ -16,4 +16,20 @@ height: 100px;
 .container {
 zoom: 1;
 }
+.media_title
+{
+	color: #4c4c4c;
+font-weight: bold;
+letter-spacing: -0.4px;
+line-height: 1.214em;
+}
+media_image
+{
+	display: block;
+	display: block;
+	font-weight: normal;
+color: #4c4c4c;
+margin-bottom: 20px;
+background-color: #dcdcdc;
+}
 </style>
