@@ -1,0 +1,19 @@
+<style>
+.first
+{
+	display: block;
+	font-weight: normal;
+color: #4c4c4c;
+margin-bottom: 20px;
+background-color: #dcdcdc;
+}
+img
+ {
+width: 250px;
+height: 100px;
+}
+
+.container {
+zoom: 1;
+}
+</style>
