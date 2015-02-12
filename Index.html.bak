@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
  <head>
 <link rel="stylesheet" type="text/css" href="First.css">
@@ -43,6 +43,11 @@
   <tr>
     <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
     <td>   Replica of ClearTrip.com </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
+    <td>   Revise of previous ClearTrip.com </td>
   </tr>
   
 </table>
@@ -197,10 +202,23 @@
   </tr>
 </table>
 </div>
-
-
-
- <footer>
+<div class="informationContainer">
+  <h2> SAI KRISHNA </h1>
+  <table>
+    <tr>
+       <th>PROGRAM</th>
+       <th>DESCRIPTION</th> 
+    </tr>
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+<tr>
+    <td>  <a href="Saikrishna/doc.docx"> document </a></td>
+    <td>   seo document file </td>
+  </tr>
+  
+<footer>
 Copyright © xavica.com
 </footer>
 
