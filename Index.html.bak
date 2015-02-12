@@ -32,14 +32,14 @@
        <th>DESCRIPTION</th> 
     </tr>
 
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
-	<tr>
-	     <td>  <a href="gayatri/test.html"> Test </a></td>
-		 <td>   this is a test file </td>
-	
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+       <td>  <a href="gayatri/test.html"> Test </a></td>
+     <td>   this is a test file </td>
+  
   <tr>
     <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
     <td>   Replica of ClearTrip.com </td>
@@ -114,14 +114,14 @@
        <th>DESCRIPTION</th> 
     </tr>
 
-	<tr>
-		<td>  <a href="gayatri/site.html"> site Navigation </a></td>
-		<td>   Description about site navigation example </td>
-	</tr>
-	<tr>
-		<td>  <a href="gayatri/frames.html"> fr </a></td>
-		<td>   Description on frames example </td>
-	</tr>
+  <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/frames.html"> fr </a></td>
+    <td>   Description on frames example </td>
+  </tr>
 =======
   <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
@@ -214,9 +214,10 @@
     <td>   Description about site navigation example </td>
   </tr>
 <tr>
-    <td>  <a href="doc.docx"> document </a></td>
+    <td>  <a href="Saikrishna/doc.docx"> document </a></td>
     <td>   seo document file </td>
   </tr>
+  
 <footer>
 Copyright © xavica.com
 </footer>
