@@ -1,0 +1,208 @@
+/* styling for myamcat site */
+.content-section 
+{
+padding: 10px 0;
+float: left;
+width: 100%;
+position: relative;
+}
+.slider-content-section
+{
+	float: left;
+}
+.tabing{
+	float: left;
+}
+.slider .slider-content
+{
+float: left;
+width: 100%;
+height: 299px;
+text-align: center;
+position: relative;
+}
+div user agent style
+{
+display: block;
+}
+body 
+{
+font-family: Arial, Halvetica, Serif, Sans-Serif;
+font-size: 13px;
+color: #424242;
+font-weight: normal;
+}
+.slider .tabing
+ {
+background: #474747;
+float: left;
+width: 100%;
+height: 75px;
+}
+.slider .tab
+{
+display: block;
+font-family: Arial, Halvetica;
+font-weight: 500;
+font-style: italic;
+font-size: 12px;
+color: #fff;
+}
+table
+{
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+border-collapse: separate;
+border-spacing: 2px;
+}
+.slider .tabing td 
+{
+width: 25%;
+border-right: 1px solid #fff;
+}
+td[Attributes Style] {
+text-align: -webkit-left;
+vertical-align: middle;
+}
+td, th 
+{
+display: table-cell;
+}
+.news-list
+ {
+width: 32%;
+padding: 0;
+}
+.list-box 
+{
+float: left;
+border: 1px solid #c8caca;
+box-shadow: #fff 0px 0px 0px;
+position: relative;
+}
+.slider .tabing td span 
+{
+display: block;
+padding: 0;
+text-align: center;
+width: auto;
+padding: 5px;
+}
+.news-list .heading 
+{
+background: #e26813;
+float: left;
+width: 100%;
+height: 41px;
+position: relative;
+z-index: 100;
+}
+.news-list .list-content
+{
+width: 100% !important;
+float: left;
+background: #fff;
+padding: 8px 0;
+position: relative;
+z-index: 99;
+}
+.list-content .scroll-pane ul
+{
+height: 318px;
+overflow: auto;
+width: 100% !important;
+}
+.jspContainer 
+{
+overflow: hidden;
+position: relative;
+}
+.jspPane 
+{
+position: absolute;
+}
+.news-list-ul span {
+padding-bottom: 4px !important;
+padding-right: 10px !important;
+}
+.list-content .title 
+{
+display: block;
+font-size: 13px;
+color: #196e9e;
+font-weight: bold;
+}
+li 
+{
+display:
+list-item;
+text-align: -webkit-match-parent;
+}
+.list-content .posted 
+{
+font-size: 11px;
+color: #91a0a7;
+float: right;
+font-weight: normal !important;
+}
+.news-list-ul span {
+padding-bottom: 4px !important;
+padding-right: 10px !important;
+}
+.list-content .title {
+display: block;
+font-size: 13px;
+color: #196e9e;
+font-weight: bold;
+}
+.posted
+{
+font-size: 11px;
+color: #91a0a7;
+float: right;
+font-weight: normal !important;
+}
+.book-test {
+margin-right: 7px;
+padding-right: 0;
+display: inline;
+float: right;
+border: 1px solid #c8caca;
+box-shadow: #fff 0px 0px 0px;
+}
+.book-test .heading {
+float: left;
+width: 100%;
+height: 41px;
+background: #303030;
+}
+.book-test .icon {
+background: #000 url(https://s3.amazonaws.com/myamcatimages/new_images/sprite.png) no-repeat -33px -256px;
+float: left;
+width: 40px;
+height: 41px;
+margin-right: 11px;
+}
+.book-test .form-content {
+float: left;
+width: 100%;
+height: 334px;
+background: #cb261f;
+}
+.book-test .row {
+float: left;
+width: 100%;
+padding-top: 10px;
+}
+.book-test .textfield {
+width: 86%;
+.book-test .textfield {
+float: left;
+margin-left: 7%;
+display: inline;
+border: 1px solid #a61c16;
+background: #fff;
+height: 35px;
+}

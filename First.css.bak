@@ -7,19 +7,21 @@
     border: 1px solid black;
 	text-align:center;
 	}
+
 	th
-	{color:#FF0066;
+	{
+		color:#810541;
 	}
 
 h2{
-color:#CC0000;
+color:#8C001A;
 }
 td{ 
 padding:5px;
 }
 	header {
-    background-color:Orange;
-    color:purple;
+    background-color:#98AFC7;
+    color:#B048B5;
     text-align:center;
     padding:5px;	 
     }
@@ -44,7 +46,7 @@ margin-left:25px;
 width:400px;
 height: 300px;
 margin-bottom:25px;
-overflow:scroll;
+overflow:auto;
 
 }
 .first
@@ -68,7 +70,7 @@ overflow:scroll;
 pre{
 margin-left:20px;
 margin-right:20px;
-background-color:#FFFF66;
+background-color:#CCCCCC;
 color:#990033;
 }
 </style>
