@@ -44,6 +44,11 @@
     <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
     <td>   Replica of ClearTrip.com </td>
   </tr>
+
+  <tr>
+    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
+    <td>   Revise of previous ClearTrip.com </td>
+  </tr>
   
 </table>
 </div>
@@ -117,7 +122,6 @@
     <td>  <a href="gayatri/frames.html"> fr </a></td>
     <td>   Description on frames example </td>
   </tr>
-=======
   <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
@@ -137,11 +141,7 @@
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
   </tr>
-   <tr>
-    <td>  <a href="Siva/myamcat.html"> myamcat </a></td>
-    <td>    Example on developing amcat site </td>
-  </tr>
-   <tr>
+     <tr>
     <td>  <a href="Siva/About.html"> About xavica </a></td>
     <td>    Just Introduction about xavica </td>
   </tr>
@@ -164,6 +164,10 @@
   <tr>
     <td>  <a href="Siva/bbcwebsite.html">bbc website dummy </a></td>
     <td>     dummt bbc website have done for practising </td>
+     <tr>
+    <td>  <a href="Siva/myamcat.html"> myamcat-revised </a></td>
+    <td>    Example on developing amcat site </td>
+  </tr>
   </tr>
 </table>
 </div>
