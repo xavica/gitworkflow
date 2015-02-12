@@ -1,0 +1,59 @@
+#header {
+    width: 100%;
+    background-color: purple;
+    height: 50px;
+    color:white;
+    text-align: center;
+}
+
+#first {
+    width: 80px;
+    float: left;
+    height: 50px;
+        background-color: blue;
+        margin-right: 15px;
+
+}
+#second {
+    width: 80px;
+    float: left;
+    height: 50px;
+    background-color: green;
+    margin-right: 15px
+}
+#third {
+    width: 80px;
+    background-color:red;
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+}
+
+#fourth {
+    width: 80px;
+    background-color: #ffcc33;
+    height: 50px;
+     float: left;
+    margin-right: 5px;
+}
+#one
+{
+    background-color: blue;
+    color: white;
+}
+#two
+{
+    background-color: green;
+    color: white;
+}
+#three
+{
+    background-color: red;
+    color: white;
+}
+#four
+{
+    background-color: #ffcc33;
+    color: white;
+}
+

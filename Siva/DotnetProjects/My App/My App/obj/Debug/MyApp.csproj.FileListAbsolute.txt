@@ -1,0 +1,8 @@
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\bin\Debug\My App.exe.config
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\bin\Debug\My App.exe
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\bin\Debug\My App.pdb
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\bin\Debug\My Library.dll
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\bin\Debug\My Library.pdb
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\obj\Debug\MyApp.csprojResolveAssemblyReference.cache
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\obj\Debug\My App.exe
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My App\obj\Debug\My App.pdb
