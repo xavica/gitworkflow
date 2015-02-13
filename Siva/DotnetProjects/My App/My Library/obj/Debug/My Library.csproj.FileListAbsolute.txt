@@ -1,0 +1,5 @@
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My Library\bin\Debug\My Library.dll
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My Library\bin\Debug\My Library.pdb
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My Library\obj\Debug\My Library.dll
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My Library\obj\Debug\My Library.pdb
+C:\Users\Siva\Documents\Visual Studio 2013\Projects\My App\My Library\obj\Debug\My Library.csprojResolveAssemblyReference.cache
