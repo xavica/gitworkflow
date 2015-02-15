@@ -5,3 +5,5 @@ F:\Practise_C#\G3_ConsoleApp1\G3_ConsoleApp1\obj\x86\Debug\G3_ConsoleApp1.exe
 F:\Practise_C#\G3_ConsoleApp1\G3_ConsoleApp1\obj\x86\Debug\G3_ConsoleApp1.pdb
 F:\Practise_C#\G3_ConsoleApp1\G3_ConsoleApp1\bin\Debug\MyClassLibrary_G3.dll
 F:\Practise_C#\G3_ConsoleApp1\G3_ConsoleApp1\bin\Debug\MyClassLibrary_G3.pdb
+F:\XAVICA\GitHub\gitworkflow\Gayatri\G3_ConsoleApp1\G3_ConsoleApp1\obj\x86\Debug\G3_ConsoleApp1.exe
+F:\XAVICA\GitHub\gitworkflow\Gayatri\G3_ConsoleApp1\G3_ConsoleApp1\obj\x86\Debug\G3_ConsoleApp1.pdb
