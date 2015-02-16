@@ -5,7 +5,7 @@ function changeColor() {
     if (x == 1) 
     {
     	var col = document.getElementById("first");
-    	col.style.backgroundColor =colors[Math.floor((Math.random()*8)+1)];
+    	col.style.backgroundColor = colors[Math.floor((Math.random()*8)+1)];
 	
 	}
 	if (x == 2) 
