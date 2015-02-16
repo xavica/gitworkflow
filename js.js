@@ -23,3 +23,8 @@ document.getElementById('div').onclick = function()
 var y = +document.getElementById('secondNumber').value;
  document.getElementById('result').value = x/y; 
 }
+{
+	var x = +document.getElementById('firstNumber').value;
+var y = +document.getElementById('secondNumber').value;
+ document.getElementById('result').value = x/y; 
+}
