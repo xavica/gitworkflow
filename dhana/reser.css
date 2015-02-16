@@ -1,0 +1,69 @@
+<html>
+<head>
+Introduction css
+<title>
+</title>
+<style>
+
+/*P{background-color: orange;
+text-decoration: underline;
+text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+text-transform: uppercase;
+text-shadow:5px 10px 10px #ff0000;
+}*/
+/*p{background-color: red;
+widht:200px
+padding:60px
+border:10px solid;
+margin: 60px;}
+
+figure{margin-top: 30px;
+margin-bottom: 30px;
+margin-left: 0}
+li{margin-bottom: 5px;
+margin-top: 5px;}
+body{max-width:1200px;
+margin:0 auto;
+padding:60px;}*/
+body{max-width:1200px;
+margin:0 auto;
+/*padding: 60px;*/
+
+background-image: url(Jellyfish.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+color: rgb(250,250,250);
+}
+h1{font-size: 42px;
+padding-top: 60px;}
+
+table{background-color: orange;
+}
+caption{font-size: 27px;
+margin-top: 40px;
+text-align: left;
+margin-bottom: 20px;
+color: pink}
+th{text-align: left;
+	color: pink;
+padding-right: 30px;}
+td{padding-right: 30px;
+padding-top: 10px;}
+input{margin-left: 10px;
+padding-top: 10px;
+/*border: none;*/
+background-color: rgb(247,247,247);}
+textarea{background-color: rgb(247,247,247);
+	border:none;
+}
+fieldset{width: 400px;}
+button{padding:10px;
+background-color: rgb(150,120,120);
+color: rgb(247,200,200);}
+button:hover{background-color: orange;}
+main{background-color: rgba(0,0,0,.5);
+padding:60px;}
+</style>
+</head>
