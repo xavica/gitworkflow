@@ -149,6 +149,14 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+   <tr>
+    <td>  <a href="Siva/ChatBox.html"> Chatbox </a></td>
+    <td>    just a chat box not in executed mode</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/ChatBoxrevised.html"> Virtual chatbox</a></td>
+    <td>    its a virtual chatbox where we have sent the data to the chatroom</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/ButtonColors.html"> onclick action </a></td>
     <td>    This gives you the changing of colors while clicking on the button </td>
@@ -248,13 +256,8 @@
     <td>   requirement activites </td>
   </tr>
   <tr>
-<<<<<<< HEAD
     <td>  <a href="Saikrishna/saikrishna5.docx"> document file </a></td>
     <td>  requirements traceablity </td>
-=======
-    <td>  <a href="Saikrishna/saikrishna1.docx"> document file </a></td>
-    <td> when requirements get together </td>
->>>>>>> 1215d9b66c95c964516ac51fcb2f8fa99e66c739
   </tr>
 
 <footer>
