@@ -1,0 +1,101 @@
+
+#header {
+  
+    
+    font-weight: bold;
+    height: 30px;
+    padding: 5px;
+    border-bottom: 1px solid grey;
+
+}
+
+
+#nav {
+    
+    width:192px;
+    float:left;
+     border: 1px solid white;
+}
+
+#section1 {
+    width:630px;
+    float:left;
+    padding:10px;
+    border: 1px solid white;
+  	 	 
+}
+#section2
+{
+    
+    width: 320px;
+     border: 1px solid white;
+     float: left;
+     line-height: 20px;
+
+}
+#right-border {
+   
+    width:100px;
+    float:left;
+     border: 1px solid white;
+}
+#rt
+{
+       border-right: 1px solid black;
+       padding: 5px;
+       width: 50px; 
+       margin-right: 15px;
+}
+#mg1
+{
+    width: 627px;
+    height: 301px;
+    
+}
+#mg2
+{
+    width: 300px;
+    height: 180px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#mgrn
+{
+      margin-bottom:20px
+}
+#one
+{
+    width:140px;
+    height: 100px;
+    float: left;
+    margin-right:  15px;
+}
+#two
+{
+    width:140px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+}
+#three
+{
+    width:140px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+}
+#four
+{
+    width:140px;
+    height: 100px;
+    float: left;
+   
+}
+#s_img
+{
+    width: 140px;
+    height: 100px;
+}
+
+
+

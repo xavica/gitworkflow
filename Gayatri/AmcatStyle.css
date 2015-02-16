@@ -1,0 +1,51 @@
+#header {
+    
+    height: 28px;
+    color:white;
+    border-bottom: 1px solid grey;
+    background-color: #282828;
+
+}
+#section
+{
+	height: 90px;
+	background-color: skyblue;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#section_t2
+{
+	height: 35px;
+    border-bottom: 1px solid grey;
+    background-color: #282828;
+    color:white;
+
+}
+li
+{
+	display: inline;
+	margin-right: 40px;
+	border-right: 1px solid lightgrey;
+	margin-left: 10px;
+	font-weight: bold;
+}
+#section_t3
+{
+	height:420px;
+	width: 1350px;
+	float: left;
+	background-color: skyblue;
+	border: 1px solid red;
+}
+#section_t31
+{
+	width: 650px;
+}
+#section_t32
+{
+	width: 340px;
+}
+#section_t33
+{
+	width: 340px;
+}
