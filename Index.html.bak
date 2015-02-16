@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
  <head>
 <link rel="stylesheet" type="text/css" href="First.css">
@@ -207,7 +207,6 @@
     <td>  <a href="Jagan/div.html"> div page</a></td>
     <td>   partioning using #</td>
   </tr>
-<<<<<<< HEAD
   <tr>
     <td>  <a href="Jagan/mous.html"> div page mouseover</a></td>
     <td>    text highligthng with colors </td>
@@ -216,8 +215,6 @@
     <td>  <a href="Jagan/js.html">javascript pro. </a></td>
     <td>  simple javascript for arithmetic op..</td>
   </tr>
-=======
->>>>>>> 173eeebf2d76dbeb1442c6bf3688b9ae52a9d5cc
 </table>
 </div>
 <div class="informationContainer">
@@ -240,9 +237,9 @@
     <td>   requirement activites </td>
   </tr>
   <tr>
-    <td>  <a href="Saikrishna/saikrishna1.docx"> document file </a></td>
-    <td> when requirements get together </td>
-  </tr> 
+    <td>  <a href="Saikrishna/saikrishna5.docx"> document file </a></td>
+    <td>  requirements traceablity </td>
+  </tr>
 
 <footer>
 Copyright © xavica.com
