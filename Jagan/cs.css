@@ -1,0 +1,42 @@
+body{  width:976px;
+        margin: 0 auto;
+         background-color:azure;
+           }
+#left {
+    border: solid 1px;
+    border-radius:10px;
+    border-color: green;
+    line-height:30px;
+    background-color:gray;
+    text-decoration:underline;
+    height:600px;
+    width:203px;
+    float:left;
+    padding:5px;
+}
+#section {
+      border: solid 5px;
+    border-radius:100px;
+    border-color: green;
+    width:400px;
+    background-color:cyan;
+    text-align:center;
+    float:left;
+    padding:10px;	 	 
+}
+#section1 {
+    border: solid 1px;
+    border-radius:50px;
+    border-color:green;
+    width:600px;
+    background-color:lightblue;
+    float:left;
+    padding:10px;
+}
+
+#section span{
+      color:blue;
+    text-decoration:underline;
+    font-weight:bold;
+    }
+</style>
