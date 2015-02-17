@@ -1,0 +1,16 @@
+#header
+{
+	background-color: #B87333;
+	background-size: auto;
+	display: block;
+	font-color: white;
+}
+#title
+{
+	font-size: 25px;
+	float: left;
+}
+#us
+{
+	float: right;
+}
