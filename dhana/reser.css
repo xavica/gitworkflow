@@ -1,9 +1,4 @@
-<html>
-<head>
-Introduction css
-<title>
-</title>
-<style>
+
 
 /*P{background-color: orange;
 text-decoration: underline;
@@ -27,15 +22,21 @@ margin-top: 5px;}
 body{max-width:1200px;
 margin:0 auto;
 padding:60px;}*/
-body{max-width:1200px;
+/*body{max-width:1200px;
 margin:0 auto;
-/*padding: 60px;*/
-
-background-image: url(Jellyfish.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-color: rgb(250,250,250);
+padding: 60px;
+background-image: "pics/Koala.jpg";*/
+body{
+	background-repeat: no-repeat;	
+	background-position: right;
+	background-size: cover;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+	/*background-attachment: fixed;*/
 }
+
+
 h1{font-size: 42px;
 padding-top: 60px;}
 
@@ -45,7 +46,7 @@ caption{font-size: 27px;
 margin-top: 40px;
 text-align: left;
 margin-bottom: 20px;
-color: pink}
+color: pink;}
 th{text-align: left;
 	color: pink;
 padding-right: 30px;}
@@ -54,16 +55,25 @@ padding-top: 10px;}
 input{margin-left: 10px;
 padding-top: 10px;
 /*border: none;*/
-background-color: rgb(247,247,247);}
-textarea{background-color: rgb(247,247,247);
-	border:none;
+
+fieldset{
+	width: 400px;
 }
-fieldset{width: 400px;}
-button{padding:10px;
-background-color: rgb(150,120,120);
+textarea{
+	border: none;
+	background-color: rgb(247,247,247);
+}
+button{
+	padding:10px;
+    border: none;
+    font-family: Effra;
+    color: red;
+}
+main{
+	background-color: rgba(240,200,100,.5);
+}
+
+
+/*background-color: rgb(150,120,120);
 color: rgb(247,200,200);}
-button:hover{background-color: orange;}
-main{background-color: rgba(0,0,0,.5);
-padding:60px;}
-</style>
-</head>
+button:hover{background-color: orange;}*/

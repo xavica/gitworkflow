@@ -1,74 +1,64 @@
-<html>
-<head>
-Introduction css
-<title>
-</title>
-<style>
 h1{font-size:12px;
+	margin-top: 60px;
+	text-decoration: underline;
+	color: pink;
  }
- h1,h2,h3,h4{font-weight:100;
- 	text-transform: uppercase;}
-body{font-family: calibri,Helvetica,arial,sans-serif;
-font-weight: 100;}
-a:link{color:rgb(168,109,147);}
-a:visited{
-	color:rgb(235,88,179);
+ h2{
+ 	margin-top:40px; 
+ }
+h1,h2{font-size: 27px;
+font-weight: 100;
+color: blue;
+text-decoration: underline;
+text-transform: uppercase;}
+p{font-size: 18px;
+margin-bottom: 10px;
+margin-top: 10px;
+max-width: 700px;
+}
+body{font-family: calibri;
+	font-weight: 100;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px;
+	background: pink;
+}
+a:link{
+	color: red;
 }
 a:hover{
-	color:rgb(244,158,215);
+	color: pink;
 }
-a:active{color:rgb(247,20,173);}
-h2{background-color: red;
+a:active
+{
+	color:blue;
+}
+/**{
+	color:blue;
+	margin:0;
+}
+h2{
+	background-color: red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
+p{
+	background-color: red;
+	width: 200px;
+	padding: 20px;
+	border: 10px solid;
+	margin: 60px;
+}	*/
+figure{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 0;
 	
-margin-top: 10px;
-margin-bottom: 20px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;}
-h2:hover{color:orange;
-background-color: white;
-}
-/*P{background-color: orange;
-text-decoration: underline;
-text-align: center;
-padding-top: 5px;
-padding-bottom: 5px;
-text-transform: uppercase;
-text-shadow:5px 10px 10px #ff0000;
-}*/
-p{background-color: red;
-widht:200px
-padding:60px
-border:10px solid;
-margin: 60px;}
 
-figure{margin-top: 30px;
-margin-bottom: 30px;
-margin-left: 0}
-li{margin-bottom: 5px;
-margin-top: 5px;}
-body{max-width:1200px;
-margin:0 auto;
-padding:60px;}
-caption{font-size: 27px;
-margin-top: 40px;
-text-align: left;
-margin-bottom: 20px;}
-th{text-align: left;
-padding-right: 30px;}
-td{padding-right: 30px;
-padding-top: 10px;}
-input{margin-left: 10px;
-padding-top: 10px;
-/*border: none;*/
-background-color: rgb(247,247,247);}
-text area{background-color: rgb(247,247,247);
-	border:none;
 }
-fieldset{width: 400px;}
-button{padding:10px;
-background-color: rgb(150,120,120);
-color: rgb(247,200,200);}
-button:hover{background-color: orange;}
-</style>
-</head>
+li{
+	margin-bottom: 5px;
+}
