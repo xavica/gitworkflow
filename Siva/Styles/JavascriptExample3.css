@@ -1,0 +1,10 @@
+h1, h2{color:#FFFFFF;}
+body
+{
+/*background-image: url(Images/JavascriptImage.jpg);*/
+background-repeat: no-repeat;
+background-color: #808080;
+}
+body h1{
+	color: #93FFE8;
+}
