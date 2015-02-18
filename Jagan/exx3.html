@@ -1,0 +1,29 @@
+<html>
+  <title>simple js </title>
+  <head>
+     <link rel="stylesheet" type="text/css" href="cs.css">
+     <br><br><br>
+     <script type="text/javascript">
+        var now=new Date();
+         var hour=now.getHours();
+          var name=window.prompt("Please Enter your Name:(BLOCK LETTERS ONLY)");
+         document.write("Today Date:"+ now);
+         document.write("\n");
+          if(hour <12 )
+         {
+          document.write("\n \",.....Good Morning \""+ name);
+             }
+            if(hour>=12)
+              { 
+                 hour=hour-12;
+                 if(hour<6)
+                  {document.write("\".......Good Afternoon \" "+ name ); }
+                 if(hour >=6)
+                  { document.write("\n \",.....Good Evening \""+ name); }
+                }
+   document.writeln("<h1 style=\"color:blue\"> Thanks for using JavaScript Programming!</h1>");   
+    document.writeln("<h1 style=\"color:yellow\"> <--Go back to Go Next Page...!!!</h1>");    
+      </script>
+
+  </head>
+</html> 
