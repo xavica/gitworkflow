@@ -93,6 +93,12 @@
     <td>  <a href="dhana/intro.html"> image center </a></td>
     <td>  centering of web browser</td>
   </tr>
+
+
+  <tr>
+    <td>  <a href="dhana/folderstructure.html"> changing color heading </a></td>
+    <td>  color Heading</td>
+  </tr>
 </table>
 </div>
 
@@ -117,6 +123,26 @@
      <tr>
     <td>  <a href="kiran/sub,sup,u,em,strong,br,hr.html">tags </a></td>
     <td>   have done an example on tags </td>
+  </tr>
+   <tr>
+    <td>  <a href="kiran/creatinglistexample.html">List </a></td>
+    <td>   have done an example on creating lists </td>
+  </tr>
+   <tr>
+    <td>  <a href="kiran/creatinglists.html">Lists1 </a></td>
+    <td>   have done an example on creating lists1 </td>
+  </tr>
+   <tr>
+    <td>  <a href="kiran/Html subclass.html">Subclass </a></td>
+    <td>   have done an example on subclass </td>
+  </tr>
+   <tr>
+    <td>  <a href="kiran/introcss.html">CSS </a></td>
+    <td>   have done an example on intro to CSS </td>
+  </tr>
+  <tr>
+    <td>  <a href="kiran/folderstructure.html">Folderstructure </a></td>
+    <td>   have done an example on folderstructure </td>
   </tr>
   </tr>
 </table>
@@ -157,6 +183,10 @@
   <tr>
     <td>  <a href="anu/doc17.docx"> document file </a></td>
     <td>   scope and requirement </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/doc18.docx"> document file </a></td>
+    <td>   scope and requirement continuation </td>
   </tr>
 </table>
 </div>
@@ -250,8 +280,6 @@
     <td>  <a href="Jagan/div.html"> div page</a></td>
     <td>   partioning using #</td>
   </tr>
-
- <tr>
  <tr>
    <td>  <a href="Jagan/mous.html"> div page mouseover</a></td>
     <td>    text highligthng with colors </td>
@@ -265,13 +293,13 @@
     <td>  jsfiddle page.</td>
   </tr>
   <tr>
-    <td>  <a href="Jagan/exe.html">javascriptpage alert </a></td>
-    <td>  click on those two pages inside the progrm</td>
+    <td>  <a href="Jagan/exe.html"> NEW ..javascriptpage alert & extended also </a></td>
+    <td>  click on those pages inside the progrm</td>
   </tr>
 </table>
 </div>
 <div class="informationContainer">
-  <h2> SAI KRISHNA </h1>
+  <h2> SAI KRISHN A </h1>
   <table>
     <tr>
        <th>PROGRAM</th>
@@ -290,9 +318,24 @@
     <td>   requirement activites </td>
   </tr>
   <tr>
+<<<<<<< HEAD
+    <td>  <a href="Saikrishna/saikrishna5.docx"> document file </a></td>
+    <td>  requirements traceablity </td>
+=======
     <td>  <a href="Saikrishna/saikrishna4.docx"> document file </a></td>
     <td>  scopeand requirements validation </td>
+>>>>>>> a81811f5d25d241ece4afd319cbeb28dcf1b96a2
   </tr>
+ </tr>
+  <tr>
+    <td>  <a href="Saikrishna/saikrishna.docx"> document file </a></td>
+    <td>  scopeand requirements validation </td>
+  </tr> </tr>
+  <tr>
+    <td>  <a href="Saikrishna/saikrishna6.docx"> document file </a></td>
+    <td>   requirements and issuess  </td>
+  </tr>
+
 
 <footer>
 Copyright © xavica.com

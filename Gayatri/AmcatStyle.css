@@ -11,7 +11,7 @@
 	height: 90px;
 	background-color: skyblue;
 	margin-top: 5px;
-	margin-bottom: 5px;
+	
 }
 #section_t2
 {
@@ -19,7 +19,6 @@
     border-bottom: 1px solid grey;
     background-color: #282828;
     color:white;
-
 }
 li
 {
@@ -31,7 +30,7 @@ li
 }
 #section_t3
 {
-	height:420px;
+	height:450px;
 	width: 1350px;
 	float: left;
 	background-color: skyblue;
@@ -39,13 +38,63 @@ li
 }
 #section_t31
 {
-	width: 650px;
+	width: 550px;
+	margin-left: 10px;
+	border: 1px solid red;
+	float: left;
+	margin-right: 23px;
+	margin-top: 10px;
 }
 #section_t32
 {
-	width: 340px;
+	width: 400px;
+	border: 1px solid red;
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 #section_t33
 {
-	width: 340px;
+	width: 250px;
+	border: 1px solid red;
+	float: left;
+	margin-top: 10px;
+	background-color: red;
+	margin-left: 30px;
+}
+table
+{
+    width:520px;
+    height: 70px;
+    margin-left: 30px;
+    background-color: lightgrey;
+   
+    
+ }
+td
+{
+	border-right: ridge;
+	width: 130px;
+	text-align: center;
+	padding:10px;
+}
+#tbl
+{
+	line-height: 20px;
+	margin-bottom: 1px solid grey;
+	padding: 5px;
+	background: white;
+	color:black;
+	border: 1px solid lightgrey;
+
+}
+#br
+{
+	margin-bottom: 20px;
+	text-align: center;
+}
+#opt
+{
+	width: 200px;
+	height: 39px;
 }
