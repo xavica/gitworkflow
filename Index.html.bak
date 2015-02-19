@@ -278,6 +278,10 @@
     <td>  <a href="Jagan/exe.html"> NEW ..javascriptpage alert & extended also </a></td>
     <td>  click on those pages inside the progrm</td>
   </tr>
+  <tr>
+    <td>  <a href="Jagan/control.html"> Xavica open>javascript>select</a></td>
+    <td>  path: open >select click on Javascipt> pick anyone</td>
+  </tr>
 </table>
 </div>
 <div class="informationContainer">
@@ -300,13 +304,8 @@
     <td>   requirement activites </td>
   </tr>
   <tr>
-<<<<<<< HEAD
-    <td>  <a href="Saikrishna/saikrishna5.docx"> document file </a></td>
-    <td>  requirements traceablity </td>
-=======
     <td>  <a href="Saikrishna/saikrishna4.docx"> document file </a></td>
     <td>  scopeand requirements validation </td>
->>>>>>> a81811f5d25d241ece4afd319cbeb28dcf1b96a2
   </tr>
  </tr>
   <tr>
