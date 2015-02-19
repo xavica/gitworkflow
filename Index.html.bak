@@ -93,6 +93,12 @@
     <td>  <a href="dhana/intro.html"> image center </a></td>
     <td>  centering of web browser</td>
   </tr>
+
+
+  <tr>
+    <td>  <a href="dhana/folderstructure.html"> changing color heading </a></td>
+    <td>  color Heading</td>
+  </tr>
 </table>
 </div>
 
@@ -133,6 +139,10 @@
    <tr>
     <td>  <a href="kiran/introcss.html">CSS </a></td>
     <td>   have done an example on intro to CSS </td>
+  </tr>
+  <tr>
+    <td>  <a href="kiran/folderstructure.html">Folderstructure </a></td>
+    <td>   have done an example on folderstructure </td>
   </tr>
   </tr>
 </table>
@@ -197,6 +207,10 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/JavascriptExample3.html"> javascript3 </a></td>
+    <td>    arthemetic operations and alert msgs using JS programming</td>
+  </tr>
    <tr>
     <td>  <a href="Siva/ChatBox.html"> Chatbox </a></td>
     <td>    just a chat box not in executed mode</td>
@@ -289,6 +303,10 @@
   <tr>
     <td>  <a href="Jagan/exe.html"> NEW ..javascriptpage alert & extended also </a></td>
     <td>  click on those pages inside the progrm</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/control.html"> Xavica open>javascript>select</a></td>
+    <td>  path: open >select click on Javascipt> pick anyone</td>
   </tr>
 </table>
 </div>
