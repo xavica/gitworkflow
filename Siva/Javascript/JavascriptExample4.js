@@ -4,7 +4,7 @@ var grade;
 var gradeValue;
 var average;
 var num;
-num=window.prompt("Enter number items (only in digits):")
+num=window.prompt("Enter number of items (only in digits):")
 
 total=0;
 gradeCounter=1;
