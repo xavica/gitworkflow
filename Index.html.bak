@@ -36,10 +36,11 @@
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
   </tr>
+
   <tr>
        <td>  <a href="gayatri/test.html"> Test </a></td>
      <td>   this is a test file </td>
-  
+  </tr>
   <tr>
     <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
     <td>   Replica of ClearTrip.com </td>
@@ -68,15 +69,23 @@
   <tr>
     <td>  <a href="gayatri/JsFiddle.html"> JSFIDDLE </a></td>
     <td>   Replica of JsFiddle </td>
-    <tr>
+  </tr>
+  
+  <tr>
     <td>  <a href="gayatri/Example.html"> DIV-TAG </a></td>
     <td>   Div Tag Explanation </td>
-    <tr>
+  </tr>
+  <tr>
     <td>  <a href="gayatri/JsTest.html"> Airthmetic Operations </a></td>
     <td>   Airthemetic Operations Using JavaScript </td>
   </tr>
+ </tr>
+
+ <tr>
+    <td>  <a href="gayatri/Exer.html"> Schedule Completion </a></td>
+    <td>   Completed week Schedule Using JavaScript </td>
   </tr>
-  </tr>
+ </tr>
   
 </table>
 </div>
@@ -386,9 +395,10 @@
     <td>  <a href="Saikrishna/saikrishna6.docx"> document file </a></td>
     <td>   requirements and issuess  </td>
   </tr>
+ 
  <tr>
     <td>  <a href="Saikrishna/saikrishna7.docx"> document file </a></td>
-    <td>   requirements and issuess  </td>
+    <td>   whining  </td>
   </tr>
 <tr>
     <td>  <a href="Saikrishna/saikrishna9.docx"> document file </a></td>
