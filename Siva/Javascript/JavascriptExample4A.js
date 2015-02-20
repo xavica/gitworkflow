@@ -32,5 +32,3 @@ while(gradeValue != -1)
  else
  	document.writeln("<p> No grades were entered</p>");
 //termination phase
-average=total/num; 
-document.writeln("<h1> Class average is " +average+"</h1>");
