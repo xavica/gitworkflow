@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<input type="text" id="input" placeholder="Number"/>
+<button id="submit" onclick="Reverse()" > submit </button>
+
+<script>
+function Reverse()
+{
+var n = parseInt(document.getElementById('input').value);
+
+var rev = 0; var rem;
+while ( n > 0)
+{
+	rem = parseInt(n % 10);
+	rev = parseInt((rev * 10)) + rem;
+	n = parseInt(n/10);
+}
+alert(rev);
+
+}
+</script>
+</body>
+</html>

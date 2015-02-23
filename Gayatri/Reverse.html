@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+var rev = 0;
+alert(rev);
+function reversing(x)
+{
+  	y=x%10;
+  	x=parseInt(x/10);
+    document.write(y);
+     if(x!=0){
+      reversing(x);
+     }
+}
+</script>
+</head>
+
+<body>
+<input id="txt_field" type="text" name="field" />
+<input type="button" name="submit" value="Submit" onclick="reversing(document.getElementById('txt_field').value);"/>
+</body>
+</html>
