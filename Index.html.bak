@@ -97,6 +97,11 @@
   </tr>
 
   <tr>
+    <td>  <a href="gayatri/StrSort.html"> String Character Sort</a></td>
+    <td>   Using JavaScript </td>
+  </tr>
+
+  <tr>
     <td>  <a href="gayatri/Number.html"> Reverse Number</a></td>
     <td>   Using JavaScript </td>
   </tr>
@@ -114,6 +119,16 @@
   <tr>
     <td>  <a href="gayatri/Strpalin.html"> String Palindrome</a></td>
     <td>   Using JavaScript </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Factors.html"> Factors of a Number</a></td>
+    <td>   Using JavaScript </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/CharCount.html"> Character occurance</a></td>
+    <td>   Checking Char count in a given string </td>
   </tr>
  
  <tr>
@@ -333,6 +348,23 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/LogicalOperators.html"> Logical Operators</a></td>
+    <td>    a JS programm on performing logical operators</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>  <a href="Siva/DoWhile.html"> using Do..While</a></td>
+    <td>    a JS programm on executing do...while loop</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/SwitchTest.html"> Using Switch Case</a></td>
+    <td>    a JS programm on using switch case</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/VariablesTypes.html"> Variables & Types</a></td>
+    <td>    a JS programm on declaring variable and types also using "use strict"</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/SumUsingRepitition.html"> SumUsingRepitition</a></td>
     <td>    a JS programm on Summation of numbers</td>
