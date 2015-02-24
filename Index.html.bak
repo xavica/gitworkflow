@@ -130,6 +130,26 @@
     <td>  <a href="gayatri/CharCount.html"> Character occurance</a></td>
     <td>   Checking Char count in a given string </td>
   </tr>
+
+  <tr>
+    <td>  <a href="gayatri/SwitchJs.html"> Switch Case</a></td>
+    <td>   Switch Case in Java Script </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/TableJs.html"> Table </a></td>
+    <td>   Table in Java Script </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/DoWhileJs.html"> Do..While</a></td>
+    <td>   Do While in Java Script </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/LogicJs.html"> Logical Operators</a></td>
+    <td>   Logical Operators in Java Script </td>
+  </tr>
  
  <tr>
     <td>  <a href="gayatri/Hide.html"> Hide Text </a></td>
@@ -535,11 +555,14 @@
   </tr>
 <tr>
     <td>  <a href="Saikrishna/saikrishna9.docx"> document file </a></td>
-    <td>  creating effective thinking stories   </td>
+v    <td>  creating effective thinking stories   </td>
 <tr>
-    <td>  <a href="Saikrishna/saikrishna11.docx"> document file </a></td>
-    <td>  linking build strategies   </td>
-  </tr>  </tr>
+    <td>  <a href="Saikrishna/saikrishna12.docx"> document file </a></td>
+    <td>  personas  </td>
+  </tr> <tr>
+    <td>  <a href="Saikrishna/saikrishna12.docx"> document file </a></td>
+    <td>  personas  </td>
+  </tr> </tr>
 <footer>
 Copyright © xavica.com
 </footer>
