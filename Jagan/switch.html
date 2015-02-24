@@ -1,18 +1,20 @@
 <html>
-     <link rel="stylesheet" type="text/css" href="cs.css">
-
+      <link rel="stylesheet" type="text/css" href=""> 
+ 
   <title>Switching using Switch statement</title>
   <head>
 
     </head>
-      <body>
+      <body bgcolor="cyan">
      <script type="text/javascript">
        var ch;
        var stag;
        var etag;
        var validinput=true;
        var litype;
-        ch = window.prompt(" Select a list style:\n" + "1(numbered),2(lettered),3(roman)", "1");
+       var n;
+       n=window.prompt("Enter no of list items:")
+        ch = window.prompt(" Select a list style:\n " + "1(numbered),2(lettered),3(roman)", "1");
        switch( ch )
        {
        	  case "1":
@@ -21,12 +23,12 @@
        	  litype = "<h1>Numbered list </h1>";
        	      break;
        	  case "2":
-       	  stag = "<ol style:\" list-style-type:upper-alpha\">";
+       	  stag = "<ol style=\" list-style-type: upper-alpha\">";
        	  etag = "</ol>";
-       	  litype = "<h1>Lettered list list </h1>"
+       	  litype = "<h1>Lettered list list </h1>";
                break;
        	  case "3":
-       	  stag="<ol style:\" list-style-type:upper-roman\">";
+       	  stag="<ol style=\" list-style-type: upper-roman\">";
        	  etag="</ol>";
        	  litype="<h1>Roman style list </h1>";
                break;    
@@ -34,23 +36,23 @@
            default:
             validinput = false;    
        }   
-     if(validinput===true)
+     if(validinput==true)
      {
      	  document.writeln( litype + stag );
-     	   for(var i=1;i<=3;i++)
-     	   {
+     	   for(var i=1;i<=n;++i)
      	   	document.writeln("<li> List Item " + i +" </li>");
-            document.writeln( etag );
-              }
+     	   document.writeln( etag );
+              
           }
       else
       	document.writeln(" <h3>Invalid choice: </h3>" + ch );
 
      
     document.writeln("<h1 style=\"color:red\"> Thanks for using javascript programming! </h1>");
-     document.writeln("<h1 style=\"color:yellow\"> <-- Go back to Go Next Page... !!!</h1>");       
+     document.writeln("<h1 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h1>"); 
+            
       </script>
-      
+       <a href="exe.html">Go back </a>   
         </body>
 
 </html>
