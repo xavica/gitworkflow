@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+</head>
+<body>
+<p><b>press F12 and goto console to see the out put</b></p>
+<p><b>if you want to debug the program just goto to sources-->click on js program-->put break pints in the program--> refresh and press f10 or f11</b></p>
+<script type="text/javascript" >
+	var showIt= function(msg)
+{
+	console.log(msg);
+}
+showIt("some message");
+
+function showItThen(msg, callback)
+{
+	showIt(msg);
+	callback();
+}
+showItThen("showItThen called", function() {
+	console.log("called callback");
+});
+</script>
+</body>
+</html>
