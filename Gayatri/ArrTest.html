@@ -1,0 +1,18 @@
+<html>
+<body>
+<p id="demo"> </p>
+<p id="demo1"> </p>
+<script>
+	var arr = ['item 1', 'item 2', 'item 3'];
+	var list = '<ul><li>' + arr.join('</li><li>') + '</li></ul>';
+	document.getElementById("demo").innerHTML = list;
+
+	var arr1 = ['item 1', 'item 2', 'item 3'];
+	var lst = arr1.join('###');
+	document.getElementById('demo1').innerHTML = lst;
+</script>
+
+
+</body>
+</html>
+
