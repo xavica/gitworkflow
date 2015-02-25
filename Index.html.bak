@@ -511,7 +511,99 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+      <tr>
+    <td>  <a href="Jagan/random.html">Random numbers U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/maximum.html">Maximum Number U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/square.html">square of numbers U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/function.html">Function Declaration</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/Somemore.html">Date and Time this.</a></td>
+    <td> javascript program </td>
+  </tr>
   <tr>
+    <td>  <a href="Jagan/continue.html">Continue Statement</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/break.html">Break dynamically</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/dowhile.html">DoWhile repitition</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/usestrict.html">....use strict Use</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/switch.html">listed items switch</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/table.html">Compound interest</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/evensum.html">sum of even no's u</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/font.html">Font size increment</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/quit.html">-1 to Quit program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/prime.html">Prime no.program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/factorial.html">Factorial program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/evenodd.html">Even and odd no's</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/average.html"> Stu. Average marks</a></td>
+    <td> javascript program </td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/exx1.html"> Hello & your Name </a></td>
+    <td> javascript program </td>
+  </tr>
+      <tr>
+    <td>  <a href="Jagan/exx3.html"> Time and your name </a></td>
+    <td> javascript program </td>
+  </tr>
+      <tr>
+    <td>  <a href="Jagan/exx2.html"> Simplee calculations</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/exx.html">Javascript alert</a></td>
+    <td> alert program</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/control.html"> Updated 5 JS progs...Xavica open>javascript>select</a></td>
+    <td>  path: open >select click on Javascipt> pick anyone</td>
+  </tr>
+    <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
   </tr>
@@ -547,10 +639,7 @@
     <td>  <a href="Jagan/exe.html"> NEW ..javascriptpage alert & extended also </a></td>
     <td>  click on those pages inside the progrm</td>
   </tr>
-  <tr>
-    <td>  <a href="Jagan/control.html"> Updated 5 JS progs...Xavica open>javascript>select</a></td>
-    <td>  path: open >select click on Javascipt> pick anyone</td>
-  </tr>
+ 
 </table>
 </div>
 <div class="informationContainer">
@@ -604,6 +693,7 @@ v    <td>  creating effective thinking stories   </td>
 Copyright © xavica.com
 </footer>
 <script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/lodashmin.js" type="text/javascript"></script>
 <script src="js/counts.js" type="text/javascript"></script>
 </body>
 </html>
