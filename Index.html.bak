@@ -31,59 +31,29 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-
   <tr>
-    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
-    <td>   Description about site navigation example </td>
+    <td>  <a href="gayatri/ArrayJs.html"> Array Operations-Push&pop</a></td>
+    <td>  push & pop Using JavaScript </td>
   </tr>
 
   <tr>
-       <td>  <a href="gayatri/test.html"> Test </a></td>
-     <td>   this is a test file </td>
+    <td>  <a href="gayatri/ArrayJs1.html"> Array Operations-Slice</a></td>
+    <td>  slice operation Using JavaScript </td>
   </tr>
-  <tr>
-    <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
-    <td>   Replica of ClearTrip.com </td>
+
+<tr>
+    <td>  <a href="gayatri/ArrayJs2.html"> Array Operations-Join</a></td>
+    <td>  Join Operation Using JavaScript </td>
   </tr>
 
   <tr>
-    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
-    <td>   Revise of previous ClearTrip.com </td>
+    <td>  <a href="gayatri/SpliceJs.html"> Array Operations-Splice</a></td>
+    <td>  Splice operation Using JavaScript </td>
   </tr>
 
   <tr>
-    <td>  <a href="gayatri/Bbc.html"> BBC </a></td>
-    <td>   Replica of BBC </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/Amcat.html"> AMCAT </a></td>
-    <td>   Replica of AMCAT </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/Chat.html"> CHAT </a></td>
-    <td>   Chatting Appication </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/JsFiddle.html"> JSFIDDLE </a></td>
-    <td>   Replica of JsFiddle </td>
-  </tr>
-  
-  <tr>
-    <td>  <a href="gayatri/Example.html"> DIV-TAG </a></td>
-    <td>   Div Tag Explanation </td>
-  </tr>
-  <tr>
-    <td>  <a href="gayatri/JsTest.html"> Airthmetic Operations </a></td>
-    <td>   Airthemetic Operations Using JavaScript </td>
-  </tr>
-
-
- <tr>
-    <td>  <a href="gayatri/Exer.html"> Schedule Completion </a></td>
-    <td>   Completed week Schedule Using JavaScript </td>
+    <td>  <a href="gayatri/ArraySum.html"> Array Operations-Sum</a></td>
+    <td>  Array Creation n sum of elements Using JavaScript </td>
   </tr>
 
   <tr>
@@ -157,6 +127,60 @@
   </tr>
 
   <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+
+  <tr>
+       <td>  <a href="gayatri/test.html"> Test </a></td>
+     <td>   this is a test file </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
+    <td>   Replica of ClearTrip.com </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
+    <td>   Revise of previous ClearTrip.com </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Bbc.html"> BBC </a></td>
+    <td>   Replica of BBC </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Amcat.html"> AMCAT </a></td>
+    <td>   Replica of AMCAT </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Chat.html"> CHAT </a></td>
+    <td>   Chatting Appication </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/JsFiddle.html"> JSFIDDLE </a></td>
+    <td>   Replica of JsFiddle </td>
+  </tr>
+  
+  <tr>
+    <td>  <a href="gayatri/Example.html"> DIV-TAG </a></td>
+    <td>   Div Tag Explanation </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/JsTest.html"> Airthmetic Operations </a></td>
+    <td>   Airthemetic Operations Using JavaScript </td>
+  </tr>
+
+
+ <tr>
+    <td>  <a href="gayatri/Exer.html"> Schedule Completion </a></td>
+    <td>   Completed week Schedule Using JavaScript </td>
+  </tr>
+
+   <tr>
     <td>  <a href="gayatri/Js1.html"> Change Text</a></td>
     <td>   Using JavaScript </td>
   </tr>
@@ -322,11 +346,15 @@
     <td>   Description about site navigation example </td>
   </tr>
   <tr>
-    <td>  <a href="anu/anu12.docx"> 12th doc. </a></td>
+    <td>  <a href="an.docx"> 12th doc. </a></td>
     <td>   document file </td>
   </tr>
  <tr>
-    <td>  <a href="anu/anudoc.docx"> 13th doc </a></td>
+    <td>  <a href="anu/personas.docx"> 13th doc </a></td>
+    <td>   document file </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/personas.docx"> 13th doc </a></td>
     <td>   document file </td>
   </tr>
    <tr>
@@ -357,6 +385,10 @@
     <td>  <a href="anu/types of stories.docx"> document file </a></td>
     <td> types in stories  </td>
  </tr>
+  <tr>  
+    <td>  <a href="anu/Personas.docx"> document file </a></td>
+    <td> personas </td>
+ </tr>
 </table>
 </div>
 
@@ -369,37 +401,78 @@
     </tr>
   <tr>
   <tr>
+    <td>  <a href="Siva/Scoping.html">  Scoping of variables</a></td>
+    <td>    A JS program on performing local and global variables</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/Gaming.html">  Scraps Gaming</a></td>
+    <td>    A JS program on gaming of rolling2 dies </td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/RollingDie.html">  Rolling A die</a></td>
+    <td>    A JS program on Rolling Die </td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/RandomNumbers.html">  Random Numbers</a></td>
+    <td>    A JS program on performing Random numbers display</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/Maximum.html">  Maximun of three numbers</a></td>
+    <td>    A JS program on performing maximun of three numbers</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>  <a href="Siva/Objectives.html">  Objectives</a></td>
+    <td>    A JS program on performing squqre of number and maximun of three numbers</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>  <a href="Siva/Looping.html"> Looping Example </a></td>
+    <td>    A JS program on performing lopping and displaying numbers </td>
+  </tr>
+  <tr>
+  <tr>
+    <td>  <a href="Siva/Functions2.html">  Functions2</a></td>
+    <td>    A JS programm on performing Functions</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>  <a href="Siva/Functions.html">  Functions</a></td>
+    <td>    A JS programm on performing  Functions</td>
+  </tr>
+  <tr>
+  <tr>
     <td>  <a href="Siva/LogicalOperators.html"> Logical Operators</a></td>
-    <td>    a JS programm on performing logical operators</td>
+    <td>    A JS programm on performing logical operators</td>
   </tr>
   <tr>
   <tr>
     <td>  <a href="Siva/DoWhile.html"> using Do..While</a></td>
-    <td>    a JS programm on executing do...while loop</td>
+    <td>    A JS programm on executing do...while loop</td>
   </tr>
   <tr>
     <td>  <a href="Siva/SwitchTest.html"> Using Switch Case</a></td>
-    <td>    a JS programm on using switch case</td>
+    <td>    A JS programm on using switch case</td>
   </tr>
   <tr>
     <td>  <a href="Siva/VariablesTypes.html"> Variables & Types</a></td>
-    <td>    a JS programm on declaring variable and types also using "use strict"</td>
+    <td>    A JS programm on declaring variable and types also using "use strict"</td>
   </tr>
   <tr>
     <td>  <a href="Siva/SumUsingRepitition.html"> SumUsingRepitition</a></td>
-    <td>    a JS programm on Summation of numbers</td>
+    <td>    A JS programm on Summation of numbers</td>
   </tr>
   <tr>
     <td>  <a href="Siva/JSCounterControlled.html"> JSCounterControlled</a></td>
-    <td>    a JS programm on creating loops  </td>
+    <td>    A JS programm on creating loops  </td>
   </tr>
   <tr>
     <td>  <a href="Siva/JavascriptObjects.html"> JavascriptObjects</a></td>
-    <td>    a JS programm on defining objects and givinf parameters</td>
+    <td>    A JS programm on defining objects and givinf parameters</td>
   </tr>
   <tr>
     <td>  <a href="Siva/JavascriptExample5.html"> javascript5 </a></td>
-    <td>    a JS programm on use strict</td>
+    <td>    A JS programm on use strict</td>
   </tr>
   <tr>
     <td>  <a href="Siva/JavascriptExample4A.html"> javascript4a </a></td>
@@ -474,7 +547,99 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+      <tr>
+    <td>  <a href="Jagan/random.html">Random numbers U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/maximum.html">Maximum Number U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/square.html">square of numbers U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/function.html">Function Declaration</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/Somemore.html">Date and Time this.</a></td>
+    <td> javascript program </td>
+  </tr>
   <tr>
+    <td>  <a href="Jagan/continue.html">Continue Statement</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/break.html">Break dynamically</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/dowhile.html">DoWhile repitition</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/usestrict.html">....use strict Use</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/switch.html">listed items switch</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/table.html">Compound interest</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/evensum.html">sum of even no's u</a></td>
+    <td> javascript program </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/font.html">Font size increment</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/quit.html">-1 to Quit program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/prime.html">Prime no.program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/factorial.html">Factorial program</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/evenodd.html">Even and odd no's</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/average.html"> Stu. Average marks</a></td>
+    <td> javascript program </td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/exx1.html"> Hello & your Name </a></td>
+    <td> javascript program </td>
+  </tr>
+      <tr>
+    <td>  <a href="Jagan/exx3.html"> Time and your name </a></td>
+    <td> javascript program </td>
+  </tr>
+      <tr>
+    <td>  <a href="Jagan/exx2.html"> Simplee calculations</a></td>
+    <td> javascript program </td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/exx.html">Javascript alert</a></td>
+    <td> alert program</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/control.html"> Updated 5 JS progs...Xavica open>javascript>select</a></td>
+    <td>  path: open >select click on Javascipt> pick anyone</td>
+  </tr>
+    <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
   </tr>
@@ -510,10 +675,7 @@
     <td>  <a href="Jagan/exe.html"> NEW ..javascriptpage alert & extended also </a></td>
     <td>  click on those pages inside the progrm</td>
   </tr>
-  <tr>
-    <td>  <a href="Jagan/control.html"> Updated 5 JS progs...Xavica open>javascript>select</a></td>
-    <td>  path: open >select click on Javascipt> pick anyone</td>
-  </tr>
+ 
 </table>
 </div>
 <div class="informationContainer">
@@ -571,6 +733,7 @@ v    <td>  creating effective thinking stories   </td>
 Copyright © xavica.com
 </footer>
 <script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/lodashmin.js" type="text/javascript"></script>
 <script src="js/counts.js" type="text/javascript"></script>
 </body>
 </html>
