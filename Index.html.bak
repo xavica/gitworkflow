@@ -401,6 +401,14 @@
     </tr>
   <tr>
   <tr>
+    <td>  <a href="Siva/LodashTest.html">  LodashTest</a></td>
+    <td>    A JS program on performing lodash arrays</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/TestLodash.html">  TestLodash</a></td>
+    <td>    A JS program on performing lodash arrays</td>
+  </tr>
+  <tr>
     <td>  <a href="Siva/Scoping.html">  Scoping of variables</a></td>
     <td>    A JS program on performing local and global variables</td>
   </tr>
@@ -728,6 +736,7 @@ v    <td>  creating effective thinking stories   </td>
 <footer>
 Copyright © xavica.com
 </footer>
+
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/lodashmin.js" type="text/javascript"></script>
 <script src="js/counts.js" type="text/javascript"></script>
