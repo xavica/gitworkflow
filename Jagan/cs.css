@@ -118,4 +118,14 @@ li { text-align:center;
     font-family: algerian, courier;
     line-height: 80%;
 }
+.n
+{
+   font-size: 18px;
+   color: red;
+}
+.nx
+{   text-decoration: bold;
+   font-size: 24px;
+   color:blue;
+}
 </style>

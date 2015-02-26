@@ -34,6 +34,7 @@
   <tr>
     <td>  <a href="gayatri/ArrayJs.html"> Array Operations-Push&pop</a></td>
     <td>  push & pop Using JavaScript </td>
+<<<<<<< HEAD
   </tr>
 
   <tr>
@@ -52,6 +53,26 @@
   </tr>
 
   <tr>
+=======
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/ArrayJs1.html"> Array Operations-Slice</a></td>
+    <td>  slice operation Using JavaScript </td>
+  </tr>
+
+<tr>
+    <td>  <a href="gayatri/ArrayJs2.html"> Array Operations-Join</a></td>
+    <td>  Join Operation Using JavaScript </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/SpliceJs.html"> Array Operations-Splice</a></td>
+    <td>  Splice operation Using JavaScript </td>
+  </tr>
+
+  <tr>
+>>>>>>> 2307f82dc95fb3086fc9c2a74a3bb9abccc80a64
     <td>  <a href="gayatri/ArraySum.html"> Array Operations-Sum</a></td>
     <td>  Array Creation n sum of elements Using JavaScript </td>
   </tr>
@@ -556,6 +577,14 @@
        <th>DESCRIPTION</th> 
     </tr>
       <tr>
+    <td>  <a href="Jagan/scopes.html">Scopes concept U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/trics.html">Roll dies pro U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+      <tr>
     <td>  <a href="Jagan/random.html">Random numbers U( )</a></td>
     <td> javascript program </td>
   </tr>
@@ -729,6 +758,10 @@ v    <td>  creating effective thinking stories   </td>
 <tr>
     <td>  <a href="Saikrishna/saikrishna12.docx"> document file </a></td>
     <td>  personas  </td>
+  </tr>
+  <tr>
+    <td>  <a href="Saikrishna/saikrishna13.docx"> document file </a></td>
+    <td>  getting to be done  </td>
   </tr> <tr>
     <td>  <a href="Saikrishna/saikrishna12.docx"> document file </a></td>
     <td>  personas  </td>
