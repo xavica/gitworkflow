@@ -31,59 +31,29 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-
   <tr>
-    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
-    <td>   Description about site navigation example </td>
+    <td>  <a href="gayatri/ArrayJs.html"> Array Operations-Push&pop</a></td>
+    <td>  push & pop Using JavaScript </td>
   </tr>
 
   <tr>
-       <td>  <a href="gayatri/test.html"> Test </a></td>
-     <td>   this is a test file </td>
+    <td>  <a href="gayatri/ArrayJs1.html"> Array Operations-Slice</a></td>
+    <td>  slice operation Using JavaScript </td>
   </tr>
-  <tr>
-    <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
-    <td>   Replica of ClearTrip.com </td>
+
+<tr>
+    <td>  <a href="gayatri/ArrayJs2.html"> Array Operations-Join</a></td>
+    <td>  Join Operation Using JavaScript </td>
   </tr>
 
   <tr>
-    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
-    <td>   Revise of previous ClearTrip.com </td>
+    <td>  <a href="gayatri/SpliceJs.html"> Array Operations-Splice</a></td>
+    <td>  Splice operation Using JavaScript </td>
   </tr>
 
   <tr>
-    <td>  <a href="gayatri/Bbc.html"> BBC </a></td>
-    <td>   Replica of BBC </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/Amcat.html"> AMCAT </a></td>
-    <td>   Replica of AMCAT </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/Chat.html"> CHAT </a></td>
-    <td>   Chatting Appication </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/JsFiddle.html"> JSFIDDLE </a></td>
-    <td>   Replica of JsFiddle </td>
-  </tr>
-  
-  <tr>
-    <td>  <a href="gayatri/Example.html"> DIV-TAG </a></td>
-    <td>   Div Tag Explanation </td>
-  </tr>
-  <tr>
-    <td>  <a href="gayatri/JsTest.html"> Airthmetic Operations </a></td>
-    <td>   Airthemetic Operations Using JavaScript </td>
-  </tr>
-
-
- <tr>
-    <td>  <a href="gayatri/Exer.html"> Schedule Completion </a></td>
-    <td>   Completed week Schedule Using JavaScript </td>
+    <td>  <a href="gayatri/ArraySum.html"> Array Operations-Sum</a></td>
+    <td>  Array Creation n sum of elements Using JavaScript </td>
   </tr>
 
   <tr>
@@ -157,6 +127,60 @@
   </tr>
 
   <tr>
+    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
+    <td>   Description about site navigation example </td>
+  </tr>
+
+  <tr>
+       <td>  <a href="gayatri/test.html"> Test </a></td>
+     <td>   this is a test file </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/ClearTrip.html"> ClearTrip </a></td>
+    <td>   Replica of ClearTrip.com </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/CT-Revised.html"> ClearTrip-Revised </a></td>
+    <td>   Revise of previous ClearTrip.com </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Bbc.html"> BBC </a></td>
+    <td>   Replica of BBC </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Amcat.html"> AMCAT </a></td>
+    <td>   Replica of AMCAT </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/Chat.html"> CHAT </a></td>
+    <td>   Chatting Appication </td>
+  </tr>
+
+  <tr>
+    <td>  <a href="gayatri/JsFiddle.html"> JSFIDDLE </a></td>
+    <td>   Replica of JsFiddle </td>
+  </tr>
+  
+  <tr>
+    <td>  <a href="gayatri/Example.html"> DIV-TAG </a></td>
+    <td>   Div Tag Explanation </td>
+  </tr>
+  <tr>
+    <td>  <a href="gayatri/JsTest.html"> Airthmetic Operations </a></td>
+    <td>   Airthemetic Operations Using JavaScript </td>
+  </tr>
+
+
+ <tr>
+    <td>  <a href="gayatri/Exer.html"> Schedule Completion </a></td>
+    <td>   Completed week Schedule Using JavaScript </td>
+  </tr>
+
+   <tr>
     <td>  <a href="gayatri/Js1.html"> Change Text</a></td>
     <td>   Using JavaScript </td>
   </tr>
@@ -376,6 +400,18 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/Scoping.html">  Scoping of variables</a></td>
+    <td>    A JS program on performing local and global variables</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/Gaming.html">  Scraps Gaming</a></td>
+    <td>    A JS program on gaming of rolling2 dies </td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/RollingDie.html">  Rolling A die</a></td>
+    <td>    A JS program on Rolling Die </td>
+  </tr>
   <tr>
     <td>  <a href="Siva/RandomNumbers.html">  Random Numbers</a></td>
     <td>    A JS program on performing Random numbers display</td>
