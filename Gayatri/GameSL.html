@@ -54,12 +54,12 @@
 </div>
 <div id="top"> 
 <p ><h3 style="color:#660033; font-family:verdana"> 1. Click Start  2. Roll Dice    3. Click Move </h3></p> <br><br>
-<span><button id="btn1" onclick="play()"> Start </button></span>
-<span><button id="btn2" onclick="reset()"> Reset </button></span> </div>
+<span><button id="btn1"; onclick="start()"> Start </button></span>
+<span><button id="btn2" onclick="reset()" disabled> Reset </button></span> </div>
 <div id="right">
 	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num"> </span>
-	<span><button id="btn" onclick="dice()"> Roll Dice </button></span>
-	<span><button id="btn3" onclick="move()"> Move </button></span> 
+	<span><button id="btn" onclick="dice()" disabled> Roll Dice </button></span>
+	<span><button id="btn3" onclick="move()" disabled> Move </button></span> 
 	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num1"> </span> <br>
 	
 </div>
@@ -79,10 +79,14 @@ var n;
 var cn = 0;
 var k;
 var s = 1;
-function play()
+
+function start()
 {
 	document.getElementById("btn1").innerHTML="Playing";
+	document.getElementById('btn').disabled = false;
+	document.getElementById('btn3').disabled = false;
 }
+
 function dice()
 {
 	n = Math.floor( 1 + Math.random() * 6 );
