@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title> use strict directive</title>
+<head>
+</head>
+<body>
+  <p><h1>Function declaration.</h1></p>
+
+    <p><h2>Activate debugging in your browser to see the report.</h2></p>
+<link rel="stylesheet" type="text/css" href="cs.css"><br>
+   <script type="text/javascript">
+      "use strict";
+   var   y= 3.14; 
+    var   x=3;      
+    var name="My name is Jagan";
+     var truefalse=false;
+     var msg,more;
+   // This will not cause an error.
+       // This will cause an error.
+       document.writeln("<h1> Press F12 and click Console </h1>")
+       console.log("x is: " + typeof(x));
+       console.log("y is: " + typeof(y));
+       console.log("name is: " + typeof(name));
+       console.log("truefalse is: " + typeof(truefalse));
+      function showmsg(m) {
+         console.log("showmsg contains:" + m);
+      }
+       showmsg("this is showmsg information"); 
+       function show(msg,more) {
+         console.log("show contains: ' " + msg + more);
+       }
+        show("some more information " ,"about java script ' "); 
+        function show(msg,more) {
+           if(more) {
+         console.log("show contains: ' " + msg + more);
+       }
+         else {
+            console.log("show msg " + msg);
+         }
+       }
+        show("hello hi ")
+      show("This is a java script " ," to implementing function' "); 
+</script>
+ <a href="exe.html">Go back </a>   
+</body>
+</html>

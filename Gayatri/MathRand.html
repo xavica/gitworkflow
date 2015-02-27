@@ -1,0 +1,30 @@
+<html>
+<body>
+<style>
+table
+{
+	width: 50%;
+	border : 1px solid grey;
+}
+
+</style>
+
+<script>
+var value;
+	document.writeln("<table>")
+	document.writeln("<caption> <h1>Random Numbers </h1></caption><tr>");
+
+	for( var i=1; i<=20; i++ )
+	{
+		value = Math.floor(1 + Math.random() * 6);
+		document.writeln("<td>" + value + "</td>");
+
+		if( i % 5 == 0 )
+			document.writeln("</tr><tr>");
+	}
+	document.writeln("</table>")
+
+
+</script>
+</body>
+</html>
