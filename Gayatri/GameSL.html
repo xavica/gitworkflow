@@ -1,0 +1,154 @@
+<html>
+<head>
+    <title> Snake & Ladder</title>
+</head>
+<body>
+<div id="left">
+<sapn style="color:#660033; font-family:verdana"> <h1 style="margin-left:20px">SNAKES & LADDERS</h1> </sapn>
+
+<table id="my_table">
+
+<tr> 
+	<td id="d25"> 25 </td> 
+	<td id="d26"> <img src='ldr1.jpg' width=85px height=100px></td> 
+	<td id="d27"> <img src='snake.jpg' width=85px height=100px> </td>
+	<td id="d28">28 </td> 
+	<td id="d29">29 </td> 
+	<td id="d30"> 30</td> 
+</tr>
+<tr>
+	 <td id="d24">24 </td> 
+	 <td id="d23"> 23</td> 
+	 <td id="d22">  <img src='ldr1.jpg' width=85px height=100px></td> 
+	 <td id="d21"> <img src='snake.jpg' width=85px height=100px></td> 
+	 <td id="d20">20 </td> 
+	 <td id="d19"><img src='snake.jpg' width=85px height=100px></td>
+ </tr>
+<tr> 
+	<td id="d13"><img src='snake.jpg' width=85px height=100px> </td> 
+	<td id="d14"> 14</td> 
+	<td id="d15">15 </td> 
+	<td id="d16">  <img src='ldr1.jpg' width=85px height=100px></td> 
+	<td id="d17">  17</td> 
+	<td id="d18"> 18</td> 
+</tr>
+<tr>
+	 <td id="d12"> 12 </td>
+	 <td id="d11"><img src='ldr1.jpg' width=85px height=100px>  </td>
+	 <td id="d10"> 10</td>
+	 <td id="d9">9 </td> 
+	 <td id="d8"> <img src='snake.jpg' width=85px height=100px> </td> 
+	<td id="d7"> 7 </td>
+</tr>
+<tr> 
+	<td id="d1">1 </td> 
+	<td id="d2"> 2  </td> 
+	<td id="d3"> <img src='ldr1.jpg' width=85px height=100px> </td>
+	<td id="d4"> 4 </td> 
+	<td id="d5"><img src='ldr1.jpg' width=85px height=100px></td> 
+	 <td id="d6"> 6</td> 
+</tr>
+
+</table>
+
+</div>
+<div id="top"> 
+<p ><h3 style="color:#660033; font-family:verdana"> 1. Click Start  2. Roll Dice    3. Click Move </h3></p> <br><br>
+<span><button id="btn1"; onclick="start()"> Start </button></span>
+<span><button id="btn2" onclick="reset()" disabled> Reset </button></span> </div>
+<div id="right">
+	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num"> </span>
+	<span><button id="btn" onclick="dice()" disabled> Roll Dice </button></span>
+	<span><button id="btn3" onclick="move()" disabled> Move </button></span> 
+	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num1"> </span> <br>
+	
+</div>
+
+<div id="right-down">
+<span><img src='ldr1.jpg' width=85px height=100px>
+	 <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px;margin-top:-50px; color:purple; font-weight:bold;text-align:center;font-size:16;background:#99FFCC" type ="text" id="num3" placeholder="+2"> </span>  <br> <br>
+
+
+<span><img src='snake.jpg' width=85px height=100px>
+	<input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16;background:#99FFCC" type ="text" id="num4" placeholder="-2"> </span>  <br> <br>
+
+</div>
+
+<script>
+var n;
+var cn = 0;
+var k;
+var s = 1;
+
+function start()
+{
+	document.getElementById("btn1").innerHTML="Playing";
+	document.getElementById('btn1').disabled = true;
+	document.getElementById('btn').disabled = false;
+	document.getElementById('btn3').disabled = false;
+	document.getElementById('btn2').disabled = false;
+}
+
+function dice()
+{
+	n = Math.floor( 1 + Math.random() * 6 );
+	document.getElementById('num').value = n;
+	document.getElementById("num3").style.backgroundColor = "#99FFCC";
+	document.getElementById("num4").style.backgroundColor = "#99FFCC";
+}
+
+function move()
+{
+	document.getElementById("num").value="";
+	k = parseInt(cn);
+	cn = cn + n;
+	n = 0;
+		document.getElementById('num1').value = cn;
+
+		if( cn === 3 || cn === 11 || cn === 16 || cn === 22 || cn === 26)
+		{
+			cn = cn + 2;
+			document.getElementById("num3").style.backgroundColor = "red";
+		}
+
+		if( cn === 8 || cn === 13 || cn === 19 || cn === 21 || cn === 27 )
+		{
+			cn = cn - 2;
+			document.getElementById("num4").style.backgroundColor = "red";
+		}
+		
+		if (cn >= 30)
+		{
+				document.getElementById("d30").innerHTML = 30 + "  " + "<img src='smiley_end.jpg' width=50px height=50px>";
+				document.getElementById("d" + k).innerHTML = k ;
+				alert("YOU WON in " + s + " Steps");
+		}
+		else
+		{	
+				document.getElementById("d" + cn).innerHTML = cn + "  " + "<img src='smiley1.jpg' width=50px height=50px>";
+				if( k != 0)
+				document.getElementById("d" + k).innerHTML = k ; 	  
+		}
+			s++;
+			
+}
+function reset()
+{
+	document.getElementById("btn1").innerHTML="Start";
+	document.getElementById("num").value="";
+	document.getElementById("d" + cn).innerHTML = cn ;
+	document.getElementById("num1").value="";
+	cn = 0;
+	document.getElementById("num3").style.backgroundColor = "#99FFCC";
+	document.getElementById("num4").style.backgroundColor = "#99FFCC";
+	document.getElementById('btn').disabled = true;
+	document.getElementById('btn3').disabled = true;
+	document.getElementById('btn2').disabled = true;
+}
+    
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="GameSL.css">
+</body>
+</html>
