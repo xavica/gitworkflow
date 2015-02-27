@@ -83,6 +83,7 @@ var s = 1;
 function start()
 {
 	document.getElementById("btn1").innerHTML="Playing";
+	document.getElementById('btn1').disabled = true;
 	document.getElementById('btn').disabled = false;
 	document.getElementById('btn3').disabled = false;
 	document.getElementById('btn2').disabled = false;
@@ -140,6 +141,9 @@ function reset()
 	cn = 0;
 	document.getElementById("num3").style.backgroundColor = "#99FFCC";
 	document.getElementById("num4").style.backgroundColor = "#99FFCC";
+	document.getElementById('btn').disabled = true;
+	document.getElementById('btn3').disabled = true;
+	document.getElementById('btn2').disabled = true;
 }
     
 
