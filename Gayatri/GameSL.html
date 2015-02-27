@@ -10,8 +10,8 @@
 
 <tr> 
 	<td id="d25"> 25 </td> 
-	<td id="d26">26</td> 
-	<td id="d27"> 27</td>
+	<td id="d26"> <img src='ldr1.jpg' width=85px height=100px></td> 
+	<td id="d27"> <img src='snake.jpg' width=85px height=100px> </td>
 	<td id="d28">28 </td> 
 	<td id="d29">29 </td> 
 	<td id="d30"> 30</td> 
@@ -19,33 +19,33 @@
 <tr>
 	 <td id="d24">24 </td> 
 	 <td id="d23"> 23</td> 
-	 <td id="d22"> 22</td> 
-	 <td id="d21"> 21</td> 
+	 <td id="d22">  <img src='ldr1.jpg' width=85px height=100px></td> 
+	 <td id="d21"> <img src='snake.jpg' width=85px height=100px></td> 
 	 <td id="d20">20 </td> 
-	 <td id="d19">19 </td>
+	 <td id="d19"><img src='snake.jpg' width=85px height=100px></td>
  </tr>
 <tr> 
-	<td id="d13">13 </td> 
+	<td id="d13"><img src='snake.jpg' width=85px height=100px> </td> 
 	<td id="d14"> 14</td> 
 	<td id="d15">15 </td> 
-	<td id="d16"> 16</td> 
-	<td id="d17">17 </td> 
+	<td id="d16">  <img src='ldr1.jpg' width=85px height=100px></td> 
+	<td id="d17">  17</td> 
 	<td id="d18"> 18</td> 
 </tr>
 <tr>
 	 <td id="d12"> 12 </td>
-	 <td id="d11">11 </td>
+	 <td id="d11"><img src='ldr1.jpg' width=85px height=100px>  </td>
 	 <td id="d10"> 10</td>
 	 <td id="d9">9 </td> 
-	 <td id="d8"> 8</td> 
+	 <td id="d8"> <img src='snake.jpg' width=85px height=100px> </td> 
 	<td id="d7"> 7 </td>
 </tr>
 <tr> 
 	<td id="d1">1 </td> 
 	<td id="d2"> 2  </td> 
-	<td id="d3"> 3  </td>
+	<td id="d3"> <img src='ldr1.jpg' width=85px height=100px> </td>
 	<td id="d4"> 4 </td> 
-	<td id="d5">5 </td> 
+	<td id="d5"><img src='ldr1.jpg' width=85px height=100px></td> 
 	 <td id="d6"> 6</td> 
 </tr>
 
@@ -61,14 +61,24 @@
 	<span><button id="btn" onclick="dice()"> Roll Dice </button></span>
 	<span><button id="btn3" onclick="move()"> Move </button></span> 
 	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num1"> </span> <br>
-	<span> <img style="margin-top:10px;width=50px;height=50px" src='smiley1.jpg' width=50px height=50px> </span>
+	
+</div>
+
+<div id="right-down">
+<span><img src='ldr1.jpg' width=85px height=100px>
+	 <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px;margin-top:-50px; color:purple; font-weight:bold;text-align:center;font-size:16;background:#99FFCC" type ="text" id="num3" placeholder="+2"> </span>  <br> <br>
+
+
+<span><img src='snake.jpg' width=85px height=100px>
+	<input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16;background:#99FFCC" type ="text" id="num4" placeholder="-2"> </span>  <br> <br>
+
 </div>
 
 <script>
 var n;
 var cn = 0;
 var k;
-var s = 0;
+var s = 1;
 function play()
 {
 	document.getElementById("btn1").innerHTML="Playing";
@@ -77,6 +87,8 @@ function dice()
 {
 	n = Math.floor( 1 + Math.random() * 6 );
 	document.getElementById('num').value = n;
+	document.getElementById("num3").style.backgroundColor = "#99FFCC";
+	document.getElementById("num4").style.backgroundColor = "#99FFCC";
 }
 
 function move()
@@ -85,21 +97,34 @@ function move()
 	k = parseInt(cn);
 	cn = cn + n;
 	n = 0;
-		document.getElementById('num1').value = s;
-	
-			if (cn >= 30)
-			{
+		document.getElementById('num1').value = cn;
+
+		if( cn === 3 || cn === 11 || cn === 16 || cn === 22 || cn === 26)
+		{
+			cn = cn + 2;
+			document.getElementById("num3").style.backgroundColor = "red";
+		}
+
+		if( cn === 8 || cn === 13 || cn === 19 || cn === 21 || cn === 27 )
+		{
+			cn = cn - 2;
+			document.getElementById("num4").style.backgroundColor = "red";
+		}
+		
+		if (cn >= 30)
+		{
 				document.getElementById("d30").innerHTML = 30 + "  " + "<img src='smiley_end.jpg' width=50px height=50px>";
 				document.getElementById("d" + k).innerHTML = k ;
 				alert("YOU WON in " + s + " Steps");
-			}
-			else
-			{	
+		}
+		else
+		{	
 				document.getElementById("d" + cn).innerHTML = cn + "  " + "<img src='smiley1.jpg' width=50px height=50px>";
 				if( k != 0)
 				document.getElementById("d" + k).innerHTML = k ; 	  
-			}
+		}
 			s++;
+			
 }
 function reset()
 {

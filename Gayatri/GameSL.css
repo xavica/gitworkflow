@@ -2,8 +2,8 @@
 	table
 	{
 		border : 1px solid black;
-		width : 70%;
-		height : 75%;
+		width : 80%;
+		height : 70%;
 		table-layout: fixed;
 
 	}
@@ -43,15 +43,22 @@
 
 	#top
 	{
-		height: 200px;
+		height: 180px;
 	}
 		
 	#left
 	{
 		width: 800px; height: 600px; float: left;
 	}
+	
 	#right
 	{
-		width: 500px; height: 600px; float: left;
+		width: 500px; height: 180px; float: left;
 	}
+
+	#right-down
+	{
+		width: 500px; height: 300px; float: left;
+	}
+
 
