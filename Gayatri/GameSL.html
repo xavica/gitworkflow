@@ -59,14 +59,16 @@
 <div id="right">
 	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num"> </span>
 	<span><button id="btn" onclick="dice()"> Roll Dice </button></span>
-	<span><button id="btn3" onclick="move()"> Move </button></span>  <br><br>
-	<span> <img src='smiley1.jpg' width=50px height=50px> </span>
+	<span><button id="btn3" onclick="move()"> Move </button></span> 
+	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num1"> </span> <br>
+	<span> <img style="margin-top:10px;width=50px;height=50px" src='smiley1.jpg' width=50px height=50px> </span>
 </div>
 
 <script>
 var n;
 var cn = 0;
 var k;
+var s = 0;
 function play()
 {
 	document.getElementById("btn1").innerHTML="Playing";
@@ -83,21 +85,21 @@ function move()
 	k = parseInt(cn);
 	cn = cn + n;
 	n = 0;
+		document.getElementById('num1').value = s;
 	
 			if (cn >= 30)
 			{
-				end = 'true'; 
 				document.getElementById("d30").innerHTML = 30 + "  " + "<img src='smiley_end.jpg' width=50px height=50px>";
 				document.getElementById("d" + k).innerHTML = k ;
-				alert("YOU WON");
+				alert("YOU WON in " + s + " Steps");
 			}
 			else
 			{	
 				document.getElementById("d" + cn).innerHTML = cn + "  " + "<img src='smiley1.jpg' width=50px height=50px>";
 				if( k != 0)
 				document.getElementById("d" + k).innerHTML = k ; 	  
-				
 			}
+			s++;
 }
 function reset()
 {
