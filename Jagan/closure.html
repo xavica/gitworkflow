@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head> <title> Closure</title></head>
+<body>
+<link rel="stylesheet" type="text/css" href="cs.css">
+<script>
+
+  document.writeln(" <h2>By Using closure Concept: </h2>");
+   function makeFunc() {
+  var name = "Closure Conept Used Press Ok to Continue Next";
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc();
+myFunc();
+
+function makeFun() {
+  var naam = window.prompt(" Enter Your Name : ", "RayanN");
+  function displayName() {
+   document.writeln("<h2>Hi,  " + naam + " Welcome You r Using Closures </h2>");
+  }
+  return displayName;
+}
+
+var myFun = makeFun();
+myFun();
+
+function make() {
+  var x = window.prompt(" Enter x value: ");
+  var y = window.prompt(" Enter y value: ");
+  
+  function operations() {
+   document.writeln("Hii,some arithmatic operations here:");
+   document.writeln("<h2>x is : " + x + "</h2>");
+   document.writeln("<h2>y is : " + y + "</h2>");
+        var add=(x+y);
+        var sub=x-y;
+        var mul=x*y;
+   document.writeln("<h3>Combination of " + x + " and "+ y + " is :" + add + "</h3>");  
+   document.writeln("<h3>Subtraction of " + x + " and "+ y + " is :" + sub + "</h3>");
+   document.writeln("<h3>Multiplication  of " + x + " and "+ y + "is :" + mul + "</h3>");
+
+  }
+  return operations;
+}
+
+var ops = make();
+ops();
+</script>
+</body>
+</html>
