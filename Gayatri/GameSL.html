@@ -4,7 +4,7 @@
 </head>
 <body>
 <div id="left">
-<sapn> <h1 style="margin-left:20px">SNAKES & LADDERS</h1> </sapn>
+<sapn style="color:#660033; font-family:verdana"> <h1 style="margin-left:20px">SNAKES & LADDERS</h1> </sapn>
 
 <table id="my_table">
 
@@ -52,132 +52,64 @@
 </table>
 
 </div>
-<div id="top"> </div>
+<div id="top"> 
+<p ><h3 style="color:#660033; font-family:verdana"> 1. Click Start  2. Roll Dice    3. Click Move </h3></p> <br><br>
+<span><button id="btn1" onclick="play()"> Start </button></span>
+<span><button id="btn2" onclick="reset()"> Reset </button></span> </div>
 <div id="right">
 	<span> <input style="height: 50px; width: 50px; border: 2px solid blue;margin-left:10px; color:purple; font-weight:bold;text-align:center;font-size:16" type ="text" id="num"> </span>
-	<span><button id="btn" onclick="dice()"> Roll Dice </button></span> <br><br>
-	<span><button id="btn1" onclick="play()"> Start </button></span>
-	<span><button id="btn2" onclick="reset()"> Reset </button></span> <br><br>
-
-	
-
-
+	<span><button id="btn" onclick="dice()"> Roll Dice </button></span>
+	<span><button id="btn3" onclick="move()"> Move </button></span>  <br><br>
+	<span> <img src='smiley1.jpg' width=50px height=50px> </span>
 </div>
-
-<style>
-	table
-	{
-		border : 1px solid black;
-		width : 70%;
-		height : 75%;
-		table-layout: fixed;
-
-	}
-	tr,td
-	{
-		border : 1px solid purple;
-		color : white;
-		font-size: 30;
-		font-family: verdana;
-		table-layout: fixed;
-	}
-	#btn
-	{
-		background: #006666;
-		width: 100px; height: 50px;
-		font-size: 15;
-		font-family: verdana;
-		color: white;
-		margin-left: 5px;
-	}
-	#btn1
-	{
-		background: #006666;
-		width: 100px; height: 50px;
-		font-size: 15;
-		font-family: verdana;
-		color: white;
-	}
-	#btn2
-	{
-		background: #006666;
-		width: 100px; height: 50px;
-		font-size: 15;
-		font-family: verdana;
-		color: white;
-	}
-	#d1,#d6,#d11,#d9,#d18,#d22,#d24,#d29
-	 { background: #FFFF33; } 
-	
-	 #d2,#d5,#d13,#d15,#d17,#d19,#d28 { background: #6666FF; } 
-
-	 #d4,#d7,#d10,#d12,#d16,#d20,#d23,#d27,#d25
-	{
-		background: #FF6633;
-	}
-
-	#d3,#d8,#d14,#d21,#d26,#d30
-	{
-		background: #33CC66;
-	}
-
-	#top
-	{
-		height: 200px;
-	}
-		
-	#left
-	{
-		width: 800px; height: 600px; float: left;
-	}
-	#right
-	{
-		width: 500px; height: 600px; float: left;
-	}
-
-</style>
 
 <script>
 var n;
 var cn = 0;
-var end = false;
-function dice()
-{
-	 n = Math.floor( 1 + Math.random() * 6 );
-	document.getElementById('num').value = n;
-	
-}
+var k;
 function play()
 {
-	var k = cn;
-	cn = cn + n;
 	document.getElementById("btn1").innerHTML="Playing";
-		 
-	do{	
-		if(cn >= 30)
-			end = 'true';
-	else
-	{	
-	document.getElementById("d" + k).innerHTML = k ; 	
-	document.getElementById("d" + y).innerHTML = y + "  " + "<img src='flower.jpg' width=50px height=50px>";
-	}
+}
+function dice()
+{
+	n = Math.floor( 1 + Math.random() * 6 );
+	document.getElementById('num').value = n;
+}
 
-     } while(end === 'true'); 
-
-
-
-
+function move()
+{
+	document.getElementById("num").value="";
+	k = parseInt(cn);
+	cn = cn + n;
+	n = 0;
+	
+			if (cn >= 30)
+			{
+				end = 'true'; 
+				document.getElementById("d30").innerHTML = 30 + "  " + "<img src='smiley_end.jpg' width=50px height=50px>";
+				document.getElementById("d" + k).innerHTML = k ;
+				alert("YOU WON");
+			}
+			else
+			{	
+				document.getElementById("d" + cn).innerHTML = cn + "  " + "<img src='smiley1.jpg' width=50px height=50px>";
+				if( k != 0)
+				document.getElementById("d" + k).innerHTML = k ; 	  
+				
+			}
 }
 function reset()
 {
 	document.getElementById("btn1").innerHTML="Start";
-	cn = 0;
 	document.getElementById("num").value="";
-	
-
+	document.getElementById("d" + cn).innerHTML = cn ;
+	cn = 0;
 }
     
 
 </script>
+
+<link rel="stylesheet" type="text/css" href="GameSL.css">
 </body>
 </html>
