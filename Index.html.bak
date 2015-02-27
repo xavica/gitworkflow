@@ -34,7 +34,6 @@
   <tr>
     <td>  <a href="gayatri/ArrayJs.html"> Array Operations-Push&pop</a></td>
     <td>  push & pop Using JavaScript </td>
-<<<<<<< HEAD
   </tr>
 
   <tr>
@@ -53,26 +52,6 @@
   </tr>
 
   <tr>
-=======
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/ArrayJs1.html"> Array Operations-Slice</a></td>
-    <td>  slice operation Using JavaScript </td>
-  </tr>
-
-<tr>
-    <td>  <a href="gayatri/ArrayJs2.html"> Array Operations-Join</a></td>
-    <td>  Join Operation Using JavaScript </td>
-  </tr>
-
-  <tr>
-    <td>  <a href="gayatri/SpliceJs.html"> Array Operations-Splice</a></td>
-    <td>  Splice operation Using JavaScript </td>
-  </tr>
-
-  <tr>
->>>>>>> 2307f82dc95fb3086fc9c2a74a3bb9abccc80a64
     <td>  <a href="gayatri/ArraySum.html"> Array Operations-Sum</a></td>
     <td>  Array Creation n sum of elements Using JavaScript </td>
   </tr>
@@ -421,6 +400,14 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+   <tr>
+    <td>  <a href="Siva/DeclareArrays.html">  Declaring Arrays</a></td>
+    <td>    A JS program on declaring array of elements both numbers and strings in table</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/TestArray.html">  Test Array</a></td>
+    <td>    A JS program on tesing an array</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/LodashTest.html">  LodashTest</a></td>
     <td>    A JS program on performing lodash arrays</td>
