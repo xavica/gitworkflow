@@ -400,6 +400,22 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+   <tr>
+    <td>  <a href="Siva/DeclareArrays.html">  Declaring Arrays</a></td>
+    <td>    A JS program on declaring array of elements both numbers and strings in table</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/TestArray.html">  Test Array</a></td>
+    <td>    A JS program on tesing an array</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/LodashTest.html">  LodashTest</a></td>
+    <td>    A JS program on performing lodash arrays</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/TestLodash.html">  TestLodash</a></td>
+    <td>    A JS program on performing lodash arrays</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/Scoping.html">  Scoping of variables</a></td>
     <td>    A JS program on performing local and global variables</td>
@@ -547,6 +563,14 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+      <tr>
+    <td>  <a href="Jagan/scopes.html">Scopes concept U( )</a></td>
+    <td> javascript program </td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/trics.html">Roll dies pro U( )</a></td>
+    <td> javascript program </td>
+  </tr>
       <tr>
     <td>  <a href="Jagan/random.html">Random numbers U( )</a></td>
     <td> javascript program </td>
@@ -735,6 +759,7 @@ v    <td>  creating effective thinking stories   </td>
 <footer>
 Copyright © xavica.com
 </footer>
+
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/lodashmin.js" type="text/javascript"></script>
 <script src="js/counts.js" type="text/javascript"></script>

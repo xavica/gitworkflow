@@ -1,0 +1,25 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+console.log("Times Invokes the iteratee function n times, returning an array of the results of each invocation. The iteratee is bound to thisArg and invoked with one argument; (index).")
+
+var x = _.times(3);
+console.log(x);
+
+var a = _.times(100,function(i)
+{
+	return i*2;
+});
+console.log(a);
+
+
+</script>
+
+</body>
+</html>

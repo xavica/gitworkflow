@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>scopes example </title>
+  </head>
+     <script type="text/javascript">
+         var theNumber = function digitAdd (base, exponent) {
+    var number = 1;
+    for (i=0; i < exponent; i++) {
+        var number = base * number;
+    }
+    return number
+}
+
+
+function find(theNumber) {
+ var sum=0;
+    parseInt(theNumber);
+    while(theNumber>0)
+     {
+       sum=sum+theNumber%10;
+       theNumber=Math.floor(theNumber/10);
+      }
+    document.writeln("Sum of digits  "+sum);
+   }
+
+find(theNumber (2, 50))
+      
+      </script>
+       <body onload="start()">
+       <link rel="stylesheet" type="text/css" href="cs.css">
+        </body>
+
+</html>
