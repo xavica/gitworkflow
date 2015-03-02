@@ -12,11 +12,19 @@ console.log("Times Invokes the iteratee function n times, returning an array of 
 var x = _.times(3);
 console.log(x);
 
-var a = _.times(100,function(i)
+var a = _.times(20,function(i)
 {
 	return i*2;
 });
 console.log(a);
+
+
+var b = _.times(10, function()
+{
+	return Math.floor(Math.random() * 64 + 1);
+});
+console.log(b);
+
 
 
 </script>
