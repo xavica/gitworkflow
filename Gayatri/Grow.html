@@ -192,10 +192,13 @@ table
 	var a = []; var b = [];
 	function start()
 	{
-		var b = _.times(10, function()
+		for( var i=0; i<10; i++)
 		{
-			return Math.floor(Math.random() * 64 + 1);
-		});
+			var n = Math.floor(Math.random() * 65 + 1);
+			a.push(n);
+		} 
+
+
 		document.getElementById('btn2').disabled = false;
 		
 		console.log(a);
