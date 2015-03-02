@@ -34,6 +34,24 @@
 
 
 <tr>
+    <td>  <a href="gayatri/Grow.html"> Minesweeper</a></td>
+    <td>  Game Application using Javascript</td>
+  </tr>
+<tr>
+
+<tr>
+    <td>  <a href="gayatri/Pluck.html"> Pluck </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+
+<tr>
+    <td>  <a href="gayatri/Fill.html"> Fill </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+
+<tr>
     <td>  <a href="gayatri/GameSL.html"> Game</a></td>
     <td> Small Game Application using Javascript</td>
   </tr>
@@ -425,8 +443,12 @@
     <td>    wihining  </td>
   </tr>
   <tr>
-    <td>  <a href="anu/doc19.docx"> document file </a></td>
-    <td>  requirement  </td>
+    <td>  <a href="anu/Measuring SEO effectiveness.docx"> document file </a></td>
+    <td>  SEO effectiveness </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Measuring SEO effectiveness.docx"> document file </a></td>
+    <td>  SEO effectiveness </td>
   </tr>
   <tr>
     <td>  <a href="anu/Thinking in stories.docx"> document file </a></td>
@@ -451,6 +473,18 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
+    <td>    A JS program on displaying array with _.dropRight</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/MultidimesionalArrays.html">  Multidimesional Arrays</a></td>
+    <td>    A JS program on declaring array of elements both numbers and strings in matrix</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/ArraysToFunctions.html"> Passing Arrays To Functions</a></td>
+    <td>    A JS program on Passing Arrays To Functions </td>
+  </tr>
    <tr>
     <td>  <a href="Siva/DeclareArrays.html">  Declaring Arrays</a></td>
     <td>    A JS program on declaring array of elements both numbers and strings in table</td>
@@ -614,6 +648,22 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/lodash.html">chunk ooperation</a></td>
+    <td> javascript program using lodash library </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/initarray.html">Initialisation of array</a></td>
+    <td> javascript program arrays</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/Declarearray.html">Declaration of an array</a></td>
+    <td> javascript program  arrays</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/closure.html">closure concept U( )</a></td>
+    <td> javascript program functions </td>
+  </tr>
       <tr>
     <td>  <a href="Jagan/scopes.html">Scopes concept U( )</a></td>
     <td> javascript program </td>
