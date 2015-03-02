@@ -43,13 +43,8 @@
   </tr>
 
   <tr>
-<<<<<<< HEAD
-    <td>  <a href="gayatri/ArrayJs.html"> Array Operations-Push&pop</a></td>
-    <td>  push & pop Using JavaScript </td>
-=======
     <td>  <a href="gayatri/compact.html"> _.compact</a></td>
     <td> From Lodash Library</td>
->>>>>>> e866f6fe8a22cf8a3faecc6f970e28bfee9451c6
   </tr>
 
   <tr>
@@ -78,8 +73,6 @@
   </tr>
 
   <tr>
-<<<<<<< HEAD
-=======
     <td>  <a href="gayatri/Big3Js.html"> Big Number</a></td>
     <td>  Biggest of 3 No.s Using JavaScript Library Functions</td>
   </tr>
@@ -110,7 +103,6 @@
   </tr>
 
   <tr>
->>>>>>> e866f6fe8a22cf8a3faecc6f970e28bfee9451c6
     <td>  <a href="gayatri/ArraySum.html"> Array Operations-Sum</a></td>
     <td>  Array Creation n sum of elements Using JavaScript </td>
   </tr>
@@ -463,6 +455,14 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/MultidimesionalArrays.html">  Multidimesional Arrays</a></td>
+    <td>    A JS program on declaring array of elements both numbers and strings in matrix</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/ArraysToFunctions.html"> Passing Arrays To Functions</a></td>
+    <td>    A JS program on Passing Arrays To Functions </td>
+  </tr>
    <tr>
     <td>  <a href="Siva/DeclareArrays.html">  Declaring Arrays</a></td>
     <td>    A JS program on declaring array of elements both numbers and strings in table</td>
