@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<div>
+	
+	<span> <input type="text" id="txt" placeholder="Enter Name"/></span>
+	<span><button id="btn" onclick="sub()">Submit </button>
+</div>
+
+<script>
+	function sub()
+	{
+		var str = document.getElementById("txt").value;
+
+		document.writeln("char codes are:");
+		for(var i=0;i<str.length;i++)
+		{
+			document.writeln("<p>char at position " + i + " is: " + str[i] + "</p>");
+			document.writeln("<p>" + str[i] + "code is: " + str.charCodeAt(i) + "</p>" );
+		}
+		document.writeln("<p>String in Uppercase is: " + str.toUpperCase() + "</p>");
+		document.writeln("<p>String in Lowercase is: " + str.toLowerCase() + "</p>");
+	}
+
+</script>
+</body>
+</html>
