@@ -1,0 +1,117 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+console.log("Creates a slice of array excluding elements dropped from the end. Elements are dropped until predicate returns falsey.");
+	
+
+	var x = [1,2,3,4,5,6,7,8];
+	console.log("x Array:-" + x);
+
+	var y = _.dropRightWhile(x,function(i)
+		{
+				return i > 1;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+
+	var x = [8,7,6,5,4,3];
+	console.log("x Array:-" + x);
+	var k;
+
+	var y = _.dropRightWhile(x,function(i)
+		{
+				return i > 2;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+	console.log("x Array:-" + x);
+
+	var x = [1,2,3,4,5,2,4,6,8];
+	console.log("x Array:-" + x);
+
+	var y = _.dropRightWhile(x,function(i)
+		{
+				k = i % 2;
+				if(k === 0)
+				return i;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+
+	var users = [ { 'user': 'barney',  'active': true },{ 'user': 'fred',    'active': false },
+  					{ 'user': 'pebbles', 'active': false }];
+
+// using the `_.matches` callback shorthand
+var mat = _.pluck(_.dropRightWhile(users, { 'user': 'pebbles', 'active': false }), 'user');
+console.log(mat);
+
+
+// using the `_.matchesProperty` callback shorthand
+var matp = _.pluck(_.dropRightWhile(users, 'active', false), 'user');
+console.log(matp);
+
+// using the `_.property` callback shorthand
+var pro = _.pluck(_.dropRightWhile(users, 'active'), 'user');
+console.log(pro);
+
+
+	console.log("using Custom dropRightWhile function");
+
+	var x = [1,2,3,4,5,6,7,8];
+	console.log("x Array:-" + x);
+	var y = []; var res = []; var k = 0;
+	var i ; var s = 0; var ele;
+	
+	console.log("Example 1:dropping ele >4");
+	custom_dropRightWhile(x,function fun(k)
+	{
+		if( k > 4) return k;
+  		else return 0;
+	});
+
+	function custom_dropRightWhile(x,fun)
+	{
+			for(i=x.length - 1,j=0; ; i--,j++)
+			{
+				ele = x[i];
+				var test = (fun(ele));
+				if( test == 0)  break;
+				else x.pop();
+			}
+	}
+
+	console.log("Example 2:dropping even elements");
+
+	var x = [1,2,3,4,5,2,4,6,8];
+	console.log("x Array:-" + x);
+	var y = []; var res = []; var k = 0;
+	var i ; var s = 0; var ele;
+	custom_dropRightWhile(x,function fun(k)
+	{
+		if( k % 2 == 0) return k;
+  		else return 0;
+	});
+
+	function custom_dropRightWhile(x,fun)
+	{
+			for(i=x.length - 1,j=0; ; i--,j++)
+			{
+				ele = x[i];
+				var test = (fun(ele));
+				if( test == 0)  break;
+				else x.pop();
+			}
+			
+	}
+	console.log(x);
+		
+	</script>
+	</body>
+	</html>
