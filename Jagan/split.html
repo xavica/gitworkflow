@@ -1,0 +1,38 @@
+<html>
+  <title>String Methods split and Substring</title>
+    <head>
+<link rel="stylesheet" type="text/css" href="cs.css">
+     <script type="text/javascript">
+
+     function splitButtonPressed()
+     {
+     	var inputString=document.getElementById("inputval").value;
+     	var tokens=inputString.split(" ");
+     	document.getElementById("output").value=tokens.join("\n");
+     	var n=window.prompt(" Enter a number:\n ( How many characters do u want from string");
+     	for(var i=0;i<=n;i++)
+     	document.getElementById("outputSubstring").value=inputString.substring(0,i);
+
+     }
+     </script>
+    
+ </head> 
+ <body><br><br>
+ <p><h3> Enter any sentence within 100 characters and click on Split </h3></p>
+    <form action="">
+    <p> Enter a Sentence to Split into words:<br/>
+    <input id="inputval" type="text" size="100"/>
+    <input type="button" value ="Split" onclick ="splitButtonPressed()" /></p>
+    <p>The sentence Split into Words is:<br/>
+    <textarea id ="output" rows ="20" cols = "40">
+    </textarea></p>
+   <p> The First characters U asked from the given string are::
+    <input id ="outputSubstring" type ="text" size ="45" /></p>
+    </form>
+ </body>
+  <script>
+   document.writeln("<h4 style=\"color:red\"> Thanks for using javascript programming! </h4>");
+    document.writeln("<h3 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h3>");       
+      </script>
+        
+</html>
