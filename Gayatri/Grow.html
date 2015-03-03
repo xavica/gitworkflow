@@ -204,11 +204,11 @@ table
 	var a = []; var b = [];
 	function start()
 	{
-		for( var i=0; i<13; i++)
+		var a = _.times(10, function()
 		{
-			var n = Math.ceil(Math.random() * 63 );
-			a.push(n);
-		} 
+			return Math.floor(Math.random() * 64 + 1);
+		});
+		console.log(a);
 		a = _.uniq(a);
 		a = a.slice(0,10);
 		document.getElementById('btn2').disabled = false;
