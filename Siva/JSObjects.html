@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Objects</title>
+</head>
+<body>
+<p id="lappy">
+</p>
+<script type="text/javascript">
+	var laptop="";
+	var desc={company:'DELL', os:'WINDOWS7', processor:"coreI5", hdd:"1TB"};
+	for(var l in desc)
+	{
+		laptop +=desc[l]+" ";
+	}
+	document.getElementById("lappy").innerHTML= "Laptop Details are " +laptop;
+
+</script>
+
+
+</body>
+</html>
