@@ -1,0 +1,9 @@
+$(document).ready(callMe); 
+	alert("Alert srting is Activated first");
+	
+	function callMe(){
+		var x=_.dropRight([1, 2, 3,'x','E','y','q','w'],3);
+
+		alert("Now ready is activated and Displayed "+x);
+		 document.writeln(" Here we use 3 as input in drop so Hide First Two Elements from right of the array and Displayed as:"+x);
+	}
