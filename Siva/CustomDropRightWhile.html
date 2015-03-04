@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Drop Right While</title>
+</head>
+<body>
+    <script src="../js/jquery.js" type="text/javascript"></script>
+
+    <script src="../js/lodashmin.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+      custom_DropRightWhile(x,function fun(k){
+        if( k > 4) return k;  else return 0; 
+      });
+     function custom_DropRightWhile(x,fun)
+      {
+        for(i=x.length - 1,j=0; ; i--,j++)
+        {
+          ele = x[i];
+          var test = (fun(ele));
+          if( test == 0)  break;
+          else  y[j] = test;
+        }
+        for(var z=0;z<=i;z++)
+          {
+            res[z] = x[z];
+          }
+        }
+        console.log(res);
+
+    </script>
+</body>
+</html>
+
+
+

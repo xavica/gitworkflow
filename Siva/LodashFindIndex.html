@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lodash find index</title>
+</head>
+<body>
+		<script src="../js/jquery.js" type="text/javascript"></script>
+
+		<script src="../js/lodashmin.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+
+			console.log("custom Function:findIndex");
+			
+			function customfindIndex(items,callback)
+			{
+				var result_index;
+				item = items || [];
+				if(!callback)
+					{
+						return -1;
+					}
+					for(var i=0; ; i++)
+					{
+						if(callback(items[i]))
+							{
+								result_index = i;break;
+							}
+						}
+						return result_index;
+					}
+
+					function callback(search_ele)
+					{
+						if(search_ele > 4)
+							return true;
+				}
+		</script>
+
+</body>
+</html>
