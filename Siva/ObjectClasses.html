@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+function Developer(name) {
+    this.name = 'siva';
+    this.age = 24;
+    this.getInfo = getDeveloperInfo;
+}
+function getDeveloperInfo() {
+    return this.age + ' ' + this.name + 'Jonnala';
+}
+var dev = new Developer('');
+dev.age = "24 only";
+alert(dev.getInfo());
+
+ </script>
+
+
+ <script type="text/javascript">
+ function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = getAppleInfo;
+}
+ 
+// anti-pattern! keep reading...
+function getAppleInfo() {
+    return this.color + ' ' + this.type + ' apple';
+}
+var apple = new Apple('macintosh');
+apple.color = "reddish";
+alert(apple.getInfo());
+ </script>
+</html>

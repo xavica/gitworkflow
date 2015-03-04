@@ -1,11 +1,12 @@
 body
 {
 	text-align: center; 
-	float: center; m
-	argin: 0 auto; 
+	float: center; 
+	margin: 0 auto; 
 	color:#FDEEF4; 
 	background-color:#C0C0C0;
 }
+
 #hint
 {
 	width:100%;
@@ -15,7 +16,7 @@ body
 }
 #ba1,#dev1,#des1
 {
-	color:#C0C0C0;
+	color:#008000;
 }
 
 #cap:hover{
