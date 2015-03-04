@@ -32,6 +32,16 @@
        <th>DESCRIPTION</th> 
     </tr>
 
+<tr>
+    <td>  <a href="gayatri/DropRightWhile.html"> _.dropRightWhile </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/DropWhile.html"> _.dropWhile </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
 
 <tr>
     <td>  <a href="gayatri/Grow.html"> Minesweeper</a></td>
@@ -40,13 +50,13 @@
 <tr>
 
 <tr>
-    <td>  <a href="gayatri/Pluck.html"> Pluck </a></td>
+    <td>  <a href="gayatri/Pluck.html"> _.Pluck </a></td>
     <td> From Lodash</td>
   </tr>
 <tr>
 
 <tr>
-    <td>  <a href="gayatri/Fill.html"> Fill </a></td>
+    <td>  <a href="gayatri/Fill.html"> _.Fill </a></td>
     <td> From Lodash</td>
   </tr>
 <tr>
@@ -482,6 +492,18 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects2.html">  Object Creation </a></td>
+    <td>    A JS program on displaying objects of arrays and isung instances</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects.html">  Object Creation basic </a></td>
+    <td>    A JS program on displaying array with with creation os objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/StringMethodes.html">  StringMethodes</a></td>
+    <td>    A JS program on displaying string indexes, uppercase and lowercase.</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
     <td>    A JS program on displaying array with _.dropRight</td>

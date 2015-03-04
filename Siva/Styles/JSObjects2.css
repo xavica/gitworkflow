@@ -1,0 +1,33 @@
+body
+{
+	text-align: center; 
+	float: center; m
+	argin: 0 auto; 
+	color:#FDEEF4; 
+	background-color:#C0C0C0;
+}
+#hint
+{
+	width:100%;
+	text-align: center; 
+	color:#000000; 
+	background-color: #827839; 
+}
+#ba1,#dev1,#des1
+{
+	color:#C0C0C0;
+}
+
+#cap:hover{
+	color:#E2A76F;
+}
+
+#ba1:hover,#dev1:hover,#des1:hover
+{
+	color:#7F462C;
+}
+
+#ba, #dev,#des
+{
+	color:#6F4E37;
+}
