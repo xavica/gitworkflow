@@ -3,17 +3,16 @@ var	data="";
 
 						{name:"Anuradha", age:23,qualification:"MBA"}];
 
-	var dataDeveloper=[{name:"Gayatri", age:29, qualification:"MTech"},
+	var dataDeveloper=[{name:"Gayatri", age:31, qualification:"MTech"},
 
-						{name:"Jagan", age:22, qualification:"BTech"},
+						{name:"Jagan", age:21, qualification:"BTech"},
 
 						{name:"Siva", age:24, qualification:"MTech"}];
 
-	var dataDesigner=[{name:"Dhana", age:30, qualification:"MBA"},
+	var dataDesigner=[{name:"Dhana", age:31, qualification:"BCom"},
 
-						{name:"Kiran", age:31, qualification:"BSc"}];
-	
-	
+						{name:"Kiran", age:31, qualification:"MBA"}];
+		
 	for( var db1 in dataBuisiness)
 		data = "<ul>"+dataBuisiness[0].name+" age " +
 				 dataBuisiness[0].age+ " and his Qualification is "+
