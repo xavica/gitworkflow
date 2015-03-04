@@ -1,51 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-	table
-	{ width:100% ;float:center; margin: 0 auto;
-		border:5px, black;
-		text-align: center;
-	}
-</style>
+<link rel="stylesheet" type="text/css" href="Styles/JSObjects2.css">
 	<title>About Xavica</title>
 </head>
 <body>
-<table id = "team">
-<caption><b>Xavica Team</b></caption>
-	<th id ="h1">Buisiness Team</th>
-	<th id= "h2"> Developer Team</th>
-	<th id= "h2"> Developer Team</th>
+<div><input id ="hint" type="label" placeholder="On mouse hover display the details of teams"></div>
 
-		<tr id ="r1"></tr>
-		<tr id ="r2"></tr>
+<div>
+	<caption><h2 id="cap">Xavica Team</h2></caption>
+	<div id ="ba"><h3>Buisiness Analyst Team</h3></div><ul id ="ba1"></ul>
+	<div id ="dev"><h3>Web Developer Team</h3></div><ul id ="dev1"></ul>
+	<div id ="des"><h3>Web Designer Team</h3></div><ul id ="des1"></ul>
 	
-</table>
-<script type="text/javascript">
 
-	var	tbl="";
-	var dataBuisiness1={name:"SaiKrishna", age:22,qualification:"B.Tech"};
-	var	dataBuisiness2={name:"Anuradha", age:23,qualification:"MBA"}
-	var dataDeveloper1={name:"Siva", age:24, qualification:"M.Tech"}
-	for(var db1 in dataBuisiness1)
-	
-		tbl +=dataBuisiness1[db1]+" ";
-	
-	document.getElementById("r1").innerHTML=tbl;
-	tbl="";
+</div>
 
-	for(var db2 in dataBuisiness2)
-
-		tbl +=dataBuisiness2[db2]+"";
-
-	document.getElementById("r2").innerHTML=tbl;
-	tbl="";
-
-	// for(var db3 in dataDeveloper1)
-	// 	tbl +=dataDeveloper1[db3]+ "";
-	// document.getElementById("r1").innerHTML=tbl;
-
-
-</script>
+<script type="text/javascript" src="Javascript/JSObjects2.js"></script>
 </body>
 </html>

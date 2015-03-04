@@ -493,6 +493,18 @@
     </tr>
   <tr>
   <tr>
+    <td>  <a href="Siva/JSObjects2.html">  Object Creation </a></td>
+    <td>    A JS program on displaying objects of arrays and isung instances</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects.html">  Object Creation basic </a></td>
+    <td>    A JS program on displaying array with with creation os objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/StringMethodes.html">  StringMethodes</a></td>
+    <td>    A JS program on displaying string indexes, uppercase and lowercase.</td>
+  </tr>
+  <tr>
     <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
     <td>    A JS program on displaying array with _.dropRight</td>
   </tr>
