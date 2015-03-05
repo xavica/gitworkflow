@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating object classes </title>
+</head>
+<body>
+<script type="text/javascript">
+var employee = {};
+employee.name = "Siva Jonnala";
+employee.height = "6Ft";
+ 
+employee.work= function()
+{
+    this.state = "Working";
+    this.as = "Developer";
+ }
+ employee.work();
+ alert(employee.name+ employee.height+" is"+ employee.state+" as "+ employee.as);
+
+</script>
+
+</body>
+</html>
