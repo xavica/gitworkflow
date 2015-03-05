@@ -33,6 +33,16 @@
     </tr>
 
 <tr>
+    <td>  <a href="gayatri/FindIndex.html"> _.findIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/FindLastIndex.html"> _.findLastIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
     <td>  <a href="gayatri/DropRightWhile.html"> _.dropRightWhile </a></td>
     <td> From Lodash</td>
   </tr>
@@ -679,6 +689,26 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/lodashinitial.html">_.initial</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashintersection.html"> _.intersection </a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashflattendeep.html">_.flattenDeep </a></td>
+    <td> javascript program using Lodash library </td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashflatten.html">_.flatten</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashfirst.html">_.first </a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
      <tr>
     <td>  <a href="Jagan/markupobj.html">markup objects operation </a></td>
     <td> javascript program using some obj methods</td>
