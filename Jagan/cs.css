@@ -1,6 +1,9 @@
-body{  width:976px;
+body{  width:1206px; 
         margin: 0 auto;
          background-color:turquoise;
+        /* border: solid 1px;
+       border-radius:10px;
+       border-color:blue; */
            }
 #left {
     border: solid 1px;
@@ -39,4 +42,90 @@ body{  width:976px;
     text-decoration:underline;
     font-weight:bold;
     }
+ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type:upper-latin;
+}
+
+a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: white;
+    background-color:blueviolet;
+    padding: 0.4em 0.6em;
+    border-right: 1px solid white;
+    border-bottom:1px solid white;
+}
+
+a:hover { text-decoration:underline;
+    background-color:darkcyan;
+    text-align:center;
+    text-indent:inherit;
+}
+
+li { text-align:center;
+    display: inline-block;
+}
+ .cf{ 
+      height:43px;
+      width:1206px;
+      float:center;
+      background-color: hotpink;
+      color:navy;
+      text-decoration:underline;
+      text-align: center;
+      font-size: 110%;
+    font-family: algerian, courier;
+  }
+  .cv
+  { 
+    text-decoration: underline;
+    color:blue;
+ }
+ .cc
+  { text-align: center;
+    text-decoration: underline;
+    color:blue;
+ }
+  .cb
+  {   text-decoration:;
+    height:43px;
+    width:1206px;
+    float:right;
+    text-align:right;
+    background-color: hotpink;
+    text-decoration: underline;
+    color:navy;
+ }
+.cn{ 
+      height:33px;
+      width:1206px;
+      float:center;
+      background-color:Fuchsia;
+      color:navy;
+      text-decoration:;
+      text-align: center;
+     
+  }
+ span {
+    float: left;
+    width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;
+}
+.n
+{
+   font-size: 18px;
+   color: red;
+}
+.nx
+{   text-decoration: bold;
+   font-size: 24px;
+   color:blue;
+}
 </style>

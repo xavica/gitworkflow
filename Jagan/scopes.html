@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>scopes example </title>
+  </head>
+     <script type="text/javascript">
+       var x=1; //global variable;
+
+        function start()
+        {
+        	  var x=5; // variable locat to function start
+          document.writeln(" <h3>Local x in start is " + x +"<br /></h4>");
+           functionA();
+           functionB();
+           functionA();
+           functionB();
+         document.writeln("<h4> local x value in start is " + x + "<br /> </h4>");  
+        }
+      function functionA()
+      {
+      	var x=25;
+      	   document.writeln("<h4> local x value in functionA is " + x + " after entering functionA ");
+      	++x;
+      	   document.writeln("<br />local x value in functionA is " + x + " Before exiting functionA </h4>");     
+      } //end FunctionA
+
+       function functionB()
+      {
+      	   document.writeln("<h4>Global value variable x is " + x + " on entering functionB");
+      	x*=10;
+
+      	   document.writeln("<br />Global variable x is " + x + " on exiting functionB " + "</h4>");     
+      } //end FunctionA
+
+     
+    document.writeln("<h1 style=\"color:red\"> Thanks for using javascript programming! </h1>");
+     document.writeln("<h1 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h1>");       
+      </script>
+       <body onload="start()">
+       <link rel="stylesheet" type="text/css" href="cs.css">
+        </body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+  <title>Square of the no's</title>
+  <head>
+     <link rel="stylesheet" type="text/css" href="cs.css">
+     <br><br><br>
+     <script type="text/javascript">
+
+          var i1=window.prompt("Enter first number: \n" + "","0");
+          var i2=window.prompt("Enter second number: \n" + "","0");
+          var i3=window.prompt("Enter next number: \n" + "","0");
+
+            var fl1=parseFloat(i1);
+            var fl2=parseFloat(i2);
+            var fl3=parseFloat(i3);
+
+          var maxval= maximum(fl1,fl2,fl3);  
+          document.writeln("<h2> You Enter the below no's</h2>")
+    document.writeln("<h4 style=\" color:blueviolet\">First number: " + i1 + "<br /> second number: "+ i2 + "<br /> Third number : " + i3 + "<br /> <br /></h4>");
+    document.writeln("<h2 style=\" color:red\">Maximum from above three values is: " + maxval + "</h2>");
+
+         function maximum(x,y,z)
+         {
+           return Math.max(x,Math.max(y,z));
+         } 
+
+    document.writeln("<h1 style=\"color:blue\"> !!! *** ...Thanks for using javascript programming!</h1>");
+    document.writeln("<h1 style=\"color:brown\"> <-- Go back to Go Next Page...!!!</h1>");  
+      </script>
+      <a href="exe.html">Go back </a>   
+  </head><body></body>
+</html> 

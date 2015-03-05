@@ -1,0 +1,36 @@
+<html>
+  <title>charcodes</title>
+  <head>
+
+    </head>
+      <body>
+<link rel="stylesheet" type="text/css" href="cs.css">
+     <script type="text/javascript">
+      var s="Developers";
+      var s2="dEvELopErs";
+      for(var i=0;i<s.length;i++)
+      {
+      document.writeln("Character at Index " + i + " in ' "+ s + "' is ::   " + s.charAt(i) + "<br/>");
+       }
+       document.writeln("<br/><br/>");
+       for(var i=0;i<s.length;i++){
+      document.writeln("Character code at index " + i + " in ' "+ s + "' is ::  " + s.charCodeAt(i) + " <br/>");
+  }
+      document.writeln("<p>'" + String.fromCharCode(87,79,82,68) + " ' contains character codes are 87,79,82 and 68  </p>");
+       document.writeln("<p> The Word contains character codes 88,65,86,73,67 and 65 is '" + String.fromCharCode(88,65,86,73,67,65) + " '  </p>");
+      document.writeln("<p>'" + s2 + "' in lowercase is ' " + s2.toLowerCase() + "'");
+       document.writeln("<br />'" + s2 + "' in uppercase is ' " + s2.toUpperCase() + "' </p>");
+         document.writeln("<h4 style=\"color:red\"> Thanks for using javascript programming! </h4>");
+     document.writeln("<h3 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h3>");
+
+
+     console.log("Character is::",s.charAt(0)); 
+     console.log("Character code is::",s.charCodeAt(0));   
+     console.log("Company Name::",String.fromCharCode(88,65,86,73,67,65));
+     console.log("string lowercase letters::",s2.toLowerCase()); 
+      console.log("string Uppercase letters::",s2.toUpperCase());  
+      </script>
+      
+        </body>
+
+</html>

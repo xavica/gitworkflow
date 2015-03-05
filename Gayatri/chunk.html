@@ -1,0 +1,39 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	var x = [1,2,3,4,5,6,7,8];
+	console.log("before chunk: x Array:-" + x);
+	var y = _.chunk(x,2);
+	console.log("After Chunk of 2");
+	console.log("After chunk:y Array:-");
+	console.log(y);
+	console.log("y[0]=" + y[0]);
+	console.log("y[1]=" + y[1]);
+	console.log("y[2]=" + y[2]);
+	console.log("y[3]=" + y[3]);
+
+
+	var a = [1,2,3,4,5,6,7,8];
+	console.log("before chunk: a Array:-" + a);
+	var b = _.chunk(a,3);
+	console.log("If chunk can not be split evenly, the final chunk will be the remaining elements.")
+	console.log("After Chunk of 3");
+	console.log("After chunk:b Array:-");
+	console.log(b);
+	console.log("b[0]=" + b[0]);
+	console.log("b[1]=" + b[1]);
+	console.log("b[2]=" + b[2]);
+
+
+
+</script>
+
+</body>
+</html>

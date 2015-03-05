@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<input type="text" id="input" placeholder="Enter string"/>
+<button id="submit" onclick="Palindrome()" > submit </button>
+
+<script>
+function Palindrome()
+{
+var str1 = document.getElementById('input').value;
+
+var str2="";
+var n = parseInt(str1.length);
+n--;
+
+
+while ( n >= 0)
+{
+	str2 = str2 + str1.charAt(n);
+	n--;
+}
+if(str1 === str2)
+	alert("palindrome");
+else
+	alert("sorry");
+}
+</script>
+</body>
+</html>

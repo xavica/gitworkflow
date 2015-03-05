@@ -1,0 +1,52 @@
+<html>
+<title> quit frm user</title>
+<head>
+<link rel="stylesheet" type="text/css" href="cs.css">
+   
+</head>
+<body>
+<script type="text/javascript">
+   var total;
+var gcounter;
+var grade;
+var gValue;
+var average;
+total=0;
+gCounter=0;
+document.writeln("<h1 style=\"color:red\"> average marks for student</h1>"); 
+//prompt for input and read grade from user
+	grade = window.prompt("Enter grade,(note: Enter -1 to quit to control):","0");
+	
+	//{//convert grade from a string to an integer
+	/* gValue = parseInt(grade); */
+	gValue = parseInt(grade);
+while(gValue != -1)
+{
+//loop 10 times
+	
+	
+	// add gradeValue to total
+	total= total+gValue;
+	//add 1 to gradeCounter
+	gCounter=gCounter+1;
+	grade= window.prompt("Enter grade, -1 to quit:","0");
+	gValue= parseInt(grade);
+
+}
+ //end loop
+ if(gCounter!=0)
+ {
+ 	average=total/gCounter;
+ 	document.writeln("<h1 style=\"color:blue\";\"text-decoration:underline\">Result Below</h1>"); 
+ 	document.writeln("<h1 style=\"color:red\">Average is " + average + "</h1>");
+ }
+ else
+ 	document.writeln("<p> <h1>No grades were entered </h1></p>");
+//termination phase
+        average=total/gCounter;
+/* document.writeln("<h1> Class average is " + average + "</h1>"); */
+document.writeln("<h1 style=\"color:red\"> you are entered marks of " + gCounter + " subjects</h1");
+</script>
+   <a href="exe.html">Go back </a>   
+   </body>
+</html>

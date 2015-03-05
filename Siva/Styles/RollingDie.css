@@ -1,0 +1,14 @@
+body,table
+{
+	background-color: #C6AEC7;
+}
+table 
+{
+	width:100%;
+	text-align: center;
+	float:center;
+}
+th,td
+{ background-color: #C7B097;
+	color:#F5F5DC;
+}

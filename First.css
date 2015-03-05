@@ -73,4 +73,14 @@ margin-right:20px;
 background-color:#CCCCCC;
 color:#990033;
 }
+
+.examples{
+
+}
+.exampleCounts{
+    font-family: monospace, fantasy;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
 </style>
