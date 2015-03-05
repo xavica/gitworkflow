@@ -32,6 +32,26 @@
        <th>DESCRIPTION</th> 
     </tr>
 
+<tr>
+    <td>  <a href="gayatri/FindIndex.html"> _.findIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/FindLastIndex.html"> _.findLastIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/DropRightWhile.html"> _.dropRightWhile </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/DropWhile.html"> _.dropWhile </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
 
 <tr>
     <td>  <a href="gayatri/Grow.html"> Minesweeper</a></td>
@@ -40,13 +60,18 @@
 <tr>
 
 <tr>
-    <td>  <a href="gayatri/Pluck.html"> Pluck </a></td>
+    <td>  <a href="gayatri/Pluck.html"> _.Pluck </a></td>
     <td> From Lodash</td>
   </tr>
 <tr>
 
 <tr>
-    <td>  <a href="gayatri/Fill.html"> Fill </a></td>
+    <td>  <a href="gayatri/Fill.html"> _.Fill </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/DropLast.html"> Drop one bye one </a></td>
     <td> From Lodash</td>
   </tr>
 <tr>
@@ -486,6 +511,38 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+   <tr>
+    <td>  <a href="Siva/customInitial.html"> _.initial and CustomInital </a></td>
+    <td>  A JS program on lodash and this function displaying all the elements in the array except the last element  </td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/customFirst.html">  _.first and customFirst</a></td>
+    <td>    A JS program on lodash and this function displaying first element in the array</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/ObjectClasses.html">  Object Classes </a></td>
+    <td>    A JS program on displaying object classes using instances</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/SplitString.html">  Split String </a></td>
+    <td>    A JS program on displaying and splitting string</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/Search.html">  Search string </a></td>
+    <td>    A JS program on searching a string</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects2.html">  Object Creation </a></td>
+    <td>    A JS program on displaying objects of arrays and isung instances</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects.html">  Object Creation basic </a></td>
+    <td>    A JS program on displaying array with with creation os objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/StringMethodes.html">  StringMethodes</a></td>
+    <td>    A JS program on displaying string indexes, uppercase and lowercase.</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
     <td>    A JS program on displaying array with _.dropRight</td>
@@ -661,6 +718,38 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/markupobj.html">markup objects operation </a></td>
+    <td> javascript program using some obj methods</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/anchor.html">anchor method operation </a></td>
+    <td> javascript program using anchor obj method</td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/lodashfindlastindex.html">lodash findLastIndex operation </a></td>
+    <td> javascript program using lodash library</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/lodashfindindex.html">lodash findIndex operation </a></td>
+    <td> javascript program using lodash library</td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/lodashdropwhile.html">lodash DropWhile operation </a></td>
+    <td> javascript program using lodash library</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/lodashdropRightwhile.html">lodash Droprightwhile operation </a></td>
+    <td> javascript program using lodash library </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/charcode.html">characters codes  </a></td>
+    <td> javascript program using arrays </td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/split.html">String methods split operation </a></td>
+    <td> javascript program using arrays </td>
+  </tr>
   <tr>
     <td>  <a href="Jagan/lodashfill.html">lodash fill operation </a></td>
     <td> javascript program using arrays </td>
@@ -903,8 +992,12 @@ v    <td>  creating effective thinking stories   </td>
     <td>  methodology,one vs many,outline </td>
   </tr>
    <tr>
-    <td>  <a href="Saikrishna/methodology,one vs many,course outline.docx"> document file </a></td>
-    <td>  methodology,one vs many,outline </td>
+    <td>  <a href="Saikrishna/project life cycles,software development roles.docx"> document file </a></td>
+    <td>  oject life cycles,software development roles </td>
+  </tr>
+  <tr>
+    <td>  <a href="Saikrishna/project life cycles,software development roles.docx"> document file </a></td>
+    <td>  oject life cycles,software development roles </td>
   </tr> </tr>
 <footer>
 Copyright © xavica.com

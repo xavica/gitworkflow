@@ -1,0 +1,44 @@
+<!-- customInitial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>custom Initial</title>
+</head>
+<body>
+<p>See output on console. Just click F12 and it will open the developer tools window then on concole you can see the out put</p>
+<script src="../js/jquery.js" type="text/javascript"></script>
+
+<script src="../js/lodashmin.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var a= [1,'Siva', 'Jagan', 'Gayatri',2,3];
+	console.log("original array:"+ a);
+	console.log("this function displaying all the elements in the array except the last element");
+	console.log(_.initial(a));
+</script>
+
+<!-- writing custom furnstion for _.first -->
+<script type="text/javascript">
+	var a=[1,'Siva', 'Jagan', 'Gayatri',2,3];
+	console.log("original array:"+ a);
+	console.log("this function displaying all the elements in the array except the last element");
+	customInitial(a);
+	function customInitial()
+{
+		if(a.length===0)
+		console.log("array is empty how can I get the first element from the array? Just Think once....!!!!!!!!!!");
+	else
+	{	for(var i=0; i<a.length-1; i++)
+		{
+			var b=[];
+			b+=a[i];	
+			console.log(b);		
+		}
+			
+	}
+
+	}
+	
+</script>
+</body>
+</html>
