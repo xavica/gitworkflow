@@ -75,11 +75,6 @@
     <td> From Lodash</td>
   </tr>
 <tr>
-<tr>
-    <td>  <a href="gayatri/DropLast.html"> Drop one bye one </a></td>
-    <td> From Lodash</td>
-  </tr>
-<tr>
 
 <tr>
     <td>  <a href="gayatri/GameSL.html"> Game</a></td>
@@ -431,7 +426,34 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-
+    <tr>
+    <td>  <a href="anu/Requirement tools.docx"> Requirement tools  </a></td>
+    <td> This doc contains Stakeholders, personas , os environments</td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Measuring SEO effectiveness.docx">Measuring SEO effectiveness  </a></td>
+    <td>  SEO effectiveness </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Requirement tools.docx"> Stakeholders  </a></td>
+    <td>  Stakeholders </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Measuring SEO effect.docx">Measuring SEO effect  </a></td>
+    <td>  SEO effectiveness </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Thinking in stories.docx"> Thinking in stories </a></td>
+    <td> thinking in stories </td>
+    </tr>
+  <tr>  
+    <td>  <a href="anu/types of stories.docx"> types of stories</a></td>
+    <td> types in stories  </td>
+ </tr>
+  <tr>  
+    <td>  <a href="anu/Personas.docx">Personas </a></td>
+    <td> personas </td>
+ </tr>
   <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
@@ -448,10 +470,6 @@
     <td>  <a href="an.docx"> 12th doc. </a></td>
     <td>   document file </td>
   </tr>
- <tr>
-    <td>  <a href="anu/personas.docx"> 13th doc </a></td>
-    <td>   document file </td>
-  </tr>
   <tr>
     <td>  <a href="anu/personas.docx"> 13th doc </a></td>
     <td>   document file </td>
@@ -465,41 +483,18 @@
     <td>   document file </td>
   </tr>
   <tr>
-    <td>  <a href="anu/doc17.docx"> document file </a></td>
+    <td>  <a href="anu/content optimization technical SEO"> content optimization technical SEO </a></td>
     <td>   scope and requirement </td>
   </tr>
   <tr>
-    <td>  <a href="anu/doc18.docx"> document file </a></td>
+    <td>  <a href="anu/Long term content planning .docx"> Long term content planning </a></td>
     <td>   scope and requirement continuation </td>
   </tr>
   <tr>
-    <td>  <a href="anu/Date19.docx"> document file </a></td>
+    <td>  <a href="anu/Date19.docx"> whining</a></td>
     <td>    wihining  </td>
   </tr>
-  <tr>
-    <td>  <a href="anu/Measuring SEO effectiveness.docx"> document file </a></td>
-    <td>  SEO effectiveness </td>
-  </tr>
-  <tr>
-    <td>  <a href="anu/Requirement tools.docx"> document file </a></td>
-    <td>  Stakeholders </td>
-  </tr>
-  <tr>
-    <td>  <a href="anu/Measuring SEO effect.docx"> document file </a></td>
-    <td>  SEO effectiveness </td>
-  </tr>
-  <tr>
-    <td>  <a href="anu/Thinking in stories.docx"> document file </a></td>
-    <td> thinking in stories </td>
-    </tr>
-  <tr>  
-    <td>  <a href="anu/types of stories.docx"> document file </a></td>
-    <td> types in stories  </td>
- </tr>
-  <tr>  
-    <td>  <a href="anu/Personas.docx"> document file </a></td>
-    <td> personas </td>
- </tr>
+
 </table>
 </div>
 
