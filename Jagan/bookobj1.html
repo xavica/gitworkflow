@@ -1,0 +1,142 @@
+<html>
+  <title>font size </title>
+  <head>
+
+    </head>
+      <body>
+<link rel="stylesheet" type="text/css" href="obj.css">
+     <script type="text/javascript">
+     document.writeln("<h2>Its 1st Type of Declaration and passing arguments to the Objects And Classes</h2>"); 
+document.writeln("<h2>First Object is <u> Book</u><br></h2>");
+     var book = {};
+book.name ='Remember Me?' ;
+book.author='Sophie Kinsella';
+book.language='English';
+book.first=function(){
+	this.cost='240 RS/-';
+	this.booktype='A Story of Twenties Girl';
+}
+book.publish=function(){
+	this.firstPublisher="Black Swan";
+	this.country='United Kingdom';
+	this.date='2008';
+}
+book.first();
+book.publish();
+document.writeln("<br/>Name of the book is  <b>" + book.name + "  </b> Author is  <b>" + book.author+" </b>and language is <b> " + book.language + "</b>");
+
+document.writeln("<br/>This book is at cost only <b> " + book.cost + "  </b> and this is an <b> "+ book.booktype + "</b> Story");
+
+document.writeln("<br/> This is first published by <b>" + book.firstPublisher + "  </b> at Country  <b>" + book.country + " </b> in <b> " + book.date + "</b>.");
+</script>
+<h3> The Book picture is </h3><img src="photos/sophie.jpg" Height="320" width="420" ></span>
+<script>
+document.writeln("<hr></hr>");
+///////////////////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> CAR </u></br></h2>");
+var car  = {};
+car.name ='FT-1' ;
+car.company='Toyota';
+car.color='gray';
+car.type1=function(){
+	this.price='Upto 1crore';
+	this.cartype='A Sports car';
+}
+car.publishedin=function(){
+	this.pic='Toyota ft1.jpg';
+	this.country='Japan';
+	this.date='2k15';
+}
+car.type1();
+car.publishedin();
+document.writeln("<br/>Name of the Car is  <b>" + car.name + "  </b> .Its a  <b>" + car.company+" </b> Revolution and releasing with color  <b> " + car.color + "</b>.");
+
+document.writeln("<br/>This car at the price of <b> " + car.price + "  </b> Its <b> "+ car.cartype + "</b> Good News For Sport car lovers");
+
+document.writeln("<br/> This is published from <b>" + car.country + "  </b>  on <b> " + car.date + "</b>.Enjoy the Drive" );
+document.writeln("<h4>The Pic is<br> "+ car.pic + "");
+</script>
+<span><img src="photos/toyota ft1.jpg"></span>
+<script>
+document.writeln("<hr></hr>");
+//////////////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Mobile </u></br></h2>");
+var mobile = {};
+mobile.company='HTC';
+mobile.model ='Desire 816' ;
+mobile.color='Gray';
+mobile.specifications=function(){
+	this.launch='2013';
+	this.display='5.5 inches (~67.7% screen-to-body ratio)';
+	this.battery= "Non-removable Li-Po 2600 mAh battery";
+}
+mobile.features=function(){
+	this.sensors="Acceleromete, proximity, compass";
+	this.messaging="SMS (threaded view), MMS, Email, Push Email";
+	this.browser="HTML 5 ";
+	}
+
+mobile.specifications();
+mobile.features();
+document.writeln("<br/>This is a <b> "+ mobile.company+ "</b> company mobile and this mobile model is latest <b> "+
+				 mobile.model + "  </b>in <b>" + mobile.color+" </b> color");
+
+document.writeln("<br/>specifications of this mobile is <ul> laucnhed on :<b>" + mobile.launch +
+				 "</b></ul><ul> Display: <b>" + mobile.display + "</b></ul><ul> Battery:<b>" + mobile.battery + "</b></ul>");
+
+document.writeln("<br/>Features of this mobile is <ul>sensors: <b>"+
+				mobile.sensors+"</b></ul><ul> messaging : <b>"+ mobile.messaging+ "</b></ul><ul> browser: <b>"+mobile.browser+"</b></ul>");
+document.writeln("<h3>Developed as below picture ....and  Latest seen by a person to buy below</h3>"); 
+</script>
+<span><img src="photos/htc.jpg"></span>
+<script>
+document.writeln("<hr></hr>");
+///////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Fan </u></br></h2>");
+var fan = {};
+fan.company ='Bajaj' ;
+fan.color='White ';
+fan.functionality=function(){
+	this.rotations='1000RPM';
+	this.typeofFan='ceiling';
+}
+fan.input=function(){
+	this.power="230V";
+	this.status='working properly';
+}
+fan.functionality();
+fan.input();
+document.writeln("<br/>This is a <b>" + fan.company + "  </b>company fan and It is in <b>" + fan.color+" </b> color");
+
+document.writeln("<br/>This fan is taking <b>"+ fan.power+"  </b> power and  this fan is <b> "+ fan.status+". </b>");
+
+document.writeln("<br/> This is having <b>" + fan.rotations + "  </b>and this is a  <b>" + fan.typeofFan+" </b> fan ");
+document.writeln("<hr></hr>");
+
+////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Bag </u></br></h2>");
+var bag={};
+bag.company='High Sierra';
+bag.type='Normal';
+bag.details= function(){
+	this.cost='Rs. 2999.00';
+	this.color='Blue and Black';
+	this.use='you can this bag for office and Laptop';
+
+}
+bag.details();
+document.writeln("<br/>we are going into talk about new bag and the bag is from <b>"
+					+bag.company+"</b> and This is a <b>"+bag.type+"</b> bag.<br/> Details of this bag is at cost of <b> "
+					+bag.cost+"</b>, this a <b>"+bag.color+"</b> color bag and "+bag.use+"</b> <br/>");
+</script><br>
+<span><img src="photos/highS.jpg"></span>
+<script>
+document.writeln("<hr></hr>");
+
+    document.writeln("<h3 style=\"color:red\"> Thanks for using javascript programming! Objects And Classes </h3>");
+     document.writeln("<h1 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h1>");       
+      </script>
+      
+        </body>
+
+</html>

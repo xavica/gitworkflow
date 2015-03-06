@@ -75,11 +75,6 @@
     <td> From Lodash</td>
   </tr>
 <tr>
-<tr>
-    <td>  <a href="gayatri/DropLast.html"> Drop one bye one </a></td>
-    <td> From Lodash</td>
-  </tr>
-<tr>
 
 <tr>
     <td>  <a href="gayatri/GameSL.html"> Game</a></td>
@@ -718,6 +713,18 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/objtype2.html"> 2nd type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/bookobj1.html"> 1st type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/lodashindexof.html">_.indexOf</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
      <tr>
     <td>  <a href="Jagan/lodashinitial.html">_.initial</a></td>
     <td> javascript program using Lodash library</td>
