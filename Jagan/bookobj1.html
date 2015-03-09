@@ -1,5 +1,5 @@
 <html>
-  <title>font size </title>
+  <title>Creating Objects</title>
   <head>
 
     </head>
@@ -132,7 +132,63 @@ document.writeln("<br/>we are going into talk about new bag and the bag is from 
 <span><img src="photos/highS.jpg"></span>
 <script>
 document.writeln("<hr></hr>");
+////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Bottle </u></br></h2>");
+var bottle = {};
+bottle.color ='Blue' ;
+bottle.specification=function(){
+	this.capacityofBottle='2 Litre';
+	this.company='Coca-Cola';
+}
 
+bottle.specification();
+document.writeln("<br/>This is a <b>" + bottle.color + "  </b> color bottle and this is having capacity of <b>" 
+				+ bottle.capacityofBottle+"</b> and this is a <b>"+bottle.company+ "</b>company");
+document.writeln("<hr></hr>");
+////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Chair </u></br></h2>");
+var chair ={};
+chair.type=" Ropc Office Chair";
+chair.company="Nilkamal";
+chair.features=function(){
+	this.operation='Push Back mechanism with 120 mm stroke gas lift ';
+	this.weight='10.1 Kgs';
+}
+chair.details=function(){
+	this.productCode='HHDECOM_ROPC_MRNSWMAFR';
+}
+chair.features();
+chair.details();
+document.writeln("<br/>This is a <b>" + chair.type + " </b> and it is bran new from  <b>" +chair.company+"</b> company.");
+document.writeln("<br/>Features of this chair is <b><ul>"+chair.operation+"</ul></b><ul> weight:<b> "+chair.weight+"</ul></b>");
+document.writeln("<hr></hr>");
+////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Mouse </u></br></h2>");
+var mouse={};
+mouse.company='Logitech';
+mouse.color='black';
+mouse.featuresofMouse= function(){
+	this.capacity='upto 1 Meter';
+	this.type='WireLess';
+}
+mouse.featuresofMouse();
+document.writeln("<br/> Thus mouse is <b>"+mouse.type+" </b>and this is in <b>"+mouse.color +
+					 "</b>color <br/> Capacity of this mouse is <b>"+mouse.capacity+"</b> and This is From <b>"+mouse.company+"</b>");
+document.writeln("<hr></hr>");
+////////////////////////////////////////////////
+document.writeln("<h2>Next object is <u> Headset </u></br></h2>");
+var headset={};
+headset.company='Sony';
+headset.color='black';
+headset.featuresofHeadset= function(){
+	this.headset='High performance Dolby Digital DTS';
+	this.warranty='1 Year';
+}
+headset.featuresofHeadset();
+document.writeln("<br/> This is a Head set from  <b>"+headset.company+" </b>and this is in <b>"+headset.color +
+					 "</b>color <br/> this gives  <b>"+headset.headset+"</b>  sound and This is From <b>"+headset.company+"</b> It has <b>"+headset.warranty+"</b> Warrenty.");
+document.writeln("<hr></hr>");
+/////////////////////////////////////////////////////////////////////
     document.writeln("<h3 style=\"color:red\"> Thanks for using javascript programming! Objects And Classes </h3>");
      document.writeln("<h1 style=\"color:brown\"> <-- Go back to Go Next Page... !!!</h1>");       
       </script>

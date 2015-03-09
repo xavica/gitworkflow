@@ -1,5 +1,5 @@
 <html>
-  <title>font size </title>
+  <title>Creating Objects Type 2</title>
   <head>
 
     </head>
@@ -34,6 +34,39 @@ document.writeln("<br/> This is first published by <b>" + book.firstPublisher + 
 <h3> The Book picture is </h3><img src="photos/twilight.jpg" Height="320" width="420" ></span>
 <script>
 document.writeln("<hr></hr>");
+//////////////////////////////////////////////////////////////////
+document.writeln("<h2>Next Object is <u> Car </u><br></h2>");
+var car  =
+{
+  company : 'MARUTHI SUZUKI',
+  model : 'Ciaz',
+  drive : function()
+  {
+    this.start='press Start button';
+    this.accelerate='Give accelerator';
+    this.light= "Flash lights";
+  },
+  stop : function()
+  {
+    this.breakCar="press break";
+  }
+}
+car.drive();
+car.stop();
+document.writeln("<br/>This is a  <b>" + car.company + "  </b>company car its model is <b>" + car.model+" .</b>");
+
+document.writeln("<br/>To drive this car <b> " + car.start + "  </b> and <b> "+ car.accelerate+ "</b> if any vehicle coming opposite to you then <b>"+car.light+" </b>");
+
+document.writeln("<br/>If you want to stop the car just  <b>" + car.breakCar + " </b>");
+
+</script>
+<h3> The Book picture is </h3>
+<span><img src="photos/caiz.jpg" Height="320" width="420" ></span>
+<span><img src="photos/ciaz2.jpg" Height="320" width="420" ></span>
+<script>
+document.writeln("<hr></hr>");
+///////////////////////////////////////////////////////////////
+
 </script>
 </body>
 </html>

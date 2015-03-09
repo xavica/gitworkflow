@@ -725,6 +725,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/objtype3.html"> 3rd type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
      <tr>
     <td>  <a href="Jagan/objtype2.html"> 2nd type of Object Declaration</a></td>
     <td> javascript program on Objects</td>
