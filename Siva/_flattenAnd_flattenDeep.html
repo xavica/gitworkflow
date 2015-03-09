@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flatten and FlattenDeep</title>
+</head>
+<body>
+<p>See output on console. Just click F12 and it will open the developer tools window then on concole you can see the out put</p>
+
+<script src="../js/jquery.js" type="text/javascript"></script>
+
+<script src="../js/lodashmin.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var a=[1, [2, 3, [4]]];
+	var names=['Anu', 'Sai', ['Dhana', 'Kiran',['Gayatri','Siva', 'Jagan']]];
+
+
+	console.log(_.flatten(a));
+	console.log(_.flatten(a, true));
+
+	console.log(_.flattenDeep(a));
+
+
+	console.log(_.flatten(names));
+	console.log(_.flatten(names, true));
+
+	console.log(_.flattenDeep(names));
+
+
+	console.log(_.flatten([123, [234, 345,[456]]]));
+
+
+// → [1, 2, 3, [4]];
+
+// using `isDeep`
+
+// → [1, 2, 3, 4];
+</script>
+</body>
+</html>
