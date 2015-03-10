@@ -30,7 +30,7 @@
 	 _.pull(a,1,5,3);
 	console.log("array is after pull of 1,5,3 is:   " + a); 
 
-	var str = ['a','b',1,2,'c','d',3,4];
+	/var str = ['a','b',1,2,'c','d',3,4];
 	console.log("str array is: " + str);
 	_.pull(str,function(i){
 		console.log('a');
@@ -41,11 +41,10 @@
 		}
 
 	}); 
-	console.log("str array is: " + str); 
+	console.log("str array is: " + str); */
 	
 	function customPull(x)
 	{
-		var n = arguments.length;
 		for( var i=0; i<x.length; i++ )
 		{
 			for(var j=0; j<arguments.length;j++)
