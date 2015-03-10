@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Creating Objects and comparing parameters</title>
+</head>
+<body>
+<div >
+<span id = "book1"><img src="Images/books/book1.jpeg"></span>
+<span id = "book2"><img src="Images/XAVICA.jpg"><br/></span>	 
+	
+</div>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+function Book(name,author)
+{
+	this.name =name ;
+	this.author=author;
+	document.writeln(name + author);
+};
+Book.prototype.description=function()
+{
+		this.cost=cost;
+		this.binding=binding;
+		this.publisher=publisher;
+		this.about=about;
+		document.writeln("<br/>Cost=Rs."+Book.prototype.cost +"/ And This Book is an "+ Book.prototype.booktype);
+};
+
+document.getElementById("book1").value=Book("Revolution","Chetan Bhagat");
+document.getElementById("book1").value=Book.prototype.description(1200,"AutoBiography");
+// document.getElementById("book1").value=Book.prototype.publish(1200,"AutoBiography");
+// document.getElementById("book2").value=Book("Revolution","Chetan Bhagat");
+// document.getElementById("book2").value=Book.prototype.description(1200,"AutoBiography");
+// document.getElementById("book2").value=Book.prototype.publish(1200,"AutoBiography");
+</script>
+</body>
+</html>
