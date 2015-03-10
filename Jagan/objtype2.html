@@ -1,0 +1,72 @@
+<html>
+  <title>Creating Objects Type 2</title>
+  <head>
+
+    </head>
+      <body>
+<link rel="stylesheet" type="text/css" href="obj.css">
+     <script type="text/javascript">
+   document.writeln("<h2>Its 2nd Type of Declaration and passing arguments to the Objects And Classes</h2>"); 
+document.writeln("<h2>First Object is <u> Book</u><br></h2>");
+     var book = {
+  name : 'Twilight (Twilight #1)',
+  author : 'Stephenie Meyer',
+  language:'English',
+  about : function()
+  {
+    this.cost='250RS';
+    this.booktype='Love Story';
+  },
+  publish : function()
+  {
+    this.firstPublisher="Little, Brown and Compan";
+    this.year='2006';
+  }
+}
+book.about();
+book.publish();
+document.writeln("<br/>Name of the book is  <b>" + book.name + "  </b> Author is  <b>" + book.author+" </b>and language is <b> " + book.language + "</b>");
+
+document.writeln("<br/>This book is at cost only <b> " + book.cost + "  </b> and this is an <b> "+ book.booktype + "</b>");
+
+document.writeln("<br/> This is first published by <b>" + book.firstPublisher + "  </b> at Country  <b> Britan </b> in <b> " + book.year + "</b>.");
+</script>
+<h3> The Book picture is </h3><img src="photos/twilight.jpg" Height="320" width="420" ></span>
+<script>
+document.writeln("<hr></hr>");
+//////////////////////////////////////////////////////////////////
+document.writeln("<h2>Next Object is <u> Car </u><br></h2>");
+var car  =
+{
+  company : 'MARUTHI SUZUKI',
+  model : 'Ciaz',
+  drive : function()
+  {
+    this.start='press Start button';
+    this.accelerate='Give accelerator';
+    this.light= "Flash lights";
+  },
+  stop : function()
+  {
+    this.breakCar="press break";
+  }
+}
+car.drive();
+car.stop();
+document.writeln("<br/>This is a  <b>" + car.company + "  </b>company car its model is <b>" + car.model+" .</b>");
+
+document.writeln("<br/>To drive this car <b> " + car.start + "  </b> and <b> "+ car.accelerate+ "</b> if any vehicle coming opposite to you then <b>"+car.light+" </b>");
+
+document.writeln("<br/>If you want to stop the car just  <b>" + car.breakCar + " </b>");
+
+</script>
+<h3> The Book picture is </h3>
+<span><img src="photos/caiz.jpg" Height="320" width="420" ></span>
+<span><img src="photos/ciaz2.jpg" Height="320" width="420" ></span>
+<script>
+document.writeln("<hr></hr>");
+///////////////////////////////////////////////////////////////
+
+</script>
+</body>
+</html>

@@ -33,6 +33,16 @@
     </tr>
 
 <tr>
+    <td>  <a href="gayatri/FindIndex.html"> _.findIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/FindLastIndex.html"> _.findLastIndex </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
     <td>  <a href="gayatri/DropRightWhile.html"> _.dropRightWhile </a></td>
     <td> From Lodash</td>
   </tr>
@@ -416,7 +426,38 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-
+    <tr>
+    <td>  <a href="anu/Requirement tools.docx"> Requirement tools  </a></td>
+    <td> This doc contains Stakeholders, personas , os environments</td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Measuring SEO effectiveness.docx">Measuring SEO effectiveness  </a></td>
+    <td>  SEO effectiveness </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Requirement tools.docx"> Stakeholders  </a></td>
+    <td>  Stakeholders </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Measuring SEO effect.docx">Measuring SEO effect  </a></td>
+    <td>  SEO effectiveness </td>
+  </tr>
+  <tr>
+    <td>  <a href="anu/Thinking in stories.docx"> Thinking in stories </a></td>
+    <td> thinking in stories </td>
+    </tr>
+  <tr>  
+    <td>  <a href="anu/types of stories.docx"> types of stories</a></td>
+    <td> types in stories  </td>
+ </tr>
+  <tr>  
+    <td>  <a href="anu/Personas.docx">Personas </a></td>
+    <td> personas </td>
+ </tr>
+  <tr>  
+    <td>  <a href="anu/a few good requirements.docx">good requirements </a></td>
+    <td> about requirements </td>
+ </tr>
   <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
@@ -433,10 +474,6 @@
     <td>  <a href="an.docx"> 12th doc. </a></td>
     <td>   document file </td>
   </tr>
- <tr>
-    <td>  <a href="anu/personas.docx"> 13th doc </a></td>
-    <td>   document file </td>
-  </tr>
   <tr>
     <td>  <a href="anu/personas.docx"> 13th doc </a></td>
     <td>   document file </td>
@@ -450,37 +487,18 @@
     <td>   document file </td>
   </tr>
   <tr>
-    <td>  <a href="anu/doc17.docx"> document file </a></td>
+    <td>  <a href="anu/content optimization technical SEO"> content optimization technical SEO </a></td>
     <td>   scope and requirement </td>
   </tr>
   <tr>
-    <td>  <a href="anu/doc18.docx"> document file </a></td>
+    <td>  <a href="anu/Long term content planning .docx"> Long term content planning </a></td>
     <td>   scope and requirement continuation </td>
   </tr>
   <tr>
-    <td>  <a href="anu/Date19.docx"> document file </a></td>
+    <td>  <a href="anu/Date19.docx"> whining</a></td>
     <td>    wihining  </td>
   </tr>
-  <tr>
-    <td>  <a href="anu/Measuring SEO effectiveness.docx"> document file </a></td>
-    <td>  SEO effectiveness </td>
-  </tr>
-  <tr>
-    <td>  <a href="anu/Measuring SEO effectiveness.docx"> document file </a></td>
-    <td>  SEO effectiveness </td>
-  </tr>
-  <tr>
-    <td>  <a href="anu/Thinking in stories.docx"> document file </a></td>
-    <td> thinking in stories </td>
-    </tr>
-  <tr>  
-    <td>  <a href="anu/types of stories.docx"> document file </a></td>
-    <td> types in stories  </td>
- </tr>
-  <tr>  
-    <td>  <a href="anu/Personas.docx"> document file </a></td>
-    <td> personas </td>
- </tr>
+
 </table>
 </div>
 
@@ -492,6 +510,50 @@
        <th>DESCRIPTION</th> 
     </tr>
   <tr>
+  <tr>
+    <td>  <a href="Siva/CreatingObjects3.html"> Creating Objects type 3 </a></td>
+    <td>  A JS program on creating objects and use those instances  </td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/CreatingObjects2.html"> Creating Objects type 2</a></td>
+    <td>  A JS program on creating objects and use those instances  </td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/CreatingObjects.html"> Creating Objects type 1 </a></td>
+    <td>  A JS program on creating objects and use those instances  </td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/customInitial.html"> _.initial and CustomInital </a></td>
+    <td>  A JS program on lodash and this function displaying all the elements in the array except the last element  </td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/customFirst.html">  _.first and customFirst</a></td>
+    <td>    A JS program on lodash and this function displaying first element in the array</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/ObjectClasses.html">  Object Classes </a></td>
+    <td>    A JS program on displaying object classes using instances</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/SplitString.html">  Split String </a></td>
+    <td>    A JS program on displaying and splitting string</td>
+  </tr>
+   <tr>
+    <td>  <a href="Siva/Search.html">  Search string </a></td>
+    <td>    A JS program on searching a string</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects2.html">  Object Creation </a></td>
+    <td>    A JS program on displaying objects of arrays and isung instances</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/JSObjects.html">  Object Creation basic </a></td>
+    <td>    A JS program on displaying array with with creation os objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Siva/StringMethodes.html">  StringMethodes</a></td>
+    <td>    A JS program on displaying string indexes, uppercase and lowercase.</td>
+  </tr>
   <tr>
     <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
     <td>    A JS program on displaying array with _.dropRight</td>
@@ -667,6 +729,58 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/objtype3.html"> 3rd type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/objtype2.html"> 2nd type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/bookobj1.html"> 1st type of Object Declaration</a></td>
+    <td> javascript program on Objects</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/lodashindexof.html">_.indexOf</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/lodashinitial.html">_.initial</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashintersection.html"> _.intersection </a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashflattendeep.html">_.flattenDeep </a></td>
+    <td> javascript program using Lodash library </td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashflatten.html">_.flatten</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/Lodashfirst.html">_.first </a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+     <tr>
+    <td>  <a href="Jagan/markupobj.html">markup objects operation </a></td>
+    <td> javascript program using some obj methods</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/anchor.html">anchor method operation </a></td>
+    <td> javascript program using anchor obj method</td>
+  </tr>
+    <tr>
+    <td>  <a href="Jagan/lodashfindlastindex.html">lodash findLastIndex operation </a></td>
+    <td> javascript program using lodash library</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/lodashfindindex.html">lodash findIndex operation </a></td>
+    <td> javascript program using lodash library</td>
+  </tr>
     <tr>
     <td>  <a href="Jagan/lodashdropwhile.html">lodash DropWhile operation </a></td>
     <td> javascript program using lodash library</td>
@@ -873,61 +987,64 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Saikrishna/stakeholders_operating environment.docx"> stakeholders_operating environment </a></td>
+    <td> This document tells us about stakeholders, operating environment</td>
+  </tr>
   <tr>
     <td>  <a href="gayatri/site.html"> site Navigation </a></td>
     <td>   Description about site navigation example </td>
   </tr>
 <tr>
-    <td>  <a href="Saikrishna/doc.docx"> document </a></td>
+    <td>  <a href="Saikrishna/doc.docx"> seo document file </a></td>
     <td>   seo document file </td>
   </tr>
   <tr>
-    <td>  <a href="Saikrishna/saikrishna.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna.docx"> requirement activites </a></td>
     <td>   requirement activites </td>
   </tr>
   <tr>
-    <td>  <a href="Saikrishna/saikrishna4.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna4.docx"> scopeand requirements validation </a></td>
     <td>  scopeand requirements validation </td>
   </tr>
  </tr>
   <tr>
-    <td>  <a href="Saikrishna/saikrishna.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna.docx"> scopeand requirements validation </a></td>
     <td>  scopeand requirements validation </td>
   </tr> </tr>
   <tr>
-    <td>  <a href="Saikrishna/saikrishna6.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna6.docx"> requirements and issuess </a></td>
     <td>   requirements and issuess  </td>
   </tr>
  
  <tr>
-    <td>  <a href="Saikrishna/saikrishna7.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna7.docx">  whining  </a></td>
     <td>   whining  </td>
   </tr>
 <tr>
-    <td>  <a href="Saikrishna/saikrishna9.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna9.docx"> creating effective thinking stories  </a></td>
 v    <td>  creating effective thinking stories   </td>
 <tr>
-    <td>  <a href="Saikrishna/saikrishna12.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/saikrishna12.docx"> personas </a></td>
     <td>  personas  </td>
   </tr>
   <tr>
-    <td>  <a href="Saikrishna/getting to be done.docx"> document file </a></td>
-    <td>  getting to be done  </td>
-  </tr> 
-  <td>  <a href="Saikrishna/getting to be done.docx"> document file </a></td>
-    <td>  getting to be done  </td>
-  </tr> <tr>
+    <td>  <a href="Saikrishna/getting to be done.docx"> getting to be done </a></td>
+    <td>  getting to be done  </td>  
+  </tr>
+   <tr>
     <td>  <a href="Saikrishna/measuring seo effectiveness.docx"> document file </a></td>
     <td>  measuring seo effectiveness  </td>
   </tr>
   <tr>
-    <td>  <a href="Saikrishna/methodology,one vs many,course outline.docx"> document file </a></td>
+    <td>  <a href="Saikrishna/project life cycles,software development roles.docx">  project life cycles,software development roles</a></td>
     <td>  methodology,one vs many,outline </td>
   </tr>
    <tr>
-    <td>  <a href="Saikrishna/methodology,one vs many,course outline.docx"> document file </a></td>
-    <td>  methodology,one vs many,outline </td>
-  </tr> </tr>
+    <td>  <a href="Saikrishna/project life cycles,software development roles.docx"> project life cycles,software development roles </a></td>
+    <td>  oject life cycles,software development roles </td>
+  </tr>
+  </tr>
 <footer>
 Copyright © xavica.com
 </footer>
