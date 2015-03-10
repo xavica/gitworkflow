@@ -4,7 +4,7 @@
 <div id="d1">
 	<textarea id='text' rows="4" cols="50" placeholder="Check Details Here"></textarea> <br>
 
-	<span><input type='button' id="btn1" onclick="details()" value='Get Details'> </span>
+	<span><input type='button' id="btn1" value='Get Details'> </span>
 	<span><input type='button' onclick="next()" value='Next'></span>
 </div>
 
@@ -60,17 +60,20 @@ function single()
 	}
 
 }
-function details()
-{
-	document.getElementById('text').value = "welcome to Linked list Concepts";
-	document.getElementById('btn1').value = "Prev";
-	var btn = document.createElement("BUTTON");
-    var t = document.createTextNode("Next1");
-    btn.appendChild(t);
-    document.body.appendChild(btn);
-    btn.onclick = next();
-}
+ $(document).ready(function()
+ {
+ 	$(btn1).click(function()
+		{
+			document.getElementById('text').value = "welcome to Linked list Concepts";
+			document.getElementById('btn1').value = "Prev";
+			var btn = document.createElement("BUTTON");
+   			var t = document.createTextNode("Next1");
+    		btn.appendChild(t);
+    		document.body.appendChild(btn);
+   		 	btn.onclick = next();
 
+		})
+});
 
 </script>
 
