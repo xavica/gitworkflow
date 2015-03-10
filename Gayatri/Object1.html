@@ -2,7 +2,7 @@
 <body>
 <p> <h1> MEET UP </h1> </p>
 <div id="d1">
-	<p> <input type='button' onclick="details()" value='Get Details'> </p>
+	<p> <input type='button' id='btn1' value='Get Details'> </p>
 	<span> Topic <input type ='text' id='topic' placeholder='meetup Topic'></span><br><br>
 	<span> Author <input type ='text' id='author' placeholder='meetup Author'></span><br><br>
 	<span> location <input type ='text' id='street' placeholder='meetup street'>
@@ -47,7 +47,23 @@ body
 	}
 	meetUp.contact = 'Gayatri';
 
-function details()
+	$(document).ready(function()
+	{
+		$(btn1).click(function()
+		{
+			document.getElementById('topic').value = meetUp.topic;
+			document.getElementById('author').value = meetUp.author;
+			meetUp.location();
+			document.getElementById('street').value = meetUp.street;
+			document.getElementById('city').value = meetUp.city;
+			meetUp.time();
+			document.getElementById('day').value = meetUp.day;
+			document.getElementById('date').value = meetUp.date;
+			document.getElementById('contact').value = meetUp.contact;
+		})
+	});
+
+/*function details()
 {
 	document.getElementById('topic').value = meetUp.topic;
 	document.getElementById('author').value = meetUp.author;
@@ -59,7 +75,7 @@ function details()
 	document.getElementById('date').value = meetUp.date;
 	document.getElementById('contact').value = meetUp.contact;
 
-}
+} */
 
 
 </script>
