@@ -1,0 +1,78 @@
+<html>
+<body>
+<p> <h1> Linked List </h1> </p>
+<div id="d1">
+	<textarea id='text' rows="4" cols="50" placeholder="Check Details Here"></textarea> <br>
+
+	<span><input type='button' id="btn1" onclick="details()" value='Get Details'> </span>
+	<span><input type='button' onclick="next()" value='Next'></span>
+</div>
+
+<style>
+#d1
+{
+	line-height: 30px;
+	font-family: verdana;
+	font-size: 15px;
+	font-weight: bold;
+}
+body
+{
+	background: lightgrey;
+	align: center;
+}
+textarea
+{
+
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+function single()
+{
+	this.parent = 'Data Structure';
+	this.type ='single Linked list';
+	this.parts = function()
+	{
+		this.one = 'node';
+		this.two = 'address';
+	}
+	this.access = 'sequential';
+	this.memory = 'Dynamic';
+	this.useful = function()
+	{
+		this.s1 = 'stacks';
+		this.s2 = 'queues';
+	}
+	this.advantage = function()
+	{
+		this.easy = 'insertion deletion is easy';
+		this.without = 'memory reallocation or reorganization';
+	}
+
+	this.drawback = function()
+	{
+		this.needs = 'needs more memory';
+		this.for = 'as it uses pointers';
+	}
+
+}
+function details()
+{
+	document.getElementById('text').value = "welcome to Linked list Concepts";
+	document.getElementById('btn1').value = "Prev";
+	var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("Next1");
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+    btn.onclick = next();
+}
+
+
+</script>
+
+</body>
+</html>

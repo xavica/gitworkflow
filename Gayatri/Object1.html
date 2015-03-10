@@ -1,0 +1,68 @@
+<html>
+<body>
+<p> <h1> MEET UP </h1> </p>
+<div id="d1">
+	<p> <input type='button' onclick="details()" value='Get Details'> </p>
+	<span> Topic <input type ='text' id='topic' placeholder='meetup Topic'></span><br><br>
+	<span> Author <input type ='text' id='author' placeholder='meetup Author'></span><br><br>
+	<span> location <input type ='text' id='street' placeholder='meetup street'>
+			<span>  <input type ='text' id='city' placeholder='meetup city'></span></span><br><br>
+	<span> Time <input type ='text' id='day' placeholder='meetup Day'></span>
+			<span> <input type ='text' id='date' placeholder='meetup Date'></span> <br><br>
+	<span> Contact <input type ='text' id='contact' placeholder='meetup Contact Person'></span>
+
+</div>
+
+<style>
+#d1
+{
+	line-height: 30px;
+	font-family: verdana;
+	font-size: 15px;
+	font-weight: bold;
+}
+body
+{
+	background: lightgrey;
+	align: center;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	var meetUp = { };
+	meetUp.topic = 'On javascript';
+	meetUp.author = 'Xavica';
+	meetUp.location = function()
+	{
+		this.street = 'Panjagutta';
+		this.city = 'Hyd';
+	}
+	meetUp.time = function()
+	{
+		this.day = 'Monday';
+		this.date = '8th May';
+	}
+	meetUp.contact = 'Gayatri';
+
+function details()
+{
+	document.getElementById('topic').value = meetUp.topic;
+	document.getElementById('author').value = meetUp.author;
+	meetUp.location();
+	document.getElementById('street').value = meetUp.street;
+	document.getElementById('city').value = meetUp.city;
+	meetUp.time();
+	document.getElementById('day').value = meetUp.day;
+	document.getElementById('date').value = meetUp.date;
+	document.getElementById('contact').value = meetUp.contact;
+
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+ <html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+var a=[1,2,3,4,"5","gayatri",3,4,5,6,6,7,5,8,8,3,5,7,9];
+  console.log("The array is",a);
+  var n = window.prompt("search value:");
+  n = parseInt(n);
+
+  
+         var Index = _.findIndex(a,function(i)
+         {
+         	 	
+         	 	if(i === n)
+				return i;
+         });
+ console.log("findIndex value::",Index); 
+
+ var Index1 = _.findLastIndex(a,function(i)
+         {
+         	 	
+         	 	if(i === n)
+				return i;
+         });
+ console.log("findlastIndex value::",Index1)
+
+
+ 
+
+ </script>
+</body>
+</html>
