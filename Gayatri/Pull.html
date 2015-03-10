@@ -1,0 +1,44 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	console.log("Removes all provided values from array using SameValueZero for equality comparisons.");
+	
+	
+	var a = [1,2,3,4,5,6,7,8];
+	console.log("Custom Function:Pull");
+	console.log(a);
+	customPull(a,6,2,3);
+	
+	console.log("Pull Array is:   " + a);
+
+	var a = [1,2,3,4,5,6,7,8];
+	console.log("Lodash Function:pull");
+	console.log(a);
+	 _.pull(a,1,5,3);
+	console.log("array is after pull of 1,5,3 is:   " + a);
+	
+	
+	function customPull(x,a,b,c)
+	{
+		for( var i=0; i<x.length; i++ )
+		{
+			if( x[i] === a || x[i] === b || x[i] === c)
+			{
+				x.splice(i, 1);
+				i--;
+			}
+		}
+	}
+
+
+
+</script>
+</body>
+</html>
