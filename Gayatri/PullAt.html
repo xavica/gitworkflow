@@ -16,29 +16,39 @@
 	console.log("Custom Function:PullAt");
 	console.log(a);
 	var b = customPullAt(a,2,4,5);
-
-	
 	console.log("array is after custom pullAt of 2,4,5 is:   " + b);
+
+	var a = ['a',1,'b',2,'c',3,'d'];
+	console.log("Custom Function:PullAt");
+	console.log(a);
+	var b = customPullAt(a,1,3,5);
+	console.log("array is after custom pullAt of 1,3,5 is:   " + b);
 
 	var a = [1.0,2.1,3.2,4.3,5.4,6.5,7.6,8.7];
 	console.log("Lodash Function:pull");
 	console.log(a);
 	 _.pullAt(a,1,5,3);
 	console.log("array is after pullAt of 1,5,3 is:   " + a); 
-	
-	
-	function customPullAt(x,r1,r2,r3)
+
+
+	function customPullAt(x)
 	{
 		for( var i=0; i<x.length; i++ )
 		{
-			if( i === r1 || i === r2 || i === r3 )
-			x[i] = false;
-				
-		}
+			for(var j=0; j<arguments.length;j++)
+			{
+				if( i ===  arguments[j])
+				{
+					x[i] = false;
+				}
+			}
+		} 
 		x = _.compact(x);
 		return x;
-
 	}
+	
+	
+	
 
 
 
