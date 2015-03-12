@@ -33,6 +33,16 @@
     </tr>
 
 <tr>
+    <td>  <a href="gayatri/KnockExp1.html">Knockout Example</a></td>
+    <td> From Knockout Library</td>
+</tr>
+
+<tr>
+    <td>  <a href="gayatri/SpanJs.html"> Printing no.s using JS</a></td>
+    <td> Printing data</td>
+</tr>
+
+<tr>
     <td>  <a href="gayatri/Remove.html"> _.remove,_.rest </a></td>
     <td> From Lodash</td>
 </tr>
@@ -533,8 +543,20 @@
     </tr>
   <tr>
   <tr>
-    <td>  <a href="Siva/CreatingObjects4.html"> Creating Objects</a></td>
+    <td>  <a href="Siva/EnteringDataToTable_ko.html"> Entering Mobile Data To Table</a></td>
+    <td> A JS program on Creating Objects, representing classes and representing mobile datda into table </td>
+   </tr>
+   <tr>
+    <td>  <a href="Siva/KoExampleonObservable.html"> KoExampleonObservable</a></td>
     <td> A JS program on Creating Objects and representing classes </td>
+   </tr>
+   <tr>
+    <td>  <a href="Siva/KoExample.html"> Example Using Knockout</a></td>
+    <td> A JS program on Creating Objects and representing classes </td>
+   </tr>
+  <tr>
+    <td>  <a href="Siva/takeAndtakeRight.html"> Lodash functions</a></td>
+    <td> A JS program on performing lodash operations like take() And takeRight() </td>
    </tr>
   <tr>
     <td>  <a href="Siva/removeAndrest.html"> _removeAndrest</a></td>
