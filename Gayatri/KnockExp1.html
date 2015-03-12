@@ -20,9 +20,10 @@
 <script>
 function emp()
 {
-	this.ename = ko.observable();
-	this.senior = 'scott';
-	this.dept = 'sales';
+	this.ename = ko.observable('');
+	this.senior =ko.observable('scott');
+	// this.senior = 'scott';
+	this.dept =ko.observable('sales');
 };
 var e1 = new emp();
 ko.applyBindings(e1);

@@ -1,4 +1,3 @@
-
 function Knock1(){
 	this.firstName = 'John';
 	this.lastName = 'Gadd';
