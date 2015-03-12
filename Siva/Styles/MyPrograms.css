@@ -1,0 +1,26 @@
+ 
+ table
+ {
+float: center; margin:0 auto;
+ border-collapse: collapse;
+ }
+
+  th,td 
+  {
+    border: 1px solid black;
+	text-align:center;
+	}
+
+	th
+	{
+		color:#810541;
+	}
+td{ 
+padding:5px;
+}
+	header {
+    background-color:#98AFC7;
+    color:#B048B5;
+    text-align:center;
+    padding:5px;	 
+    }
