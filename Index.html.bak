@@ -33,6 +33,23 @@
     </tr>
 
 <tr>
+    <td>  <a href="gayatri/Pull.html"> _.Pull </a></td>
+    <td> From Lodash</td>
+</tr>
+
+<tr>
+    <td>  <a href="gayatri/PullAt.html"> _.PullAt </a></td>
+    <td> From Lodash</td>
+  </tr>
+<tr>
+<tr>
+    <td>  <a href="gayatri/Object1.html"> Object- I </a></td>
+    <td> Type I object creation</td>
+  </tr>
+<tr>
+
+<tr>
+<tr>
     <td>  <a href="gayatri/FindIndex.html"> _.findIndex </a></td>
     <td> From Lodash</td>
   </tr>
@@ -749,6 +766,18 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/prototypeobject.html">prototype object</a></td>
+    <td> javascript program of objects</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/lodashremove.html">_.remove</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+   <tr>
+    <td>  <a href="Jagan/lodashrest.html">_.rest</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
    <tr>
     <td>  <a href="Jagan/lodashpullat.html">_.pullAt</a></td>
     <td> javascript program using Lodash library</td>
