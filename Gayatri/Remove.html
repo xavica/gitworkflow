@@ -59,9 +59,18 @@ var str = ['a','b',1,2,'c','d',3,4];
 	var a = [1,2,3,4,5,6];
 	console.log("Array before:   " + a);
 	var b = _.rest(a);
-	console.log("Array after rest:  " + b);
+	console.log("Array after rest:  " + b); 
 
+	var Company=[12,'x',41,7,'a',5,'v',6,'i',7,'c','a',3,7];
 
+    console.log("The Actual Array is:",Company);
+    var s=_.remove(Company,function(i){
+       if(typeof(i) === 'string')
+        return i;  
+    });
+
+    console.log("old array:  "+ Company);
+    console.log("new array:  "+ s);
 	</script>
 </body>
 </html>

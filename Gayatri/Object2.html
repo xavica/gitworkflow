@@ -4,8 +4,8 @@
 <div id="d1">
 	<textarea id='text' rows="4" cols="50" placeholder="Check Details Here"></textarea> <br>
 
-	<span><input type='button' id="btn1" value='Get Details'> </span>
-	<span><input type='button' onclick="next()" value='Next'></span>
+	<span><button id="btn1" value=1>Get Details </button> </span>
+	
 </div>
 
 <style>
@@ -21,8 +21,9 @@ body
 	background: lightgrey;
 	align: center;
 }
-textarea
+button
 {
+	display: inline;
 
 }
 </style>
@@ -35,7 +36,7 @@ function single()
 {
 	this.parent = 'Data Structure';
 	this.type ='single Linked list';
-	this.parts = function()
+	this.contains = function()
 	{
 		this.one = 'node';
 		this.two = 'address';
@@ -58,21 +59,46 @@ function single()
 		this.needs = 'needs more memory';
 		this.for = 'as it uses pointers';
 	}
-
 }
+var s = new single();
+s.contains();  s.useful(); s.advantage(); s.drawback();
+
  $(document).ready(function()
  {
+ 	
  	$(btn1).click(function()
 		{
-			document.getElementById('text').value = "welcome to Linked list Concepts";
-			document.getElementById('btn1').value = "Prev";
-			var btn = document.createElement("BUTTON");
-   			var t = document.createTextNode("Next1");
-    		btn.appendChild(t);
-    		document.body.appendChild(btn);
-   		 	btn.onclick = next();
+			var i = document.getElementById("btn1").value;
+			console.log(i);
+			switch(i)
+			{
+				case '1':
+				document.getElementById('text').value = "welcome to Linked list Concepts";
+				document.getElementById('btn1').value = "Prev";
+				btn1.addEventListener('click',function(event)
+				{
+					i=1;
+				});
+				var btn = document.createElement("BUTTON");
+    			var t = document.createTextNode("Next");
+    			btn.appendChild(t);
+    			document.body.appendChild(btn);
+				btn.addEventListener('click', function(event) {
+  					
+  					var item = s.type + " is a " + s.parent;
+  					var str = "Linked List";
+  					//str.style.font-weight = 700;
+  					document.getElementById('text').value = str + '\n'+ item;
+				}); 
 
-		})
+				break;
+
+				case '2':
+				alert("this is case 2");
+				break;
+
+		}
+	})
 });
 
 </script>
