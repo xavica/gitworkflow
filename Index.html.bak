@@ -33,8 +33,6 @@
     </tr>
 
 <tr>
-<<<<<<< HEAD
-=======
     <td>  <a href="gayatri/KnockExp1.html">Knockout Example</a></td>
     <td> From Knockout Library</td>
 </tr>
@@ -50,7 +48,6 @@
 </tr>
 
 <tr>
->>>>>>> d293aa6dfb65eec3c6770c94c756da347dce5d70
     <td>  <a href="gayatri/Pull.html"> _.Pull </a></td>
     <td> From Lodash</td>
 </tr>
@@ -813,6 +810,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/EspnlivescoreExample.html">Espn Live Score Card</a></td>
+    <td> javascript program using Ko Object Binding</td>
+  </tr>
      <tr>
     <td>  <a href="Jagan/prototypeobject.html">prototype object</a></td>
     <td> javascript program of objects</td>
