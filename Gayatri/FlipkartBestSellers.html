@@ -1,0 +1,27 @@
+<html>
+<head><title>Flipkart Best Sellers</title>
+<style>
+table
+{
+	border: 1px solid black;
+	width : 50%;
+	height: 50%;
+}
+</style>
+</head>
+<body>
+<table>
+<tbody data-bind="foreach:items">
+	<tr>
+		<td><img data-bind="attr:{src: image_url}"></td>
+		<td data-bind="text: pname"></td>
+		<td data-bind="text: price"></td>
+	</tr>
+</tbody>
+</table>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="FlipkartBestSellers.js"></script>
+</body>
+</html>
