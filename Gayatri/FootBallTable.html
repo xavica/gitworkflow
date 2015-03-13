@@ -1,0 +1,177 @@
+<html>
+<head><title>FootBall Tables</title>
+
+<style>
+	#d1
+{
+	height: 40px;
+	background-color: pink;
+	
+}
+table
+{
+	border: 1px solid black;
+	width : 50%;
+	height: 50%;
+}
+#d2
+{
+	height: 600px;
+	width: 350px;
+	float: left;
+}
+#d3
+{
+	
+	width: 550px;
+	background-color: lightgrey;
+	float: left;
+}
+#d4
+{
+	height: 600px;
+	width: 350px;
+	float: left;
+}
+tr
+{
+	margin-bottom: 5px;
+}
+table
+{
+	float: center;
+	width: 100%;
+	height: 60%;
+}
+th,td
+{
+	font-weight: bold;
+	text-align: center;
+}
+img
+{
+	border-radius: 100%;
+	height: 40px;
+	width: 40px;
+}
+#c1
+{
+	height: 30px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: verdana;
+}
+</style>
+</head>
+
+
+<body>
+<div id="d1">
+	<caption><h2 align="center">FootBall Tables</h1></caption>
+</div>
+<div id="d2"></div>
+<div id="d3">
+<div id="c1">iLeague Tables</div>
+<table>
+<thead>
+	<tr>
+		<th> POS </th>
+		<th> </th>
+		<th> Team</th>
+		<th> P </th>
+		<th> W </th>
+		<th> D </th>
+		<th> L </th>
+		<th> +/- </th>
+		<th> Pts </th>
+	</tr>
+</thead>
+<tbody data-bind="foreach:iLeague">
+<tr>
+	<td data-bind="text:pos"></td>
+	<td><img data-bind="attr:{src:image}"></td>
+	<td data-bind="text:team"></td>
+	<td data-bind="text:p"></td>
+	<td data-bind="text:w"></td>
+	<td data-bind="text:d"></td>
+	<td data-bind="text:l"></td>
+	<td data-bind="text:score"></td>
+	<td data-bind="text:pts"></td>
+</tr>
+</tbody>
+</table>
+
+<div id="c1">Premier-League Tables</div>
+<table>
+<thead>
+	<tr>
+		<th> POS </th>
+		<th> </th>
+		<th> Team</th>
+		<th> P </th>
+		<th> W </th>
+		<th> D </th>
+		<th> L </th>
+		<th> +/- </th>
+		<th> Pts </th>
+	</tr>
+</thead>
+<tbody data-bind="foreach:premierLeague">
+<tr>
+	<td data-bind="text:pos"></td>
+	<td><img data-bind="attr:{src:image}"></td>
+	<td data-bind="text:team"></td>
+	<td data-bind="text:p"></td>
+	<td data-bind="text:w"></td>
+	<td data-bind="text:d"></td>
+	<td data-bind="text:l"></td>
+	<td data-bind="text:score"></td>
+	<td data-bind="text:pts"></td>
+</tr>
+</tbody>
+</table>
+
+<div id="c1">Serie-League Tables</div>
+<table>
+<thead>
+	<tr>
+		<th> POS </th>
+		<th> </th>
+		<th> Team</th>
+		<th> P </th>
+		<th> W </th>
+		<th> D </th>
+		<th> L </th>
+		<th> +/- </th>
+		<th> Pts </th>
+	</tr>
+</thead>
+<tbody data-bind="foreach:serieLeague">
+<tr>
+	<td data-bind="text:pos"></td>
+	<td><img data-bind="attr:{src:image}"></td>
+	<td data-bind="text:team"></td>
+	<td data-bind="text:p"></td>
+	<td data-bind="text:w"></td>
+	<td data-bind="text:d"></td>
+	<td data-bind="text:l"></td>
+	<td data-bind="text:score"></td>
+	<td data-bind="text:pts"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+<div id="d4"></div>
+
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="FootBallTable.js"></script>
+</body>
+</html>

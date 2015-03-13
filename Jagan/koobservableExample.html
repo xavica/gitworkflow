@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Data Bind Using KO.Observable Object</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="obj.css">
+ <h2> Here We Having Some Objects Get Data Of Those Objects From KO Objects using Observable </h2>
+  <h1> <p> <b><strong data-bind="text: name"></strong></b><b> <strong data-bind="text: subname"></strong></b></p></h1>
+  <img src="photos/BMW 7.jpg"> 
+   <p> Company: <b><strong data-bind="text: company"></strong></b></p>
+   <p> Model: <b><strong data-bind="text: model"></strong></b></p>
+   <p> Colour: <b><strong data-bind="text: colour"></strong></b></p>
+   <p> Specialities: <b><strong data-bind="text: specialities"></strong></b></p>
+   <p> Safety features:<b><strong data-bind="text: features"></strong></b></p>
+
+    <p> Company: <input type="text" data-bind="value: company"></input></b></p>
+   <p> Model: <input type="text" data-bind="value: model"></input></b></p>
+   <p> Colour: <input type="text" data-bind="value: colour"></input></b></p>
+   <p> Specialities: <input type="text" data-bind="value: specialities" size=110></input></b></p>
+   <p> Safety features: <input type="text" data-bind="value: features" size=100></input></b></p>
+
+<script type="text/javascript" src='../js/jquery.js'></script>
+<script type="text/javascript" src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript">
+ 	function Car()
+	{
+    this.name=ko.observable("BMW");
+   	this.subname=ko.observable("7 Series");
+     this.company=ko.observable('BMW');
+     this.model=ko.observable("BMW 7 Series");
+     this.colour=ko.observable("White");
+    this.specialities=ko.observable("Highlighting features include optional full LED lights, new materials available for the passenger cabin, optimised acoustic comfort ");
+     this.features=ko.observable("multifunctional instrument display, 3D graphics Control Display, Bang & Olufsen high end surround sound system");
+     }
+    var car1= new Car();
+    ko.applyBindings(car1); 
+</script>
+</body>
+</html>
+
+  

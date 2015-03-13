@@ -9,7 +9,6 @@ function players(pos,image,pname,rating,best_rank)
 function RankingViewModel()
 {
 	this.persons = [ 
-
 		new players("1-","104.jpg","Kumar Sangakkara","909","1"),
 		new players("2-","370.jpg","AB De Villiers","908","1"),
 		new players("3-","314.jpg","Hashim Amla","891","1"),
