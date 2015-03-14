@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/EspnViewModel.css">
+	<title></title>
+</head>
+<body>
+<div ><img class="addImage" src="Images/EspnImage5.png"><img class="addImage" src="Images/EspnImage5.png"></div>
+<section data-bind="foreach: espnViewResults">
+	<div class ="topmenu">
+			<span><img data-bind="attr:{src: espnLogo}"></span>
+			<span class="items" data-bind="foreach: menuItems">
+				<span data-bind="text: itemName"></span>
+			</span>
+	</div>
+	<br/>
+	<div class="matchImage"><img class="image"  src="Images/EspnImage4.png" ></div>
+	<div class ="todayResults" data-bind="foreach: todayResults">
+		<div class="resultsMenu" data-bind="foreach: menu">
+			<span  data-bind="text: resultsMenu"></span>
+		</div>
+		<div class="leaugeType" data-bind="text: leaugeType" ></div>
+		<div class="results" data-bind="foreach: results">
+			<div class="finalResults" data-bind="text: finalResults">
+				
+			</div>
+		</div>
+
+	</div>
+	</section>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/EspnViewModel.js"></script>
+
+</body>
+</html>
