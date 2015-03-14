@@ -555,6 +555,14 @@
     </tr>
   <tr>
   <tr>
+    <td>  <a href="Siva/Flipkart.html"> Flipkart Demo</a></td>
+    <td> A JS program on Creating Objects, representing classes  using knokout and displaying Flipkart Demo </td>
+   </tr>
+   <tr>
+    <td>  <a href="Siva/TimesView.html"> Times of India</a></td>
+    <td> A JS program on Creating Objects, representing classes  using knokout and displaying times of India Demo </td>
+   </tr>
+  <tr>
     <td>  <a href="Siva/CricBuzz.html"> CricBuzz Points table</a></td>
     <td> A JS program on Creating Objects, representing classes and representing CricBuzz Points table </td>
    </tr>
@@ -830,6 +838,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/MyntraProductsViewModel.html">MyntraProducts ViewModel</a></td>
+    <td> Javascript program using Ko Object Binding</td>
+  </tr>
     <tr>
     <td>  <a href="Jagan/TimesofIndiaViewModel.html">TimesOfIndiaViewModel</a></td>
     <td> javascript program using Ko Object Binding</td>
