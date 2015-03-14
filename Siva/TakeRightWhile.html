@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TakeRightWhile</title>
+</head>
+<body>
+<p><b>See output on console. Just click F12 and it will open the developer tools window then on concole you can see the out put</b></p>
+<p><h3>_.takeRightWhile:</h3> Creates a slice of array with elements taken from the end. Elements are taken until predicate returns falsey. The predicate is bound to thisArg and invoked with three arguments; (value, index, array) </p>
+<p><h3>_.takeWhile: </h3>Creates a slice of array with elements taken from the beginning. Elements are taken until predicate returns falsey. The predicate is bound to thisArg and invoked with three arguments; (value, index, array). </p>
+
+</body>
+<script src="../js/jquery.js" type="text/javascript"></script>
+
+<script src="../js/lodashmin.js" type="text/javascript"></script>
+<script type="text/javascript">
+console.log(_.takeRightWhile([1, 2, 3], function(n) {
+  return n > 1;
+}));
+console.log(_.takeWhile([1, 2, 3], function(n) {
+  return n < 3;
+}));
+</script>
+</html>

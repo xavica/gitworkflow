@@ -2,7 +2,7 @@
 <html>
 <head>
 <style type="text/css">
-	#item{color:blue;}#heading{font-weight: bold;}
+	.item{color:blue;}.heading{font-weight: bold;}
 </style>
 	<title>Times View</title>
 </head>
@@ -12,9 +12,9 @@
 </div>
 <div >
 <ul data-bind="foreach: sections" >
-	<h4 id="heading" data-bind="text: name "></h4>
+	<h4 class="heading" data-bind="text: name "></h4>
 	<ul  data-bind="foreach: items">
-			<li id="item" data-bind="text: item"></li>
+			<li class="item" data-bind="text: itemName"></li>
 			<p data-bind="text: description"></p>
 	</ul>
 </ul>
