@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="MyntraStyles.css">
+
+	<title>Myntra Flat 80 % off</title>
+</head>
+
+<body>
+<div id= "header" data-bind="foreach: headerMyntra">
+ 	<span><img data-bind="attr:{src: myntralogo}"></span>
+ 	<span><input type="text" id="searchBar" placeholder="Search for a product or category or brand"></span>
+ 	<span><button type="button" id="search" name="Search" background-color="yellow">Search</button> </span>
+ </div>
+ <div class="left">
+  <img src="photos/MyntraExtra.png" width="203" height="400">
+  <img src="photos/myntraxtra.png" width="203" height="400">
+ </div>
+ <div class="right">
+  <img src="photos/Myntrawatch.png" width="650" height="160">
+ <div><h1> Myntra Accessories </h1></div>
+<div data-bind="foreach: products">
+	<div class="items">
+		<div><img data-bind="attr:{href:productlink,src: imageUrl}" height="140" width="125"></div>
+		<b><div data-bind="text: brandName"></div></b>
+		<i><div data-bind="text: name"></div></i>
+		<div data-bind="text: originalPrice"></div>
+		<div class="dis">Now:<div data-bind="text: discountprice"></div></div>
+		<div id="percentageColor" data-bind="text: discountPercentage"></div>
+
+	</div>
+</div>
+</div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript">
+	function Product(productlink,imageUrl,brandName,name,originalPrice,discountprice,discountPercentage )
+{
+	this.productlink=productlink;
+	this.imageUrl=imageUrl;
+	this.brandName=brandName;
+	this.name=name;
+	this.originalPrice=originalPrice;
+	this.discountprice=discountprice;
+	this.discountPercentage=discountPercentage;
+
+};
+function MyntraImage(myntralogo)
+{
+	this.myntralogo=myntralogo;
+
+};
+
+function MyntraProductsViewModel()
+{
+	this.headerMyntra=[ new MyntraImage("photos/myntraImage.png")
+
+						];
+	this.products=	[new Product("http://www.myntra.com/watches/daniel-klein/daniel-klein-men-charcoal-grey-dial-watch-dk10507-6/636470/buy?src=search&uq=&q=men-accessories-new-arrivals&p=47","photos/myntraimage1.jpg","Daniel Klein","Men Charcoal Grey Dial Watch DK10507-6","Rs.6733/-","Rs.3750/-","(43% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-black-dial-watch-dz1578i/619554/buy?src=search&uq=&q=men-accessories-new-arrivals&p=67","photos/myntraimage2.jpg","DIESEL","Men Black Dial Watch DZ1578I","Rs.8765/-","Rs.7750/-","(19% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz4307i/595039/buy?src=search&uq=&q=men-accessories-new-arrivals&p=78","photos/myntraimage3.jpg","DIESEL","Men Grey Dial Watch DZ4307I","Rs.18,945/-","Rs.15,645/-","(23% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage4.jpg","DIESEL","Men Grey Dial Watch DZ7293I","Rs.22,445/-","Rs.21,342/-","(8% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage5.jpg","Aveiro ","Men Black & Off-White Dial Watch AV46WHTBBLK","Rs.1199/-","Rs.799/-","(28% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage6.jpg","Daniel Klein ","Men Navy Dial Watch DK10413-1","Rs.4,199/-","Rs.3,799/-","(6% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage7.jpg","Nautica ","Men Brown Dial Watch A17637G","Rs.10,199/-","Rs.6,799/-","(22% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage8.jpg","Fastrack ","Men White Dial Watch","Rs.11,599/-","Rs.8,799/-","(26% OFF)")
+					];
+}
+ko.applyBindings(new MyntraProductsViewModel());
+</script>
+</body>
+</html>

@@ -31,7 +31,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
-
+<tr>
+    <td>  <a href="gayatri/Union.html"> _.union,_.uniq,_unzip </a></td>
+    <td> From Lodash</td>
+</tr>
 <tr>
     <td>  <a href="gayatri/FootBallTable.html">FootBall Tables Example</a></td>
     <td> From Knockout Library</td>
@@ -854,6 +857,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+     <tr>
+    <td>  <a href="Jagan/MyntraProductsViewModel.html">MyntraProducts ViewModel</a></td>
+    <td> Javascript program using Ko Object Binding</td>
+  </tr>
     <tr>
     <td>  <a href="Jagan/TimesofIndiaViewModel.html">TimesOfIndiaViewModel</a></td>
     <td> javascript program using Ko Object Binding</td>
