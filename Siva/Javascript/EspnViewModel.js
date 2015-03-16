@@ -23,7 +23,7 @@ function Menu(resultsMenu)
 };
 function EspnViewModel()
 {
-	this.espnViewResults=[	new TopMenu(	"Images/EspnImage.png",
+	this.espnViewResults=[	new TopMenu("Images/EspnImage.png",
 							[	new MenuItem("WC 2015"),
 								new MenuItem("LIVE SCORES"),
 								new MenuItem("SERIES"),
