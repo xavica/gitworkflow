@@ -1,0 +1,34 @@
+<html>
+<head>
+<title> Data Bind Using KO Object</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="obj.css">
+ <h2> Here We Having Some Objects Get Data Of Those Objects From KO Object</h2>
+   <p> <b><strong data-bind="text: name"></strong></b><b> <strong data-bind="text: subname"></strong></b></p>
+  <img src="photos/Audi A7.jpg"> 
+   <p> Company: <b><strong data-bind="text: company"></strong></b></p>
+   <p> Model: <b><strong data-bind="text: model"></strong></b></p>
+   <p> Colour: <b><strong data-bind="text: colour"></strong></b></p>
+   <p> Specialities: <b><strong data-bind="text: specialities"></strong></b></p>
+   <p> Safety features:<b><strong data-bind="text: features"></strong></b></p>
+<script type="text/javascript" src='../js/jquery.js'></script>
+<script type="text/javascript" src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript">
+ 	function Car()
+	{
+    this.name="Audi";
+   	this.subname="A7";
+     this.company='Audi';
+     this.model="New Model Audi A7";
+     this.colour="Red";
+     this.specialities="Air suspension,Engine:2.8-liter, 204 horsepower V6,Acceleration 2.8-liter, 204 horsepower V6";
+     this.features="airbags, lane departure warnings, and blind spot warnings are likely to be included.";
+     }
+    var ca= new Car();
+    ko.applyBindings(ca); 
+</script>
+</body>
+</html>
+
+  

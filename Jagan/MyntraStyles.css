@@ -1,0 +1,63 @@
+body
+   {
+   	width:1106px;
+	margin: 0 auto;
+	}
+.items
+{	
+	height: 300px;
+	width: 160px;
+	float: left;
+	margin-right: 0 auto;
+}
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+.left {
+    line-height:30px;
+    background-color:lightgray;
+    text-decoration:underline;
+    height:800px;
+    width:203px;
+    float:left;
+    padding:5px;
+}
+.right {
+    width:650px;
+    background-color:white;
+    float:left;
+    padding:10px;	 	 
+}
+#searchBar
+{	height: 40px;
+ 	width: 800px;
+}
+#search
+{
+	height: 40px;
+	width:80px;
+
+}
+h1
+{
+	color: #FFA500;
+}
+.right:hover
+{
+	
+ 	border: 1px dotted black;
+}
+.items:hover
+{
+	
+ 	border: 1px dotted black;
+}
+#percentageColor{
+	color:red;
+}
+.dis{
+	color:blue;
+}
