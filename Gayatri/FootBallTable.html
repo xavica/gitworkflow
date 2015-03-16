@@ -73,9 +73,10 @@ img
 </div>
 <div id="d2"></div>
 <div id="d3">
-<div id="c1">iLeague Tables</div>
+<div id="c1"></div>
 <table>
-<thead>
+<tbody data-bind="foreach:League">
+<thead data-bind="text: leagueType ">
 	<tr>
 		<th> POS </th>
 		<th> </th>
@@ -88,22 +89,21 @@ img
 		<th> Pts </th>
 	</tr>
 </thead>
-<tbody data-bind="foreach:iLeague">
 <tr>
-	<td data-bind="text:pos"></td>
-	<td><img data-bind="attr:{src:image}"></td>
+	<td data-bind="text:position"></td>
+	<td><img data-bind="attr:{src:imageUrl}"></td>
 	<td data-bind="text:team"></td>
-	<td data-bind="text:p"></td>
-	<td data-bind="text:w"></td>
-	<td data-bind="text:d"></td>
-	<td data-bind="text:l"></td>
+	<td data-bind="text:played"></td>
+	<td data-bind="text:won"></td>
+	<td data-bind="text:draw"></td>
+	<td data-bind="text:lost"></td>
 	<td data-bind="text:score"></td>
-	<td data-bind="text:pts"></td>
+	<td data-bind="text:points"></td>
 </tr>
 </tbody>
 </table>
 
-<div id="c1">Premier-League Tables</div>
+<!-- <div id="c1">Premier-League Tables</div>
 <table>
 <thead>
 	<tr>
@@ -159,7 +159,7 @@ img
 	<td data-bind="text:l"></td>
 	<td data-bind="text:score"></td>
 	<td data-bind="text:pts"></td>
-</tr>
+</tr>-->
 </tbody>
 </table>
 
