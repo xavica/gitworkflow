@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head><link rel="stylesheet" type="text/css" href="Styles/CricBuzzModifiedViewModel.css">
+
+	<title>Cric Buzz</title>
+</head>
+<body>
+<div id ="header">
+<h1><b>ICC CRICKET WORLD CUP 2015</b></h1>
+<div id= "menu">
+<h3>
+	<span class="topmenu">Home</span><span class="topmenu">Terms</span><span class="topmenu">Schedule</span><span class="topmenu">News</span>
+	<span class="topmenu">Features</span><span class="topmenu">Specials</span><span class="topmenu">History</span><span class="topmenu">Photos</span>
+	<span class="topmenu">Stats</span><span class="topmenu">Points Table</span><span class="topmenu">Kits</span><span class="topmenu">More</span>
+</h3>
+</div>
+</div>	
+<caption><h2>ICC Cricket World Cup 2015-Points Table</h1></caption>
+
+<table class="table" data-bind="foreach: tables">
+<tr data-bind="foreach:headers">
+	<th data-bind="text:header"></th>
+</tr>
+<tbody data-bind="foreach:tableData">
+<tr>	
+	<td id="team" data-bind="text: team"></td>
+    	<td data-bind="text: matches"></td>
+    	<td data-bind="text: won"></td>
+    	<td data-bind="text: lost"></td>
+    	<td data-bind="text: tied"></td>
+    	<td data-bind="text: noResult"></td>
+    	<td data-bind="text: points"></td>
+    	<td data-bind="text: NetRunRate"></td>
+    	</tr>
+ </tbody>
+</table>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/CricBuzzModifiedViewModel.js"></script>
+</body>
+</html>

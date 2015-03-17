@@ -1,0 +1,39 @@
+<html>
+  <title>functionArguments</title>
+  <head>
+
+    </head>
+      <body>
+<link rel="stylesheet" type="text/css" href="cs.css">
+     <script type="text/javascript">
+       function saySomething()
+  {
+  	
+ var array=["Siva","Gayatri","Jagan","Dhana","Kiran","Anuhya","SaiKrishna"];
+ var Arayy=['SivaPrasad M','Mani Karumuri'];
+ for(var i=0;i<Arayy.length;i++)
+  {
+  	 function Before(){
+  	 	console.log("Hello Team...!! by " + Arayy[i]);
+       alert("Hello Team...!! by " + Arayy[i]); 
+       document.writeln("<h3 style=\" color:red \">Hello Team ....!! by " + Arayy[i] + "</h3>");
+        }
+     Before();
+    }
+ for(var i=0;i<array.length;i++)
+  {
+  function next(){
+
+       console.log("Hello Team...!! by " + array[i]);
+       alert("Hello Team...!! by " + array[i]); 
+       document.writeln("<p style=\" color:blue \">Hello Team ....!! by " + array[i] + "</p>");
+        }
+     next();
+   }
+ }
+  saySomething();
+ 			
+ document.writeln("See OutPut in console Also... press F12 and Reload Again ")         
+ </script>
+ </body>
+ </html>
