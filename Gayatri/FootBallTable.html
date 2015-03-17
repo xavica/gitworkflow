@@ -54,7 +54,7 @@ img
 	height: 40px;
 	width: 40px;
 }
-#c1
+.c1
 {
 	height: 30px;
 	background-color: black;
@@ -62,6 +62,7 @@ img
 	font-weight: bold;
 	font-size: 16px;
 	font-family: verdana;
+	width: 550px;
 }
 </style>
 </head>
@@ -73,11 +74,12 @@ img
 </div>
 <div id="d2"></div>
 <div id="d3">
-<div id="c1"></div>
-<table>
-<tbody data-bind="foreach:League">
-<thead data-bind="text: leagueType ">
-	<tr>
+<div>
+<table data-bind="foreach:leagues">
+<tr class="c1">
+	<td data-bind="text:leagueType"></td>
+</tr>
+<tr>
 		<th> POS </th>
 		<th> </th>
 		<th> Team</th>
@@ -88,7 +90,7 @@ img
 		<th> +/- </th>
 		<th> Pts </th>
 	</tr>
-</thead>
+<tbody data-bind="foreach:leagueTable">
 <tr>
 	<td data-bind="text:position"></td>
 	<td><img data-bind="attr:{src:imageUrl}"></td>
@@ -103,67 +105,8 @@ img
 </tbody>
 </table>
 
-<!-- <div id="c1">Premier-League Tables</div>
-<table>
-<thead>
-	<tr>
-		<th> POS </th>
-		<th> </th>
-		<th> Team</th>
-		<th> P </th>
-		<th> W </th>
-		<th> D </th>
-		<th> L </th>
-		<th> +/- </th>
-		<th> Pts </th>
-	</tr>
-</thead>
-<tbody data-bind="foreach:premierLeague">
-<tr>
-	<td data-bind="text:pos"></td>
-	<td><img data-bind="attr:{src:image}"></td>
-	<td data-bind="text:team"></td>
-	<td data-bind="text:p"></td>
-	<td data-bind="text:w"></td>
-	<td data-bind="text:d"></td>
-	<td data-bind="text:l"></td>
-	<td data-bind="text:score"></td>
-	<td data-bind="text:pts"></td>
-</tr>
 </tbody>
 </table>
-
-<div id="c1">Serie-League Tables</div>
-<table>
-<thead>
-	<tr>
-		<th> POS </th>
-		<th> </th>
-		<th> Team</th>
-		<th> P </th>
-		<th> W </th>
-		<th> D </th>
-		<th> L </th>
-		<th> +/- </th>
-		<th> Pts </th>
-	</tr>
-</thead>
-<tbody data-bind="foreach:serieLeague">
-<tr>
-	<td data-bind="text:pos"></td>
-	<td><img data-bind="attr:{src:image}"></td>
-	<td data-bind="text:team"></td>
-	<td data-bind="text:p"></td>
-	<td data-bind="text:w"></td>
-	<td data-bind="text:d"></td>
-	<td data-bind="text:l"></td>
-	<td data-bind="text:score"></td>
-	<td data-bind="text:pts"></td>
-</tr>-->
-</tbody>
-</table>
-
-</div>
 
 </div>
 <div id="d4"></div>
