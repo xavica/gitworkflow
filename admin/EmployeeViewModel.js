@@ -40,7 +40,6 @@ function EmployeeViewModel(){
 
 	this.clickAdd = function(){
 		that.selectedEmployee(getEmptyObject());
-		
 		this.isNew(true);
 		this.isEditMode(false);
 	}
@@ -62,6 +61,7 @@ function EmployeeViewModel(){
 
 	function getEmptyObject(){
 		return new Employee('','');
+		
 	}
 }
 var vm = new EmployeeViewModel();
