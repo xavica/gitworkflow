@@ -56,9 +56,22 @@
      <label for="deisel's">DEISEL</label><br>
   <input type="checkbox" name="Tossido" id="T-shirts" />
      <label for="Tossido">Tossido </label><br>
-  
+ <script type="text/javascript">	    
+  function brand(){
+ 	document.getElementById("BrandsId").onclick= function(){
+ 		if(document.getElementById("BrandsId").checked){
+        document.getElementById("BrandTour").style.display="block";
+   }else {
+   	  document.getElementById("BrandTour").style.display="none";
+   }
+ };
+      document.getElementById("BrandTour").style.display="none";
+ }
+    window.onload = function(){
+    	brand();
+     };    
+  </script>
   </div>
-</div>
 </div>
  <div class="right">
   <img src="photos/Myntrawatch.png" width="650" height="160">
@@ -79,7 +92,7 @@
 <script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
 <script type="text/javascript">
 
- function prepare(){
+ /*function prepare(){
  	document.getElementById("SomeThing").onclick= function(){
  		if(document.getElementById("SomeThing").checked){
         document.getElementById("MyntraTour").style.display="block";

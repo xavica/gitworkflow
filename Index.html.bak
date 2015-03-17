@@ -33,6 +33,14 @@
     </tr>
 
 <tr>
+    <td>  <a href="gayatri/FootBallTable.html">Modified FootBall Tables Example</a></td>
+    <td> From Knockout Library</td>
+</tr>
+<tr>
+    <td>  <a href="gayatri/PractiseKnock.html"> Practise Example for ViewModels </a></td>
+    <td> using knockout Library</td>
+</tr>
+<tr>
     <td>  <a href="gayatri/AddButton.html"> Adding an item on Button Click </a></td>
     <td> From knockout Library</td>
 </tr>
@@ -556,307 +564,21 @@
 
 <div class="informationContainer">
   <h2> SIVA J </h1>
-  <table class='examples'>
-    <tr>
-       <th>PROGRAM</th>
-       <th>DESCRIPTION</th> 
+<table class="examples" data-bind="foreach: programs">
+    <tr data-bind="foreach:headers">
+      <th data-bind="text:header"></th>
     </tr>
-  <tr>
-   <tr>
-    <td>  <a href="Siva/CricBuzzModifiedViewModel.html"> CricBuzz Modified ViewModel</a></td>
-    <td>  A JS program on Creating Objects, representing classes and representing CricBuzz Points table and it is modified as for code redundancy</td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/ZipAndUnZip.html"> Lodash - Zip And UnZip</a></td>
-    <td> A JS program on performing lodash operations like Zip() And Unzip() </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/UnionAndUniq.html"> Lodash - Union And Uniq</a></td>
-    <td> A JS program on performing lodash operations like Union() And Uniq()</td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/TakeRightWhile.html"> TakeRightWhile and TakeWhile</a></td>
-    <td> A JS program on performing lodash operations like TakeRightWhile() and TakeWhile() </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/EspnViewModel.html"> Espn View Model</a></td>
-    <td> A JS program on Creating Objects, representing classes  using knokout and displaying Flipkart Demo </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/Flipkart.html"> Flipkart Demo</a></td>
-    <td> A JS program on Creating Objects, representing classes  using knokout and displaying Flipkart Demo </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/TimesView.html"> Times of India</a></td>
-    <td> A JS program on Creating Objects, representing classes  using knokout and displaying times of India Demo </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/CricBuzz.html"> CricBuzz Points table</a></td>
-    <td> A JS program on Creating Objects, representing classes and representing CricBuzz Points table </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/MyPrograms.html"> Entering MyPrograms Data To Table</a></td>
-    <td> A JS program on Creating Objects, representing classes and representing MyPrograms datda into table using knokout </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/EnteringDataToTable_ko.html"> Entering Mobile Data To Table</a></td>
-    <td> A JS program on Creating Objects, representing classes and representing mobile datda into table </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/KoExampleonObservable.html"> KoExampleonObservable</a></td>
-    <td> A JS program on Creating Objects and representing classes </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/KoExample.html"> Example Using Knockout</a></td>
-    <td> A JS program on Creating Objects and representing classes </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/takeAndtakeRight.html"> Lodash functions</a></td>
-    <td> A JS program on performing lodash operations like take() And takeRight() </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/removeAndrest.html"> _removeAndrest</a></td>
-    <td> A JS program on performing lodash operations like remove() And rest() </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/intersectionAndlastIndexOf.html"> _intersectionAndlastIndexOf</a></td>
-    <td>  A JS program on performing lodash operations like intersection() And lastIndexOf()</td>
-   </tr>
-   
-   <tr>
-    <td>  <a href="Siva/indexOfAndLast.html"> _indexOfAndLast </a></td>
-    <td>   A JS program on performing lodash operations like indexOf() And Last()</td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/pullandpullAt.html"> Lodash Libraries </a></td>
-    <td>  A JS program on performing lodash operations like pull and pullAt</td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/Weather.html"> Seasonal message</a></td>
-    <td>  A JS program on performing about weather report seasonal msg </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/ArrayOperations2.html"> Array Operations2 </a></td>
-    <td>  A JS program on performing array operations </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/ArrayOperations.html"> Array Operations</a></td>
-    <td>  A JS program on performing array operations </td>
-   </tr>
-   <tr>
-    <td>  <a href="Siva/_flattenAnd_flattenDeep.html"> Lodash Libraries</a></td>
-    <td>  A JS program on performing lodash operations like flateen and flttenEnd </td>
-   </tr>
-  <tr>
-    <td>  <a href="Siva/CreatingObjects3.html"> Creating Objects type 3 </a></td>
-    <td>  A JS program on creating objects and use those instances  </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/CreatingObjects2.html"> Creating Objects type 2</a></td>
-    <td>  A JS program on creating objects and use those instances  </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/CreatingObjects.html"> Creating Objects type 1 </a></td>
-    <td>  A JS program on creating objects and use those instances  </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/customInitial.html"> _.initial and CustomInital </a></td>
-    <td>  A JS program on lodash and this function displaying all the elements in the array except the last element  </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/customFirst.html">  _.first and customFirst</a></td>
-    <td>    A JS program on lodash and this function displaying first element in the array</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/ObjectClasses.html">  Object Classes </a></td>
-    <td>    A JS program on displaying object classes using instances</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/SplitString.html">  Split String </a></td>
-    <td>    A JS program on displaying and splitting string</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/Search.html">  Search string </a></td>
-    <td>    A JS program on searching a string</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JSObjects2.html">  Object Creation </a></td>
-    <td>    A JS program on displaying objects of arrays and isung instances</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JSObjects.html">  Object Creation basic </a></td>
-    <td>    A JS program on displaying array with with creation os objects</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/StringMethodes.html">  StringMethodes</a></td>
-    <td>    A JS program on displaying string indexes, uppercase and lowercase.</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/Lodash3.html">  Lodash Arrays</a></td>
-    <td>    A JS program on displaying array with _.dropRight</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/MultidimesionalArrays.html">  Multidimesional Arrays</a></td>
-    <td>    A JS program on declaring array of elements both numbers and strings in matrix</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/ArraysToFunctions.html"> Passing Arrays To Functions</a></td>
-    <td>    A JS program on Passing Arrays To Functions </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/DeclareArrays.html">  Declaring Arrays</a></td>
-    <td>    A JS program on declaring array of elements both numbers and strings in table</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/TestArray.html">  Test Array</a></td>
-    <td>    A JS program on tesing an array</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/LodashTest.html">  LodashTest</a></td>
-    <td>    A JS program on performing lodash arrays</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/TestLodash.html">  TestLodash</a></td>
-    <td>    A JS program on performing lodash arrays</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/Scoping.html">  Scoping of variables</a></td>
-    <td>    A JS program on performing local and global variables</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/Gaming.html">  Scraps Gaming</a></td>
-    <td>    A JS program on gaming of rolling2 dies </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/RollingDie.html">  Rolling A die</a></td>
-    <td>    A JS program on Rolling Die </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/RandomNumbers.html">  Random Numbers</a></td>
-    <td>    A JS program on performing Random numbers display</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/Maximum.html">  Maximun of three numbers</a></td>
-    <td>    A JS program on performing maximun of three numbers</td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/Objectives.html">  Objectives</a></td>
-    <td>    A JS program on performing squqre of number and maximun of three numbers</td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/Looping.html"> Looping Example </a></td>
-    <td>    A JS program on performing lopping and displaying numbers </td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/Functions2.html">  Functions2</a></td>
-    <td>    A JS programm on performing Functions</td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/Functions.html">  Functions</a></td>
-    <td>    A JS programm on performing  Functions</td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/LogicalOperators.html"> Logical Operators</a></td>
-    <td>    A JS programm on performing logical operators</td>
-  </tr>
-  <tr>
-  <tr>
-    <td>  <a href="Siva/DoWhile.html"> using Do..While</a></td>
-    <td>    A JS programm on executing do...while loop</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/SwitchTest.html"> Using Switch Case</a></td>
-    <td>    A JS programm on using switch case</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/VariablesTypes.html"> Variables & Types</a></td>
-    <td>    A JS programm on declaring variable and types also using "use strict"</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/SumUsingRepitition.html"> SumUsingRepitition</a></td>
-    <td>    A JS programm on Summation of numbers</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JSCounterControlled.html"> JSCounterControlled</a></td>
-    <td>    A JS programm on creating loops  </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptObjects.html"> JavascriptObjects</a></td>
-    <td>    A JS programm on defining objects and givinf parameters</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptExample5.html"> javascript5 </a></td>
-    <td>    A JS programm on use strict</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptExample4A.html"> javascript4a </a></td>
-    <td>    A JS program on Sentinel-controlled repetition to calculate a class average </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptExample4.html"> javascript4 </a></td>
-    <td>    A JS program on Counter-controlled repetition to calculate a class average</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/Callbacks1.html"> CallBacks </a></td>
-    <td>    call backs using JS programming</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptExample3.html"> javascript3 </a></td>
-    <td>    arthemetic operations and alert msgs using JS programming</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/ChatBox.html"> Chatbox </a></td>
-    <td>    just a chat box not in executed mode</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/ChatBoxrevised.html"> Virtual chatbox</a></td>
-    <td>    its a virtual chatbox where we have sent the data to the chatroom</td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/ButtonColors.html"> onclick action </a></td>
-    <td>    This gives you the changing of colors while clicking on the button </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/JavascriptExample.html"> Small Claculator  </a></td>
-    <td>    Performing Arthemetic operations using JavaScript program</td>
-  </tr>
-    <td>  <a href="gayatri/site.html"> site Navigation </a></td>
-    <td>   Description about site navigation example </td>
-  </tr>
-     <tr>
-    <td>  <a href="Siva/About.html"> About xavica </a></td>
-    <td>    Just Introduction about xavica </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/BA.html"> Buisssiness Analyst </a></td>
-    <td>    Introduction about buissiness analyst </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/Designing.html"> Designing </a></td>
-    <td>    Intoduction about designing team </td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/Dev.html"> Developers </a></td>
-    <td>    Intoduction about developers team</td>
-  </tr>
-   <tr>
-    <td>  <a href="Siva/MyExample.html"> Our data </a></td>
-    <td>     A small example I have done on our team </td>
-  </tr>
-  <tr>
-    <td>  <a href="Siva/bbcwebsite.html">bbc website dummy </a></td>
-    <td>     dummt bbc website have done for practising </td>
-     <tr>
-    <td>  <a href="Siva/myamcat.html"> myamcat-revised </a></td>
-    <td>    Example on developing amcat site </td>
-  </tr>
-  </tr>
-</table>
+    <tbody data-bind="foreach:programsData">
+      <tr>
+        <td data-bind="text: slNo"></td>
+        <td><a data-bind="attr: {href: url},text: program"></td>
+        <td data-bind="text: description"></td>
+      </tr> 
+         
+     </tbody>
+ </table>
+ 
+
 </div>
 
 <div class="informationContainer">
@@ -866,6 +588,18 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/Lodashwithout.html">_.without</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/Lodashxor.html">_.xor</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
+  <tr>
+    <td>  <a href="Jagan/Lodashzip.html">_.zip</a></td>
+    <td> javascript program using Lodash library</td>
+  </tr>
     <tr>
     <td>  <a href="Jagan/Lodashunzip.html">_.unzip</a></td>
     <td> javascript program using Lodash library</td>
@@ -1268,6 +1002,10 @@ Copyright © xavica.com
 
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/lodashmin.js" type="text/javascript"></script>
+<script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+
 <script src="js/counts.js" type="text/javascript"></script>
+
+<script src="IndexModifiedViewModel.js" type="text/javascript"></script>
 </body>
 </html>
