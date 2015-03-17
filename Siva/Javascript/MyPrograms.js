@@ -8,7 +8,7 @@ function Programs(slNo,program,url,description){
 	};
 
 
-function SivaPrograms(){
+function IndexViewModel(){
 
 	this.programs = [ 	new Programs(length++,'Entering Mobile Data To Table', "EnteringDataToTable_ko.html",'A JS program on Creating Objects, representing classes and representing mobile datda into table'),
 						new Programs(length++,'KoExampleonObservable','KoExampleonObservable.html','A JS program on Creating Objects and representing classes'),

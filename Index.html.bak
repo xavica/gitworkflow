@@ -567,8 +567,6 @@
     <td>  A JS program on Creating Objects, representing classes and representing CricBuzz Points table and it is modified as for code redundancy</td>
    </tr>
   <tr>
-<<<<<<< HEAD
-=======
     <td>  <a href="Siva/ZipAndUnZip.html"> Lodash - Zip And UnZip</a></td>
     <td> A JS program on performing lodash operations like Zip() And Unzip() </td>
    </tr>
@@ -577,7 +575,6 @@
     <td> A JS program on performing lodash operations like Union() And Uniq()</td>
    </tr>
   <tr>
->>>>>>> dad5db6b48a45c4fd5d1a0fdd12a4c5f69ab6898
     <td>  <a href="Siva/TakeRightWhile.html"> TakeRightWhile and TakeWhile</a></td>
     <td> A JS program on performing lodash operations like TakeRightWhile() and TakeWhile() </td>
    </tr>
