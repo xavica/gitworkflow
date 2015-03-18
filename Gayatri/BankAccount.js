@@ -25,23 +25,36 @@ function BankAccountViewModel()
 
 	this.clickNew = function()
 	{
+		that.displayAccount(getEmptyObject());
 		that.isNew(true);
-		console.log("Clicknew function");
-
 	}
 
 	that.clickSave = function()
 	{
-		that.isNew(false);
+		that.accounts.push(that.displayAccount());
+		//setEditMode(false);
+		that.displayAccount(getEmptyObject());
 	}
-	that.clickUpdate = function()
+	that.clickUpdate = function(clickedRow)
 	{
+		that.displayAccount(clickedRow);
+		that.accounts.remove(clickedRow);
+		that.accounts.push(that.displayAccount());
+		that.displayAccount(getEmptyObject());
+
 		that.isEdit(false);
 	}
 
-	that.clickDelete = function()
+	that.clickDelete = function(clickedRow)
 	{
+		that.displayAccount(clickedRow);
+		that.accounts.remove(clickedRow);
 		that.isEdit(false);
+		that.displayAccount(getEmptyObject());
+	}
+	function getEmptyObject()
+	{
+		return new Account('','');
 	}
 
 }
