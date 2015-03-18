@@ -16,7 +16,7 @@ function EmployeeViewModel(){
 		localEmployees = JSON.parse(tempList)
 	}
 	localEmployees = localEmployees || [ new Employee('John', 'Gadd'), new Employee('Jagan', 'Jonnala'),
-	  new Employee('Gayatri', 'Sarva')];
+	  new Employee('Gayatri', 'Sarva'),new Employee('Anu','Gurram')];
 	
 	that.employees = ko.observableArray(localEmployees);
 
