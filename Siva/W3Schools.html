@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/W3Schools.css">
+	<title>W3Schools</title>
+</head>
+<body>
+<section data-bind="foreach: contents">
+	<div class="header">
+		<span><img data-bind="attr:{src: imageUrl}"></img></span>
+		<span><img  data-bind="attr:{src: captionImage}"></img></span>
+		<span class="search"><br/><br/><br/><br/><br/><label>Search With W3Schools</label>
+		<br/><input type="text" placeholder="Google custom search"><button>Search</button></span>
+	</div>
+	<div class ="content" >
+		<span><img  data-bind="attr:{src: contentIamge1Url}"></img></span>
+		<span><img  data-bind="attr:{src: contentIamge2Url}"></img></span>
+		<span><img  data-bind="attr:{src: contentIamge3Url}"></img></span>
+		<span><img  data-bind="attr:{src: contentIamge4Url}"></img></span>
+
+	</div>
+</section>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/W3Schools.js"></script>
+
+</body>
+</html>
