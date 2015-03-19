@@ -1,7 +1,9 @@
-function Student(rollNumber,studentName)
+function Student(rollNumber,studentName,age,branch)
 {
 	this.rollNumber = rollNumber;
 	this.studentName = studentName;
+	this.age=age;
+	this.branch=branch;
 };
 function Header(headerName)
 {
@@ -12,16 +14,18 @@ function Header(headerName)
 function StudentViewModel()
 {
 	this.headers=[	new Header('Roll No.'),
-					new Header('Name') ];
+					new Header('Name'),
+					new Header('age'),
+					new Header('Branch') ];
 	var that= this, localStudents;
-	localStudents=[	new Student('101','Siva'),
-					new Student('102','Jagan'),
-					new Student('103','Gayatri'),
-					new Student('104','Sai')
+	localStudents=[	new Student('101','Siva','22','ECE'),
+					new Student('102','Jagan','20','CSE'),
+					new Student('103','Gayatri','22','MCA'),
+					new Student('104','Sai','20','ECE')
 					 
 					];
 	that.studentDetails = ko.observableArray(localStudents);
-	that.enterDetails = ko.observable(new Student('',''));
+	that.enterDetails = ko.observable(new Student('','','',''));
 	that.isEdit = ko.observable(false);
 	that.isNew = ko.observable(false);
 	that.clickRow = function(justclick)

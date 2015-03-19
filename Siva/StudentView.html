@@ -14,6 +14,8 @@
 		<tr data-bind="click:$root.clickRow, enable:!$root.isEdit()"> 
 			<td data-bind="text:rollNumber"></td>
 			<td data-bind="text:studentName"></td>
+			<td data-bind="text:age"></td>
+			<td data-bind="text:branch"></td>
 		</tr>
 	</tbody>
 </table>
@@ -21,6 +23,8 @@
 <table>
 	<tr><td>Roll Number: <input type="text" data-bind="value:rollNumber, enable:$root.isNew() || $root.isEdit()"/></td></tr>
 	<tr><td>Student Name: <input type="text" data-bind="value:studentName, enable:$root.isNew() || $root.isEdit()" /></td></tr>
+	<tr><td>Student Age: <input type="text" data-bind="value:age, enable:$root.isNew() || $root.isEdit()" /></td></tr>
+	<tr><td>Branch: <input type="text" data-bind="value:branch, enable:$root.isNew() || $root.isEdit()" /></td></tr>
 <tr>
 	<td  colspan="2">
 	<input type="button" value="EnterNew" data-bind="click:$root.clickNew, enable:!$parent.isNew()">
