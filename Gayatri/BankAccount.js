@@ -18,7 +18,7 @@ function BankAccountViewModel()
 		
 	}
 
-	that.displayAccount = ko.observable(new Account('',''));
+	that.displayAccount = ko.observable(new Account('a','b'));
 
 	that.isNew = ko.observable(false);
 	that.isEdit = ko.observable(false);
