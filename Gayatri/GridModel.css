@@ -1,0 +1,35 @@
+.tablecss
+{
+	line-height: 30px;
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
+	background: #E8E8E8;
+	border : 1px solid lightgrey;
+	width: 70%;
+}
+.tablecss tr:nth-child(even) { 
+
+	background: #FFFFFF;
+}
+
+.tablecss td
+{
+	padding : 7;
+}
+.tablecss thead
+{
+	border: 1px solid grey;
+	
+}
+.linkcss a:link:hover
+{
+	background-color: #f35800;
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50px;
+	text-align: center;
+}
+
+/*.myTable { background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#000;color:white;width:50%; }
+.myTable td, .myTable th { padding:5px;border:1px solid #000; }*/

@@ -1,0 +1,38 @@
+<html>
+<head><title>Employee Grid view Model</title>
+<link rel="stylesheet" type="text/css" href="GridModel.css">
+<body>
+
+
+<table rules="cols" align="center" class="tablecss">
+<thead>
+	<td>Contact Name</td>
+	<td>Contact Title</td>
+	<td>Company Name</td>
+	<td>Country</td>
+</thead>
+<tbody data-bind="foreach:employees">
+	<tr>
+		<td data-bind="text:contactName"></td>
+		<td data-bind="text:contactTitle"></td>
+		<td data-bind="text:companyName"></td>
+		<td data-bind="text:country"></td>
+	</tr>
+	</tbody>
+</table>
+
+<table>
+	<tr>
+		<td colspan="4">
+			<span class="linkcss"><a href="#">1</a></span>
+
+		</td>
+</table>
+
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="GridModel.js"></script>
+</body>
+</html>
