@@ -18,8 +18,12 @@ function BankAccountViewModel()
 		
 	}
 
+<<<<<<< HEAD
 	that.displayAccount = ko.observable(new Account('',''));
 	that.newAccount = ko.observable(new Account('',''));
+=======
+	that.displayAccount = ko.observable(new Account('a','b'));
+>>>>>>> 890951e0da03b7b25f91e55eb12df03874a2af01
 
 	that.isNew = ko.observable(false);
 	that.isEdit = ko.observable(false);
