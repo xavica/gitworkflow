@@ -1,60 +1,45 @@
-function ListOne(item)
+function ListItem(item)
 {
 	this.item = item;
 }
-
-function ListTwo(item)
-{
-	this.item = item;
-}
-
-
 function ListViewModel()
 {
-	var that = this,localArray1,localArray2;
+	var that = this;
 
-	localArray1 = localArray1 || [ new ListOne("Siva"),new ListOne("Jagan"),new ListOne("Gayatri")];
-	this.itemsList1 = ko.observableArray(localArray1);
+	this.availableStates = ko.observableArray([new ListItem("AndhraPradesh"),new ListItem("Maharastra"),new ListItem("Goa"),
+											new ListItem("UttarPradesh"),new ListItem("WestBengal"),new ListItem("Gujarat")]);
+	this.selectedStates = ko.observableArray([ ]);
+
+	that.selectedState = ko.observable(new ListItem(''));
 	
-	localArray2 = localArray2 || [ new ListTwo("Siva"),new ListTwo("Jagan"),new ListTwo("Gayatri")];
-	this.itemsList2 = ko.observableArray(localArray2);
-
-
-	that.displayList = ko.observable(new ListOne(''));
-	
-
 	that.isRight = ko.observable(false);
 	that.isLeft = ko.observable(false);
 	
 	this.moveLeft = function(clickedRow)
 	{
-		that.itemsList1.push(that.displayList());
-		that.itemsList2.remove(clickedRow);
-		that.displayList(getEmptyObject());
+		that.availableStates.push(that.selectedState());
+		that.selectedStates.remove(that.selectedState());
 		that.isRight(false);
 		that.isLeft(false);
 	}
 	this.moveRight = function(clickedRow)
 	{
-		that.itemsList2.push(that.displayList());
-		that.itemsList1.remove(clickedRow);
-		that.displayList(getEmptyObject());
+
+		that.selectedStates.push(that.selectedState());
+		that.availableStates.remove(that.selectedState());
 		that.isRight(false);
 		that.isLeft(false);
 	}
 
-	function getEmptyObject()
+	that.availableStatesClick = function(clickedRow)
 	{
-		return new ListOne('');
-	}
-	that.clickDisplay1 = function(clickedRow)
-	{
-		that.displayList(clickedRow);
+		that.selectedState(clickedRow);
 		that.isRight(true);
+		console.log(that.selectedState().item);
 	}
-	that.clickDisplay2 = function(clickedRow)
+	that.selectedStatesClick = function(clickedRow)
 	{
-		that.displayList(clickedRow);
+		that.selectedState(clickedRow);
 		that.isLeft(true);
 	}
 	

@@ -3,27 +3,40 @@
 <body>
 <table>
 	<tr>		<td>
-						<table border="1" data-bind="foreach:itemsList1">
-							<tr data-bind="click:$parent.clickDisplay1">
+						<table border="1" data-bind="foreach:availableStates">
+							<tr data-bind="click:$parent.availableStatesClick">
 								<td data-bind="text:item"></td>
 							</tr>
 						</table>
 				</td>
 			<td>
-					<!-- ko with:displayList -->
-						<table>
-							<tr><td><input type="button" value=" <<<===" data-bind="click:$parent.moveLeft,enable:$parent.isLeft()"></td></tr>
-							<tr><td><input type="button" value=" ===>>>" data-bind="click:$parent.moveRight,enable:$parent.isRight()"></td></tr>
-							<tr><td><input type="text" data-bind:"value:item" placeholder="choice"></td></tr>
+					<!-- ko with: selectedState -->
 
-						</table>
-					<!-- /ko -->
+						<table>
+						<tr>
+							<td>
+								<input type="button" value=" <<<===" data-bind="click:$parent.moveLeft,enable:$parent.isLeft()"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							  <input type="button" value=" ===>>>" data-bind="click:$parent.moveRight,enable:$parent.isRight()"/>
+							 </td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" data-bind="value:item"/>
+							</td>
+						</tr>
+
+						</table> <!-- /ko -->
+					
 				
 			</td>
 	
 			<td>
-					<table border="1" data-bind="foreach:itemsList2">
-							<tr data-bind="click:$parent.clickDisplay2">
+					<table border="1" data-bind="foreach:selectedStates">
+							<tr data-bind="click:$parent.selectedStatesClick">
 								<td data-bind="text:item"></td>
 							</tr>
 					</table> 
