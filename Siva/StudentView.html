@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="Styles/StudentView.css">
 	<title>Testing Knokout</title>
 </head>
 <body>
 <caption>Student Table</caption>
-<table >
+<table class ="headers" >
 	<tr data-bind="foreach: headers">
 		<th data-bind="text:headerName"></th>
 		
@@ -20,16 +21,18 @@
 	</tbody>
 </table>
 <!-- ko with: enterDetails -->
-<table>
-	<tr><td>Roll Number: <input type="text" data-bind="value:rollNumber, enable:$root.isNew() || $root.isEdit()"/></td></tr>
-	<tr><td>Student Name: <input type="text" data-bind="value:studentName, enable:$root.isNew() || $root.isEdit()" /></td></tr>
-	<tr><td>Student Age: <input type="text" data-bind="value:age, enable:$root.isNew() || $root.isEdit()" /></td></tr>
-	<tr><td>Branch: <input type="text" data-bind="value:branch, enable:$root.isNew() || $root.isEdit()" /></td></tr>
+<table class ="studentData">
+	<tr>
+		<td><input type="text" data-bind="value:rollNumber, enable:$root.isNew() || $root.isEdit()"/></td>
+		<td><input type="text" data-bind="value:studentName, enable:$root.isNew() || $root.isEdit()" /></td>
+		<td><input type="text" data-bind="value:age, enable:$root.isNew() || $root.isEdit()" /></td>
+		<td><input type="text" data-bind="value:branch, enable:$root.isNew() || $root.isEdit()" /></td>
+	</tr>
 <tr>
-	<td  colspan="2">
-	<input type="button" value="EnterNew" data-bind="click:$root.clickNew, enable:!$parent.isNew()">
-	<input type="button" value="Save" data-bind="click:$root.clickSave, enable:$parent.isNew()">
-	<input type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
+	<td  >
+	<input type="button" value="EnterNew" data-bind="click:$root.clickNew, enable:!$parent.isEdit()">
+	<input type="button" value="Save" data-bind="click:$root.clickSave, enable:$parent.isNew()"></td>
+	<td><input type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
 	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()"> 
 	</td>
 

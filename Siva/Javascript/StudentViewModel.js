@@ -33,7 +33,7 @@ function StudentViewModel()
 		console.log('Row clicked');
 		that.enterDetails(justclick);
 		that.isEdit(true);
-		that.isNew(true);
+		that.isNew(false);
 		
 	};
 	function getEmptyObject()
