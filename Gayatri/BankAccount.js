@@ -19,6 +19,7 @@ function BankAccountViewModel()
 	}
 
 	that.displayAccount = ko.observable(new Account('',''));
+	that.newAccount = ko.observable(new Account('',''));
 
 	that.isNew = ko.observable(false);
 	that.isEdit = ko.observable(false);
@@ -26,22 +27,24 @@ function BankAccountViewModel()
 	this.clickNew = function()
 	{
 		that.displayAccount(getEmptyObject());
-		that.isNew(true);
+		that.isEdit(true);
 	}
 
 	that.clickSave = function()
 	{
 		that.accounts.push(that.displayAccount());
-		//setEditMode(false);
+		that.isEdit(false);
 		that.displayAccount(getEmptyObject());
+		that.isNew(false);
+		
 	}
 	that.clickUpdate = function(clickedRow)
 	{
-		that.displayAccount(clickedRow);
+		var k = that.accounts.indexOf(clickedRow);
 		that.accounts.remove(clickedRow);
-		that.accounts.push(that.displayAccount());
+		that.accounts.splice(k,0,that.displayAccount());
 		that.displayAccount(getEmptyObject());
-
+		that.isNew(false);
 		that.isEdit(false);
 	}
 
@@ -51,6 +54,8 @@ function BankAccountViewModel()
 		that.accounts.remove(clickedRow);
 		that.isEdit(false);
 		that.displayAccount(getEmptyObject());
+		that.isNew(false);
+		that.isEdit(false);
 	}
 	function getEmptyObject()
 	{

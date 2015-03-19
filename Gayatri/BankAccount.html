@@ -10,12 +10,16 @@
 </table>
 <!-- ko with:displayAccount -->
 <table>
-<tr><td> Account Holder:<input type="text" data-bind="value:holderName, enable: $parent.isNew() || $parent.isEdit()"></td></tr>
-<tr><td> Account Number:<input type="text" data-bind="value:accountNumber , enable: $parent.isNew() || $parent.isEdit()"></td></tr>
+<tr>
+<td> Account Holder:
+<input type="text" data-bind="value:holderName, enable: $parent.isNew() || $parent.isEdit()"></td></tr>
+<tr>
+<td> Account Number:
+<input type="text" data-bind="value:accountNumber , enable: $parent.isNew() || $parent.isEdit()"></td></tr>
 <tr>
 <td align="center" colspan="2">
-	<input type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isNew()">
-	<input type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isNew()">
+	<input type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()">
+	<input type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isEdit()">
 	<input type="button" value="update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
 	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()"> </td>
 

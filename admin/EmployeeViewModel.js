@@ -20,8 +20,8 @@ function EmployeeViewModel(){
 	
 	that.employees = ko.observableArray(localEmployees);
 
-	//var lst = ko.toJSON(this.employees());
-	//$.jStorage.set('employees',lst );
+	var lst = ko.toJSON(this.employees());
+	$.jStorage.set('employees',lst );
 
 	this.clickSave = function(){
 		that.employees.push(that.selectedEmployee());
