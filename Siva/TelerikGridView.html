@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/TelerikGridView.css">
+	<title>Telerik Grid</title>
+</head>
+<body>
+<div class="HeaderContent" data-bind="foreach: topMenuBars">
+	<span data-bind="text: topMenu"></span>
+</div>
+<div class="LeftContent" data-bind="foreach: sideMenuBars" >
+	<ul>
+		<li data-bind="text: sideMenu"></li>
+	</ul>
+</div>
+<div class="MiddleContent">
+<table class="DataTable">
+	<tr data-bind="foreach: headers"><th data-bind="text:headerName"></th></tr>
+	<tbody data-bind="foreach: mobiles">
+		<tr>
+			<td data-bind="text: mobileCompany"></td>
+			<td data-bind="text: mobileModel"></td>
+			<td data-bind="text: mobileCost"></td>
+			<td data-bind="text: mobileOS"></td>
+		</tr>
+	</tbody>	
+</table>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="Javascript/TelerikGridViewModel.js"></script>
+</body>
+</html>
