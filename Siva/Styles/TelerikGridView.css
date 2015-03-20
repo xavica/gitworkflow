@@ -1,0 +1,44 @@
+.HeaderContent
+{
+	height:100px;
+	width:100%;
+	/*color: #ffffff;*/
+	text-align: center;
+	background-color: #c0c0c0;
+	font-size: 20px;
+}
+.LeftContent
+{
+	height:600px;
+	width: 300px;
+	float:left;
+	/*color: #ffffff;*/
+	background-color: #c0c0c0;
+}
+.MiddleContent
+{
+	
+	margin: 0 auto;
+}
+.DataTable
+{	
+	width: 800px;
+	float: center;
+	margin: 20px auto;
+	border:1px solid black;
+	text-align: center;
+}
+.DataTable td,th
+{	padding: 10px;
+	/*border: 1px solid black;*/
+}
+.DataTable tr:nth-child(even) { 
+
+	background: #C0C0C0;
+}
+.DataTable th
+{
+	background-color: #ADD8E6;
+}
+
+
