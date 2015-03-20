@@ -10,7 +10,6 @@ function Header(headerName)
 	this.headerName=headerName;
 };
 
-
 function StudentViewModel()
 {
 	this.headers=[	new Header('Roll No.'),
@@ -18,6 +17,7 @@ function StudentViewModel()
 					new Header('age'),
 					new Header('Branch') ];
 	var that= this, localStudents;
+
 	localStudents=[	new Student('101','Siva','22','ECE'),
 					new Student('102','Jagan','20','CSE'),
 					new Student('103','Gayatri','22','MCA'),
