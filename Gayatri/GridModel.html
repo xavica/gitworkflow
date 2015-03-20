@@ -11,6 +11,7 @@
 	<td>Company Name</td>
 	<td>Country</td>
 </thead>
+
 <tbody data-bind="foreach:employees">
 	<tr>
 		<td data-bind="text:contactName"></td>
@@ -18,21 +19,39 @@
 		<td data-bind="text:companyName"></td>
 		<td data-bind="text:country"></td>
 	</tr>
-	</tbody>
-</table>
+</tbody>
 
-<table>
+<tfoot>
 	<tr>
-		<td colspan="4">
-			<span class="linkcss"><a href="#">1</a></span>
+		<td colspan="2" align="center">
+			<span><input class="linkcss" type="button" value="1"/>
+				  <input class="linkcss" type="button" value="2"/>
+				  <input class="linkcss" type="button" value="3"/>
+				  <input class="linkcss" type="button" value="4"/>
+			</span>
+			<!-- ko with:pageSelection -->
 
+			<span>
+				<select data-bind="options: pages,
+                       optionsCaption: 'Choose one...',
+                       value: pageSize,
+                       valueAllowUnset: true">
+                 </select>
+			</span>
+			<!-- /ko -->
 		</td>
+		<td colspan="2" align="right">5 out of 10</td>
+
+	</tr>
+</tfoot>
 </table>
 
 
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
 <script type="text/javascript" src="GridModel.js"></script>
+
 </body>
 </html>

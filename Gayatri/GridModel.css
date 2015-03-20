@@ -17,19 +17,27 @@
 }
 .tablecss thead
 {
-	border: 1px solid grey;
+	border: 1px solid lightgrey;
 	
 }
-.linkcss a:link:hover
+select
 {
-	background-color: #f35800;
-	display: block;
-	width: 35px;
-	height: 35px;
-	border-radius: 50px;
-	text-align: center;
+	border-radius: 10px;
+	width: 70px;
+	height: 30px;
+	background-color: lightgrey;
+	font-weight: bold;
+	margin-left: 20px;
+	line-height: 30px;
 }
 
-/*.myTable { background-color:#eee;border-collapse:collapse; }
-.myTable th { background-color:#000;color:white;width:50%; }
-.myTable td, .myTable th { padding:5px;border:1px solid #000; }*/
+.linkcss 
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 25px;
+	text-align: center;
+	border: 2px solid lightgrey;
+	margin-right: 5px;
+
+}
