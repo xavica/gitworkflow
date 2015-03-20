@@ -1,0 +1,49 @@
+.HeaderContent
+{
+	height:80px;
+	width:100%;
+	text-align: center;
+	background-color: gray;
+	font-size: 20px;
+}
+.LeftContent
+{
+	height:700px;
+	width: 300px;
+	float:left;
+	background-color: gray;
+}
+.MiddleContent
+{
+	
+	margin: 0 auto;
+}
+.DataTable
+{	
+	width: 800px;
+	float: center;
+	margin: 20px auto;
+	border:1px solid black;
+	text-align: center;
+}
+.DataTable td,th
+{	
+	padding: 10px;
+}
+.DataTable tr:nth-child(even) { 
+
+	background:BlanchedAlmond;
+}
+.DataTable tr:nth-child(odd) { 
+
+	background: snow;
+}
+.DataTable th
+{
+	background-color:lightgray;
+}
+.LeftContent:hover
+{
+	text-decoration: underline;
+}
+
