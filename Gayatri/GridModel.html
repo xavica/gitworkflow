@@ -6,6 +6,7 @@
 
 <table rules="cols" align="center" class="tablecss">
 <thead>
+	<td>Employee ID</td>
 	<td>Contact Name</td>
 	<td>Contact Title</td>
 	<td>Company Name</td>
@@ -14,6 +15,7 @@
 
 <tbody data-bind="foreach:employees">
 	<tr>
+		<td data-bind="text:empId"></td>
 		<td data-bind="text:contactName"></td>
 		<td data-bind="text:contactTitle"></td>
 		<td data-bind="text:companyName"></td>
@@ -24,11 +26,12 @@
 <tfoot>
 	<tr>
 		<td colspan="2" align="center">
-			<span><input class="linkcss" type="button" value="1"/>
-				  <input class="linkcss" type="button" value="2"/>
-				  <input class="linkcss" type="button" value="3"/>
-				  <input class="linkcss" type="button" value="4"/>
+			<span data-bind="foreach:pageNumbers">
+					<button class="linkcss" data-bind="text:$data"></button>
 			</span>
+			
+
+
 			<!-- ko with:pageSelection -->
 
 			<span>
@@ -40,9 +43,11 @@
 			</span>
 			<!-- /ko -->
 		</td>
-		<td colspan="2" align="right">5 out of 10</td>
+		<td colspan="3" align="right">
+				<span data-bind="text:statusString"></span>
 
-	</tr>
+		</td>
+		</tr>
 </tfoot>
 </table>
 
