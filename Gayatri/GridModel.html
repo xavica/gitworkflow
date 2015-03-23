@@ -14,7 +14,7 @@
 </thead>
 
 <tbody data-bind="foreach:employees">
-	<tr>
+	<tr data-bind="click:$parent.clickDisplay">
 		<td data-bind="text:empId"></td>
 		<td data-bind="text:contactName"></td>
 		<td data-bind="text:contactTitle"></td>
@@ -25,7 +25,7 @@
 
 <tfoot>
 	<tr>
-		<td align="center">
+		<td align="center" colspan="3">
 			<span data-bind="foreach:pageNumbers">
 					<button id="btn" class="linkcss" data-bind="text:$data, style: { background:$parent.temp() === $data ? '#f35800' : 'lightgrey'},click:$parent.buttonClicked"></button>
 			</span>
@@ -43,11 +43,28 @@
 			</span> </td>
 			<!-- /ko -->
 		
-		<td colspan="3" align="right">
-				<span data-bind="text:statusString"></span>
-
-		</td>
+		<td align="right">
+				<span data-bind="text:statusString"></span></td>
+	</tr>
+	<!-- ko with:displayRecord -->
+	<tr>
+				<td><input type="text" data-bind="value:empId,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:contactName,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:contactTitle,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:companyName,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text"data-bind="value:country,enable: $parent.isNew() || $parent.isEdit()"></td>
+	
+	</tr> <!-- /ko -->
+<!-- ko with:displayRecord -->
+		<tr>
+			<td align="center" colspan="4">
+				<input class="btncss" type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()">
+				<input class="btncss" type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isEdit()">
+				<input class="btncss" type="button" value="update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
+				<input class="btncss" type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()">
+			</td>
 		</tr>
+	 <!-- /ko -->	
 </tfoot>
 </table>
 
