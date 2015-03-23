@@ -28,7 +28,7 @@
 <tr>
 <td align="center" colspan="2">
 <div data-role="main" class="ui-content">
-	<input type="button" class="ui-btn" value="Add New Data" data-bind="click:$parent.clickNew, enable:!$parent.isEdit() "/> 
+	<input type="button" class="ui-btn" value="Add New Data" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()"/> 
 	<input type="button" value="Save " data-bind="click:$parent.clickSave, enable:$parent.isNew()" />
 	<input type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()" />
 	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()" />
@@ -95,7 +95,7 @@ function DataScheduleViewModel()
 		var tempRow = that.dataInfo.indexOf(clickonRow);		
 		that.dataInfo.remove(clickonRow);
 		that.dataInfo.splice(tempRow,0,that.displayData());
-		that.dataInfo.push(that.displayData());
+	//  that.dataInfo.push(that.displayData());
 		that.displayData(getEmptyObject());
         that.isNew(false);
 		that.isEdit(false);
@@ -103,11 +103,13 @@ function DataScheduleViewModel()
 
 	that.clickDelete = function(clickonRow)
 	{
+		alert("If you Want To delete... Are You Sure..??");
 		that.displayData(clickonRow);
 		that.dataInfo.remove(clickonRow);
 		that.isEdit(false);
 		that.isNew(false);
 		that.displayData(getEmptyObject());
+
 	};
 	function getEmptyObject()
 	{

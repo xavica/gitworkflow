@@ -42,8 +42,18 @@
 {
 	background-color:lightgray;
 }
-.LeftContent:hover
+p:hover
 {
 	text-decoration: underline;
+}
+.linkcss 
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 25px;
+	text-align: center;
+	border: 2px solid lightgrey;
+	margin-right: 5px;
+
 }
 
