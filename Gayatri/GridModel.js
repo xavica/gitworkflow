@@ -42,7 +42,6 @@ function EmployeeGridViewModel()
 					        pageSize: ko.observable(0)
     				};
     that.employees = ko.observableArray(_.slice(that.sourceEmployees,0,that.pageSelection.pageSize()));
-    that.pageNumber = ko.observable(1);
    	that.pageNumbers = ko.observableArray([]);
    	var start,end;
     that.pageSelection.pageSize.subscribe(function()
@@ -51,10 +50,13 @@ function EmployeeGridViewModel()
   	
      });
     	
-    	that.buttonClicked = function(data)
+    	that.buttonClicked = function(pageNumber)
     	{
-    		start = +((data - 1 ) * +that.pageSelection.pageSize()) + 1;
+    		start = +((pageNumber - 1 ) * +that.pageSelection.pageSize()) + 1;
 	    	end = +start + +that.pageSelection.pageSize() - 1;
+	    	if(end > that.sourceEmployees.length)
+	    		end = that.sourceEmployees.length;
+
 	    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
 	    	that.employees(_.slice(that.sourceEmployees,start-1,end));
 	    	var pageNumbersCount = Math.ceil( that.sourceEmployees.length / +that.pageSelection.pageSize() );
@@ -62,22 +64,9 @@ function EmployeeGridViewModel()
 	    		{
 	    			return n+1;
 	    		}));
-	    
-	    	
-
-    	}
-
-
-// ( that.sourceEmployees.length % that.pageSelection.pageSize()) ) >0 ?  1 : 0;
-
-    	
-   
+	   }
     that.statusString = ko.observable('');
     that.pageSelection.pageSize(3);
-
-
-    
-
 }
 var emp = new EmployeeGridViewModel();
 ko.applyBindings(emp);
