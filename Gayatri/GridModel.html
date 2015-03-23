@@ -25,24 +25,24 @@
 
 <tfoot>
 	<tr>
-		<td colspan="2" align="center">
+		<td align="center">
 			<span data-bind="foreach:pageNumbers">
 					<button class="linkcss" data-bind="text:$data"></button>
 			</span>
-			
+			</td>
 
 
 			<!-- ko with:pageSelection -->
-
+			<td>
 			<span>
 				<select data-bind="options: pages,
                        optionsCaption: 'Choose one...',
                        value: pageSize,
                        valueAllowUnset: true">
                  </select>
-			</span>
+			</span> </td>
 			<!-- /ko -->
-		</td>
+		
 		<td colspan="3" align="right">
 				<span data-bind="text:statusString"></span>
 
