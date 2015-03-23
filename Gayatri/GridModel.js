@@ -44,25 +44,34 @@ function EmployeeGridViewModel()
     that.employees = ko.observableArray(_.slice(that.sourceEmployees,0,that.pageSelection.pageSize()));
     that.pageNumber = ko.observable(1);
    	that.pageNumbers = ko.observableArray([]);
+   	var start,end;
     that.pageSelection.pageSize.subscribe(function()
     {      	
-    	var start = +((that.pageNumber() - 1 ) * +that.pageSelection.pageSize()) + 1;
-    	var end = +start + +that.pageSelection.pageSize() - 1;
-    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
-    	that.employees(_.slice(that.sourceEmployees,start-1,end));
+    	that.buttonClicked(1)
+  	
+     });
+    	
+    	that.buttonClicked = function(data)
+    	{
+    		start = +((data - 1 ) * +that.pageSelection.pageSize()) + 1;
+	    	end = +start + +that.pageSelection.pageSize() - 1;
+	    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
+	    	that.employees(_.slice(that.sourceEmployees,start-1,end));
+	    	var pageNumbersCount = Math.ceil( that.sourceEmployees.length / +that.pageSelection.pageSize() );
+	     	that.pageNumbers(_.times(pageNumbersCount,function(n)
+	    		{
+	    			return n+1;
+	    		}));
+	    
+	    	
 
-    	var pageNumbersCount = Math.ceil( that.sourceEmployees.length / +that.pageSelection.pageSize() );
-    	console.log(pageNumbersCount);
-    	that.pageNumbers(_.times(pageNumbersCount,function(n)
-    		{
-    			return n+1;
-    		}));
-    	console.log(that.pageNumbers());
+    	}
+
 
 // ( that.sourceEmployees.length % that.pageSelection.pageSize()) ) >0 ?  1 : 0;
 
     	
-    });
+   
     that.statusString = ko.observable('');
     that.pageSelection.pageSize(3);
 
