@@ -6,6 +6,11 @@ function Employee(empId,contactName,contactTitle,companyName,country)
 	this.companyName = companyName;
 	this.country = country;
 }
+function ButtonColor(buttonNumber,buttonStatus)
+{
+	this.buttonNumber = buttonNumber;
+	this.buttonStatus = buttonStatus;
+}
 
 function EmployeeGridViewModel()
 {
@@ -44,29 +49,34 @@ function EmployeeGridViewModel()
     that.employees = ko.observableArray(_.slice(that.sourceEmployees,0,that.pageSelection.pageSize()));
    	that.pageNumbers = ko.observableArray([]);
    	var start,end;
+  	that.temp = ko.observable();
     that.pageSelection.pageSize.subscribe(function()
     {      	
     	that.buttonClicked(1)
   	
      });
-    	
-    	that.buttonClicked = function(pageNumber)
-    	{
+    that.pageStatus = ko.observableArray([]);
+   	that.buttonClicked = function(pageNumber)
+    {
     		start = +((pageNumber - 1 ) * +that.pageSelection.pageSize()) + 1;
 	    	end = +start + +that.pageSelection.pageSize() - 1;
 	    	if(end > that.sourceEmployees.length)
 	    		end = that.sourceEmployees.length;
-
-	    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
-	    	that.employees(_.slice(that.sourceEmployees,start-1,end));
-	    	var pageNumbersCount = Math.ceil( that.sourceEmployees.length / +that.pageSelection.pageSize() );
-	     	that.pageNumbers(_.times(pageNumbersCount,function(n)
+	    	var pageNumbersCount = Math.ceil( +that.sourceEmployees.length / +that.pageSelection.pageSize() );
+	    	
+	    	that.pageNumbers(_.times(pageNumbersCount,function(n)
 	    		{
 	    			return n+1;
 	    		}));
-	   }
+	    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
+	    	that.employees(_.slice(that.sourceEmployees,start-1,end));
+	    	that.temp(pageNumber);
+
+	 }
     that.statusString = ko.observable('');
     that.pageSelection.pageSize(3);
+
 }
 var emp = new EmployeeGridViewModel();
 ko.applyBindings(emp);
+

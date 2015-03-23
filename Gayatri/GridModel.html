@@ -27,7 +27,7 @@
 	<tr>
 		<td align="center">
 			<span data-bind="foreach:pageNumbers">
-					<button class="linkcss" data-bind="text:$data,click:$parent.buttonClicked"></button>
+					<button id="btn" class="linkcss" data-bind="text:$data, style: { background:$parent.temp() === $data ? '#f35800' : 'lightgrey'},click:$parent.buttonClicked"></button>
 			</span>
 			</td>
 
