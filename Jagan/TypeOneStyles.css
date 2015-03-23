@@ -1,0 +1,23 @@
+body
+   {
+    background-color:;
+   	width:1106px;
+	margin: 0 auto;
+	}
+.items
+{	
+	height: 250px;
+	width: 160px;
+	float: left;
+	margin-right: 0 auto;
+}
+
+p{
+    color:blue;
+}
+a{
+    color:red;
+}
+.items:hover{
+    border: 1px dotted blue;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="TypeOneStyles.css">
+	<title>Type1 Objects ViewModel</title>
+</head>
+<body>
+
+  <div data-bind="foreach:BagDetails">
+  <div class="items">
+  <img data-bind="attr: {src:bagPicture}" height="84px" width="84px" />
+  <p>Brand:<a data-bind="text:brandName" ></a></p>
+  <p> Type::<a  data-bind="text:bagType"></a></p>
+  <p>Colour::<a data-bind="text:colour" ></a></p>
+  <p>Price::<a data-bind="text:price" ></a></p>
+  </div>
+  </div>
+  <div data-bind="foreach:BookDetails">
+  <div class="items">
+  <img data-bind="attr: {src:bookImage}" height="84px" width="84px" />
+  <p>Brand:<a data-bind="text:bookName" ></a></p>
+   <p>Type::<a data-bind="text:bookType"></a></p>
+  <p>Author::<a data-bind="text:author" ></a></p>
+ <p>Price::<a data-bind="text:price" ></a></p>
+  </div>
+  </div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript">
+
+ function Bag(brandName,bagType,colour,price,bagPicture)
+ {
+ 	this.brandName=brandName;
+ 	this.bagType=bagType;
+ 	this.colour=colour;
+ 	this.price=price;
+ 	this.bagPicture=bagPicture;
+ };
+ function Book(bookName,bookType,author,price,bookImage)
+ {
+ 	this.bookName=bookName;
+ 	this.bookType=bookType;
+ 	this.author=author;
+ 	this.price=price;
+ 	this.bookImage=bookImage;
+ };
+ function TypeoneViewModel()
+ {
+ 	BagDetails= [new Bag('Hiehsierra','Normal Bag','BLue','Rs.4530 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','Red','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','Black And Blue','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','Gray','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','Green','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','light Colour','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','light Colour','Rs.5643 /-','photos/highS.jpg'),
+ 	             new Bag('Hiehsierra','Normal Bag','light Colour','Rs.5643 /-','photos/highS.jpg')
+ 	            ];
+ 	BookDetails=[ new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg'),
+ 	              new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg'),
+ 	              new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg'),
+ 	              new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg'),
+ 	              new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg'),
+ 	              new Book('Remember Me','Love Story','Sophie Kinsella','Rs.250/-','photos/sophie.jpg')
+ 	              ];            
+ };
+ko.applyBindings(new TypeoneViewModel());
+</script>
+</body>
+</html>
