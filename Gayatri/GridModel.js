@@ -12,29 +12,30 @@ function EmployeeGridViewModel()
 {
 	var that = this;
 	this.sourceEmployees =[
-						( new Employee('1',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('2',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('3',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('4',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('5',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('6',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('7',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('8',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('9',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('10',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('11',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('12',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('13',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('14',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('15',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('16',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('17',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('18',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('19',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('20',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('21',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('22',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany")),
-						( new Employee('23',"Maria Anders","sales Representative", "Alfreds Futterkiste","Germany"))
+						( new Employee('1',"John","Developer", "CMC Limited","Africa")),
+						( new Employee('2',"scott","Developer", "HCL","Greece")),
+						( new Employee('3',"John","Business Analyst", "CTS","India")),
+						( new Employee('4',"scott","Designer", "Hexaware","Australia")),
+						( new Employee('5',"scott","Designer", "CMC Limite","Japan")),
+						( new Employee('6',"Steve","Business Analyst", "Wipro","France")),
+						( new Employee('7',"Robert","Business Analyst", "Infosis","West India")),
+						( new Employee('8',"Thomas","Business Analyst", "CMC Limite","USA")),
+						( new Employee('9',"Gayatri Sarva","Developer", "Xavica","India")),
+						( new Employee('9',"Thomas","Business Analyst", "CMC Limite","UAE")),
+						( new Employee('10',"scott","Designer", "CMC Limite","Jordan")),
+						( new Employee('11',"Thomas","Business Analyst", "CMC Limite","Dubai")),
+						( new Employee('12',"Steve","Business Analyst", "TCS","Zimbabe")),
+						( new Employee('13',"Thomas","Business Analyst", "iGATE","Angola")),
+						( new Employee('14',"Steve","Business Analyst", "Yash ","Africa")),
+						( new Employee('15',"John","Designer", "IBM","India")),
+						( new Employee('16',"Robert","Business Analyst", "Patni","Japan")),
+						( new Employee('17',"Thomas","Business Analyst", "Microsoft","France")),
+						( new Employee('18',"John","Developer", "Virtusa","USA")),
+						( new Employee('19',"Steve","Developer", "CMC Limite","UAE")),
+						( new Employee('20',"Thomas","Business Analyst", "CMC Limite","Australia")),
+						( new Employee('21',"John","Designer", "CMC Limite","West India")),
+						( new Employee('22',"Robert","Developer", "3i Infotech","Dubai")),
+						( new Employee('23',"John","Business Analyst", "Satyam","India"))
 
 
 					];
@@ -46,6 +47,13 @@ function EmployeeGridViewModel()
    	that.pageNumbers = ko.observableArray([]);
    	var start,end;
   	that.temp = ko.observable();
+  	that.displayRecord = ko.observable(new Employee('','','','',''));
+    that.foundRecord = ko.observableArray([]);
+    that.isEdit = ko.observable(false);
+    that.isNew = ko.observable(false);
+    that.isFind = ko.observable(false);
+    that.inputValue = ko.observable('');
+    that.radioSelectedOptionValue = ko.observable("")
     that.pageSelection.pageSize.subscribe(function()
     {      	
     	that.buttonClicked(1)
@@ -54,6 +62,7 @@ function EmployeeGridViewModel()
     that.pageStatus = ko.observableArray([]);
    	that.buttonClicked = function(pageNumber)
     {
+    		that.foundRecord.removeAll();
     		start = +((pageNumber - 1 ) * +that.pageSelection.pageSize()) + 1;
 	    	end = +start + +that.pageSelection.pageSize() - 1;
 	    	if(end > that.sourceEmployees.length)
@@ -71,12 +80,7 @@ function EmployeeGridViewModel()
 	 }
     that.statusString = ko.observable('');
     that.pageSelection.pageSize(3);
-    that.displayRecord = ko.observable(new Employee('','','','',''));
-    that.foundRecord = ko.observableArray([]);
-    that.isEdit = ko.observable(false);
-    that.isNew = ko.observable(false);
-    that.isFind = ko.observable(false);
-    that.inputValue = ko.observable('');
+    
 
     that.clickDisplay = function(clickedRow)
 	{
@@ -143,20 +147,86 @@ function EmployeeGridViewModel()
 	that.clickFind = function()
 	{
 		that.foundRecord.removeAll();
-		var temp = false;
-		for(var i=0; i< that.sourceEmployees.length;i++)
+		if(that.radioSelectedOptionValue() === 'EmpId')
 		{
-				if(+that.inputValue() === +that.sourceEmployees[i].empId)
-				{
-					temp = true;
-					that.foundRecord.push(that.sourceEmployees[i]);
-				}
+					var temp = false;
+					for(var i=0; i< that.sourceEmployees.length;i++)
+					{
+							if(+that.inputValue() === +that.sourceEmployees[i].empId)
+							{
+								temp = true;
+								that.foundRecord.push(that.sourceEmployees[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such EmpId Found');
+					
+						that.inputValue('');
 		}
-		if(temp === false)
-			 alert('Please check your submission.No such EmpId Found');
-		
-			that.inputValue('');
-		
+		else if(that.radioSelectedOptionValue() === "ContactName")
+		{
+					var temp = false;
+					for(var i=0; i< that.sourceEmployees.length;i++)
+					{
+							if( that.inputValue() === that.sourceEmployees[i].contactName)
+							{
+								temp = true;
+								that.foundRecord.push(that.sourceEmployees[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such contactName Found');
+				that.inputValue('');	
+						
+		}
+		else if(that.radioSelectedOptionValue() === 'ContactTitle')
+		{
+					var temp = false;
+					for(var i=0; i< that.sourceEmployees.length;i++)
+					{
+							if(that.inputValue() === that.sourceEmployees[i].contactTitle)
+							{
+								temp = true;
+								that.foundRecord.push(that.sourceEmployees[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such ContactTitle Found');
+					
+						that.inputValue('');
+		}
+		else if(that.radioSelectedOptionValue() === 'CompanyName')
+		{
+					var temp = false;
+					for(var i=0; i< that.sourceEmployees.length;i++)
+					{
+							if(that.inputValue() === that.sourceEmployees[i].companyName)
+							{
+								temp = true;
+								that.foundRecord.push(that.sourceEmployees[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such Company Name Found');
+					
+						that.inputValue('');
+		}
+		else if(that.radioSelectedOptionValue() === 'Country')
+		{
+					var temp = false;
+					for(var i=0; i< that.sourceEmployees.length;i++)
+					{
+							if(that.inputValue() === that.sourceEmployees[i].country)
+							{
+								temp = true;
+								that.foundRecord.push(that.sourceEmployees[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such Country Found');
+					
+						that.inputValue('');
+		}
 	}
 	function getEmptyObject()
 	{

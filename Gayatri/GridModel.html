@@ -69,7 +69,15 @@
 	
 	 <tr> 
 	 	<td colspan="5" align="center">
-	 			<span class='textcss'>Find By EmpId:</span>
+	 			<span class='textcss'>Find By</span>
+	 			<span>
+				 			<input type="radio" value="EmpId" data-bind="checked: radioSelectedOptionValue" />EmpId
+			            	<input type="radio" value="ContactName" data-bind="checked: radioSelectedOptionValue" />contactName
+			            	<input type="radio" value="ContactTitle" data-bind="checked: radioSelectedOptionValue" />contactTitle
+			            	<input type="radio" value="CompanyName" data-bind="checked: radioSelectedOptionValue" />companyName
+			            	<input type="radio" value="Country" data-bind="checked: radioSelectedOptionValue" />country
+			    </span>
+
 				<input type="text" data-bind="value:inputValue">
 				<input class="btncss" type="button" value="Find" data-bind="click:clickFind">
 	 	</td>
