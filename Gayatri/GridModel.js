@@ -76,7 +76,7 @@ function EmployeeGridViewModel()
     that.isEdit = ko.observable(false);
     that.isNew = ko.observable(false);
     that.isFind = ko.observable(false);
-    that.inputValue = ko.observable('5');
+    that.inputValue = ko.observable('');
 
     that.clickDisplay = function(clickedRow)
 	{
@@ -94,11 +94,19 @@ function EmployeeGridViewModel()
 
 	that.clickSave = function()
 	{
-		
-		that.sourceEmployees.push(that.displayRecord());
-		that.displayRecord(getEmptyObject());
-		that.isEdit(false);
-		that.isNew(false);
+		if( that.displayRecord().empId != '' && that.displayRecord().contactName != '' && 
+			that.displayRecord().contactTitle != '' &&  that.displayRecord().companyName != '' &&
+			that.displayRecord().country != '')
+		{
+				that.sourceEmployees.push(that.displayRecord());
+				that.displayRecord(getEmptyObject());
+				that.isEdit(false);
+				that.isNew(false);
+		}
+		else
+		{
+			alert("Fill all the Details to save the record");
+		}
 		
 	}
 	that.clickUpdate = function(clickedRow)
@@ -107,6 +115,7 @@ function EmployeeGridViewModel()
 		that.sourceEmployees.splice(k,1,that.displayRecord());
 		that.buttonClicked(1);
 		that.displayRecord(getEmptyObject());
+		alert("Record Updated");
 		that.isNew(false);
 		that.isEdit(false);
 	}
@@ -115,7 +124,6 @@ function EmployeeGridViewModel()
 	{
 		that.displayRecord(clickedRow);
 		var k = that.sourceEmployees.indexOf(clickedRow);
-
 		that.sourceEmployees.splice(k,1);
 		that.buttonClicked(1);
 		that.displayRecord(getEmptyObject());
@@ -137,12 +145,9 @@ function EmployeeGridViewModel()
 		if(temp === false)
 			 alert('Please check your submission.No such EmpId Found');
 		
+			that.inputValue('');
+		
 	}
-	that.activateFind = function()
-	{
-		that.isFind(true);
-	}
-
 	function getEmptyObject()
 	{
 		return new Employee('','','','','');
