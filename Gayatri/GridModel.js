@@ -111,13 +111,23 @@ function EmployeeGridViewModel()
 	}
 	that.clickUpdate = function(clickedRow)
 	{
-		var k = that.sourceEmployees.indexOf(clickedRow);
-		that.sourceEmployees.splice(k,1,that.displayRecord());
-		that.buttonClicked(1);
-		that.displayRecord(getEmptyObject());
-		alert("Record Updated");
-		that.isNew(false);
-		that.isEdit(false);
+		if( that.displayRecord().empId != '' && that.displayRecord().contactName != '' && 
+			that.displayRecord().contactTitle != '' &&  that.displayRecord().companyName != '' &&
+			that.displayRecord().country != '')
+		{
+					var k = that.sourceEmployees.indexOf(clickedRow);
+					that.sourceEmployees.splice(k,1,that.displayRecord());
+					that.buttonClicked(1);
+					that.displayRecord(getEmptyObject());
+					alert("Record Updated");
+					that.isNew(false);
+					that.isEdit(false);
+		}
+		else
+		{
+			alert("Fill all the Details to Update the record");
+		}
+
 	}
 
 	that.clickDelete = function(clickedRow)
