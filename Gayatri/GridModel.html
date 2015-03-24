@@ -58,8 +58,8 @@
 <!-- ko with:displayRecord -->
 		<tr>
 			<td align="center" colspan="4">
-				<input class="btncss" type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()">
-				<input class="btncss" type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isEdit()">
+				<input class="btncss" type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isNew()">
+				<input class="btncss" type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isNew() && !$parent.isEdit()">
 				<input class="btncss" type="button" value="update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
 				<input class="btncss" type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()">
 			</td>

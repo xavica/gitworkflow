@@ -79,19 +79,21 @@ function EmployeeGridViewModel()
 	{
 		that.displayRecord(clickedRow);
 		that.isEdit(true);
+		that.isNew(true);
 		
 	}
 	this.clickNew = function()
 	{
 		that.displayRecord(getEmptyObject());
-		that.isEdit(true);
+		that.isNew(true);
+		that.isEdit(false);
 	}
 
 	that.clickSave = function()
 	{
 		that.sourceEmployees.push(that.displayRecord());
-		that.isEdit(false);
 		that.displayRecord(getEmptyObject());
+		that.isEdit(false);
 		that.isNew(false);
 		
 	}
@@ -111,8 +113,8 @@ function EmployeeGridViewModel()
 		var k = that.sourceEmployees.indexOf(clickedRow);
 		that.sourceEmployees.splice(k,1);
 		that.buttonClicked(1);
-		that.isEdit(false);
 		that.displayRecord(getEmptyObject());
+		that.isEdit(false);
 		that.isNew(false);
 	}
 	function getEmptyObject()
