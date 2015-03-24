@@ -18,7 +18,11 @@
 .tablecss thead
 {
 	border: 1px solid lightgrey;
-	
+	font-size: 18px;
+	font-family: verdana;
+	font-weight: bold;
+	color: #f35800;
+
 }
 .tablecss tfoot
 {
