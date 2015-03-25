@@ -3,7 +3,7 @@
 	height:80px;
 	width:100%;
 	text-align: center;
-	background-color: gray;
+	background-color: lightgray;
 	font-size: 20px;
 }
 .LeftContent
@@ -11,7 +11,7 @@
 	height:700px;
 	width: 300px;
 	float:left;
-	background-color: gray;
+	background-color: lightgray;
 }
 .MiddleContent
 {
@@ -56,4 +56,13 @@ p:hover
 	margin-right: 5px;
 
 }
-
+select
+{
+	border-radius: 10px;
+	width: 70px;
+	height: 30px;
+	background:BlanchedAlmond;
+	font-weight: bold;
+	margin-left: 20px;
+	line-height: 30px;
+}
