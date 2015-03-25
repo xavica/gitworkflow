@@ -2,6 +2,7 @@
 <head><title>Schedule View Model</title>
 <body>
 <link rel="stylesheet" type="text/css" href="cs.css">
+<br><br><br>
 <script type="text/javascript" src="../js/jquery.js"></script>
 
 <table border="2">
@@ -103,7 +104,7 @@ function DataScheduleViewModel()
 
 	that.clickDelete = function(clickonRow)
 	{
-		var n=prompt("If you Want To delete... Are You Sure..??\n (press 1 to Delete 0 to cancel)","");
+		var n=prompt("If you Want To delete... Are You Sure..??\n (press 1 to Delete OtherWise cancel)","");
 		if(n==1){
 		that.displayData(clickonRow);
 		that.dataInfo.remove(clickonRow);

@@ -86,13 +86,19 @@ select
 	height: 45px;
 	font-size: 16px;
 	font-family: verdana;
-	color: DarkSlateGray ;
+	color:white;
+	border-radius:25px;
+	background-color:darkcyan;
+}
+.btncss:hover{
+	background-color: white;
+	color:darkcyan;
 }
 .textcss
 {
 	font-size: 16px;
 	font-family: verdana ;
 	font-weight: bold;
-	color: DarkSlateGray;
+	color:DarkSlateGray;
 	background-color:DarkSeaGreen;
 }
