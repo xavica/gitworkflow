@@ -94,6 +94,14 @@ function EmployeeGridViewModel()
 		that.isNew(true);
 		that.isEdit(false);
 	}
+	that.compare = function(a,b) 
+	{
+	  if (+a.empId <  +b.empId)
+	     return -1;
+	  if ( +a.empId >  +b.empId)
+	    return 1;
+	  return 0;
+	}
 
 	that.clickSave = function()
 	{
@@ -105,19 +113,8 @@ function EmployeeGridViewModel()
 				that.sourceEmployees.push(that.displayRecord());
 				that.displayRecord(getEmptyObject());
 				that.employees.removeAll();
+				that.sourceEmployees.sort(that.compare);
 				that.buttonClicked(that.temp());
-				 
-									function compare(a,b) {
-										  if (+a.empId <  +b.empId)
-										     return -1;
-										  if ( +a.empId >  +b.empId)
-										    return 1;
-										  return 0;
-										}
-
-									that.sourceEmployees.sort(compare);
-									that.buttonClicked(that.temp());
-												
 				that.isEdit(false);
 				that.isNew(false);
 		}
@@ -133,12 +130,13 @@ function EmployeeGridViewModel()
 			that.displayRecord().contactTitle != '' &&  that.displayRecord().companyName != '' &&
 			that.displayRecord().country != '')
 		{
-					that.employees.removeAll();
+					
 					var k = that.sourceEmployees.indexOf(clickedRow);
 					that.sourceEmployees.splice(k,1,that.displayRecord());
+					that.sourceEmployees.sort(that.compare);
+					that.employees.removeAll();
 					that.buttonClicked(that.temp());
 					that.displayRecord(getEmptyObject());
-					
 					alert("Record Updated");
 					that.isNew(false);
 					that.isEdit(false);
@@ -155,7 +153,8 @@ function EmployeeGridViewModel()
 		that.displayRecord(clickedRow);
 		var k = that.sourceEmployees.indexOf(clickedRow);
 		that.sourceEmployees.splice(k,1);
-		that.buttonClicked(1);
+		that.sourceEmployees.sort(that.compare);
+		that.buttonClicked(that.temp());
 		that.displayRecord(getEmptyObject());
 		that.isEdit(false);
 		that.isNew(false);
