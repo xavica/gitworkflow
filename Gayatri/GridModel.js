@@ -76,8 +76,7 @@ function EmployeeGridViewModel()
 	    	that.statusString(start + " - " + end + ' of ' +  that.sourceEmployees.length);
 	    	that.employees(_.slice(that.sourceEmployees,start-1,end));
 	    	that.temp(pageNumber);
-
-	 }
+	}
     that.statusString = ko.observable('');
     that.pageSelection.pageSize(3);
     
@@ -102,8 +101,17 @@ function EmployeeGridViewModel()
 			that.displayRecord().contactTitle != '' &&  that.displayRecord().companyName != '' &&
 			that.displayRecord().country != '')
 		{
+				
 				that.sourceEmployees.push(that.displayRecord());
 				that.displayRecord(getEmptyObject());
+				that.sourceEmployees.slice(0).sort();
+				that.employees.removeAll();
+				that.buttonClicked(that.temp());
+				 //console.log(that.sourceEmployees);
+				// var newArray = _.sortBy(that.sourceEmployees,that.sourceEmployees.empId);
+				// console.log(newArray);
+				// that.sourceEmployees(newArray);
+				
 				that.isEdit(false);
 				that.isNew(false);
 		}
@@ -119,10 +127,12 @@ function EmployeeGridViewModel()
 			that.displayRecord().contactTitle != '' &&  that.displayRecord().companyName != '' &&
 			that.displayRecord().country != '')
 		{
+					that.employees.removeAll();
 					var k = that.sourceEmployees.indexOf(clickedRow);
 					that.sourceEmployees.splice(k,1,that.displayRecord());
-					that.buttonClicked(1);
+					that.buttonClicked(that.temp());
 					that.displayRecord(getEmptyObject());
+					
 					alert("Record Updated");
 					that.isNew(false);
 					that.isEdit(false);
