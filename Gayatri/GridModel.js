@@ -104,14 +104,20 @@ function EmployeeGridViewModel()
 				
 				that.sourceEmployees.push(that.displayRecord());
 				that.displayRecord(getEmptyObject());
-				that.sourceEmployees.slice(0).sort();
 				that.employees.removeAll();
 				that.buttonClicked(that.temp());
-				 //console.log(that.sourceEmployees);
-				// var newArray = _.sortBy(that.sourceEmployees,that.sourceEmployees.empId);
-				// console.log(newArray);
-				// that.sourceEmployees(newArray);
-				
+				 
+									function compare(a,b) {
+										  if (+a.empId <  +b.empId)
+										     return -1;
+										  if ( +a.empId >  +b.empId)
+										    return 1;
+										  return 0;
+										}
+
+									that.sourceEmployees.sort(compare);
+									that.buttonClicked(that.temp());
+												
 				that.isEdit(false);
 				that.isNew(false);
 		}
