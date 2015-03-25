@@ -145,7 +145,8 @@ function MobileGridViewModel()
 		if( that.displayRecord().slNo != '' && that.displayRecord().mobileCompany != '' && 
 			that.displayRecord().mobileModel != '' &&  that.displayRecord().mobileCost != '' &&
 			that.displayRecord().mobileOS != '')
-		{
+		{			
+					that.mobiles.removeAll();
 					var k = localMobileData.indexOf(clickedRow);
 					localMobileData.splice(k,1,that.displayRecord());
 					that.buttonClicked(1);
