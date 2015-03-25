@@ -17,7 +17,7 @@
 <table class="DataTable">
 	<tr data-bind="foreach: headers"><th data-bind="text:headerName"></th></tr>
 	<tbody data-bind="foreach: mobiles">
-		<tr>
+		<tr data-bind="click:$parent.clickDisplay">
 			<td data-bind="text: slNo"></td>
 			<td data-bind="text: mobileCompany"></td>
 			<td data-bind="text: mobileModel"></td>
@@ -28,8 +28,8 @@
 	<tfoot >
 		<tr >
 		<td colspan="2">
-			<span  data-bind="foreach:pageNumbers,enable:$root.selectedPage()">
-					<button class="buttons" onclick="style.backgroundcolor='red'" data-bind=" text:$data, click:$parent.buttonClicked, enable:!$root.selectedPage()"></button>
+			<span  data-bind="foreach:pageNumbers">
+					<button class="buttons"  data-bind="text:$data, style: { background:$parent.temp() === $data ? '#f35800' : 'lightgrey'},click:$parent.buttonClicked"></button>
 			</span>
 			</td>
 		<!-- ko with:pageSelection -->
@@ -40,6 +40,55 @@
 		<td></td>
 		<td ><span data-bind="text:statusString"></span></td>
 		</tr>
+	<!-- ko with:displayRecord -->
+		<tr>
+				<td><input type="text" data-bind="value:slNo, enable: $parent.isNew || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:mobileCompany, enable: $parent.isNew || $parent.isEdit()">
+				</td>
+				<td><input type="text" data-bind="value:mobileModel, enable: $parent.isNew || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:mobileCost, enable: $parent.isNew || $parent.isEdit()"></td>
+				<td><input type="text"data-bind="value:mobileOS, enable: $parent.isNew || $parent.isEdit()"></td>
+	
+		</tr> 
+	<!-- /ko -->
+	<!-- ko with:displayRecord -->
+		<tr>
+			<td align="center" colspan="4">
+				<input class="editMenu" type="button" value="New" data-bind="click:$root.clickNew, enable:!$parent.isNew()">
+				<input class="editMenu" type="button" value="Save" data-bind="click:$root.clickSave, enable:$parent.isNew() && !$parent.isEdit()">
+				<input class="editMenu" type="button" value="update" data-bind="click:$root.clickUpdate, enable:$parent.isEdit()">
+				<input class="editMenu" type="button" value="Delete" data-bind="click:$root.clickDelete, enable:$parent.isEdit()">
+
+			</td>
+		</tr>
+	 <!-- /ko -->
+	 <tr>
+	 	<table  rules="cols" align="center" class="DataTable" data-bind="foreach:foundRecord">
+			 	<tr>
+						<td data-bind="text:slNo"></td>
+						<td data-bind="text:mobileCompany"></td>
+						<td data-bind="text:mobileModel"></td>
+						<td data-bind="text:mobileCost"></td>
+						<td data-bind="text:mobileOS"></td>
+				</tr>
+		</table>
+	</tr>
+	 <tr> 
+	 	<td colspan="5" align="center">
+	 			<span class="radiobtn">Search By</span>
+	 			<span>
+				 			<input type="radio" value="slNo" data-bind="checked: radioSelectedOptionValue" />Sl.No.
+			            	<input type="radio" value="mobileCompany" data-bind="checked: radioSelectedOptionValue" />Company
+			            	<input type="radio" value="mobileModel" data-bind="checked: radioSelectedOptionValue" />Model
+			            	<input type="radio" value="mobileCost" data-bind="checked: radioSelectedOptionValue" />Cost
+			            	<input type="radio" value="mobileOS" data-bind="checked: radioSelectedOptionValue" />Operating System
+			    </span>
+
+				<input type="text" data-bind="value:inputValue">
+				<input class="editMenu" type="button" value="Search" data-bind="click:clickSearch">
+	 	</td>
+	 </tr> 
+	 
 	</tfoot>	
 </table>
 </div>

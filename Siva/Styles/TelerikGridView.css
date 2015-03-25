@@ -9,7 +9,7 @@
 }
 .LeftContent
 {
-	height:600px;
+	height:800px;
 	width: 300px;
 	float:left;
 	/*color: #ffffff;*/
@@ -64,7 +64,19 @@ select
 	margin-right: 5px;
 
 }
-.buttons:hover
+.editMenu
 {
-	background-color: #FFA500;
+	width: 80px;
+	font-weight: bold;
+	height: 45px;
+	font-size: 16px;
+	font-family: verdana;
+	color: #f35800;
+}
+.radiobtn
+{
+	font-size: 16px;
+	font-family: verdana;
+	font-weight: bold;
+	color: #f35800;
 }
