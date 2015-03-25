@@ -22,14 +22,15 @@
 }
 .DataTable
 {	
-	width: 800px;
+	width: 1000px;
 	float: center;
 	margin: 20px auto;
 	border:1px solid black;
 	text-align: center;
 }
 .DataTable td,th
-{	padding: 10px;
+{	
+	padding: 10px;
 	/*border: 1px solid black;*/
 }
 .DataTable tr:nth-child(even) { 
@@ -40,5 +41,30 @@
 {
 	background-color: #ADD8E6;
 }
+.selection
+{	background-color:#c0c0c0; 
+	width: 50px;
+}
+option
+{	
+	background-color:#c0c0c0; 
+}
+select
+{
+	border-radius: 30px;
+	height:30px;
+}
+.buttons 
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 25px;
+	text-align: center;
+	border: 2px solid lightgrey;
+	margin-right: 5px;
 
-
+}
+.buttons:hover
+{
+	background-color: #FFA500;
+}

@@ -18,16 +18,35 @@
 	<tr data-bind="foreach: headers"><th data-bind="text:headerName"></th></tr>
 	<tbody data-bind="foreach: mobiles">
 		<tr>
+			<td data-bind="text: slNo"></td>
 			<td data-bind="text: mobileCompany"></td>
 			<td data-bind="text: mobileModel"></td>
 			<td data-bind="text: mobileCost"></td>
 			<td data-bind="text: mobileOS"></td>
 		</tr>
-	</tbody>	
+	</tbody>
+	<tfoot >
+		<tr >
+		<td colspan="2">
+			<span  data-bind="foreach:pageNumbers,enable:$root.selectedPage()">
+					<button class="buttons" onclick="style.backgroundcolor='red'" data-bind=" text:$data, click:$parent.buttonClicked, enable:!$root.selectedPage()"></button>
+			</span>
+			</td>
+		<!-- ko with:pageSelection -->
+		<td>		
+			<select data-bind="options: pages,optionsCaption: 'Choose one...',value: pageSize,valueAllowUnset: true"></select>
+		</td>
+		<!-- /ko -->
+		<td></td>
+		<td ><span data-bind="text:statusString"></span></td>
+		</tr>
+	</tfoot>	
 </table>
 </div>
+<div ></div>
 <script type="text/javascript" src="../js/jquery.js"></script>
-<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+ <script type="text/javascript" src="../js/lodashmin.js"></script>
+ <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
 <script type="text/javascript" src="../js/json2.js"></script>
 <script type="text/javascript" src="../js/jstorage.js"></script>
 <script type="text/javascript" src="Javascript/TelerikGridViewModel.js"></script>
