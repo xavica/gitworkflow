@@ -103,12 +103,18 @@ function DataScheduleViewModel()
 
 	that.clickDelete = function(clickonRow)
 	{
-		alert("If you Want To delete... Are You Sure..??");
+		var n=prompt("If you Want To delete... Are You Sure..??\n (press 1 to Delete 0 to cancel)","");
+		if(n==1){
 		that.displayData(clickonRow);
 		that.dataInfo.remove(clickonRow);
 		that.isEdit(false);
 		that.isNew(false);
 		that.displayData(getEmptyObject());
+	}
+	else
+	{
+		that.displayData();
+	}
 
 	};
 	function getEmptyObject()
