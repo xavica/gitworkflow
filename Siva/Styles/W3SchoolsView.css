@@ -16,10 +16,12 @@ div > span{background-color: black; padding: 4px 2px 4px 2px;}
 .leftMenu
 {
 	width: 227px;
-	/*font-size: 20px;*/
-	/*background-color: #c0c0c0;*/
+	background-color: gray;
 	float: left;
+	color:#C45AEC;
 }
+.leftMenu ul ul:hover{color:white;}
+span:hover {color:#614051;background-color: #E238EC;}
 .bodyContents
 {	
 	text-align: center;
@@ -33,10 +35,13 @@ th>h3{background-color: gray;}
 h3[target]{color:#98AFC7;}
 h3[target=thead1],[target=thead2],[target=thead3],[target=thead4]{background-color: #800080;}
 table td:active{background-color: yellow;}
-div span:before, div span:after{content:" | ";}
+div span::before, div span::after{content:" | ";}
 th{background-color: #E77471;}
 tr:nth-child(even){background-color: #ADD8E6;}
 tr:nth-child(odd){background-color: #FF00FF;}
 .topMenu:not(img){float: center;margin: 0 auto;}
-/*:not(body){background-color: gray;}*/
+::selection{color:red; background-color: green;}
+a:visited{background-color: yellow;}
+:target{border:2px #D6D7D8;background-color: #C5C6C7;}
+
 
