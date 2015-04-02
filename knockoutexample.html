@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div id='divSample'>
+
+</div>
+
+<!--
+<p>First name: <strong data-bind="text: firstName"></strong></p>
+<p>Last name: <strong data-bind="text: lastName"></strong></p>
+<p>Full name: <strong data-bind="text: fullName"></strong></p>
+
+
+<p>First name: <input type="text" data-bind="value: firstName"></input></p>
+<p>Last name: <input type="text" data-bind="value: lastName"></input></p>
+-->
+
+<button data-bind="click:add"></button>
+<table>
+<thead align="left"><tr>
+        <th>Book Name</th><th>Author</th>
+    </tr></thead>
+<tbody data-bind="foreach: books">
+    <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: author"></td>
+      
+    </tr>    
+</tbody>
+</table>
+
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+<script type='text/javascript' src='js/kosample.js'></script>
+
+
+
+</body>
+</html>

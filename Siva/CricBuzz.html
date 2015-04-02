@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="Styles/CricBuzz.css">
+	<title>Cric Buzz Points table</title>
+</head>
+<body>
+<div id ="header">
+<h1><b>ICC CRICKET WORLD CUP 2015</b></h1>
+<div id= "menu">
+<h3>
+	<span id="m1">Home</span><span id="m1">Terms</span><span id="m1">Schedule</span><span id="m1">News</span>
+	<span id="m1">Features</span><span id="m1">Specials</span><span id="m1">History</span><span id="m1">Photos</span>
+	<span id="m1">Stats</span><span id="m1">Points Table</span><span id="m1">Kits</span><span id="m1">More</span>
+</h3>
+</div>
+</div>	
+<caption><h2>ICC Cricket World Cup 2015-Points Table</h1></caption>
+<table class="table">
+<thead align="left"><tr>
+         <th>Pool A</th><th>Matches</th><th>Won</th><th>Lost</th><th>Tied</th><th>No Result </th><th>Pts</th><th>NetRunRate</th>
+    </tr></thead>
+<tbody data-bind="foreach: resultsPoolA">
+    <tr>
+    	<td id="team" data-bind="text: team"></td>
+    	<td data-bind="text: matches"></td>
+    	<td data-bind="text: won"></td>
+    	<td data-bind="text: lost"></td>
+    	<td data-bind="text: tied"></td>
+    	<td data-bind="text: nr"></td>
+    	<td data-bind="text: pts"></td>
+    	<td data-bind="text: nrr"></td>
+       </tr>    
+</tbody>
+</table class="table">
+<br/>
+<table>
+<thead align="left"><tr>
+         <th>Pool B</th><th>Matches</th><th>Won</th><th>Lost</th><th>Tied</th><th>No Result </th><th>Pts</th><th>NetRunRate</th>
+    </tr></thead>
+<tbody data-bind="foreach: resultsPoolB">
+    <tr>
+    	<td id="team" data-bind="text: team"></td>
+    	<td data-bind="text: matches"></td>
+    	<td data-bind="text: won"></td>
+    	<td data-bind="text: lost"></td>
+    	<td data-bind="text: tied"></td>
+    	<td data-bind="text: nr"></td>
+    	<td data-bind="text: pts"></td>
+    	<td data-bind="text: nrr"></td>
+       </tr>    
+</tbody>
+</table>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/CricBuzz.js"></script>
+</body>
+</html>

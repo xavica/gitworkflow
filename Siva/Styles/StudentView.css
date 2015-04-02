@@ -1,0 +1,11 @@
+body
+{
+	text-align: center;
+}
+
+.headers, .studentData
+{	width: 50%;
+	text-align: left;
+	float: center;
+	margin: 0 auto;
+}

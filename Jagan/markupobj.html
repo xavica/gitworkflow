@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Some objects </title>
+</head>
+<style>
+body {
+        width:1206px; 
+        margin: 0 auto;
+         background-color:turquoise;
+}
+</style>
+<body bgcolor="pink">
+<link rel="stylesheet" type="text/css" href="">
+<p><h2>Here Some MArkup Operartions to be performed see below</h2></p>
+
+<script>
+  var txt="Xavica Software Solutions pvt ltd.";
+
+document.writeln("<b>The original string: </b>" + txt);
+document.writeln("<p><b>Big: </b>" + txt.big() + "</p>");
+document.writeln("<p><b>Small: </b>" + txt.small() + "</p>");
+document.writeln("<p><b>Bold: </b>" + txt.bold() + "</p>");
+document.writeln("<p><b>Italic: </b>" + txt.italics() + "</p>");
+document.writeln("<p><b>Fixed: </b>" + txt.fixed() + "</p>");
+document.writeln("<p><b>Strike: </b>" + txt.strike() + "</p>");
+document.writeln("<p><b>Fontcolor: </b>" + txt.fontcolor("green") + "</p>");
+document.writeln("<p><b>Fontsize: </b>" + txt.fontsize(6) + "</p>");
+document.writeln("<p><b>Subscript:</b> " + txt.sub() + "</p>");
+document.writeln("<p><b>Superscript: </b>" + txt.sup() + "</p>");
+document.writeln("<p><b>Link: </b>" + txt.link("http://xavica.azurewebsites.net/red/index.html") + "</p>");
+document.writeln("<p><b>Blink: </b>" + txt.blink() + " (works only in Opera)</p>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+
+<!Doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="TelerikGridView.css">
+	<title>Telerik GridViewModel</title>
+</head>
+<body>
+<div class="HeaderContent">
+ <img data-bind="attr:{src: logopic }" />
+<div data-bind="foreach: topMenuBars">
+	<span data-bind="text: topMenu"></span>
+</div>
+<div class="LeftContent" data-bind="foreach: sideMenuBars" >
+	
+		<p data-bind="text: sideMenu"></p>
+	
+</div>
+<div class="MiddleContent">
+<table class="DataTable">
+	<tr data-bind="foreach: headers"><th data-bind="text:headerName"></th></tr>
+	<tbody data-bind="foreach: Cars">
+		<tr>
+		<td><b data-bind="text: CarCompany"></b></td>
+			<td data-bind="text: CarModel"></td>
+			<td><i data-bind="text: CarPrice"></i></td>
+			<td><img  data-bind="attr:{src: CarPic}" height="54px" width="74px" /></td>
+			<td data-bind="text: launchOn"></td>
+		</tr>
+	</tbody>
+	</div>
+	<tfoot>
+	<tr>
+
+	        <td align="center">
+			<span data-bind="foreach:pageNumbers">
+					<button id='btn' class="linkcss" data-bind="text:$data, style: {background:$parent.temp() === $data ? 'coral' : 'lightgrey'}, click:$parent.buttonClicked"></button>
+			</span>
+			</td>
+			<!-- ko with:pageSelection -->
+             <td>
+			<span>
+				<select data-bind="options: pages,
+                       optionsCaption: 'Choose one...',     
+                       value: pageSize,
+                       valueAllowUnset: true">
+                 </select>
+			</span></td>
+			<!-- /ko -->
+		</td>
+		<td colspan="3" align="right">
+		<span data-bind="text:statusString"></span>
+          </td>
+       </tr>
+       <!-- ko with:displaySearchCars --> 
+	<tr>
+				<td><input type="text" data-bind="value:brandName,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:Model,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:carCost,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text" data-bind="value:carImageSearch,enable: $parent.isNew() || $parent.isEdit()"></td>
+				<td><input type="text"data-bind="value:launchedOn,enable: $parent.isNew() || $parent.isEdit()"></td>
+	
+	</tr> <!-- /ko -->
+    
+    <!-- ko with:displaySearchCars -->
+		<tr>
+			<td align="center" colspan="4">
+				<input class="btncss" type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isNew()">
+				<input class="btncss" type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isNew() && !$parent.isEdit()">
+				<input class="btncss" type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
+				<input class="btncss" type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()">
+
+			</td>
+		</tr>
+	 <!-- /ko -->
+	
+	 <tr> 
+	 	<td colspan="5" align="center">
+	 			<span class='textcss'>Find By</span>
+	 			<span>
+				 			<input type="radio" value="brandName" data-bind="checked: radioSelectedOptionValue" />brandName
+			            	<input type="radio" value="Model" data-bind="checked: radioSelectedOptionValue" />Model
+			            	<input type="radio" value="carCost" data-bind="checked: radioSelectedOptionValue" />carCost
+			            	<input type="radio" value="carImageSearch" data-bind="checked: radioSelectedOptionValue" />carImageSearch
+			            	<input type="radio" value="launchedOn" data-bind="checked: radioSelectedOptionValue" />launchedOn
+			    </span>
+
+				<input type="text" data-bind="value:inputValue">
+				<input class="btncss" type="button" value="Find" data-bind="click:clickFind">
+	 	</td>
+	 </tr> 
+	 
+	 <tr>
+	 	<table  rules="cols" align="center" class="tablecss" data-bind="foreach:foundRecord">
+			 	<tr>
+						<td data-bind="text:brandName"></td>
+						<td data-bind="text:Model"></td>
+						<td data-bind="text:carCost"></td>
+						<td data-bind="text:launchedOn"></td>
+				</tr>
+		</table>
+	</tr>
+</tfoot>
+</table>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript">
+function Header(headerName)
+{
+	this.headerName=headerName;
+};
+
+function Car(CarCompany,CarModel,CarPrice,CarPic,launchOn)
+{
+	this.CarCompany = CarCompany;
+	this.CarModel = CarModel;
+	this.CarPrice = CarPrice;
+	this.CarPic = CarPic;
+	this.launchOn=launchOn;
+};
+function Logo(logopic){
+	this.logopic=logopic;
+}
+function MenuBar(topMenuBar,sideMenuBar)
+{
+	this.topMenuBar = topMenuBar;
+	this.sideMenuBar = sideMenuBar;
+}
+function TopMenu(topMenu)
+{ 
+	this.topMenu = topMenu;
+};
+function SideMenu(sideMenu)
+{ 
+	this.sideMenu = sideMenu;
+};
+function CarGridViewModel()
+{
+	var that=this;
+	this.logopicView= Logo("photos/teleric.png");
+
+	this.topMenuBars = [	new TopMenu('| Home |'),new TopMenu(' Best Deals |'),new TopMenu('MostViewProducts |'),
+							new TopMenu('Accesories |'),new TopMenu('Cars |',new TopMenu('Invention World'))
+						];
+	this.sideMenuBars = [	new SideMenu('Initialising Table'), new SideMenu('Binding to local data'), new SideMenu('Binding to remote data'), new SideMenu('Binding to Telerik Backend Services'), new SideMenu('Export to Excel'), new SideMenu('Export to PDF'), new SideMenu('Working Offline'), new SideMenu('Binding to SignalR'), new SideMenu('Binding to WebSocket'), new SideMenu('Cars Accesories'), new SideMenu('Mens Accesories'),
+							new SideMenu('Women Accesories'), new SideMenu('Other')
+						];
+
+	this.headers =	[	new Header('Brand/Company'),
+						new Header('Model'),
+						new	Header('Price'),
+						new Header('Image'),
+						new Header('LaunchOn')
+					];
+	var	that=this,localCarData,pageSelection;
+	that.localCarData=[ new Car('Hyundai','New Elantra','Rs 12.80 L - 16.20 L','photos/Hyundai.jpg','April 2015 (Expected)'),
+	                 new Car('Audi','TT Roadster','Rs 50.00 L - 65.00 ','photos/Auditt.jpg','April 2015 (Expected)'),
+					 new Car('Volkswagen','New Passat','Rs 24.00 L - 27.00 L','photos/Volkswagep.jpg','April 2015(Expected)'),
+					 new Car('Mercedes Benz','E 400','Rs 90.00 L - 92.00 L','photos/MercedesB.jpg','May 2015'),
+					 new Car('Toyota','Rush','Rs 8.00 L - 10.00 L','photos/Toyota_Rush.jpg','May 2015'),
+					 new Car('Volkswagen','Taigun','Rs 8.00 L - 10.00 L','photos/VolkswagenT.jpg','May 2015'),
+					 new Car('Nissan ','Terrano ','Rs 11.40 L - 12.60 L','photos/NissanT.jpeg','April 2015'),
+					 new Car('BMW','i3','Rs 38.00 L - 45.00 L','photos/BmwI3.jpg',' May 2015'),
+					 new Car('Hyundai','New Elantra','Rs 12.80 L - 16.20 L','photos/Hyundai.jpg','April 2015 (Expected)'),
+	                 new Car('Audi','TT Roadster','Rs 50.00 L - 65.00 ','photos/Auditt.jpg','April 2015 (Expected)'),
+					 new Car('Volkswagen','New Passat','Rs 24.00 L - 27.00 L','photos/Volkswagep.jpg','April 2015(Expected)'),
+					 new Car('Mercedes Benz','E 400 Cabriolet','Rs 90.00 L - 92.00 L','photos/MercedesB.jpg','May 2015'),
+					 new Car('Toyota','Rush','Rs 8.00 L - 10.00 L','photos/Toyota_Rush.jpg','May 2015'),
+					 new Car('Volkswagen','Taigun','Rs 8.00 L - 10.00 L','photos/VolkswagenT.jpg','May 2015'),
+					 new Car('Nissan ','Terrano ','Rs 11.40 L - 12.60 L','photos/NissanT.jpeg','April 2015'),
+					 new Car('BMW','i3','Rs 38.00 L - 45.00 L','photos/BmwI3.jpg',' May 2015'),
+					 new Car('Hyundai','New Elantra','Rs 12.80 L - 16.20 L','photos/Hyundai.jpg','April 2015 (Expected)'),
+	                 new Car('Audi','TT Roadster','Rs 50.00 L - 65.00 ','photos/Auditt.jpg','April 2015 (Expected)'),
+					 new Car('Volkswagen','New Passat','Rs 24.00 L - 27.00 L','photos/Volkswagep.jpg','April 2015(Expected)'),
+					 new Car('Mercedes Benz','E 400 Cabriolet','Rs 90.00 L - 92.00 L','photos/MercedesB.jpg','May 2015'),
+					 new Car('Toyota','Rush','Rs 8.00 L - 10.00 L','photos/Toyota_Rush.jpg','May 2015'),
+					 new Car('Volkswagen','Taigun','Rs 8.00 L - 10.00 L','photos/VolkswagenT.jpg','May 2015'),
+					 new Car('Nissan ','Terrano ','Rs 11.40 L - 12.60 L','photos/NissanT.jpeg','April 2015'),
+					 new Car('Toyota','Rush','Rs 8.00 L - 10.00 L','photos/Toyota_Rush.jpg','May 2015'),
+					 new Car('BMW','i3','Rs 38.00 L - 45.00 L','photos/BmwI3.jpg',' May 2015')
+					];
+
+ that.pageSelection = {
+					       pages: [3,5,10,15,20],
+					        pageSize: ko.observable(0)
+    				};
+ that.Cars= ko.observableArray(_.slice(that.localCarData,0,that.pageSelection.pageSize()));
+        that.pageNumbers = ko.observableArray([]);
+   	var start,end;
+   	that.temp=ko.observable();
+   	that.displaySearchCars = ko.observable(new Car('','','','',''));
+    that.foundRecord = ko.observableArray([]);
+    that.isEdit = ko.observable(false);
+    that.isNew = ko.observable(false);
+    that.isFind = ko.observable(false);
+    that.inputValue = ko.observable('');
+    that.radioSelectedOptionValue = ko.observable("")
+    that.pageSelection.pageSize.subscribe(function()
+    {      	
+    	that.buttonClicked(1)
+  	
+     });
+    that.pageStatus = ko.observableArray([]); 	
+    	that.buttonClicked = function(pageNumber)
+    	{
+    		start = +((pageNumber - 1 ) * +that.pageSelection.pageSize()) + 1;
+	    	end = +start + +that.pageSelection.pageSize() - 1;
+	    	if(end > that.localCarData.length)
+	    		end = that.localCarData.length;
+
+	    	var pageNumbersCount = Math.ceil( that.localCarData.length / +that.pageSelection.pageSize() );
+	     	that.pageNumbers(_.times(pageNumbersCount,function(n)
+	    		{
+	    			return n+1;
+	    		}));
+	     	that.statusString(start + " - " + end + ' of ' +  that.localCarData.length);
+	    	that.Cars(_.slice(that.localCarData,start-1,end));
+	    	that.temp(pageNumber);
+	   }
+    that.statusString = ko.observable('');
+    that.pageSelection.pageSize(5);
+
+     that.clickDisplay = function(clickedRow)
+	{
+		that.displaySearchCars(clickedRow);
+		that.isEdit(true);
+		that.isNew(true);
+		
+	}
+	this.clickNew = function()
+	{
+		that.displaySearchCars(getEmptyObject());
+		that.isNew(true);
+		that.isEdit(false);
+	}
+	that.compare = function(a,b) 
+	{
+	  if (+a.brandName <  +b.brandName)
+	     return -1;
+	  if ( +a.brandName >  +b.brandName)
+	    return 1;
+	  return 0;
+	}
+
+	that.clickSave = function()
+	{
+		if( that.displaySearchCars().brandName != '' && that.displaySearchCars().Model != '' && 
+			that.displaySearchCars().carCost !=  '' &&
+			that.displaySearchCars().launchedOn != '')
+		{
+				
+				that.localCarData.push(that.displaySearchCars());
+				that.displaySearchCars(getEmptyObject());
+				that.Cars.removeAll();
+				that.localCarData.sort(that.compare);
+				that.buttonClicked(that.temp());
+				that.isEdit(false);
+				that.isNew(false);
+		}
+		else
+		{
+			alert("Fill all the Details to save the record");
+		}
+		
+	}
+	that.clickUpdate = function(clickedRow)
+	{
+		if( that.displaySearchCars().brandName != '' && that.displaySearchCars().Model != '' && 
+			that.displaySearchCars().carCost != '' &&
+			that.displaySearchCars().launchedOn != '')
+		{
+					
+					var k = that.localCarData.indexOf(clickedRow);
+					that.localCarData.splice(k,1,that.displaySearchCars());
+					that.localCarData.sort(that.compare);
+					that.Cars.removeAll();
+					that.buttonClicked(that.temp());
+					that.displaySearchCars(getEmptyObject());
+					alert("Car Details Updated");
+					that.isNew(false);
+					that.isEdit(false);
+		}
+		else
+		{
+			alert("Fill all the Details below to Update the Cars Data");
+		}
+
+	}
+
+	that.clickDelete = function(clickedRow)
+	{
+		that.displaySearchCars(clickedRow);
+		var k = that.localCarData.indexOf(clickedRow);
+		that.localCarData.splice(k,1);
+		that.localCarData.sort(that.compare);
+		that.buttonClicked(that.temp());
+		that.displaySearchCars(getEmptyObject());
+		that.isEdit(false);
+		that.isNew(false);
+	}
+	that.clickFind = function()
+	{
+		that.foundRecord.removeAll();
+		if(that.radioSelectedOptionValue() === 'brandName')
+		{
+					var temp = false;
+					for(var i=0; i< that.localCarData.length;i++)
+					{
+							if(+that.inputValue() === +that.localCarData[i].brandName)
+							{
+								temp = true;
+								that.foundRecord.push(that.localCarData[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such brandName Found');
+					
+						that.inputValue('');
+		}
+		else if(that.radioSelectedOptionValue() === "Model")
+		{
+					var temp = false;
+					for(var i=0; i< that.localCarData.length;i++)
+					{
+							if( that.inputValue() === that.localCarData[i].Model)
+							{
+								temp = true;
+								that.foundRecord.push(that.localCarData[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such Model Found');
+				that.inputValue('');	
+						
+		}
+		else if(that.radioSelectedOptionValue() === 'carCost')
+		{
+					var temp = false;
+					for(var i=0; i< that.localCarData.length;i++)
+					{
+							if(that.inputValue() === that.localCarData[i].carCost)
+							{
+								temp = true;
+								that.foundRecord.push(that.localCarData[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such carCost Found');
+					
+						that.inputValue('');
+		}
+		
+		else if(that.radioSelectedOptionValue() === 'launchedOn')
+		{
+					var temp = false;
+					for(var i=0; i< that.localCarData.length;i++)
+					{
+							if(that.inputValue() === that.localCarData[i].launchedOn)
+							{
+								temp = true;
+								that.foundRecord.push(that.localCarData[i]);
+							}
+					}
+					if(temp === false)
+						 alert('Please check your submission.No such launchedOn Found');
+					
+						that.inputValue('');
+		}
+	}
+	function getEmptyObject()
+	{
+		return new Car('','','','','');
+	}
+
+ };
+ko.applyBindings(new CarGridViewModel());
+</script>
+</body>
+</html>

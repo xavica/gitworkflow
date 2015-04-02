@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/Flipkart.css">
+
+	<title>Flipkart</title>
+</head>
+
+<body>
+<div id= "header" data-bind="foreach: headerFlipkart" >
+ 	<span><img data-bind="attr:{src: logo}"> </span>
+ 	<span><input type="text" id="searchBar" placeholder="Search for a product or category or brand"></span>
+ 	<span><button type="button" id="search" name="Search">Search</button> </span>
+ </div>
+ <div><h1> Best Sellers</h1></div>
+<div class="flipItems" data-bind="foreach: products">
+	<div class="items">
+		<div><img data-bind="attr:{src: imageUrl}"></div>
+		<div data-bind="text: name"></div>
+		<div data-bind="text: discount"></div>
+		<div data-bind="text: originalPrice"></div>
+		<div data-bind="text: price"></div>
+
+	</div>
+</div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/Flipkart.js"></script>
+</body>
+</html>

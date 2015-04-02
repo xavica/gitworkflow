@@ -1,0 +1,37 @@
+<html>
+<body>
+<p> see output on console </p>
+<div id='divid'> 
+<p>Name: <strong data-bind="text: ename"></strong> </p>
+<p>Senior: <strong data-bind="text: senior"></strong></p>
+<p>Dept : <strong data-bind="text: dept"></strong></p>
+
+<p> Name : <input type="text" data-bind="value: ename"></input></p>
+<p> Senior: <input type="text" data-bind="value:senior"></input></p>
+<p> Department:<input type="text" data-bind="value:dept"></input></p>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script>
+function emp()
+{
+<<<<<<< HEAD
+	this.ename = ko.observable();
+	this.senior = ko.observable('scott');
+	this.dept = 'sales';
+=======
+	this.ename = ko.observable('');
+	this.senior =ko.observable('scott');
+	// this.senior = 'scott';
+	this.dept =ko.observable('sales');
+>>>>>>> 89af8f1aafd24484b06c2b256b6b1cf1a3b44efd
+};
+var e1 = new emp();
+ko.applyBindings(e1);
+
+</script>
+
+</body>
+</html>

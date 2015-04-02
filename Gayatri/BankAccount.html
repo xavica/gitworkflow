@@ -1,0 +1,37 @@
+<html>
+<head><title>Bank Account view Model</title>
+<body>
+
+<table border="1" data-bind="foreach:accounts">
+<tr data-bind="click:$parent.clickDisplay">
+	<td data-bind="text:holderName"></td>
+	<td data-bind="text:accountNumber"></td>
+</tr>
+</table>
+<!-- ko with:displayAccount -->
+<table>
+<tr>
+<td> Account Holder:
+<input type="text" data-bind="value:holderName, enable: $parent.isNew() || $parent.isEdit()"></td></tr>
+<tr>
+<td> Account Number:
+<input type="text" data-bind="value:accountNumber , enable: $parent.isNew() || $parent.isEdit()"></td></tr>
+<tr>
+<td align="center" colspan="2">
+	<input type="button" value="New" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()">
+	<input type="button" value="Save" data-bind="click:$parent.clickSave, enable:$parent.isEdit()">
+	<input type="button" value="update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
+	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()"> </td>
+
+
+</tr>
+</table>
+<!-- /ko -->
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/jstorage.js"></script>
+<script type="text/javascript" src="BankAccount.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	table{ background-color: #C0C0C0; border-color: black; float: center; margin: 0 auto;}
+
+</style>
+	<title>Entering Data into table</title>
+</head>
+<body>
+<table>
+<thead align="left"><tr>
+        <th>Mobile</th><th>Company</th><th>Cost</th>
+    </tr></thead>
+<tbody data-bind="foreach: mobiles">
+    <tr>
+        <td data-bind="text: company"></td>
+        <td data-bind="text: model"></td>
+       	<td data-bind="text: cost"></td>
+    </tr>    
+</tbody>
+</table>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type='text/javascript' src='Javascript/EnteringDataToTable_ko.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+body
+{ 	background-color: #808080;
+	text-align: center;
+	color:#0000A0;
+	/*background-repeat: no-repeat;*/
+/*	background-position: top left;*/
+/*	background-size: 25%;*/
+}
+p {
+	font-size: 20px;
+	color:#ffff00;
+}
+img:hover
+{ 
+	cursor: pointer;
+    height:475px;
+    width: 350px;
+}

@@ -1,0 +1,129 @@
+<html>
+<head><title>Schedule View Model</title>
+<body>
+<link rel="stylesheet" type="text/css" href="cs.css">
+<br><br><br>
+<script type="text/javascript" src="../js/jquery.js"></script>
+
+<table border="2">
+ <caption><u><b>Daily DataInformation</u> </b></caption>
+ <tr data-bind="foreach: tableHeaderData">
+		<th data-bind="text:headerInfo"></th>
+		
+	</tr>
+
+ <tbody data-bind="foreach:dataInfo">
+ 
+<tr data-bind="click:$parent.clickDisplay, enable:!$parent.isEdit()">
+	<td data-bind="text:topicName"></td>
+	<td data-bind="text:topicDescription"></td>
+</tr>
+</tbody>
+</table>		
+
+<!-- ko with:displayData -->
+
+<table>
+<tr><td> Topic Name:<input type="text" size="60" data-bind="value:topicName,enable:$parent.isNew() || $parent.isEdit()" /></td></tr>
+<tr><td> Description :<input type="text" size="60" data-bind="value:topicDescription,enable:$parent.isNew() || $parent.isEdit()" /></td></tr>
+<tr>
+<td align="center" colspan="2">
+<div data-role="main" class="ui-content">
+	<input type="button" class="ui-btn" value="Add New Data" data-bind="click:$parent.clickNew, enable:!$parent.isEdit()"/> 
+	<input type="button" value="Save " data-bind="click:$parent.clickSave, enable:$parent.isNew()" />
+	<input type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()" />
+	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()" />
+	</div> </td>
+</tr>
+</table>
+ <!-- /ko -->
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/jstorage.js"></script>
+<script type="text/javascript">
+
+	function Data(topicName,topicDescription)
+{
+	this.topicName = topicName;
+	this.topicDescription = topicDescription;
+};
+function HeaderData(headerInfo)
+{
+	this.headerInfo = headerInfo;
+};
+
+
+function DataScheduleViewModel()
+{
+  this.tableHeaderData= [new HeaderData("TopicName"), new HeaderData("Description")];
+
+	var that = this, dailyData;
+  dailyData = [ new Data("Lynda lesson 02 Core JavaScript Syntax","About the Javascript Starting Syntax"),
+                new Data("Wiley Javascript Lessons","About types and variables"),
+                new Data("Javascript foundations lession 5","functions values and returnTypes")];
+
+	that.dataInfo = ko.observableArray(dailyData);
+	that.displayData = ko.observable(new Data('',''));
+
+	that.isNew = ko.observable(false);
+	that.isEdit = ko.observable(false);
+
+	that.clickDisplay = function(clickonRow)
+	{
+		that.displayData(clickonRow);
+		that.isEdit(true);
+		that.isNew(false);
+	};
+
+	this.clickNew = function()
+	{
+		that.displayData(getEmptyObject());
+		that.isNew(true);
+		that.isEdit(false);
+	};
+
+	that.clickSave = function()
+	{
+		that.dataInfo.push(that.displayData());
+		that.displayData(getEmptyObject());
+		that.isNew(false);
+		that.isEdit(false);
+	};
+	that.clickUpdate = function(clickonRow)
+	{
+		var tempRow = that.dataInfo.indexOf(clickonRow);		
+		that.dataInfo.remove(clickonRow);
+		that.dataInfo.splice(tempRow,0,that.displayData());
+	//  that.dataInfo.push(that.displayData());
+		that.displayData(getEmptyObject());
+        that.isNew(false);
+		that.isEdit(false);
+	};
+
+	that.clickDelete = function(clickonRow)
+	{
+		var n=prompt("If you Want To delete... Are You Sure..??\n (press 1 to Delete OtherWise cancel)","");
+		if(n==1){
+		that.displayData(clickonRow);
+		that.dataInfo.remove(clickonRow);
+		that.isEdit(false);
+		that.isNew(false);
+		that.displayData(getEmptyObject());
+	}
+	else
+	{
+		that.displayData();
+	}
+
+	};
+	function getEmptyObject()
+	{
+		return new Data('','');
+	};
+};
+ko.applyBindings(new DataScheduleViewModel());
+</script>
+</body>
+</html>

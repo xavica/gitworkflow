@@ -1,0 +1,42 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	var a = [ 'a','r','r','a','y','s'];
+	console.log(a.toString());
+	var b=[];
+
+	var n = a.length;
+	while (n != 0)
+	{
+		a = _.drop(a,1);
+		console.log(a.toString());
+		 n = a.length;
+	}
+
+
+var a = [ 'a','r','r','a','y','s'];
+	console.log(a.toString());
+	var b=[];
+
+	var n = a.length;
+	while (n != 0)
+	{
+		a = _.dropRight(a,1);
+		console.log(a.toString());
+		 n = a.length;
+	}
+	
+	
+
+
+</script>
+
+</body>
+</html>

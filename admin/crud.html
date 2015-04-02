@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table data-bind='foreach: employees'>
+	<tr data-bind='click: $parent.setEditEmployee'>
+		<td><span data-bind='text:firstName'></span></td>
+		<td><span data-bind='text:lastName'></span></td>
+	</tr>
+</table>
+
+<!-- ko with: selectedEmployee -->
+<table>
+	<tr>
+		<td>First Name</td>
+		<td><input type="text" data-bind='value:firstName , enable: $parent.isEditMode() || $parent.isNew()'/></td>
+	</tr>
+	<tr>
+		<td>Last Name</td>
+		<td><input type="text" data-bind='value:lastName , enable: $parent.isEditMode() || $parent.isNew()'/></td>
+	</tr>
+	<tr>
+	<td align="center" colspan="2">
+	<input type="button" value="Add New" data-bind='click:$parent.clickAdd, enable: !$parent.isEditMode()'>
+	<input type="button" value="Save" data-bind='click:$parent.clickSave, enable:$parent.isEditMode()'>
+	<input type="button" value="Update" data-bind='click:$parent.clickUpdate , enable: $parent.isEditMode()'>
+	<input type="button" value="Delete" data-bind='click:$parent.clickDelete, enable: $parent.isEditMode()'>
+	</td>
+	</tr>
+</table>
+<!-- /ko -->
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/jstorage.js"></script>
+<script type="text/javascript" src="employeeviewmodel.js"></script>
+
+</body>
+</html>

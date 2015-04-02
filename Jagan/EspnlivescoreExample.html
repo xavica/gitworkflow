@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="espncss.css">
+    <title>ESPN live Score Card</title>
+</head>
+<body bgcolor="SeaShell"> 
+<div id="left">
+<img src="photos/Espn.jpg">
+<div id ="header">
+<h2><b>New Zealand vs Bangladesh  at Hamilton, Mar 13, 2015,
+<br>37th Match Pool A - Live scorecard</b></h2>
+<div>
+   
+  <a href="">Summery</a>       
+   <a href="">Full ScoreCard</a>
+   <a href="">Commentary</a>
+   <a href="">Statistics</a>
+
+</div>
+</div>
+
+<div>   
+<h3><span>Bangladesh <b>288/7 (50 ov)</b></span>              . <span class="color"><u>ICC Cricket World Cup </u></span>-37 Match, pool A</h3>
+<div>
+<h3><span>NewZealand </span>
+<span class="color"> 229/5(42.4 ov) </span> </h3>
+</div>
+<p>New Zealand require another 48 runs with 5 wickets and 7.2 overs remaining</p>
+<table class="table">
+<thead align="left"><tr>
+         <th>Bangladesh Innings</th><th><i> (50 overs maximum)</i></th><th>R</th><th>M</th><th>B</th><th>4s</th><th>6s </th><th>SR</th>
+    </tr></thead>
+    
+
+<tbody data-bind="foreach:bangladeshInnings">
+    <tr>
+        <td id="name" data-bind="text: name"></td>
+        <td data-bind="text: wicket"></td>
+        <td data-bind="text: runs"></td>
+        <td data-bind="text: minutes"></td>
+        <td data-bind="text: balls"></td>
+        <td data-bind="text: fours"></td>
+        <td data-bind="text: sixes"></td>
+        <td data-bind="text: strikeRate"></td>
+       </tr>    
+</tbody>
+</table class="table">
+<table class="table">
+<thead align="left"><tr>
+          <th>NewZealand Innings</th><th><i>(target:289runs frm 50 ov)</i></th><th>R</th><th>M</th><th>B</th><th>4s</th><th>6s </th><th>SR</th>
+    </tr></thead>
+<tbody data-bind="foreach:newzealandInnings">
+    <tr>
+        <td id="name" data-bind="text: name"></td>
+        <td data-bind="text: wicket"></td>
+        <td data-bind="text: runs"></td>
+        <td data-bind="text: minutes"></td>
+        <td data-bind="text: balls"></td>
+        <td data-bind="text: fours"></td>
+        <td data-bind="text: sixes"></td>
+        <td data-bind="text: strikeRate"></td>
+       </tr>    
+</tbody>
+</table class="table">
+ <img src="photos/details.png" width=640 height=200>
+</div>
+</div>
+<div id="Right">
+<div class="the">
+<h3>The Upcoming Mathches And Also About the Schedule Click Some ESPN <u>Star sports .com</u></h3>
+<h3>Related pics And aalso Some Images About World Cup Here Below EnJoy the Cricket Game </h3>
+<h2> See The Live Vedio Match From Espn StarSports Live Feel the Match as from The Stadium </h2>
+</div>
+ <img src="photos/rest.png" width=640 height=400>
+ <img src="photos/vedio.png" width=640 height=400>
+ <img src="photos/match.png" width=640 height=400>
+ </div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript">
+    function Team(name,wicket,runs,minutes,balls,fours,sixes,strikeRate)
+{
+    
+    this.name=name;
+    this.wicket=wicket;
+    this.runs=runs;
+    this.minutes=minutes;
+    this.balls=balls;
+    this.fours=fours;
+    this.sixes=sixes;
+    this.strikeRate=strikeRate;
+};
+function EspnLiveScoreCardViewModel(){
+
+    this.bangladeshInnings = [   new Team('Tamim Iqbal','c Anderson b Boult',13,41,27,2,0,48.14),
+                            new Team('Imrul Kayes','b Boult',2,23,19,0,0,10.52),
+                            new Team('Soumya Sarkar ','c Anderson b Vettori',51,94,58,7,0,87.93),
+                            new Team('Mahmudullah','not out',128,175,123,12,3,104.06),
+                            new Team('Shakib Al Hasan*','c †Ronchi b Anderson',23,34,18,3,0,127.77),
+                            new Team('Mushfiqur Rahim†','c †Ronchi b Anderson',15,16,25,2,0,60.00),
+                            new Team('Sabbir Rahman','c McCullum b Elliott',40,37,23,5,2,173.91),
+                            new Team('Nasir Hossain','c Taylor b Elliott',11,12,7,0,1,157.14),
+                            new Team('Rubel Hossain','not out',0,1,0,0,0,'-'),
+                            new Team('...Extras','(lb1,w4)',5)
+                        ];
+    this.newzealandInnings = [   new Team('MJ Guptill','c Rubel Hossain b Shakib Al Hasan',105,132,100,11,2,105.00),
+                            new Team('BB McCullum*','c Soumya Sarkar b Shakib Al Hasan',8,15,8,1,0,100.00),
+                            new Team('KS Williamson','c Tamim Iqbal b Shakib Al Hasan',1,3,2,0,0,50.00),
+                            new Team( 'LRPL Taylor','lbw b Nasir Hossain',56,161,97,5,0,57.73),
+                            new Team('GD Elliott ' ,'c Taskin Ahmed b Rubel Hossain',39,34,34,5,1,114.70),
+                            new Team( 'CJ Anderson','b Nasir Hossain',39,42,26,3,3,150.00),
+                            new Team( 'L Ronchi†','c Nasir Hossain b Shakib Al Hasan',9,18,10,2,0,90.00),
+                            new Team( 'DL Vettori','not out',16,19,10,1,1,160.00),
+                            new Team( 'TG Southee','not out',12,7,6,1,1,200.00),
+                            new Team('...Extras','(lb1,w4)   total',5)
+                         ];
+}
+var all= new EspnLiveScoreCardViewModel();
+ko.applyBindings(all);
+</script>
+</body>
+</html>

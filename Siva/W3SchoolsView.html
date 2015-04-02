@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/W3SchoolsView.css">
+	<title>W3Schools</title>
+</head>
+<body>
+<div class="topMenu" data-bind = "foreach:topMenu">
+	<div> 
+		<p></p>
+		<img data-bind="attr:{src: logoImageUrl}"/>
+	</div>
+	<div class="topMenu1" data-bind = "foreach:topMenuItem"><span data-bind = "text:topMenuItems"></span></div>
+</div>
+<div class="leftMenu"><h2>CSS Reference</h2>
+	<ul data-bind = "foreach: leftMenu">
+		<ul data-bind = "text: leftMenuItems"></ul>
+	</ul>
+</div>
+<div class="bodyContents">
+	<table>
+	<tr>
+		<th><h3 target="thead1">Selector</h3></th><th><h3 target="thead2">Example</h3></th><th ><h3 target="thead3" >Example Description</h3></th>
+		<th><h3 target="thead4">CSS version</h3></th>
+	</tr>
+	<tbody data-bind = "foreach:bodyContents">
+		<tr>
+			<td data-bind = "text: selector"></td>
+			<td data-bind = "text: example"></td>
+			<td data-bind = "text: exampleDescription"></td>
+			<td data-bind = "text: cssVersion"></td>
+		</tr>
+	</tbody>
+		
+	</table>
+</div>
+<div>
+	<a href="#paragraph1"> Click on This</a><p id="paragraph1">CSS Selectors.</p> 
+	<a href="#paragraph2"> Click on This</a>	
+	<p id="paragraph2">CSS Selectors.</p>
+</div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/W3SchoolsView.js"></script>
+</body>
+</html>
