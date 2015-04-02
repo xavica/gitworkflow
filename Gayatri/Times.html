@@ -24,6 +24,11 @@ var b = _.times(10, function()
 	return Math.floor(Math.random() * 64 + 1);
 });
 console.log(b);
+ 
+ var c = [{no:2,name:"a"},{no:4,name:"a"},{no:6,name:"a"},{no:1,name:"a"},{no:3,name:"a"},{no:5,name:"a"},{no:2,name:"a"}]
+
+ var s = _.sortBy(c,'no');
+ console.log(s);
 
 
 

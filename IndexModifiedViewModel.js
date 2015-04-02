@@ -21,6 +21,10 @@ function IndexViewModel()
 											new TableHeaders('DESCRIPTION')
 										  ],
 										  [	 new Program(length++,'','',''),
+										  	 new Program(length++, 'W3Schools View Model','Siva/W3SchoolsView.html','A program on JS view model and usage of CSS selectors'),
+										  	 new Program(length++,'Mobile Grid View Model','Siva/TelerikGridView.html','A js program using Knokout displaying mobile data in grid("This is not completed and continued")'),
+										  	 new Program(length++,'Student View','Siva/StudentView.html', ' A JS program on knokout for Student View model' ),
+										  	 new Program(length++,'W3SchoolsViewModel','Siva/W3Schools.html', ' A JS program on knokout for w3schools demo' ),
 										  	 new Program(length++,'Lodash- Without And Xor','Siva/WithoutAndXor.html','A JS program on performing lodash operations like Without() And Xor() '),
 										  	 new Program(length++,'CricBuzz Modified ViewModel','Siva/CricBuzzModifiedViewModel.html',' A JS program on Creating Objects, representing classes and representing CricBuzz Points table and it is modified as for code redundancy'),
 										  	 new Program(length++,'Lodash - Zip And UnZip','Siva/ZipAndUnZip.html','A JS program on performing lodash operations like Zip() And Unzip()'),

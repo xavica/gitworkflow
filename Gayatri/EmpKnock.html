@@ -1,0 +1,42 @@
+<html>
+<head><title>Employee view Model</title>
+<body>
+
+<table border="2" data-bind="foreach:employees">
+	
+	<tr data-bind="click:$parent.clickRow">
+		<td data-bind="text:firstName"></td>
+		<td data-bind="text:lastName"></td>
+
+	</tr>
+
+</table>
+<!-- ko with:employee -->
+	<table>
+	
+	<tr>
+		<td>FirstName:</td>
+		<td><input type="text" data-bind="value:firstName, enable: $parent.isNew() || $parent.isEdit()" /></td>
+	</tr>
+	<tr>
+		<td>LastName:</td>
+		<td><input type="text" data-bind="value:lastName, enable: $parent.isNew() || $parent.isEdit()" /></td>
+	</tr>
+	<tr>
+	<td align="center" colspan="2">
+		<input type="button" value="Add New" data-bind='click:$parent.clickAdd, enable: !$parent.isNew()'>
+		<input type="button" value="Save"    data-bind='click:$parent.clickSave, enable: $parent.isNew()' >
+		<input type="button" value="Update" data-bind='click:$parent.clickUpdate, enable: $parent.isEdit()'>
+		<input type="button" value="Delete" data-bind='click:$parent.clickDelete, enable: $parent.isEdit()'>
+	</td></tr> 
+
+</table>
+<!-- /ko -->
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/jstorage.js"></script>
+<script type="text/javascript" src="EmpKnock.js"></script>
+</body>
+</html>

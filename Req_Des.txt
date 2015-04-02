@@ -1,0 +1,8 @@
+CRUD operations on a GRID:
+
+1.  UI same as like example
+2. keep a footer
+3. 20 items per page, ( pagesize  on dropdown)
+4. no.of items display status  on right hand side
+5. Drop down list for the selection of the pages
+6. 

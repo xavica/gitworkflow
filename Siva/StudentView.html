@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/StudentView.css">
+	<title>Testing Knokout</title>
+</head>
+<body>
+<caption>Student Table</caption>
+<table class ="headers" >
+	<tr data-bind="foreach: headers">
+		<th data-bind="text:headerName"></th>
+		
+	</tr>
+	<tbody data-bind="foreach: studentDetails" >
+		<tr data-bind="click:$root.clickRow, enable:!$root.isEdit()"> 
+			<td data-bind="text:rollNumber"></td>
+			<td data-bind="text:studentName"></td>
+			<td data-bind="text:age"></td>
+			<td data-bind="text:branch"></td>
+		</tr>
+	</tbody>
+</table>
+<!-- ko with: enterDetails -->
+<table class ="studentData">
+	<tr>
+		<td><input type="text" data-bind="value:rollNumber, enable:$root.isNew() || $root.isEdit()"/></td>
+		<td><input type="text" data-bind="value:studentName, enable:$root.isNew() || $root.isEdit()" /></td>
+		<td><input type="text" data-bind="value:age, enable:$root.isNew() || $root.isEdit()" /></td>
+		<td><input type="text" data-bind="value:branch, enable:$root.isNew() || $root.isEdit()" /></td>
+	</tr>
+<tr>
+	<td  >
+	<input type="button" value="EnterNew" data-bind="click:$root.clickNew, enable:!$parent.isEdit()">
+	<input type="button" value="Save" data-bind="click:$root.clickSave, enable:$parent.isNew()"></td>
+	<td><input type="button" value="Update" data-bind="click:$parent.clickUpdate, enable:$parent.isEdit()">
+	<input type="button" value="Delete" data-bind="click:$parent.clickDelete, enable:$parent.isEdit()"> 
+	</td>
+
+
+</tr>
+</table>
+<!-- /ko -->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="Javascript/StudentViewModel.js"></script>
+</body>
+</html>
