@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+svg {
+  display:block;
+  height:500px;
+  margin: 0 auto;
+  width: 300px;
+}
+
+body {
+  background:#C0C0C0;
+}
+
+text,
+circle {
+  fill:#FF00FF;
+}
+
+svg text {
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+}
