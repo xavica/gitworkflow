@@ -1,0 +1,18 @@
+1. Objective should be more clear.
+   I want to here some more info about todaydiscouts.com.
+   Because as of Now we did not have any clear dicussion about the Objective of Todays discounts.
+2. I want an example for aesthetic color,
+   because ,I dont know about aesthetic colors 
+3. I need much more explaination about left side category list.
+4. In the 9th point, I got what the requirement is, but I didn't get the actual concept of ad.
+   Can you people Explin it more?
+5. Explian once about 11, 12 , 13 points more clearly?
+6. In the footer can we maintain copyrights, privacy policy, and Terms of Usage.?
+    please give a clear Idea about that.
+7. What is the process of after the customer has seen our site deals.
+    If he want to buy an Item, What is the process of buying that Item to the customer.
+8. can we maintain the payment options?
+   If we maintain payment options, then what about the cancellation policy?
+9. Are we planning for any login and Sign up of the customer?
+   Is the customer can able to see the previuos procuts of the customer when opened our site from the same IP again again
+
