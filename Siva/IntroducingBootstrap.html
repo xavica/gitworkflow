@@ -22,39 +22,62 @@
 
 
 <div class="container" id="main">
-	<div class="navbar navbar-fixed-top">
-		<a class="navbar-brand" href="/"> <img src="Images/XAVICA.jpg" alt="My Image 1"/></a>
-		<div class="nav-collapse navbar-responsive-collapse" id="collapse">
-			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="#">Home</a>
-				</li>
-					
-				<li>
-					<a href="#">Services</a>
-				</li>
-			</ul>
-			<form class="navbar-form pull-left">
-				<input type="text" class="form-control" placeholder="Search this Item" />
-				<button type="submit" class="btn btn-default"></button>
-			</form>
-		</div>
-	</div>
-	<div class="carousel slide" id="myCarousel"></div>
+	
+	<!-- Open myCarousel -->
+
+	<div class="carousel slide" id="myCarousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+		<li data-slide-to="0" data-target="#myCarousel"></li>
+		<li data-slide-to="0" data-target="#myCarousel"></li>
+	</ol>
+	<!-- Wrapper for indicators -->
+		<div class="carousel-inner">
+			<div class="item active" id="slide1">
+			
+				<div class="carousel-caption">
+					<h1>Boot Strap 3</h1>
+					<p>Learing Bootstrap CSS and Building carousel with Bootstrap</p>
+				</div>	<!-- End carousel-caption -->
+			</div> <!-- End	item	 -->
+
+			<div class="item" id="slide2">
+			
+				<div class="carousel-caption">
+					<h1>Its A Carousel </h1>
+					<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web</p>
+				</div>	<!-- End carousel-caption -->
+			</div> <!-- End	item	 -->
+
+			<div class="item" id="slide3">
+
+
+				<div class="carousel-caption">
+					<h1>Getting started</h1>
+					<p>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</p>
+				</div>	<!-- End carousel-caption -->
+			</div> <!-- End	item	 -->
+		
+		</div>	<!-- End carousel-inner -->
+		<!-- controls -->
+		<a class="left carousel-control" data-slide="prev" href="#myCarousel">
+		<span class="icon-prev"></span>
+		</a>
+		<a class="right carousel-control" data-slide="next" href="#myCarousel">
+		<span class="icon-next"></span>
+		</a>
+	</div>	<!-- End myCarousel -->
+
 	<div class="row" id="bidCallOut"></div>
-	<div class="row" id="featuresHeading"></div>
-	<div class="row" id="features"></div>
-	<div class="row" id="more"></div>
-	<div class="row" id ="moreInfo"></div>
+	
  </div><!-- /.container -->
  <footer>
  	
  </footer>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="../js/jquery.js"></script>   
-<!-- <script type="text/javascript" src="Javascript/IntroducingBootstrap.js"></script>
-</head>   -->
 <script src="../js/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
