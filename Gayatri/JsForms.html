@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Forms</title>
+</head>
+<body>
+<form name="MyForm" action="" onsubmit="buttonSubmit(event)">
+	<input name="myButton" type="submit" value="Submit">
+</form>
+
+<form name="MyForm1" action="" onsubmit="buttonSubmit1(event)">
+	<input name="myButton1" type="submit" value="Submit1">
+</form>
+
+
+<script type="text/javascript">
+
+	alert("page loaded");
+	function buttonSubmit(event)
+	{
+		var btn = document.MyForm.myButton;
+		btn.diabled = true;
+
+		if(confirm("Do u want to stop:"))
+		{
+
+		eventUtility.preventDefault(event); 
+		
+
+		}
+		else
+		{
+			alert("u clicked no");
+			btn.diabled = false;
+		}
+		
+	}
+	alert("page loaded");
+	function buttonSubmit1(event)
+	{
+		var btn = document.MyForm1.myButton1;
+		btn.disabled = true;
+		
+		var i = confirm("say yes or no");
+		if(i)
+		{
+			alert("fix again");
+			btn.disabled = true;
+			eventUtility.preventDefault(event);
+		}
+	}
+
+ 
+</script>
+</body>
+</html>
