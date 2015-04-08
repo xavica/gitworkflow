@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
  <head>
+ <link rel="icon" href="faviconazure.png" type="image/x-icon"/>
 <link rel="stylesheet" type="text/css" href="First.css">
 
  </head>
@@ -31,7 +32,15 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+<tr>
+    <td>  <a href="gayatri/GridModel.html">Grid Model</a></td>
+    <td> Using Knockout Library</td>
+</tr>
 
+<tr>
+    <td>  <a href="gayatri/ShiftKnock.html">Exchange of Data Between Two Lists</a></td>
+    <td> Using Knockout Library</td>
+</tr>
 
 <tr>
     <td>  <a href="gayatri/BankAccount.html">CRUD on Bank Example</a></td>
@@ -602,6 +611,10 @@
        <th>PROGRAM</th>
        <th>DESCRIPTION</th> 
     </tr>
+    <tr>
+    <td>  <a href="Jagan/BootStrapExample1.html">BOOT Strap Carousel Example</a></td>
+    <td> javascript program using BOOTSTRAP</td>
+  </tr>
     <tr>
     <td>  <a href="Jagan/TelericGridViewModel.html">TelericUI GridViewModel</a></td>
     <td> javascript program using KnockOut Binding</td>
