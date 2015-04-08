@@ -1,0 +1,423 @@
+
+h2 {
+	color:lightblue;
+	text-align: center;
+}
+h2 ~ p{
+   color:Blanchedalmond;
+}
+#myCarousel{margin-top: 100px;}
+#myCarousel .item{	height: 400px;}
+.carousel-caption{font-size: 24px;}
+.carousel-caption h1{font-size: 34px;}
+
+#slide1
+{
+	background-image: url("photos/sachin.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide2
+{
+	background-image: url("photos/dhoni.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide3
+{
+	background-image: url("photos/kohli.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+/*media Queries*/
+/*potrait and Landscape*/
+@media(max-width: 480px){
+
+#myCarousel .item{	display: none;
+}
+body{background-color: #ff00ff;}
+
+}
+/*Landscape phone to tablet*/
+@media(max-width:768px){
+	#myCarousel .item{	height: 310px;}
+	.carousel-caption{font-size: 16px;}
+.carousel-caption h1{font-size: 22px;}
+
+#slide1
+{	height: 310px;
+	background-image: url("photos/sachin.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide2
+{
+	background-image: url("photos/dhoni.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide3
+{
+	background-image: url("photos/kohli.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+}
+/*Large Desktop*/
+@media(max-width:1200px){
+	#myCarousel .item{	height: 500px;}
+
+#slide1
+{
+	background-image: url("photos/sachin.jpg") ;
+	height: 500px;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide2
+{
+	background-image: url("photos/dhoni.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide3
+{
+	background-image: url("photos/kohli.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+}
+#myCarousel1{margin-top: 100px;}
+#myCarousel1 .item{	height: 400px;}
+.carousel-caption{font-size: 24px;}
+.carousel-caption h1{font-size: 34px;}
+
+#slide21
+{
+	background-image: url("photos/pavan.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide22
+{
+	background-image: url("photos/mahesh.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide23
+{
+	background-image: url("photos/sarva.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+/*media Queries*/
+/*potrait and Landscape*/
+@media(max-width: 480px){
+
+#myCarousel1 .item{	display: none;
+}
+body{background-color: #ff00ff;}
+
+}
+/*Landscape phone to tablet*/
+@media(max-width:768px){
+	#myCarousel1 .item{	height: 310px;}
+	.carousel-caption{font-size: 16px;}
+.carousel-caption h1{font-size: 22px;}
+
+#slide21
+{	height: 310px;
+	background-image: url("photos/pavan.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide22
+{
+	background-image: url("photos/mahesh.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide23
+{
+	background-image: url("photos/sarva.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+}
+/*Large Desktop*/
+@media(max-width:1200px){
+	#myCarousel1 .item{	height: 500px;}
+
+#slide21
+{
+	background-image: url("photos/pavan.jpg") ;
+	height: 500px;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide22
+{
+	background-image: url("photos/mahesh.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide23
+{
+	background-image: url("photos/sarva.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+}
+#myCarousel2{margin-top: 100px;}
+#myCarousel2 .item{	height: 400px;}
+.carousel-caption{font-size: 24px;}
+.carousel-caption h1{font-size: 34px;}
+
+#slide31
+{
+	background-image: url("photos/car2.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide32
+{
+	background-image: url("photos/car1.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide33
+{
+	background-image: url("photos/car3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+/*media Queries*/
+/*potrait and Landscape*/
+@media(max-width: 480px){
+
+#myCarousel2 .item{	display: none;
+}
+body{background-color: #ff00ff;}
+
+}
+/*Landscape phone to tablet*/
+@media(max-width:768px){
+	#myCarousel2.item{	height: 310px;}
+	.carousel-caption{font-size: 16px;}
+.carousel-caption h1{font-size: 22px;}
+
+#slide31
+{	height: 310px;
+	background-image: url("photos/car2.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide32
+{
+	background-image: url("photos/car1.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide33
+{
+	background-image: url("photos/car3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+}
+/*Large Desktop*/
+@media(max-width:1200px){
+	#myCarousel1 .item{	height: 500px;}
+
+#slide31
+{
+	background-image: url("photos/car2.jpg") ;
+	height: 500px;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide32
+{
+	background-image: url("photos/car1.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide33
+{
+	background-image: url("photos/car3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+}
+#myCarousel3{margin-top: 100px;}
+#myCarousel3 .item{	height: 400px;}
+.carousel-caption{font-size: 24px;}
+.carousel-caption h1{font-size: 34px;}
+
+#slide41
+{
+	background-image: url("photos/iphone.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide42
+{
+	background-image: url("photos/htc.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide43
+{
+	background-image: url("photos/mobile1.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+/*media Queries*/
+/*potrait and Landscape*/
+@media(max-width: 480px){
+
+#myCarousel3 .item{	display: none;
+}
+body{background-color: #ff00ff;}
+
+}
+/*Landscape phone to tablet*/
+@media(max-width:768px){
+	#myCarousel3.item{	height: 310px;}
+	.carousel-caption{font-size: 16px;}
+.carousel-caption h1{font-size: 22px;}
+
+#slide41
+{	height: 310px;
+	background-image: url("photos/iphone.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide42
+{
+	background-image: url("photos/htc.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide43
+{
+	background-image: url("photos/mobile1.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+}
+/*Large Desktop*/
+@media(max-width:1200px){
+	#myCarousel3 .item{	height: 500px;}
+
+#slide41
+{
+	background-image: url("photos/iphone.jpg") ;
+	height: 500px;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide42
+{
+	background-image: url("photos/htc.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide43
+{
+	background-image: url("photos/mobile1.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+}
+#myCarousel4{margin-top: 100px;}
+#myCarousel4 .item{	height: 400px;}
+.carousel-caption{font-size: 24px;}
+.carousel-caption h1{font-size: 34px;}
+
+#slide51
+{
+	background-image: url("photos/horse1.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide52
+{
+	background-image: url("photos/horse2.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide53
+{
+	background-image: url("photos/horse3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+/*media Queries*/
+/*potrait and Landscape*/
+@media(max-width: 480px){
+
+#myCarousel4 .item{	display: none;
+}
+body{background-color: #ff00ff;}
+
+}
+/*Landscape phone to tablet*/
+@media(max-width:768px){
+	#myCarousel4.item{	height: 310px;}
+	.carousel-caption{font-size: 16px;}
+.carousel-caption h1{font-size: 22px;}
+
+#slide51
+{	height: 310px;
+	background-image: url("photos/horse1.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide52
+{
+	background-image: url("photos/horse2.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide53
+{
+	background-image: url("photos/horse3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+}
+/*Large Desktop*/
+@media(max-width:1200px){
+	#myCarousel4 .item{	height: 500px;}
+
+#slide51
+{
+	background-image: url("photos/horse1.jpg") ;
+	height: 500px;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide52
+{
+	background-image: url("photos/horse2.jpg");
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+#slide53
+{
+	background-image: url("photos/horse3.jpg") ;
+	background-repeat:  no-repeat;
+	background-position: top center;
+}
+
+}
