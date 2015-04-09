@@ -1,0 +1,50 @@
+.header{
+	height: 30px;
+	background-color:#ededed;
+}
+.headerContainer{
+	width: 80%;
+	margin: 0 auto;
+
+}
+.divRight{
+	float: right;
+}
+.divRight > span{
+	margin-right: 20px;
+}
+.logo{
+	padding-top: 50px;
+	float: center;
+}
+.logoimage{
+	float: left; 
+	margin-right: 60px;
+}
+.searchBox{
+	width: 600px;
+	margin-top: 10px;
+	float: left;
+	border: 2px solid red;
+	margin-right: 30px;
+	
+	}
+.searchBox input{
+	width: 450px;
+	height: 50px;
+}
+.searchBox select {height: 50px;background-color: gray;
+
+}
+.searchIcon{
+	background-color: orange;
+}
+.specialOffer{
+	width: 300px;
+	
+}
+.specialOffer button{
+		width: 20px;
+		margin-top: 30px;
+
+}		

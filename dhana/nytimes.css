@@ -1,0 +1,67 @@
+.header{
+	height: 50px;
+	}
+	.headerContainer{
+		margin: 0 auto;
+		width: 80%;		
+	}
+
+	.headerLeft{
+	float:left;
+	width: 600px;
+}
+.headerLeft > span{
+	margin-left: 50px;
+
+}
+.headerRight{
+	float: right;
+	}
+.header2{
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	/*border-style: solid;*/
+	/*border-width: 1px;*/
+
+}
+.logo{
+	margin-top: 20px;
+	margin-left: 500px;
+}
+.desc{
+	margin-top: -5px;
+}
+.menus{
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+}
+.menus > span{
+	margin-right: 8px;
+}
+.leftContent{
+	height: 300px;
+	margin: 0 auto;
+	width: 70%;
+	float: left;
+}
+.leftContentdesc{ height: 300px; width: 200px; float: left; margin-right: 10px;}
+#image{
+ 
+}
+.rightContentdesc{
+	float: left;
+	margin-right: 10px;
+	width:375px;
+}
+.rightContent{
+	/*width: 30%;*/
+
+}
+.bodyContent{
+	height: 300px;
+	margin: 0 auto;
+	width: 70%;
+	float: left;	
+}
