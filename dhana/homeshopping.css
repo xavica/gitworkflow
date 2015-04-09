@@ -26,7 +26,7 @@
 	margin-top: 10px;
 	float: left;
 	border: 2px solid red;
-	margin-right: 30px;
+	margin-right: 15px;
 	
 	}
 .searchBox input{
@@ -36,15 +36,19 @@
 .searchBox select {height: 50px;background-color: gray;
 
 }
-.searchIcon{
+.searschIcon{
 	background-color: orange;
 }
-.specialOffer{
-	width: 300px;
-	
+.speicalOffer{
+	float: left;	
+	width: 180px;
+	height: 100px;
+	margin-top: 20px;
 }
-.specialOffer button{
-		width: 20px;
-		margin-top: 30px;
-
+.speicalOffer input{
+		width: 100px;
+		height: 50px;
+		color: red;
+		font-size: 20px;
+		
 }		
