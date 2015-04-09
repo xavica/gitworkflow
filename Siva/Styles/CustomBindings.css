@@ -1,0 +1,23 @@
+.green {
+    color : green;
+}
+
+.blue {
+    color:blue;
+}
+
+.red {
+    color:red;
+}
+
+.main{margin-top: 20px; }
+.container
+{
+	text-align: center;
+	width: 200px; 
+	float: left;
+	margin: 10px 10px 10px 10px;
+}
+.borderGreen:hover{ border: 2px solid green;}
+.borderBlue:hover{ border: 2px solid blue;}
+.borderRed:hover{ border: 2px solid red;}
