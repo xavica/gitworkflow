@@ -14,6 +14,7 @@ function Programtable(headers, programsData)
 	this.headers=headers;
 	this.programsData=programsData;
 };
+
 function IndexViewModel()
 {
 	this.programs=	[	new Programtable( [	new TableHeaders('SL.No'),
