@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KnockOut Bindings</title>
+    <link href="../js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr class="danger">
+            <th>Brand name</th>
+            <th>Memory</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: products">
+        <tr class="success">
+            <td data-bind="text: brandName"></td>
+            <td data-bind="text: memory"></td>
+            <td data-bind="currency: price"></td>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <input type="button" class="btn btn-success btn-large disabled" value="Price In Rupees" data-bind="click:rupees, enable:isDollor()" />
+    <input type="button" class="btn btn-success btn-large active" value="Price In Dollors" data-bind="click:dollors, enable:!isDollor()" />
+   
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript">
+ function StudentViewModel() {
+    var self = this;
+
+    self.products = ko.observableArray([{
+        brandName: 'Nokia',
+        memory : '4GB',
+        price:9999
+    }, {
+        brandName: 'Samsung',
+        memory : '4GB',
+        price:19999
+    }, {
+        brandName: 'sony',
+        memory : '4GB',
+        price:6999
+    },
+    {
+        brandName: 'Motorola',
+        memory : '4GB',
+        price:8999
+    },
+                                       {
+        brandName: 'Xiomi',
+        memory : '4GB',
+        price:9999
+    }]);
+    sym : ko.observable('');
+    curr : ko.observable('');
+    isDollor : ko.observable(false);
+    self.rupees = function()
+    {
+            self.symbol('Rs.');
+            self.curr('rupees');
+            self.isDollor(true);
+    }
+    self.dollors = function()
+    {
+            self.symbol('$');
+            self.curr('dollors');
+            self.isDollor(false);
+    }
+
+}
+
+//   ko.bindingHandlers.currency = {
+//     symbol: ko.observable('$'),
+//     update: function(element, valueAccessor, allBindingsAccessor){
+//         return ko.bindingHandlers.text.update(element,function(){
+//             var value = +(ko.utils.unwrapObservable(valueAccessor()) || 0),
+//                 symbol = ko.utils.unwrapObservable(allBindingsAccessor().symbol === undefined
+//                             ? ko.bindingHandlers.currency.symbol
+//                             :allBindingsAccessor().symbol);
+//            // return symbol + value.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+//            return symbol + valueAccessor();
+//         });
+//     }
+// };
+
+ko.bindingHandlers.currency = {
+    symbol: ko.observable('$'),
+    update: function(element, valueAccessor){
+     //   console.log(valueAccessor());
+        // console.log(ko.symbol());
+        console.log(self.isDollor());
+        //console.log(element);
+        return valueAccessor();
+        
+        }
+    }
+
+           
+        
+$(document).ready(function () {
+    ko.applyBindings(new StudentViewModel());
+});
+</script>
+
+</body>
+</html>
