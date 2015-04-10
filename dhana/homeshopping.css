@@ -1,0 +1,54 @@
+.header{
+	height: 30px;
+	background-color:#ededed;
+}
+.headerContainer{
+	width: 80%;
+	margin: 0 auto;
+
+}
+.divRight{
+	float: right;
+}
+.divRight > span{
+	margin-right: 20px;
+}
+.logo{
+	padding-top: 50px;
+	float: center;
+}
+.logoimage{
+	float: left; 
+	margin-right: 60px;
+}
+.searchBox{
+	width: 600px;
+	margin-top: 10px;
+	float: left;
+	border: 2px solid red;
+	margin-right: 15px;
+	
+	}
+.searchBox input{
+	width: 450px;
+	height: 50px;
+}
+.searchBox select {height: 50px;background-color: gray;
+
+}
+.searschIcon{
+	background-color: orange;
+}
+.speicalOffer{
+	float: left;	
+	width: 180px;
+	height: 100px;
+	margin-top: 20px;
+}
+.speicalOffer input{
+		width: 100px;
+		height: 50px;
+		color: red;
+		font-size: 20px;
+		
+}		

@@ -1,0 +1,116 @@
+.headerContainer{
+	/*margin: 0,auto;*/
+	position: relative;
+  width: 100%;
+  margin: 0 auto;
+	height: 30px;
+	font-size: 12px;
+	  background-color: #444546;
+
+}
+.divLeft{
+	float: left;
+	padding-top: 5px;
+	color: white;
+
+	}
+.button{
+	display: inline;
+  padding: 2px 10px; 
+  border: 1px dashed #3d6e2b;
+  background-color: #589d3e;
+  color: #fff;
+  text-align: center;
+  line-height: 21px;
+  font-weight: 500;
+}
+.border{
+	 
+	    border: 1px solid #adaeaf;
+		  	border-radius: 4px;
+		  padding: 0 5px;
+		  margin-top: -2px; 
+}
+.divLeft > span{
+	margin-left: 10px;
+}
+
+.divRight{
+	float: right;
+	padding-top: 5px;
+	color: white;	
+	cursor: pointer;
+  display: inline-block;
+    vertical-align: top;
+}
+.divRight > span{
+	margin-right: 10px;
+}
+.logoSection{
+	position: relative;
+  width: 980px;
+  margin: 0 auto;
+  padding: 23px 0 2px;
+  float: left;
+}
+.logoLeft{
+	  display: block;
+  position: relative;
+  float: left;
+  line-height: 0;
+}
+.logoRight{
+	float: right;
+	display: block;
+}
+.searchBorder{
+	display: inline-block;
+  float: left;
+  font-size: 16px;
+  height: 20px;
+  line-height: 24px;
+  width: 250px;
+  color: #697071;
+  padding: 7px 10px 4px 10px;
+  margin: 0;
+  outline: 0;
+  border: 1px solid #dddedf;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+}
+.searchIcon{
+	 display: inline-block;
+  height: 24px;
+  width: 40px;
+  text-align: center;
+  padding: 7px 0 0;
+  border: 1px solid #dddedf;
+  border-radius: 0 4px 4px 0;
+
+}
+/*.bag{
+	display: inline-block;
+	background-position: -2539px 0;
+  width: 23px;
+  height: 23px;
+}*/
+.button1{
+	margin-left: 10px;
+	  color: #697071;
+  border-color: #adaeaf;
+  background: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  height: 30px;
+  line-height: 34px;
+  padding: 0 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}

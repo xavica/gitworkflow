@@ -1,0 +1,251 @@
+.header{
+	background-color: #444546;
+	height: 30px;
+	font-size: 12px;
+	position: relative;
+  width: 100%;
+ 
+
+	
+}
+.headerContainer{
+   margin-left:  auto;
+  margin-right: auto;
+  max-width: 70%;
+
+}
+.left{
+	float: left;
+	color: white;
+	padding-top: 5px;
+
+	
+}
+.button{
+	  padding: 2px 10px 2px;
+  border: 1px dashed #3d6e2b;
+  background-color: #589d3e;
+  color: #fff;
+  text-align: center;
+  line-height: 21px;
+  font-weight: 500;
+  display: inline;
+}
+.broder{
+	border: 1px solid #adaeaf;
+	border-radius: 4px;
+  padding: 0 5px;
+  margin-top: -2px;
+  
+
+}
+.left > span{
+	margin-left: 10px;
+
+}
+.right{
+	float: right;
+	color: white;
+	padding-top: 5px;
+	color: #edeeef;
+  text-decoration: none;  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+.right > span{
+	margin-right: 10px;
+
+}
+.logoSection{
+	/*float: left;*/
+	  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  padding: 23px 0 2px;
+
+}
+.logoLeft{
+	  display: block;
+  position: relative;
+  float: left;
+  line-height: 0;
+}
+.logoRight{
+	float: right;
+	display: block;
+}
+.search{
+	display: inline-block;
+  float: left;
+  font-size: 16px;
+  height: 20px;
+  line-height: 24px;
+  width: 250px;
+  color: #697071;
+  padding: 7px 10px 4px 10px;
+  margin: 0;
+  outline: 0;
+  border: 1px solid #dddedf;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+ 
+}
+.serchicon{
+	  display: inline-block;
+  height: 24px;
+  width: 40px;
+  text-align: center;
+  padding: 7px 0 0;
+  border: 1px solid #dddedf;
+  border-radius: 0 4px 4px 0;
+    color: #808080;
+  text-decoration: none;
+  opacity: .6;
+  background-position: -2609px 0;
+  width: 19px;
+  height: 19px;
+
+   }
+   .bag{
+   		display: inline-block;
+	background-position: -2539px 0;
+  width: 23px;
+  height: 23px;
+    margin: 4px 0 0 25px;
+   }
+  
+   .button1
+   {
+   	  margin-left: 10px;
+   	  color: #fff;
+  background-color: #589d3e;
+   	  display: inline-block;
+  text-transform: uppercase;
+    text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  height: 30px;
+  line-height: 34px;
+  padding: 0 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+   }
+
+   .menuContent{
+    border-bottom: 1px solid #c6c6c7;
+    position: relative;
+  width: 980px;
+  float: left;
+}
+.menuContent > span{
+  padding-left: 0;
+  display: block;
+  position: relative;
+  float: left;
+  padding: 7px 12px 0 12px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 24px;
+  text-decoration: none;
+  color: #444546;
+}
+label{
+    padding: 2px 6px 0;
+  border-radius: 8px;
+  background: #ed6663;
+  margin: 0 0 5px 5px;
+  display: inline-block;
+  font-size: 10px;
+  color: #fff;
+  vertical-align: middle;
+  line-height: 13px;
+  text-transform: uppercase;
+}
+.bodyContent{
+	margin-top: 150px;
+}
+.leftImageContent{
+	display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+  width: 632px;
+  padding-right: 20px;
+    float: left;
+	  }
+.rightImagecontent{
+	  width: 368px;
+	  padding-right: 20px;
+	  float: left;
+	    height: 459px;
+}
+.part1{
+	border-bottom: 1px 
+	solid #c8d3dc;
+	 padding-bottom: 16px;
+	padding-top: 16px;
+	  /*max-width: 1140px;*/
+	    /*width: 100%;*/
+  /*float: none;*/
+  /*height: 120px;*/
+    width: 350px;
+  height: 160px;
+  /*position: relative;*/
+}
+.title{
+	  font-family: Georgia,"din-med",arial,sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 24px;
+    text-align: left;
+}	 
+.desc{
+	  font-family: helvetica,arial,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #484848;
+  /*text-decoration: none;*/
+  /*text-align: left;*/
+  vertical-align: middle;
+  line-height: 14px;
+  
+  text-transform: uppercase;
+}
+.title1{
+	float: left;
+	margin: 0 auto;
+	font-family: Georgia,"din-med",arial,sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: none;
+  text-decoration: none;
+  /*vertical-align: middle;*/
+  /*line-height: 24px;*/
+  /*padding: 30px 0px 0px 180px;*/
+  /*text-align: left;*/
+  padding-top: 16px;
+} 
+.image {
+	float: right;
+}
+.titleText
+{	width: 180px;
+	height: 150px;
+	float: left;
+}
+.titletext1
+{
+	width: 180px;
+	height: 150px;
+	float: right;
+}
+.image1{
+	float: left;
+}
