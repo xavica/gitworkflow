@@ -21,7 +21,11 @@ function IndexViewModel()
 											new TableHeaders('PROGRAM'),
 											new TableHeaders('DESCRIPTION')
 										  ],
-										  [	 new Program(length++,'','',''),
+										  [	 new Program(length++,'','',''),										  
+										  	 new Program(length++,'Mobile Info','Siva/CustomBindings.html','This program tells us displaying mobile and it is done using custom bindings'),
+										  	 new Program(length++,'Custom Bindings','Siva/ExampleUsingCustomBindings.html','Doing custom bindings and using those in our practice'),
+										  	 new Program(length++,'Custom Bindings','Siva/CustomBindingsDemo2.html','Its just demo on custom bindings init()'),
+										  	 new Program(length++,'Custom Bindings','Siva/CustomBindingsDemo.html','Its just demo on custom bindings update()'),
 										  	 new Program(length++,'Mobile Info','Siva/CustomBindings.html','This program tells us displaying mobile and it is done using custom bindings'),
 										  	 new Program(length++, 'Book  info display','Siva/FeaturesBootStrap.html','A program on displaying books info using Boot strap css 3 '),										
 										  	 new Program(length++, 'Boot Strap CallOut','Siva/BootStrapCallout.html','A program on using Boot strap css 3 '),

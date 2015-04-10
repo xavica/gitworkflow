@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>custom binding handlers</title>
+</head>
+<body>
+<div>
+	<img data-bind="src:image"/>
+	<a data-bind="href:w3schools">W3Schhols</a>
+	<form data-bind="hidden:hiddenData"></form>
+	<label data-bind="text:val"></label>
+	<input data-bind="instantValue: val"/>
+	<button data-bind="toggle:isHidden"> show /Hide</button>
+</div>
+   
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="../js/ReferenceBindingHandlers.js"></script>
+    <script type="text/javascript">
+    var ViewModel={
+    	image:'Images/books/book1.jpeg',
+    	w3schools:"http://www.w3schools.com/",
+    	hiddenData:"Hi my name is Siva",
+    	val:'siva',
+    	isHidden:false
+
+    }
+    ko.applyBindings(ViewModel);
+    </script>
+
+</body>
+</html>
