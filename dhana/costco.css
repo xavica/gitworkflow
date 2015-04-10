@@ -1,0 +1,92 @@
+.header{
+	width: 100%;
+	background-color: black;
+	height: 30px;
+
+}
+.headerContainer{
+	width: 80%;
+	margin: 0 auto;
+
+}
+.divLeft{
+	float: left;
+	margin-top: 5px;
+	
+}
+.divLeft span{
+	margin-right: 10px;
+}
+.divLeft a{
+	color: white;
+}
+.divRight{
+	float: right;
+	margin-top: 5px;
+}
+.divRight img{
+	width:20px;
+}
+.register{
+	clear: both;
+	/*margin-left: 200px;*/
+	float: right;
+}
+.register select{
+	margin-top: 20px;
+	margin-right: 10px;
+	/*font-size: 15px;*/
+}
+
+.logoimageLeft{
+	float: left;
+}
+.logoCoupons{
+	float: right;
+	margin-top: 20px;
+	font-size: 20px;
+}
+.orderStatus{
+	clear: both;
+	float: right;
+	margin-bottom: 20px;
+}
+.orderStatus span a{
+
+	margin-left: 20px;
+	color: black;
+	font-size: 15px;
+}
+.orderStatus .sign a{
+	color: blue;
+}
+.body{
+	clear: both;
+	}
+.bodyLeft{
+	width: 20%;
+	height: 500px;
+	float: left;
+	background-color: #f2f2f2;
+}
+ .bodyLeft button{
+ 	width: 215px;
+ 	height: 40px;
+ 	background-color: blue; 
+ 	color: white;
+ 	padding-left: 0px;
+
+}
+.bodyLeft p{
+	line-height: .5em;
+	color: blue;
+	margin-left: 20px;
+}
+.bodyRight{
+	/*float: right;*/
+}
+/*.firstRow{
+	background-color: blue;
+	width: 30px;
+	height: 20px;
+}*/

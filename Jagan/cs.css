@@ -1,5 +1,5 @@
-body{  width:1206px;
-        margin: 0 auto; 
+body{  width:1206px; 
+        margin: 0 auto;
          background-color:turquoise;
         /* border: solid 1px;
        border-radius:10px;
@@ -61,21 +61,25 @@ a {
     border-bottom:1px solid white;
 }
 
-a:hover { text-decoration: italic;
-    background-color: fuchsia;
+a:hover { text-decoration:underline;
+    background-color:darkcyan;
+    text-align:center;
+    text-indent:inherit;
 }
 
-li {
+li { text-align:center;
     display: inline-block;
 }
  .cf{ 
-      height:23px;
+      height:43px;
       width:1206px;
       float:center;
       background-color: hotpink;
       color:navy;
       text-decoration:underline;
       text-align: center;
+      font-size: 110%;
+    font-family: algerian, courier;
   }
   .cv
   { 
@@ -88,8 +92,8 @@ li {
     color:blue;
  }
   .cb
-  {   
-    height:53px;
+  {   text-decoration:;
+    height:43px;
     width:1206px;
     float:right;
     text-align:right;

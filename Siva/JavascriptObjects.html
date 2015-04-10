@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="JavascriptObjects.css">
+<title>
+	Objects in Javascript
+</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var person = new Object();
+person.firstName = "Siva";
+person.lastName = "Jonnala";
+person.age = 24;
+person.eyeColor = "black"; 
+
+document.getElementById("demo").innerHTML = person.lastName + " . " + person.firstName +  " is " + person.age + " years old and his eye color is " + person.eyeColor;
+</script>
+
+
+<!-- we can define in anothe way also 
+// var person = {
+//     firstName : "John",
+//     lastName  : "Doe",
+//     age       : 50,
+//     eyeColor  : "blue"
+// };
+
+// document.getElementById("demo").innerHTML =
+// person.firstName + " " + person.lastName;
+ -->
+</body>
+</html>
