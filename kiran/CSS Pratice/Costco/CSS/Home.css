@@ -1,0 +1,30 @@
+﻿body {
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background: #505050;
+    height: 25px;
+}
+.content{
+    margin: 0 auto;
+    width:980px;
+}
+.link{
+    float: right;
+}
+.link span{
+    margin-left:10px;
+}
+.row{
+    clear: both;
+}
+.left{
+    float: left;
+}
+.right{
+    float:right;
+}

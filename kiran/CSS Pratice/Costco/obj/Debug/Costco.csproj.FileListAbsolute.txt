@@ -1,0 +1,6 @@
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\bin\Costco.dll.config
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\bin\Costco.dll
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\bin\Costco.pdb
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\obj\Debug\Costco.csprojResolveAssemblyReference.cache
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\obj\Debug\Costco.dll
+G:\Xavica\GitHub\gitworkflow\kiran\CSS Pratice\Costco\obj\Debug\Costco.pdb
