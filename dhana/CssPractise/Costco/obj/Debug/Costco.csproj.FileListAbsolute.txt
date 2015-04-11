@@ -1,6 +1,0 @@
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\bin\Costco.dll.config
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\bin\Costco.dll
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\bin\Costco.pdb
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\obj\Debug\Costco.csprojResolveAssemblyReference.cache
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\obj\Debug\Costco.dll
-G:\xavica\github\gitworkflow\dhana\CssPractise\Costco\obj\Debug\Costco.pdb
