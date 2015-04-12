@@ -1,0 +1,32 @@
+
+/*------------------------------------------------------------------
+                        DEFAULT STYLES
+-------------------------------------------------------------------*/
+
+
+.banner a{
+	height:50px;
+  font-size:1.3em;
+  display:inline-block;
+  width:48%;
+  text-decoration:none;
+  border:2px solid rgba(0,0,0,.3);
+  margin-right:-4px;
+  transition:all .3s ease-in-out;
+}
+
+.banner a:last-child{
+ 	margin-left:2%;
+}
+
+.banner a:hover{
+  background:#8FC6FF;
+}
+
+
+
+
+
+/*------------------------------------------------------------------
+                        MEDIA QUERIES STYLES
+-------------------------------------------------------------------*/

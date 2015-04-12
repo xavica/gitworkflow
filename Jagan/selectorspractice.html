@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>selectors </title>
+  
+  <style type='text/css'>
+  .left {
+    background-color:;
+    height:800px;
+    width:533px;
+    float:left;
+    padding:5px;        
+}
+.Right {
+
+    height:650px;
+    width:550px;
+    float:left;
+    padding:5px;
+}
+     div a{ color:red;}
+
+div > p{background-color:green;}
+
+div + p,h5 {
+        color:white;background-color:blue;}
+p + h3{ color:blanchedalmond;background-color:cyan;}
+p ~ a { font-size:36px }
+a ~ h3{background-color:hotpink; color:cyan; font-size:36px }
+p:hover{
+     content:"the";
+    background-color:yellow;}
+a[target]
+{
+ background-color:blue;
+}
+a:active
+{
+  background-color:blue;
+}
+h4::after
+{ 
+  content:"----@Xavica"; 
+  background-color:gray;
+}
+input:checked{
+    height:34px;
+    width:34px;
+}
+input:disabled{
+    background-color:lightgray;
+}
+p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+p:first-child {
+    background-color: violet;
+}
+h1::first-line {
+    background-color:GreenYellow;
+}
+p::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+}
+  </style>
+</head>
+<body>
+   <!Doctype html>
+<section class="left">
+<div>
+<p>Every paragraph will be affected by the style.</p>
+<h4>Me too!</h4>
+<a>And me!</a>
+<span><p> this is also a paragraph my pparent is span tag</p></span>
+<p><span> this is also a paragraph</span></p>
+</div>
+<h5>Hi I Am A Heading beside the p tag from also beside div</h5>
+<div></div>
+<p></p>
+<span><p>the Another Applied Paragraph</p></span>
+<a> out of  p tag's parent it ll not take</a>
+<span><p>LOves All Paragraph 1st P child of span tag</p><p> this is 2nd P child of span tag</span>
+
+<h1>To stop the degradation of the planet's natural environment and to build a future in which humans live in harmony with nature, by; conserving the world's biological diversity, ensuring that the use of renewable natural resources is sustainable, and promoting the reduction of pollution and wasteful consumption.</h1>
+
+<h1><b>Note:</b> For this selector to work in IE 5.5-8, you must specify the old, single-colon CSS2 syntax (:first-line instead of ::first-line).</h1>
+</section>
+<div class="Right">
+<h5>Hi I Am A Heading beside the p tag</h5>
+<a href="" target=""> target attribute</a><br>
+<a> If U can Hold me Or Click On Me I m highhlighting my background color</a>
+<h3>please select below one's</h3>
+<form action="">
+  <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+  <input type="radio" value="female" name="gender"> Female<br>
+  <input type="checkbox" checked="checked" value="Bike"> I have a bike<br>
+  <input type="checkbox" value="Car"> I have a car<br/>
+  Country: <input type="text" disabled="disabled" value="Disneyland"> 
+</form>
+<p> Hi..Welcome to xavica page</p>
+</div>
+</body>
+
+
+</html>
+

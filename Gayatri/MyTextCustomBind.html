@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KnockOut Bindings</title>
+</head>
+<style type="text/css">
+    .green {
+    color : green;
+}
+table
+{
+    text-align: center;
+}
+.blue {
+    color:blue;
+}
+.red1 {
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.red
+{
+    color: red;
+}
+.magenta
+{
+    color: magenta;
+}
+</style>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: students">
+        <tr>
+            <td data-bind="mytext: firstName"></td>
+            <td data-bind="text: lastName"></td>
+            <td data-bind="textPercent: percentage"></td>
+        </tr>
+    </tbody>
+</table>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript">
+    function StudentViewModel() {
+    var self = this;
+
+    self.students = ko.observableArray([{
+        firstName: 'Jagan',
+        lastName: 'Jonnala',
+        percentage: 95
+    }, {
+        firstName: 'Siva',
+        lastName: 'Jonnala',
+        percentage: 82
+    }, {
+        firstName: 'Siva',
+        lastName: 'Mamidi',
+        percentage: 45
+    },
+    {
+        firstName: 'Dhana',
+        lastName: 'Mamidi',
+        percentage: 65
+    },
+     {
+        firstName: 'Gayatri',
+        lastName: 'Sarva',
+        percentage: 75
+    }]);
+
+    
+
+}
+
+ko.bindingHandlers.mytext = {
+    init : function(element,valueAccessor)
+    {
+        var name = valueAccessor();
+        $(element).html(name);
+
+    }
+}
+
+ko.bindingHandlers.textPercent = {
+    init : function(element,valueAccessor)
+    {
+        var percent = valueAccessor();
+        // $(element).html(percent +  " % ");
+        ko.bindingHandlers.text.update(element,function()
+        {
+            return percent+ " %";
+        });
+
+    }
+}
+
+$(document).ready(function () {
+    ko.applyBindings(new StudentViewModel());
+});
+</script>
+
+</body>
+</html>
+
+

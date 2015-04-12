@@ -1,0 +1,22 @@
+body{
+	background-color: #1f1f1f;
+	color: #bfbfbf;
+	height: 2000px;
+}
+.h1{
+	font-weight: normal;
+}
+.box{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 10px;
+}
+.bluebox{
+	background-color: #627da0;
+	position: fixed;
+	top: 150px;
+	left: 150px;
+}
+.greenbox{
+	background-color: #5b8054;
+}

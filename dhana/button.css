@@ -1,0 +1,15 @@
+.header{
+	height: 44px;
+	background-color: red;
+
+}
+.headerContainer{
+	width: 80%;
+	margin: 0 auto;
+}
+a{
+	color: white;
+	background-color: gray;
+	
+
+}
