@@ -1,0 +1,35 @@
+<html>
+<head>
+ <title>CostCo View Model</title>
+ <link rel="stylesheet" type="text/css" href="costcostyles.css">
+
+</head>
+
+<body bgcolor="lightblue">
+<img src="photos/costco.png"/>
+<div class="border">
+<div class="lee">
+<span class="heady">*</span><span> Required Feilds</span>
+</div><br><br>
+ <table>
+   <tr><td>EMAIL ADDRESS <span class="heady">*</span></td></tr><tr><td><input data-bind="value:emailBox"></td></tr> 
+   <tr><td>PASSWORD</td></tr><tr><td><input type="password" data-bind="value:passwordBox"></td></tr> 
+   <tr><td>CONFIRM PASSWORD <span class="heady">*</span></td></tr><tr><td><input type="password" data-bind="value:confirmBox"></td></tr> 
+   <tr><td>COSTCO MEMBERSHIP NUMBER</td></tr><tr><td><input data-bind="value:costcoMemberShipNumber"></td>
+   </tr> 
+   </table>
+<button data-bind="click:viewmemberData"><b>your CostCo Data</b></button>
+<form data-bind="text:ackCostCo"></form>
+<form data-bind="text:memberData"></form>
+
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript" src="Javascript/costCoViewModel.js"></script>
+
+</body>
+
+</html>
