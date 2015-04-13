@@ -11,6 +11,7 @@
 	<label data-bind="text:val"></label>
 	<input data-bind="instantValue: val"/>
 	<button data-bind="toggle:isHidden"> show /Hide</button>
+	<div data-bind="timeAgo:dateTime"></div>
 </div>
    
     <script type="text/javascript" src="../js/jquery.js"></script>
@@ -22,7 +23,8 @@
     	w3schools:"http://www.w3schools.com/",
     	hiddenData:"Hi my name is Siva",
     	val:'siva',
-    	isHidden:false
+    	isHidden:false,
+    	dateTime:ko.observable('')
 
     }
     ko.applyBindings(ViewModel);

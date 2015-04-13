@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rate Of Interest</title>
+</head>
+<body>
+<table>
+	<tr><th>Label</th><th>Enter in this column</th></tr>
+	<tr><td>Principle Amout:</td><td><input data-bind="value:principleAmount"/></td></tr>
+	<tr><td>Rate Of Interest:</td><td><input data-bind="value:rateOfInterest"/></td></tr>
+	<tr><td>From Date:</td><td><input type="date" data-bind="value:fromDate"></td></tr>
+	<tr><td>To Date:</td><td><input type="date" data-bind="value:toDate"></td></tr>
+	<tr colspan="2"><td align="center"><button id="Calculate" data-bind="click:calculate" >Calculate</button></td></tr>
+	<tr><td>Result:</td><td data-bind="text:totalAmount"></td></tr>
+
+</table>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="Javascript/RateOfInterestCalculator.js"></script>
+
+</body>
+</html>
