@@ -22,6 +22,8 @@ function IndexViewModel()
 											new TableHeaders('DESCRIPTION')
 										  ],
 										  [	 new Program(length++,'','',''),
+										     new Program(length++,'Car Insurance','Siva/CarInsuranceViewModel.html','program on displaying car insurance details using knockout binding'),
+										  	 new Program(length++,'Registration Form','Siva/SignUpFormViewModel.html','Program on registration form using knock out binding'),
 										  	 new Program(length++,'LIC planning','Siva/LicViewModel.html','LIC data display using knock binding'),
 										  	 new Program(length++,'Car Rentals','Siva/CarRentalsViewModel.html','Program using knock out bindings and displaying the data.'),
 										  	 new Program(length++,'Rate of Interest Calculator','Siva/RateOfInterestCalculator.html','Calculating rate of interest by using knockout binding'),										  

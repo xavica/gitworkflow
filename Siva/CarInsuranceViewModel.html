@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Insurance</title>
+</head>
+<body>
+<label><h2>Car Insurance</h2></label>
+<div>
+	<label>Zip Code</label><br/>
+	<input data-bind="value:zipcode"/>
+</div>
+<div>
+	<label>Age:</label><br/>
+	<input data-bind="value:age"/>
+</div>
+<div>
+	<label>Gender:</label><br/>
+	<input type="radio" value="Male" data-bind="checked:gender"/><label>Male</label>
+	<input type="radio" value="Female" data-bind="checked:gender"/><label>Female</label>
+</div>
+<div>
+	<label>Cuurently Insured:</label><br/>
+	<select data-bind="options:currentlyInsured, value:selectedcurrentlyInsured"></select>
+</div>
+<div>
+	<label>Home Owner</label><br/>
+	<input type="radio" value="Yes" data-bind="checked:homeowner"/><label>Yes</label>
+	<input type="radio" value="No" data-bind="checked:homeowner"/><label>No</label>
+</div><br/>
+<div>
+	<button data-bind="click:submit">Submit</button><br/>
+	<label data-bind="text:yourData"></label>
+</div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/CarInsuranceViewModel.js"></script>
+
+</body>
+</html>
