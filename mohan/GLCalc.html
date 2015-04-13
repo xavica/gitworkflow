@@ -1,6 +1,6 @@
 ﻿<html>
 <body>
-    <p> <h3>Simple Interest</h3> </p>
+    <p> <h3>Loan Calculator</h3> </p>
     <div>
         <p> Principle : <input type="text" data-bind="value: principle"></input></p>
         <p> Interest: <input type="text" data-bind="value:interest"></input></p>
@@ -14,9 +14,10 @@
 
         <p> Total No.of Days:<input type="text" data-bind="value:tnoofdays" /></p>
         <p> No.of Years:<input type="text" data-bind="value:noofyears" /></p>
-
-        <p> Amount <input type="text" data-bind="value:amount"></input></p>
-
+        <p> No.of Months:<input type="text" data-bind="value:noofmonths" /></p>
+        <p> No.of Days:<input type="text" data-bind="value:noofdays" /></p>
+        <p> Accumlated Amount <input type="text" data-bind="value:aamount"></input></p>
+        <p> Net Amount <input type="text" data-bind="value:amount"></input></p>
 
 
     </div>
@@ -27,13 +28,15 @@ function InterestViewModel()
 		var that = this;
 
 		this.principle = ko.observable(1000);
-		this.interest = ko.observable(8);
+		this.interest = ko.observable(1);
 		this.fromDate = ko.observable('01/13/2012');
 		this.toDate = ko.observable('01/13/2014');
 		this.amount = ko.observable(0);
 		this.tnoofdays = ko.observable(0);
 		this.noofyears = ko.observable(0);
-
+		this.noofmonths = ko.observable(0);
+		this.noofdays = ko.observable(0);
+		this.aamount = ko.observable(0);
 		this.amount = ko.computed(function()
 		{
 			var d1 = new Date(that.fromDate());
@@ -75,6 +78,9 @@ function InterestViewModel()
 
 		    that.tnoofdays(d3);
 		    that.noofyears(nofyears);
+		    that.noofmonths(nofmonths);
+		    that.noofdays(tbaldays);
+		    that.aamount(aa - +that.principle());
 			var intr = na;
 		    return intr;
 
