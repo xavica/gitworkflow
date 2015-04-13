@@ -1,126 +1,162 @@
-.container{
-	width: 100%;
+.container {
+    width: 100%;
 }
+
+.topHeader {
+    background-color: red;
+    height: 5px;
+}
+
+
 .header{
-	background-color: red;
-	height: 5px;
-}
-.content{
-	width: 980px;
-	margin: 0 auto;
-}
-.left{
-	float: left;
+    /*background-color:#FBFBFB;*/
+    background-color:#808080;
 
+    height:72px;
+}
+.content {
+    width: 980px;
+    margin: 0 auto;
 }
 
-.right{
-    
-	float: right;
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.account{
+   font-size:18px;
+}
+
+.account .subItem{
+    margin-right:10px;
+    float:left;
+}
+.mobileImage{
+    float:left;
+    width: 30%;
+}
+.mobileDescription{
+    width:70%;
 }
 .logo {
-	margin-top: 15px;
+    margin-top: 15px;
 }
-.logo span{
 
-	margin-left: 30px;
-	font-size: 20px;
-	color: #505050;
+    .logo span {
+        margin-left: 30px;
+        font-size: 20px;
+        color: #505050;
+    }
 
+.apps {
+    margin-top: 30px;
 }
-.apps{
-	margin-top: 30px;
-}
-.apps span{
-	
-	margin-left: 25px;
-}
-.banner img{
-	margin-top: 20px;
-	width: 980px;
 
+    .apps span {
+        margin-left: 25px;
+    }
 
+.banner img {
+    margin-top: 20px;
+    width: 980px;
 }
-.bannerDesc{
-padding-left: 250px;
-margin-left: 20px;
-border: 1px solid #e1e1e1;
- 
-}
-.bannerDesc button{
-	background-color: #b90005;;
-	color: white;
-	width: 165px;
-	height: 38px;
 
-	
+.bannerDesc {
+    padding-left: 250px;
+    margin-left: 20px;
+    border: 1px solid #e1e1e1;
 }
-.bannerDesc input{
-	width: 165px;
-	height: 30px;
-	border-color: skyblue;
-}
-.bannerDesc span{
-	margin-right: 10px;
-}
-.row{
-	clear: both;
-}
-.message{
-	font-size: 10px;
-	padding-top: 10px;
 
-}
-.deals{
-	font-size: 40px;
-	margin-top: 20px;
-}
-.leftLeft{
-	width: 450px;
-	border: 1px solid;
-	height: 90px;
-	padding-left: 15px;
-	padding-top: 10px;
+    .bannerDesc button {
+        background-color: #b90005;
+        ;
+        color: white;
+        width: 165px;
+        height: 38px;
+    }
 
-}
-.rightRight{
-	margin-top: -90px;
-}
-.rightRight button{
-	background-color: #7ab921;
-	color: white;
-}
-.leftLeftimg img{
-	width: 468px;
-	margin-top: -5px;
-}
-.rightTop{
-	width: 470px;
-}
-.topLeft{
-	width: 220px;
-	/*margin-right: 5px;*/
-	border: 1px solid;
-	height: 90px;
+    .bannerDesc input {
+        width: 165px;
+        height: 30px;
+        border-color: skyblue;
+    }
 
+    .bannerDesc span {
+        margin-right: 10px;
+    }
+
+.row {
+    clear: both;
 }
-.topleftRight{
-	margin-top: -50px;
-	margin-left: 15px;
+
+.message {
+    font-size: 10px;
+    padding-top: 10px;
 }
-.topleftRight button{
-	background-color: #7ab921;
+
+.deals {
+    font-size: 40px;
+    margin-top: 20px;
 }
-.topleftImg{
-	margin-top: 37px;
+
+.leftLeft {
+    width: 450px;
+    border: 1px solid;
+    height: 90px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
-.topRight{
-	float: right;
-	margin-top: -90px;
-	width: 220px;
-	border: 1px solid;
-	height: 90px;
+
+.rightRight {
+    margin-top: -90px;
 }
-.rightBottom{
-	margin-top: 160px;
+
+    .rightRight button {
+        background-color: #7ab921;
+        color: white;
+    }
+
+.leftLeftimg img {
+    width: 468px;
+    margin-top: -5px;
+}
+
+.rightTop {
+    width: 470px;
+}
+
+.topLeft {
+    width: 220px;
+    /*margin-right: 5px;*/
+    border: 1px solid;
+    height: 90px;
+}
+
+.topleftRight {
+    margin-top: -50px;
+    margin-left: 15px;
+}
+
+    .topleftRight button {
+        background-color: #7ab921;
+    }
+
+.topleftImg {
+    margin-top: 37px;
+}
+
+.topRight {
+    float: right;
+    margin-top: -90px;
+    width: 220px;
+    border: 1px solid;
+    height: 90px;
+}
+
+.rightBottom {
+    margin-top: 160px;
 }
