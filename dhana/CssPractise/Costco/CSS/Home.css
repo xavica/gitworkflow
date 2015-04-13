@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background: blue;
+    height: 25px;
+}
+.content{
+    margin: 0 auto;
+    width:980px;
+}
+.links{
+    float:right;
+}
+.links span{
+    margin-left:5px;
+}
+.row{
+    clear:both;
+    margin-top:5px;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}

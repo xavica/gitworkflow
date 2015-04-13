@@ -1,0 +1,112 @@
+.header{
+	height: 30px;
+	background-color:#ededed;
+}
+.headerContainer{
+	width: 80%;
+	margin: 0 auto;
+
+}
+.divRight{
+	float: right;
+}
+.divRight > span{
+	margin-right: 20px;
+}
+.logo{
+	padding-top: 50px;
+	float: center;
+}
+.logoimage{
+	float: left; 
+	margin-right: 60px;
+}
+.searchBox{
+	width: 600px;
+	margin-top: 10px;
+	float: left;
+	border: 2px solid red;
+	margin-right: 15px;
+	
+	}
+.searchBox input{
+	width: 450px;
+	height: 50px;
+}
+.searchBox select {height: 50px;background-color: gray;
+
+}
+.allIcons{
+	background:  url('pics/spriteicons.png') no-repeat 0 0; 
+}
+.searchIcon{
+	background-position: -559px -149px;
+  border: medium none;
+  height: 36px;
+  margin: 1px;
+  position: relative;
+  text-indent: -100px;
+  width: 38px;
+}
+.speicalOffer{
+	float: left;	
+	width: 140px;
+	height: 100px;
+	margin-top: 10px;
+	/*margin-right: 5px;*/
+}
+.speicalOffer button{
+		width: 130px;
+		height: 60px;
+		color: red;
+		font-size: 20px;
+			}
+		.cart{
+			width: 100px;
+			height: 100px;
+			/*margin-top: 10px;*/
+			}		
+	.cart button{
+		margin-top: 10px;
+		width: 110px;
+		height: 60px;
+		background-color: gray;
+		font-size: 20px;
+	}	
+	.menus{
+		width: 100%;
+		height:46px;
+		margin-top: 10px;		
+		background-color: #CB0101;
+	}
+	.menusOptions{
+		width: 80%;
+		margin-left: 10%;
+		float: left;
+		height: 46px;
+		margin-top: -30px;
+
+	}
+	.menusOptions div{
+				
+		text-align: center;
+		height: 26px;
+		padding:10px 5px 10px 5px;
+		border-right: 1px solid white; 
+		float: left;
+	}
+	.menusOptions div a{
+
+		color: white;
+		height: 46px;
+
+	}
+	.quickLinks{
+		margin-left: 140px;
+		margin-top: 10px;
+	}
+	.quickLinks span a{
+		margin-right: 10px;
+		color: black;
+
+	}
