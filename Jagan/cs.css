@@ -101,11 +101,31 @@ li { text-align:center;
     text-decoration: underline;
     color:navy;
  }
+.cn{ 
+      height:33px;
+      width:1206px;
+      float:center;
+      background-color:Fuchsia;
+      color:navy;
+      text-decoration:;
+      text-align: center;
+     
+  }
  span {
     float: left;
     width: 0.7em;
     font-size: 400%;
     font-family: algerian, courier;
     line-height: 80%;
+}
+.n
+{
+   font-size: 18px;
+   color: red;
+}
+.nx
+{   text-decoration: bold;
+   font-size: 24px;
+   color:blue;
 }
 </style>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .bodyContainerfull{
 	margin: 0 auto;
   position: relative;
@@ -8,6 +9,56 @@
   outline: none;
   padding: 0;
   width: auto;
+=======
+
+@font-face {
+  font-family: "Freight Sans Bold";
+  src: url(FreightSansBold.ttf) format("truetype");
+}
+.header{
+				
+				background-color: #3a5795;
+  			height: 82px;
+ 			 min-width: 980px;
+ 			 margin: 0 auto;
+  padding-top: 13px;
+  width: 980px;
+
+		}
+		.logo{
+			float: left;
+
+			}
+			body{
+				overflow-y: scroll;
+				font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size: 11px;
+  background: #fff;
+  color: #141823;
+  line-height: 1.28;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  direction: ltr;
+  unicode-bidi: embed;
+			}
+			.headerContainer{
+				padding-bottom: 1px;
+				height: auto;
+				  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: 0 0;
+  background-color: #3a5795;
+  border: 0;
+  border-bottom: 1px solid #133783;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);
+  min-width: 981px;
+  position: relative;
+			}
+
+			.clearfix:after {
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
   clear: both;
   content: ".";
   display: block;
@@ -15,6 +66,7 @@
   height: 0;
   line-height: 0;
   visibility: hidden;
+<<<<<<< HEAD
     min-width: 980px;
       /*background: linear-gradient(white, #D3D8E8);*/
         margin: 0 auto;
@@ -32,3 +84,245 @@
   width: 450px;
   word-spacing: -1px;
 }
+=======
+}
+h1 {
+  font-size: 14px;
+  color: #141823;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #3b5998;
+  cursor: pointer;
+  text-decoration: none;
+}
+.logoImage{
+	  width: 170px;
+  height: 36px;
+  background-position: 0 -481px;
+  margin-top: 17px;
+  background-image: url("pics/fblogo.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+ 
+}
+	
+	.menuContainer{
+		  float: right;
+
+	}
+	form {
+  margin: 0;
+  padding: 0;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0px;
+  border-color: gray;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  
+}
+tr{
+	  vertical-align: top;
+	  display: table-row;
+	    border-color: inherit;
+}
+td{
+	  padding: 0 0 0 14px;
+	  text-align: left;
+	  display: table-cell;
+	    vertical-align:
+}
+ .htmlClass{
+ 		padding-bottom: 4px;
+ 		padding: 0 0 0 14px;
+ 		  text-align: left;
+
+ }
+ .inputtext{
+ 
+  margin: 0;
+  width: 142px;
+    padding-bottom: 4px;
+    border: 1px solid 
+      padding: 3px;
+ }
+ label {
+  color: #fff;
+  font-weight: normal;
+  padding-left: 1px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.uiButtonConfirm {
+  background-image: url(pics/imageshadow.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: -1px -147px;
+  background-color: #5b74a8;
+  border-color: #2f477a #29447e #1a356e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 13px;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.uiButton{
+
+	  border: 1px solid;
+	  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 13px;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap; 
+}
+.uiButtonText, .uiButton input {
+  background: none;
+  border: 0;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 13px;
+  margin: 0;
+  padding: 1px 0 2px;
+  white-space: nowrap;
+}
+.3Row{
+	padding-top: 4px;
+}
+div{
+	display: block;
+}
+.uiInputLabelInput{
+	margin: 0;
+  padding: 0;
+  position: absolute;
+}
+.3Row label{
+	color: #9daccb;
+  font-weight: normal;
+}
+.uiInputLabelLabel {
+  display: inline-block;
+  margin-left: 17px;
+  vertical-align: baseline;
+}
+
+.bodyContainer{
+	  margin: 0;
+  position: relative;
+  outline: none;
+  padding: 0;
+  
+    background: #edf0f5;
+       
+  
+}
+.backgroundContainer{
+	 margin: 0 auto;
+ 	width: 980px;
+    min-width: 980px;
+    background: #edf0f5;
+     padding-top: 20px;
+  padding-bottom: 20px;
+}
+.connectContainer{
+	margin-right: 15.999px !important;
+	  width: 565px;
+	    display: inline-block;
+  vertical-align: top;
+}
+.block{
+	display: inline-block;
+	font-family: 'Freight Sans Bold', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+  font-weight: normal !important;
+  margin: 0;
+}
+.firstRow{
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+.image{
+	  text-align: center;
+  width: 55px;
+  vertical-align: middle;
+    display: inline-block;
+      margin-right: 20px;
+}
+.photoDesc{
+	  width: 440px;
+	   display: inline-block;
+     vertical-align: middle;
+	 }
+   .indent{
+    font-family: 'Freight Sans Bold', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+  font-weight: normal; 
+  margin-top: 20px;
+  color: #333;
+  font-size: 17px;
+  line-height: 22px;
+
+
+   }
+   .indent1{
+    margin-left: 10px;
+    font-weight: normal;
+    color: #666;
+    font-size: 15px;
+  line-height: 20px;
+   }
+   h2{
+    margin: 0;
+  padding: 0;
+   }
+
+
+   .signupContainer{
+        float: right;
+        width: 399px;
+          display: inline-block;
+          vertical-align: top;
+   }
+
+   .heading{
+        font-size: 36px;
+        font-family: 'Freight Sans Bold', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+      font-weight: normal !important;
+      text-rendering: optimizelegibility;
+        margin-bottom: 5px;
+          color: #333;
+          line-height: 120%;
+    }
+    .secondLine{
+      font-family: 'Freight Sans', 'lucida grande',tahoma,verdana,arial,sans-serif !important;
+      font-weight: normal !important;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 19px;
+        line-height: 126%;
+    }
+    .dataRegister{
+            margin: 0 auto 0 auto;
+             padding-bottom: 30px;
+    }
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd

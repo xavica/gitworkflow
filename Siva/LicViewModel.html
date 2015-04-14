@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lic View Model</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>Plan:</td><td><select data-bind="options: typeOfPlan, value: selectedTypeOfPlan"></select></td>
+	</tr>
+	<tr><td>Name:</td><td><input data-bind="value:name"/></td></tr>
+	<tr><td>Age :</td><td><input data-bind="value:age"/></td></tr>
+	<tr><td>Marital Status:</td>
+				<td>
+					<label>
+						<input type="radio" value="Single" data-bind="checked:selectedmaritalStatus"/>Single
+					</label>
+					<label>
+						<input type="radio" value="Married" data-bind="checked:selectedmaritalStatus"/>Married
+					</label></td></tr>
+</table>
+<div><button data-bind="click:viewData">View Selected Data</button></div>
+<form data-bind="text:selectedData"></form>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/LicViewModel.js"></script>
+
+</body>
+</html>

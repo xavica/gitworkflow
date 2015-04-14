@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#item{color:blue;}#heading{font-weight: bold;color:red;}
+		li:hover{text-decoration: underline;}
+.times{
+	  height:43px;
+      width:1206px;
+      float:center;
+      background-color:AliceBlue;
+      color:black;
+      text-align: center;
+      font-size: 100%;
+  }
+		}
+</style>
+	<title>Times Of India ViewModel</title>
+</head>
+<div id="header" align="center"><h1> Times Of India</h1></div>
+<div class="times" align="center">
+	<span>Home | </span><span>India | </span><span>World | </span><span>Entertainmment | </span><span>Tech | </span><span>Cricket | </span><span>Budget 2015 | </span><span>Rail Budget 2015 | </span><span>Life & Style | </span><span>Most Read | </span><span>All Sections | </span><span>Apps | </span><span>Photos | </span>
+</div>
+<div >
+<ul data-bind="foreach:sections" >
+	<h4 id="heading" data-bind="text: name "></h4>
+	<ul  data-bind="foreach: items">
+			<li id="item" data-bind="text: item"></li>
+			<p data-bind="text: description"></p>
+	</ul>
+</ul>
+	</div>
+
+<body>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" >
+	function Topic(description,item)
+{
+	this.description=description;
+	this.item=item;
+}
+function Section(name,items)
+{
+	this.name=name;
+	this.items=items;
+}
+function TimesOfIndiaViewModel()
+{
+		this.sections= [	new Section('Top Stories',	[	new Topic("'Islamabad high court has termed Mumbai attacks mastermind Zakiur Rehman Lakhvi's detention illegal and ordered his release,'",
+																	"'Zakiur Rehman Lakhvi's detention illegal, release him: Islamabad HC"),
+															new Topic('Kerala Finance Minister K.M. Mani on Friday presented the 13th state budget amid ruckus created by members of the Left opposition who are demanding his resignation.',
+																	' Kerala: Budget presented amid ruckus in assembly'),
+															new Topic("The government is looking at sweeping changes to the law governing Employees Provident Fund (EPF) and has suggested doing away with the mandatory 12% contribution by employees in certain cases, while retaining the outgo for employers",
+																	"Govt plans radical changes to EPF law "),
+															new Topic("","Activist shows banned Nirbhaya film in Delhi slum"),
+															new Topic("","2/3 of sewage from 118 towns flows into Ganga"),
+															new Topic("","BJP drops Irani, Hema, Najma from core team"),
+															new Topic("","InMobi finds a mentor in Nilekani"),
+															new Topic("","Leakgate spreads to 2 other ministries, 3 held"),
+															new Topic("","IIT graduate kills kin fearing HIV infection"),
+															new Topic("","Swine flu more dangerous than before: MIT study"),
+															new Topic("","Coal block auction shows CAG got figure right")
+														]
+										),
+
+							new Section('Other Stories',[	new Topic('','Akshay Kumar beats Salman, Shah Rukh Khan'),								
+															new Topic('',' After the slap, now Deepika- Anas patch up'),
+															new Topic("","Rajkummar Rao and Patralekha's PDA")
+														]
+										),
+
+						 	new Section('India',	[	new Topic('','PM Modi arrives in Lanka as final stop of his 3-nation tour'),
+														new Topic('',' Gandhian from Bangladesh gets peace prize'),
+														new Topic("","Underage couples utilize Kerala govt's waiver")
+													]
+										),
+
+							new Section('City',		[	new Topic('','HIV+ve student barred from attending college'),
+														new Topic('',"Our technical solutions will end red-tapism"),
+														new Topic("","Nine arrested for attack on Africans in Bengaluru")
+													]
+										),
+
+						 	new Section('Entertainment',[	new Topic('',"Pneumonia-struck Dilip Kumar 'fine now'")
+						 								]
+						 				),
+
+							new Section('Tech',			[	new Topic('',"Xiaomi Redmi 2 launched in India: First look"),
+															new Topic('',' Pakistani cybersecurity firm stealing Indian bureaucratsâ€™ data: FireEye')
+														]
+										),
+
+						 	new Section('World',		[	new Topic('','Abu Bakr al-Baghdadi accepts allegiance of Boko Haram'),
+															new Topic('','Obama calls Ghani, commends effort to improve ties with Pak'),
+															new Topic("","Airport shut as Costa Rica volcano spews more ash")
+														]
+										),
+
+							new Section('Buisiness',	[	new Topic('','Sensex regains 29,000-mark, up 253 points'),
+															new Topic('',' Oil prices rebound in Asia'),
+															new Topic("","Rupee gains 7 paise against US dollar")
+														]
+										),
+
+						 	new Section('Sports',		[	new Topic('','World Cup: Less training, more focus for India in Auckland'),
+															new Topic('',' WC: Ton-up Mahmudullah steers Bangladesh to 288/7'),
+															new Topic("","Novak Djokovic still chasing elusive French Open title")
+														]
+										),
+
+							new Section('Life & Style',	[	new Topic('','Is your sex technique right?'),
+															new Topic('',' Soul Curry: Hungerâ€‹, tâ€‹he eye opener'),
+															new Topic("","Makeup melt-proof tricks you ought to try")
+														]
+										)
+						];
+											
+}
+				
+
+ko.applyBindings(new TimesOfIndiaViewModel());
+</script>
+</body>
+</html>

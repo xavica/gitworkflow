@@ -8,6 +8,13 @@
 	  background-color: #444546;
 
 }
+<<<<<<< HEAD
+=======
+.headerContent{
+    margin: 0 auto;
+    height: 50px;
+}
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 .divLeft{
 	float: left;
 	padding-top: 5px;
@@ -104,6 +111,30 @@
     margin: 4px 0 0 25px;
 }
 
+<<<<<<< HEAD
+=======
+.button1{
+      margin-left: 10px;
+      color: #fff;
+  background-color: #589d3e;
+  border-color: transparent;
+  display: inline-block;
+  text-transform: uppercase;
+  /*color: #589d3e;*/
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  height: 30px;
+  line-height: 34px;
+  padding: 0 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 .menuContent{
     border-bottom: 1px solid #c6c6c7;
     position: relative;
@@ -136,3 +167,62 @@ label{
   line-height: 13px;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
+=======
+.bodyContent{
+  margin-top: 100px;
+}
+.imageContent{
+  float: left;
+    display: block;
+  margin: 0 auto;
+    border: 0;
+      vertical-align: middle;
+}
+.rightimageContent{
+  width: 368px;
+  padding-right: 20px;
+    float: left;
+      height: 459px;
+}
+.part1{
+    border-bottom: 1px solid #c8d3dc;
+      padding-bottom: 100px;
+        padding-top: 16px;
+          /*max-width: 1140px;*/
+       width: 100%;
+  float: none;
+    height: 100px;
+    width: 100%;
+  /*height: 100%;*/
+  position: relative;   
+  margin-left: 30px;
+}
+.title{
+    font-family: Georgia,"din-med",arial,sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 24px;
+ /*padding: 30px 0px 0px 180px;*/
+
+  text-align: left;
+}
+.desc{
+  font-family: helvetica,arial,sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #484848;
+   vertical-align: middle;
+  line-height: 14px;
+  padding: 6px 0px 5px 180px;
+  text-transform: uppercase;
+}
+
+.image{  
+  float: right;
+
+}
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd

@@ -1,0 +1,31 @@
+.items
+{	
+	height: 250px;
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+#header
+{ 	float: center;
+	background-color: #005387;
+	
+}
+#searchBar
+{	height: 40px;
+ 	width: 800px;
+}
+#search
+{
+	height: 40px;
+	width:80px;
+
+}
+h1
+{
+	color: #FFA500;
+}
+.items:hover
+{
+	
+ 	border: 2px solid #ffd926;
+}

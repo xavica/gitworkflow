@@ -1,0 +1,97 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+ console.log("This method is like _.findIndex except that it iterates over elements of collection from right to left.");
+ console.log("custom Function:findIndex");
+	
+function customfindLastIndex(items,callback)
+{
+	var result_index;
+	item = items || [];
+	if(!callback)
+	{
+		return -1;
+	}
+	for(var i=items.length - 1; ; i--)
+	{
+		if(callback(items[i]))
+		{
+			result_index = i;
+			break
+		}
+	}
+	return result_index;
+}
+function callback(search_ele)
+{
+	if(search_ele > 4)
+		return true;
+}
+
+	var x = [5,6,7,8,1,4,3,2,3.8];
+	console.log("x Array:-" + x);	
+	var k = customfindLastIndex(x,callback);
+	console.log("index value >4 is : " + k);
+
+
+	var x = [1,4,5,6,7,8,-3,-2,2,1];
+	console.log("x Array:-" + x);
+
+	var y = _.findLastIndex(x,function(i)
+		{
+				return i > 1;
+		});
+	console.log("Y Array:-index of ele >1");
+	console.log(y);
+
+	var x = [7,5,3,1,9,6,1,5,4,3];
+	console.log("x Array:-" + x);
+	
+
+	var y = _.findLastIndex(x,function(i)
+		{
+				if(i%2 === 0)
+				return i;
+		});
+	console.log("Y Array:-index of even element");
+	console.log(y);
+
+var users = [
+  { 'user': 'barney',  'active': true },
+  { 'user': 'fred',    'active': false },
+  { 'user': 'pebbles', 'active': false }
+];
+console.log(users[0]);
+console.log(users[1]);
+console.log(users[2]);
+
+var u1 = _.findLastIndex(users, function(chr) {
+  return chr.user == 'pebbles';
+});
+console.log("chr.user == 'pebbles' " + u1);
+
+// using the `_.matches` callback shorthand
+var u2 = _.findLastIndex(users, { 'user': 'barney', 'active': true });
+console.log("{ 'user': 'barney', 'active': true }-- " + u2);
+
+// using the `_.matchesProperty` callback shorthand
+var u3 = _.findLastIndex(users, 'active', false);
+console.log("(users, 'active', false)-- " + u3);
+
+// using the `_.property` callback shorthand
+var u4 = _.findLastIndex(users, 'active');
+
+console.log("active:  " + u4); 
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+  <title>Creating Objects Type 3</title>
+  <head>
+
+    </head>
+      <body>
+<link rel="stylesheet" type="text/css" href="obj.css">
+     <script type="text/javascript">
+   document.writeln("<h2>Its 3rd Type of Declaration and passing arguments to the Objects And Classes</h2>"); 
+document.writeln("<h2>First Object is <u> Book</u><br></h2>");
+
+function Book()
+{
+	this.name ='One Tiny Lie (Ten Tiny Breaths #2)' ;
+	this.author='K.A. Tucker ';
+	this.about=function()
+	{
+		this.cost='300RS';
+		this.booktype='Emotional Story';
+	};
+	this.publish=function()
+	{
+		this.firstPublisher=" Atria Books ";
+		this.Date='June 11th 2013';
+	}
+}
+
+var b= new Book();
+b.about();
+b.publish();
+document.writeln("<br/>Name of the book is  <b>" + b.name + "  </b>and author is  <b>" + b.author+" </b>");
+
+document.writeln("<br/>This book is at cost only <b> " + b.cost + "  </b> and this is an <b> "+ b.booktype+ "</b> of <b>"+b.name+" </b>");
+
+document.writeln("<br/> This is has first published by <b>" + b.firstPublisher + "  </b> on <b>" + b.Date+" </b>");
+</script>
+<h3> The Book picture is </h3><img src="photos/Emotion.jpg" Height="320" width="260" ></span>
+<script>
+document.writeln("<hr></hr>");
+///////////////////////////////////////////////////////////
+</script>
+</body>
+</html>

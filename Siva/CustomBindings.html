@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/CustomBindings.css">
+    <title>Custom Bindings</title>
+</head>
+<body>
+<div style="height:100px"></div>
+    <div data-bind="foreach: mobiles" class="main" >
+        <div class="container" data-bind="mobileStatus:cost">
+            <div id="info">
+            <div><img data-bind="attr:{src: imageUrl}"></div>
+            <div data-bind="text: comapny"></div></div><hr/>
+            <div><h3>Rs.<span  data-bind="text: cost, status:cost"></span>/-</h3></div><hr/>
+            <div>
+                <ul data-bind="foreach: features">
+                    <li data-bind="text:$data"></li>
+                </ul>
+            </div>
+            </div>
+
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="Javascript/CustomBindings.js"></script>
+</body>
+</html>
+

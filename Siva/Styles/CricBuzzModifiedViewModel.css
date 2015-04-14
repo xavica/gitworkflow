@@ -1,0 +1,39 @@
+body{text-align: center; background-color: #FFFFFF;}
+#header{text-align: center;}
+#menu{ background-color: #54C571; height:38px; border: 183px 1171px width:988px;  }
+.topmenu{word-spacing: 2px; padding: 4px 8px 4px 4px; text-align: center;}
+
+ table
+ {
+float: center; margin:0 auto;
+ border-collapse: collapse;
+ }
+  th,td 
+  {
+    border-bottom: 2px;
+    border-color: #B6B6B4;
+	text-align:center;
+	}
+
+	th
+	{ word-spacing: 2px;
+		color:#810541;
+	}
+td{ 
+padding:5px;
+}
+	header {
+    background-color:#98AFC7;
+    color:#B048B5;
+    text-align:center;
+    padding:5px;	 
+    }
+ #team{color:blue;text-align: left;}
+ .table
+ {
+
+ 	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}

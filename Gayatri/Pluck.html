@@ -1,0 +1,31 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	var x = [{name:"gayatri",team:"Dev"}, {name:"Siva",team:"Dev"},{name:"Dhana",team:"Design"},{name:"Anu",team:"BA"}];
+	console.log("before pluck: x Array:-" + x.toString());
+	console.log("pluck,Gets the value of key from all elements in collection.");
+	
+	var y = _.pluck(x,'name');
+	console.log("after operation: pluck(x,name)");
+	console.log(y.toString());
+
+	var y = _.pluck(x,'team');
+	console.log("after operation: pluck(x,team)");
+	console.log(y.toString());
+	
+
+
+
+
+
+</script>
+
+</body>
+</html>

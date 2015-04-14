@@ -1,0 +1,121 @@
+.container{
+	width: 100%;
+}
+.header{
+	background-color: red;
+	height: 5px;
+}
+.content{
+	width: 980px;
+	margin: 0 auto;
+
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.logo{
+margin-top: 15px;
+}
+.logo span{
+	margin-left: 30px;
+	font-size: 20px;
+	color: #505050;
+}
+.apps{
+	margin-top: 30px;
+}
+.apps span{
+	margin-left: 20px;
+}
+.banner img{
+	margin-top: 20px;
+	width: 980px;
+
+}
+.bannerDesc{
+	float: center;
+	margin-left: 15px;
+	padding-left: 300px;
+	border: 1px solid #e1e1e1;
+}
+.bannerDesc input{
+	border-color: skyblue;
+	width: 165px;
+	height: 38px;
+}
+.bannerDesc button{
+	background-color: #b90005;
+	color: white;
+	width: 165px;
+	height: 45px;
+}
+.bannerDesc span{
+	margin-right: 10px;
+}
+.row{
+	clear: both;
+}
+.text{
+	  color: #666;
+	  font-size: 11px;
+	  padding-top: 10px;
+}
+.deals{
+	font-size: 40px;
+  margin-top: 20px;
+}
+.leftLeft
+{
+	width: 470px;
+	border:1px solid;
+	height: 100px;
+}
+.star{
+	padding-left: 15px;
+	padding-top: 3px;
+}
+.rightRight{
+	margin-top: -85px;
+}
+.rightRight button{
+	background-color: #7ab921;
+}
+.leftLeftimg img{
+	width: 472px;
+	margin-top: -5px;
+}
+.rightTop{
+	width: 470px;
+}
+.topLeft{
+	width: 225px;
+	border: 1px solid;
+	  height: 95px;
+}
+.topLeftright{
+	margin-top: -80px;
+}
+.topLeftright button{
+	background-color: #7ab921;
+}
+.topLeft img{
+	width: 225px;
+	margin-top: 8px;
+}
+.topRight{
+	float: right;
+	margin-top: -95px;
+	width: 225px;
+	border: 1px solid;
+	  height: 95px;
+}
+.topRight img{
+	width: 225px;
+	margin-top: 8px;
+}
+.rightBottom{
+	margin-top: 150px;
+}

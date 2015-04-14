@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Form</title>
+</head>
+<body>
+<label><h2>Registration Form</h2></label>
+<div>
+	<label>Name:</label><br/>
+	<input data-bind="value:name" placeholder="Your Name"/>
+</div>
+<div>
+	<label>Age:</label><br/>
+	<input data-bind="value:age" placeholder="Age"/>
+</div>
+<div>
+	<label>Gender:</label><br/>
+	<input type="radio" value="Male" data-bind="checked:gender"/><label>Male</label>
+	<input type="radio" value="Female" data-bind="checked:gender"/><label>Female</label>
+</div>
+<div>
+	<label>Mail ID:</label><br/>
+	<input data-bind="value:mailId" placeholder="Ex: sivatheruler@gmail.com"/>
+</div>
+<div>
+	<label>Native Place:</label><br/>
+	<input data-bind="value:nativity" placeholder="ex:hyderabad,mumbai,bangalore"/>
+</div><br/>
+<div>
+	<button data-bind="click:submit">Submit</button><br/>
+	<label data-bind="text:yourData"></label>
+</div>
+
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="Javascript/SignUpFormViewModel.js"></script>
+</body>
+</html>

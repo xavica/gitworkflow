@@ -1,0 +1,67 @@
+<html>
+<body>
+<p> see output on console </p>
+
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+
+<script>
+
+	console.log("Creates a slice of array excluding elements dropped from the begining. Elements are dropped until predicate returns falsey.");
+	
+
+	var x = [2,3,1,4,5,6,7,8];
+	console.log("x Array:-" + x);
+
+	var y = _.dropWhile(x,function(i)
+		{
+				return i > 1;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+
+	var x = [8,7,6,1,5,4,3];
+	console.log("x Array:-" + x);
+	var k;
+
+	var y = _.dropWhile(x,function(i)
+		{
+				return i > 2;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+	
+	var x = [2,4,6,8,1,2,3,4,5];
+	console.log("x Array:-" + x);
+
+	var y = _.dropWhile(x,function(i)
+		{
+				k = i % 2;
+				if(k === 0)
+				return i;
+		});
+	console.log("Y Array:-");
+	console.log(y);
+
+	var users = [ { 'user': 'barney',  'active': true },{ 'user': 'fred','active': false },
+  					{ 'user': 'pebbles', 'active': false }];
+
+// using the `_.matches` callback shorthand
+var mat = _.pluck(_.dropWhile(users, { 'user': 'barney', 'active': true }), 'user');
+console.log(mat);
+
+
+// using the `_.matchesProperty` callback shorthand
+var matp = _.pluck(_.dropWhile(users, 'active', false), 'user');
+console.log(matp);
+
+// using the `_.property` callback shorthand
+var pro = _.pluck(_.dropWhile(users, 'active'), 'user');
+console.log(pro);
+
+
+	
+	</script>
+	</body>
+	</html>

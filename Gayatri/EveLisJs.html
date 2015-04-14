@@ -1,0 +1,27 @@
+<html>
+<body>
+<span>
+	<input type="text" id="txt" />
+	<button id="btn">ACTION</button>
+</span>
+
+<script>
+	var v1 = document.getElementById('txt');
+	var v2 = document.getElementById('btn');
+
+	v2.addEventListener('click', function()
+	{
+		console.log("clicked");
+	});
+
+	v2.addEventListener('click', function()
+	{
+		console.log("other click");
+		v1.setAttribute('value','hello world');
+	});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+.tablecss
+{
+	line-height: 20px;
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
+	background: #E8E8E8;
+	border : 1px solid lightgrey;
+	width: 70%;
+}
+.tablecss tr:nth-child(even) { 
+
+	background: #FFFFFF;
+}
+
+.tablecss td
+{
+	padding : 7;
+}
+.tablecss thead
+{
+	border: 1px solid lightgrey;
+	font-size: 18px;
+	font-family: verdana;
+	font-weight: bold;
+	color: #f35800;
+
+}
+.tablecss tfoot
+{
+	border: 1px solid lightgrey;
+	
+}
+select
+{
+	border-radius: 10px;
+	width: 70px;
+	height: 30px;
+	background-color: lightgrey;
+	font-weight: bold;
+	margin-left: 20px;
+	line-height: 30px;
+}
+
+.linkcss
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 25px;
+	text-align: center;
+	border: 2px solid lightgrey;
+	margin-right: 5px;
+}
+.btncss
+{
+	width: 80px;
+	font-weight: bold;
+	height: 45px;
+	font-size: 16px;
+	font-family: verdana;
+	color: #f35800;
+}
+.btncss1
+{
+	width: 100px;
+	font-weight: bold;
+	height: 45px;
+	font-size: 16px;
+	font-family: verdana;
+	color: #f35800;
+}
+.textcss
+{
+	font-size: 16px;
+	font-family: verdana;
+	font-weight: bold;
+	color: #f35800;
+}

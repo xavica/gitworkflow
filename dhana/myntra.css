@@ -88,9 +88,37 @@
   border-radius: 0 4px 4px 0;
 
 }
+<<<<<<< HEAD
 .bag{
 	display: inline-block;
 	background-position: -2539px 0;
   width: 10px;
   height: 10px;
+=======
+/*.bag{
+	display: inline-block;
+	background-position: -2539px 0;
+  width: 23px;
+  height: 23px;
+}*/
+.button1{
+	margin-left: 10px;
+	  color: #697071;
+  border-color: #adaeaf;
+  background: #fff;
+  display: inline-block;
+  text-transform: uppercase;
+  
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  height: 30px;
+  line-height: 34px;
+  padding: 0 20px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 }

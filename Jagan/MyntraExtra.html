@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="MyntraStyles.css">
+
+	<title>Myntra Flat 80 % off</title>
+</head>
+
+<body>
+<div id= "header" data-bind="foreach: headerMyntra">
+ 	<span><img data-bind="attr:{src: myntralogo}"></span>
+ 	<span><input type="text" id="searchBar" placeholder="Search for a product or category or brand"></span>
+ 	<span><button type="button" id="search" name="Search" background-color="yellow">Search</button> </span>
+ </div>
+ <div class="left">
+  <p>Check for Our Products :: <input type="checkbox" name="some" id="SomeThing"> </p>
+  <div id="MyntraTour">
+  <input type="checkbox" name="watches" id="watch"  />
+       <label for="watches"> Watches For Men </label> <br>
+  <input type="checkbox" name="accessories" id="accessories" />
+         <label for="accessories">Accessories </label><br>
+  <input type="checkbox" name="belts" id="belts"  />
+     <label for="belts"> Belts</label><br>
+  <input type="checkbox" name="scarfs" id="scarfs"  />
+     <label for="scarfs">Scarfs</label><br>
+  <input type="checkbox" name="Shirt's" id="Shirt"  />
+     <label for="Shirt's">Shirt's</label><br>
+  <input type="checkbox" name="T-shirts" id="T-shirts" />
+     <label for="T-shirts">T-shirts</label><br>
+  <input type="checkbox" name="Footware" id="Footware"  />
+      <label for="Footware">Footware</label><br>
+  <input type="checkbox" name="Highware" id="Highware"  />
+        <label for="Highware">HighlyRecommended</label><br>
+  <input type="checkbox" name="SomeExtra" id="SomeExtra"  />
+        <label for="SomeExtra">SomeExtraProducts</label><br>
+  </div>
+   <p>Brands ::[+] <input type="checkbox" name="brands" id="BrandsId"> </p>
+  <div id="BrandTour">
+  <input type="checkbox" name="campus" id="watchy"  />
+       <label for="campus"> campus Sutra [+]</label> 
+       <div id="watchh">
+       ....<input type="checkbox" name="belt" id="belt"  />
+       <label for="belt">Belt watch </label> <br>
+       ....<input type="checkbox" name="chain" id="chain" />
+         <label for="chain">Chain Type </label></div>
+       <br>
+  <input type="checkbox" name="linoPerros" id="accessories" />
+         <label for="linoPerros">lino Perros </label><br>
+  <input type="checkbox" name="QQ" id="belts"  />
+     <label for="QQ">Q&Q</label><br>
+  <input type="checkbox" name="casio" id="scarfs"  />
+     <label for="casio">CASIO</label><br>
+  <input type="checkbox" name="deisel" id="Shirt"  />
+     <label for="deisel's">DEISEL</label><br>
+  <input type="checkbox" name="Tossido" id="T-shirts" />
+     <label for="Tossido">Tossido </label><br>
+ <script type="text/javascript">	    
+  function brand(){
+ 	document.getElementById("BrandsId").onclick= function(){
+ 		if(document.getElementById("BrandsId").checked){
+        document.getElementById("BrandTour").style.display="block";
+   }else {
+   	  document.getElementById("BrandTour").style.display="none";
+   }
+ };
+      document.getElementById("BrandTour").style.display="none";
+ }
+    window.onload = function(){
+    	brand();
+     };    
+  </script>
+  </div>
+</div>
+ <div class="right">
+  <img src="photos/Myntrawatch.png" width="650" height="160">
+ <div><h1> Myntra Accessories </h1></div>
+<div data-bind="foreach: products">
+	<div class="items">
+		<div><img data-bind="attr:{href:productlink,src: imageUrl}" height="140" width="125"></div>
+		<b><div data-bind="text: brandName"></div></b>
+		<i><div data-bind="text: name"></div></i>
+		<div data-bind="text: originalPrice"></div>
+		<div class="dis">Now:<div data-bind="text: discountprice"></div></div>
+		<div id="percentageColor" data-bind="text: discountPercentage"></div>
+
+	</div>
+</div>
+</div>
+<script type='text/javascript' src='../js/jquery.js'></script>
+<script type='text/javascript' src='../js/knockout-3.3.0.js'></script>
+<script type="text/javascript">
+
+ /*function prepare(){
+ 	document.getElementById("SomeThing").onclick= function(){
+ 		if(document.getElementById("SomeThing").checked){
+        document.getElementById("MyntraTour").style.display="block";
+   }else {
+   	  document.getElementById("MyntraTour").style.display="none";
+   }
+ };
+      document.getElementById("MyntraTour").style.display="none";
+ }
+    window.onload = function(){
+    	prepare();
+     };
+
+   function brand(){
+ 	document.getElementById("BrandsId").onclick= function(){
+ 		if(document.getElementById("BrandsId").checked){
+        document.getElementById("BrandTour").style.display="block";
+   }else {
+   	  document.getElementById("BrandTour").style.display="none";
+   }
+ };
+      document.getElementById("BrandTour").style.display="none";
+ }
+    window.onload = function(){
+    	brand();
+     }; 
+
+  /*   function campus(){
+ 	document.getElementById("watchy").onclick= function(){
+ 		if(document.getElementById("watchy").checked){
+        document.getElementById("watchh").style.display="block";
+   }else {
+   	  document.getElementById("watchh").style.display="none";
+   }
+ };
+      document.getElementById("watchh").style.display="none";
+ }
+    window.onload = function(){
+    	campus();
+     }; 
+*/
+
+    function Product(productlink,imageUrl,brandName,name,originalPrice,discountprice,discountPercentage )
+  {
+	this.productlink=productlink;
+	this.imageUrl=imageUrl;
+	this.brandName=brandName;
+	this.name=name;
+	this.originalPrice=originalPrice;
+	this.discountprice=discountprice;
+	this.discountPercentage=discountPercentage;
+
+};
+function MyntraImage(myntralogo)
+{
+	this.myntralogo=myntralogo;
+
+};
+
+function MyntraProductsViewModel()
+{
+	this.headerMyntra=[ new MyntraImage("photos/myntraImage.png")
+
+						];
+	this.products=	[new Product("http://www.myntra.com/watches/daniel-klein/daniel-klein-men-charcoal-grey-dial-watch-dk10507-6/636470/buy?src=search&uq=&q=men-accessories-new-arrivals&p=47","photos/myntraimage1.jpg","Daniel Klein","Men Charcoal Grey Dial Watch DK10507-6","Rs.6733/-","Rs.3750/-","(43% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-black-dial-watch-dz1578i/619554/buy?src=search&uq=&q=men-accessories-new-arrivals&p=67","photos/myntraimage2.jpg","DIESEL","Men Black Dial Watch DZ1578I","Rs.8765/-","Rs.7750/-","(19% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz4307i/595039/buy?src=search&uq=&q=men-accessories-new-arrivals&p=78","photos/myntraimage3.jpg","DIESEL","Men Grey Dial Watch DZ4307I","Rs.18,945/-","Rs.15,645/-","(23% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage4.jpg","DIESEL","Men Grey Dial Watch DZ7293I","Rs.22,445/-","Rs.21,342/-","(8% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage5.jpg","Aveiro ","Men Black & Off-White Dial Watch AV46WHTBBLK","Rs.1199/-","Rs.799/-","(28% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage6.jpg","Daniel Klein ","Men Navy Dial Watch DK10413-1","Rs.4,199/-","Rs.3,799/-","(6% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage7.jpg","Nautica ","Men Brown Dial Watch A17637G","Rs.10,199/-","Rs.6,799/-","(22% OFF)"),
+						new Product("http://www.myntra.com/watches/diesel/diesel-men-grey-dial-watch-dz7293i/595029/buy?src=search&uq=&q=men-accessories-new-arrivals&p=91","photos/myntraimage8.jpg","Fastrack ","Men White Dial Watch","Rs.11,599/-","Rs.8,799/-","(26% OFF)")
+					];
+}
+ko.applyBindings(new MyntraProductsViewModel());
+</script>
+</body>
+</html>

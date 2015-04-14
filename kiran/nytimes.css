@@ -1,0 +1,60 @@
+.header{
+height: 50px;
+
+
+}
+.headerContainer{
+	margin: 0 auto;
+	width: 80%;
+	}
+
+.headerLeft{
+	float: left;
+	width: 600px;
+
+}
+
+.headerRight{
+		float: right;
+	}
+.header2{
+	height: 20px;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%
+}
+.logo{
+	margin-top: 20px;
+	margin-left: 800px;
+
+}
+.des{
+	margin-top: -5px;
+}
+.menu{
+	text-align: center;
+	margin: 0 auto;
+	width: 80%
+	
+}
+.menu > span{
+	margin-right: 30px;
+}
+.bodyContent{
+	margin: 0 auto;
+	width: 80%;
+	height: 300px;
+}
+.leftContentdes{
+	height: 300px;
+	width: 200px;
+	float: left;
+	margin-right: 10px;
+
+}
+#img{
+	width: 375;
+}
+.rightContentdesc{
+	margin-top: -12px;
+}

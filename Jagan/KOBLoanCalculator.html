@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Data Bind Using KO.Observable Object</title>
+</head>
+<body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<table> 
+
+    <tbody data-bind="foreach:calculator">
+       <tr>
+            <td data-bind="text:column1"></td>
+            <td><input data-bind="text:column2"></input></td>
+        </tr>
+    </tbody>
+    <tfoot data-bind="foreach:button">
+     <button data-bind="text:buttonenable"></button></tfoot>
+</table>
+<script type="text/javascript">
+
+function CalculatorViewModel(){
+	var self = this;
+
+	self.calculator=ko.observableArray([{
+		column1:'Pricipal Amount:',
+		column2:''
+	},{
+		column1:'Rate Of Interest:',
+		column2:''
+	},{
+		column1:'From Date:',
+		column2:''
+	},{
+		column1:'To Date:',
+		column2:''
+	}]);
+ self:button=ko.observable(buttonenable:'Calculate');
+}
+
+$(document).ready(function () {
+ko.applyBindings(new CalculatorViewModel());
+});
+
+</script>
+</body>
+</html>
+

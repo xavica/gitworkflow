@@ -1,6 +1,10 @@
 .header{
 	width: 100%;
+<<<<<<< HEAD
 	background-color:#515151;
+=======
+	background-color: #565656;
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 	height: 30px;
 
 }
@@ -31,11 +35,20 @@
 	clear: both;
 	/*margin-left: 200px;*/
 	float: right;
+<<<<<<< HEAD
+=======
+	margin-bottom: 20px;
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 }
 .register select{
 	margin-top: 20px;
 	margin-right: 10px;
+<<<<<<< HEAD
 	/*font-size: 15px;*/
+=======
+	border: none;
+	/*font-size: 12px;*/
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 }
 
 .logoimageLeft{
@@ -62,7 +75,11 @@
 }
 .body{
 	clear: both;
+<<<<<<< HEAD
 	
+=======
+	/*width: 80%;*/
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 	}
 .bodyLeft{
 	width: 20%;
@@ -73,8 +90,14 @@
  .bodyLeft button{
  	width: 215px;
  	height: 40px;
+<<<<<<< HEAD
  	background-color: blue; 
  	color: white;
+=======
+ 	background-color: #5492c7; 
+ 	color: white;
+ 	font-size: 15px;
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
  	padding-left: 0px;
 
 }
@@ -84,6 +107,7 @@
 	margin-left: 20px;
 }
 .bodyRight{
+<<<<<<< HEAD
 	float: left;
 	margin-left: 2px;
 	width: 60%;
@@ -116,3 +140,41 @@
 
 
 	}
+=======
+	/*margin-left: 2px;*/
+	/*float: left;*/
+
+}
+.firstRow{
+
+	background-color: #386790;
+	width: 900px;
+	height: 40px;
+}
+.firstRow label{
+	color: white;
+	padding-top: 5px;
+	margin-left: 5px;
+}
+.firstRow input{
+	width: 400px;
+	height: 20px;
+	padding-top: 5px;
+	margin-top: 5px;
+	padding-left: 5px;
+}
+.cart{
+	float: right;
+	margin-top: -40px;
+}
+.cart button{
+	width: 160px;
+	height: 40px;
+	}
+.secondRow img{
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 800px;
+	height: 350px;
+}	
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd

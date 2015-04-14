@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<p> <input type="text" id="input" placeholder="Enter string"/> 
+<button id="submit" onclick="Combi()" > Combinations </button> </p>
+<textarea id="output"> </textarea>
+
+
+<script>
+function Combi()
+{
+var str = document.getElementById('input').value;
+var str2="";
+
+for (var x = 0; x < str.length; x++) 
+  {
+  	var str3="";
+    for (var y = x + 1; y <= str.length; y++) 
+    {
+    	
+      str2 = str2 + str.substring(x,y);
+      document.writeln("<textarea>" + str2 +"</textarea>");
+
+    }
+   // document.writeln("<p>" + str2 + "</p><br  />");
+   }
+ 
+}
+
+</script>
+</body>
+</html>

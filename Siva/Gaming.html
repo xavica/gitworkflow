@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Styles/Gaming.css">
+	<title>Craps</title>
+</head>
+<body>
+<form action="">
+<table>
+	<caption>
+		Craps
+	</caption>
+	<tr><td>Die 1</td><td><input id="die1field" type="text"/></td></tr>
+	<tr><td>Die 2</td><td><input id="die2field" type="text"/></td></tr>
+	<tr><td>Sum</td><td><input id="sumfield" type="text"/></td></tr>
+	<tr><td>Point</td><td><input id="pointfield" type="text"/></td></tr>
+	<tr><td ></td><td><input type="button" value="Roll dice" onclick="play()"/></td></tr>
+</table>
+<div id="status" class="red">
+Click the rolldice button to play</div>
+</form>
+<div>
+	<p>Note: if we get sum 11 or 7 then the msg diplays as player wins click rolldice agian</p>
+	<p>Note: if sum is not 7 or 11 then in point it will display a number it seems, we have to get the same number as done in the sum on next roll dice then only we will win</p>
+	<p>Note: if we get sum 3 or 2 then the msg diplays as player loses click rolldice agian</p>
+</div>
+<script type="text/javascript" src="Javascript/Gaming.js"></script>
+</body>
+</html>

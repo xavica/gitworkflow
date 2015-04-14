@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="myPar">I am a paragraph.</p>
+<div id="myDiv">I am a div.</div>
+
+<p>
+<button type="button" onclick="myFunction()">Try it</button>
+</p>
+<p>When you click on "Try it", the two elements will change.</p>
+
+<p onclick="this.innerHTML='Hello'">Click me.</p>
+<p id="demo"> str length here</p>
+
+<script>
+function myFunction() {
+    document.getElementById("myPar").innerHTML = "Hello Dolly.";
+    document.getElementById("myDiv").innerHTML = "How are you?";
+}
+
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = txt.length;
+
+</script>
+
+
+
+</body>
+</html>

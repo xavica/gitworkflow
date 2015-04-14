@@ -1,0 +1,99 @@
+﻿<html>
+<body>
+    <p> <h3>Loan Calculator</h3> </p>
+    <div>
+        <p> Principle : <input type="text" data-bind="value: principle"></input></p>
+        <p> Interest: <input type="text" data-bind="value:interest"></input></p>
+        <p> FromDate:<input type="date" data-bind="value:fromDate"></input></p>
+        <p> ToDate:<input type="date" data-bind="value:toDate"></input></p>
+        <!-- <p> <input type="button" value="Calculate" data-bind="click:calInterest"></p> -->
+
+
+        <br />
+        <br />
+
+        <p> Total No.of Days:<input type="text" data-bind="value:tnoofdays" /></p>
+        <p> No.of Years:<input type="text" data-bind="value:noofyears" /></p>
+        <p> No.of Months:<input type="text" data-bind="value:noofmonths" /></p>
+        <p> No.of Days:<input type="text" data-bind="value:noofdays" /></p>
+        <p> Accumlated Amount <input type="text" data-bind="value:aamount"></input></p>
+        <p> Net Amount <input type="text" data-bind="value:amount"></input></p>
+
+
+    </div>
+    <script src="../js/knockout-3.3.0.js"></script>
+    <script>
+function InterestViewModel()
+{
+		var that = this;
+
+		this.principle = ko.observable(1000);
+		this.interest = ko.observable(1);
+		this.fromDate = ko.observable('01/13/2012');
+		this.toDate = ko.observable('01/13/2014');
+		this.amount = ko.observable(0);
+		this.tnoofdays = ko.observable(0);
+		this.noofyears = ko.observable(0);
+		this.noofmonths = ko.observable(0);
+		this.noofdays = ko.observable(0);
+		this.aamount = ko.observable(0);
+		this.amount = ko.computed(function()
+		{
+			var d1 = new Date(that.fromDate());
+			var d2 = new Date(that.toDate());
+			var d3 = (d2 - d1) / (1000 * 60 * 60 * 24);
+			var d4 = Math.floor(d3 / 365);
+			var nofyears = d4;
+			var tbaldays = d3 - (nofyears * 365);
+			var nofmonths = Math.floor(tbaldays / 30);
+			var baldays = tbaldays - (nofmonths * 30);
+			var dpa = 0.00;
+			var tmppa = 0.00;
+			var ri = +that.interest();
+			dpa = +that.principle();
+			if (nofyears)
+			{
+			    for(var ii = 1; ii<=nofyears; ii++)
+			    {
+			        tmppa = (dpa * (ri / 100) * 365) / 30;
+			        dpa = dpa + tmppa;
+			    }
+			}
+			else
+			{
+			    if (d3 < 30)
+			        tmppa = (dpa * (ri / 100) * 30);
+			    else
+			        tmppa = (dpa * (ri / 100) * d3);
+			    dpa = dpa + tmppa;
+		    }
+
+			var aa = dpa;
+			var na = 0.00;
+			if (nofyears > 0)
+			    na = aa + (aa * (ri / 100) * (tbaldays / 30));
+			else
+			    na = aa;
+		    var intr = (+that.principle() * +that.interest() * d4 ) / 100;
+
+		    that.tnoofdays(d3);
+		    that.noofyears(nofyears);
+		    that.noofmonths(nofmonths);
+		    that.noofdays(tbaldays);
+		    that.aamount(aa - +that.principle());
+			var intr = na;
+		    return intr;
+
+
+			//return 0;
+		});
+
+}
+
+    var intView = new InterestViewModel();
+	ko.applyBindings(intView);
+
+    </script>
+
+</body>
+</html>
