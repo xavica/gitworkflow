@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>Skel.js Test</title>
+
+       <script type="text/javascript" src="../js/jquery.js"></script>
+
+      <script src="../js/skel.min.js"></script>
+
+      <script type ="text/javascript">
+        // skel.init();
+        // console.log('hai');
+        skel.init({
+              reset: 'full',
+              containers: '95%',
+              breakpoints: {
+                medium: {
+                  media: '(min-width: 769px) and (max-width: 1024px)'
+                },
+                small: {
+                  media: '(max-width: 768px)'
+                }
+              }
+            }); 
+
+      </script>
+
+    </head>
+    <body>
+      <div class="container">
+        <h1>Hello World!</h1>
+        <p>This is a test.</p>
+      </div>
+    
+    
+    </body>
+</html>
