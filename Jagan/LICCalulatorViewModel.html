@@ -1,0 +1,43 @@
+<html>
+<head>
+ <title>LIC Calculator View Model</title>
+ <link rel="stylesheet" type="text/css" href="CustomBind.css">
+
+</head>
+
+<body bgcolor="lightblue">
+<div class="border">
+<p>PREMIUM CALCULATOR</p>
+<div class="headd">
+<span class="left"><img src="photos/lic.jpg" height="50px"/></span><br> 
+ <span class="center">Premium calculator</span>
+ <span class="right"><button> <b>back</b></button></span>
+</div>
+<p> &copy; Life Insurance Corporation of India, Web Application</p>
+<table>
+<tr>
+	<td><b>Plan:</b></td><td><select data-bind="options: plan, value: selectedPlan"></select></td>
+	</tr></p>
+	<tr><td><b>Name:</b></td><td><input data-bind="value:name"/></td></tr>
+	<tr><td><b>Age :</b></td><td><input data-bind="value:age"/></td></tr>
+	<tr><td><b>Sum Assured:</b></td><td><input data-bind="value:sumAssured"/></td></tr>
+	<tr><td><b>Marital Status:</b></td>
+				<td>
+					<label>
+						<input type="radio" value="Single" data-bind="checked:maritalStatus"/>Single
+					</label>
+					<label>
+						<input type="radio" value="Married" data-bind="checked:maritalStatus"/>Married
+					</label></td></tr>
+
+</table>
+<button data-bind="click:viewData"><b>View Selected Data</b></button>
+
+<form data-bind="text:selectedData"></form>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="Javascript/LICCalulator.js"></script>
+</body>
+
+</html>

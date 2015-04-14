@@ -1,0 +1,43 @@
+<html>
+<head>
+ <title>CarInsurence.com View Model</title>
+ <link rel="stylesheet" type="text/css" href="costcostyles.css">
+
+</head>
+
+<body bgcolor="lightblue">
+<img src="photos/carins.png"/>
+<div class="border">
+   <table>
+   <tr>
+     <td>Zip Code<br><input data-bind="value:zipCode"/></td>
+     <td>Age <br><select data-bind="options: age, value: ageSelected"></select></td>
+     </tr>
+   <tr> <td>Currently Insured <br><select data-bind="options: currentSelection,value: currentlyInsured">
+   </select></td>
+     </tr>
+    <tr>
+     <td>HomeOwner .?<br><input type="radio" value="Yes" data-bind="checked:homeOwner"/>Yes
+						  <input type="radio" value="No" data-bind="checked:homeOwner"/>No
+					</td>
+     <td>Married ?<br><label>
+						<input type="radio" value="Single" data-bind="checked:maritalStatus"/>Single
+					</label>
+					<label>
+						<input type="radio" value="Married" data-bind="checked:maritalStatus"/>Married
+					</label></td>
+     </tr>
+     </table>
+<button data-bind="click:viewData"><b>View your Data here</b></button>
+<form data-bind="text:ackIns"></form>
+<form data-bind="text:carInsuranceData"></form>
+
+
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="Javascript/carInsuranceViewModel.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Data Bind Using KO.Observable Object</title>
+</head>
+<body>
+
+ <p>Pricipal Amount: <b><input data-bind="text:pricipalAmount"></input></b></p>
+   <p>Rate Of Interest:<b><input data-bind="text:rateOfInterest"></input></b></p>
+   <p>From Date:<b><input data-bind="text: fromDate"></input></b></p>
+   <p>To Date:<b><input data-bind="text: toDate"></input></b></p> 
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/json2.js"></script>
+<script type="text/javascript" src="../js/jstorage.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript" src="Javascript/CustomBinding.js"></script>
+<script type="text/javascript">
+ function Calculator{
+ 	this.pricipalAmount=Ko.Observable("");
+ 	this.rateOfInterest=Ko.Observable("");
+ 	this.fromdate=Ko.Observable("");
+ 	this.toDate=Ko.Observable("");
+ }
+
+Ko.applyBindings(new Calculator());
+
+</script>
+</body>
+</html>
+
