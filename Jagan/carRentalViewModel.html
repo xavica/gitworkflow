@@ -1,0 +1,57 @@
+<html>
+<head>
+ <title>CarInsurence.com View Model</title>
+ <link rel="stylesheet" type="text/css" href="carRental.css">
+
+</head>
+
+<body bgcolor="lightblue">
+<img src="photos/carrent.png"/>
+<div class="border">
+<table>
+<tr>
+ <td><label>Name:</label></td><td><input data-bind="value: name"/></td></tr>
+ <tr> <td><label>Location:</label></td><td><input data-bind="value: airportLocation"/></td>
+</tr>
+    <tr><td><input type="checkbox" name="some" id="SomeThing"/>Return Location</td></tr> 
+</table>
+<div id="display"><label>Return Location:</label><br><input data-bind="value: returnLocation" size="44"/>
+</div>
+<br>
+<div>
+    <div class="endup">
+       <label>Pick Up Date:</label><br/><input type="date" data-bind="value: pickUpDate"/>
+    </div>
+      <div class="endin">
+        <label> Drop Off Date:</label><br/><input type="date" data-bind="value: dropOffDate"/>
+      </div>
+</div>
+    <p>Car Size:<select data-bind="options: carSize, value: selectedCarSize"></select></p>
+
+
+<button data-bind="click:viewData"><b>View Your Data</b></button>
+<form data-bind="text:selectedData"></form>
+
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="Javascript/carRentalViewModel.js"></script>
+<script type="text/javascript">
+    function ReturnLocation(){
+  document.getElementById("SomeThing").onclick= function(){
+    if(document.getElementById("SomeThing").checked){
+        document.getElementById("display").style.display="block";
+   }else {
+      document.getElementById("display").style.display="none";
+   }
+ };
+      document.getElementById("display").style.display="none";
+ }
+    window.onload = function(){
+      ReturnLocation();
+     };  
+</script>
+
+</body>
+
+</html>

@@ -163,10 +163,6 @@ ko.virtualElements.allowedBindings.stopBinding = true;
 // -------------------------------------------------------------
 
 
-toJSON
-There may be a use for this in an actual app, but I have mostly found it useful as a debugging tool.
-
-Knockout comes with a useful utility function, ko.toJSON. Although it has many other uses, you can use it to quickly bind entire viewmodels (which may have a bunch of observable properties) and quickly see what sort of changes are going on in your viewmodel. So simple:
 
 ko.bindingHandlers.toJSON = {
     update: function(element, valueAccessor){

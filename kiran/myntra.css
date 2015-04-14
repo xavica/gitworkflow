@@ -58,21 +58,21 @@
 }
 .logoSection{
 	/*float: left;*/
-	  position: relative;
-  width: 980px;
-  margin: 0 auto;
+	  /*position: relative;*/
+  /*width: 980px;*/
+  /*margin: 0 auto;*/
   padding: 23px 0 2px;
 
 }
 .logoLeft{
-	  display: block;
-  position: relative;
+	  /*display: block;*/
+  /*position: relative;*/
   float: left;
   line-height: 0;
 }
 .logoRight{
 	float: right;
-	display: block;
+	/*display: block;*/
 }
 .search{
 	display: inline-block;
@@ -134,12 +134,12 @@
   border: 1px solid transparent;
    }
 
-   .menuContent{
+   /*.menuContent{*/
     border-bottom: 1px solid #c6c6c7;
     position: relative;
   width: 980px;
   float: left;
-}
+/*}*/
 .menuContent > span{
   padding-left: 0;
   display: block;
@@ -179,14 +179,14 @@ label{
 	  }
 .rightImagecontent{
 	  width: 368px;
-	  padding-right: 20px;
+	  /*padding-right: 20px;*/
 	  float: left;
-	    height: 459px;
+	    /*height: 459px;*/
 }
 .part1{
 	border-bottom: 1px 
 	solid #c8d3dc;
-	 padding-bottom: 16px;
+	 padding-bottom: 15px;
 	padding-top: 16px;
 	  /*max-width: 1140px;*/
 	    /*width: 100%;*/

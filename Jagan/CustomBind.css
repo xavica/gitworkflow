@@ -1,0 +1,64 @@
+.green {
+    color : green;
+}
+.blue {
+    color:blue;
+}
+.red {
+    color:red;
+}
+table{
+
+	border-color: blue;
+}
+body{
+	margin:0 auto;
+	text-align: center;
+	height:450px;
+	width:500px;
+}
+p{  font-weight:lighter;
+	float:left;
+	font-size: 16px;
+	color:midnightblue;
+}
+.headd{
+	height:60px;
+	width:500px;
+	float:left;
+	font-size:18px;
+	background-color: indigo;
+	color:khaki;
+}
+button{
+	background-color: indigo;
+	color:yellow;
+	border-radius:12px;
+}
+button:hover{
+	background-color:khaki;
+	color:midnightblue;
+
+}
+input{
+    background-color: darkgray;
+	border-radius:12px;
+}
+.left{float: left;}
+.center{float:center;}
+.right{float:right;}
+form{
+	font-size: 22x;
+	color:brown;
+}
+.border{
+	border:1px solid gray;
+}
+#matter, #flip {
+    padding: 5px;
+    text-align: center;
+}
+select{
+	background-color: darkgray;
+	border-radius:12px;
+}
