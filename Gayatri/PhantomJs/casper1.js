@@ -1,11 +1,13 @@
-var casper = require('casper').create();
+// var casper = require('casper').create();
 
-casper.start('http://casperjs.org/', function() {
-    this.echo(this.getTitle());
-});
+// casper.start('http://casperjs.org/', function() {
+//     this.echo(this.getTitle());
+// });
 
-casper.thenOpen('http://phantomjs.org', function() {
-    this.echo(this.getTitle());
-});
+// casper.thenOpen('http://phantomjs.org', function() {
+//     this.echo(this.getTitle());
+// });
 
-casper.run();
+// casper.run();
+console.log("hello");
+phantom.exit();

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>Skel Demo</title>
+    
+      <script type="text/javascript" src="../js/skel.min.js" ></script>
+      <script>
+             skel.init({
+     
+  containers: 1200,
+  breakpoints: {
+    medium: {
+      media: '(min-width: 769px) and (max-width: 1024px)',
+      containers: '50%'
+    },
+    small: {
+      media: '(max-width: 768px)',
+      containers: '45%'
+    },
+    xsmall: {
+      media: '(max-width: 480px)',
+      containers: '100%'
+    }
+  }
+//   grid: {
+//   gutters: [60,60]
+// }
+});
+      </script>
+        <style>
+     .did
+      {
+        border : 1px solid red;
+      } 
+      .did1
+      {
+        border : 1px solid red;
+        background-color: lightblue;
+      } 
+
+      </style>
+      </head>
+    
+    <body>
+      <div class="container did" >
+        <h1>Hello World!</h1>
+        <p>This is a test.</p>
+      </div>
+      <div class="row">
+      <div class="6u did1">
+  <h2>Hi!</h2>
+  <p>I'm a 6 unit-wide cell.</p>
+</div>
+</div>
+<div class="row">
+ <div class="10u did1">
+  <h2>Hi!</h2>
+  <p>I'm a 10 unit-wide cell.</p>
+</div></div>
+
+<div class="row">
+  <div class="2u did1">Two</div>
+  <div class="4u did1">Four</div>
+  <div class="6u did1">Six</div>
+</div>
+
+<div class="row did1">
+  <div class"8u">
+    Eight (not offset)
+  </div>
+</div>
+<div class="row did1">
+  <div class="8u -4u">
+    Eight (offset by four)
+  </div>
+</div>
+
+<div class="row">
+  <div class="6u 12u$(small)">
+    Content
+  </div>
+  <div class="3u 6u(small) 12u$(xsmall)">
+    Sidebar1
+  </div>
+  <div class="3u$ 6u$(small) 12u$(xsmall)">
+    Sidebar2
+  </div>
+</div>
+
+
+      
+    </body>
+</html>

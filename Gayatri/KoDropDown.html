@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<h3>All tasks (<span data-bind="text: tasks().length"> </span>)</h3>
+<ul data-bind="foreach: tasks">
+    <li>
+        <label>
+            <input type="checkbox" data-bind="checked: done" />
+            <span data-bind="text: title"> </span>
+        </label>
+    </li>
+</ul>
+ 
+<h3>Done tasks (<span data-bind="text: doneTasks().length"> </span>)</h3>
+<ul data-bind="foreach: doneTasks">
+    <li data-bind="text: title"></li>
+</ul>
+
+<script type="text/javascript" src="../js/jquery.js" ></script>
+
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script>
+
+function Task(title, done) {
+    this.title = ko.observable(title);
+    this.done = ko.observable(done);
+}
+ 
+function AppViewModel() {
+    this.tasks = ko.observableArray([
+        new Task('Find new desktop background', true),
+        new Task('Put shiny stickers on laptop', false),
+        new Task('Request more reggae music in the office', true)
+    ]);
+ this.doneTasks = ko.pureComputed(function() {
+    var all = this.tasks(), done = [];
+    for (var i = 0; i < all.length; i++)
+        if (all[i].done())
+            done.push(all[i]);
+    return done;
+}, this);
+}
+ko.applyBindings(new AppViewModel());
+
+</script>
+
+</body>
+</html>
