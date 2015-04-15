@@ -1,0 +1,89 @@
+﻿.container{
+    width:100%;
+}
+.header{
+    height: 30px;
+        
+}
+.content{
+    margin: 0 auto;
+    width:980px;
+}
+.left{
+    float: left;
+}
+.right{
+    float:right;
+    }
+.topRow span{
+    margin-right:20px;
+    
+}
+.bottomRow{
+    margin-top:15px;
+}
+.bottomRow span{
+    margin-left:35px;    
+}
+.row {
+    clear: both;
+}
+
+.shopDepartment{
+    background-color: #444444;
+    height: 505px;
+	width: 171px;
+	color: white;
+	line-height: 28px;
+	padding-left: 10px;
+	margin-right: 10px;
+}
+.searchButton input{
+	height: 45px;
+	width:279px;
+    padding-left:5px;
+}	
+.searchButton span{
+	margin-left: 10px;
+}
+.buyOnline{
+    height:15px:
+}
+.img{
+    margin-top: -8px;
+}
+.images div{
+    margin-top:-4px;
+}
+.img1{
+    margin-right:20px;
+}
+.newCustomer img{
+    margin-top: -8px;
+}
+.images21{
+    margin-top: -8px;
+}
+.second img{
+    margin-top:-8px;
+}
+.blackFriday img{
+    margin-top: -8px;
+}
+.savings{
+    margin-top: -8px;
+    margin-left: 2px;
+}
+.desc{
+    font-size:13px;
+    line-height: 15px;
+    
+}
+.apps {
+    font-size: 11px;
+
+}
+.space{
+    width: 20%;
+}
+  
