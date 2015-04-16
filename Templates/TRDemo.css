@@ -1,0 +1,9 @@
+#features{
+	text-align: center;
+}
+#features img{
+	height:150px;
+	margin:0 0 20px;
+
+}
+#main{float:right;}
