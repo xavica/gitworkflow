@@ -1,0 +1,148 @@
+﻿.container {
+    width: 100%;
+}
+
+.header {
+    height: 80px;
+    background-color: #F47B20;
+}
+
+.content {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.left {
+    float: left;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.right {
+    float: right;
+}
+
+.country {
+    background: #F1F1F1;
+    cursor: pointer;
+    width: 200px;
+    border: 0 solid;
+    color: #f57020;
+}
+
+.accountDetails {
+    color: white;
+}
+
+    .accountDetails span {
+        margin-left: 5px;
+    }
+
+.background {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: url('../../wallpapers/car/bkgd-body-home.png') repeat-x left top;
+}
+
+.search {
+    width: 439px;
+    background-color: white;
+    padding: 28px;
+    margin-top: -20px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    background: url('../../wallpapers/car/bkgd-fareFinder-bottom.png') no-repeat left bottom #fff;
+}
+
+.row {
+    clear: both;
+}
+
+.third input {
+    width: 450px;
+}
+
+.drop {
+    margin-right: 172px;
+}
+
+.sixth input {
+    width: 110px;
+}
+
+.compare {
+    margin-right: 130px;
+}
+
+.check {
+    margin-right: 170px;
+}
+
+.ninth a {
+    color: green;
+}
+
+.tenth button {
+    color: white;
+    background-color: green;
+    width: 150px;
+    height: 30px;
+}
+
+.phone {
+    width: 33.3%;
+    border: 1px;
+    height: 200px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+    .phone h3 {
+        background-color: #F88E1D;
+        color: white;
+        padding-left: 15px;
+        margin-top: -10px;
+    }
+
+.img {
+    margin-left: 10px;
+}
+
+.desc {
+    margin-right: 15px;
+}
+.carRentals{
+    width: 31%;
+    border: 1px;
+    height: 200px;
+    box-shadow: 0 0 10px #ccc;
+    margin-left: 15px;
+}
+ .carRentals h3{
+        background-color: #F88E1D;
+        color: white;
+        padding-left: 15px;
+        margin-top: -10px;
+    }
+ .carRentals div{
+     padding-left:5px;
+ }
+ .awards{
+    width: 32%;
+    border: 1px;
+    height: 200px;
+    box-shadow: 0 0 10px #ccc;
+    margin-left: 15px;
+ }
+  .awards h3{
+     background-color: #F88E1D;
+        color: white;
+        padding-left: 15px;
+     margin-top:-10px;
+ }
+ 
+ 
