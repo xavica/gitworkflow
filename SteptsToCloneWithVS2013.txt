@@ -1,0 +1,5 @@
+steps to get => Visual Studio => Team Explorer => Connect To Team Projects
+ => Clone => Type this url : https://github.com/xavica/TodayDiscounts.git
+
+After Cloning TodayDiscounts should appear in local repository 
+=> Open Local Reposity (double click) Then Select TodayDiscounts.sln file
