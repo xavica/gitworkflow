@@ -1,0 +1,154 @@
+﻿.container {
+    width: 100%;
+}
+
+.header {
+    height: 120px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.logo {
+    margin-top: 50px;
+}
+
+.login {
+    margin-top: 75px;
+}
+
+    .login span {
+        margin-left: 10px;
+    }
+
+.banner {
+    background: url('../../wallpapers/costar/home_hero_01.jpg') no-repeat;
+    height: 550px;
+    background-size: 100%;
+}
+
+.tm h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.investors {
+    width: 980px;
+    margin-top: 200px;
+}
+
+    .investors div {
+        margin-left: 10px;
+        width: 152px;
+        height: 80px;
+        background-color: #061B4A;
+        margin-top: 37px;
+    }
+
+.broker {
+    color: white;
+    width: 20%;
+}
+
+.awardWinner strong {
+    color: #D57800;
+}
+
+.insight {
+    width: 25%;
+    font-size: 20px;
+}
+
+.data {
+    width: 25%;
+    font-size: 20px;
+}
+
+.tools {
+    width: 25%;
+    font-size: 20px;
+}
+
+.Community {
+    width: 25%;
+    font-size: 20px;
+}
+
+.pics img {
+    margin-left: 75px;
+}
+
+.footer {
+    height: 90px;
+    background-color: #59C5E5;
+}
+
+.getIntouch {
+    width: 980px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.getIntouch span {
+        margin-right: 90px;
+        color: white;
+        margin-top: 25px;
+    }
+.getIntouch span button {
+            background-color: #1D396E;
+            margin-top: 25px;
+        }
+
+.background {
+    background-color: #1D396E;
+}
+
+.details {
+    width: 980px;
+    margin: 0 auto;
+    height: 480px;
+    color: white;
+}
+
+.company {
+    width: 25%;
+}
+
+    .company a {
+        color: white;
+    }
+
+.products {
+    width: 25%;
+}
+.products a{
+    color:white;
+}
+.empty{
+    width:25%;
+}
+.empty a{
+    color:white;
+}
+.social span img{
+    margin-left:15px;
+}
+.copyRights{
+    color:white;
+    margin-top:50px;
+}

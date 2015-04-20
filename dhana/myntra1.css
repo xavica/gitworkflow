@@ -8,10 +8,13 @@
 	  background-color: #444546;
 
 }
+<<<<<<< HEAD
+=======
 .headerContent{
     margin: 0 auto;
     height: 50px;
 }
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 .divLeft{
 	float: left;
 	padding-top: 5px;
@@ -108,6 +111,8 @@
     margin: 4px 0 0 25px;
 }
 
+<<<<<<< HEAD
+=======
 .button1{
       margin-left: 10px;
       color: #fff;
@@ -129,6 +134,7 @@
   border: 1px solid transparent;
 }
 
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
 .menuContent{
     border-bottom: 1px solid #c6c6c7;
     position: relative;
@@ -161,6 +167,8 @@ label{
   line-height: 13px;
   text-transform: uppercase;
 }
+<<<<<<< HEAD
+=======
 .bodyContent{
   margin-top: 100px;
 }
@@ -217,3 +225,4 @@ label{
   float: right;
 
 }
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd

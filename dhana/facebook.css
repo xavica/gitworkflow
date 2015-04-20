@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+.bodyContainerfull{
+	margin: 0 auto;
+  position: relative;
+  
+}
+.subBody{
+	  margin: 0;
+  outline: none;
+  padding: 0;
+  width: auto;
+=======
 
 @font-face {
   font-family: "Freight Sans Bold";
@@ -46,6 +58,7 @@
 			}
 
 			.clearfix:after {
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd
   clear: both;
   content: ".";
   display: block;
@@ -53,6 +66,25 @@
   height: 0;
   line-height: 0;
   visibility: hidden;
+<<<<<<< HEAD
+    min-width: 980px;
+      /*background: linear-gradient(white, #D3D8E8);*/
+        margin: 0 auto;
+  		width: 980px;
+}
+.connectFriends{
+	float: left;
+	margin-right: 15px;
+  width: 565px;
+    color: #0e385f;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 29px;
+  margin-top: 40px;
+  width: 450px;
+  word-spacing: -1px;
+}
+=======
 }
 h1 {
   font-size: 14px;
@@ -293,3 +325,4 @@ div{
             margin: 0 auto 0 auto;
              padding-bottom: 30px;
     }
+>>>>>>> f69f9ce72b05627fb75427dfac1741ceba484bbd

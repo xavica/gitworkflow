@@ -1,0 +1,127 @@
+﻿.container {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #f57020;
+    height: 60px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.loginButtons {
+    margin-top: 25px;
+}
+
+    .loginButtons span {
+        margin-left: 10px;
+        color: white;
+    }
+
+.enterbackground {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: url('pics/background_carrentals.png') repeat-x left top;
+}
+
+.enterdetails {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    margin-top: -20px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    padding:28px;
+}
+
+.pickUp {
+    margin-right: 10px;
+}
+
+.entercityNames input {
+    width: 465px;
+    height: 27px;
+}
+
+.left select {
+    border: 1px solid black;
+    height: 28px;
+}
+
+#date1, #date2 {
+    width: 110px;
+}
+
+.carSizes {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.compare {
+    margin-top: 10px;
+}
+
+.checkbox {
+    margin-top: 13px;
+}
+
+.expedia {
+    margin-left: 15px;
+}
+
+.copoun {
+    margin-top: 15px;
+}
+
+    .copoun a {
+        color: green;
+    }
+
+    .copoun button {
+        background-color: green;
+        margin-top: 10px;
+        width: 115px;
+        height: 29px;
+        color: white;
+        padding-top: 5px;
+    }
+
+.carrentalDetails {
+    margin-top: 25px;
+}
+
+.bookingCar {
+    width: 297px;
+    height: 165px;
+}
+
+    .bookingCar h4 {
+        background-color: orange;
+        height: 32px;
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+
+.phone {
+}
+
+}
+/*.enterdetails span{float:right;}*/
