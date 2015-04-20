@@ -41,6 +41,13 @@
     background-size: 100%;
 }
 
+    .banner:hover {
+        -moz-box-shadow: 0 0 10px #ccc;
+        -webkit-box-shadow: 0 0 10px #ccc;
+        box-shadow: 0 0 10px black;
+
+    }
+
 .tm h1 {
     color: white;
     font-size: 50px;
@@ -104,12 +111,13 @@
     font-size: 20px;
 }
 
-.getIntouch span {
+    .getIntouch span {
         margin-right: 90px;
         color: white;
         margin-top: 25px;
     }
-.getIntouch span button {
+
+        .getIntouch span button {
             background-color: #1D396E;
             margin-top: 25px;
         }
@@ -136,19 +144,24 @@
 .products {
     width: 25%;
 }
-.products a{
-    color:white;
+
+    .products a {
+        color: white;
+    }
+
+.empty {
+    width: 25%;
 }
-.empty{
-    width:25%;
+
+    .empty a {
+        color: white;
+    }
+
+.social span img {
+    margin-left: 15px;
 }
-.empty a{
-    color:white;
-}
-.social span img{
-    margin-left:15px;
-}
-.copyRights{
-    color:white;
-    margin-top:50px;
+
+.copyRights {
+    color: white;
+    margin-top: 50px;
 }
