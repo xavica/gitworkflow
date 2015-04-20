@@ -72,27 +72,32 @@ margin-top:40px;
     margin-left:4px;
 }
 .footer{
-    height:325px;
+    height:350px;
 }
 .aboutUs{
-    margin-left:5px;
-    
+    margin-left:10px;
+    width:18%;
 }
 .links{
-    margin-top:10px;
+    margin-top:15px;
 }
 .memberShip{
-    margin-left:5px;
-    
+    margin-left:15px;
+    width:35%;
 }
 .mem{
     margin-left:10px;
 }
 .customerCare{
-    margin-left:5px;
-   
+    margin-left:45px;
+    width:35%;
 }
 .site{
     margin-left:10px;
 }
-
+.copyright{
+    height:25px;
+}
+.copy{
+    margin-top:25px;
+}
