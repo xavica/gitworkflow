@@ -13,33 +13,48 @@
 #container .list li { width: 100%; border-bottom: 1px dotted #CCC; margin-bottom: 10px; padding-bottom: 10px; }
 
 #container .grid li { float: left; width: 20%; height: 50px; border-right: 1px dotted #CCC; border-bottom: 1px dotted #CCC; padding: 20px; }
+.search-bar-icon
+{
+	  position: absolute;
+  width: 19px;
+  height: 22px;
+  background: url('../prod/images/new-vd-sprite-d91fd34f.png') no-repeat 0 -202px;
+  top: 6px;
+  left: 8px;
+}
 
 </style>
 </head>
 <body>
 <div id="container">
 <div class="col-lg-5">
-    <div class="input-group button">
-      <input type="text" class="form-control" placeholder="Search a Product category...">
+	<div class="input-group button">
+	
+      <input type="text" class="form-control" placeholder="Search a Product category..." data-bind="value:selectedOption">
       <span class="input-group-btn">
-        <button type="button" class="btn btn-primary">Search</button>
 
-                   <button id="btn1" class="btn btn-warning btn-sm list" disabled>
+         			<button type="button" class="btn btn-primary">Search</button>
+  
+                    <button id="btn1" class="btn btn-warning btn-sm list" disabled>
             		<span class="glyphicon glyphicon-th-list"></span>ListView</button>
 
 	            	 <button id="btn2" class="btn btn-warning btn-sm grid">
 	            	 <span class="glyphicon glyphicon-th"></span>GridView</button>
+
        </span>
 </div>
 
-<ul class="list" data-bind="foreach:items">
-	<li data-bind="text:$data"></li>
+<ul class="list" data-bind="foreach:returnItemsArray">
+	<li data-bind="text:$data, valueUpdate : 'afterkeydown'"></li>
 </ul>
+<!-- <select style="width:40px;-webkit-appearance: none;" data-bind="options: returnItemsArray1"></select><br> -->
+
 </div>
 
 
 <script type="text/javascript" src="../js/jquery1.8.3_min.js"></script>
 <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
 <script type="text/javascript" src="SearchBar.js"></script>
 </body>
 </html>
