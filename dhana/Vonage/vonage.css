@@ -1,0 +1,244 @@
+﻿.container {
+    width: 100%;
+    background-color: #F4F4F5;
+}
+
+.header {
+    height: 91px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.vonageLogo {
+    margin-top: 25px;
+}
+
+    .vonageLogo span {
+        margin-left: 5px;
+    }
+
+.vonageAccount {
+    margin-top: 25px;
+}
+
+.personal a {
+    color: lightblue;
+}
+
+.vonageAccount span {
+    margin-left: 5px;
+}
+
+.features {
+    height: 30px;
+    background-color: #0074C8;
+    color: white;
+}
+
+    .features span {
+        margin-right: 5px;
+    }
+
+.featurePlans {
+    margin-top: 5px;
+}
+
+    .featurePlans a {
+        color: white;
+    }
+
+.orderCalls {
+    color: white;
+    margin-top: 5px;
+}
+
+.banner {
+    background-image: url('../pics/Vonagepictures/vonagebanner.jpg');
+    height: 650px;
+}
+
+.bestofferBox {
+    width: 450px;
+    font-family: 'Roboto Condensed',sans-serif;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.firstRow {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 3.25em;
+    line-height: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.ordertoDay {
+    color: #ffffff;
+    font-size: 1.65em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.limited {
+    color: #ff8300;
+    font-size: 1.85em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.pricingRow {
+    color: #ffffff;
+    float: left;
+    font-family: 'Roboto',sans-serif;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: -60px;
+    width: 210px;
+}
+
+.dolarSymbol {
+    font-size: 3.2em;
+    position: relative;
+    top: -50px;
+}
+
+.bigNine {
+    font-size: 8.25em;
+    position: relative;
+    left: -5px;
+    font-weight: 600;
+}
+
+.smallNine {
+    font-size: 4em;
+    position: relative;
+    top: -45px;
+    left: -10px;
+    font-weight: 600;
+}
+
+.subscript {
+    font-size: 2em;
+    position: relative;
+    top: -70px;
+    left: 120px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.phoneAdapter {
+    color: #ffffff;
+    float: left;
+    font-family: 'Roboto',sans-serif;
+    margin-top: 10px;
+    line-height: 26px;
+    font-size: 1.1em;
+}
+
+    .phoneAdapter span {
+        margin-left: 3px;
+    }
+
+.phoneValues {
+    color: #ff8300;
+}
+
+.taxesFees {
+    font-weight: 300;
+    font-size: 1.em;
+    color: #ffffff;
+    clear: left;
+    text-align: center;
+}
+
+    .taxesFees a {
+        color: #ff8300;
+    }
+
+.buyNow {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+    .buyNow button {
+        height: 45px;
+        width: 200px;
+        background-color: #FF8300;
+        color: white;
+        border: none;
+    }
+
+.learnMore {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.learnMore a{
+    color:#FF8300;
+    text-decoration:none;
+}
+.learnMore a:hover{
+    text-decoration:underline;
+}
+.save{
+   margin-left: -50px;
+  margin-right: -100px;
+  margin-bottom: 60px;
+  margin-top: -124px;
+  width: 145px;
+}
+.callTo{
+     text-align: center;
+  color: #ff8300;
+  position: relative;
+  float: right;
+  top: -600px;
+  margin-right:200px;
+ 
+}
+/*.backgroundMobile {
+    background: url('../pics/Vonagepictures/Vonage-Box-d.jpg')no-repeat center;
+    width:980px;
+    height:650px;
+    margin-top:30px;
+    
+}*/
+.vonageWorks{
+   background-color: #0074c8;
+  color: #fff;
+  float: right;
+  padding: 40px;
+  position: absolute;
+  right: 15%;
+  top: 700px;
+  width: 370px;
+  min-height: 225px;
+  z-index: 10;
+  
+}
+.vonageWorks h2{
+    font-size: 2.000em;
+  line-height: 1.1;
+}
