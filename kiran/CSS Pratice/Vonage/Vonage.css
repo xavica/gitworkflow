@@ -1,0 +1,186 @@
+﻿.container{
+    width:100%;
+    background-color:#F4F4F5;
+    }
+.header{
+    height:105px;
+
+}
+.content{
+    width:980px;
+    margin:0 auto;
+   }
+.left{
+    float:left;
+    }
+.right{
+    float:right;
+}
+.logo{
+   margin-top:25px;
+}
+.logo span{
+    margin-left:10px;
+}
+.account{
+    margin-top:25px;
+}
+.plans{
+    height:35px;
+    background-color:#0074C8;
+}
+.features a{
+    color:white;
+    margin-left:10px;
+}
+.tollFree{
+    color:white;
+    }
+.banner {
+    background: url('../../wallpapers/vonage/drtv-d.jpg') no-repeat;
+   height:650px;
+   width:75%;
+}
+.bestOffer{
+      width: 450px;
+  font-family: 'Roboto Condensed',sans-serif;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+  padding-top: 20px;
+  margin: 0 auto;
+  height:500px;
+  margin-top:5px;    
+}
+.first{
+      color: #ffffff;
+  font-weight: 500;
+  font-size: 3.25em;
+  line-height: 50px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.orderToday{
+      color: #ffffff;
+  font-size: 1.65em;
+  font-weight: 300;
+  text-align: center;
+  margin-top: -5px;
+}
+.country{
+    color: #ff8300;
+  font-size: 1.85em;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 8px;
+}
+.price{
+      color: #ffffff;
+  float: left;
+  font-family: 'Roboto',sans-serif;
+  margin-left: 30px;
+  margin-top: -50px;
+  margin-bottom: -60px;
+  width: 210px;
+}
+.dollar{
+      font-size: 3.2em;
+  position: relative;
+  top: -50px;
+}
+.nine{
+      font-size: 8.25em;
+  position: relative;
+  left: -5px;
+  font-weight: 600;
+}
+.nine2{
+    font-size: 4em;
+  position: relative;
+  top: -45px;
+  left: -10px;
+  font-weight: 600;
+}
+.month{
+      font-size: 2em;
+  position: relative;
+  top: -110px;
+  left: 120px;
+  color: #ffffff;
+  font-weight: 100;
+}
+.phone{
+    color: #ffffff;
+  float: left;
+  font-family: 'Roboto',sans-serif;
+    margin-top: 10px;
+    line-height:26px;
+    font-size:1.1em;
+}
+.phone span{
+    margin-left:3px;
+}
+.color{
+    color:#ff8300;
+}
+.fee{
+    font-weight:300;
+    font-size:1.1em;
+    color: #ffffff;
+    clear:left;
+    text-align:center;
+}
+.fee a{
+    color:#ff8300;
+}
+.buy{
+    text-align:center;
+    margin-top:10px;
+    font-size:20px;
+    }
+.buy button{
+    height:45px;
+    width:200px;
+    background-color:#ff8300;
+    color:white;
+    border:none;
+}
+.learn{
+   color: #ff8300;
+  outline: 0;
+  text-align:center;
+  margin-top:10px;
+}
+.learn a{
+color: #ff8300;
+text-decoration:none;
+}
+.learn a:hover{
+    text-decoration:underline;
+}
+.save{
+      margin-left: -100px;
+  margin-right: -180px;
+  margin-bottom: 60px;
+  margin-top: -180px;
+  width: 145px;
+}
+.call{
+    text-align: center;
+  color: #ff8300;
+  position: relative;
+  float: right;
+  top: -630px;
+  margin-right:450px;
+}
+.works{
+      background-color: #0074c8;
+  color: #fff;
+  float: right;
+  padding: 40px;
+  position: absolute;
+  right: 25%;
+  top: 700px;
+  width: 370px;
+  min-height: 225px;
+  z-index: 10;
+}
+
