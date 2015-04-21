@@ -1,0 +1,103 @@
+﻿.container{
+    width:100%;
+    background-color:#F4F4F4
+}
+.header{
+    height:105px;
+
+}
+.content{
+    width:980px;
+    margin:0 auto;
+    background-color:#FFFFFF;
+}
+.left{
+    float:left;
+    }
+.right{
+    float:right;
+}
+.login{
+margin-top:40px;
+}
+.login span{
+    margin-left:5px;
+}
+.cart{
+    margin-top:10px;
+}
+.search input{
+    width:300px;
+    border: 1px solid #c03;
+  color: #999;
+  padding: 6px;
+}
+.search img{
+    margin-left:-5px;
+    margin-top:15px;
+    }
+.row{
+    clear:both;
+}
+.products{
+    background:#372940;
+    color:white;
+}
+.products a{
+    color:white;
+}
+.banner{
+    height:319px;
+    margin-top:5px;
+}
+.club{
+    height:20px;
+}
+.email {
+    background: url('../../wallpapers/bjs/homepage_email_offers.jpg') no-repeat ;
+    width:383px;
+    margin-top:-45px;
+}
+.featuredProducts{
+    margin-top:0px;
+}
+.pic1{
+    width:18%;
+    margin-left:10px;
+}
+.savings{
+    color:red;
+}
+.featuredServices span{
+    margin-left:4px;
+}
+.footer{
+    height:350px;
+}
+.aboutUs{
+    margin-left:10px;
+    width:18%;
+}
+.links{
+    margin-top:15px;
+}
+.memberShip{
+    margin-left:15px;
+    width:35%;
+}
+.mem{
+    margin-left:10px;
+}
+.customerCare{
+    margin-left:45px;
+    width:35%;
+}
+.site{
+    margin-left:10px;
+}
+.copyright{
+    height:25px;
+}
+.copy{
+    margin-top:25px;
+}
