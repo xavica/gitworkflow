@@ -1,28 +1,26 @@
 function SearchViewModel()
 {
 	var that = this;
-	that.items = [ 1,2,3,4,5,6,7,8];
-	// that.changeView = function(e)
-	// {
-	// 	console.log("inside function");
-	// 	$('button').on('click',function(e) {
-	// 	if ($(e).hasClass('grid'))
-	// 	 {
- //        				$('#container ul').removeClass('list').addClass('grid');
- //        				console.log("grid view");
- //       	 }
- //   		 else if($(e).hasClass('list')) 
- //   		 {
-	// 		        $('#container ul').removeClass('grid').addClass('list');
-	// 		        console.log("lsit view");
- //    	}
- //    });
-	// }
+	var items = [ 'lenovo','motorola','moto G','Nike','Adidas','Asus','Asus gen'];
+	this.selectedOption = ko.observable('');
+	this.returnItemsArray = ko.observableArray(items);
+	
+    this.itemsFilter = function()
+     {
+     		var array = items;
+     		var k = array.length;
+     		 // that.returnItemsArray.removeAll();
+   			for (var i = 0; i < k ; i++)
+   			{
+		    	   		if(array[i].indexOf(this.selectedOption()) >= 0)
+		          		this.returnItemsArray.push(array[i]);
+   			 }
+   			 this.selectedOption('');
+   			
+   	}
 	
 }
 
-
- 
 $('button').on('click',function(e) {
     if ($(this).hasClass('grid')) {
         $('#container ul').removeClass('list').addClass('grid');
