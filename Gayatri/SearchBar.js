@@ -4,30 +4,16 @@ function SearchViewModel()
 	var items = [ 'lenovo','motorola','moto G','Nike','Adidas','Asus','Asus gen'];
 	this.selectedOption = ko.observable('');
 	this.returnItemsArray = ko.observableArray(items);
-	
-    this.itemsFilter = function()
-     {
-     		var array = items;
-     		var k = array.length;
-     		 // that.returnItemsArray.removeAll();
-   			for (var i = 0; i < k ; i++)
-   			{
-		    	   		if(array[i].indexOf(this.selectedOption()) >= 0)
-		          		this.returnItemsArray.push(array[i]);
-   			 }
-   			 this.selectedOption('');
-   			
-   	}
-   	 this.returnItemsArray1 = ko.computed(function() {
-    var all = items, done = [];
-    for (var i = 0; i < all.length; i++)
-    {
-        if(all[i].indexOf(this.selectedOption()) >= 0)
-          done.push(all[i]);
-     }
-    return done;
-}, this);
-	
+	this.selectedOption.subscribe(function()
+	{
+		var filteredItems = _.filter(items,function(n)
+     		{
+     			return n.toLowerCase().indexOf(that.selectedOption().toLowerCase()) > -1;
+     		});
+
+     		 that.returnItemsArray(filteredItems);
+
+	});
 }
 
 

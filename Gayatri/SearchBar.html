@@ -33,7 +33,7 @@
       <input type="text" class="form-control" placeholder="Search a Product category..." data-bind="value:selectedOption">
       <span class="input-group-btn">
 
-         			<button type="button" class="btn btn-primary" data-bind="click:itemsFilter">Search</button>
+         			<button type="button" class="btn btn-primary">Search</button>
   
                     <button id="btn1" class="btn btn-warning btn-sm list" disabled>
             		<span class="glyphicon glyphicon-th-list"></span>ListView</button>
@@ -45,15 +45,16 @@
 </div>
 
 <ul class="list" data-bind="foreach:returnItemsArray">
-	<li data-bind="text:$data"></li>
+	<li data-bind="text:$data, valueUpdate : 'afterkeydown'"></li>
 </ul>
-<select style="width:40px;-webkit-appearance: none;" data-bind="options: returnItemsArray1"></select><br>
+<!-- <select style="width:40px;-webkit-appearance: none;" data-bind="options: returnItemsArray1"></select><br> -->
 
 </div>
 
 
 <script type="text/javascript" src="../js/jquery1.8.3_min.js"></script>
 <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
 <script type="text/javascript" src="SearchBar.js"></script>
 </body>
 </html>
