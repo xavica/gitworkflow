@@ -18,8 +18,19 @@ function SearchViewModel()
    			 this.selectedOption('');
    			
    	}
+   	 this.returnItemsArray1 = ko.computed(function() {
+    var all = items, done = [];
+    for (var i = 0; i < all.length; i++)
+    {
+        if(all[i].indexOf(this.selectedOption()) >= 0)
+          done.push(all[i]);
+     }
+    return done;
+}, this);
 	
 }
+
+
 
 $('button').on('click',function(e) {
     if ($(this).hasClass('grid')) {
