@@ -1,0 +1,177 @@
+﻿.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack 
+body{
+      background-color: #fffff0;
+}
+.container {
+    width: 100%;
+    }
+
+.header {
+    height: 105px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+.logo{
+    padding-top:10px;
+}
+.navigationBar{
+    height:50px;
+    background-color:#0665BC;
+    padding:10px 5px;
+}
+/*.home{
+    padding-top:12px;
+    padding-left:5px;
+}*/
+.home a{
+    color:white;
+    /*padding-left:5px;*/
+    text-decoration:none;
+}
+/*.login{
+  padding-top:12px;
+    padding-left:5px;
+}*/
+.login a{
+color:white;
+/*padding-right:15px;*/
+text-decoration:none;
+}
+/*.image img{
+    width:980px;
+    margin-top:-15px;
+}*/
+.subNavigationbar{
+    height:50px;
+    background-color:#C1E6F9;
+      /*margin-top: 60px;*/
+      border:1px solid;
+      border-bottom-color:#6ab9fe;
+      border-top-color:#a1d0fa;
+      border-left:none;
+      border-right:none;
+          
+}
+.popular{
+    color:black;
+      padding-top: 20px;
+  padding-left: 10px
+        }
+.popular a{
+    text-decoration:none;
+    color:black;
+    }
+.topSearch{
+height:30px;
+font-size:14px;
+background-color:#F7FCFF;
+border:1px solid;
+border-bottom-color:#6ab9fe;
+border-left:none;
+      border-right:none;
+}
+.sideLeft{
+    width:35%;
+    height: 2560px;
+    margin-top:20px;
+}
+.searchForproperty{
+    border:1px solid;
+    /*height:175px;*/
+    background-color:#F7FCFF;
+    color:#0271D4;
+    padding-left:10px
+
+}
+.searchForproperty div{
+    margin-bottom:10px;
+}
+.searchForproperty h3{
+        /*height:30px;*/
+    background-color:#EFF6FD;
+    margin-top:0px;
+    
+}
+.searchForproperty input{
+    padding-left:10px;
+    width:300px;
+}
+.searchForproperty button{
+    margin-right:20px;
+    background-color:#B4E0FD;
+    width:125px;
+    color:black;
+}
+.browse{
+color:#0271D4;
+border:1px solid;
+margin-top:5px;
+background-color:#F7FCFF;
+/*height:50px;*/
+}
+.browse h3{
+    color:#D74040;
+    padding-left:10px;
+    margin-top:10px;
+}
+.americanProperties{
+    /*height:2185px;*/
+    color:#0271D4;
+    border:1px solid;
+    margin-top:5px;
+    background-color:#FAFCFE;
+}
+.americanProperties h3{
+    padding-left:15px;
+    height:50px;
+    background-color:#EFF6FD;
+    margin-top:5px;
+}
+.first img{
+      border: 5px solid #cdedfd;
+      margin-right:20px;
+}
+.pics{
+    margin-left:15px
+}
+.sponsors{
+    border:1px solid;
+    height:120px;
+    background-color:#F7FCFF;
+    color:#0271D4;
+    padding-left:10px;
+    font-size:14px;
+    margin-top:10px;
+}
+.sponsors a{
+    text-decoration:none;
+}
+
+
