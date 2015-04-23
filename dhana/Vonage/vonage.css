@@ -547,7 +547,7 @@
 
 }
 .subFooter{
-    height:500px;
+    height:250px;
      color: #b8b8bd;
      font-size:15px;
 }
@@ -565,7 +565,8 @@
 }
 .subThird{
     font-size:10px;
-    margin-top:35px;    
+    margin-top:35px;  
+    padding-bottom:1px;  
 }
 .subFourth{
     font-size:12px;
