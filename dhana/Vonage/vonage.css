@@ -459,7 +459,7 @@
 
 .footer {
     background-color: #49494B;
-    height: 600px;
+    height:706px;
 }
 
 .footerDesc {
@@ -540,6 +540,33 @@
     border:none;
     font-size:15px;
 }
-.orderCall{
+.orderCall {
     height:30px;
+    color:white;
+
+}
+.subFooter{
+    height:500px;
+     color: #b8b8bd;
+     font-size:15px;
+}
+.subFirst img{
+    width:150px;
+    height:50px;
+}
+.subFirst span{
+    margin-left:10px;
+}
+.subSecond{
+    font-size:11.5px;
+    margin-top:25px;
+ 
+}
+.subThird{
+    font-size:10px;
+    margin-top:35px;    
+}
+.subFourth{
+    font-size:12px;
+    margin-top:35px;   
 }
