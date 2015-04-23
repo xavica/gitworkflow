@@ -68,7 +68,7 @@
 }
 
 .banner {
-    background-image: url('../pics/Vonagepictures/vonagebanner.jpg');
+    background-image: url('../pics/Vonagepictures/drtv-d.jpg');
     height: 650px;
 }
 
@@ -324,7 +324,7 @@
 }
 
 .international {
-    background: url('../pics/Vonagepictures/international.png') no-repeat center;
+    background: url('../pics/Vonagepictures/map-homepage.png') no-repeat center;
     background-color: #ff8201;
     max-width: 1500px;
     /*width: 100;*/
