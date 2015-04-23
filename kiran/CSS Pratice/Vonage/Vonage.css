@@ -481,6 +481,12 @@ color: #b8b8bd;
       color: #fff;
       margin-top:15px;
 }
+.socialIcons{
+    height:35px;
+}
+.footerLogo{
+    height:70px;
+}
 .footerLogoimg{
     width:145px;
     height:auto;
