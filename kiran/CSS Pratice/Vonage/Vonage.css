@@ -405,7 +405,7 @@
     background-color: #49494b;
     padding: 1.8em 0 1.250em;
     position: relative;
-    height: 750px;
+    height: 800px;
 }
 
 .footerDesc  {
@@ -480,5 +480,17 @@ color: #b8b8bd;
     border:none;
       color: #fff;
       margin-top:15px;
+}
+.footerLogoimg{
+    width:145px;
+    height:auto;
+    margin-top:25px;
+}
+.copyRight{
+    font-size:17px;
+    padding-top:45px;
+}
+.footDesc{
+    font-size:15px;
 }
 
