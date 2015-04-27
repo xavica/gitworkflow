@@ -1,0 +1,206 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+body {
+    background: url('../../wallpapers/murthy/bg.jpg') top center no-repeat #afcfe3;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.border {
+    background-color: white;
+    height: 115px;
+    position: relative;
+    padding: 15px 15px;
+}
+
+.header {
+    margin-top: 30px;
+}
+.navigationBar{
+    height:35px;
+    background-color:#3586B9;
+}
+.navigationBar span{
+    margin-left:30px;
+    color:white;
+}
+.navigationBar a{
+    color:white;
+}
+.search{
+    padding:5px 5px;
+}
+.banner {
+    background: url('../../wallpapers/murthy/haveitall_Banner.jpg');
+    height:255px;
+    color:white;
+}
+.desc{
+    margin-top:30px;
+    margin-left:400px;
+}
+.description{
+    background:white;
+    height:1800px;
+}
+.dec{
+    width:65%;
+    padding:10px 10px;
+}
+.para{
+    color: #333333;
+  font-size: 15px;
+}
+.matter strong{
+    font-style:italic;
+}
+.events{
+    background-color:#C7C7C7;
+   height:30px;
+   padding:10px 5px;
+   width:30%;
+}
+.events span{
+    margin-left:5px;
+}
+.news a{
+    text-decoration:none;
+    color: #5391C5;
+  font-size: 16px;
+ }
+.newsDes {
+    background: url('../../wallpapers/murthy/home_tabs_bg.png');
+    padding:20px 20px;
+    color:#5391C5;
+    font:25px;
+}
+.client {
+       background: #d2d2d2 url('../../wallpapers/murthy/client_testimonials_bg.png') bottom left no-repeat;
+       padding:15px 15px;
+}
+.client a{
+    text-decoration:none;
+    color:red;
+}
+.next a{
+color:#004b8d;
+}
+.award{
+    position:relative;
+    left:200px;
+}
+.about{
+    width:30%;
+    padding-left:5px;
+}
+.aboutUs{
+    color:#004b8d;
+    font-size:15px;
+    font-weight:200;
+}
+.online h2{
+    color:#004b8d;
+}
+.online a{
+color:#004b8d;
+text-decoration:none;
+}
+.muDes{
+    position:relative;
+    left:10px;
+    top:-5px;
+}
+.murthy h2{
+    color:#004b8d;
+}
+.services h2{
+color:#004b8d;
+}
+.pratice h2{
+    color:#004b8d;
+}
+.whatWecando h2{
+color:#004b8d;
+}
+.hire button{
+    background-color:#cf1b1a;
+    color:white;
+    float:right;
+    padding: 2px 18px;
+    border-radius: 5px;
+    margin-right:15px;
+}
+.bulletin h2{
+color:#004b8d;
+}
+.bulletin button {
+    background-color: #cf1b1a;
+    color: white;
+    float: right;
+    padding: 2px 18px;
+    border-radius: 5px;
+    margin-right: 35px;
+    margin-top:-2px;
+}
+.bulletin input{
+          font-style: italic;
+          background-color:#BBBBBB;
+            color: #666666;
+            width: 170px;
+            border-radius: 5px;
+  }
+.footerBar a {
+    text-decoration: none;
+    color: #3e99d0;
+}
+ .footerBar {
+    text-align:center;
+    font:20px;
+}
+.footerBar span{
+    margin-left:10px;
+    }
+.footerNavigationbar header{
+    background-color:#3586B9;
+    height:40px;
+    
+}
