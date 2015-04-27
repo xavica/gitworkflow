@@ -1,0 +1,208 @@
+﻿
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+}
+
+.header {
+    height: 30px;
+    background-color: #FAFAFA;
+    border-bottom: solid;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.headerLeft {
+    padding: 6px 5px;
+    font-size: 12px;
+}
+
+    .headerLeft span {
+        margin-right: 5px;
+    }
+
+    .headerLeft a {
+        text-decoration: none;
+    }
+
+        .headerLeft a:hover {
+            text-decoration: underline;
+        }
+
+.headerRight {
+    padding: 6px 5px;
+    font-size: 12px;
+}
+
+    .headerRight span {
+        margin-right: 5px;
+    }
+
+    .headerRight a {
+        text-decoration: none;
+    }
+
+        .headerRight a:hover {
+            text-decoration: underline;
+        }
+
+.subHeader {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 10px 10px;
+}
+/*.signIn{
+    padding:5px 5px;
+}*/
+.signIn span {
+    margin-right: 5px;
+}
+
+.signIn a {
+    text-decoration: none;
+}
+
+    .signIn a:hover {
+        text-decoration: underline;
+    }
+
+.signinSecondrow {
+    margin-top: 5px;
+}
+
+    .signinSecondrow input {
+        width: 325px;
+        height: 28PX;
+    }
+
+.navigationBar {
+    background-color: #000000;
+    height: 30px;
+    padding: 5px 5px;
+    font-size: 13px;
+}
+
+    .navigationBar span {
+        margin-right: 5px;
+    }
+
+    .navigationBar a {
+        color: white;
+        text-decoration: none;
+    }
+
+.sale {
+    height: 20px;
+    width: 50px;
+    background-color: red;
+}
+
+.subnavigationBar {
+    padding: 10px 5px;
+    font-size: 13px;
+}
+
+    .subnavigationBar span {
+        margin-left: 10px;
+    }
+
+    .subnavigationBar a {
+        text-decoration: none;
+        color: #716e6d;
+    }
+
+.ciit {
+    color: orange;
+    margin-right: 5px;
+}
+
+.latestshoppersStop {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.shoppersImages {
+    margin-top: 5px;
+}
+/*.Rows{
+    width:20%;
+}*/
+.arrowimage {
+    margin-top: -4px;
+}
+
+.title {
+    color: #716e6d;
+    text-align: center;
+}
+
+.priceLine {
+    text-align: center;
+    font-size: 18px;
+    color: #f96037;
+    margin-bottom: 4px;
+    /*margin-top:-5px;*/
+}
+
+.mensApparel {
+    width: 33%;
+    border-bottom: 7px solid #D1D2D4;
+    margin-bottom: 5px;
+}
+
+.womensApparel {
+    width: 33%;
+    margin-left: 3px;
+    border-bottom: 7px solid #D1D2D4;
+}
+
+.fiesta {
+    width: 33%;
+    border-bottom: 7px solid #D1D2D4;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+/*.secondRow{
+    width:33%;
+    margin-top:10px;
+}*/
+.shirts {
+    width: 33%;   
+    border-bottom: 7px solid #D1D2D4;
+}
