@@ -374,3 +374,8 @@ body {
 .sponsorAdvertiser a {
     color: #0271d4;
 }
+.welcomeAmericanProperty{
+    width:70%;
+    border:1px solid;
+    font-size:10px;
+}
