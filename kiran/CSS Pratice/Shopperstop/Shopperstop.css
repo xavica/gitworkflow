@@ -1,0 +1,165 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+}
+
+.header {
+    height: 35px;
+    background-color: #fafafa;
+}
+
+.content {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.shipping {
+    padding: 5px 5px;
+}
+
+    .shipping span {
+        margin-right: 5px;
+    }
+
+.contactUs {
+    padding: 5px 5px;
+}
+
+    .contactUs span {
+        margin-right: 5px;
+    }
+
+.sub-header {
+    padding: 10px 10px;
+}
+
+.top a {
+    text-decoration: none;
+}
+
+.top span {
+    margin-left: 5px;
+}
+
+.search span {
+    margin-left: 5px;
+}
+
+.search input {
+    width: 325px;
+}
+
+.navigationBar {
+    background-color: #000000;
+    height: 30px;
+}
+
+    .navigationBar span {
+        margin-left: 1px;
+    }
+
+    .navigationBar a {
+        color: white;
+        text-decoration: none;
+    }
+
+.subNavigationbar {
+    padding: 10px 5px;
+}
+
+    .subNavigationbar span {
+        margin-left: 10px;
+    }
+
+    .subNavigationbar a {
+        color: #716e6d;
+        text-decoration: none;
+    }
+
+.banner img {
+    width: 100%;
+}
+
+.latest {
+    text-align: center;
+}
+.row1{
+    margin-bottom:20px;
+}
+.arrowImg {
+    margin-top: -10px;
+}
+
+.text {
+    color: #716e6d;
+    text-align: center;
+    font-size: 24px;
+}
+
+.price {
+    color: #f96037;
+    font-size: 22px;
+    text-align: center;
+}
+
+.men {
+    border-bottom: 7px solid #D1D2D4;
+}
+
+.women {
+    margin-left: 20px;
+    border-bottom: 7px solid #D1D2D4;
+}
+
+.fiesta {
+    margin-left: 20px;
+    border-bottom: 7px solid #D1D2D4;
+}
+.first{
+    margin-top:15px;
+}
+.shirts {
+    border-bottom: 7px solid #D1D2D4;
+}
+
+.western {
+    margin-left: 20px;
+    border-bottom: 7px solid #D1D2D4;
+}
+
+.footWear {
+    margin-left: 20px;
+    border-bottom: 7px solid #D1D2D4;
+}
