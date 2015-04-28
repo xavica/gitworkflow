@@ -1,0 +1,241 @@
+﻿
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #161616;
+    color: white;
+    height: 100px;
+    font-weight:bold;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.leesburyImage img {
+    padding: 12px 5px;
+}
+
+.giftCard {
+    padding: 40px 0px;
+}
+
+    .giftCard span {
+        margin-left: 10px;
+    }
+
+    .giftCard a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .giftCard a:hover {
+            color: gray;
+        }
+
+.loginButtons {
+    margin-top: 25px;
+}
+
+    .loginButtons a {
+        color: #7f7f7f;
+        letter-spacing: 0.03em;
+        font-size: 11px;
+        font-weight: 900;
+        text-decoration: none;
+    }
+
+    .loginButtons span {
+        margin-left: 10px;
+    }
+
+    .loginButtons a:hover {
+        color: black;
+    }
+    .guest a{
+        color:black;
+    }
+
+.leesburgCorner {
+    width: 25%;
+    color: black;
+}
+
+.firstRow h2 {
+    margin-bottom: 5px;
+    /*font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;*/
+}
+.firstRow p{
+      color: #000;
+        font-size: 13px;
+  letter-spacing: -0.04em;
+}
+.secondRow{
+    margin-top:10px;
+    font-size:13px;
+    line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+.secondRow div{
+    margin-bottom:15px;
+}
+.secondRow a {
+    color: #7f7f7f;
+    text-decoration: none;
+    font-weight: 900;
+}
+.secondRow a:hover{
+    color:black;
+}
+.thirdRow p{
+    font-size:13px;
+    letter-spacing: -0.04em;
+  color: #000;
+}
+.image{
+    width:50%;
+    margin:auto;
+    /*position:relative;
+    right:220px;*/
+  
+    }
+.image img{
+    margin-top:20px;
+    width:889px;
+    position:relative;
+    right:-14px;
+}
+.threeImagesRow{
+    margin-top:15px;
+    margin-left:15px;
+}
+.saveImage{
+    width:25%;
+    margin-right:3px;
+    margin-left:30px;
+   
+   
+}
+.saveImage img{
+    width:270px;
+}
+.coachImage{
+    width:25%;
+     margin-right:3px;
+    
+}
+.coachImage img{
+    width:272px;
+    
+}
+.vipClub img{
+     width:270px;
+    
+}
+.shoppingTrip{
+    background-color:#000000;
+    height:30px;
+    margin-top:15px;
+    color:white;
+  
+}
+.shoppingTrip h3{
+    color:white;
+    text-align:center;
+    padding-top:5px;
+    font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+.icons {
+    margin-top:15px;
+    margin-left:470px;
+}
+.dove{
+    position:relative;
+    top:-4px;
+}
+.capture{
+      position:relative;
+    top:-6px;
+}
+.pIcon{
+position:relative;
+    top:-3px;
+}
+.footer{
+    font-weight: 900;
+  font-size: 11px;
+  margin-top:15px;
+}
+.firstColumn div{
+    margin-bottom:15px;
+    margin-right:50px;
+}
+.firstColumn a{
+    text-decoration:none;
+    color:black;
+    font-size:11px;
+     letter-spacing: 0.1em;
+}
+.firstColumn a:hover{
+    color:gray;
+}
+.findCenter{
+    font-weight: 900;
+  font-size: 11px;
+}
+.findCenter a{
+     text-decoration:none;
+    color:black;
+    font-size:11px;
+    letter-spacing: 0.1em;
+}
+.footer{
+    height:220px;
+}
+.subFooter{
+    font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+}
+.subFooter a{
+    color:black;
+}
+.subFooter p{
+    margin-bottom:0px;
+    font-size:12px;
+}
