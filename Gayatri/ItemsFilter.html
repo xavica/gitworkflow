@@ -1,0 +1,122 @@
+<html>
+<head><title> filtering of items</title></head>
+<style type="text/css">
+    table,tr,td
+    {
+        border: 1px solid black;
+    }
+</style>
+<body>
+<input type='text' data-bind='textInput:searchText' />
+<span data-bind="text:tempValue"></span>
+
+<div data-bind="foreach:categories"> <span data-bind='text:name'></span>
+
+    <table data-bind="foreach:items">
+       <tr>
+            <td data-bind="text:description"></td>
+            <td data-bind="text:discount">%</td>
+        </tr>
+    </table>
+</div>
+<script type="text/javascript" src="../js/jquery.js" ></script>
+<script type="text/javascript" src="../js/lodashmin.js" ></script>
+<script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+<script>
+function GridViewModel() {
+    var that = this;
+    var rawItems = [{
+        id: "1",
+            name: "Cat1",
+        items: [{
+            description: "android",
+               discount: 14
+        }, {
+            description: "motorala",
+               discount: 44
+        },
+        {
+            description: "android",
+               discount: 13
+        }, {
+            description: "motorala",
+               discount: 43
+        },
+         {description: "acer",
+                discount: 61
+        }, {
+            description: "android",
+                discount: 36
+        }]
+    }, {
+        id: "2",
+            name: "Cat2",
+        items: [{
+            description: "acer",
+                discount: 41
+        }, {
+            description: "android",
+                discount: 13
+        },{
+            description: "lenovo",
+                discount: 34
+        },
+        {
+            description: "acer",
+                discount: 11
+        }, {
+            description: "android",
+                discount: 12
+        },{
+            description: "lenovo",
+                discount: 56
+        }]
+    }];
+
+    
+    this.searchText = ko.observable('');
+    this.searchText.subscribe(function () {
+        that.tempValue(that.searchText());
+        if (that.searchText().length) {
+            that.categories(that.filterItems(that.searchText()));
+        } else {
+            that.categories(rawItems);
+        }
+    });
+    this.tempValue = ko.observable('');
+    
+    this.categories = ko.observableArray(rawItems)
+    this.filterItems = function (searchText) {
+        searchText = searchText.toLowerCase();
+        // filter where condition is true
+        var results = _.reduce(rawItems, function (memoCategory, category) {
+            // return true where any outcome has a "test" property defined
+            var resultItems = _.reduce(category.items, function (memoItem, item) {
+                if(item.description.toLowerCase().indexOf(searchText) > -1){
+                    memoItem.push(item); 
+                }
+                 _.sort(memoItem,'discount',false);
+                return memoItem;
+            },[]);
+            // resultItems = _.sortByOrder(resultItems,['discount']);
+            if(resultItems && resultItems.length){
+                memoCategory.push({
+                    id : category.id,
+                    name : category.name,
+                    items : resultItems,
+                });
+            }
+            return memoCategory;
+        },[]);
+      
+        console.log(results);
+        return results;
+    }
+
+}
+var viewModel = new GridViewModel();
+ko.applyBindings(viewModel);
+</script>
+
+</body>
+</html>
