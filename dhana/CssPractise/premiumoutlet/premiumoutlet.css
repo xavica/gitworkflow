@@ -1,15 +1,16 @@
 ﻿
-.clearfix {
-    display: inline-block;
-}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
 /* start commented backslash hack \*/
-* html .clearfix {
-    height: 1%;
-}
-
-.clearfix {
-    display: block;
-}
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
 /* close commented backslash hack */
 .container {
     width: 100%;
@@ -125,8 +126,8 @@
   color: #000;
 }
 .image{
-    width:50%;
-    margin:auto;
+    /*width:50%;*/
+    /*margin:auto;*/
     /*position:relative;
     right:220px;*/
   
