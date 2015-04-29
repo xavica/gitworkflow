@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="normalize css.css">
-	<link rel="stylesheet" type="text/css" href="button.css">
-	<title>buttons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            height: 100px;
+            width: 200px;
+            border: 2px solid red;
+            margin: 50px 10px 20px 30px;
+            padding: 10px 20px;
+            background-color: orange;
+        }
+
+        .second-class {
+            background-color: red;
+        }
+
+        .first-class {
+            background-color: green;
+        }
+
+            .first-class.second-class {
+                background-color: pink;
+            }
+
+        #special {
+            background-color: gray;
+        }
+        .parent-div{
+            background-color:inherit;
+            border-color:transparent;
+            height:auto;
+        }
+        .parent-div div{
+            background-color:cyan;
+        }
+    </style>
+    <title>positioning</title>
 </head>
 <body>
-	<div class="header">
-		<div class="headerContainer">
-			<div>
-				<span>
-					<a href = "www.google.com"> ALLSTORES </a>
-				</span>
-		</div>	
+    <div class="parent-div">
+        <div>no class</div>
 
-	</div>
-
+        <div class="first-class ">1 classes</div>
+        <div class="first-class second-class">two classes </div>
+        <div id="special" class="first-class second-class">
+            two classes+1id
+        </div>
+    </div>
 </body>
 </html>
