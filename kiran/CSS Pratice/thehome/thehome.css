@@ -1,0 +1,232 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.second {
+    margin-right: 25px;
+}
+
+    .second a {
+        text-decoration: none;
+        color: #333;
+        margin-left: 5px;
+    }
+
+    .second span {
+        margin-left: 5px;
+    }
+
+.location {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+    .location a {
+        color: orange;
+        text-decoration: none;
+    }
+
+.ads {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+    .ads span {
+        margin-left: 5px;
+    }
+
+    .ads a {
+        text-decoration: none;
+        color: #333;
+    }
+
+.departments {
+    background: url('../../wallpapers/thehome/4-20-HP-Hero-Landscaping-Rev2.jpg')no-repeat;
+    height: 485px;
+    margin-top: 100px;
+}
+
+.shopDepartment {
+    margin-top: -75px;
+    background-color: #444444;
+    width: 180px;
+    color: white;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.searchall {
+    margin-top: -75px;
+}
+
+.text input {
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.searchall button {
+    width: 150px;
+    height: 40px;
+}
+
+.shop {
+    margin-top: 165px;
+}
+
+    .shop button {
+        width: 250px;
+    }
+
+.project {
+    margin-top: -75px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.diy button {
+    width: 150px;
+}
+
+.upTo {
+    margin-left: 5px;
+    position: relative;
+    right: -5px;
+}
+
+.today {
+    color: grey;
+}
+
+.img1 {
+    border: 1px solid;
+    width: 25%;
+    border-top: none;
+    border-color: gray;
+    padding-left: 50px;
+    height: 350px;
+}
+
+.img2 {
+    border: 1px solid;
+    width: 25%;
+    border-top: none;
+    border-color: gray;
+    padding-left: 50px;
+    height: 350px;
+}
+
+.credit {
+    width: 19%;
+    padding-left: 10px;
+    /*border-right: 1px solid;*/
+}
+
+.install {
+    width: 19%;
+    padding-left: 10px;
+    /*border-right: 1px solid;*/
+}
+
+.moving {
+    width: 19%;
+    padding-left: 10px;
+    /*border-right: 1px solid;*/
+}
+.tools{
+ width: 19%;
+    padding-left: 10px;
+    /*border-right: 1px solid;*/
+}
+.apps{
+ width: 18%;
+    padding-left: 10px;
+}
+.socialIcons{
+    width:19%;
+}
+.email{
+    border:1px solid #BBB;
+      background-color: #eee;
+        box-shadow: 0 1px 2px #333;
+        width:auto;
+        height:125px;
+        padding:5px 5px;
+}
+.dep{
+    width:18%;
+    margin-left:20px;
+    margin-top:-25px;
+}
+.dep h2{
+    color:#666;
+}
+.online{
+     width:18%;
+    margin-left:20px;
+    margin-top:-20px;
+}
+.online h2{
+color:#666;
+line-height:25px;
+}
+.policy{
+    width:18%;
+    margin-left:20px;
+    margin-top:-30px;
+}
+.policy h2{
+color:#666;
+}
+.account{
+width:18%;
+    margin-left:20px;
+    margin-top:-30px;
+}
+.site{
+    width:25%;
+}
+.matter{
+    font-size:10px;
+}
