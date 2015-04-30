@@ -283,78 +283,410 @@
         .verifiedProperties a:hover {
             color: green;
         }
-        .leaveImagination{
-            background-color:#F2F2F2;
-            margin-top:20px;
-            text-align:center;
-            font-size:15px;
-            color:gray;
-            padding:5px 10px;
-        }
-        .exploreProject{
-            background-color:white;
-            /*height:400px;*/
-            margin-top:15px;
-            padding:10px 5px;
-            width:960px;
-        }
-        .desc{
-            position:relative;
-            top:-63px;
-        }
-        .projectButton button{
-            background-color:#FA7510;
-            color:white;
-            border:none;
-            height:30px;
-            border-radius:5px;
-            margin-right:15px;
-        }
+
+.leaveImagination {
+    background-color: #F2F2F2;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: gray;
+    padding: 5px 10px;
+}
+
+.exploreProject {
+    background-color: white;
+    /*height:400px;*/
+    margin-top: 15px;
+    padding: 10px 5px;
+    width: 960px;
+}
+
+.desc {
+    position: relative;
+    top: -63px;
+}
+
+.projectButton button {
+    background-color: #FA7510;
+    color: white;
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
 .virtualTour {
     background-image: url('../../pics/indianproperty/greenbuilding.jpg');
-    margin-top:-14px;
-    height:300px;
+    margin-top: -14px;
+    height: 300px;
 }
-.virtualTour img{
-    position:relative;
-    left:-356px;
-    height:298px;
-}
+
+    .virtualTour img {
+        position: relative;
+        left: -356px;
+        height: 298px;
+    }
+
 .premiumprojectsPatterns {
-    /*background-image: url('../../pics/indianproperty/heading-bg-patten.png');*/ 
+    /*background-image: url('../../pics/indianproperty/heading-bg-patten.png');*/
     /*height:10px;*/
-    background-color:gray;
-   padding:5px 10px;
-
+    background-color: gray;
+    padding: 5px 10px;
     color: #000000;
-  font-size: 15px;
-  font-weight: 500;
-  height: 27px;
-}
-.viewButton button{
-    background-color:orange;
-    color:white;
-    border:none;
-    height:21px;
-    /*border-radius:5px;*/
-    font-size:10px;
-}
-.projectImages{
-    margin-top:15px;
-}
-.readyMove{
-    margin-left:15px;
+    font-size: 15px;
+    font-weight: 500;
+    /*height: 27px;*/
 }
 
-.preLaunches span{
-    margin-right:10px;
+.viewButton button {
+    background-color: orange;
+    color: white;
+    border: none;
+    height: 21px;
+    /*border-radius:5px;*/
+    font-size: 10px;
 }
-.pages{
-    color:gray;
-    font-size:11px;
+
+.projectImages {
+    margin-top: 15px;
 }
-.view a{
-    text-decoration:none;
-    font-size:10px;
-    color:blue;
+
+.readyMove {
+    margin-left: 15px;
 }
+
+.preLaunches span {
+    margin-right: 10px;
+}
+
+.pages {
+    color: gray;
+    font-size: 11px;
+}
+
+.view a {
+    text-decoration: none;
+    font-size: 10px;
+    color: blue;
+}
+
+    .view a:hover {
+        text-decoration: underline;
+    }
+
+.premimumImages {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.arrowIcon {
+    margin-top: 140px;
+    margin-right: 10px;
+}
+
+    .arrowIcon img {
+        height: 41px;
+        width: 31px;
+    }
+
+.arrowIconright {
+    margin-top: 140px;
+    margin-left: 10px;
+}
+
+    .arrowIconright img {
+        height: 41px;
+        width: 31px;
+    }
+
+.aerospaceImage {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+}
+
+.spaceImage {
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 1px 0 #999;
+    width: 154px;
+}
+
+.imageDesc {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+    .imageDesc a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #06c;
+    }
+
+        .imageDesc a:hover {
+            text-decoration: underline;
+        }
+/*.imageDesc span{
+    font-weight:500;        
+}*/
+.viewMore {
+    margin-top: 32px;
+    position: relative;
+    left: 28px;
+}
+
+    .viewMore button {
+        color: white;
+        background: #0e79ba;
+        border: none;
+        text-align: center;
+        border-radius: 3px;
+        width: 60%;
+        height: 28px;
+        padding: 5px;
+    }
+
+.smRoyal {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    margin-left: 10px;
+}
+
+.smRoyalImage {
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 1px 0 #999;
+    width: 154px;
+}
+
+.svHills {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    margin-left: 10px;
+}
+
+.svHillsimage {
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 1px 0 #999;
+    width: 154px;
+    height: 79px;
+}
+
+.greenHomes {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    margin-left: 10px;
+}
+
+.greenHomesimage {
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 1px 0 #999;
+    width: 154px;
+    height: 79px;
+}
+
+.newLaunches {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.prelaunchesPages {
+    margin-right: 202px;
+}
+
+    .prelaunchesPages span {
+        margin-left: 10px;
+    }
+
+.newLaunches {
+    margin-top: 15px;
+}
+
+.newlaunchesImages {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.avPride {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    margin-left: 20px;
+}
+
+.prideviewMore button {
+    margin-top: 12px;
+    color: white;
+    background: #0e79ba;
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    width: 60%;
+    height: 28px;
+    padding: 5px;
+    position: relative;
+    left: 28px;
+}
+
+.templeTown {
+    width: 18%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+    margin-left: 20px;
+}
+
+    .templeTown img {
+        width: 154px;
+        height: 76px;
+    }
+
+.arrowIcon2 {
+    margin-left: -40px;
+    margin-top: 140px;
+    margin-right: 10px;
+}
+
+    .arrowIcon2 img {
+        height: 41px;
+        width: 31px;
+    }
+
+.appsImages {
+    border: 1px solid gray;
+    border-color: gray;
+    background-color: #F2F2F2;
+    margin-top: 25px;
+    height: 100px;
+    padding: 10px 10px;
+}
+
+.app {
+    width: 20%;
+    margin-right: 5x;
+}
+
+.featuredProjects {
+    margin-top: 15PX;
+}
+
+.projectFeatures {
+    background-color: gray;
+    padding: 5px 10px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    /*height: 27px;*/
+}
+
+.viewButton span {
+    margin-left: 10px;
+}
+
+.featuredImages {
+    margin-top: 15px;
+    margin-left: 60px;
+}
+
+.arrowIcon3 {
+    margin-left: 14px;
+    margin-top: 140px;
+    margin-right: 10px;
+}
+
+    .arrowIcon3 img {
+        height: 41px;
+        width: 31px;
+    }
+
+.rajapushpa {
+    border: 2px solid gray;
+    width: 115px;
+    height: 71px;
+    /*padding:1px;*/
+    position: relative;
+    left: 11px;
+    margin-bottom: 10px;
+}
+
+    .rajapushpa img {
+        width: 113px;
+        height: 69px;
+    }
+
+.imageDesc1 {
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: gray;
+}
+
+    .imageDesc1 a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #06c;
+    }
+
+        .imageDesc1 a:hover {
+            text-decoration: underline;
+        }
+
+.raghavendra {
+    margin-left: 25px;
+}
+
+.price {
+    color: black;
+}
+
+.aerospaceImage1 {
+    width: 15%;
+    border: 1px solid gray;
+    padding: 10px 5px;
+}
+
+.featureBuilders {
+    margin-top: 15PX;
+    background-color: gray;
+    padding: 5px 10px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+}
+.featureBuilders span{
+    margin-left:10px;
+}
+.featureImages{
+    margin-top:10px;
+    margin-left:5px;
+}
+.leftarrowImage{
+    padding:5px 10px;
+}
+ .leftarrowImage img {
+        height: 30px;
+        width: 25px;
+    }
+ .radheyImage{
+     width:15%;
+     border:1px solid gray;
+      text-align:center;
+ }
+ .radheyImage img{
+     width:111px;
+     height:63px;
+     border:1px solid gray;
+    
+ }
+ /*.imageName{
+     text-align:center;
+ }*/
+ .imageName a{
+     text-decoration:none;
+     /*text-align:center;*/
+     color:gray;
+ }
