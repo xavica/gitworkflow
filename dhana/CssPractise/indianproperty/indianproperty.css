@@ -662,22 +662,24 @@
 }
 .featureImages{
     margin-top:10px;
-    margin-left:5px;
+    margin-left:55px;
 }
-.leftarrowImage{
-    padding:5px 10px;
-}
- .leftarrowImage img {
+
+ .arrows img {
         height: 30px;
         width: 25px;
     }
+ 
  .radheyImage{
-     width:15%;
+     width:12%;
      border:1px solid gray;
       text-align:center;
+      padding:5px 5px;
+      margin-right:3px;
+      
  }
  .radheyImage img{
-     width:111px;
+     width:100px;
      height:63px;
      border:1px solid gray;
     
@@ -690,3 +692,123 @@
      /*text-align:center;*/
      color:gray;
  }
+ .residentalLinks{
+     background-color:gray;
+     padding:10px 10px;
+     color:black;
+     margin-top:15px;
+ }
+ /*.residentalLinks button{
+     width:180px;
+     height:46px;
+     background-color:#596075;
+     border:none;
+     color:white;
+ }*/
+ .residentalLinks span{
+    margin-right:100px;
+ }
+ .residentalLinks a{
+     text-decoration:none;
+     color:black;
+ }
+.apartments {
+    background: url('../../pics/indianproperty/apt-active.png')no-repeat;
+    /*width:50%;*/
+    margin-top:15px;
+    color:white;
+    height:50px;
+    padding:16px 48px;
+}
+.apartmentdesc a{
+    /*margin-left:15px;*/
+    font-size:12px;
+    text-align:center;
+    color:white;
+    text-decoration:none;
+  
+}
+.independentVilla{
+    border:1px solid gray;
+    border-radius:10px;
+    width:150px;
+    /*height:40px;*/
+    margin-left:45px;
+    margin-top:-10px;
+    padding:10px 10px;
+}
+.independentVilla a{
+    text-decoration:none;
+    color:gray;
+}
+.raghavaContent{
+    width:30%;
+    font-size:12px;
+}
+.showingName{
+    color:gray;
+    font-size:11px;
+    margin-left:15px;
+    line-height:20px;
+}
+.showingName span{
+    margin-right:4px;
+}
+.showingName a{
+    text-decoration:none;
+    font-size:13px;
+
+}
+.priceList{
+    color:black;
+}
+.firstRow{
+    margin-bottom:10px;
+}
+.spremeResidency{
+    margin-left:5px;
+}
+.saiRam{
+    margin-left:5px;
+}
+
+.galleryBanner{    
+    width:80%;
+    
+}
+.gallerybannerFirstrow{
+    background-color:gray;
+    padding:10px 5px;
+    
+}
+.gallerybannerSecondrow {
+    border:1px solid green;
+    /*padding:10px 5px;*/
+    margin-top:10px;
+    height:200px;
+}
+.leftGallery {
+    width:225px;
+  
+}
+.leftGallery div{
+    margin-bottom:2px;
+}
+
+.onlyBorder{
+    width:223px;
+    height:20px;
+    border:1px solid gray;
+    background-color:#B6C3CF;
+}
+.prime{
+      border:1px solid gray;
+    background-color:#5CAEFF;
+     /*width:225px;*/
+}
+.prime a{
+    text-decoration:none;
+    color:white;
+    
+
+}
