@@ -1,0 +1,232 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background-color: #555555;
+    height: 75px;
+    padding: 10px;
+}
+
+.content {
+    width: 1211px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.account {
+    color: white;
+    width: 40%;
+}
+
+.store {
+    color: white;
+    line-height: 20px;
+    width: 40%;
+}
+
+.cart {
+    width: 20%;
+    text-align: right;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.pickUp a {
+    text-decoration: none;
+    color: #c45e2a;
+    font-size: 20px;
+}
+
+.support span {
+    margin-left: 5px;
+}
+
+.support a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.product {
+    /*margin-top: -75px;*/
+    width: 200px;
+    color: white;
+    line-height: 45px;
+}
+
+    .product h2 {
+        background-color: #444444;
+        padding-left: 15px;
+        border-radius: 5px;
+    }
+
+.deals {
+    background-color: #F1F2F5;
+    margin-top: -25px;
+    padding-left: 15px;
+}
+
+    .deals a {
+        text-decoration: none;
+        color: #222;
+        font-size: 20px;
+    }
+
+.promo {
+    margin-top: 20px;
+}
+
+.brand {
+    color: white;
+}
+
+    .brand h2 {
+        background-color: #444444;
+        padding-left: 15px;
+        border-radius: 5px;
+        width: 225px;
+    }
+
+.shop {
+    background: url('../../wallpapers/microcenter/images_sf_grid_categoryHead.jpg') no-repeat right;
+    width: 200px;
+}
+
+.search input {
+    /*font-size: 16px;*/
+    color: #879294;
+    border: 1px solid #879294;
+    width: 466px;
+    padding: 7px;
+    background: #fff;
+    margin-top: 15px;
+}
+
+.images {
+    margin-left: 210px;
+    margin-top: -650px;
+}
+
+.shop {
+    background: url('../../wallpapers/microcenter/images_sf_grid_categoryHead.jpg');
+    height: 40px;
+    padding-left: 45px;
+}
+
+.comp {
+    width: 25%;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 25px;
+    color: #b20a06;
+    background: #F1F1F1;
+}
+
+.tab {
+    width: 25%;
+}
+
+.cpu {
+    width: 25%;
+}
+
+.monitor {
+    width: 25%;
+}
+
+.hp {
+    width: 25%;
+}
+
+.sam {
+    width: 25%;
+}
+
+.laptop {
+    width: 25%;
+}
+
+.power {
+    width: 25%;
+}
+
+.intel {
+    width: 25%;
+}
+.applemac{
+width: 25%;
+}
+.appleipad{
+width: 25%;
+}
+.delltab{
+width: 25%;
+}
+.amd{
+width: 25%;
+}
+.crucial{
+width: 25%;
+}
+.asus{
+width: 25%;
+}
+.toshiba{
+width: 25%;
+}
+.ssd{
+width: 25%;
+}
+.msi{
+width: 25%;
+}
+.motherboard{
+width: 25%;
+}
+.segate{
+width: 25%;
+}
+.matsunchi{
+width: 25%;
+}
