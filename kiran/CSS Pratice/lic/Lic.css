@@ -109,7 +109,7 @@
     margin-top:20px;
 }
 .insurance{
-    width:45%;
+    width:42%;
     border:1px solid;
     border-radius:10px;
     border-bottom:none;
@@ -138,9 +138,60 @@ padding:5px 5px;
     border-radius:10px;
     border-bottom:none;
     background-color:#E6E9FA;
-    width:40%;
+    width:28%;
 }
 .plans h4{
     color:#01679A;
     padding-left:10px;
+}
+.two{
+    margin-left:35px;
+}
+.image {
+    background: url('../../wallpapers/lic/bgn.jpg')no-repeat;
+    height: 10px;
+    background-repeat: repeat-y;
+    margin-top:-7px;
+}
+.footer{
+    height:125px;
+}
+.home{
+    width:86%;
+    border:1px solid;
+    height:55px;
+    margin-top:5px;
+}
+.annual{
+      font-size: 11px;
+  padding-left: 50px;
+ }
+.annual a{
+    text-decoration:none;
+     color: #000000;
+}
+.annual span{
+    margin-left:10px;
+}
+.feedback{
+font-size: 11px;
+  padding-left: 85px;
+}
+.feedback a{
+    text-decoration:none;
+     color: #000000;
+}
+.feedback span{
+margin-left:2px;
+}
+.agent{
+font-size: 11px;
+  padding-left: 250px;
+}
+.agent a{
+    text-decoration:none;
+     color: #000000;
+}
+.agent span{
+    margin-left:2px;
 }
