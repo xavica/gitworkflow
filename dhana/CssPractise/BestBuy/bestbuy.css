@@ -44,7 +44,7 @@
     background-color: #004A88;
     position: relative;
     margin-top: 260px;
-       height: 260px;
+    height: 260px;
 }
 
 .bestbuyImage img {
@@ -99,11 +99,10 @@
 
 .internationalCustomers {
     margin-left: 30px;
-    /*width:468px;*/
     width: 30%;
     margin-top: 20px;
     border: 1px solid #DCDDDE;
-    height: 200px;
+    /*height: 200px;*/
 }
 
     .internationalCustomers h4 {
@@ -138,10 +137,6 @@
 
 .clients {
     width: 30%;
-    margin: auto;
-    position: relative;
-    top: 38px;
-    left: 20px;
     border: 1px solid;
 }
 

@@ -1,0 +1,156 @@
+﻿body {
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+    background-color:#EFEFEF;
+    height:500px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+.content1 {
+    width: 980px;
+    margin: 0 auto;
+    background-color:white;
+    height:500px;
+}
+
+.header {
+    background-color:#565656;
+    padding:5px 5px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+.headerLeft span{
+    margin-left:10px;
+
+}
+.headerLeft a{
+    text-decoration:none;
+    font-size: 0.75em;
+  line-height: 34px;
+    color:white;
+
+}
+.headerLeft a:hover{
+text-decoration:underline;
+}
+.hederRight {
+    margin-top:5px;
+}
+.hederRight img{
+    width:30px;
+}
+.subHeader{
+    margin-top:10px;
+}
+
+.subheaderFirstrow span{
+    margin-left:10px;
+}
+.subheaderFirstrow a{
+    color:black;
+    text-decoration:none;
+     font-size: 12px;
+    font-weight: bold;
+}
+.subheaderFirstrow a:hover{
+    text-decoration:underline;
+}
+.subheaderSecondrow{
+    margin-top:10px;
+}
+.clickCoupons{
+    position:relative;
+    top:29px;
+}
+   
+.clickCoupons a{
+    text-decoration:none;
+  color: #0060A9;
+  font-weight:bold;
+}
+.clickCoupons a:hover{
+    text-decoration:underline;
+  
+}
+
+.Links span{
+    margin-left:10px;
+
+}
+.Links a{
+    text-decoration:none;
+    color:black;
+    font-size: 11px;
+  font-weight: bold;
+}
+.Links a:hover{
+    text-decoration:underline;
+}
+.signin a{
+    text-decoration:none;
+    color: #0060A9;
+    font-size: 14px;
+  line-height: 0.79em;
+  font-weight: normal;
+}
+.allDepartments{
+    width:20%;
+      /*font-family: Georgia;
+  font-weight: normal;
+  
+  line-height: 41px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;*/  
+  line-height: 26px;
+  background-color: #F2F2F2;
+ 
+ 
+}
+.allDepartments a{
+    color: #00539b;
+    text-decoration:none;
+    font-weight: bold;
+  font-size: 0.875em;
+   padding: 0 10px 0 15px;
+ 
+}
+.shopDepartments{
+    background-color:#4385BE;
+   
+   
+}
+.shopDepartments a{
+     color:white;
+     text-decoration:none;
+
+}
+

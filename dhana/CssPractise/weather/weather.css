@@ -1,0 +1,464 @@
+﻿body {
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+    background-color: #EDEDED;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content1 {
+    background-color: white;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.header {
+    background-color: #08141E;
+    padding: 10px 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.headerLeft a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.headerLeft span {
+    margin-right: 20px;
+}
+
+.headerRight span {
+    margin-left: 20px;
+}
+
+.headerRight a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.weatherBanner {
+    background: url('../../pics/weather/banner.jpg')no-repeat;
+    background-size: 1365px;
+    height: 424px;
+}
+
+.weatherchannelLogo {
+    width: 69%;
+    background: rgba(42,62,76,0.8);
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#9900132D,endColorstr=#9900132D);*/
+    /*height: 30px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+    .weatherchannelLogo img {
+        /*width:50px;*/
+        width: 5%;
+        height: 40px;
+        position: relative;
+        top: -5px;
+    }
+
+    .weatherchannelLogo a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .weatherchannelLogo span {
+        margin-right: 10px;
+    }
+
+.disneyWorld {
+    margin-top: 0px;
+    background-color: white;
+    opacity: .8;
+}
+
+    .disneyWorld input {
+        width: 305px;
+        height: 45px;
+        font-size: 13px;
+        font-weight: bold;
+        /*padding: 3px 38px 5px 0 !important;*/
+        /*color: #393939;*/
+    }
+
+.foreCast {
+    width: 15%;
+    background-color: rgba(0,0,0,0.7);
+    margin-top: 15px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+    .foreCast div {
+        margin-bottom: 15px;
+    }
+
+    .foreCast a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1px;
+    }
+
+.eightySix a {
+    color: white;
+    text-decoration: none;
+    font-size: 46px;
+    font-weight: 300;
+}
+
+.temperature {
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    font-weight: 300;
+}
+
+    .temperature a {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+.mysteryBrewing {
+    text-align: center;
+    margin-top: -84px;
+}
+
+.brewing a {
+    color: white;
+    text-decoration: none;
+}
+
+.brewing button {
+    background: #007ada;
+    color: white;
+    border: none;
+    width: 135px;
+    height: 37px;
+    margin-top: -5px;
+    font-weight: bold;
+}
+
+    .brewing button:hover {
+        background-color: #3ABCFF;
+    }
+
+.images {
+    width: 80%;
+    /*width:75%;*/
+    margin-top: 15px;
+}
+
+.firstRowimages {
+    width: 20%;
+    /*width:15%;*/
+    margin-bottom: 15px;
+}
+
+    .firstRowimages img {
+        width: 174px;
+        height: 100px;
+    }
+
+.imageDesc {
+    border: 1px solid white;
+    background-color: white;
+    width: 174px;
+    margin-top: -2px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+    .imageDesc a {
+        color: #393939;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+        .imageDesc a:hover {
+            color: #3ABCFF;
+        }
+
+.faintHeart {
+    margin-right: 25px;
+}
+
+.earthQuake {
+    width: 20%;
+    /*background-image: url('../../pics/weather/nepal-arc-background.jpg');
+    width:150px;
+    height:200px;*/
+    /*margin-right:10px;*/
+    margin-top: 15px;
+}
+
+    .earthQuake img {
+        width: 269px;
+        height: 250px;
+        position: relative;
+        right: 55px;
+    }
+
+.redCross img {
+    width: 269px;
+    height: 45px;
+}
+
+.weatherRadar {
+    width: 73%;
+    background-color: white;
+}
+
+.weatherHeading {
+    /*border:1px solid blue;*/
+    border-top: 2px solid blue;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+    .weatherHeading a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+        .weatherHeading a:hover {
+            color: #3ABCFF;
+            text-decoration: underline;
+        }
+
+.weatherRadarimages {
+    width: 25%;
+    padding-left: 10px;
+}
+
+    .weatherRadarimages img {
+        width: 144%;
+        /*width:407px;*/
+        height: 200px;
+    }
+
+.radarDesc {
+    margin-top: 10px;
+}
+
+    .radarDesc a {
+        color: gray;
+        text-decoration: none;
+    }
+
+        .radarDesc a:hover {
+            text-decoration: underline;
+            color: #3ABCFF;
+        }
+
+    .radarDesc p {
+        font-size: 12px;
+    }
+
+.severeWeatherimages {
+    width: 60%;
+    padding-right: 10px;
+}
+
+.increaseWeather img {
+    /*width:25%;*/
+    width: 209px;
+}
+
+.crushed img {
+    /*width:25%;*/
+    width: 209px;
+}
+
+.Alert {
+    margin-top: 10px;
+}
+
+.seeMore button {
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    right: -8px;
+    border-right: none;
+}
+
+.favouriteThings {
+    width: 25%;
+    background-color: white;
+    border-top: 2px solid #697da2;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.amazingImage img {
+    width: 248px;
+    position: relative;
+    right: 9px;
+}
+
+
+.tvWeeks {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .tvWeeks a {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        color: gray;
+        text-decoration: none;
+    }
+
+        .tvWeeks a:hover {
+            text-decoration: underline;
+            color: #3ABCFF;
+        }
+
+.weatherUpdates {
+    width: 73%;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.latestUpdatesfirstrow {
+    border-top: 2px solid #697da2;
+    border-bottom: 1px solid gray;
+    padding: 5px 10px;
+}
+
+    .latestUpdatesfirstrow a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+
+        .latestUpdatesfirstrow a:hover {
+            text-decoration: underline;
+            color: #3ABCFF;
+        }
+
+.latestUpdatesSecondrow {
+    padding: 5px 10px;
+    margin-top:10px;
+}
+
+.severeweatherDesc {
+    width: 45%;
+}
+
+    .severeweatherDesc a {
+        text-decoration: none;
+        color: black;
+        
+    }
+
+        .severeweatherDesc a:hover {
+            color: #3ABCFF;
+        }
+
+    .severeweatherDesc p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .causesImages{
+        width:40%;
+       margin-left:5px;
+    }
+    .gaintImage{
+        width:30%;
+    }
+    .gaintImage img{
+        width:180px;
+    }
+    .linkCauses{
+        margin-top:1px;
+       margin-left:10px;
+        
+    }
+    .gaintImage a{
+        text-decoration:none;
+        color:black;
+      font-weight: 400;
+  font-size: 12px;
+        
+    }
+    .gaintImage a:hover{
+        text-decoration:underline;
+        color: #3ABCFF;
+        
+    }
+    .seeMore2 button{
+        background-color: white;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    right: -112px;
+    border-right: none;
+    }
+    .popularImages{
+        width:24%;
+        background-color:white;
+        padding:5px 5px;
+        border-top:2px solid #3ABCFF;
+        
+    }
