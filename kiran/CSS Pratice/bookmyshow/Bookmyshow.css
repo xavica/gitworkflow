@@ -220,11 +220,12 @@ text-decoration:none;
  }
 .payment{
     border:1px solid;
-    width:35%;
+    width:30%;
     padding:8px;
     margin-top:10px;
     margin-left:10px;
     line-height:15px;
+    font-size:13px;
 }
 .payment a{
     text-decoration:none;
@@ -239,8 +240,8 @@ text-decoration:none;
 }
 .blog{
     border:1px solid;
-    height:275px;
-    width:35%;
+    height:300px;
+    width:30%;
     padding:8px;
     margin-top:10px;
     margin-left:10px;
@@ -269,5 +270,26 @@ color: #58595B;
 .two h4{
 color: #58595B;
 margin-top:-5px;
+}
+.features{
+    margin-left:10px;
+    width:65%;
+}
+.feat h3{
+      color: #D81B22;
+}
+.photos {
+    background: url('../../wallpapers/bookmyshow/1004958.jpg')no-repeat;
+    height:250px;
+    width:156px;
+}
+.subTop{
+    background-color:black;
+    color:white;
+    height:50px;
+    width:135px;
+    position:relative;
+    bottom:-185px;
+    padding-left:10px;
 }
 
