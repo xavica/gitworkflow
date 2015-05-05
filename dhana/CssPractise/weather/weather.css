@@ -336,8 +336,15 @@
     height: 40px;
     position: relative;
     right: -8px;
+     border-color:#EDEDED;
     border-right: none;
+    border-bottom:none;
 }
+.seeMore:hover{
+color: #3ABCFF;
+}
+
+
 
 .favouriteThings {
     width: 25%;
@@ -398,7 +405,7 @@
 
 .latestUpdatesSecondrow {
     padding: 5px 10px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .severeweatherDesc {
@@ -408,7 +415,6 @@
     .severeweatherDesc a {
         text-decoration: none;
         color: black;
-        
     }
 
         .severeweatherDesc a:hover {
@@ -420,45 +426,380 @@
         font-size: 14px;
         line-height: 20px;
     }
-    .causesImages{
-        width:40%;
-       margin-left:5px;
+
+.causesImages {
+    width: 40%;
+    margin-left: 5px;
+}
+
+.gaintImage {
+    width: 30%;
+}
+
+    .gaintImage img {
+        width: 180px;
     }
-    .gaintImage{
-        width:30%;
-    }
-    .gaintImage img{
-        width:180px;
-    }
-    .linkCauses{
-        margin-top:1px;
-       margin-left:10px;
-        
-    }
-    .gaintImage a{
-        text-decoration:none;
-        color:black;
-      font-weight: 400;
-  font-size: 12px;
-        
-    }
-    .gaintImage a:hover{
-        text-decoration:underline;
+
+.linkCauses {
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+.gaintImage a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+    .gaintImage a:hover {
+        text-decoration: underline;
         color: #3ABCFF;
-        
     }
-    .seeMore2 button{
-        background-color: white;
+
+.seeMore2 button {
+    background-color: white;
     width: 100px;
     height: 40px;
     position: relative;
     right: -112px;
     border-right: none;
+    border-bottom:none;
+}
+.seeMore2:hover{
+color: #3ABCFF;
+}
+
+.popularImages {
+    width: 24%;
+    background-color: white;
+    padding: 5px 5px;
+    border-top: 2px solid #3ABCFF;
+}
+
+.bridgesImage {
+    margin-top: 10px;
+}
+
+.brImage {
+    width: 20%;
+}
+
+    .brImage img {
+        width: 117px;
+        height: 58px;
     }
-    .popularImages{
-        width:24%;
-        background-color:white;
-        padding:5px 5px;
-        border-top:2px solid #3ABCFF;
-        
+
+.Links a {
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+}
+
+    .Links a:hover {
+        text-decoration: underline;
+        color: #3ABCFF;
     }
+
+.allergyForecast {
+    margin-top: -336px;
+    width: 73%;
+    background-color: white;
+    /*height:252px;*/
+}
+
+.allergyforecastFirstrow {
+    padding: 10px 4px;
+    border-top: 2px solid #697da2;
+    border-bottom: 1px solid gray;
+}
+
+    .allergyforecastFirstrow a {
+        text-decoration: none;
+    }
+
+.allergyTracker {
+    position:relative;
+    background-image: url('../../pics/weather/gsk-hp-sponsorship-980x551-MAR2014.jpg');
+    height: 292px;
+    width: 75%;
+    /*width:360px;*/
+}
+.new {
+    
+    /*width: 50px;
+  height: 100%;
+  background-color: transparent;
+  background-color: rgba(255,255,255,0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF);
+  position: absolute;
+  padding-top: 25px;
+  text-align: center*/
+    margin-left:10px;
+    position:relative;
+    top:10px;
+}
+.trackerDesc{
+    margin-left:100px;
+}
+.searchBox{
+    padding:15px 5px;
+      background: rgba(255,255,255,0.4);
+      width:60%;
+  font-size: 14px;
+  color: white;
+
+}
+.searchBox a{
+    text-decoration:none;
+    color:white;
+}
+.trackerDesc a{
+text-decoration:none;
+color:white;
+}
+.allergryStorm {
+    width: 25%;
+    background-image: url('../../pics/weather/3505555511b-1427490153-31.jpg');
+   height: 292px;
+   
+}
+.allergryStorm a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+    bottom:-123px;
+    font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  padding-left:15px;
+}
+.allergyforecastthirdRow{
+    margin-top:20px;
+}
+.hazardsImage {
+    width: 24%;
+    background-image: url('../../pics/weather/ddi-optimized.jpg');
+    height:250px;
+}
+.hazardsimageDesc{
+    position:relative;
+    bottom:-118px;
+    padding-left:15px;
+}
+.hazardsimageDesc a{
+    text-decoration:none;
+    color:white;
+    
+}
+
+.hazardsimageDesc h3{
+    font-size: 16px;
+  font-weight: 700;
+
+}
+.hazardsimageDesc p{
+    font-size: 18px;
+  /*font-weight: 300;*/
+  line-height: 20px;
+  padding-right: 45px;
+}
+.gearImage {
+    width: 24%;
+    background-image: url('../../pics/weather/llbean270-250-v1.jpg');
+    height: 250px;
+    margin-left:8px;
+}
+.pollenForecast {
+    width: 24%;
+    background-image: url('../../pics/weather/pollen-forecast-optimized.jpg');
+    height: 250px;
+    margin-left: 7px;
+}
+.photos{
+    width:73%;
+    margin-top:15px;
+    background-color:white;
+}
+.photofirstRow{
+     border-top: 2px solid #697da2;
+    border-bottom: 1px solid #999;
+    padding:5px 10px;
+}
+.photofirstRow a{
+    text-decoration:none;color:black;
+    line-height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  
+}
+.photofirstRow a:hover{
+     color: #3ABCFF;
+}
+.photoImages{
+    margin-top:10px;
+    padding-left:10px;
+}
+.earthPhoto{
+    width:30%;
+}
+.earthPhoto img{
+    width:320px;
+}
+.stuning a{
+    text-decoration:none;
+    color:gray;
+    font-size:12px;
+}
+.stuning a:hover{
+color: #3ABCFF;
+}
+.earthDesc p{
+    font-size:12px;
+}
+.tworowsImages{
+    width:50%;
+    margin-left:115px;
+}
+
+.americanIsaland img{
+    width:170px;
+}
+.americanIsaland a{
+    text-decoration:none;
+    color:gray;
+    font-size:14px;
+   
+
+}
+.americanIsaland a:hover{
+    color: #3ABCFF;
+}
+.springWild{
+    margin-left:3px;
+}
+.springWild img{
+    width:170px;
+}
+.springWild a{
+    text-decoration:none;
+    color:gray;
+    font-size:14px;
+}
+.springWild a:hover{
+    color: #3ABCFF;
+}
+.secondrowImages {
+    margin-top: 15px;
+}
+.see button{
+    border-color:#EDEDED;
+    width:109px;
+    height:39px;
+    border-right:none;
+    border-bottom:none;
+    
+    background-color:white;
+    margin-top:8px;
+    position: relative;
+  right: -29px;
+}
+.see:hover{
+   color: #3ABCFF;
+}
+.features{
+    width:73%;
+   
+    background-color:white;
+    margin-top:15px;
+    border:1px solid white;
+}
+.featuresFirstrow{
+     padding:10px 10px;
+     font-weight:bold;
+     font-size:13px; 
+     width:40%;  
+     
+}
+.featuresFirstrow label{
+    font-weight:bold;
+}
+.featureDesc{
+    margin-top:15px;
+}
+.featureDesc a{
+    text-decoration:none;
+    color: #393939;
+    line-height: 20px;
+    font-size:12px;
+}
+.featureDesc a:hover{
+    color: #3ABCFF;
+}
+/*.featuresFirstrow span{
+    margin-right:20px;
+}*/
+.footer{
+    background-color:#BFBFBF;
+    height:133px;
+    margin-top:15px;
+    text-align:center;
+    border-bottom:1px solid gray;
+    }
+.icons{
+    color:white;
+    padding:10px 5px;
+    font-size:25px;
+}
+.iconsImages a{
+    text-decoration:none;
+}
+.iconsImages img{
+    position:relative;
+    top:10px;
+}
+.icons span{
+    margin-right:10px;
+}
+.feedBack{
+    margin-top:10px;
+}
+.feedBack span{
+    margin-right:10px;
+    text-align:center;
+    
+}
+.feedBack a{
+    text-decoration:none;
+      color: #393939;
+      font-size: 14px;
+  line-height: 30px;
+}
+.feedBack a:hover{
+     color: #3ABCFF;
+}
+.subFooter{
+    background-color:#BFBFBF;
+    text-align:center;
+    padding:20px 10px;
+    font-size:12px;
+    color: #393939;
+    
+}
+.copyRight {
+    font-size:15px;
+    color: #393939;
+    margin-right:10px;
+
+}
+.subFooter span{
+    margin-right:5px;
+}
+.subFooter a{
+    text-decoration:none;
+   color: #393939;
+.subFooter a:hover{
+    text-decoration:underline;
+    color: #3ABCFF;
+}
