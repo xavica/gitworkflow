@@ -1,39 +1,49 @@
 ﻿body {
 }
+
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
 /* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
 /* close commented backslash hack */
 
 .container {
     width: 100%;
-    background-color:#EFEFEF;
-    height:500px;
+    background-color: #EFEFEF;
+    /*height: 500px;*/
 }
 
 .content {
     width: 980px;
     margin: 0 auto;
 }
+
 .content1 {
     width: 980px;
     margin: 0 auto;
-    background-color:white;
-    height:500px;
+    background-color: white;
+    /*height: 500px;*/
 }
 
 .header {
-    background-color:#565656;
-    padding:5px 5px;
+    background-color: #565656;
+    padding: 5px 5px;
 }
 
 .left {
@@ -47,110 +57,267 @@
 .row {
     clear: both;
 }
-.headerLeft span{
-    margin-left:10px;
 
+.headerLeft span {
+    margin-left: 10px;
 }
-.headerLeft a{
-    text-decoration:none;
+
+.headerLeft a {
+    text-decoration: none;
     font-size: 0.75em;
-  line-height: 34px;
-    color:white;
+    line-height: 34px;
+    color: white;
+}
 
-}
-.headerLeft a:hover{
-text-decoration:underline;
-}
+    .headerLeft a:hover {
+        text-decoration: underline;
+    }
+
 .hederRight {
-    margin-top:5px;
-}
-.hederRight img{
-    width:30px;
-}
-.subHeader{
-    margin-top:10px;
+    margin-top: 5px;
 }
 
-.subheaderFirstrow span{
-    margin-left:10px;
+    .hederRight img {
+        width: 30px;
+    }
+
+.subHeader {
+    margin-top: 10px;
+    padding: 5px 5px;
 }
-.subheaderFirstrow a{
-    color:black;
-    text-decoration:none;
-     font-size: 12px;
+
+.subheaderFirstrow span {
+    margin-left: 10px;
+}
+
+.subheaderFirstrow a {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
     font-weight: bold;
 }
-.subheaderFirstrow a:hover{
-    text-decoration:underline;
-}
-.subheaderSecondrow{
-    margin-top:10px;
-}
-.clickCoupons{
-    position:relative;
-    top:29px;
-}
-   
-.clickCoupons a{
-    text-decoration:none;
-  color: #0060A9;
-  font-weight:bold;
-}
-.clickCoupons a:hover{
-    text-decoration:underline;
-  
+
+    .subheaderFirstrow a:hover {
+        text-decoration: underline;
+    }
+
+.subheaderSecondrow {
+    margin-top: 10px;
 }
 
-.Links span{
-    margin-left:10px;
-
+.clickCoupons {
+    position: relative;
+    top: 29px;
 }
-.Links a{
-    text-decoration:none;
-    color:black;
+
+    .clickCoupons a {
+        text-decoration: none;
+        color: #0060A9;
+        font-weight: bold;
+    }
+
+        .clickCoupons a:hover {
+            text-decoration: underline;
+        }
+
+.Links span {
+    margin-left: 10px;
+}
+
+.Links a {
+    text-decoration: none;
+    color: black;
     font-size: 11px;
-  font-weight: bold;
+    font-weight: bold;
 }
-.Links a:hover{
-    text-decoration:underline;
-}
-.signin a{
-    text-decoration:none;
+
+    .Links a:hover {
+        text-decoration: underline;
+    }
+
+.signin a {
+    text-decoration: none;
     color: #0060A9;
     font-size: 14px;
-  line-height: 0.79em;
-  font-weight: normal;
+    line-height: 0.79em;
+    font-weight: normal;
 }
-.allDepartments{
-    width:20%;
-      /*font-family: Georgia;
-  font-weight: normal;
-  
-  line-height: 41px;
-  text-transform: uppercase;
-  font-size: 15px;
-  color: #fff;*/  
-  line-height: 26px;
-  background-color: #F2F2F2;
- 
- 
+
+.searchItems {
+    margin-top: 10px;
+    /*padding:5px 5px;*/
 }
-.allDepartments a{
+
+.allDepartments {
+    width: 25%;
+    line-height: 27px;
+    background-color: #F2F2F2;
+    border:1px solid  #F2F2F2;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+    .allDepartments a {
+        color: #00539b;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.875em;
+        /*padding: 0 10px 0 15px;*/
+    }
+
+        .allDepartments a:hover {
+            background-color: white;
+            text-decoration: underline;
+        }
+
+.shopDepartments {
+    background-color: #4385BE;
+    width: 237px;
+    margin-left: -8px;
+    padding-left: 5px;
+    margin-top: -5px;
+    height: 32px;
+}
+
+    .shopDepartments a {
+        color: white;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+.banner {
+    width: 74%;
+    margin-left: 1px;
+}
+
+.bannerFirstrow {
+    margin-top: 0px;
+}
+
+.searchBox {
+    background-color: #3C6E99;
+    width: 610px;
+    color: white;
+    padding: 5px 5px;
+    margin-right: 1px;
+}
+
+    .searchBox span {
+        margin-right: 10px;
+    }
+
+    .searchBox input {
+        width: 390px;
+    }
+
+.cartButton button {
+    color: white;
+    background-color: #4A8BC2;
+    border: none;
+    height: 32px;
+    width: 104px;
+}
+
+.bannerSecondrow {
+    padding: 5px 5px;
+}
+
+    .bannerSecondrow img {
+        width: 714px;
+    }
+
+.bannerThirdrow {
+    background-color: #C3D3E2;
+    width: 702px;
+    /*height:30px;*/
+    padding: 10px 5px;
+    margin-left: 5px;
     color: #00539b;
-    text-decoration:none;
     font-weight: bold;
-  font-size: 0.875em;
-   padding: 0 10px 0 15px;
- 
-}
-.shopDepartments{
-    background-color:#4385BE;
-   
-   
-}
-.shopDepartments a{
-     color:white;
-     text-decoration:none;
-
+    font-size: 13px;
 }
 
+.signupButton input {
+    height: 20px;
+    padding-left: 5px;
+}
+
+.signupButton button {
+    background-color: #4CA2C6;
+    color: white;
+    border: none;
+    height: 26px;
+    border-radius: 5px;
+}
+
+.bannerFourthrow {
+    background-image: url('../../pics/costcopics/banner-bg-mvm-150223.jpg');
+    margin-top: 15px;
+    /*height:20px;*/
+    padding: 10px 5px;
+    width: 710px;
+    margin-left: 5px;
+    color: white;
+}
+
+    .bannerFourthrow span {
+        margin-right: 10px;
+    }
+
+    .bannerFourthrow a {
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+.wareHouse a {
+    color: black;
+    font-size:18px;
+}
+.wareHousea:hover{
+    text-decoration:underline;
+}
+.bannerFourthrow a:hover{
+    text-decoration:underline;
+}
+.giftcardsImages{
+    padding:5px 10px;
+}
+.allImages{
+    width:70%;
+    margin-top:10px;
+}
+.pics{
+    width:20%;
+    
+}
+/*.firstRowimages{
+    margin-right:10px;
+}*/
+.firstRowimages img{
+    width:100px;
+}
+ .imageDesc{
+     position:relative;
+     top:-174px;
+ }
+.imageDesc a{
+    font-family: Georgia;
+  font-weight: normal;
+  font-size: 18px;
+  color: #222222;
+}
+.imageDesc a{
+    text-decoration:none;
+     color: #222222;
+}
+.shopNow a{
+    text-decoration:none;
+   font-size: 10px;
+  color: #0060a9;
+
+}
+.suppliesLast a{
+    text-decoration:none;
+    font-size: 10px;
+  color: #666666;
+}
