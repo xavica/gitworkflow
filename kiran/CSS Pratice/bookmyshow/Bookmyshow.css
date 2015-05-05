@@ -232,10 +232,10 @@ text-decoration:none;
     color:#06f;
 }
 .smiles img{
-    margin-left:80px;
+    margin-left:90px;
 }
 .votes span{
-    margin-left:65px;
+    margin-left:75px;
     color:#58595B;
 }
 .blog{
@@ -278,10 +278,25 @@ margin-top:-5px;
 .feat h3{
       color: #D81B22;
 }
-.photos {
+.liar {
     background: url('../../wallpapers/bookmyshow/1004958.jpg')no-repeat;
     height:250px;
     width:156px;
+}
+.education {
+    background: url('../../wallpapers/bookmyshow/1004981.jpg') no-repeat;
+    height: 250px;
+    width: 156px;
+}
+.summer {
+    background: url('../../wallpapers/bookmyshow/1004700.jpg') no-repeat;
+    height: 250px;
+    width: 156px;
+}
+.splash {
+    background-image: url('../../wallpapers/bookmyshow/1004753.jpg');
+    height: 235px;
+    width: 145px;
 }
 .subTop{
     background-color:black;
@@ -292,4 +307,48 @@ margin-top:-5px;
     bottom:-185px;
     padding-left:10px;
 }
-
+.change{
+    margin-top:10px;
+    padding-left:15px;
+    color: #8B8B8B;
+    font-size:13px;
+}
+.footer{
+    background-color:#58595B;
+    color:white;
+}
+.about{
+    width:20%;
+    padding-left:15px;
+    padding-top:15px;
+    line-height:30px;
+}
+.aboutdesc{
+ width:45%;
+    padding-left:15px;
+    padding-top:15px;
+    line-height:30px;
+}
+.aboutdesc a{
+    text-decoration:none;
+    color:white;
+}
+.aboutdesc span{
+    margin-left:2px;
+}
+.social{
+    width:30%;
+    padding-top:15px;
+    padding-right:15px;
+}
+.tworow input{
+    width:275px;
+    padding-left:10px;
+}
+.tworow button{
+    color:black;
+    width:289px;
+}
+.copyright{
+    text-align:center;
+}
