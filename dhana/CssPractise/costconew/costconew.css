@@ -283,18 +283,19 @@
     padding:5px 10px;
 }
 .allImages{
-    width:70%;
+    width:75%;
     margin-top:10px;
 }
 .pics{
     width:30%;
     
+    
 }
 .firstRowimages{
-    margin-right:10px;
+    margin-right:24px;
 }
 .firstRowimages img{
-    width:200px;
+    width:211px;
 }
  .imageDesc{
      position:relative;
@@ -302,7 +303,7 @@
      left:5px;
  }
  .imageDesc div{
-     line-height:11px;
+     line-height:13px;
  }
 .imageDesc a{
     font-family: Georgia;
@@ -313,6 +314,16 @@
 .imageDesc a{
     text-decoration:none;
      color: #222222;
+}
+.priceRow{
+ margin-top:8px;
+
+}
+.priceRow a{
+    color: #0060a9;
+    font-size:13px;
+    font-weight:bold;
+   
 }
 .shopNow a{
     text-decoration:none;
@@ -326,4 +337,231 @@
     line-height:.5px;
   color: #666666;
   line-height:1px;
+}
+.weekImages{
+    width:25%;
+    position:relative;
+    right:-29px;
+}
+.newImage {
+    background: url('../../pics/costcopics/ad-bg-whatsnew.jpg')no-repeat;
+    height:120px;
+     padding: 10px;
+}
+
+.what a{
+    color: #e51937;
+  font-size: 25px;
+  line-height: 26px;
+  text-decoration:none;
+}
+.what a:hover{
+     /*text-decoration:underline;*/
+     border-bottom:2px solid blue;
+}
+
+.week a{
+    color: #000000;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  /*line-height: 18px;*/
+  text-decoration:none;
+}
+.week a:hover{
+     text-decoration:underline;
+}
+.shop a:hover{
+    text-decoration:underline;
+}
+.earnImage{
+    margin-top:-10px;
+}
+.featuredProducts{
+    width:75%;
+     padding:5px 10px;
+     position:relative;
+     top:-64px;
+    
+    
+}
+.featuresFirstrow{
+      border-bottom: 1px solid #dbdbdb;
+  
+    font-size:20px;
+    font-weight:bold;
+    line-height:25px;
+    
+}
+.featuredImages{
+    width:23%;
+    margin-right:3px;
+}
+.featuresSecondrow{
+    margin-top:15px;
+    
+}
+.descFirst a{
+    color: #666;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration:none;
+}
+.descFirst a:hover{
+   border-bottom:1px solid #23ABDD;
+}
+.descSecond {
+    color: #005DAB;
+  font-size: 11px;
+  font-weight: bold;
+}
+.descPrice{
+    color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+.costcomemberIcon{
+    margin-top:29px;
+}
+.costcomemberIcon img{
+    width:125px;
+    height:25px;
+}
+.moreDetails {
+    margin-top:10px;
+    width:23%;
+    margin-right:13px;
+    margin-bottom:15px;
+}
+.signUp{
+margin-top:10px;
+    width:23%;
+}
+.signUp button{
+   background-color:#35628A;
+   border:none;
+   color:white;
+   width:131px;
+   height:30px;
+   font-size:12px;
+   font-weight:bold;
+   border-radius:10px;
+}
+.moreDetails button{
+     background-color:#4CA2C6;
+   border:none;
+   color:white;
+   width:94px;
+   height:30px;
+   font-size:12px;
+   font-weight:bold;
+   border-radius:10px;
+}
+.featuresThirdrow{
+     border-top: 1px solid #dbdbdb;
+     margin-top:15px;
+}
+.rowsImages{
+    margin-top:10px;
+    /*margin-right:10px;*/
+}
+.memberIcon img{
+    margin-top:44px;
+}
+.featuresFourthrow{
+   border-top: 1px solid #dbdbdb;
+}
+.mDeatils{
+    margin-top:64px;
+}
+.mDeatils button{
+     background-color:#4CA2C6;
+   border:none;
+   color:white;
+   width:94px;
+   height:30px;
+   font-size:12px;
+   font-weight:bold;
+   border-radius:10px;
+ }
+.featureFourthmemicon{
+    margin-bottom:-6px;
+}
+.featuresFifthrow{
+    margin-top:15px;
+     border-top: 1px solid #dbdbdb;
+}
+.verDetails button{
+    margin-top:15px;
+}
+.osaki button{
+    margin-top:29px;
+}
+.headingBuyer{
+    margin-top:25px;
+    border-bottom: 1px solid #dbdbdb;
+  margin: 0 0 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #222222;
+  font-size: 24px;
+  font-weight:normal;
+}
+.buyerImages{
+    padding-left:10px;
+   
+    
+}
+.buyerButton{
+    margin-top:35px;
+}
+/*.vitadesc{
+    margin-top:16px;
+}*/
+.mixyMember{
+    position:relative;
+    top:32px;
+}
+.mixyButton{
+    margin-top:36px;
+}
+.stoneButton{
+    margin-top:77px;
+}
+.footer{
+    background-color:#E3E3E3;
+}
+.plans{
+    width:15%;
+     padding-left:10px;
+     padding-top:10px;
+   
+}
+.fHeading  a{
+    color:black;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration:none;
+}
+.fHeading a:hover{
+    text-decoration:underline;
+}
+.about{
+    margin-top:-5px;
+    
+}
+.about a{
+    font-size: 0.8em;
+  line-height: 1.2em;
+  color: #5f5f5f;
+  margin-bottom: 0.5em;
+}
+.about a{
+    text-decoration:none;
+}
+.about a:hover{
+    text-decoration:underline;
+}
+.videos{
+    position:relative;
+    top:-10px;
 }
