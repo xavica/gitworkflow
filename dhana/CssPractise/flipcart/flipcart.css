@@ -1,0 +1,153 @@
+﻿body {
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+    background-color:#F7F5EE;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+.header{
+    background-color:#005387;
+    height:85px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+
+.headerFirstrow{
+    color: rgba(255,255,255,0.8);
+}
+.headerFirstrow a{
+    color: rgba(255,255,255,0.8);
+    text-decoration:none;
+    font-size:13px;
+}
+.flipkartLogo{
+    width:15%;
+}
+.flipkartLogo a{
+    text-decoration:none;
+    font-size:12px;
+    color:white;
+    font-weight:bold;
+}
+.logodesc{
+    margin-top:-5px;
+    text-align:center;
+}
+.searchBar{
+    width:75%;
+    margin-top:10px;
+    margin-left:10px;
+    
+}
+.searchBar input{
+    width:560px;
+    height:31px;
+}
+.searchBar button{
+    height:35px;
+    width:110px;
+    margin-left:-6px;
+    background-color:#FDD922;
+    color:gray;
+    margin-top:0px;
+    border:none;
+}
+.cartButton{
+    width:14%;
+    position:relative;
+    top:-36px;
+}
+.cartButton button{
+    background-color:#1475AC;
+    width:140px;
+    height:35px;
+    color:white;
+    border:1px solid #005387;
+    font-size:15px;
+}
+.zero{
+    border-radius: 50px;
+  background-color: #fff;
+  color: #007fb8;
+ 
+  vertical-align: middle;
+    padding: 2px;
+  font-weight: bold;
+  line-height: 15px;
+  padding: 2px;
+}
+.navigationBar{
+    background-color:#0A3151;
+    padding:5px 5px;
+    color:#1475AC;
+    margin-top:-17px;
+}
+.navigationBar span{
+    margin-left:15px;
+}
+.navigationBar a{
+    /*text-decoration:none;*/
+    color:white;
+    font-size:11px;
+    font-weight:bold;
+
+}
+.mens a{
+    text-decoration:dotted;
+    
+}
+.thingsNames{
+    background-color:white;
+    border:1px solid white;
+    padding:5px 5px;
+    color:gray;
+}
+.thingsNames a{
+    font-size:12px;
+    color:gray;
+    text-decoration:none;
+}
+.thingsNames a:hover{
+    text-decoration:underline;
+    color:#3095CD;
+}
+.thingsNames span{
+    margin-left:3px;
+}
