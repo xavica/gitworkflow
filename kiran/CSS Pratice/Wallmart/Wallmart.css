@@ -157,3 +157,163 @@
     text-decoration: none;
 }
 
+.coat {
+    border: 1px solid;
+    margin-left: 10px;
+    width: 185px;
+    padding: 5px;
+}
+
+.bed img {
+    width: 186px;
+    height: 160px;
+}
+
+.rate {
+    color: #3B9BD3;
+}
+
+.dec a {
+    text-decoration: none;
+    color: black;
+}
+
+    .dec a:hover {
+        color: #3B9BD3;
+    }
+
+.look {
+    border-top: 1px solid grey;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 197px;
+    margin-left: -5px;
+}
+
+    .look a {
+        text-decoration: none;
+        color: #3B9BD3;
+        padding-left: 5px;
+    }
+
+.america {
+    border: 1px solid grey;
+    width: 150px;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+    .america a {
+        text-decoration: none;
+        color: #3B9BD3;
+    }
+
+.viewed {
+    background-color: #F2F8FD;
+    padding: 12px;
+}
+
+.tablet {
+    border: 1px solid grey;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 24px;
+    background-color: white;
+    line-height: 21px;
+    width: 15%;
+}
+
+.subview {
+    width: 80%;
+}
+
+.next {
+    width: 17%;
+    background-color: white;
+    border: 1px solid grey;
+    line-height: 20px;
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: 29px;
+}
+
+.likethese {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.trending {
+    background-color: #F2F8FD;
+    padding: 10px 15px;
+}
+
+.backyard {
+    width: 14%;
+    background-color: white;
+    border: 1px solid grey;
+    line-height: 20px;
+    margin-left: 20px;
+    padding: 5px;
+    margin-top: 29px;
+}
+.save{
+    margin-top:10px;
+}
+.save span{
+    margin-left:20px;
+}
+.save button{
+    background-color:#F58238;
+    border:none;
+    width:100px;
+    height:40px;
+    color:white;
+}
+.save input{
+    width:200px;
+    height:35px;
+    padding-left:10px;
+}
+.save a{
+    text-decoration:none;
+    color:#3B9BD3;
+}
+.icons a{
+    text-decoration:none;
+    color:#3B9BD3;
+    font-size:20px;
+}
+.secondfooter{
+    margin-top:20px;
+}
+.secondfooter a{
+    text-decoration:none;
+    color:#3B9BD3;
+}
+.secondfooter img{
+    width:100px;
+}
+.creditcard{
+    width:20%;
+}
+.getto{
+width:20%;
+}
+.walmart{
+width:20%;
+}
+.service{
+    width:20%;
+}
+.spotlight{
+width:20%;
+}
+.copyright{
+    background-color:#F2F8FD;
+    height:50px;
+}
+.copy{
+    text-align:center;
+    padding-top:10px;
+}
