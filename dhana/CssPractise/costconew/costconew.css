@@ -287,18 +287,22 @@
     margin-top:10px;
 }
 .pics{
-    width:20%;
+    width:30%;
     
 }
-/*.firstRowimages{
+.firstRowimages{
     margin-right:10px;
-}*/
+}
 .firstRowimages img{
-    width:100px;
+    width:200px;
 }
  .imageDesc{
      position:relative;
-     top:-174px;
+     top:-150px;
+     left:5px;
+ }
+ .imageDesc div{
+     line-height:11px;
  }
 .imageDesc a{
     font-family: Georgia;
@@ -319,5 +323,7 @@
 .suppliesLast a{
     text-decoration:none;
     font-size: 10px;
+    line-height:.5px;
   color: #666666;
+  line-height:1px;
 }
