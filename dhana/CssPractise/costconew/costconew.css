@@ -154,7 +154,7 @@
     background-color: #F2F2F2;
     border: 1px solid #d6d6d6;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 5px 15px;
 }
 
     .allDepartments a {
@@ -172,9 +172,9 @@
 
 .shopDepartments {
     background-color: #4385BE;
-    width: 234px;
-    margin-left: -11px;
-    padding-left: 10px;
+    width: 228px;
+    margin-left: -16px;
+    padding-left: 16px;
     margin-top: -5px;
     height: 32px;
 }
@@ -190,9 +190,9 @@
     margin-left: 1px;
 }
 
-.bannerFirstrow {
+/*.bannerFirstrow {
     margin-top: 0px;
-}
+}*/
 
 .searchBox {
     background-color: #3C6E99;
