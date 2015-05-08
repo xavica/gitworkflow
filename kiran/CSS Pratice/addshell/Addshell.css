@@ -1,0 +1,62 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+.about{
+    margin-left:35px;
+    margin-top:20px;
+}
+.about button{
+    background-color:#516CA1;
+    color:white;
+    height:30px;
+    border:none;
+}
+.about input{
+    width:35px;
+}
+.navigationbar a{
+    text-decoration:none;
+    color:black;
+}
+.about span{
+    margin-left:5px;
+}
