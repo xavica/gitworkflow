@@ -773,7 +773,7 @@
 }
 
 .galleryBanner{    
-    width:80%;
+    width:75%;
     
 }
 .gallerybannerFirstrow{
@@ -782,12 +782,13 @@
     
 }
 .gallerybannerSecondrow {
-    border:1px solid green;
+   border: 1px solid #C0E0E3;
     /*padding:10px 5px;*/
     margin-top:10px;
-    height:200px;
+    /*height:200px;*/
 }
-.leftGallery {
+
+/*.leftGallery {
     width:225px;
   
 }
@@ -804,11 +805,14 @@
 .prime{
       border:1px solid gray;
     background-color:#5CAEFF;
-     /*width:225px;*/
+     width:225px;
 }
 .prime a{
     text-decoration:none;
     color:white;
     
 
-}
+}*/
+ .pageNo{
+     font-size:12px;
+ }
