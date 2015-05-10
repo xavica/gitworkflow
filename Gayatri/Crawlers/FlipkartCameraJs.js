@@ -25,7 +25,7 @@ casper.then(function () {
         var tempProducts = [];
         var elements = document.querySelectorAll('div[data-pid*="CAM"]');
          for (i = 0; i < elements.length; i++) {
-            var titleElement = elements[i].querySelector('.pu-title');
+            var titleElement = elements[i].querySelector('#products > a');
             var actualPriceElement = elements[i].querySelector('.pu-old');
             var discountPriceElement = elements[i].querySelector('div.pu-final > span');
             var discountElement = elements[i].querySelector('span.pu-off-per');

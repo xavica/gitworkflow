@@ -24,16 +24,16 @@ casper.then(function () {
         var tempProducts = [];
         var elements = document.querySelectorAll('.listingblock');
          for (i = 0; i < elements.length; i++) {
-            var titleElement = elements[i];
+            var titleElement = elements[i].querySelector('div.itemtitle > p > a');
             var actualPriceElement = elements[i].querySelector('div.itemPriceStriked > p');
             var discountPriceElement = elements[i].querySelector('div.itemPrice > p');
             var discountElement = elements[i].querySelector('div.discountLabel > div > span');
 
-            var title = titleElement && titleElement.getAttribute('title') || '';
+            var title = titleElement && titleElement.innerText || '';
             var actualPrice = actualPriceElement && actualPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
             var discountPrice = discountPriceElement && discountPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
-            var str = discountElement && discountElement.textContent || '';
-            var discount = str.replace(/[^0-9]/g, '') || 0;
+            var discount = discountElement && discountElement.textContent .replace(/[^0-9]/g, '') || 0;
+            
            
             if (title && discount) {
             // __utils__.echo("begin");

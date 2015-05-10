@@ -50,12 +50,12 @@ function grabProductDetails() {
             var discount = str && str.substring(str.indexOf('(') + 1, str.indexOf('(') + 3).replace(/[^0-9]/g, '') || 0;
 
             if (title && discount) {
-                __utils__.echo("begin");
-                __utils__.echo(title);
-                __utils__.echo(actualPrice);
-                __utils__.echo(discountPrice);
-                __utils__.echo(discount);
-                __utils__.echo("end");
+                // __utils__.echo("begin");
+                // __utils__.echo(title);
+                // __utils__.echo(actualPrice);
+                // __utils__.echo(discountPrice);
+                // __utils__.echo(discount);
+                // __utils__.echo("end");
 
                 tempProducts.push({
                     "title": title,
