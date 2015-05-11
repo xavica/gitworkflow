@@ -1084,10 +1084,11 @@
      margin-bottom:8px;
  }
  .launchesRow{
-   margin-top:10px;
+   margin-top:30px;
  }
  .launchesHyd{
-     width:25%;
+     width:30%;
+     margin-right:28px;
  }
  .launcheDesc{
       border-top: 3px solid #c8c8c8;
@@ -1096,6 +1097,9 @@
       font-size: 12px;
   color: #666;
   /*line-height:22px;*/
+ }
+ .newlHyd{
+     font-size:12px;
  }
  .launcheDesc a{
      font-size: 13px;
@@ -1122,4 +1126,16 @@
  .launcheDesc2 a:hover{
      color:green;
      text-decoration:underline;
+ }
+ .views{
+      margin-top:15px;
+ }
+ .views a{
+     color: #0080c2;
+     text-decoration:none;
+      font-size: 12px;
+     
+ }
+ .views a:hover{
+      color:green;
  }
