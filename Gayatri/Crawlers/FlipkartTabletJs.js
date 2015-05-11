@@ -1,14 +1,3 @@
-function Product(title, description, imageUrl, actualPrice, discountPrice, discount, redirectUrl) {
-    this.title = title;
-    this.description = description;
-    this.imageUrl = imageUrl;
-    this.actualPrice = actualPrice;
-    this.discountPrice = discountPrice;
-    this.discount = discount;
-    this.redirectUrl = redirectUrl;
-
-}
-
 var productsList = [];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -37,12 +26,12 @@ casper.then(function () {
             var discount = str.replace(/[^0-9]/g, '') || 0;
            
             if (title && discount) {
-            __utils__.echo("begin");
-            __utils__.echo(title);
-            __utils__.echo(actualPrice);
-            __utils__.echo(discountPrice);
-            __utils__.echo(discount);
-            __utils__.echo("end");
+            // __utils__.echo("begin");
+            // __utils__.echo(title);
+            // __utils__.echo(actualPrice);
+            // __utils__.echo(discountPrice);
+            // __utils__.echo(discount);
+            // __utils__.echo("end");
            
                 tempProducts.push({
                     "title": title,

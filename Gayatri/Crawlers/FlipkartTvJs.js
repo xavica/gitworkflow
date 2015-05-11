@@ -30,19 +30,19 @@ casper.then(function () {
             var discountPriceElement = elements[i].querySelector('div.pu-final > span');
             var discountElement = elements[i].querySelector('span.pu-off-per');
 
-            var title = titleElement && titleElement.textContent.trim() || '';
+            var title = titleElement && titleElement.innerText || '';
             var actualPrice = actualPriceElement && actualPriceElement.textContent.replace(/[^0-9]/g, '') || 0;
             var discountPrice = discountPriceElement && discountPriceElement.textContent.replace(/[^0-9]/g, '') || 0;
             var str = discountElement && discountElement.textContent || '';
             var discount = str.replace(/[^0-9]/g, '') || 0;
            
             if (title && discount) {
-            __utils__.echo("begin");
-            __utils__.echo(title);
-            __utils__.echo(actualPrice);
-            __utils__.echo(discountPrice);
-            __utils__.echo(discount);
-            __utils__.echo("end");
+            // __utils__.echo("begin");
+            // __utils__.echo(title);
+            // __utils__.echo(actualPrice);
+            // __utils__.echo(discountPrice);
+            // __utils__.echo(discount);
+            // __utils__.echo("end");
            
                 tempProducts.push({
                     "title": title,
