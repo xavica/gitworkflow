@@ -108,7 +108,7 @@ TabletLinks.forEach(function (TabletCrawler) {
                 var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                 sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                 var str = discountElement && discountElement.textContent || '';
-                var discount = str && str.substring(str.indexOf('(') + 1, str.indexOf('(') + 3).replace(/[^0-9]/g, '') || 0;
+                var discount = str && str.substring(str.indexOf('(') + 1, str.indexOf('%')).replace(/[^0-9]/g, '') || 0;
                 var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                 var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -122,11 +122,11 @@ TabletLinks.forEach(function (TabletCrawler) {
                     fullRedirectUrl = redirectUrl;
                 }
                 if (title && discount && actualPrice && redirectUrl) {
-                    __utils__.echo(title);
+                    //__utils__.echo(title);
                     //__utils__.echo(imageUrl);
                     //__utils__.echo(actualPrice);
                     //__utils__.echo(sellingPrice);
-                    //__utils__.echo(discount);
+                    __utils__.echo(discount);
                     //__utils__.echo(fullRedirectUrl);
                     tempProducts.push({
                         "title": title,
