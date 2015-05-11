@@ -1,13 +1,3 @@
-function Product(title, description, imageUrl, actualPrice, discountPrice, discount, redirectUrl) {
-    this.title = title;
-    this.description = description;
-    this.imageUrl = imageUrl;
-    this.actualPrice = actualPrice;
-    this.discountPrice = discountPrice;
-    this.discount = discount;
-    this.redirectUrl = redirectUrl;
-
-}
 
 var productsList = [];
 var casper = require('casper').create();
