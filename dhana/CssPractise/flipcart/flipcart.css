@@ -209,7 +209,7 @@
     }
 
 .deals {
-    width: 70%;
+    width: 75%;
     margin-top: 15px;
 }
 
@@ -250,11 +250,7 @@
 
 .womensFootwear {
     width: 24%;
-    /*border: 1px solid blue;
-    box-sizing: border-box;
-    padding: 5px 5px;*/
     margin-top: 5px;
-    /*margin-right:4px;*/
     margin-left: 5px;
 }
 
@@ -283,7 +279,6 @@
 }
 
 .secondRowf {
-    /*margin-top: 7px;*/
     text-align: center;
 }
 
@@ -318,102 +313,138 @@
     font-weight: bold;
     font-size: 12px;
 }
-
-.goneFlash {
-    width: 70%;
-    margin-top: 15px;
+.flash{
+    margin-top:10px;
+    color:white;
 }
-
-.flashFirstrow {
-    background-color: #3f3f3f;
-    padding: 10px 5px;
-    width: 720px;
-    font-size: 15px;
+.flashSecondrow{
+    margin-top:8px;
+}
+.flashImages a{
+    text-decoration:none;
+}
+.flashImages:hover{
+    border:1px solid yellow;
+}
+.mobileThird{
+    margin-top:0px;
+}
+electronics{
+    border:1px solid gray;
+}
+.electThirdrow a{
+    text-decoration:none;
+}
+.arrivals{
+    background-color:white;
+    /*box-shadow: 0 0 2px 0 #d3cbb8;*/
+}
+.arivalFirst{
+    border-bottom: 1px solid #f4f0e4;
+    padding:5px 10px;
+}
+.arivalFirst span{
+    margin-right:15px;
+}
+.arr{
+    color: #333;
+  border-bottom: 2px solid #ffd926;
+  border-right:1px solid gray;
+  padding-left:5px;
+}
+.arr a{
+    text-decoration:none;
+    font-size:12px;
     font-weight: bold;
-    color: white;
+    color:black;
+    
 }
-
-.flashSecondrow {
-    margin-top: 5px;
+.arr2 a{
+    text-decoration:none;
+    color:gray;
+    font-size:12px;
 }
-
-.phonePics {
-    width: 25%;
-    margin-right: 3px;
+.arrvialSecond{
+    margin-top:10px;
 }
-
-    .phonePics:hover {
-        border: 1px solid blue;
-    }
-
-.phonePics2 {
-    width: 25%;
-    margin-right: 10px;
-}
-
-    .phonePics2:hover {
-        border: 1px solid blue;
-    }
-
-    .phonePics2 img {
-        width: 380px;
-    }
-
-.phonePics3 {
-    position: relative;
-    right: -200px;
-}
-
-    .phonePics3:hover {
-        border: 1px solid blue;
-    }
-
-.specialDays {
-    width: 70%;
-    margin-top: 10px;
-}
-
-.style {
-    color: #ccc;
-    text-shadow: rgba(0,0,0,0.74902) 0 -1px 1px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.specialImagefirst{
-    width:30%;
-     margin-right: 117px;
-}
-
-.specialImagefirst:hover{
-     border: 1px solid yellow;
-}
-.specialImage{
+.arrivalImage{
     width:20%;
-    margin-right: 37px;
+    margin-left:34px;
+
+}
+.arrivalImage img{
+    /*width:150px;*/
+    max-height:100px;
+    max-width:150px;
+    margin-bottom:5px;
+}
+.arrivalImage a{
+    font-size:13px;
+    text-decoration:none;
+    color:gray;
+}
+.arrDesc{
+    margin-bottom:5px;
+    line-height:12px;
+}
+.arrDesc a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+.price{
+    border-top:1px solid gray;
+    padding-top:5px;
+    color:black;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.strike{
+    font-size:10px;
+    margin-bottom:5px;
+    color:gray;
+  
+}
+.fashion{
+    margin-top:15px;
+    background-color:white;
+}
+.fashFirst{
+    color:white;
+}
+.fashSecond{
+    margin-top:10px;
+}
+.text{
+    text-align:center;
+}
+.men{
+    margin-left:73px;
+}
+.fasImage{
+margin-top:10px;
+}
+.fashThird
+{
+    margin-top:8px;
+}
+.spectsDesc{
+    margin-top:32px;
+}
+.watchImage img{
     position:relative;
-    left:61px;
+    left:25px;
 }
-.specialImage:hover {
-    border: 1px solid yellow;
+.homeLiving{
+    margin-top:10px;
 }
-.specialThirdrow{
-    width:70%;
+.homeSecond{
+    background-color:white;
+    margin-top:-5px;
+    padding-top:15px;
 }
-.thirdrowImages{
-    margin-right:55px;
-    width:25%;
+.hDecor{
+   margin-left:20px;
 }
-.thirdrowImages:hover{
-     border: 1px solid yellow;
-}
-.diamondImage{
-     border: 1px solid yellow;
-     width:25%;
-}
-.diamondImage:hover{
-    border: 1px solid yellow;
-}
-.diamondImage img{
-    width:377px;
-    height:249px;
+.homeThird{
+    margin-top:6px;
 }
