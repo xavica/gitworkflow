@@ -1,0 +1,4 @@
+ Regarding "Evaluate" Method:
+
+1. It does't accept forEach Method, it will iterate the loop but will not execute statements inside.
+2. It does't work for the string function "startsWith()"

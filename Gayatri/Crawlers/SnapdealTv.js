@@ -11,23 +11,23 @@ function Product(title, description, imageUrl, actualPrice, discountPrice, disco
 
 var productsList = [];
 var page = require('webpage').create();
-page.open("http://www.snapdeal.com/products/mobiles-tablets?q=Price%3A2331%2C63299&sort=plrty", function () {
+page.open("http://www.snapdeal.com/products/electronic-tv-accessories?sort=plrty&", function () {
 
 
     productsList = page.evaluate(function () {
         var tempProducts = [];
-        var elements = document.querySelectorAll('.productWrapper');
+        var elements = document.querySelectorAll('div[categoryid="64"]');
         for (i = 0; i < elements.length; i++) {
 
-            var titleElement = elements[i].querySelector('div.product-title > a');
-            var actualPriceElement = elements[i].querySelector('#price');
-            var discountPriceElement = elements[i].querySelector('#disc > strike');
-            var discountElement = elements[i].querySelector('#disc > s');
+            var titleElement = elements[i].querySelector('div.outerImg > div > a > img');
+            var actualPriceElement = elements[i].querySelector('span > strike');
+            var discountPriceElement = elements[i];
+            var discountElement = elements[i].querySelector('span > s');
 
 
-            var title = titleElement && titleElement.innerText || '';
+            var title = titleElement && titleElement.getAttribute('title') || '';
             var actualPrice = actualPriceElement.innerText.replace(/[^0-9]/g, '')|| 0;
-            var discountPrice = discountPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
+            var discountPrice = discountPriceElement.getAttribute('price').replace(/[^0-9]/g, '') || 0;
             var discount = discountElement.innerText.replace(/[^0-9]/g, '').trim() || 0;
 
             //__utils__.echo("begin");
