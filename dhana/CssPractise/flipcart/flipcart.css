@@ -24,16 +24,17 @@
 /* close commented backslash hack */
 .container {
     width: 100%;
-    background-color:#F7F5EE;
+    background-color: #F7F5EE;
 }
 
 .content {
     width: 980px;
     margin: 0 auto;
 }
-.header{
-    background-color:#005387;
-    height:85px;
+
+.header {
+    background-color: #005387;
+    height: 85px;
 }
 
 .left {
@@ -49,105 +50,401 @@
 }
 
 
-.headerFirstrow{
+.headerFirstrow {
     color: rgba(255,255,255,0.8);
 }
-.headerFirstrow a{
-    color: rgba(255,255,255,0.8);
+
+    .headerFirstrow a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+.flipkartLogo {
+    width: 15%;
+}
+
+    .flipkartLogo a {
+        text-decoration: none;
+        font-size: 12px;
+        color: white;
+        font-weight: bold;
+    }
+
+.logodesc {
+    margin-top: -5px;
+    text-align: center;
+}
+
+.searchBar {
+    width: 75%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+    .searchBar input {
+        width: 560px;
+        height: 31px;
+    }
+
+    .searchBar button {
+        height: 35px;
+        width: 110px;
+        margin-left: -6px;
+        background-color: #FDD922;
+        color: gray;
+        margin-top: 0px;
+        border: none;
+    }
+
+.cartButton {
+    width: 14%;
+    position: relative;
+    top: -36px;
+}
+
+    .cartButton button {
+        background-color: #1475AC;
+        width: 140px;
+        height: 35px;
+        color: white;
+        border: 1px solid #005387;
+        font-size: 15px;
+    }
+
+.zero {
+    border-radius: 50px;
+    background-color: #fff;
+    color: #007fb8;
+    vertical-align: middle;
+    padding: 2px;
+    font-weight: bold;
+    line-height: 15px;
+    padding: 2px;
+}
+
+.navigationBar {
+    background-color: #0A3151;
+    padding: 5px 5px;
+    color: #1475AC;
+    margin-top: -17px;
+}
+
+    .navigationBar span {
+        margin-left: 22px;
+    }
+
+    .navigationBar a {
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+        font-weight: bold;
+    }
+
+.mens {
+    /*text-decoration:dotted;*/
+    border-bottom: dotted;
+}
+
+.thingsNames {
+    background-color: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+    padding: 5px 5px;
+    color: gray;
+}
+
+    .thingsNames a {
+        font-size: 12px;
+        color: gray;
+        text-decoration: none;
+    }
+
+        .thingsNames a:hover {
+            text-decoration: underline;
+            color: #3095CD;
+        }
+
+    .thingsNames span {
+        margin-left: 3px;
+    }
+
+.smartChoiceimages {
+    width: 70%;
+    margin-top: 10px;
+}
+
+.smartSecondrow {
+    margin-top: 10px;
+}
+
+.smartThirdrow {
+    width: 104%;
+    background: #333;
+    padding: 5px 5px;
+    margin-top: -5px;
+    border: 3px solid #333;
+    border-top-color: rgb(51, 51, 51);
+    border-top-style: solid;
+    border-top-width: 2px;
+}
+
+.womens {
+    width: 19%;
+    background: linear-gradient(to bottom,#505050,#424242);
+    text-align: center;
+    margin-right: 7px;
+}
+
+    .womens a {
+        text-shadow: -1px -1px 1px #333;
+        color: #fff;
+        text-decoration: none;
+        font-size: 11px;
+    }
+
+    .womens :hover {
+        background-color: white;
+        color: black;
+    }
+
+.deals {
+    width: 75%;
+    margin-top: 15px;
+}
+
+.dealsFirstrow {
+    background-color: #3f3f3f;
+    padding: 10px 5px;
+    width: 720px;
+}
+
+.day a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*.triangle{
+    border-left: 5px solid #fff;
+    border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}*/
+.timer {
+    color: #ffd300;
+}
+
+    .timer a {
+        color: #ffd300;
+        text-decoration: none;
+    }
+
+    .timer span {
+        margin-left: 10px;
+    }
+
+.dealsSecondrow {
+    background-color: white;
+    width: 729px;
+}
+
+.womensFootwear {
+    width: 24%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+    .womensFootwear:hover {
+        border: 1px solid blue;
+        box-sizing: border-box;
+        padding: 5px 5px;
+    }
+
+    .womensFootwear div {
+        margin-bottom: 7px;
+    }
+
+.firstRow a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #db2b2b;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.firstRow {
+    border-bottom: 2px solid #db2b2b;
+    line-height: 26px;
+    text-align: center;
+}
+
+.secondRowf {
+    text-align: center;
+}
+
+    .secondRowf a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+.thirdRowf {
+    text-align: center;
+}
+
+.fourthRowf {
+    text-align: center;
+}
+
+.footFirst {
+    position: relative;
+    bottom: -68px;
+}
+
+.foots {
+    position: relative;
+    bottom: -19px;
+}
+
+.fourthRowf a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    font-size: 12px;
+}
+.flash{
+    margin-top:10px;
+    color:white;
+}
+.flashSecondrow{
+    margin-top:8px;
+}
+.flashImages a{
     text-decoration:none;
-    font-size:13px;
 }
-.flipkartLogo{
-    width:15%;
+.flashImages:hover{
+    border:1px solid yellow;
 }
-.flipkartLogo a{
+.mobileThird{
+    margin-top:0px;
+}
+electronics{
+    border:1px solid gray;
+}
+.electThirdrow a{
+    text-decoration:none;
+}
+.arrivals{
+    background-color:white;
+    /*box-shadow: 0 0 2px 0 #d3cbb8;*/
+}
+.arivalFirst{
+    border-bottom: 1px solid #f4f0e4;
+    padding:5px 10px;
+}
+.arivalFirst span{
+    margin-right:15px;
+}
+.arr{
+    color: #333;
+  border-bottom: 2px solid #ffd926;
+  border-right:1px solid gray;
+  padding-left:5px;
+}
+.arr a{
     text-decoration:none;
     font-size:12px;
-    color:white;
-    font-weight:bold;
-}
-.logodesc{
-    margin-top:-5px;
-    text-align:center;
-}
-.searchBar{
-    width:75%;
-    margin-top:10px;
-    margin-left:10px;
+    font-weight: bold;
+    color:black;
     
 }
-.searchBar input{
-    width:560px;
-    height:31px;
-}
-.searchBar button{
-    height:35px;
-    width:110px;
-    margin-left:-6px;
-    background-color:#FDD922;
+.arr2 a{
+    text-decoration:none;
     color:gray;
-    margin-top:0px;
-    border:none;
+    font-size:12px;
 }
-.cartButton{
-    width:14%;
-    position:relative;
-    top:-36px;
+.arrvialSecond{
+    margin-top:10px;
 }
-.cartButton button{
-    background-color:#1475AC;
-    width:140px;
-    height:35px;
-    color:white;
-    border:1px solid #005387;
-    font-size:15px;
-}
-.zero{
-    border-radius: 50px;
-  background-color: #fff;
-  color: #007fb8;
- 
-  vertical-align: middle;
-    padding: 2px;
-  font-weight: bold;
-  line-height: 15px;
-  padding: 2px;
-}
-.navigationBar{
-    background-color:#0A3151;
-    padding:5px 5px;
-    color:#1475AC;
-    margin-top:-17px;
-}
-.navigationBar span{
-    margin-left:15px;
-}
-.navigationBar a{
-    /*text-decoration:none;*/
-    color:white;
-    font-size:11px;
-    font-weight:bold;
+.arrivalImage{
+    width:20%;
+    margin-left:34px;
 
 }
-.mens a{
-    text-decoration:dotted;
-    
+.arrivalImage img{
+    /*width:150px;*/
+    max-height:100px;
+    max-width:150px;
+    margin-bottom:5px;
 }
-.thingsNames{
-    background-color:white;
-    border:1px solid white;
-    padding:5px 5px;
-    color:gray;
-}
-.thingsNames a{
-    font-size:12px;
-    color:gray;
+.arrivalImage a{
+    font-size:13px;
     text-decoration:none;
+    color:gray;
 }
-.thingsNames a:hover{
+.arrDesc{
+    margin-bottom:5px;
+    line-height:12px;
+}
+.arrDesc a:hover{
+    color:blue;
     text-decoration:underline;
-    color:#3095CD;
 }
-.thingsNames span{
-    margin-left:3px;
+.price{
+    border-top:1px solid gray;
+    padding-top:5px;
+    color:black;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.strike{
+    font-size:10px;
+    margin-bottom:5px;
+    color:gray;
+  
+}
+.fashion{
+    margin-top:15px;
+    background-color:white;
+}
+.fashFirst{
+    color:white;
+}
+.fashSecond{
+    margin-top:10px;
+}
+.text{
+    text-align:center;
+}
+.men{
+    margin-left:73px;
+}
+.fasImage{
+margin-top:10px;
+}
+.fashThird
+{
+    margin-top:8px;
+}
+.spectsDesc{
+    margin-top:32px;
+}
+.watchImage img{
+    position:relative;
+    left:25px;
+}
+.homeLiving{
+    margin-top:10px;
+}
+.homeSecond{
+    background-color:white;
+    margin-top:-5px;
+    padding-top:15px;
+}
+.hDecor{
+   margin-left:20px;
+}
+.homeThird{
+    margin-top:6px;
 }
