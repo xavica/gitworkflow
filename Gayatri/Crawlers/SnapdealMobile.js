@@ -10,52 +10,52 @@ function Product(title, description, imageUrl, actualPrice, discountPrice, disco
 }
 
 var productsList = [];
-var casper = require('casper').create();
-casper.options.pageSettings.loadImages = false;
-casper.start('http://www.snapdeal.com/products/mobiles-tablets?q=Price%3A2331%2C63299&sort=plrty');
-casper.then(function () {
+var page = require('webpage').create();
+page.open("http://www.snapdeal.com/products/mobiles-tablets?q=Price%3A2331%2C63299&sort=plrty", function () {
 
-    this.echo("site opened");
-    this.echo('started scrapping')
 
-});
-casper.then(function () {
-    this.echo('started evaluting');
-    productsList = this.evaluate(function () {
+    productsList = page.evaluate(function () {
         var tempProducts = [];
-        $('.productWrapper').each(function () {
+        var elements = document.querySelectorAll('.productWrapper');
+        for (i = 0; i < elements.length; i++) {
 
-            var title = $(this).find('div.hoverProductWrapper.product-txtWrapper > div.product-title > a').text();
-            title = title.replace(/(\r\n|\n|\r)/gm, "");
-            title = title.replace(/\s+/g, " ");
-            var actualPrice = $(this).find('span > strike').text();
-            var discountPrice = $(this).find('#prodDetails > div.product-price > div:nth-child(1)').text();
-            // var description = 'Desc Text';
-            // var imageUrl = 'http://google.com/';
-            // var redirectUrl = "http://w3schools.com";
-            var discount = $(this).find('span > s').text().replace(/[^0-9]/gi, '');
-            // __utils__.echo(title);
-            // __utils__.echo(actualPrice);
+            var titleElement = elements[i].querySelector('div.product-title > a');
+            var actualPriceElement = elements[i].querySelector('#price');
+            var discountPriceElement = elements[i].querySelector('#disc > strike');
+            var discountElement = elements[i].querySelector('#disc > s');
 
-            // tempProducts.push({
-            //     "title": title,
-            //     "actualPrice": actualPrice,
-            //     "discountPrice": discountPrice,
-            //     "description": description,
-            //     "redirectUrl": redirectUrl,
-            //     "discount": discount
-            // });
-        
-        });
-        __utils__.echo(tempProducts.length);
+
+            var title = titleElement && titleElement.innerText || '';
+            var actualPrice = actualPriceElement.innerText.replace(/[^0-9]/g, '')|| 0;
+            var discountPrice = discountPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
+            var discount = discountElement.innerText.replace(/[^0-9]/g, '').trim() || 0;
+
+            //__utils__.echo("begin");
+            //__utils__.echo(title);
+            //__utils__.echo(actualPrice);
+            //__utils__.echo(discountPrice);
+            //__utils__.echo(discount);
+            //__utils__.echo("end");
+            //__utils__.echo(i);
+            if (title && +discount) {
+                tempProducts.push({
+                    "title": title,
+                    "actualPrice": actualPrice,
+                    "discountPrice": discountPrice,
+                    // "description": description,
+                    // "redirectUrl": redirectUrl,
+                    "discount": discount
+                });
+            }
+        }
         return tempProducts;
+
     });
-    this.echo("evaluation end");
-    this.echo(productsList.length);
-})
+
+    console.log('Num Products' + productsList.length);
+
+    phantom.exit();
+});
 
 
-casper.run();
-//setTimeout(function () {
-//    phantom.exit();
-//}, 0);
+

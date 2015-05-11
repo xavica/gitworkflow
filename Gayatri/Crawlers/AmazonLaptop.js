@@ -25,8 +25,8 @@ casper.then(function () {
        var elements = document.querySelectorAll('div[class*="zg_itemImmersion"]');
         for (i = 0; i < elements.length; i++) {
 
-                var titleElement = elements[i].querySelector('div.zg_itemWrapper > div.zg_title > a');
-            var actualPriceElement = elements[i].querySelector('div.zg_itemPriceBlock_compact > div.zg_price > strong > span');
+                var titleElement = elements[i].querySelector('div.zg_title > a');
+            var actualPriceElement = elements[i].querySelector('strong > span');
                 var discountPriceElement = elements[i].querySelector('div.zg_usedPrice > span > span');
                
 
@@ -35,16 +35,16 @@ casper.then(function () {
                  actualPrice = actualPrice.substring(1,actualPrice.indexOf('.')).replace(/[^0-9]/g, '');
                 var discountPrice = discountPriceElement && discountPriceElement.innerText || '';
                 discountPrice = discountPrice.substring(1,discountPrice.indexOf('.')).replace(/[^0-9]/g, '');
-                var discount = Math.trunc(1- ( +actualPrice / +discountPrice ));
+                var discount = Math.trunc(1 - ( +actualPrice / +discountPrice )*100);
                 discount = discount < 0 ? 0 : discount;
 
             if (title && discount) {
-            __utils__.echo("begin");
-            __utils__.echo(title);
-            __utils__.echo(actualPrice);
-            __utils__.echo(discountPrice);
-            __utils__.echo(discount);
-            __utils__.echo("end");
+            // __utils__.echo("begin");
+            // __utils__.echo(title);
+            // __utils__.echo(actualPrice);
+            // __utils__.echo(discountPrice);
+            // __utils__.echo(discount);
+            // __utils__.echo("end");
            
                 tempProducts.push({
                     "title": title,

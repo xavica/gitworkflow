@@ -11,7 +11,7 @@ function Product(title, description, imageUrl, actualPrice, discountPrice, disco
 var productsList = [];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
-casper.start('http://www.amazon.in/gp/bestsellers/electronics/1389396031');
+casper.start('http://www.amazon.in/s/ref=nb_sb_ss_c_0_2?url=search-alias%3Daps&field-keywords=tv&sprefix=tv%2Caps%2C348');
 casper.then(function () {
 
     this.echo("site opened");
@@ -22,11 +22,12 @@ casper.then(function () {
     this.echo('started evaluting');
     productsList = this.evaluate(function () {
         var tempProducts = [];
-       var elements = document.querySelectorAll('div[class*="zg_itemImmersion"]');
+       var elements = document.querySelectorAll('li[data-asin*="B00"]');
         for (i = 0; i < elements.length; i++) {
-              var titleElement = elements[i].querySelector('div.zg_itemWrapper > div.zg_title > a');
-            var actualPriceElement = elements[i].querySelector('div.zg_itemPriceBlock_compact > div.zg_price > strong > span');
-                var discountPriceElement = elements[i].querySelector('div.zg_usedPrice > span > span');
+              var titleElement = elements[i].querySelector('a > h2');
+            var actualPriceElement = elements[i].querySelector('.a-text-strike');
+                var discountPriceElement = elements[i].querySelector('a > span');
+                var discount = elements[i].querySelector('span.a-size-small.a-color-price');
                
 
             var title = titleElement && titleElement.innerText || '';
@@ -34,16 +35,15 @@ casper.then(function () {
                  actualPrice = actualPrice.substring(1,actualPrice.indexOf('.')).replace(/[^0-9]/g, '');
                 var discountPrice = discountPriceElement && discountPriceElement.innerText || '';
                 discountPrice = discountPrice.substring(1,discountPrice.indexOf('.')).replace(/[^0-9]/g, '');
-                var discount = Math.trunc(1- ( +actualPrice / +discountPrice ));
-                discount = discount < 0 ? 0 : discount;
-
+                var discount = discount && discount.innerText || 0;
+                
             if (title && discount && actualPrice) {
-            __utils__.echo("begin");
-            __utils__.echo(title);
-            __utils__.echo(actualPrice);
-            __utils__.echo(discountPrice);
-            __utils__.echo(discount);
-            __utils__.echo("end");
+            // __utils__.echo("begin");
+            // __utils__.echo(title);
+            // __utils__.echo(actualPrice);
+            // __utils__.echo(discountPrice);
+            // __utils__.echo(discount);
+            // __utils__.echo("end");
            
                 tempProducts.push({
                     "title": title,
