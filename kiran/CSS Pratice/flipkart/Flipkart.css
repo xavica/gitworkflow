@@ -1,0 +1,673 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+    background-color: #F7F5EE;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.header {
+    background-color: #005387;
+}
+
+.about a {
+    color: white;
+    text-decoration: none;
+}
+
+.about span {
+    color: white;
+    margin-left: 5px;
+}
+
+.online {
+    margin-top: -10px;
+}
+
+    .online a {
+        text-decoration: none;
+        color: white;
+    }
+
+.searchbox {
+    margin-left: 25px;
+}
+
+.iconsearch input {
+    width: 520px;
+    height: 30px;
+    position: relative;
+    top: 15px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.search {
+    position: relative;
+    top: 15px;
+    left: -6px;
+}
+
+    .search button {
+        background-color: #F9D621;
+        border: none;
+        height: 36px;
+        width: 125px;
+    }
+
+.cart {
+    position: relative;
+    top: 15px;
+    left: 10px;
+}
+
+    .cart button {
+        background-color: #0391C0;
+        border: none;
+        height: 36px;
+        width: 125px;
+        color: white;
+    }
+
+.navigationbar {
+    background-color: #0A3151;
+    padding: 15px 10px;
+}
+
+.products a {
+    color: white;
+    text-decoration: none;
+}
+
+.products span {
+    color: white;
+    margin-left: 12px;
+}
+
+.subnavigationBar {
+    background-color: white;
+    padding: 5px 4px;
+    border-radius: 0 0 2px 2px;
+    color: gray;
+}
+
+    .subnavigationBar a {
+        color: gray;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .subnavigationBar span {
+        margin-left: 3px;
+    }
+
+.banner {
+    width: 75%;
+}
+
+.smart {
+    margin-top: 15px;
+}
+
+.moto {
+    margin-top: 15px;
+}
+
+.motodesc {
+    background-color: #494949;
+    height: 52px;
+    width: 730px;
+    margin-top: -8px;
+}
+
+    .motodesc a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+    }
+
+.dealsection {
+    background-color: #3F3F3F;
+    height: 48px;
+    width: 715px;
+    padding: 5px 10px;
+}
+
+.deals {
+    color: white;
+    font-size: 20px;
+}
+
+.mobiles a {
+    text-decoration: none;
+}
+
+.exclusive {
+    background-color: #3F3F3F;
+    height: 40px;
+    width: 715px;
+    padding: 5px 10px;
+}
+
+.offers {
+    color: white;
+    font-size: 20px;
+}
+
+.first a {
+    text-decoration: none;
+}
+
+.second a {
+    text-decoration: none;
+}
+
+.third a {
+    text-decoration: none;
+}
+
+.electronics {
+    background-color: #3F3F3F;
+    height: 40px;
+    width: 715px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.electric {
+    background-color: white;
+}
+
+.tv {
+    text-align: center;
+}
+
+    .tv img {
+        width: 143px;
+        height: 75px;
+        margin-left: 3px;
+    }
+
+.shopnow {
+    margin-top: 5px;
+}
+
+    .shopnow a {
+        text-decoration: none;
+    }
+
+.arrivals {
+    background-color: white;
+}
+
+.new {
+    padding: 5px 10px;
+    border-bottom: 1px solid #f4f0e4;
+    margin-bottom: 10px;
+}
+
+    .new a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .new span {
+        margin-left: 10px;
+    }
+
+.spike img {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.spike {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .spike a {
+        text-decoration: none;
+        color: grey;
+    }
+
+        .spike a:hover {
+            color: #6DA1CC;
+        }
+
+.cables {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .cables a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .cables img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .cables a:hover {
+        color: #6DA1CC;
+    }
+
+.usbwire {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .usbwire a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .usbwire img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .usbwire a:hover {
+        color: #6DA1CC;
+    }
+
+.sony {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .sony a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .sony img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .sony a:hover {
+        color: #6DA1CC;
+    }
+
+.bags {
+    margin-top: 10px;
+}
+
+.fashions {
+    background-color: #3F3F3F;
+    height: 40px;
+    width: 715px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.desgin {
+    background-color: white;
+}
+
+.boy {
+    text-align: center;
+    width: 33%;
+    font-size: 20px;
+}
+
+.bags a {
+    text-decoration: none;
+}
+
+.goog1 {
+    width: 22%;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+    .goog1 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .goog1 img {
+        max-width: 160px;
+        max-height: 100px;
+    }
+
+    .goog1 a:hover {
+        color: #6DA1CC;
+    }
+
+.goog2 {
+    width: 22%;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+    .goog2 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .goog2 img {
+        max-width: 160px;
+        max-height: 100px;
+    }
+
+    .goog2 a:hover {
+        color: #6DA1CC;
+    }
+
+.wac1 {
+    width: 22%;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+    .wac1 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .wac1 img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .wac1 a:hover {
+        color: #6DA1CC;
+    }
+
+.wac2 {
+    width: 22%;
+    padding: 5px 5px;
+    margin-left: 5px;
+}
+
+    .wac2 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .wac2 img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .wac2 a:hover {
+        color: #6DA1CC;
+    }
+
+.livings {
+    background-color: #3F3F3F;
+    height: 40px;
+    width: 715px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.needs {
+    text-align: center;
+    width: 33%;
+    font-size: 20px;
+}
+
+.seeds {
+    margin-top: 10px;
+}
+
+    .seeds a {
+        text-decoration: none;
+    }
+
+.cooker img {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.cooker {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .cooker a {
+        text-decoration: none;
+        color: grey;
+    }
+
+        .cooker a:hover {
+            color: #6DA1CC;
+        }
+
+.cup {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .cup a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .cup img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .cup a:hover {
+        color: #6DA1CC;
+    }
+
+.cup1 {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .cup1 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .cup1 img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .cup1 a:hover {
+        color: #6DA1CC;
+    }
+
+.cup2 {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .cup2 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .cup2 img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .cup2 a:hover {
+        color: #6DA1CC;
+    }
+
+.stores {
+    background-color: #3F3F3F;
+    height: 40px;
+    width: 715px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.other {
+    background-color: white;
+}
+
+.books {
+    text-align: center;
+}
+
+    .books img {
+        width: 143px;
+        height: 75px;
+        margin-left: 3px;
+    }
+
+.earring img {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.earring {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .earring a {
+        text-decoration: none;
+        color: grey;
+    }
+
+        .earring a:hover {
+            color: #6DA1CC;
+        }
+
+.earring1 {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .earring1 a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .earring1 img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .earring1 a:hover {
+        color: #6DA1CC;
+    }
+
+.yellowbook {
+    width: 23%;
+    line-height: 15px;
+    margin-left: 10px;
+}
+
+    .yellowbook a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .yellowbook img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .yellowbook a:hover {
+        color: #6DA1CC;
+    }
+
+.reading {
+    width: 23%;
+    margin-left: 10px;
+}
+
+    .reading a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .reading img {
+        max-width: 200px;
+        max-height: 100px;
+    }
+
+    .reading a:hover {
+        color: #6DA1CC;
+    }
+.subbanners{
+    width:23%;
+    margin-top:13px;
+}
+.vochers{
+    background-color:white;
+    border:2px solid transparent;
+    padding:10px 10px;
+    width:210px;
+}
+.vochers p{
+    color:grey;
+}
+.vochers button{
+      border: 1px solid #ec6723;
+      background-color:#ec6723;
+      color:white;
+}
+.downbanner{
+    background-color:#FFFFFF;
+}
+.viewed{
+    width:25%;
+    padding-left:10px;
+}
+.recent a{
+    text-decoration:none;
+    color:grey;
+    font-size:12px;
+}
+.recent a:hover{
+    color:#6DA1CC;
+}
