@@ -313,138 +313,285 @@
     font-weight: bold;
     font-size: 12px;
 }
-.flash{
-    margin-top:10px;
-    color:white;
+
+.flash {
+    margin-top: 10px;
+    color: white;
 }
-.flashSecondrow{
-    margin-top:8px;
+
+.flashSecondrow {
+    margin-top: 8px;
 }
-.flashImages a{
-    text-decoration:none;
+
+.flashImages a {
+    text-decoration: none;
 }
-.flashImages:hover{
-    border:1px solid yellow;
+
+.flashImages:hover {
+    border: 1px solid yellow;
 }
-.mobileThird{
-    margin-top:0px;
+
+.mobileThird {
+    margin-top: 0px;
 }
-electronics{
-    border:1px solid gray;
+
+electronics {
+    border: 1px solid gray;
 }
-.electThirdrow a{
-    text-decoration:none;
+
+.electThirdrow a {
+    text-decoration: none;
 }
-.arrivals{
-    background-color:white;
+
+.arrivals {
+    background-color: white;
     /*box-shadow: 0 0 2px 0 #d3cbb8;*/
 }
-.arivalFirst{
-    border-bottom: 1px solid #f4f0e4;
-    padding:5px 10px;
-}
-.arivalFirst span{
-    margin-right:15px;
-}
-.arr{
-    color: #333;
-  border-bottom: 2px solid #ffd926;
-  border-right:1px solid gray;
-  padding-left:5px;
-}
-.arr a{
-    text-decoration:none;
-    font-size:12px;
-    font-weight: bold;
-    color:black;
-    
-}
-.arr2 a{
-    text-decoration:none;
-    color:gray;
-    font-size:12px;
-}
-.arrvialSecond{
-    margin-top:10px;
-}
-.arrivalImage{
-    width:20%;
-    margin-left:34px;
 
+.arivalFirst {
+    border-bottom: 1px solid #f4f0e4;
+    padding: 5px 10px;
 }
-.arrivalImage img{
-    /*width:150px;*/
-    max-height:100px;
-    max-width:150px;
-    margin-bottom:5px;
+
+    .arivalFirst span {
+        margin-right: 15px;
+    }
+
+.arr {
+    color: #333;
+    border-bottom: 2px solid #ffd926;
+    border-right: 1px solid gray;
+    padding-left: 5px;
 }
-.arrivalImage a{
-    font-size:13px;
-    text-decoration:none;
-    color:gray;
+
+    .arr a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+    }
+
+.arr2 a {
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
 }
-.arrDesc{
-    margin-bottom:5px;
-    line-height:12px;
+
+.arrvialSecond {
+    margin-top: 10px;
 }
-.arrDesc a:hover{
-    color:blue;
-    text-decoration:underline;
+
+.arrivalImage {
+    width: 20%;
+    margin-left: 34px;
 }
-.price{
-    border-top:1px solid gray;
-    padding-top:5px;
-    color:black;
-    font-weight:bold;
-    margin-bottom:20px;
+
+    .arrivalImage img {
+        /*width:150px;*/
+        max-height: 100px;
+        max-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .arrivalImage a {
+        font-size: 13px;
+        text-decoration: none;
+        color: gray;
+    }
+
+.arrDesc {
+    margin-bottom: 5px;
+    line-height: 12px;
 }
-.strike{
-    font-size:10px;
-    margin-bottom:5px;
-    color:gray;
-  
+
+    .arrDesc a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+.price {
+    border-top: 1px solid gray;
+    padding-top: 5px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
-.fashion{
-    margin-top:15px;
-    background-color:white;
+
+.strike {
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: gray;
 }
-.fashFirst{
-    color:white;
+
+.fashion {
+    margin-top: 15px;
+    background-color: white;
 }
-.fashSecond{
-    margin-top:10px;
+
+.fashFirst {
+    color: white;
 }
-.text{
-    text-align:center;
+
+.fashSecond {
+    margin-top: 10px;
 }
-.men{
-    margin-left:73px;
+
+.text {
+    text-align: center;
 }
-.fasImage{
-margin-top:10px;
+
+.men {
+    margin-left: 73px;
 }
-.fashThird
+
+.fasImage {
+    margin-top: 10px;
+}
+
+.fashThird {
+    margin-top: 8px;
+}
+
+.spectsDesc {
+    margin-top: 32px;
+}
+
+.watchImage img {
+    position: relative;
+    left: 25px;
+}
+
+.homeLiving {
+    margin-top: 10px;
+}
+
+.homeSecond {
+    background-color: white;
+    margin-top: -5px;
+    padding-top: 15px;
+}
+
+.hDecor {
+    margin-left: 20px;
+}
+
+.homeThird {
+    margin-top: 6px;
+}
+
+.earRings img {
+    margin-left: 24px;
+}
+
+.rightImages {
+    width: 20%;
+    margin-top: 10px;
+    margin-right: 36px;
+}
+
+.views {
+    background-color: white;
+    /*height:px;*/
+    /*padding:10px 5px;*/
+    width: 230px;
+    margin-bottom: 5px;
+}
+
+.just {
+    background-color: #0c375b;
+    border-left: 4px solid #f6cc00;
+    color: white;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.viewDesc {
+    border: 1px solid #e4e4e4;
+    margin-top: 5px;
+    padding: 10px 5px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+    .viewDesc a {
+        text-decoration: none;
+        font-size: 11px;
+        color: gray;
+    }
+
+.imgDes {
+    position: relative;
+    top: -5px;
+}
+
+.viewDesc span {
+    margin-right: 3px;
+}
+
+.vouchers {
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.gift {
+    font-weight: bold;
+}
+
+.vouchers p {
+    font-size: 11px;
+    color: gray;
+}
+
+.vouchers button {
+    background-color: #F37D35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 84px;
+    height: 24px;
+}
+
+.viewd {
+    background-color: white;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.recentlyViewed {
+    width: 23%;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+.recentFirst {
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom:15px;
+}
+
+.recentImage img {
+    width: 28px;
+    height: 56px;
+}
+
+.recentDesc a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #666;
+}
+
+.star {
+    border-bottom: 1px solid gray;
+    margin-bottom:3px;
+}
+ .price2
+
 {
-    margin-top:8px;
-}
-.spectsDesc{
-    margin-top:32px;
-}
-.watchImage img{
-    position:relative;
-    left:25px;
-}
-.homeLiving{
-    margin-top:10px;
-}
-.homeSecond{
-    background-color:white;
-    margin-top:-5px;
-    padding-top:15px;
-}
-.hDecor{
-   margin-left:20px;
-}
-.homeThird{
-    margin-top:6px;
+    color: black;
+    font-weight: bold;
 }
