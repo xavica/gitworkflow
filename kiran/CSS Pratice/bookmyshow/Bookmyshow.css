@@ -46,6 +46,9 @@
 .row {
     clear: both;
 }
+.customer{
+    font-size:12px;
+}
 
 .customer a {
     text-decoration: none;
