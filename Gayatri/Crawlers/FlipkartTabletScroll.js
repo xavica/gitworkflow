@@ -1,17 +1,7 @@
-function Product(title, description, imageUrl, actualPrice, discountPrice, discount, redirectUrl) {
-    this.title = title;
-    this.description = description;
-    this.imageUrl = imageUrl;
-    this.actualPrice = actualPrice;
-    this.discountPrice = discountPrice;
-    this.discount = discount;
-    this.redirectUrl = redirectUrl;
-
-}
-
 var productsList = [];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
+casper.options.waitTimeout = 10000;
 casper.start('http://www.flipkart.com/tablets/pr?sid=tyy,hry&otracker=ch_vn_tablet_filter_Brands_ALL');
 casper.then(function () {
 
@@ -19,27 +9,14 @@ casper.then(function () {
     this.echo('started scrapping');
 
 });
-var i = 1;
-casper.then(function () {
-    this.echo('started evaluting');
-    while (i < 5) {
-        
-        var elements = document.querySelectorAll('div[data-pid*="TAB"]');
-        casper.scrollTo(0, 700);
-        casper. waitForSelector('div[data-pid*="TAB"]', function () {
-            this.echo("i have waited for the selector to load on page");
-            this.echo(elements.length);
-        });
-        i++;
-    }
-});
-casper.then(grabProductDetails);
+var s = 0;
 function grabProductDetails() {
     productsList = this.evaluate(function () {
         __utils__.echo("-----------------------------------");
         var tempProducts = [];
 
         var elements = document.querySelectorAll('div[data-pid*="TAB"]');
+        
         for (i = 0; i < elements.length; i++) {
             var titleElement = elements[i].querySelector('.pu-title');
             var actualPriceElement = elements[i].querySelector('.pu-old');
@@ -74,6 +51,19 @@ function grabProductDetails() {
     this.echo("evaluation end");
     this.echo(productsList.length);
 }
+casper.then(function(){
+    s = document.querySelectorAll('div[data-pid*="TAB"]').length;
+    casper.wait(1000);
+});
+casper.then(function () {
+    casper.scrollToBottom();
+    casper.waitFor(function check() {
+        return this.evaluate(function () {
+            return document.querySelectorAll('div[data-pid*="TAB"]').length > s;
+        });
 
+    });
+});
+casper.then(grabProductDetails);
 
 casper.run();

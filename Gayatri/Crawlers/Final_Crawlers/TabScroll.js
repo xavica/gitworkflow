@@ -11,85 +11,95 @@
         redirectUrl: 'div.pu-title > a'
     },
     isScroll: true
-//},
-//{
-//    url: "http://deals.ebay.in/ebaydeals/tablets-6",
-//    selectors: {
-//        elements: '.listingblock',
-//        title: '',
-//        description: '',
-//        imageUrl: '',
-//        actualPrice: 'div.itemPriceStriked > p',
-//        sellingPrice: 'div.itemPrice > p',
-//        discount: 'div.discountLabel > div > span',
-//        redirectUrl: ''
-//    },
-//    isScroll: true
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_1?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&bbn=1375458031&ie=UTF8&qid=1430477874",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=2&bbn=1375458031&ie=UTF8&qid=1426669276",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=3&bbn=1375458031&ie=UTF8&qid=1430477915",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=4&bbn=1375458031&ie=UTF8&qid=1430477941",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
+    //},
+    //{
+    //    url: "http://deals.ebay.in/ebaydeals/tablets-6",
+    //    selectors: {
+    //        elements: '.listingblock',
+    //        title: '',
+    //        description: '',
+    //        imageUrl: '',
+    //        actualPrice: 'div.itemPriceStriked > p',
+    //        sellingPrice: 'div.itemPrice > p',
+    //        discount: 'div.discountLabel > div > span',
+    //        redirectUrl: ''
+    //    },
+    //    isScroll: true
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_1?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&bbn=1375458031&ie=UTF8&qid=1430477874",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=2&bbn=1375458031&ie=UTF8&qid=1426669276",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=3&bbn=1375458031&ie=UTF8&qid=1430477915",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=4&bbn=1375458031&ie=UTF8&qid=1430477941",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
+casper.options.waitTimeout = 10000;
 casper.start();
 var productsList = [];
-TabletLinks.forEach(function (TabletCrawler) {
-    casper.thenOpen(TabletCrawler.url, function () {
+TabletLinks.forEach(function (tabletCrawler) {
+    casper.thenOpen(tabletCrawler.url, function () {
         this.echo("---------------------");
+        if (tabletCrawler.isScroll === true) {
+            this.echo("hai");
+            var i = 1;
+            while (i < 4) {
+                casper.scrollToBottom();
+            }
+        }
         var parsedItems = casper.evaluate(function (stubCrawler) {
+            __utils__.echo(stubCrawler.isScroll);
+
             var tempProducts = [];
             var parser = document.createElement('a');
             var elements = document.querySelectorAll(stubCrawler.selectors.elements);
@@ -122,11 +132,11 @@ TabletLinks.forEach(function (TabletCrawler) {
                     fullRedirectUrl = redirectUrl;
                 }
                 if (title && discount && actualPrice && redirectUrl) {
-                    //__utils__.echo(title);
+                    __utils__.echo(title);
                     //__utils__.echo(imageUrl);
                     //__utils__.echo(actualPrice);
                     //__utils__.echo(sellingPrice);
-                    __utils__.echo(discount);
+                    //__utils__.echo(discount);
                     //__utils__.echo(fullRedirectUrl);
                     tempProducts.push({
                         "title": title,
@@ -139,7 +149,7 @@ TabletLinks.forEach(function (TabletCrawler) {
                 }
             }
             return tempProducts;
-        }, TabletCrawler);
+        }, tabletCrawler);
         if (parsedItems) {
             for (var i = 0; i < parsedItems.length; i++) {
                 productsList.push(parsedItems[i]);
@@ -147,6 +157,7 @@ TabletLinks.forEach(function (TabletCrawler) {
         }
     });
 });
+
 
 casper.then(function () {
 

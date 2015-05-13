@@ -306,9 +306,12 @@
 
     .desc a {
         text-decoration: none;
+         color: #bb0628;
+    }
+    .desc1 a{
+        text-decoration:none;
         color: #085eb9;
     }
-
 .weeklyAd {
     width: 50%;
 }
@@ -321,6 +324,9 @@
 /*.desc2{
     margin-top:-10px;
 }*/
+.desc2 h3{
+    color:black;
+}
 .desc2 a {
     text-decoration: none;
     color: #085eb9;
