@@ -1,73 +1,73 @@
 ﻿var booksLinks = [{
-    //    url: "http://www.flipkart.com/books/~bestsellers/pr?sid=bks&otracker=clp_books_clp%2FProductsExpand_0-6__viewAll",
-    //    selectors: {
-    //        elements: 'div[data-pid*="978"]',
-    //        title: '.pu-title',
-    //        description: '',
-    //        imageUrl: 'a.pu-image > img',
-    //        actualPrice: '.pu-old',
-    //        sellingPrice: 'div.pu-final > span',
-    //        discount: '.pu-off-per',
-    //        redirectUrl: 'div.pu-title > a'
-    //    },
-    //    isScroll: true
-    //},
-    //{
+        url: "http://www.flipkart.com/books/~bestsellers/pr?sid=bks&otracker=clp_books_clp%2FProductsExpand_0-6__viewAll",
+        selectors: {
+            elements: 'div[data-pid*="978"]',
+            title: '.pu-title',
+            description: '',
+            imageUrl: 'a.pu-image > img',
+            actualPrice: '.pu-old',
+            sellingPrice: 'div.pu-final > span',
+            discount: '.pu-off-per',
+            redirectUrl: 'div.pu-title > a'
+        },
+        isScroll: true
+    },
+    {
 
-    //url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
-    //selectors: {
-    //    elements: '.s-result-item',
-    //    title: 'a > h2',
-    //    description: '',
-    //    imageUrl: 'a > img',
-    //    actualPrice: '.a-text-strike',
-    //    sellingPrice: 'a > span',
-    //    discount: 'span.a-size-small.a-color-price',
-    //    redirectUrl: 'div > a'
-    //},
-    //isScroll: false
-    //},
+    url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
+    selectors: {
+        elements: '.s-result-item',
+        title: 'a > h2',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: '.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div > a'
+    },
+    isScroll: false
+    },
     //{
-        url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
+        //url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
+        //selectors: {
+        //    elements: '.s-result-item',
+        //    title: 'a > h2',
+        //    description: '',
+        //    imageUrl: 'a > img',
+        //    actualPrice: 'span.a-text-strike',
+        //    sellingPrice: 'a > span',
+        //    discount: 'span.a-size-small.a-color-price',
+        //    redirectUrl: 'div > a'
+        //},
+        //isScroll: false
+    //},
+    {
+        url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
         selectors: {
             elements: '.s-result-item',
             title: 'a > h2',
             description: '',
-            imageUrl: 'a > img',
+            imageUrl: '',
             actualPrice: 'span.a-text-strike',
             sellingPrice: 'a > span',
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div > a'
         },
         isScroll: false
-    //},
-    //{
-    //    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
-    //    selectors: {
-    //        elements: '.s-result-item',
-    //        title: 'a > h2',
-    //        description: '',
-    //        imageUrl: '',
-    //        actualPrice: 'span.a-text-strike',
-    //        sellingPrice: 'a > span',
-    //        discount: 'span.a-size-small.a-color-price',
-    //        redirectUrl: 'div > a'
-    //    },
-    //    isScroll: false
-    //},
-    //{
-    //    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
-    //    selectors: {
-    //        elements: '.s-result-item',
-    //        title: 'a > h2',
-    //        description: '',
-    //        imageUrl: '',
-    //        actualPrice: 'span.a-text-strike',
-    //        sellingPrice: 'a > span',
-    //        discount: 'span.a-size-small.a-color-price',
-    //        redirectUrl: ''
-    //    },
-    //    isScroll: false
+    },
+    {
+        url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
+        selectors: {
+            elements: '.s-result-item',
+            title: 'a > h2',
+            description: '',
+            imageUrl: '',
+            actualPrice: 'span.a-text-strike',
+            sellingPrice: 'a > span',
+            discount: 'span.a-size-small.a-color-price',
+            redirectUrl: ''
+        },
+        isScroll: false
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;

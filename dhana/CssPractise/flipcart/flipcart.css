@@ -405,7 +405,7 @@ electronics {
 }
 
     .arrDesc a:hover {
-        color: blue;
+        color: #4DA6E0;
         text-decoration: underline;
     }
 
@@ -565,6 +565,7 @@ electronics {
     width: 23%;
     border-top: 2px solid black;
     padding-top: 10px;
+    margin-right:19px;
 }
 
 .recentFirst {
@@ -595,3 +596,145 @@ electronics {
     color: black;
     font-weight: bold;
 }
+ .browsingHistory{
+     width:75%;
+      border-top: 2px solid black;
+      padding-top: 10px;
+ }
+ .browseImage{
+     width:18%;
+     margin-top:5px;
+     margin-right:14px;
+         
+ }
+ .browseImage a{
+     text-decoration:none;
+ }
+ .bImage img{
+     position:relative;
+     left:23px;
+
+ }
+ .star2{
+     border-bottom:none;
+ }
+ .strike2{
+     border-top:1px solid gray;
+     padding-top:2px;
+ }
+ .footer{
+     background-color:white;
+     margin-top:10px;
+     padding-top:20px;
+     border-top:1px solid gray;
+     height:800px;
+ }
+ .colFirst{
+     width:20%;
+     margin-right:49px;
+ }
+ .helpLinks{
+     line-height:8px;
+     margin-top:22px;
+    
+ }
+ strong{
+      color: #565656;
+ }
+ 
+ .helpLinks a{
+      text-decoration:none;
+      color: #565656;
+      font-size: 12px;
+      padding-left:5px;
+ }
+ .helpLinks a:hover{
+color:#4DA6E0;
+text-decoration:underline;
+ }
+ .footerDescsecond{
+     border-top:1px solid gray;
+     border-bottom:1px solid gray;
+     margin-top:5px;
+ }
+ .track{
+     margin-left:62px;
+     padding-top:10px;
+     border-right:1px solid gray;
+     padding-right:10px;
+     width:25%;
+     box-sizing:border-box;
+
+     
+ }
+ .track a{
+     text-decoration:none;
+ }
+ 
+ .cancellations{
+     border-right:none;
+ }
+ .online{
+     text-align:center;
+     padding-top:12px;
+ }
+ .footerThird{
+     margin-top:25px;
+ }
+ .policyTerms{
+      color:gray;
+     font-size:12px;
+ }
+ .policyTerms span{
+     margin-right:10px;
+ }
+ .policyTerms a{
+     text-decoration:none;
+     color:gray;
+     font-size:12px;
+ }
+ .policyTerms a:hover{
+     text-decoration:underline;
+     color:#4DA6E0;
+
+ }
+ .touch{
+     position:relative;
+     top:-29px;
+ }
+ .allIcons{
+     position:relative;
+     top:-19px;
+ }
+ .allIcons a{
+     text-decoration:none;
+ }
+ .allIcons:hover{
+     background-color:gray;
+ }
+ .topFirst a{
+     color:black;
+     font-weight:bold;
+ }
+ .topSecond{
+     margin-top:15px;
+     line-height:18px;
+ }
+ .topSecond span{
+     margin-right:3px;
+ }
+ .paymentMethod{
+     border-top:1px solid  gray;
+     border-bottom:1px solid   gray; 
+     margin-top:15px;
+ }
+ .footerFourth{
+     margin-top:10px;
+     font-size:12px;
+     font-weight:bold;
+ }
+ .footerFourth p{
+     font-size:11px;
+     color: #848484;
+
+ }
