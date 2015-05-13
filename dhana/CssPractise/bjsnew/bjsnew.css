@@ -64,7 +64,14 @@
     .headerFirstrow a:hover {
         color: red;
     }
-
+    .cartcolor a{
+        color:#CC1B33;
+    }
+    .cartIcon img{
+        position:relative;
+        top:6px;
+    }
+   
 .headerSecondrow span {
     margin-right: 10px;
 }
@@ -153,6 +160,9 @@
     .emailOfferimage input {
         width: 160PX;
     }
+    .signupColor a{
+        color:#857D6A;
+    }
 
 .links a {
     text-decoration: none;
@@ -215,6 +225,9 @@
 }
 .footerFirstrow{
     margin-top:10px;
+    border-right:1px solid gray;
+    padding-left:5px;
+    box-sizing:border-box;
 }
 .about{
     width:20%;
