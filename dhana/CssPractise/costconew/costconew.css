@@ -564,7 +564,8 @@ margin-top:10px;
 
 .about{
     margin-top:-5px;
-    
+    font-size: 0.8em;
+    color: #5f5f5f;
 }
 .about a{
     font-size: 0.8em;

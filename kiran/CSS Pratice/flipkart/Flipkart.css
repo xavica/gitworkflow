@@ -638,36 +638,155 @@
     .reading a:hover {
         color: #6DA1CC;
     }
-.subbanners{
-    width:23%;
-    margin-top:13px;
+
+.subbanners {
+    width: 23%;
+    margin-top: 13px;
 }
-.vochers{
-    background-color:white;
-    border:2px solid transparent;
-    padding:10px 10px;
-    width:210px;
+
+.vochers {
+    background-color: white;
+    border: 2px solid transparent;
+    padding: 10px 10px;
+    width: 210px;
 }
-.vochers p{
-    color:grey;
+
+    .vochers p {
+        color: grey;
+    }
+
+    .vochers button {
+        border: 1px solid #ec6723;
+        background-color: #ec6723;
+        color: white;
+    }
+
+.downbanner {
+    background-color: #FFFFFF;
 }
-.vochers button{
-      border: 1px solid #ec6723;
-      background-color:#ec6723;
-      color:white;
+
+.view {
+    width: 25%;
+    padding-left: 10px;
+    border-top: 2px solid black;
+    margin-right: -10px;
 }
-.downbanner{
-    background-color:#FFFFFF;
+
+.recent a {
+    text-decoration: none;
+    color: grey;
+    font-size: 12px;
 }
-.viewed{
-    width:25%;
-    padding-left:10px;
+
+    .recent a:hover {
+        color: #6DA1CC;
+    }
+
+.recommendations {
+    width: 73%;
+    border-top: 2px solid black;
 }
-.recent a{
+
+.pink {
+    width: 20%;
+}
+
+    .pink a {
+        text-decoration: none;
+        color: grey;
+        font-size: 13px;
+    }
+
+        .pink a:hover {
+            color: #6DA1CC;
+        }
+
+.footer {
+    background-color: #FCFCFC;
+    border-top: 1px solid grey;
+    margin-top: 10px;
+}
+
+.help {
+    width: 23%;
+    margin-top: 15px;
+    line-height: 20px;
+    margin-left: 12px;
+}
+
+    .help a {
+        text-decoration: none;
+        color: grey;
+    }
+
+        .help a:hover {
+            color: #6DA1CC;
+        }
+
+.orders {
+    margin-top: 5px;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+
+.track {
+    margin-top: 5px;
+    border-right: 1px solid grey;
+    padding-right: 10px;
+    margin-left: 115px;
+}
+
+    .track a {
+        text-decoration: none;
+        color: black;
+    }
+
+.cancel {
+    margin-top: 5px;
+    padding-right: 10px;
+    margin-left: 115px;
+}
+
+    .cancel a {
+        text-decoration: none;
+        color: black;
+    }
+
+.policies {
+    color: grey;
+}
+
+    .policies a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    .policies span {
+        margin-left: 5px;
+    }
+.social a {
+    text-decoration: none;
+    color: grey;
+}
+.topstores{
+   border-top: 1px solid grey; 
+   font-size:13px;
+}
+.topstores a{
     text-decoration:none;
-    color:grey;
-    font-size:12px;
+    color:black;
 }
-.recent a:hover{
-    color:#6DA1CC;
+.topstores a:hover {
+            color: #6DA1CC;
+        }
+.topstores span{
+    margin-left:5px;
+}
+.payment{
+    border-top: 1px solid grey; 
+    color:grey;
+}
+.matter{
+    color:grey;
+    font-size:11px;
 }
