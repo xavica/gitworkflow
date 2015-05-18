@@ -97,6 +97,10 @@
     margin-left: 15px;
     box-shadow: 0 7px 10px rgba(0,0,0,.4);
 }
+.mother a{
+    color:orange;
+    text-decoration:none;
+}
 
 .value a {
     text-decoration: none;
@@ -108,6 +112,10 @@
 .mat {
     font-size: 12px;
     margin-top: 10px;
+}
+.mat a{
+    text-decoration:none;
+    color:grey;
 }
 
 .pendrive {
@@ -198,7 +206,7 @@
     }
 
 .america {
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
     width: 150px;
     padding: 10px;
     margin-left: 15px;
