@@ -103,6 +103,7 @@
 .logoRow input {
     width: 250px;
     height: 30px;
+    color:initial;
 }
 
 .signin span {
