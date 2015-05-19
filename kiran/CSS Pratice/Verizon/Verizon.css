@@ -60,6 +60,9 @@
 .location {
     margin-top: 15px;
 }
+.location a{
+    color:grey;
+}
 
 .firstRow a {
     text-decoration: none;
@@ -72,6 +75,10 @@
 }
 .navi span{
     margin-left:5px;
+}
+.navi a {
+    text-decoration:none;
+    color:grey;
 }
 .search{
 margin-top:-40px;
@@ -125,8 +132,8 @@ margin-top:-40px;
 }
 .welcome a{
     text-decoration:none;
-    color:skyblue;
-    font-size:20px; 
+    color:#0066ff;
+    font-size:15px; 
 }
 .deals {
     width: 396px;
@@ -174,12 +181,15 @@ margin-top:-40px;
 .moving a{
     text-decoration:none;
     margin-left:10px;
-    color:skyblue;
+    color:black;
+}
+.start a{
+    color:blue;
 }
 .fios{
     width: 246px;
   height: 298px;
-  line-height:30px;
+  line-height:22px;
 }
 .fios h2{
     font-style:italic;
@@ -187,7 +197,7 @@ margin-top:-40px;
 }
 .gateWay{
     width: 328px;
-    line-height:28px;
+    line-height:22px;
     margin-left:10px;
 }
 .gateWay h2{
@@ -207,45 +217,75 @@ font-style:italic;
 .services{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .services a{
     text-decoration:none;
+    color:grey;
+}
+.services a:hover{
+    text-decoration:underline;
 }
 .myVerizon{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .myVerizon a{
 text-decoration:none;
+color:grey;
  }
+.myVerizon a:hover{
+    text-decoration:underline;
+}
 .support{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .support a{
 text-decoration:none;
+color:grey;
  }
+.support a:hover{
+    text-decoration:underline;
+}
 .tools{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .tools a{
 text-decoration:none;
+color:grey;
  }
+.tools a:hover{
+    text-decoration:underline;
+}
 .watch{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .watch a{
 text-decoration:none;
+color:grey;
  }
+.watch a:hover{
+    text-decoration:underline;
+}
 .trending{
     width:16%;
     line-height:20px;
+    font-size: 13px;
 }
 .trending a{
 text-decoration:none;
+color:grey;
  }
+.trending a:hover{
+    text-decoration:underline;
+}
 .home a{
     text-decoration:none;
     color:black;

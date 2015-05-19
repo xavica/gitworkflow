@@ -1,2 +1,11 @@
 ﻿body {
 }
+ .fIcons{
+    height:40px;
+    width:40px;
+    border-radius:100%;
+    background-color:pink;
+    font-size:15px;
+}
+
+  .np p, .pp p{color:green;}
