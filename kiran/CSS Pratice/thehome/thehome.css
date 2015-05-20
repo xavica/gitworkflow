@@ -174,24 +174,25 @@
 .credit {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right:1px solid grey;
 }
 
 .install {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right:1px solid grey;
+    line-height:15px;
 }
 
 .moving {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right: 1px solid grey;
 }
 .tools{
  width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right: 1px solid grey;
 }
 .apps{
  width: 18%;
@@ -245,4 +246,11 @@ width:18%;
     font-size:11px;
     width:68%;
     line-height: 10px;
+}
+.site a{
+    color:#333333;
+    text-decoration:none;
+}
+.site a:hover{
+    text-decoration:underline;
 }
