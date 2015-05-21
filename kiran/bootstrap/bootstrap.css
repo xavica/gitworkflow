@@ -1,0 +1,9 @@
+﻿body{
+    font-family:'open sans',sans-serif;
+}
+header, footer{
+    background-color:#333;
+    color:#ddd;
+    padding:20px;
+    text-align:center;
+}
