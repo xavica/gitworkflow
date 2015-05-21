@@ -1,0 +1,100 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+/*.header{
+    width:980px;
+}*/
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+.contact {
+    font-size: 12px;
+}
+
+    .contact a {
+        text-decoration: none;
+        color: #737373;
+    }
+
+        .contact a:hover {
+            color: orange;
+        }
+
+.cell {
+    background: url('../../wallpapers/urban/header_sprite_icons-e0651db8ce956d21ed1025098240d209.png')no-repeat 0 -683px;
+    width: 25px;
+    height: 25px;
+    padding: 7px 14px;
+    line-height: 35px;
+}
+
+.mail {
+    background: url('../../wallpapers/urban/header_sprite_icons-e0651db8ce956d21ed1025098240d209.png')no-repeat 0 -413px;
+    width: 27px;
+    height: 18px;
+    padding: 2px 16px;
+    line-height: 35px;
+}
+
+.logo {
+    margin-left: 100px;
+}
+
+.search {
+    margin-right: 20px;
+}
+
+.cart {
+    background: url('../../wallpapers/urban/header_sprite_icons-e0651db8ce956d21ed1025098240d209.png')no-repeat 0 -196px;
+    width: 21px;
+    height: 16px;
+    padding: 2px 16px;
+    line-height: 35px;
+}
+.bottom{
+    margin-top:10px;
+}
+.bottom span{
+ma
+}
