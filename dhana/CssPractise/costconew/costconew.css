@@ -80,6 +80,18 @@
     .hederRight img {
         width: 30px;
     }
+.arrows {
+    background: url('../../pics/costcopics/sprite1.png')no-repeat -5px -87px;
+    width: 6px;
+	height: 3px;
+    padding:3px;
+}
+.arrowIcon{
+    background: url('../../pics/costcopics/sprite1.png') no-repeat right -59px;
+    width: 6px;
+    height: 3px;
+    padding: .2em 1.6em .0em .0em !important;
+}
 
 .subHeader {
     margin-top: 10px;
@@ -93,7 +105,7 @@
 .subheaderFirstrow a {
     color: black;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
 }
 
@@ -165,7 +177,7 @@
         /*padding: 0 10px 0 15px;*/
     }
 
-        .allDepartments a:hover {
+        .allDepartments div:hover {
             background-color: white;
             text-decoration: underline;
         }
@@ -209,7 +221,24 @@
     .searchBox input {
         width: 390px;
     }
-
+.searchIcon {
+    background: url('../../pics/costcopics/ui-icons_ffffff_256x240.png')no-repeat;
+    background-position: -158px -111px;
+    position: relative;
+   
+    
+}
+.sButton{
+    position:relative;
+    top:3px;
+}
+.sButton button{
+background-color:#5695CA;
+width:21px;
+height:20px;
+border:none;
+margin-left:-15px;
+}
 .cartButton button {
     color: white;
     background-color: #4A8BC2;
