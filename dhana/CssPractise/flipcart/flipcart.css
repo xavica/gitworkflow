@@ -59,7 +59,29 @@
         text-decoration: none;
         font-size: 13px;
     }
+.phone {
+    background: url('../../pics/flipkartpics/new-vd-sprite-d91fd34f.png')no-repeat 0 -773px;
+	width: 20px;
+	height: 22px;
+    padding: 2px 10px;
+  line-height: 17px;
+}
+.flip {
+    background: url('../../pics/flipkartpics/new-vd-sprite-d91fd34f.png') no-repeat -3px -804px;
+    width: 24px;
+	height: 22px;
+    padding: 2px 10px;
+}
+.yellowBell {
+      background-position: -157px -86px;
+    background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -157px -86px;
+    width: 17px;
+    height: 19px;
+    padding: 2px 10px;
+      margin: 2px 11px;
+      /*line-height: 23px;*/
 
+}
 .flipkartLogo {
     width: 15%;
 }
@@ -125,7 +147,7 @@
 
 .navigationBar {
     background-color: #0A3151;
-    padding: 5px 5px;
+    padding: 15px 5px;
     color: #1475AC;
     margin-top: -17px;
 }
@@ -144,6 +166,17 @@
 .mens {
     /*text-decoration:dotted;*/
     border-bottom: 1px dotted #dcdde0;
+    
+}
+.mens1{
+    /*content: "";*/
+background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -150px -148px;
+width: 84px;
+  height: 1px;
+
+
+   
+  
 }
 
 .thingsNames {
@@ -168,6 +201,14 @@
     .thingsNames span {
         margin-left: 3px;
     }
+.head:after{
+    background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -102px -60px ;
+    width: 12px;
+  height: 9px;
+  margin-left:5px;
+  display: inline-block;
+  content: "";
+}
 
 .smartChoiceimages {
     width: 70%;
@@ -440,7 +481,17 @@ electronics {
 .text {
     text-align: center;
 }
-
+.text:after{
+    border-color: rgba(51,51,51,0);
+  border-top-color: #333;
+  border-width: 6px;
+  left: 50%;
+  margin-left: -6px;
+    width: 0;
+    height:0px;
+  position: absolute;
+ content: " ";
+}
 .men {
     margin-left: 73px;
 }
