@@ -7,66 +7,66 @@
         imageUrl: 'a.pu-image > img',
         actualPrice: '.pu-old',
         sellingPrice: 'div.pu-final > span',
-        discount: 'span.pu-off-per',
+        discount: 'div.pu-discount',
         redirectUrl: 'div.pu-title > a'
     },
     isScroll: true
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=fj_deals_35?_encoding=UTF8&bbn=1951048031&ie=UTF8&rh=i%3Ajewelry%2Cn%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-10&pf_rd_r=13KR4K91V6QRD4DCPES9&pf_rd_t=101&pf_rd_p=613780627&pf_rd_i=1951048031",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=2&bbn=1951048031&ie=UTF8&qid=1430911250",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=3&bbn=1951048031&ie=UTF8&qid=1430911489",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=4&bbn=1951048031&ie=UTF8&qid=1430911659",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=fj_deals_35?_encoding=UTF8&bbn=1951048031&ie=UTF8&rh=i%3Ajewelry%2Cn%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-10&pf_rd_r=13KR4K91V6QRD4DCPES9&pf_rd_t=101&pf_rd_p=613780627&pf_rd_i=1951048031",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=2&bbn=1951048031&ie=UTF8&qid=1430911250",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=3&bbn=1951048031&ie=UTF8&qid=1430911489",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&page=4&bbn=1951048031&ie=UTF8&qid=1430911659",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -94,7 +94,14 @@ jwLinks.forEach(function (jwCrawler) {
                 var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                 sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                 var str = discountElement && discountElement.textContent || '';
-                var discount = str && str.substring(str.indexOf('(') + 1, str.indexOf('(') + 3).replace(/[^0-9]/g, '') || 0;
+                var k = str.split("(");
+                var discount = '';
+                if (k.length > 1) {
+                    k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
+                }
+                else {
+                    k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
+                }
                 var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                 var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -107,8 +114,8 @@ jwLinks.forEach(function (jwCrawler) {
                 else {
                     fullRedirectUrl = redirectUrl;
                 }
-                if (title && discount && actualPrice && redirectUrl) {
-                    __utils__.echo(title);
+                //if (title && discount && actualPrice && redirectUrl) {
+                    //__utils__.echo(title);
                     //__utils__.echo(imageUrl);
                     //__utils__.echo(actualPrice);
                     //__utils__.echo(sellingPrice);
@@ -123,7 +130,7 @@ jwLinks.forEach(function (jwCrawler) {
                         "imageUrl": imageUrl
                     });
                 }
-            }
+            //}
             return tempProducts;
         }, jwCrawler);
         if (parsedItems) {
