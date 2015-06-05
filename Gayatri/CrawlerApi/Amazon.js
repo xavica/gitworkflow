@@ -755,10 +755,10 @@ casper.then(function () {
                 IsShippingFree: 1,
                 Star: 4,
                 IsPublished: 0,
-                ShowDate: Date(),
+                ShowDate: "1/1/2015",
                 Source: "Crawler",
-                CreatedDate: Date(),
-                LastUpdateDate: Date()
+                CreatedDate: "1/1/2015",
+                LastUpdateDate: "1/1/2015"
             }
         });
 
