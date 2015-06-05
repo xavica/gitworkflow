@@ -693,6 +693,20 @@
     /*text-align:center;*/
     color: gray;
 }
+.show{
+    border:1px solid gray;
+    border:none;
+    background-color:#E5E5E5;
+    width:100px;
+    border-radius:6px;
+    /*height:30px;*/
+    font-size:12px;
+    padding:5px;
+    text-align:center;
+    position:relative;
+    left:350px;
+    margin-bottom:10px;
+}
 
 .residentalLinks {
     background-color: gray;
