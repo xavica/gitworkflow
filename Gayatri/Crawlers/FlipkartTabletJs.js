@@ -8,18 +8,18 @@ casper.then(function () {
     this.echo('started scrapping');
 
 });
-casper.then(function () {
+function grabProductDetails() {
     this.echo('started evaluting');
     productsList = this.evaluate(function () {
         var tempProducts = [];
         var elements = document.querySelectorAll('div[data-pid*="TAB"]');
          for (i = 0; i < elements.length; i++) {
-            var titleElement = elements[i].querySelector('.pu-title');
+            var titleElement = elements[i].querySelector('div.pu-title > a');
             var actualPriceElement = elements[i].querySelector('.pu-old');
             var discountPriceElement = elements[i].querySelector('div.pu-final > span');
             var discountElement = elements[i].querySelector('span.pu-off-per');
 
-            var title = titleElement && titleElement.textContent.trim() || '';
+            var title = titleElement && titleElement.getAttribute('title') || '';
             var actualPrice = actualPriceElement && actualPriceElement.textContent.replace(/[^0-9]/g, '') || 0;
             var discountPrice = discountPriceElement && discountPriceElement.textContent.replace(/[^0-9]/g, '') || 0;
             var str = discountElement && discountElement.textContent || '';
@@ -46,7 +46,12 @@ casper.then(function () {
     });
     this.echo("evaluation end");
     this.echo(productsList.length);
+}
+casper.then(grabProductDetails);
+casper.then(function(){
+    casper.scrollToBottom();
 });
+casper.then(grabProductDetails);
 
 
 casper.run();

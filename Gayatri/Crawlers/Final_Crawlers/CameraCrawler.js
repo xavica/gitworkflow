@@ -67,7 +67,13 @@ cameraLinks.forEach(function (cameraCrawler) {
                 var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                 sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                 var str = discountElement && discountElement.textContent || '';
-                var discount = str && str.substring(str.indexOf('(') + 1, str.indexOf('(') + 3).replace(/[^0-9]/g, '') || 0;
+                var k = str.split("(");
+                if (k.length > 1) {
+                    k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
+                }
+                else {
+                    k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
+                }
                 var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                 var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -85,8 +91,8 @@ cameraLinks.forEach(function (cameraCrawler) {
                     //__utils__.echo(imageUrl);
                     //__utils__.echo(actualPrice);
                     //__utils__.echo(sellingPrice);
-                    //__utils__.echo(discount);
-                    __utils__.echo(fullRedirectUrl);
+                    __utils__.echo(discount);
+                    //__utils__.echo(fullRedirectUrl);
                     tempProducts.push({
                         "title": title,
                         "actualPrice": actualPrice,

@@ -25,12 +25,12 @@ casper.then(function () {
       var elements = document.querySelectorAll('li[data-asin*="B"]')
         for (i = 0; i < elements.length; i++) {
 
-                var titleElement = elements[i].querySelector('a > h2');
+                var titleElement = elements[i].querySelector('div.a-row > a');
                 var actualPriceElement = elements[i].querySelector('span.a-text-strike');
                 var discountPriceElement = elements[i].querySelector('a > span');
                 var discountElement = elements[i].querySelector('span.a-size-small.a-color-price'); 
 
-                var title = titleElement && titleElement.textContent || '';
+                var title = titleElement && titleElement.getAttribute('title') || '';
                 var actualPrice = actualPriceElement && actualPriceElement.textContent || ''; 
                 actualPrice = actualPrice.substring(1,actualPrice.indexOf('.')).replace(/[^0-9]/g, '');   
                 var discountPrice = discountPriceElement && discountPriceElement.textContent || '';
@@ -39,12 +39,12 @@ casper.then(function () {
                 var discount = str && str.substring(str.indexOf('(')+1,str.indexOf('(')+3).replace(/[^0-9]/g, '') || 0;
 
             if (title && discount) {
-            __utils__.echo("begin");
+            // __utils__.echo("begin");
             __utils__.echo(title);
-            __utils__.echo(actualPrice);
-            __utils__.echo(discountPrice);
-            __utils__.echo(discount);
-            __utils__.echo("end");
+            // __utils__.echo(actualPrice);
+            // __utils__.echo(discountPrice);
+            // __utils__.echo(discount);
+            // __utils__.echo("end");
            
                 tempProducts.push({
                     "title": title,

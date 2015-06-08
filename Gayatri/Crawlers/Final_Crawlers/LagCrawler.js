@@ -12,8 +12,8 @@
     //    redirectUrl: 'div.pu-title > a'
     //},
     //isScroll: true
-//},
-//{
+    //},
+    //{
     url: "http://www.amazon.in/s/ref=nb_sb_ss_fb_0_8?url=search-alias%3Dluggage&field-keywords=luggage+bag&sprefix=laggage+%2Cstripbooks%2C312&rh=n%3A2454169031%2Ck%3Aluggage+bag",
     selectors: {
         elements: 'li[data-asin*="B"]',
@@ -26,48 +26,48 @@
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=2&keywords=luggage+bag&ie=UTF8&qid=1430897733",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=3&keywords=luggage+bag&ie=UTF8&qid=1430902330",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=4&keywords=luggage+bag&ie=UTF8&qid=1430902371",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=2&keywords=luggage+bag&ie=UTF8&qid=1430897733",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=3&keywords=luggage+bag&ie=UTF8&qid=1430902330",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
+    //},
+    //{
+    //    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=4&keywords=luggage+bag&ie=UTF8&qid=1430902371",
+    //    selectors: {
+    //        elements: 'li[data-asin*="B"]',
+    //        title: 'div.a-row > a',
+    //        description: '',
+    //        imageUrl: 'a > img',
+    //        actualPrice: 'span.a-text-strike',
+    //        sellingPrice: 'a > span',
+    //        discount: 'span.a-size-small.a-color-price',
+    //        redirectUrl: 'div.a-row.a-spacing-none > a'
+    //    },
+    //    isScroll: false
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
