@@ -1,0 +1,11 @@
+﻿.firstimage{
+    margin-top:20px;
+    border:5px solid grey;
+}
+.firstimage img{
+    margin-top:10px;
+    height:150px;
+}
+.firstimage button{
+    margin-bottom:10px;
+}

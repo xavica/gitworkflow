@@ -1,0 +1,352 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.second {
+    margin-right: 25px;
+}
+
+    .second a {
+        text-decoration: none;
+        color: #333;
+        margin-left: 5px;
+    }
+        .second a:hover {
+        text-decoration:underline;
+
+    }
+
+    .second span {
+        margin-left: 5px;
+    }
+
+.location {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+    .location a {
+        color: black;
+        text-decoration: none;
+    }
+        .location a:hover {
+        text-decoration: underline;
+    }
+
+.ads {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+    .ads span {
+        margin-left: 5px;
+    }
+
+    .ads a {
+        text-decoration: none;
+        color: #333;
+    }
+    .ads a:hover {
+        text-decoration: underline;
+    }
+
+.departments {
+    background: url('../../wallpapers/thehome/4-20-HP-Hero-Landscaping-Rev2.jpg')no-repeat;
+    height: 485px;
+    margin-top: 100px;
+}
+
+.shopDepartment {
+    margin-top: -75px;
+    background-color: #444444;
+    width: 180px;
+        color: white;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+.shopDepartment a{
+    color: white;
+    text-decoration:none;
+}
+.shopDepartment a:hover{
+    background-color:grey;
+}
+
+.searchall {
+    margin-top: -75px;
+}
+
+.text input {
+    width: 200px;
+    height: 35px;
+    padding-left: 10px;
+      margin-left: -5px;
+}
+
+.searchall button {
+    width: 150px;
+    height: 40px;
+}
+.accoint{
+    margin-left:-5px;
+}
+
+.shop {
+    margin-top: 165px;
+}
+
+    .shop button {
+        width: 250px;
+    }
+
+.project {
+    margin-top: -75px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.diy button {
+    width: 150px;
+}
+
+.upTo {
+    margin-left: 5px;
+    position: relative;
+    right: -5px;
+}
+
+.today {
+    color: grey;
+}
+
+.img1 {
+    border: 1px solid;
+    width: 25%;
+    border-top: none;
+    border-color: gray;
+    padding-left: 50px;
+    height: 350px;
+}
+
+.img2 {
+    border: 1px solid;
+    width: 25%;
+    border-top: none;
+    border-color: gray;
+    padding-left: 50px;
+    height: 350px;
+}
+
+.credit {
+    width: 19%;
+    padding-left: 10px;
+    border-right:1px solid grey;
+}
+.credit a{
+    color:black;
+    text-decoration:none;
+}
+.details a:hover{
+    text-decoration:underline;
+}
+
+.install {
+    width: 19%;
+    padding-left: 10px;
+    border-right:1px solid grey;
+    line-height:15px;
+}
+.install a{
+    color:black;
+    text-decoration:none;
+}
+
+.moving {
+    width: 19%;
+    padding-left: 10px;
+    border-right: 1px solid grey;
+}
+.moving a{
+    color:black;
+    text-decoration:none;
+}
+.tools{
+ width: 19%;
+    padding-left: 10px;
+    border-right: 1px solid grey;
+}
+.tools a{
+    color:black;
+    text-decoration:none;
+}
+.apps{
+ width: 18%;
+    padding-left: 10px;
+}
+.apps a{
+    color:black;
+    text-decoration:none;
+}
+.socialIcons{
+    width:19%;
+}
+.email{
+    border:1px solid #BBB;
+      background-color: #eee;
+        box-shadow: 0 1px 2px #333;
+        width:auto;
+        height:125px;
+        padding:5px 5px;
+}
+.fb a{
+    text-decoration:none;
+    color:grey;
+}
+.fb a:hover{
+    text-decoration:underline;
+}
+.twitter a{
+    text-decoration:none;
+    color:grey;
+}
+.twitter a:hover{
+    text-decoration:underline;
+}
+.print a{
+    text-decoration:none;
+    color:grey;
+}
+.print a:hover{
+    text-decoration:underline;
+}
+.blog a{
+    text-decoration:none;
+    color:grey;
+}
+.blog a:hover{
+    text-decoration:underline;
+}
+.youtube a{
+    text-decoration:none;
+    color:grey;
+}
+.youtube a:hover{
+    text-decoration:underline;
+}
+.depot{
+color:orange;
+}
+.dep{
+    width:18%;
+    margin-left:20px;
+    margin-top:-25px;
+}
+.dep h2{
+    color:#666;
+}
+.dep a{
+    color:grey;
+    text-decoration:none;
+}
+.dep a:hover{
+    text-decoration:underline;
+}
+.online{
+     width:18%;
+    margin-left:20px;
+    margin-top:-20px;
+}
+.online h2{
+color:#666;
+line-height:25px;
+}
+.online a{
+    color:grey;
+    text-decoration:none;
+}
+.online a:hover{
+    text-decoration:underline;
+}
+.policy{
+    width:18%;
+    margin-left:20px;
+    margin-top:-30px;
+}
+.policy h2{
+color:#666;
+}
+.policy a{
+    color:grey;
+    text-decoration:none;
+}
+.policy a:hover{
+    text-decoration:underline;
+}
+.account{
+width:18%;
+    margin-left:20px;
+    margin-top:-30px;
+}
+.account a{
+    color:grey;
+    text-decoration:none;
+}
+.account a:hover{
+    text-decoration:underline;
+}
+.site{
+    width:20%;
+}
+.matter{
+    font-size:11px;
+    width:68%;
+    line-height: 10px;
+}
+.site a{
+    color:#333333;
+    text-decoration:none;
+}
+.site a:hover{
+    text-decoration:underline;
+}

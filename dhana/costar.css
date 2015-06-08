@@ -1,0 +1,181 @@
+﻿.container {
+    width: 100%;
+}
+
+.header {
+    height: 100px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.logoImage {
+    margin-top: 10px;
+}
+
+.Links {
+    margin-top: 10px;
+}
+
+.banner {
+    background-image: url('pics/costarbanner.jpg');
+    height: 500px;
+}
+
+.Links span {
+    margin-left: 10px;
+}
+
+.Links a:hover {
+    color: blue;
+}
+
+.knowledgeMarket {
+    width: 700px;
+    margin- top: 30px;
+}
+
+    .knowledgeMarket h1 {
+        color: white;
+        font-size: 40px;
+    }
+
+.investors {
+    width: 980px;
+    margin-top: 285px;
+}
+
+    .investors div {
+        margin-left: 5px;
+        background-color: #061b4a;
+        width: 152px;
+        height: 68px;
+    }
+
+.brokerFirms {
+    color: white;
+    width: 20%;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.awardWinner strong {
+    color: orange;
+}
+
+.insight {
+    width: 25%;
+    font-size: 20px;
+}
+
+.data {
+    width: 25%;
+    font-size: 20px;
+}
+
+.tools {
+    width: 25%;
+    font-size: 20px;
+}
+
+.community {
+    width: 25%;
+    font-size: 20px;
+}
+
+.callDay img {
+    margin-top: 15px;
+}
+
+.peopleSaying div {
+    line-height: 3.em;
+}
+
+.pics img {
+    margin-left: 75px;
+}
+
+.footer {
+    background-color: #59C5E5;
+    height: 90px;
+}
+
+.getIntouch {
+    font-size: 25px;
+    color: white;
+}
+
+    .getIntouch span {
+        margin-right: 35px;
+    }
+
+    .getIntouch a {
+        color: white;
+    }
+
+    .getIntouch span button {
+        background-color: #1D396E;
+        color: white;
+        margin-top: 20px;
+    }
+
+.background {
+    background-color: #1D396E;
+    height: 450px;
+    margin-top: 35px;
+}
+
+.company {
+    width: 25%;
+    color: white;
+}
+
+    .company a {
+        color: white;
+    }
+
+.products {
+    width: 25%;
+    color: white;
+}
+
+    .products a {
+        color: white;
+    }
+
+.applications {
+    width: 25%;
+    color: white;
+}
+
+    .applications a {
+        color: white;
+    }
+
+.social {
+    width: 25%;
+    color: white;
+}
+
+    .social img {
+        margin-right: 10px;
+    }
+
+.copyright {
+    margin-top: 60px;
+    color: white;
+}

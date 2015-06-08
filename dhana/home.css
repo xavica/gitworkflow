@@ -1,110 +1,120 @@
-.container{
-	width: 100%;
-}
-.header{
-	
-	height: 30px;
-	}
-	
-.content{
-	margin: 0 auto;
-	width: 980px;
-
-}
-.left{
-	float: left;
-}
-.right{
-	float: right;
-}
-.row{
-	clear: both;
-}
-.firstRow{
-	margin-top: 10px;
-}
-.firstRow span{
-	margin-left: 15px;
-}
-.secondRow{
-	padding-top: 10px;
-}
-.bodyContent{
-	padding-top: 10px;
-	/*background-image: url("pics/homedepot.jpg");*/
-	height: 505px;
-
-
-}
-.shopDepartment{
-
-
-	background-color: #444444;
-	height: 505px;
-	width: 171px;
-	color: white;
-	line-height: 28px;
-	padding-left: 10px;
-	margin-right: 10px;
+.container {
+    width: 100%;
 }
 
-.searchButton input{
-	height: 45px;
-	width:279px;
-}	
-.searchButton span{
-	margin-left: 10px;
+.header {
+    height: 30px;
 }
 
-.todayOffer img{
-	margin-top: 5px;
-}
-.secondRow img{
-	margin-top: -15px;
-}
-.row2 img{
-	margin-top: -5px;
+.content {
+    margin: 0 auto;
+    width: 980px;
 }
 
-.firstRow7th{
-	margin-top: -15px;
-}	
-.secondRow7th img{
-	margin-top: -5px;
+.left {
+    float: left;
 }
-.fridaySavings img{
-	margin-top: -15px;
 
+.right {
+    float: right;
 }
-.threeimagesRow img{
-	
-	margin-top: -20px;
-	margin-bottom: 15px;
-}
-.matter{
-		
-	margin-left: 20px;
-	margin-bottom: 20px;
 
+.row {
+    clear: both;
 }
-.matterDesc{
-	font-size: 12px;
+
+.firstRow {
+    margin-top: 10px;
 }
-.offerDetails{
-	margin-left: 20px;
+
+    .firstRow span {
+        margin-left: 10px;
+    }
+
+.secondRow {
+    padding-top: 10px;
 }
-.marketDescs{
-	font-size: 11px;
-	color: gray;
-	margin-bottom: 5px;
-	margin-top: 5px;
+
+.bodyContent {
+    padding-top: 10px;
+    height: 505px;
 }
-.marketDescs1{
-	font-weight: 700px;
-	font-size: 15px;
-	  color: #333;
+
+.shopDepartment {
+    background-color: #444444;
+    height: 505px;
+    width: 171px;
+    color: white;
+    line-height: 28px;
+    padding-left: 10px;
+    margin-right: 10px;
 }
-.secondColumn{
-	margin-left: 60px;
-	margin-top: 5px;
+
+.searchButton input {
+    height: 45px;
+    width: 279px;
+}
+
+.searchButton span {
+    margin-left: px;
+}
+
+.todayOffer img {
+    margin-top: 5px;
+}
+
+.secondRow img {
+    margin-top: -15px;
+}
+
+.row2 img {
+    margin-top: -5px;
+}
+
+.firstRow7th {
+    margin-top: -15px;
+}
+
+.secondRow7th img {
+    margin-top: -5px;
+}
+
+.fridaySavings img {
+    margin-top: -15px;
+}
+
+.threeimagesRow img {
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+.matter {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.matterDesc {
+    font-size: 12px;
+}
+
+.offerDetails {
+    margin-left: 20px;
+}
+
+.marketDescs {
+    font-size: 11px;
+    color: gray;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.marketDescs1 {
+    font-weight: 700px;
+    font-size: 15px;
+    color: #333;
+}
+
+.secondColumn {
+    margin-left: 60px;
+    margin-top: 5px;
 }
