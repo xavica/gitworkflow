@@ -59,7 +59,29 @@
         text-decoration: none;
         font-size: 13px;
     }
+.phone {
+    background: url('../../pics/flipkartpics/new-vd-sprite-d91fd34f.png')no-repeat 0 -773px;
+	width: 20px;
+	height: 22px;
+    padding: 2px 10px;
+  line-height: 17px;
+}
+.flip {
+    background: url('../../pics/flipkartpics/new-vd-sprite-d91fd34f.png') no-repeat -3px -804px;
+    width: 24px;
+	height: 22px;
+    padding: 2px 10px;
+}
+.yellowBell {
+      background-position: -157px -86px;
+    background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -157px -86px;
+    width: 17px;
+    height: 19px;
+    padding: 2px 10px;
+      margin: 2px 11px;
+      /*line-height: 23px;*/
 
+}
 .flipkartLogo {
     width: 15%;
 }
@@ -125,7 +147,7 @@
 
 .navigationBar {
     background-color: #0A3151;
-    padding: 5px 5px;
+    padding: 15px 5px;
     color: #1475AC;
     margin-top: -17px;
 }
@@ -143,7 +165,18 @@
 
 .mens {
     /*text-decoration:dotted;*/
-    border-bottom: dotted;
+    border-bottom: 1px dotted #dcdde0;
+    
+}
+.mens1{
+    /*content: "";*/
+background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -150px -148px;
+width: 84px;
+  height: 1px;
+
+
+   
+  
 }
 
 .thingsNames {
@@ -168,6 +201,14 @@
     .thingsNames span {
         margin-left: 3px;
     }
+.head:after{
+    background: url('../../pics/flipkartpics/spriteicons.png')no-repeat -102px -60px ;
+    width: 12px;
+  height: 9px;
+  margin-left:5px;
+  display: inline-block;
+  content: "";
+}
 
 .smartChoiceimages {
     width: 70%;
@@ -252,12 +293,13 @@
     width: 24%;
     margin-top: 5px;
     margin-left: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px 5px;
 }
 
     .womensFootwear:hover {
         border: 1px solid blue;
-        box-sizing: border-box;
-        padding: 5px 5px;
     }
 
     .womensFootwear div {
@@ -439,7 +481,17 @@ electronics {
 .text {
     text-align: center;
 }
-
+.text:after{
+    border-color: rgba(51,51,51,0);
+  border-top-color: #333;
+  border-width: 6px;
+  left: 50%;
+  margin-left: -6px;
+    width: 0;
+    height:0px;
+  position: absolute;
+ content: " ";
+}
 .men {
     margin-left: 73px;
 }
@@ -485,7 +537,9 @@ electronics {
 
 .rightImages {
     width: 20%;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    position:relative;
+    top:-440px;
     margin-right: 36px;
 }
 
@@ -565,14 +619,14 @@ electronics {
     width: 23%;
     border-top: 2px solid black;
     padding-top: 10px;
-    margin-right:19px;
+    margin-right: 19px;
 }
 
 .recentFirst {
     padding-left: 10px;
     box-sizing: border-box;
     margin-top: 5px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
 .recentImage img {
@@ -588,153 +642,182 @@ electronics {
 
 .star {
     border-bottom: 1px solid gray;
-    margin-bottom:3px;
+    margin-bottom: 3px;
 }
- .price2
 
-{
+.price2 {
     color: black;
     font-weight: bold;
 }
- .browsingHistory{
-     width:75%;
-      border-top: 2px solid black;
-      padding-top: 10px;
- }
- .browseImage{
-     width:18%;
-     margin-top:5px;
-     margin-right:14px;
-         
- }
- .browseImage a{
-     text-decoration:none;
- }
- .bImage img{
-     position:relative;
-     left:23px;
 
- }
- .star2{
-     border-bottom:none;
- }
- .strike2{
-     border-top:1px solid gray;
-     padding-top:2px;
- }
- .footer{
-     background-color:white;
-     margin-top:10px;
-     padding-top:20px;
-     border-top:1px solid gray;
-     height:800px;
- }
- .colFirst{
-     width:20%;
-     margin-right:49px;
- }
- .helpLinks{
-     line-height:8px;
-     margin-top:22px;
-    
- }
- strong{
-      color: #565656;
- }
- 
- .helpLinks a{
-      text-decoration:none;
-      color: #565656;
-      font-size: 12px;
-      padding-left:5px;
- }
- .helpLinks a:hover{
-color:#4DA6E0;
-text-decoration:underline;
- }
- .footerDescsecond{
-     border-top:1px solid gray;
-     border-bottom:1px solid gray;
-     margin-top:5px;
- }
- .track{
-     margin-left:62px;
-     padding-top:10px;
-     border-right:1px solid gray;
-     padding-right:10px;
-     width:25%;
-     box-sizing:border-box;
+.browsingHistory {
+    width: 75%;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
 
-     
- }
- .track a{
-     text-decoration:none;
- }
- 
- .cancellations{
-     border-right:none;
- }
- .online{
-     text-align:center;
-     padding-top:12px;
- }
- .footerThird{
-     margin-top:25px;
- }
- .policyTerms{
-      color:gray;
-     font-size:12px;
- }
- .policyTerms span{
-     margin-right:10px;
- }
- .policyTerms a{
-     text-decoration:none;
-     color:gray;
-     font-size:12px;
- }
- .policyTerms a:hover{
-     text-decoration:underline;
-     color:#4DA6E0;
+.browseImage {
+    width: 18%;
+    margin-top: 5px;
+    margin-right: 14px;
+}
 
- }
- .touch{
-     position:relative;
-     top:-29px;
- }
- .allIcons{
-     position:relative;
-     top:-19px;
- }
- .allIcons a{
-     text-decoration:none;
- }
- .allIcons:hover{
-     background-color:gray;
- }
- .topFirst a{
-     color:black;
-     font-weight:bold;
- }
- .topSecond{
-     margin-top:15px;
-     line-height:18px;
- }
- .topSecond span{
-     margin-right:3px;
- }
- .paymentMethod{
-     border-top:1px solid  gray;
-     border-bottom:1px solid   gray; 
-     margin-top:15px;
- }
- .footerFourth{
-     margin-top:10px;
-     font-size:12px;
-     font-weight:bold;
- }
- .footerFourth p{
-     font-size:11px;
-     color: #848484;
+    .browseImage a {
+        text-decoration: none;
+    }
 
- }
+.bImage img {
+    position: relative;
+    left: 23px;
+}
+
+.star2 {
+    border-bottom: none;
+}
+
+.strike2 {
+    border-top: 1px solid gray;
+    padding-top: 2px;
+}
+
+.footer {
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid gray;
+    height: 800px;
+}
+
+.colFirst {
+    width: 20%;
+    margin-right: 49px;
+}
+
+.helpLinks {
+    line-height: 8px;
+    margin-top: 22px;
+}
+
+strong {
+    color: #565656;
+}
+
+.helpLinks a {
+    text-decoration: none;
+    color: #565656;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+    .helpLinks a:hover {
+        color: #4DA6E0;
+        text-decoration: underline;
+    }
+
+.footerDescsecond {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: 5px;
+}
+
+.track {
+    margin-left: 62px;
+    padding-top: 10px;
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+    .track a {
+        text-decoration: none;
+    }
+
+.cancellations {
+    border-right: none;
+}
+
+.online {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.footerThird {
+    margin-top: 25px;
+}
+
+.policyTerms {
+    color: gray;
+    font-size: 12px;
+}
+
+    .policyTerms span {
+        margin-right: 10px;
+    }
+
+    .policyTerms a {
+        text-decoration: none;
+        color: gray;
+        font-size: 12px;
+    }
+
+        .policyTerms a:hover {
+            text-decoration: underline;
+            color: #4DA6E0;
+        }
+
+.touch {
+    position: relative;
+    top: -29px;
+}
+
+.allIcons {
+    position: relative;
+    top: -19px;
+}
+.btn{
+    height:40px;
+    width:40px;
+    border:1px solid gray;
+    background-color:pink;
+    border-radius:190px;
+}
+
+    .allIcons a {
+        text-decoration: none;
+    }
+
+    /*.allIcons:hover {
+        background-color: gray;
+    }*/
+
+.topFirst a {
+    color: black;
+    font-weight: bold;
+}
+
+.topSecond {
+    margin-top: 15px;
+    line-height: 18px;
+}
+
+    .topSecond span {
+        margin-right: 3px;
+    }
+
+.paymentMethod {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: 15px;
+}
+
+.footerFourth {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    .footerFourth p {
+        font-size: 11px;
+        color: #848484;
+    }

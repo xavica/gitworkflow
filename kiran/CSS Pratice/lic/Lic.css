@@ -65,7 +65,7 @@
 .bg {
     background-color: #00529c;
     height: 5px;
-    margin-top: -7px;
+    margin-top: -4px;
 }
 
 .content {
@@ -75,6 +75,7 @@
 
 .left {
     float: left;
+      margin-top: -15px;
 }
 
 .right {
@@ -95,6 +96,8 @@
     height: 161px;
     line-height: 15px;
     padding-top: 5px;
+    font-size:10px;
+    color:#00529c;
 }
 .login{
     margin-top:-7px;
@@ -107,6 +110,9 @@
 }
 .secondrow{
     margin-top:20px;
+}
+.thirdrow{
+    margin-top: 10px;
 }
 .insurance{
     width:42%;
@@ -131,7 +137,7 @@ padding:5px 5px;
     width:100px;
 }
 .contact img{
-    height:180px;
+    height:145px;
 }
 .plans{
  border:1px solid;
@@ -151,7 +157,7 @@ padding:5px 5px;
     background: url('../../wallpapers/lic/bgn.jpg')no-repeat;
     height: 10px;
     background-repeat: repeat-y;
-    margin-top:-7px;
+    margin-top:-4px;
 }
 .footer{
     height:125px;

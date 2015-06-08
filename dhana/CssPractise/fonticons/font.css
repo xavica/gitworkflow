@@ -1,2 +1,46 @@
 ﻿body {
 }
+ .fIcon{
+    height:40px;
+    width:40px;
+    /*border:1px solid black;*/
+    border-radius:60px;
+    background-color:pink;
+    font-size:15px;
+    /*padding-left:5px;*/
+   
+    text-align:center;
+}
+ .fIcon a{
+      /*padding-top:5px;*/
+      /*margin-top:5px;*/
+      position:relative;
+      top:11px;
+      
+ }
+ .fIcon:hover{
+     background-color:orange;
+     color:white;
+ }
+  .left{
+      float:left;
+  }
+  .row{
+      clear:both;
+  }
+  li{
+      list-style-type: none;
+      padding:0px;
+  }
+  li:hover{
+      background-color:pink;
+  }
+  .listItems{
+      width:20%;
+      background-color:gray;
+  }
+  .sprite {
+	background: url('imgs/spriteicons.png') no-repeat -10px -49px;
+	width: 27px;
+	height: 32px;
+}

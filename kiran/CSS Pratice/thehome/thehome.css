@@ -50,6 +50,10 @@
         color: #333;
         margin-left: 5px;
     }
+        .second a:hover {
+        text-decoration:underline;
+
+    }
 
     .second span {
         margin-left: 5px;
@@ -61,8 +65,11 @@
 }
 
     .location a {
-        color: orange;
+        color: black;
         text-decoration: none;
+    }
+        .location a:hover {
+        text-decoration: underline;
     }
 
 .ads {
@@ -78,6 +85,9 @@
         text-decoration: none;
         color: #333;
     }
+    .ads a:hover {
+        text-decoration: underline;
+    }
 
 .departments {
     background: url('../../wallpapers/thehome/4-20-HP-Hero-Landscaping-Rev2.jpg')no-repeat;
@@ -89,11 +99,18 @@
     margin-top: -75px;
     background-color: #444444;
     width: 180px;
-    color: white;
+        color: white;
     line-height: 30px;
     padding-left: 10px;
     margin-right: 10px;
     margin-left: 15px;
+}
+.shopDepartment a{
+    color: white;
+    text-decoration:none;
+}
+.shopDepartment a:hover{
+    background-color:grey;
 }
 
 .searchall {
@@ -104,11 +121,15 @@
     width: 200px;
     height: 35px;
     padding-left: 10px;
+      margin-left: -5px;
 }
 
 .searchall button {
     width: 150px;
     height: 40px;
+}
+.accoint{
+    margin-left:-5px;
 }
 
 .shop {
@@ -160,28 +181,52 @@
 .credit {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right:1px solid grey;
+}
+.credit a{
+    color:black;
+    text-decoration:none;
+}
+.details a:hover{
+    text-decoration:underline;
 }
 
 .install {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right:1px solid grey;
+    line-height:15px;
+}
+.install a{
+    color:black;
+    text-decoration:none;
 }
 
 .moving {
     width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right: 1px solid grey;
+}
+.moving a{
+    color:black;
+    text-decoration:none;
 }
 .tools{
  width: 19%;
     padding-left: 10px;
-    /*border-right: 1px solid;*/
+    border-right: 1px solid grey;
+}
+.tools a{
+    color:black;
+    text-decoration:none;
 }
 .apps{
  width: 18%;
     padding-left: 10px;
+}
+.apps a{
+    color:black;
+    text-decoration:none;
 }
 .socialIcons{
     width:19%;
@@ -194,6 +239,44 @@
         height:125px;
         padding:5px 5px;
 }
+.fb a{
+    text-decoration:none;
+    color:grey;
+}
+.fb a:hover{
+    text-decoration:underline;
+}
+.twitter a{
+    text-decoration:none;
+    color:grey;
+}
+.twitter a:hover{
+    text-decoration:underline;
+}
+.print a{
+    text-decoration:none;
+    color:grey;
+}
+.print a:hover{
+    text-decoration:underline;
+}
+.blog a{
+    text-decoration:none;
+    color:grey;
+}
+.blog a:hover{
+    text-decoration:underline;
+}
+.youtube a{
+    text-decoration:none;
+    color:grey;
+}
+.youtube a:hover{
+    text-decoration:underline;
+}
+.depot{
+color:orange;
+}
 .dep{
     width:18%;
     margin-left:20px;
@@ -201,6 +284,13 @@
 }
 .dep h2{
     color:#666;
+}
+.dep a{
+    color:grey;
+    text-decoration:none;
+}
+.dep a:hover{
+    text-decoration:underline;
 }
 .online{
      width:18%;
@@ -211,6 +301,13 @@
 color:#666;
 line-height:25px;
 }
+.online a{
+    color:grey;
+    text-decoration:none;
+}
+.online a:hover{
+    text-decoration:underline;
+}
 .policy{
     width:18%;
     margin-left:20px;
@@ -219,14 +316,37 @@ line-height:25px;
 .policy h2{
 color:#666;
 }
+.policy a{
+    color:grey;
+    text-decoration:none;
+}
+.policy a:hover{
+    text-decoration:underline;
+}
 .account{
 width:18%;
     margin-left:20px;
     margin-top:-30px;
 }
+.account a{
+    color:grey;
+    text-decoration:none;
+}
+.account a:hover{
+    text-decoration:underline;
+}
 .site{
-    width:25%;
+    width:20%;
 }
 .matter{
-    font-size:10px;
+    font-size:11px;
+    width:68%;
+    line-height: 10px;
+}
+.site a{
+    color:#333333;
+    text-decoration:none;
+}
+.site a:hover{
+    text-decoration:underline;
 }

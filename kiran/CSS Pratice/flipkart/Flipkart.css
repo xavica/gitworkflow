@@ -55,7 +55,27 @@
     color: white;
     margin-left: 5px;
 }
-
+.cell {
+    background: url('../../wallpapers/flipkart/new-vd-sprite-d91fd34f.png')no-repeat 0 -773px;
+	width: 20px;
+	height: 21px;
+        padding:0px 10px;
+    line-height:23px;
+}
+.flip {
+    background: url('../../wallpapers/flipkart/new-vd-sprite-d91fd34f.png')no-repeat -3px -804px;
+	width: 24px;
+	height: 22px;
+            padding:0px 10px;
+    line-height:23px;
+}
+.bell {
+    background: url('../../wallpapers/flipkart/new-header-sprite-e91c8a50.png')no-repeat -157px -86px;
+	width: 17px;
+	height: 19px;
+    padding:0px 10px;
+    line-height:23px;
+}
 .online {
     margin-top: -10px;
 }

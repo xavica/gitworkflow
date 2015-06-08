@@ -99,6 +99,10 @@
     margin-left: 10px;
 }
 
+    .matter a {
+        color: #555555;
+    }
+
 .dec {
     width: 22%;
     line-height: 15px;
@@ -112,121 +116,149 @@
     }
 
 .wedo {
-    margin-top:20px;
-    margin-left:10px;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
     .wedo span {
         margin-right: -25px;
     }
-.picsone a{
-    text-decoration:none;
+
+.picsone a {
+    text-decoration: none;
 }
-.picsone span{
-margin-left:15px;
+
+.picsone span {
+    margin-left: 15px;
 }
-.category a{
-    color:grey;
-    margin-left:100px;
-    text-decoration:none;
+
+.category a {
+    color: grey;
+    margin-left: 100px;
+    text-decoration: none;
 }
-.subcat a{
-    margin-right:165px;
-    text-decoration:none;
-    color:grey;
+
+.subcat a {
+    margin-right: 165px;
+    text-decoration: none;
+    color: grey;
 }
-.link a{
-    margin-left:20px;
+
+.link a {
+    margin-left: 20px;
 }
-.products span{
-    margin-right:-25px;
+
+.products span {
+    margin-right: -25px;
 }
-.rummy{
-    width:33%;
+
+.rummy {
+    width: 33%;
 }
-.rummygames{
-    font-size:20px;
-    color:grey;
+
+.rummygames {
+    font-size: 20px;
+    color: grey;
 }
-.mat{
-color:grey;
+
+.mat {
+    color: grey;
 }
-.rummy a{
-    color:black;
+
+.rummy a {
+    color: black;
 }
-.feature{
-    margin-top:20px;
+
+.feature {
+    margin-top: 20px;
 }
-.feature span{
-    margin-right:-25px;
+
+    .feature span {
+        margin-right: -25px;
+    }
+
+.images {
+    width: 25%;
+    margin-bottom: 15px;
 }
-.images{
-    width:25%;
-    margin-bottom:15px;
+
+.desgin {
+    background-color: #ffb300;
+    width: 200px;
+    padding: 5px 10px;
+    margin-top: -8px;
 }
-.desgin{
-      background-color: #ffb300;
-  width: 200px;
-  padding:5px 10px;
-  margin-top:-8px;
-}
-.desgin a{
-    text-decoration:none;
-    color:black;
-}
+
+    .desgin a {
+        text-decoration: none;
+        color: black;
+    }
+        .desgin a:hover {
+        color: green;
+    }
+
+
 .footer {
     background-image: url('../../wallpapers/addshell/footerinternalbg.png');
-      background-repeat: no-repeat;
-  background-position: center bottom;
-  height: 453px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 453px;
 }
-.home{
-    width:18%;
-    margin-top:83px;
-    
+
+.home {
+    width: 18%;
+    margin-top: 83px;
 }
-.quote span{
-    margin-right:-15px;
+
+.quote span {
+    margin-right: -15px;
 }
-.icons span{
-    margin-left:5px;
+
+.icons span {
+    margin-left: 5px;
 }
-.services{
-    width:18%;
-    margin-top:75px;
+
+.services {
+    width: 18%;
+    margin-top: 75px;
 }
-.services a{
-    text-decoration:none;
+
+    .services a {
+        text-decoration: none;
         color: #919191;
+    }
+
+.techno {
+    width: 18%;
+    margin-top: 75px;
 }
-.techno{
-    width:18%;
-    margin-top:75px;
-}
-.techno a{
-    text-decoration:none;
+
+    .techno a {
+        text-decoration: none;
         color: #919191;
+    }
+
+.contact {
+    width: 18%;
+    margin-top: 75px;
+    color: #919191;
 }
-.contact{
-    width:18%;
-    margin-top:75px;
+
+.search {
+    width: 18%;
+    margin-top: 60px;
+    margin-left: 30px;
 }
-.contact a{
-        text-decoration:none;
-        color: #919191;
+
+.top img {
+    margin-right: -10px;
 }
-.search{
- width:18%;
-    margin-top:60px;
-    margin-left:30px;
+
+.bottom input {
+    width: 105px;
 }
-.top img{
-    margin-right:-10px;
-}
-.bottom input{
-    width:105px;
-}
-.copyright{
-color: #919191;
-text-align:center;
+
+.copyright {
+    color: #919191;
+    text-align: center;
 }
