@@ -1,0 +1,19 @@
+
+****Installation of Lodash in our Nodejs command prompt:
+Step1: First go to our folder directory in command prompt.
+Step2 : and give command like this – npm install --save lodash-node
+EX:  G:\xavica\Local\Nodejs\Crawler>npm install --save lodash-node
+
+__Then you get a folder name called lodash-node in your directory folder.It will contain all the lodash methods in that you can use lodash like declaring a variable.
+var _ = require('lodash-node');
+
+And then execute your program G:\xavica\Local\Nodejs\Crawler>node lodash1.js
+ ============================================================
+
+*****Installing Request Method in nodejs command prompt:
+EX:  G:\xavica\Local\Nodejs\Crawler>npm install request
+
+
+__Then you get a folder name called request in your directory folder.
+you can use request like declaring a variable.
+var request = require('request');

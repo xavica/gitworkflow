@@ -1,0 +1,297 @@
+﻿body {
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+.container {
+    width: 100%;
+    background-color: #F4F4F4;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    border: 2px solid white;
+    padding: 5px 5px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.header {
+    padding: 5px 5px;
+}
+
+.headerFirstrow span {
+    margin-left: 10px;
+}
+
+.headerFirstrow a {
+    text-decoration: none;
+    color: #000;
+    font: 12px Frutiger,Verdana,sans-serif;
+}
+
+    .headerFirstrow a:hover {
+        color: red;
+    }
+    .cartcolor a{
+        color:#CC1B33;
+    }
+    .cartIcon img{
+        position:relative;
+        top:6px;
+    }
+   
+.headerSecondrow span {
+    margin-right: 10px;
+}
+
+.headerSecondrow a {
+    text-decoration: none;
+    color: #cc1b33;
+    font-weight: bold;
+    height: 17px;
+    font-size: 13px;
+}
+
+.userIcon img {
+    position: relative;
+    top: -20px;
+}
+
+.userIcondesc {
+    position: relative;
+    top: -25px;
+}
+
+.inputBox input {
+    border: 1px solid #cc1b33;
+    position: relative;
+    top: -39px;
+    width: 385px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.navigationBar {
+    background-color: #372940;
+    padding: 10px 5px;
+    color: white;
+}
+
+    .navigationBar a {
+        font-size: 13px;
+        font-weight: normal;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigationBar span {
+        margin-left: 5px;
+    }
+
+.specialOfferimage img {
+    margin-top: 5px;
+}
+
+.bjsBanner {
+    width: 70%;
+}
+
+.dicountOfferimage {
+    width: 25%;
+    /*margin-left:45px;*/
+    position: relative;
+    right: -61px;
+}
+
+    .dicountOfferimage img {
+        width: 233px;
+    }
+
+.bannerSecondrow span {
+    margin-right: 1px;
+}
+
+.emailOfferimage {
+    padding: 10px 5px;
+    width: 380px;
+    background-color: #685F50;
+    position: relative;
+    top: -13px;
+    color: white;
+    font-weight: bold;
+}
+
+    .emailOfferimage span {
+        margin-right: 7px;
+    }
+
+    .emailOfferimage input {
+        width: 160PX;
+    }
+    .signupColor a{
+        color:#857D6A;
+    }
+
+.links a {
+    text-decoration: none;
+    color: gray;
+}
+.featuredProductsimages{
+    margin-top:-24px;
+}
+.featuredProductsimages .featuredServices h6{
+    font-size: 13px;
+    font-weight: bold;
+    color: #685f50;
+    height: 19px;
+}
+.featuredproductsimagesFirstrow{
+    border-top: 1px solid #DDD6B9;
+   
+    margin-top:-25px;
+}
+.featuredproductsimagesSecondrow ,.featuredServices {
+    margin-top:15px;
+     border-top: 1px solid #DDD6B9;
+      /*border-bottom: 1px solid #DDD6B9;*/
+}
+.pics{
+    width:20%;
+    margin-top:10px;
+}
+
+.text{
+    margin-bottom:10px;
+}
+.text a{
+    color: #685f50;
+  height: 40px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.text a:hover{
+    text-decoration:underline;
+}
+.pricingRow span{
+    margin-right:7px;
+   
+    font: 20px Verdana,Arial,Helvetica,sans-serif;
+}
+.savingText{
+    color: #c03;
+    font: 11px Verdana,Geneva,sans-serif;
+    line-height:16px;
+    margin-top:10px;
+}
+.featuredServices h6{
+    margin-top:10px;
+    margin-bottom:0px;
+}
+.footer ,.subFooter{
+   border-top: 1px solid #DDD6B9;
+   margin-top:10px; 
+}
+.footerFirstrow{
+    margin-top:10px;
+    border-right:1px solid gray;
+    padding-left:5px;
+    box-sizing:border-box;
+}
+.about{
+    width:20%;
+    line-height:18px;
+    
+    
+    
+}
+.about  div{
+    padding-left:13px;
+}
+.membershipDesc div{
+    padding-left:13px;
+}
+.customercareDesc div{
+      padding-left:13px;
+}
+.about a{
+    color: #685f50;
+    font: 10px Frutiger,Verdana,sans-serif;
+    /*margin-bottom:2px;*/
+    
+}
+strong a{
+    font-weight:bold;
+}
+.siteIcons{
+    margin-top:5px;
+}
+.siteIcons span{
+    margin-right:3px;
+}
+.siteIcons a{
+    text-decoration:none;
+}
+.memberShip{
+    width:30%;
+     line-height:18px;
+}
+
+.membershipDesc a{
+ color: #685f50;
+    font: 10px Frutiger,Verdana,sans-serif;
+}
+.journalImage ,.recipes img{
+    margin-top:5px;
+}
+.customerCare{
+    margin-left:101px;
+    width:30%;
+    margin-top:8px;
+}
+.customerCare img{
+    width:364px;
+    height:22px;
+}
+.customercareDesc a{
+    color: #685f50;
+    font: 10px Frutiger,Verdana,sans-serif;
+}
+.livechatImage img{
+    width:105px;
+}
+.imageService img{
+    position:relative;
+    top:9px;
+}

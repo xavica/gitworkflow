@@ -1,0 +1,463 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+/*.clearfix {
+    display: block;
+}*/
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+.header {
+    background-color: #555555;
+    height: 75px;
+    padding: 10px;
+}
+
+.content {
+    width: 1211px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.account {
+    color: white;
+    width: 40%;
+}
+
+    .account a {
+        color: white;
+        text-decoration: none;
+    }
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+.store {
+    color: white;
+    line-height: 20px;
+    width: 40%;
+}
+
+    .store a {
+        text-decoration: none;
+        color: white;
+    }
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.cart {
+    width: 20%;
+    text-align: right;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.pickUp a {
+    text-decoration: none;
+    color: #c45e2a;
+    font-size: 20px;
+}
+
+.support span {
+    margin-left: 5px;
+}
+
+.support a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.product {
+    /*margin-top: -75px;*/
+    width: 200px;
+    color: white;
+    line-height: 45px;
+}
+
+    .product h2 {
+        background-color: #444444;
+        padding-left: 15px;
+        border-radius: 5px;
+    }
+
+.deals {
+    background-color: #F1F2F5;
+    margin-top: -25px;
+    padding-left: 15px;
+}
+
+    .deals a {
+        text-decoration: none;
+        color: #222;
+        font-size: 20px;
+    }
+
+.promo {
+    margin-top: 20px;
+}
+
+.brand {
+    color: white;
+}
+
+    .brand h2 {
+        background-color: #444444;
+        padding-left: 15px;
+        border-radius: 5px;
+        width: 225px;
+    }
+
+    .brand a {
+        text-decoration: none;
+        color: white;
+    }
+
+.search input {
+    font-size: 16px;
+    color: #879294;
+    border: 1px solid #879294;
+    width: 465px;
+    padding: 7px;
+    background: #fff;
+    margin-top: 15px;
+}
+
+.images {
+    margin-left: 210px;
+    margin-top: -650px;
+}
+
+.shop {
+    background: url('../../wallpapers/microcenter/images_sf_grid_categoryHead.jpg');
+    height: 35px;
+    padding-left: 40px;
+    width: 200px;
+}
+
+    .shop a {
+        text-decoration: none;
+        color: black;
+    }
+
+.comp {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.text {
+    font-size: 17px;
+}
+
+    .text a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .text a:hover {
+            text-decoration: underline;
+        }
+
+.price {
+    font-size: 25px;
+    background: #F1F1F1;
+    padding-left:10px;
+}
+
+    .price a {
+        text-decoration: none;
+        color: #b20a06;
+    }
+
+.tab {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.cpu {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.monitor {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.hp {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.sam {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.laptop {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.power {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.intel {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.applemac {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.appleipad {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.delltab {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.amd {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.crucial {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.asus {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.toshiba {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.ssd {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.msi {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.motherboard {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.segate {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.matsunchi {
+    width: 23%;
+    margin-left: 10px;
+}
+
+.specialOffer {
+    background: #ececec;
+    width: 45%;
+    height: 135px;
+    border-radius: 10px;
+    padding-left: 5px;
+    line-height: 15px;
+}
+
+    .specialOffer h2 {
+        color: #455464;
+    }
+
+.desc {
+    color: #222;
+    margin-right: 300px;
+}
+
+.mail {
+    margin-top: -50px;
+    padding-right: 5px;
+}
+
+    .mail input {
+        width: 225px;
+        height: 40px;
+    }
+
+.guarantee {
+    background: #999;
+    width: 27%;
+    height: 135px;
+    border-radius: 10px;
+    margin-left: 10px;
+    line-height: 20px;
+    padding-left: 5px;
+    color: white;
+}
+
+.service {
+    width: 26%;
+    height: 135px;
+    border-radius: 10px;
+    background: url('../../wallpapers/microcenter/images_Service_servicecalloutNEW.png') #000 no-repeat bottom right;
+    color: white;
+    line-height: 15px;
+    padding-left: 3px;
+}
+
+.footer {
+    background-color: #222222;
+    height: 450px;
+    margin-top: 10px;
+}
+
+.customerservice {
+    color: white;
+    width: 18%;
+}
+
+    .customerservice a {
+        color: #99b0c5;
+        text-decoration: none;
+    }
+
+        .customerservice a:hover {
+            text-decoration: underline;
+        }
+
+.shopping {
+    color: white;
+    width: 18%;
+}
+
+    .shopping a {
+        color: #99b0c5;
+        text-decoration: none;
+    }
+
+        .shopping a:hover {
+            text-decoration: underline;
+        }
+
+.tools {
+    color: white;
+    width: 18%;
+}
+
+    .tools a {
+        color: #99b0c5;
+        text-decoration: none;
+    }
+
+        .tools a:hover {
+            text-decoration: underline;
+        }
+
+.demand {
+    color: white;
+    width: 18%;
+}
+
+    .demand a {
+        color: #99b0c5;
+        text-decoration: none;
+    }
+
+        .demand a:hover {
+            text-decoration: underline;
+        }
+
+.careers {
+    width: 25%;
+    color: white;
+    background: #99b0c5;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 15px 15px 30px;
+    line-height: 15px;
+    height: 85px;
+}
+
+.car {
+    background: url('../../wallpapers/microcenter/images_sf_btn_grey.jpg') no-repeat right;
+    width: 100px;
+    font-size: 14px;
+    line-height: 27px;
+    padding: 1px 28px 0 8px;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+    .car a {
+        text-decoration: none;
+        color: white;
+    }
+
+.icons {
+    margin-top: 45px;
+    margin-right: 10px;
+}
+
+    .icons span {
+        margin-right: 10px;
+    }
+
+.copyright {
+    color: white;
+    font-size: 15px;
+}
+
+.termsconditions span {
+    margin-left: 5px;
+}
+
+.termsconditions a {
+    color: #b3d4fc;
+}

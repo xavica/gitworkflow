@@ -1,0 +1,203 @@
+﻿.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* close commented backslash hack */
+
+.container {
+    width: 100%;
+}
+
+/*.header {
+    background: url('../../wallpapers/lic/bgn.jpg')no-repeat;
+    height: 10px;
+    background-repeat: repeat-y;
+}*/
+.img {
+    background: url('../../wallpapers/lic/bgn.jpg')no-repeat;
+    height: 10px;
+    background-repeat: repeat-y;
+}
+
+.logo {
+    margin-top: 125px;
+}
+
+.pmjjby {
+    margin-left: 380px;
+    font-size: 18px;
+}
+
+    .pmjjby a {
+        color: #FF0000;
+    }
+
+.scrolling p {
+    color: #FF00FF;
+    font-size: 20px;
+    margin-left: 130px;
+}
+
+.navigationBar {
+    margin-left: 130px;
+}
+
+    .navigationBar span {
+        margin-right: -5px;
+    }
+
+.bg {
+    background-color: #00529c;
+    height: 5px;
+    margin-top: -4px;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+      margin-top: -15px;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.firstrow {
+    margin-top: 40px;
+}
+
+.services {
+    background: url('../../wallpapers/lic/topn.jpg') no-repeat;
+    background-color: #ffca07;
+    height: 161px;
+    line-height: 15px;
+    padding-top: 5px;
+    font-size:10px;
+    color:#00529c;
+}
+.login{
+    margin-top:-7px;
+}
+.login a{
+    padding-left:40px;
+}
+.strong a{
+    padding-left:10px;
+}
+.secondrow{
+    margin-top:20px;
+}
+.thirdrow{
+    margin-top: 10px;
+}
+.insurance{
+    width:42%;
+    border:1px solid;
+    border-radius:10px;
+    border-bottom:none;
+    background-color:#E6E9FA;
+    padding:10px 10px;
+}
+.top{
+    padding-left:20px;
+}
+.top span{
+    margin-left:-5px;
+}
+.matter{
+padding:5px 5px;
+}
+.more button{
+    margin-right:20px;
+    border-radius:5px;
+    width:100px;
+}
+.contact img{
+    height:145px;
+}
+.plans{
+ border:1px solid;
+    border-radius:10px;
+    border-bottom:none;
+    background-color:#E6E9FA;
+    width:28%;
+}
+.plans h4{
+    color:#01679A;
+    padding-left:10px;
+}
+.two{
+    margin-left:35px;
+}
+.image {
+    background: url('../../wallpapers/lic/bgn.jpg')no-repeat;
+    height: 10px;
+    background-repeat: repeat-y;
+    margin-top:-4px;
+}
+.footer{
+    height:125px;
+}
+.home{
+    width:86%;
+    border:1px solid;
+    height:55px;
+    margin-top:5px;
+}
+.annual{
+      font-size: 11px;
+  padding-left: 50px;
+ }
+.annual a{
+    text-decoration:none;
+     color: #000000;
+}
+.annual span{
+    margin-left:10px;
+}
+.feedback{
+font-size: 11px;
+  padding-left: 85px;
+}
+.feedback a{
+    text-decoration:none;
+     color: #000000;
+}
+.feedback span{
+margin-left:2px;
+}
+.agent{
+font-size: 11px;
+  padding-left: 250px;
+}
+.agent a{
+    text-decoration:none;
+     color: #000000;
+}
+.agent span{
+    margin-left:2px;
+}

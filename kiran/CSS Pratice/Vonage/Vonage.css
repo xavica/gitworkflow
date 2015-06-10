@@ -1,0 +1,502 @@
+﻿.container {
+    width: 100%;
+    background-color: #F4F4F5;
+}
+
+.header {
+    height: 105px;
+}
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.logo {
+    margin-top: 25px;
+}
+
+    .logo span {
+        margin-left: 10px;
+    }
+
+.account {
+    margin-top: 25px;
+}
+
+.plans {
+    height: 35px;
+    background-color: #0074C8;
+}
+
+.features a {
+    color: white;
+    margin-left: 10px;
+}
+
+.tollFree {
+    color: white;
+}
+
+.banner {
+    background: url('../../wallpapers/vonage/drtv-d.jpg') no-repeat;
+    height: 650px;
+    width: 75%;
+}
+
+.bestOffer {
+    width: 450px;
+    font-family: 'Roboto Condensed',sans-serif;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    padding-top: 20px;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 5px;
+}
+
+.first {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 3.25em;
+    line-height: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.orderToday {
+    color: #ffffff;
+    font-size: 1.65em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.country {
+    color: #ff8300;
+    font-size: 1.85em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.price {
+    color: #ffffff;
+    float: left;
+    font-family: 'Roboto',sans-serif;
+    margin-left: 30px;
+    margin-top: -50px;
+    margin-bottom: -60px;
+    width: 210px;
+}
+
+.dollar {
+    font-size: 3.2em;
+    position: relative;
+    top: -50px;
+}
+
+.nine {
+    font-size: 8.25em;
+    position: relative;
+    left: -5px;
+    font-weight: 600;
+}
+
+.nine2 {
+    font-size: 4em;
+    position: relative;
+    top: -45px;
+    left: -10px;
+    font-weight: 600;
+}
+
+.month {
+    font-size: 2em;
+    position: relative;
+    top: -110px;
+    left: 120px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.phone {
+    color: #ffffff;
+    float: left;
+    font-family: 'Roboto',sans-serif;
+    margin-top: 10px;
+    line-height: 26px;
+    font-size: 1.1em;
+}
+
+    .phone span {
+        margin-left: 3px;
+    }
+
+.color {
+    color: #ff8300;
+}
+
+.fee {
+    font-weight: 300;
+    font-size: 1.1em;
+    color: #ffffff;
+    clear: left;
+    text-align: center;
+}
+
+    .fee a {
+        color: #ff8300;
+    }
+
+.buy {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+    .buy button {
+        height: 45px;
+        width: 200px;
+        background-color: #ff8300;
+        color: white;
+        border: none;
+    }
+
+.learn {
+    color: #ff8300;
+    outline: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .learn a {
+        color: #ff8300;
+        text-decoration: none;
+    }
+
+        .learn a:hover {
+            text-decoration: underline;
+        }
+
+.save {
+    margin-left: -100px;
+    margin-right: -180px;
+    margin-bottom: 60px;
+    margin-top: -180px;
+    width: 145px;
+}
+
+.call {
+    text-align: center;
+    color: #ff8300;
+    position: relative;
+    float: right;
+    top: -630px;
+    margin-right: 450px;
+}
+
+.works {
+    background-color: #0074c8;
+    color: #fff;
+    float: right;
+    padding: 40px;
+    position: absolute;
+    right: 25%;
+    top: 700px;
+    width: 370px;
+    min-height: 225px;
+    z-index: 10;
+}
+
+    .works::after {
+        top: 100%;
+        left: 75%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-top-color: #0074c8;
+        border-width: 70px 70px 0 0;
+        margin-left: -40px;
+    }
+
+.wrapperImage {
+    margin-bottom: -50px;
+    overflow: hidden;
+    padding: 60px 0 110px;
+    margin-left: 450px;
+    width: 100%;
+}
+
+.audioButton {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -375px;
+    margin-left: 550px;
+}
+
+.addOns {
+    height: 800px;
+}
+
+.usage {
+    text-align: center;
+    height: 125px;
+}
+
+.callForward {
+    width: 20%;
+}
+
+.simuRing {
+    width: 20%;
+}
+
+.softPhone {
+    width: 20%;
+}
+
+.freeIcon {
+    width: 20%;
+}
+
+.extensions {
+    width: 20%;
+}
+
+.vonagePlans h4 {
+    color: orange;
+}
+
+.international {
+    background: url('../../wallpapers/vonage/map-homepage.png') no-repeat;
+    background-color: #ff8201;
+    max-width: 1500px;
+    height: 700px;
+    position: relative;
+    background-position: 50% 100%;
+    margin: 0 auto;
+    margin-top: -225px;
+}
+
+.internationalPlans {
+    color: white;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+
+    .internationalPlans input {
+        font-style: italic;
+        width: 400px;
+        height: 50px;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+.arrow {
+    background-color: rgb(226, 114, 30);
+    height: 48px;
+    width: 48px;
+}
+
+.awesome {
+    text-align: center;
+}
+
+.Reviews {
+    text-align: center;
+    background-color: #ff8300;
+    max-width: 1500px;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed',sans-serif;
+    overflow: hidden;
+    clear: both;
+}
+
+.pcmag {
+    width: 20%;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.posted {
+    width: 20%;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.next {
+    width: 20%;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.award {
+    width: 20%;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.Reviews button {
+    width: 250px;
+    background-color: #49494b;
+    height: 50px;
+    border: none;
+}
+
+.faqs {
+    background-color: #004e70;
+    clear: both;
+    margin: 0 auto;
+    padding: 1.250em 0;
+    max-width: 1500px;
+    height: 430px;
+}
+
+.questions {
+    color: white;
+}
+
+    .questions a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+.seefaq a {
+    color: #ff8300;
+}
+
+.business {
+    background-color: white;
+    height: 300px;
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+    .business h1 {
+        text-align: center;
+        color: #ff8300;
+    }
+
+.footer {
+    color: #b8b8bd;
+    clear: both;
+    margin: 0 auto;
+    max-width: 1500px;
+    background-color: #49494b;
+    padding: 1.8em 0 1.250em;
+    position: relative;
+    height: 800px;
+}
+
+.footerDesc  {
+    font-size: 20px;
+}
+
+    .footerDesc  a {
+        color: #b8b8bd;
+        text-decoration: none;
+    }
+.details{
+    height:225px;
+}
+
+.personal {
+    width: 25%;
+}
+
+.support {
+    width:25%;
+}
+
+    .support a {
+        color: #b8b8bd;
+        text-decoration: none;
+    }
+
+.aboutUs {
+    width: 25%;
+}
+
+    .aboutUs a {
+        color: #b8b8bd;
+        text-decoration: none;
+    }
+.sites{
+width: 25%;
+}
+.sites a{
+color: #b8b8bd;
+        text-decoration: none;
+}
+.offer{
+    height:100px;
+ padding-left:35px;
+    padding-top:15px;
+}
+/*.retailer{
+    padding-left:35px;
+    padding-top:15px;
+}*/
+.retailer button{
+    width:200px;
+    height:50px;
+    background-color: #ff8300;
+    border:none;
+      color: #fff;
+      margin-top:15px;
+}
+/*.signUp{
+ padding-left:35px;
+    padding-top:15px;
+}*/
+.signUp input{
+    width:250px;
+    height:46px;
+}
+.signUp button{
+    width:200px;
+    height:50px;
+    background-color: #ff8300;
+    border:none;
+      color: #fff;
+      margin-top:15px;
+}
+.socialIcons{
+    height:35px;
+}
+.footerLogo{
+    height:70px;
+}
+.footerLogoimg{
+    width:145px;
+    height:auto;
+    margin-top:25px;
+}
+.copyRight{
+    font-size:17px;
+    padding-top:45px;
+}
+.footDesc{
+    font-size:15px;
+}
+

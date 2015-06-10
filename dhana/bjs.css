@@ -1,0 +1,239 @@
+﻿.container {
+    width: 100%;
+    background-color: #F4F4F4;
+}
+
+.header {
+    height: 105px;
+}
+
+
+.content {
+    width: 980px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.row {
+    clear: both;
+}
+
+.logIn {
+    margin-top: 45px;
+    margin-left: 5px;
+}
+
+.order {
+    margin-top: 10px;
+}
+
+.cart {
+    margin-bottom: 10px;
+}
+
+    .cart span {
+        margin-left: 5px;
+    }
+
+.search input {
+    width: 382px;
+    height: 31px;
+    border-color: red;
+    padding-left: 5px;
+}
+
+.search img {
+    margin-top: 5px;
+    margin-left: -4px;
+}
+
+.products {
+    height: 30px;
+    background-color: #372940;
+    color: white;
+    padding-top: 2px;
+}
+
+    .products a {
+        font-size: 14px;
+        color: white;
+        padding-left: 3px;
+        /*font-family:Roboto Condensed;*/
+    }
+
+.banner {
+    height: 320px;
+    margin-top: 5px;
+}
+
+.bannerImage {
+    width: 50%;
+}
+
+.featuredProducts {
+    height: 585px;
+}
+
+    .featuredProducts h3 {
+        margin-left: 15px;
+    }
+
+.membershipRow {
+    height: 40px;
+    color: white;
+}
+
+.email {
+    background: url('pics/emailoffers.jpg')no-repeat;
+    width: 350px;
+    height: 30px;
+    margin-right: 30px;
+}
+
+    .email input {
+        margin-left: 50px;
+    }
+
+.featuredProducts {
+    margin-top: 3px;
+}
+
+.safeRacks {
+    width: 18%;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.firstRow {
+    margin-bottom: 10px;
+}
+
+    .firstRow a {
+        color: #685f50;
+    }
+
+.price {
+    font-size: 20px;
+}
+
+.savingsRow {
+    color: red;
+    margin-top: 5px;
+}
+
+.samsung {
+    width: 18%;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.iceMaker {
+    width: 18%;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.speakers {
+    width: 18%;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.berkellyGarden {
+    width: 18%;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.pics {
+    width: 18%;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.featureServices {
+    margin-left: 15px;
+}
+
+    .featureServices span {
+        margin-left: 2px;
+    }
+
+.footer {
+    height: 190px;
+    margin-left: 15px;
+}
+
+.aboutUs {
+    font-size: 12px;
+    color: gray;
+}
+
+    .aboutUs a {
+        color: gray;
+    }
+
+    .aboutUs div {
+        margin-bottom: 2px;
+    }
+
+.icons span {
+    margin-right: 4px;
+}
+
+.membership {
+    margin-left: 3px;
+    width: 40%;
+    font-size: 12px;
+    color: gray;
+}
+
+    .membership a {
+        color: gray;
+    }
+
+    .membership div {
+        margin-bottom: 2px;
+    }
+
+.customerCare {
+    margin-left: 3px;
+    width: 35%;
+    font-size: 12px;
+    color: gray;
+}
+
+    .customerCare div {
+        margin-bottom: 2px;
+    }
+
+    .customerCare a {
+        color: gray;
+    }
+
+.subFooter {
+    height: 40px;
+    font-size: 12px;
+    width:100%;
+}
+
+.copyRight {
+    /*width: 295px;*/
+    text-align: left;
+      margin-top: 18px;
+      float:right;
+}
+.bjsImage{
+      margin-top: -31px;
+    
+      
+}
