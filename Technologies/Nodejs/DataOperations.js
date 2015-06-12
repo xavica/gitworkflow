@@ -37,7 +37,7 @@ function callback(error, response, body) {
     }
 }
 
-//request(options, callback);
+request(options, callback);
 //End post: to insert records
 //*************************************************************************************************************************
 //Begin Get: to get records

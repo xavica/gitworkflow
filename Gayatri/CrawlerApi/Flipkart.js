@@ -307,6 +307,5 @@ casper.then(function () {
     });
     this.echo("pushed  Flipkart items to productstage table");
 });
-////Getting products from ProductStageTable
 
 casper.run();
