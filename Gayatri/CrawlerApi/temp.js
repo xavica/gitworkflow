@@ -1,29 +1,44 @@
-﻿"CategoryId": 12,
-   "ShortDescription": 'dont lose your mind lose your weight english (paperback) ',
-"Description": 'Description',
-'RedirectUrl': 'http'://www.flipkart.com//dont-lose-your-mind-weight-english/p/itme5m7s3cwfme6rid=9788184001051&ref=L%3A-4881566484044300121&srno=b_80',
-'ImageUrl': 'http'://img6a.flixcart.com/image/book/0/5/1/don-t-lose-your-mind-lose-your-weight-125x125-imae6kf44xgca3k4.jpeg',
-'StoreName': 'Flipkart',
-'ActualPrice': 250,
-'CurrentPrice': 175,
-'DiscountPercentage': 30,
-'IsShippingFree': 1,
-'Star': 4,
-'IsPublished': 0,
-'ShowDate': '2015-05-02',
-'Source': 'Crawler' } ,
-{ 
-   'CategoryId': 12,
-   'ShortDescription': 'don't lose your mind lose your weight english (paperback) ',
-   'Description': 'Description',
-   'RedirectUrl': 'http'://www.flipkart.com//dont-lose-your-mind-weight-english/p/itme5m7s3cwfme6rid=9788184001051&ref=L%3A-4881566484044300121&srno=b_80',
-   'ImageUrl': 'http'://img6a.flixcart.com/image/book/0/5/1/don-t-lose-your-mind-lose-your-weight-125x125-imae6kf44xgca3k4.jpeg',
-   'StoreName': 'Flipkart',
-   'ActualPrice': 250,
-   'CurrentPrice': 175,
-   'DiscountPercentage': 30,
-   'IsShippingFree': 1,
-   'Star': 4,
-   'IsPublished': 0,
-   'ShowDate': '2015-05-02',
-   'Source': 'Crawler' } ]
+﻿casper.then(function () {
+    this.echo(productsList.length);
+
+    var tempArray = [];
+    var results = [], index = 0;
+
+    productsList.forEach(function (item) {
+        tempArray.push({
+            CategoryId: item.CategoryId,
+            ShortDescription: item.ShortDescription,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Flipkart",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        });
+        if (index % 50 === 0) {
+            results.push(tempArray);
+            tempArray = [];
+        }
+        index++;
+    });
+    if (tempArray.length) {
+        results.push(tempArray);
+    }
+
+    results.forEach(function (data) {
+        casper.echo(data);
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+            method: 'post',
+            data: data
+        });
+    });
+    this.echo("pushed  Flipkart items to productstage table");
+});
