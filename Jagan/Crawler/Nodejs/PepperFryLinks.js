@@ -203,7 +203,6 @@ casper.then(function () {
                 LastUpdateDate: "1/1/2015"
             }
         });
-
     });
     this.echo("pushed  PepperFry items to productstage table");
 });

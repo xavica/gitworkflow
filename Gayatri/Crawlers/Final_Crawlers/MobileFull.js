@@ -10,22 +10,24 @@
         discount: 'span.pu-off-per',
         redirectUrl: 'div.pu-title > a'
     },
-    isScroll: true
-    //},
-    //    {
-    //        url: "http://deals.ebay.in/ebaydeals/mobiles-1",
-    //        selectors: {
-    //            elements: '.listingblock',
-    //            title: 'div.itemtitle > p > a',
-    //            description: '',
-    //            imageUrl: '',
-    //            actualPrice: 'div.itemPriceStriked > p',
-    //            sellingPrice: 'div.itemPrice > p',
-    //            discount: 'div.discountLabel > div > span',
-    //            redirectUrl: ''
-    //        },
-    //        isScroll: true
+    isScroll: false,
+    id: 3
 },
+        {
+            url: "http://deals.ebay.in/ebaydeals/mobiles-1",
+            selectors: {
+                elements: '.listingblock',
+                title: 'div.itemtitle > p > a',
+                description: '',
+                imageUrl: 'div.imgListingContainer > a > img',
+                actualPrice: 'div.itemPriceStriked > p',
+                sellingPrice: 'div.itemPrice > p',
+                discount: 'div.discountLabel > div > span',
+                redirectUrl: 'div.imgListingContainer > a'
+            },
+            isScroll: false,
+            id: 3
+        },
     {
 
         url: "http://www.amazon.in/s/ref=amb_link_179803727_1?ie=UTF8&bbn=4192584031&rh=i%3Aelectronics%2Cn%3A976419031%2Cn%3A!1499770031%2Cn%3A!1499772031%2Cn%3A4192584031%2Cn%3A1389401031%2Cn%3A1389432031%2Cp_76%3A1318482031%2Cn%3A!1499772031%2Cn%3A!1499770031%2Cn%3A!1499770031%2Cn%3A!1499772031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-leftnav&pf_rd_r=0PX4ARTQZFAC6778SCX2&pf_rd_t=101&pf_rd_p=613139487&pf_rd_i=1389432031",
@@ -39,7 +41,8 @@
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false
+        isScroll: false,
+        id: 3
     },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976419031%2Cn%3A%211499770031%2Cn%3A%211499772031%2Cn%3A4192584031%2Cn%3A1389401031%2Cn%3A1389432031%2Cp_76%3A1318482031&page=2&bbn=4192584031&ie=UTF8&qid=1430886844",
@@ -53,7 +56,8 @@
         discount: 'span.a-size-small.a-color-price',
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
-    isScroll: false
+    isScroll: false,
+    id:3
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -118,7 +122,7 @@ mobileLinks.forEach(function (mobileCrawler) {
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
+                        __utils__.echo(discount);
                         //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "title": title,
