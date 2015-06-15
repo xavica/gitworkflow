@@ -75,22 +75,22 @@
     isScroll: true,
     id: 15
 },
-//not wrking.
-//{
-//    url: "http://www.zansaar.com/furniture/bedroom-furniture/mattresses?sort=discount",
-//    selectors: {
-//        elements: 'li[unbxdattr="product"]',
-//        title: 'center > img',
-//        description: '',
-//        imageUrl: 'center > img',
-//        actualPrice: 'strong > span',
-//        sellingPrice: 'div > p > span',
-//        discount: 'div > hgroup > div > span > span',
-//        redirectUrl: 'span > a'
-//    },
-//    isScroll: true,
-//    id: 15
-//},
+//Furniture -wardrobes
+{
+    url: "http://www.zansaar.com/furniture/bedroom-furniture/wardrobes",
+    selectors: {
+        elements: 'li[unbxdattr="product"]',
+        title: 'center > img',
+        description: '',
+        imageUrl: 'center > img',
+        actualPrice: 'div > p > del',
+        sellingPrice: 'strong > span:nth-child(2)',
+        discount: 'div > hgroup > div > span > span',
+        redirectUrl: 'span > a'
+    },
+    isScroll: true,
+    id: 15
+},
 {
     url: "http://www.zansaar.com/furniture/bedroom-furniture/wardrobes?sort=discount",
     selectors: {

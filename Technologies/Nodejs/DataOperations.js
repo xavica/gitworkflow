@@ -37,7 +37,7 @@ function callback(error, response, body) {
     }
 }
 
-request(options, callback);
+//request(options, callback);
 //End post: to insert records
 //*************************************************************************************************************************
 //Begin post: to insert records (Bulk)
@@ -60,7 +60,7 @@ productArray.push({
 });
 productArray.push({
     "CategoryId": "1",
-    "ShortDescription": "New Insert",
+    "ShortDescription": "dont go",
     "Description": "Description",
     "RedirectUrl": "RedirectUrl",
     "ImageUrl": "ImageUrl",
@@ -80,13 +80,13 @@ var options = {
     headers: {
         'Content-Type': 'application/json'
     },
-    json: productArray
+    data: productArray
 };
 
 
 function callbackBulk(error, response, body) {
     if (!error) {
-        console.log(response.statusCode);
+        console.log(response.statusCode +"coming from bulk");
     }
     else {
         console.log('Error happened: ' + error);
