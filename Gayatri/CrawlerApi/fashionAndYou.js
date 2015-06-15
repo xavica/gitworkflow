@@ -1,46 +1,55 @@
-﻿var bagItTodayLinks = [
-// Jewellery
+﻿var FashionAndYouLinks = [
+    //Fashion Jwellery
 {
     url: "http://www.fashionandyou.com/women/fashion_jewelry",
     selectors: {
-        elements: 'div.products div.product',
+        elements: 'div[class*="product"]',
         title: 'div.prod-info > a.ev-prod-name',
         description: '',
         imageUrl: 'div.prod-img > a > img',
-        actualPrice: 'div.prod-pricing > span.old-price',
-        sellingPrice: 'div.prod-pricing > span.new-price',
+        actualPrice: 'div > span.old-price',
+        sellingPrice: 'div > span.new-price',
         discount: 'div.discount-tag',
-        redirectUrl: 'div.prod-img > a'
+        redirectUrl: 'div.prod-info > a.ev-prod-name'
     },
     isScroll: false,
-    id: 1
+    id: 7
 }];
-
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-bagItTodayLinks.forEach(function (bagItTodayCrawler) {
-    casper.thenOpen(bagItTodayCrawler.url, function () {
+FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
+    casper.thenOpen(FashionAndYouCrawler.url, function () {
         this.echo("----------------------------------------");
-        if (bagItTodayCrawler.isScroll === true) {
-            this.scrollToBottom();
-            casper.waitForSelectorTextChange(bagItTodayCrawler.selectors.elements, function () { });
-            casper.then(function () {
-                this.scrollToBottom();
-                casper.waitForSelectorTextChange(bagItTodayCrawler.selectors.elements, function () { });
-            });
-            casper.then(function () {
-                this.scrollToBottom();
-                casper.waitForSelectorTextChange(bagItTodayCrawler.selectors.elements, function () { });
-            });
-        }
+        //if (FashionAndYouCrawler.isScroll === true) {
+        //    this.scrollToBottom();
+        //    casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+        //        this.echo("first scroll over");
+        //    });
+        //    casper.then(function () {
+        //        this.scrollToBottom();
+        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+        //            this.echo("second scroll over");
+        //        });
+        //    });
+        //    casper.then(function () {
+        //        this.scrollToBottom();
+        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+        //            this.echo("third scroll over");
+        //        });
+        //    });
+        //}
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
                 var parser = document.createElement('a');
                 var elements = document.querySelectorAll(stubCrawler.selectors.elements);
+                //__utils__.echo("elements length is : " + elements.length);
+
                 for (var i = 0; i < elements.length; i++) {
+                    //__utils__.echo("this is iteration : " + i);
+
                     var titleElement = elements[i].querySelector(stubCrawler.selectors.title);
                     var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
                     var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
@@ -74,13 +83,15 @@ bagItTodayLinks.forEach(function (bagItTodayCrawler) {
                     else {
                         fullRedirectUrl = redirectUrl;
                     }
-                    if (title && discount && actualPrice && redirectUrl) {
+                    if (title && actualPrice && redirectUrl) {
                         __utils__.echo(title);
-                        //__utils__.echo(imageUrl);
-                        //__utils__.echo(actualPrice);
-                        //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
+                        __utils__.echo(imageUrl);
+                        __utils__.echo(actualPrice);
+                        __utils__.echo(sellingPrice);
+                        __utils__.echo(discount);
+                        __utils__.echo(fullRedirectUrl);
+                        __utils__.echo("-----------------------------------");
+
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -93,7 +104,7 @@ bagItTodayLinks.forEach(function (bagItTodayCrawler) {
                     }
                 }
                 return tempProducts;
-            }, bagItTodayCrawler);
+            }, FashionAndYouCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
