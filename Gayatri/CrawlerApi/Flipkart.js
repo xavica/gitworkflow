@@ -281,7 +281,7 @@ FilpkartLinks.forEach(function (FilpkartCrawler) {
     });
 });
 
-// pushing Flipkart items to ProductStage Table.
+// pushing items to ProductStage Table.
 casper.then(function () {
     //Creating proper input array.
     var productListToPush = productsList.map(function (item) {
