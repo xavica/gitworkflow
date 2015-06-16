@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Mail</title>
+</head>
+<body>
+<form method="post" action="">
+<textarea height="250" width="200" id="body"></textarea>
+    <input type="text" id="email_address" name="name" placeholder="Enter your email address..." required>
+    <button onclick="sendMail(); return false">Send Email</button>
+</form>
+<script type="text/javascript">
+	function sendMail() {
+    var link = 'mailto:sivatheruler@gmail.com?subject=Message from '
+             +document.getElementById('email_address').value
+             +'&body='+document.getElementById('body').value;
+    window.location.href = link;
+}
+</script>
+</body>
+</html>
