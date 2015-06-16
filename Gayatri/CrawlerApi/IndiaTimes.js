@@ -1,4 +1,5 @@
-﻿var indiaTimesLinks = [
+﻿
+var indiaTimesLinks = [
 // Books
 {
     url: "http://shopping.indiatimes.com/books/",
