@@ -13,7 +13,7 @@
         redirectUrl: 'div.listing-detail p.listing-title > a'
     },
     isScroll: false,
-    id: 13
+    id: 12
 },
 {
     url: "http://www.mirraw.com/store/necklace-sets?sort=discount",
@@ -28,7 +28,7 @@
         redirectUrl: 'div.listing-detail p.listing-title > a'
     },
     isScroll: false,
-    id: 13
+    id: 12
 },
 {
     url: "http://www.mirraw.com/store/mangalsutra?sort=discount",
@@ -43,7 +43,7 @@
         redirectUrl: 'div.listing-detail p.listing-title > a'
     },
     isScroll: false,
-    id: 13
+    id: 12
 },
 {
     url: "http://www.mirraw.com/women/jewellery/earrings/studs?sort=discount",
@@ -58,7 +58,7 @@
         redirectUrl: 'div.listing-detail p.listing-title > a'
     },
     isScroll: false,
-    id: 13
+    id: 12
 },
 {
     url: "http://www.mirraw.com/store/anklets?sort=discount",
@@ -73,7 +73,7 @@
         redirectUrl: 'div.listing-detail p.listing-title > a'
     },
     isScroll: false,
-    id: 13
+    id: 12
 
 }];
 

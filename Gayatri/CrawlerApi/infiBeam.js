@@ -29,7 +29,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 //Televisions
 {
@@ -45,7 +45,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 
 {
@@ -61,7 +61,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 {
     url: "http://www.infibeam.com/led-tv/search?features=hdmi",
@@ -76,7 +76,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 {
     url: "http://www.infibeam.com/hd-tv",
@@ -91,7 +91,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 {
     url: "http://www.infibeam.com/3d-tv",
@@ -106,7 +106,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 5
 },
 //Sun Glasses
 {
@@ -122,7 +122,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 6
 },
 {
     url: "http://www.infibeam.com/sunglasses/",
@@ -137,7 +137,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 6
 },
 //Watches
 {
@@ -153,7 +153,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 6
 },
 //Accesories
 {
@@ -169,8 +169,9 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 7
 },
+//Air conditioners
 {
     url: "http://www.infibeam.com/split-ac#capacity=1-1-1-4-ton&capacity=1-5-ton&capacity=1-6-ton-and-above&capacity=1-ton&capacity=below-1-ton&starRating=2-star&starRating=3-star&starRating=4-star&starRating=5-star&sort=relevance",
     selectors: {
@@ -184,8 +185,9 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 8
 },
+///games
 {
     url: "http://www.infibeam.com/gaming-consoles-handheld/search#nothing",
     selectors: {
@@ -199,7 +201,7 @@
         redirectUrl: 'div.title > a'
     },
     isScroll: false,
-    id: 3
+    id: 10
 
 }];
 

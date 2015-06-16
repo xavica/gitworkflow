@@ -1,104 +1,38 @@
-﻿var TabletLinks = [{
-    url: "http://www.flipkart.com/tablets/pr?sid=tyy,hry&otracker=ch_vn_tablet_filter_Brands_ALL",
-    selectors: {
-        elements: 'div[data-pid*="TAB"]',
-        title: 'div.pu-title > a',
-        description: '',
-        imageUrl: 'a.pu-image > img',
-        actualPrice: '.pu-old',
-        sellingPrice: 'div.pu-final > span',
-        discount: 'span.pu-off-per',
-        redirectUrl: 'div.pu-title > a'
-    },
-    isScroll: true
-},
-    {
-        url: "http://deals.ebay.in/ebaydeals/tablets-6",
-        selectors: {
-            elements: '.listingblock',
-            title: 'div.itemtitle > p > a',
-            description: '',
-            imageUrl: 'div.imgListingContainer > a > img',
-            actualPrice: 'div.itemPriceStriked > p',
-            sellingPrice: 'div.itemPrice > p',
-            discount: 'div.discountLabel > div > span',
-            redirectUrl: 'div.imgListingContainer > a'
-        },
-        isScroll: true
-    },
+﻿var fashionaraLinks = [
+// Cameras
 {
-    url: "http://www.amazon.in/s/ref=sr_pg_1?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&bbn=1375458031&ie=UTF8&qid=1430477874",
+    url: "http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx",
     selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
+        elements: 'div.category-products > div.products-page li.item',
+        title: 'div.product-image-box > a > img.little_image',
         description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
+        imageUrl: 'div.product-image-box > a > img.little_image',
+        actualPrice: 'div.price-box > span.old-price > span',
+        sellingPrice: 'div.price-box > span.special-price > span.price',
+        discount: 'div.save-product-mask > div.percent',
+        redirectUrl: 'div.product-image-box > a'
     },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=2&bbn=1375458031&ie=UTF8&qid=1426669276",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=3&bbn=1375458031&ie=UTF8&qid=1430477915",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=4&bbn=1375458031&ie=UTF8&qid=1430477941",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
+    isScroll: false,
+    id: 12
 }];
+
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-TabletLinks.forEach(function (tabletCrawler) {
-    casper.thenOpen(tabletCrawler.url, function () {
-        this.echo("---------------------");
-        if (tabletCrawler.isScroll === true) {
+fashionaraLinks.forEach(function (fashionaraCrawler) {
+    casper.thenOpen(fashionaraCrawler.url, function () {
+        this.echo("----------------------------------------");
+        if (fashionaraCrawler.isScroll === true) {
             this.scrollToBottom();
-            casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+            casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
             });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
             });
         }
         casper.then(function () {
@@ -141,13 +75,14 @@ TabletLinks.forEach(function (tabletCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        __utils__.echo(title);
+                        //__utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
                         //__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
+                        __utils__.echo(fullRedirectUrl);
                         tempProducts.push({
+                            "id": stubCrawler.id,
                             "title": title,
                             "actualPrice": actualPrice,
                             "sellingPrice": sellingPrice,
@@ -158,7 +93,7 @@ TabletLinks.forEach(function (tabletCrawler) {
                     }
                 }
                 return tempProducts;
-            }, tabletCrawler);
+            }, fashionaraCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
@@ -167,17 +102,4 @@ TabletLinks.forEach(function (tabletCrawler) {
         });
     });
 });
-
-casper.then(function () {
-
-    //Apply filter logic
-})
-casper.then(function () {
-    this.echo(productsList.length);
-    //apply ranking logic
-})
-casper.then(function () {
-    this.echo(productsList.length);
-    //Then push to server
-})
 casper.run();

@@ -13,7 +13,7 @@
         redirectUrl: 'div.prod-info > a.ev-prod-name'
     },
     isScroll: false,
-    id: 7
+    id: 12
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;

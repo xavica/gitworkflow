@@ -77,7 +77,7 @@
         redirectUrl: 'a'
     },
     isScroll: false,
-    id: 7
+    id: 8
 },
 //WASHING MACHINES
 {
@@ -93,7 +93,7 @@
         redirectUrl: 'a'
     },
     isScroll: false,
-    id: 8
+    id: 9
 },
 //CAMERAS
 {

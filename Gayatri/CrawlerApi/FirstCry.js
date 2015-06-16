@@ -13,7 +13,7 @@
         redirectUrl: 'div.li_txt1 > a'
     },
     isScroll: false,
-    id: 1
+    id: 10
 }];
 
 var casper = require('casper').create();

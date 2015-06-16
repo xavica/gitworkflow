@@ -1,104 +1,38 @@
-﻿var TabletLinks = [{
-    url: "http://www.flipkart.com/tablets/pr?sid=tyy,hry&otracker=ch_vn_tablet_filter_Brands_ALL",
-    selectors: {
-        elements: 'div[data-pid*="TAB"]',
-        title: 'div.pu-title > a',
-        description: '',
-        imageUrl: 'a.pu-image > img',
-        actualPrice: '.pu-old',
-        sellingPrice: 'div.pu-final > span',
-        discount: 'span.pu-off-per',
-        redirectUrl: 'div.pu-title > a'
-    },
-    isScroll: true
-},
-    {
-        url: "http://deals.ebay.in/ebaydeals/tablets-6",
-        selectors: {
-            elements: '.listingblock',
-            title: 'div.itemtitle > p > a',
-            description: '',
-            imageUrl: 'div.imgListingContainer > a > img',
-            actualPrice: 'div.itemPriceStriked > p',
-            sellingPrice: 'div.itemPrice > p',
-            discount: 'div.discountLabel > div > span',
-            redirectUrl: 'div.imgListingContainer > a'
-        },
-        isScroll: true
-    },
+﻿var greendustLinks = [
+// Jewellery
 {
-    url: "http://www.amazon.in/s/ref=sr_pg_1?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&bbn=1375458031&ie=UTF8&qid=1430477874",
+    url: "http://www.greendust.com/washing-machine-fully-automatic-c-247_249.html?cPath=247_249&salCategory=&price_id=&manufacturer=&proType=&filter_id_txt=&sortP=2",
     selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
+        elements: '#products-wfix div.product-dis',
+        title: 'div.product-dis-link > a',
         description: '',
         imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
+        actualPrice: 'div.price-hold > span:nth-child(2)',
+        sellingPrice: 'div.price-hold > span.price',
+        discount: 'div.discountlabel > span:nth-child(1)',
+        redirectUrl: 'div.product-dis-link > a'
     },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=2&bbn=1375458031&ie=UTF8&qid=1426669276",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=3&bbn=1375458031&ie=UTF8&qid=1430477915",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&page=4&bbn=1375458031&ie=UTF8&qid=1430477941",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false
+    isScroll: false,
+    id: 12
 }];
+
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-TabletLinks.forEach(function (tabletCrawler) {
-    casper.thenOpen(tabletCrawler.url, function () {
-        this.echo("---------------------");
-        if (tabletCrawler.isScroll === true) {
+greendustLinks.forEach(function (greendustCrawler) {
+    casper.thenOpen(greendustCrawler.url, function () {
+        this.echo("----------------------------------------");
+        if (greendustCrawler.isScroll === true) {
             this.scrollToBottom();
-            casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+            casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(tabletCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             });
         }
         casper.then(function () {
@@ -114,8 +48,8 @@ TabletLinks.forEach(function (tabletCrawler) {
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
-
-                    var title = titleElement && titleElement.getAttribute('title') || '';
+//Here code change has been done
+                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
@@ -141,13 +75,14 @@ TabletLinks.forEach(function (tabletCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        __utils__.echo(title);
+                        //__utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
                         //__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
+                        __utils__.echo(fullRedirectUrl);
                         tempProducts.push({
+                            "id": stubCrawler.id,
                             "title": title,
                             "actualPrice": actualPrice,
                             "sellingPrice": sellingPrice,
@@ -158,7 +93,7 @@ TabletLinks.forEach(function (tabletCrawler) {
                     }
                 }
                 return tempProducts;
-            }, tabletCrawler);
+            }, greendustCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
@@ -167,17 +102,4 @@ TabletLinks.forEach(function (tabletCrawler) {
         });
     });
 });
-
-casper.then(function () {
-
-    //Apply filter logic
-})
-casper.then(function () {
-    this.echo(productsList.length);
-    //apply ranking logic
-})
-casper.then(function () {
-    this.echo(productsList.length);
-    //Then push to server
-})
 casper.run();

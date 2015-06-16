@@ -8,11 +8,11 @@
         description: '',
         imageUrl: 'center > img',
         actualPrice: 'del',
-        sellingPrice: 'div > p > span',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 },
 {
@@ -23,11 +23,11 @@
         description: '',
         imageUrl: 'center > img',
         actualPrice: 'del',
-        sellingPrice: 'div > p > span',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 },
 {
@@ -38,11 +38,11 @@
         description: '',
         imageUrl: 'center > img',
         actualPrice: 'del',
-        sellingPrice: 'div > p > span',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 },
 {
@@ -53,26 +53,11 @@
         description: '',
         imageUrl: 'center > img',
         actualPrice: 'del',
-        sellingPrice: 'div > p > span',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
-    id: 15
-},
-{
-    url: "http://www.zansaar.com/furniture/bedroom-furniture/beds?sort=discount",
-    selectors: {
-        elements: 'li[unbxdattr="product"]',
-        title: 'center > img',
-        description: '',
-        imageUrl: 'center > img',
-        actualPrice: 'del',
-        sellingPrice: 'div > p > span',
-        discount: 'div > hgroup > div > span > span',
-        redirectUrl: 'span > a'
-    },
-    isScroll: true,
+    isScroll: false,
     id: 15
 },
 //Furniture -wardrobes
@@ -83,12 +68,12 @@
         title: 'center > img',
         description: '',
         imageUrl: 'center > img',
-        actualPrice: 'div > p > del',
-        sellingPrice: 'strong > span:nth-child(2)',
+        actualPrice: 'del',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 },
 {
@@ -99,11 +84,11 @@
         description: '',
         imageUrl: 'center > img',
         actualPrice: 'del',
-        sellingPrice: 'div > p > span',
+        sellingPrice: 'strong span:nth-child(2)',
         discount: 'div > hgroup > div > span > span',
         redirectUrl: 'span > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 
 }];
@@ -115,18 +100,18 @@ var productsList = [];
 ZansaarLinks.forEach(function (ZansaarCrawler) {
     casper.thenOpen(ZansaarCrawler.url, function () {
         this.echo("----------------------------------------");
-        //if (ZansaarCrawler.isScroll === true) {
-        //    this.scrollToBottom();
-        //    casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
-        //    });
-        //}
+        if (ZansaarCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(ZansaarCrawler.selectors.elements, function () { });
+            });
+        }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
@@ -172,11 +157,11 @@ ZansaarLinks.forEach(function (ZansaarCrawler) {
                     }
                     if (title && discount && actualPrice && redirectUrl) {
                         __utils__.echo(title);
-                        //__utils__.echo(imageUrl);
-                        //__utils__.echo(actualPrice);
-                        //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
+                        __utils__.echo(imageUrl);
+                        __utils__.echo(actualPrice);
+                        __utils__.echo(sellingPrice);
+                        __utils__.echo(discount);
+                        __utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
