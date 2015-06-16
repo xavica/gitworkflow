@@ -1,4 +1,5 @@
-﻿var BajaaoLinks = [
+﻿var _ = require('lodash');
+var BajaaoLinks = [
     //Musical Instruments
 {
     url: "http://www.bajaao.com/collections/special-deals",
@@ -13,7 +14,7 @@
         redirectUrl: 'div > a'
     },
     isScroll: false,
-    id: 15
+    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/special-deals?page=2",
@@ -28,7 +29,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/guitar-deals?sort_by=price-ascending",
@@ -43,7 +44,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/guitar-deals?page=2&sort_by=price-ascending",
@@ -58,7 +59,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/drum-deals",
@@ -73,7 +74,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/drum-deals?page=2",
@@ -88,7 +89,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/keyboard-deals",
@@ -103,7 +104,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 //},
 //{
 //    url: "http://www.bajaao.com/collections/keyboard-deals?page=2",
@@ -118,7 +119,7 @@
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
-//    id: 15
+//    id: 14
 }];
 
 var casper = require('casper').create();

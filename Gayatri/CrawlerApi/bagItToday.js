@@ -1,4 +1,5 @@
-﻿var bagItTodayLinks = [
+﻿var _ = require('lodash');
+var bagItTodayLinks = [
 // LAPTOPS
 {
     url: "http://www.bagittoday.com/budget-laptops/c-2443/",
@@ -193,4 +194,5 @@ casper.then(function () {
     });
     this.echo("pushed items to productstage table");
 });
+
 casper.run();
