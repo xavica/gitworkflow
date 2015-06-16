@@ -1,4 +1,5 @@
-﻿var ZansaarLinks = [
+﻿var _ = require('lodash');
+var ZansaarLinks = [
     //FURNITURE
 {
     url: "http://www.zansaar.com/furniture/living-room-furniture/sofas?sort=discount",

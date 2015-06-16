@@ -13,7 +13,7 @@ var FilpkartLinks = [
         discount: 'span.pu-off-per',
         redirectUrl: 'div.pu-title > a'
     },
-    isScroll: true,
+    isScroll: false,
     id: 2
     },
     //MOBILES
@@ -29,7 +29,7 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
+        isScroll: false,
         id: 3
     },
     //TV
@@ -45,8 +45,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 4
+        isScroll: false,
+        id: 5
     },
 
     //SUNGLASSES
@@ -62,8 +62,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 5
+        isScroll: false,
+        id: 6
     },
     //  Watches - Men
     {
@@ -78,10 +78,10 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 5
+        isScroll: false,
+        id: 6
     },
-    //BAG
+   //// BAG
     {
         url: "http://www.flipkart.com/bags-wallets-belts/luggage-travel/pr?sid=reh%2Cplk&otracker=clp_lifestyle-luggage-travel-accessories_CategoryLinksModule_0-2_catergorylinks_5_ViewAll",
         selectors: {
@@ -94,10 +94,10 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 6
+        isScroll: false,
+        id: 7
     },
-    // AIR CONDITONERS
+     //AIR CONDITONERS
     {
         url: "http://www.flipkart.com/home-kitchen/home-appliances/air-conditioners/pr?q=air+conditioner&as=on&as-show=on&otracker=start&sid=j9e%2Cabm%2Cc54&as-pos=1_1_ic_air",
         selectors: {
@@ -110,8 +110,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 7
+        isScroll: false,
+        id: 8
     },
     //WASHING MACHINE
     {
@@ -126,8 +126,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 8
+        isScroll: false,
+        id: 9
     },
     //GAME CONSOLE
     {
@@ -142,8 +142,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 9
+        isScroll: false,
+        id: 10
     },
     //TOYS
     {
@@ -158,10 +158,10 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 10
+        isScroll: false,
+        id: 11
     },
-    //JWELLERY
+    // JWELLERY
     {
         url: "http://www.flipkart.com/search?q=jwellary&as=on&as-show=on&otracker=start&as-pos=1_q_jwe#jumpTo=400|15",
         selectors: {
@@ -174,10 +174,10 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 11
+        isScroll: false,
+        id: 12
     },
-    //BOOKS
+    // BOOKS
     {
         url: "http://www.flipkart.com/books/~bestsellers/pr?sid=bks&otracker=clp_books_clp%2FProductsExpand_0-6__viewAll",
         selectors: {
@@ -190,8 +190,8 @@ var FilpkartLinks = [
             discount: 'span.pu-off-per',
             redirectUrl: 'div.pu-title > a'
         },
-        isScroll: true,
-        id: 12
+        isScroll: false,
+        id: 13
     }];
 
 var casper = require('casper').create();

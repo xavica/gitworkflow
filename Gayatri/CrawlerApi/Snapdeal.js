@@ -1,4 +1,5 @@
-﻿var SnapdealLinks = [
+﻿var _ = require('lodash');
+var SnapdealLinks = [
         // Mobiles
 {
     url: "http://www.snapdeal.com/products/mobiles-mobile-phones?sort=plrty&",

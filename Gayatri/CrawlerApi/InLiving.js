@@ -1,4 +1,5 @@
-﻿var InLivingLinks = [
+﻿var _ = require('lodash');
+var InLivingLinks = [
     //Furniture
 {
     url: "http://www.inliving.com/deals-and-discounts",

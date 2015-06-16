@@ -1,42 +1,39 @@
 ﻿var _ = require('lodash');
-var askMeBazaarLinks = [
-// AIR CONDITONERS
+var greendustLinks = [
+// Jewellery
 {
-    url: "",
+    url: "http://www.greendust.com/washing-machine-fully-automatic-c-247_249.html?cPath=247_249&salCategory=&price_id=&manufacturer=&proType=&filter_id_txt=&sortP=2",
     selectors: {
-        elements: '',
-        title: '',
+        elements: '#products-wfix div.product-dis',
+        title: 'div.product-dis-link > a',
         description: '',
-        imageUrl: '',
-        actualPrice: '',
-        sellingPrice: '',
-        discount: '',
-        redirectUrl: ''
+        imageUrl: 'a > img',
+        actualPrice: 'div.price-hold > span:nth-child(2)',
+        sellingPrice: 'div.price-hold > span.price',
+        discount: 'div.discountlabel > span:nth-child(1)',
+        redirectUrl: 'div.product-dis-link > a'
     },
-    isScroll: true,
-    id: 7
-
-    //BOOKS
-
+    isScroll: false,
+    id: 12
 }];
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
-    casper.thenOpen(askMeBazaarCrawler.url, function () {
+greendustLinks.forEach(function (greendustCrawler) {
+    casper.thenOpen(greendustCrawler.url, function () {
         this.echo("----------------------------------------");
-        if (askMeBazaarCrawler.isScroll === true) {
+        if (greendustCrawler.isScroll === true) {
             this.scrollToBottom();
-            casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
+            casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
             });
         }
         casper.then(function () {
@@ -52,8 +49,8 @@ askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
-
-                    var title = titleElement && titleElement.getAttribute('title') || '';
+                    //Here code change has been done
+                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
@@ -79,12 +76,12 @@ askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        __utils__.echo(title);
+                        //__utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
                         //__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
+                        __utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -97,7 +94,7 @@ askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
                     }
                 }
                 return tempProducts;
-            }, askMeBazaarCrawler);
+            }, greendustCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
@@ -106,91 +103,4 @@ askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
         });
     });
 });
-// pushing items to ProductStage Table.
-casper.then(function () {
-    //Creating proper input array.
-    var productListToPush = productsList.map(function (item) {
-        return {
-
-            CategoryId: item.id,
-            ShortDescription: item.title,
-            Description: "Description",
-            RedirectUrl: item.redirectUrl,
-            ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
-            ActualPrice: item.actualPrice,
-            CurrentPrice: item.sellingPrice,
-            DiscountPercentage: item.discount,
-            IsShippingFree: 1,
-            Star: 4,
-            IsPublished: 0,
-            ShowDate: "1/1/2015",
-            Source: "Crawler",
-            CreatedDate: "1/1/2015",
-            LastUpdateDate: "1/1/2015"
-        }
-    });
-    this.echo("productListToPush  :  " + productListToPush.length);
-    var batchSize = 5;
-    var pushingArray = [];
-    pushingArray = _.chunk(productListToPush, batchSize);
-    this.echo(pushingArray.length);
-
-    pushingArray.forEach(function (batchArray) {
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: JSON.stringify(batchArray),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-    });
-    this.echo("pushed items to productstage table");
-});
-// pushing items to ProductStage Table.
-casper.then(function () {
-    //Creating proper input array.
-    var productListToPush = productsList.map(function (item) {
-        return {
-
-            CategoryId: item.id,
-            ShortDescription: item.title,
-            Description: "Description",
-            RedirectUrl: item.redirectUrl,
-            ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
-            ActualPrice: item.actualPrice,
-            CurrentPrice: item.sellingPrice,
-            DiscountPercentage: item.discount,
-            IsShippingFree: 1,
-            Star: 4,
-            IsPublished: 0,
-            ShowDate: "1/1/2015",
-            Source: "Crawler",
-            CreatedDate: "1/1/2015",
-            LastUpdateDate: "1/1/2015"
-        }
-    });
-    this.echo("productListToPush  :  " + productListToPush.length);
-    var batchSize = 5;
-    var pushingArray = [];
-    pushingArray = _.chunk(productListToPush, batchSize);
-    this.echo(pushingArray.length);
-
-    pushingArray.forEach(function (batchArray) {
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: JSON.stringify(batchArray),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-    });
-    this.echo("pushed items to productstage table");
-});
-
-
-
 casper.run();

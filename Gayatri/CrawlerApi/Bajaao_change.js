@@ -1,6 +1,6 @@
 ﻿var _ = require('lodash');
 var BajaaoLinks = [
-    //Musical Instruments
+ //Musical Instruments
 {
     url: "http://www.bajaao.com/collections/special-deals",
     selectors: {
@@ -9,58 +9,58 @@ var BajaaoLinks = [
         description: '',
         imageUrl: 'a > div > img',
         actualPrice: 'span.price > span.was_price',
-        sellingPrice: 'span.price > collection_price',
+        sellingPrice: 'span.price.sale > span.collection_price',
         discount: '',
         redirectUrl: 'div > a'
     },
     isScroll: false,
     id: 14
-//},
-//{
-//    url: "http://www.bajaao.com/collections/special-deals?page=2",
-//    selectors: {
-//        elements: 'div[class*="three columns"]',
-//        title: 'div > a',
-//        description: '',
-//        imageUrl: 'a > div > img',
-//        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
-//        discount: '',
-//        redirectUrl: 'div > a'
-//    },
-//    isScroll: false,
-//    id: 14
-//},
-//{
-//    url: "http://www.bajaao.com/collections/guitar-deals?sort_by=price-ascending",
-//    selectors: {
-//        elements: 'div[class*="three columns"]',
-//        title: 'div > a',
-//        description: '',
-//        imageUrl: 'a > div > img',
-//        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
-//        discount: '',
-//        redirectUrl: 'div > a'
-//    },
-//    isScroll: false,
-//    id: 14
-//},
-//{
-//    url: "http://www.bajaao.com/collections/guitar-deals?page=2&sort_by=price-ascending",
-//    selectors: {
-//        elements: 'div[class*="three columns"]',
-//        title: 'div > a',
-//        description: '',
-//        imageUrl: 'a > div > img',
-//        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
-//        discount: '',
-//        redirectUrl: 'div > a'
-//    },
-//    isScroll: false,
-//    id: 14
-//},
+},
+{
+    url: "http://www.bajaao.com/collections/special-deals?page=2",
+    selectors: {
+        elements: 'div[class*="three columns"]',
+        title: 'div > a',
+        description: '',
+        imageUrl: 'a > div > img',
+        actualPrice: 'span.price.sale > span.was_price',
+        sellingPrice: 'span.price.sale > span.collection_price',
+        discount: '',
+        redirectUrl: 'div > a'
+    },
+    isScroll: false,
+    id: 14
+},
+{
+    url: "http://www.bajaao.com/collections/guitar-deals?sort_by=price-ascending",
+    selectors: {
+        elements: 'div[class*="three columns"]',
+        title: 'div > a',
+        description: '',
+        imageUrl: 'a > div > img',
+        actualPrice: 'span.price.sale > span.was_price',
+        sellingPrice: 'span.price.sale > span.collection_price',
+        discount: '',
+        redirectUrl: 'div > a'
+    },
+    isScroll: false,
+    id: 14
+},
+{
+    url: "http://www.bajaao.com/collections/guitar-deals?page=2&sort_by=price-ascending",
+    selectors: {
+        elements: 'div[class*="three columns"]',
+        title: 'div > a',
+        description: '',
+        imageUrl: 'a > div > img',
+        actualPrice: 'span.price.sale > span.was_price',
+        sellingPrice: 'span.price.sale > span.collection_price',
+        discount: '',
+        redirectUrl: 'div > a'
+    },
+    isScroll: false,
+    id: 14
+}
 //{
 //    url: "http://www.bajaao.com/collections/drum-deals",
 //    selectors: {
@@ -69,7 +69,7 @@ var BajaaoLinks = [
 //        description: '',
 //        imageUrl: 'a > div > img',
 //        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
+//        sellingPrice: 'span.price.sale > span.collection_price',
 //        discount: '',
 //        redirectUrl: 'div > a'
 //    },
@@ -84,7 +84,7 @@ var BajaaoLinks = [
 //        description: '',
 //        imageUrl: 'a > div > img',
 //        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
+//        sellingPrice: 'span.price.sale > span.collection_price',
 //        discount: '',
 //        redirectUrl: 'div > a'
 //    },
@@ -99,7 +99,7 @@ var BajaaoLinks = [
 //        description: '',
 //        imageUrl: 'a > div > img',
 //        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
+//        sellingPrice: 'span.price.sale > span.collection_price',
 //        discount: '',
 //        redirectUrl: 'div > a'
 //    },
@@ -114,13 +114,14 @@ var BajaaoLinks = [
 //        description: '',
 //        imageUrl: 'a > div > img',
 //        actualPrice: 'span.price.sale > span.was_price',
-//        sellingPrice: 'a > div > span > span',
+//        sellingPrice: 'span.price.sale > span.collection_price',
 //        discount: '',
 //        redirectUrl: 'div > a'
 //    },
 //    isScroll: false,
 //    id: 14
-}];
+//}
+];
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -165,9 +166,7 @@ BajaaoLinks.forEach(function (BajaaoCrawler) {
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                     sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     // No explicit discount. code Changed here
-                    var discountElement = +actualPrice - +sellingPrice;
-                    var discount = (discountElement / actualPrice) * 100;
-                 
+                    var discount = Math.floor(((actualPrice - sellingPrice) * 100) / actualPrice);
                     var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                     var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -185,7 +184,7 @@ BajaaoLinks.forEach(function (BajaaoCrawler) {
                         //__utils__.echo(imageUrl);
                         __utils__.echo(actualprice);
                         __utils__.echo(sellingprice);
-                        ////__utils__.echo(discount);
+                        __utils__.echo(discount);
                         //__utils__.echo(fullRedirectUrl);
                         __utils__.echo("-----------------------------------");
 

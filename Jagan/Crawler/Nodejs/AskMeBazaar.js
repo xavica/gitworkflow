@@ -1,38 +1,42 @@
-﻿var fashionaraLinks = [
-// Cameras
+﻿var _ = require('lodash');
+var askMeBazaarLinks = [
+// AIR CONDITONERS
 {
-    url: "http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx",
+    url: "",
     selectors: {
-        elements: 'div.category-products > div.products-page li.item',
-        title: 'div.product-image-box > a > img.little_image',
+        elements: '',
+        title: '',
         description: '',
-        imageUrl: 'div.product-image-box > a > img.little_image',
-        actualPrice: 'div.price-box > span.old-price > span',
-        sellingPrice: 'div.price-box > span.special-price > span.price',
-        discount: 'div.save-product-mask > div.percent',
-        redirectUrl: 'div.product-image-box > a'
+        imageUrl: '',
+        actualPrice: '',
+        sellingPrice: '',
+        discount: '',
+        redirectUrl: ''
     },
-    isScroll: false,
-    id: 12
+    isScroll: true,
+    id: 7
+
+    //BOOKS
+
 }];
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-fashionaraLinks.forEach(function (fashionaraCrawler) {
-    casper.thenOpen(fashionaraCrawler.url, function () {
+askMeBazaarLinks.forEach(function (askMeBazaarCrawler) {
+    casper.thenOpen(askMeBazaarCrawler.url, function () {
         this.echo("----------------------------------------");
-        if (fashionaraCrawler.isScroll === true) {
+        if (askMeBazaarCrawler.isScroll === true) {
             this.scrollToBottom();
-            casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+            casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
             });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(askMeBazaarCrawler.selectors.elements, function () { });
             });
         }
         casper.then(function () {
@@ -75,12 +79,12 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        //__utils__.echo(title);
+                        __utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
                         //__utils__.echo(discount);
-                        __utils__.echo(fullRedirectUrl);
+                        //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -93,7 +97,7 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
                     }
                 }
                 return tempProducts;
-            }, fashionaraCrawler);
+            }, askMeBazaarCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
@@ -101,5 +105,89 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
             }
         });
     });
+});
+// pushing items to ProductStage Table.
+casper.then(function () {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
+
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Flipkart",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
+
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+            method: 'post',
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+    });
+    this.echo("pushed items to productstage table");
+});
+// pushing items to ProductStage Table.
+casper.then(function () {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
+
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Flipkart",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
+
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+            method: 'post',
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+    });
+    this.echo("pushed items to productstage table");
 });
 casper.run();

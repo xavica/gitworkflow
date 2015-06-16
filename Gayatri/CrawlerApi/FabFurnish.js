@@ -1,4 +1,5 @@
-﻿var fabFurnishLinks = [
+﻿var _ = require('lodash');
+var fabFurnishLinks = [
 // FURNITURE
 {
     url: "http://www.fabfurnish.com/furniture/recliners/?sort=discount&dir=desc&discount_percent=1-90",
@@ -281,6 +282,7 @@ fabFurnishLinks.forEach(function (fabFurnishCrawler) {
             }
         });
     });
+});
     // pushing items to ProductStage Table.
     casper.then(function () {
         //Creating proper input array.
@@ -292,7 +294,7 @@ fabFurnishLinks.forEach(function (fabFurnishCrawler) {
                 Description: "Description",
                 RedirectUrl: item.redirectUrl,
                 ImageUrl: item.imageUrl,
-                StoreName: "Flipkart",
+            StoreName: "FabFurnish",
                 ActualPrice: item.actualPrice,
                 CurrentPrice: item.sellingPrice,
                 DiscountPercentage: item.discount,
@@ -323,5 +325,4 @@ fabFurnishLinks.forEach(function (fabFurnishCrawler) {
         });
         this.echo("pushed items to productstage table");
     });
-
 casper.run();
