@@ -14,7 +14,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 7
+    id: 8
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976442031%2Ck%3Aair+conditioner&page=2&keywords=air+conditioner&ie=UTF8&qid=1431138179",
@@ -29,7 +29,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 7
+    id: 8
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976442031%2Ck%3Aair+conditioner&page=3&keywords=air+conditioner&ie=UTF8&qid=1431138198",
@@ -44,10 +44,9 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 7
+    id: 8
 },
-
-//Camera 
+// Camera 
 {
     url: "http://www.amazon.in/s/ref=nb_sb_ss_i_0_6?url=search-alias%3Delectronics&field-keywords=camera&sprefix=camera%2Ccomputers%2C285",
     selectors: {
@@ -61,7 +60,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 14
+    id: 4
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976419031%2Ck%3Acamera&page=2&keywords=camera&ie=UTF8&qid=1430326873",
@@ -76,7 +75,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 14
+    id: 4
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976419031%2Ck%3Acamera&page=3&keywords=camera&ie=UTF8&qid=1430326901",
@@ -91,9 +90,10 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 14
+    id: 4
 },
-//Game
+
+//Games
 {
     url: "http://www.amazon.in/s/ref=nb_sb_ss_i_1_12?url=search-alias%3Dtoys&field-keywords=game+console&sprefix=game+console%2Cundefined%2C347",
     selectors: {
@@ -107,23 +107,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 9
-},
-//have to check
-{
-    url: "http://www.amazon.in/Games/b/ref=sv_t_2?ie=UTF8&node=1378311031",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 9
+    id: 10
 },
 {
     url: "http://www.amazon.in/s/ref=fj_deals_35?_encoding=UTF8&bbn=1951048031&ie=UTF8&rh=i%3Ajewelry%2Cn%3A1951048031%2Cp_n_pct-off-with-tax%3A2665402031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-10&pf_rd_r=13KR4K91V6QRD4DCPES9&pf_rd_t=101&pf_rd_p=613780627&pf_rd_i=1951048031",
@@ -186,7 +170,7 @@ var AmazonLinks = [
     id: 11
 
 },
-//Laggage
+//Luggage
 {
     url: "http://www.amazon.in/s/ref=nb_sb_ss_fb_0_8?url=search-alias%3Dluggage&field-keywords=luggage+bag&sprefix=laggage+%2Cstripbooks%2C312&rh=n%3A2454169031%2Ck%3Aluggage+bag",
     selectors: {
@@ -200,7 +184,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 6
+    id: 7
 },
     {
         url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=2&keywords=luggage+bag&ie=UTF8&qid=1430897733",
@@ -215,7 +199,7 @@ var AmazonLinks = [
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
         isScroll: false,
-        id: 6
+        id: 7
     },
     {
         url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=3&keywords=luggage+bag&ie=UTF8&qid=1430902330",
@@ -230,7 +214,7 @@ var AmazonLinks = [
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
         isScroll: false,
-        id: 6
+        id: 7
     },
     {
         url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A2454169031%2Ck%3Aluggage+bag&page=4&keywords=luggage+bag&ie=UTF8&qid=1430902371",
@@ -245,7 +229,7 @@ var AmazonLinks = [
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
         isScroll: false,
-        id: 6
+        id: 7
     },
 //Laptop
 {
@@ -322,7 +306,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 5
+    id: 6
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?fst=as%3Aon&rh=n%3A1571271031%2Ck%3Asunglasses&page=2&keywords=sunglasses&ie=UTF8&qid=1430968329",
@@ -337,7 +321,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 5
+    id: 6
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_3?fst=as%3Aon&rh=n%3A1571271031%2Ck%3Asunglasses&page=3&keywords=sunglasses&ie=UTF8&qid=1430970366",
@@ -352,7 +336,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 5
+    id: 6
 },
 {
     url: "http://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=mens+watches&rh=i%3Aaps%2Ck%3Amens+watches",
@@ -367,7 +351,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 5
+    id: 6
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?fst=as%3Aon&rh=k%3Amens+watches%2Cn%3A1350387031%2Cn%3A1375495031&page=2&keywords=mens+watches&ie=UTF8&qid=1430971206",
@@ -382,7 +366,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 5
+    id: 6
 },
 //Mobiles
 {
@@ -491,7 +475,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 4
+    id: 5
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=2&keywords=tv&ie=UTF8&qid=1430882098",
@@ -506,7 +490,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 4
+    id: 5
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_3?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=3&keywords=tv&ie=UTF8&qid=1430885364",
@@ -521,7 +505,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 4
+    id: 5
 },
 //Toys
 {
@@ -537,118 +521,70 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id: 10
+    id: 11
 },
-    //need Check
-{
-    url: "http://www.amazon.in/Soft-Toys/b/ref=sv_t_4?ie=UTF8&node=1378445031",
-    selectors: {
-        elements: 'li[name*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 10
-},
-//need Check
-{
-    url: "http://www.amazon.in/Games/b/ref=sv_t_2?ie=UTF8&node=1378311031",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 10
-},
-//need Check
-{
-    url: "http://www.amazon.in/Puzzles/b/ref=sv_t_3?ie=UTF8&node=1378470031",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-}
-//Books
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
-//    selectors: { 
-//        elements: '.s-result-item',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 13
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
-//    selectors: {
-//        elements: '.s-result-item',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 13
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
-//    selectors: {
-//        elements: '.s-result-item',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 13
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
-//    selectors: {
-//        elements: '.s-result-item',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//        id: 13
-//    }
 
-];
+// Books
+{
+    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
+    selectors: {
+        elements: '.s-result-item',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 13
+},
+{
+    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
+    selectors: {
+        elements: '.s-result-item',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 13
+},
+{
+    url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
+    selectors: {
+        elements: '.s-result-item',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 13
+},
+{
+    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
+    selectors: {
+        elements: '.s-result-item',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 13
+}];
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;

@@ -1,4 +1,5 @@
-﻿var EzoneOnlineLinks = [
+﻿var _ = require('lodash');
+var EzoneOnlineLinks = [
     //Air Conditioners
 {
     url: "http://www.ezoneonline.in/Categories/Home-Appliances/Air-Conditioners/c/airconditioners?gclid=CjwKEAjwndqrBRC16IyeqPicp3ASJAB-vB-cDB02AmeoTzxi0c6ceGwHyn0Wgnqy9c13cvVqajFayRoCP5Lw_wcB",
@@ -13,7 +14,7 @@
         redirectUrl: 'div > a'
     },
     isScroll: false,
-    id: 7
+    id: 8
 },
 //Mobiles
 {
@@ -61,7 +62,7 @@
         redirectUrl: 'div > a'
     },
     isScroll: false,
-    id: 13
+    id: 4
 },
 //Televisions
 {
@@ -77,7 +78,7 @@
         redirectUrl: 'div > a'
     },
     isScroll: false,
-    id: 13
+    id: 5
 },
 //Laptops
 {
@@ -93,8 +94,7 @@
         redirectUrl: 'div > a'
     },
     isScroll: false,
-    id: 13
-
+    id: 1
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -114,12 +114,12 @@ EzoneOnlineLinks.forEach(function (EzoneOnlineCrawler) {
                     this.echo("second scroll over");
                 });
             });
-        casper.then(function () {
-            this.scrollToBottom();
-            casper.waitForSelectorTextChange(EzoneOnlineCrawler.selectors.elements, function () {
-                this.echo("third scroll over");
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(EzoneOnlineCrawler.selectors.elements, function () {
+                    this.echo("third scroll over");
+                });
             });
-        });
         }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
@@ -165,24 +165,24 @@ EzoneOnlineLinks.forEach(function (EzoneOnlineCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && actualPrice && redirectUrl) {
-                    __utils__.echo(title);
-                    //__utils__.echo(imageUrl);
-                    //__utils__.echo(actualPrice);
-                    //__utils__.echo(sellingPrice);
-                    //__utils__.echo(discount);
-                    //__utils__.echo(fullRedirectUrl);
-                    //__utils__.echo("-----------------------------------");
+                        __utils__.echo(title);
+                        //__utils__.echo(imageUrl);
+                        //__utils__.echo(actualPrice);
+                        //__utils__.echo(sellingPrice);
+                        //__utils__.echo(discount);
+                        //__utils__.echo(fullRedirectUrl);
+                        //__utils__.echo("-----------------------------------");
 
-                    tempProducts.push({
-                        "id": stubCrawler.id,
-                        "title": title,
-                        "actualPrice": actualPrice,
-                        "sellingPrice": sellingPrice,
-                        "discount": discount,
-                        "redirectUrl": fullRedirectUrl,
-                        "imageUrl": imageUrl
-                    });
-                }
+                        tempProducts.push({
+                            "id": stubCrawler.id,
+                            "title": title,
+                            "actualPrice": actualPrice,
+                            "sellingPrice": sellingPrice,
+                            "discount": discount,
+                            "redirectUrl": fullRedirectUrl,
+                            "imageUrl": imageUrl
+                        });
+                    }
                 }
                 return tempProducts;
             }, EzoneOnlineCrawler);

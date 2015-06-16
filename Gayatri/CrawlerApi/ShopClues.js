@@ -1,4 +1,5 @@
-﻿var shopCluesLinks = [
+﻿var _ = require('lodash');
+var shopCluesLinks = [
 // LAPTOPS
 {
     url: "http://www.shopclues.com/computers/laptop-special.html?sort_by=hotdeals&sort_order=desc",

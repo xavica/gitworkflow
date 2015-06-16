@@ -1,5 +1,6 @@
-﻿var cromaRetailLinks = [
-// LAPTOPS
+﻿var _ = require('lodash');
+var cromaRetailLinks = [
+//// LAPTOPS
 {
     url: "http://www.cromaretail.com/Laptops-c-20.aspx#!SO=DISCOUNT",
     selectors: {
@@ -126,8 +127,8 @@
     },
     isScroll: false,
     id: 5
-
 }];
+
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;

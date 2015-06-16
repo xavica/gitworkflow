@@ -1,4 +1,5 @@
-﻿var SaholicLinks = [
+﻿var _ = require('lodash');
+var SaholicLinks = [
     //Mobiles
 {
     url: "http://www.saholic.com/android?&page=3",

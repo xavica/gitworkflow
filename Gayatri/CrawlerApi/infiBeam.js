@@ -1,4 +1,5 @@
-﻿var infiBeamLinks = [
+﻿var _ = require('lodash');
+var infiBeamLinks = [
 // MOBILES
 {
     url: "http://www.infibeam.com/Hot_Deals/search?keybn=home_elec_mobi_mobi",

@@ -1,4 +1,5 @@
-﻿var fashionaraLinks = [
+﻿var _ = require('lodash');
+var fashionaraLinks = [
 // Cameras
 {
     url: "http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx",

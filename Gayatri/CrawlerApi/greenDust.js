@@ -1,4 +1,5 @@
-﻿var greendustLinks = [
+﻿var _ = require('lodash');
+var greendustLinks = [
 // Jewellery
 {
     url: "http://www.greendust.com/washing-machine-fully-automatic-c-247_249.html?cPath=247_249&salCategory=&price_id=&manufacturer=&proType=&filter_id_txt=&sortP=2",
@@ -48,7 +49,7 @@ greendustLinks.forEach(function (greendustCrawler) {
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
-//Here code change has been done
+                    //Here code change has been done
                     var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;

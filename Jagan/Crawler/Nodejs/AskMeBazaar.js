@@ -190,7 +190,4 @@ casper.then(function () {
     });
     this.echo("pushed items to productstage table");
 });
-
-
-
 casper.run();

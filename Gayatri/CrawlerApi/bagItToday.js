@@ -63,7 +63,6 @@ var bagItTodayLinks = [
     },
     isScroll: true,
     id: 6
-
 }];
 
 var casper = require('casper').create();

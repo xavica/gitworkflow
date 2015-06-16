@@ -1,4 +1,5 @@
-﻿var CraftsVillaLinks = [
+﻿var _ = require('lodash');
+var CraftsVillaLinks = [
     //Fashion Jwellery
 {
     url: "http://www.craftsvilla.com/jewellery-jewelry/necklaces.html?dir=desc&order=discount",
@@ -13,7 +14,7 @@
         redirectUrl: 'p.shopbrief > a'
     },
     isScroll: false,
-    id: 11
+    id: 12
 }];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -22,24 +23,24 @@ var productsList = [];
 CraftsVillaLinks.forEach(function (CraftsVillaCrawler) {
     casper.thenOpen(CraftsVillaCrawler.url, function () {
         this.echo("----------------------------------------");
-        //if (CraftsVillaCrawler.isScroll === true) {
-        //    this.scrollToBottom();
-        //    casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
-        //        this.echo("first scroll over");
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
-        //            this.echo("second scroll over");
-        //        });
-        //    });
-            //casper.then(function () {
-            //    this.scrollToBottom();
-            //    casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
-            //        this.echo("third scroll over");
-            //    });
-            //});
-        //}
+        if (CraftsVillaCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
+                this.echo("first scroll over");
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
+                    this.echo("second scroll over");
+                });
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(CraftsVillaCrawler.selectors.elements, function () {
+                    this.echo("third scroll over");
+                });
+            });
+        }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
@@ -51,58 +52,58 @@ CraftsVillaLinks.forEach(function (CraftsVillaCrawler) {
                     __utils__.echo("this is iteration : " + i);
 
                     var titleElement = elements[i].querySelector(stubCrawler.selectors.title);
-                    //var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
-                    //var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
-                    //var discountElement = elements[i].querySelector(stubCrawler.selectors.discount);
-                    //var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
-                    //var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
-                    //var fullRedirectUrl = '';
+                    var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
+                    var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
+                    var discountElement = elements[i].querySelector(stubCrawler.selectors.discount);
+                    var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
+                    var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
+                    var fullRedirectUrl = '';
 
                     var title = titleElement && titleElement.getAttribute('title') || '';
-                    //var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
-                    //actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
-                    //var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
-                    //sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
-                    //var str = discountElement && discountElement.textContent || '';
-                    //var k = str.split("(");
-                    //if (k.length > 1) {
-                    //    k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
-                    //}
-                    //else {
-                    //    k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
-                    //}
-                    //var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
-                    //var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
+                    var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
+                    actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
+                    var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
+                    sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
+                    var str = discountElement && discountElement.textContent || '';
+                    var k = str.split("(");
+                    if (k.length > 1) {
+                        k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
+                    }
+                    else {
+                        k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
+                    }
+                    var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
+                    var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
-                    //if (!redirectUrl.match("^http")) {
-                    //    parser.href = stubCrawler.url;
-                    //    var host = parser.protocol + "//" + parser.hostname;
-                    //    var temp = redirectUrl.match("^/") && redirectUrl || "/" + redirectUrl;
-                    //    fullRedirectUrl = host + temp;
-                    //}
-                    //else {
-                    //    fullRedirectUrl = redirectUrl;
-                    //}
-                    //if (title && actualPrice && redirectUrl) {
+                    if (!redirectUrl.match("^http")) {
+                        parser.href = stubCrawler.url;
+                        var host = parser.protocol + "//" + parser.hostname;
+                        var temp = redirectUrl.match("^/") && redirectUrl || "/" + redirectUrl;
+                        fullRedirectUrl = host + temp;
+                    }
+                    else {
+                        fullRedirectUrl = redirectUrl;
+                    }
+                    if (title && actualPrice && redirectUrl) {
                         __utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
+                        __utils__.echo(discount);
                         //__utils__.echo(fullRedirectUrl);
-                        //__utils__.echo("-----------------------------------");
+                        __utils__.echo("-----------------------------------");
 
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
-                            //"actualPrice": actualPrice,
-                            //"sellingPrice": sellingPrice,
-                            //"discount": discount,
-                            //"redirectUrl": fullRedirectUrl,
-                            //"imageUrl": imageUrl
+                            "actualPrice": actualPrice,
+                            "sellingPrice": sellingPrice,
+                            "discount": discount,
+                            "redirectUrl": fullRedirectUrl,
+                            "imageUrl": imageUrl
                         });
                     }
-                //}
+                }
                 return tempProducts;
             }, CraftsVillaCrawler);
             if (parsedItems) {
