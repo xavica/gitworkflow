@@ -300,7 +300,7 @@ casper.then(function () {
             Description: "Description",
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "HomeShop18",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

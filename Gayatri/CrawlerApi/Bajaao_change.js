@@ -182,8 +182,8 @@ BajaaoLinks.forEach(function (BajaaoCrawler) {
                     if (title && actualPrice && redirectUrl) {
                         __utils__.echo(title);
                         //__utils__.echo(imageUrl);
-                        __utils__.echo(actualprice);
-                        __utils__.echo(sellingprice);
+                        //__utils__.echo(actualprice);
+                        //__utils__.echo(sellingprice);
                         __utils__.echo(discount);
                         //__utils__.echo(fullRedirectUrl);
                         __utils__.echo("-----------------------------------");
@@ -220,7 +220,7 @@ casper.then(function () {
             Description: "Description",
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "BazaooStore",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,
