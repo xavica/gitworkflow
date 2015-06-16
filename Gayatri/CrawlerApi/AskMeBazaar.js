@@ -1,4 +1,5 @@
-﻿var askMeBazaarLinks = [
+﻿var _ = require('lodash');
+var askMeBazaarLinks = [
 // AIR CONDITONERS
 {
     url: "",

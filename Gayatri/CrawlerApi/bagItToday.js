@@ -1,4 +1,5 @@
-﻿var bagItTodayLinks = [
+﻿var _ = require('lodash');
+var bagItTodayLinks = [
 // LAPTOPS
 {
     url: "http://www.bagittoday.com/budget-laptops/c-2443/",
