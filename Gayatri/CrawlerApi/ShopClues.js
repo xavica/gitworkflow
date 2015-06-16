@@ -77,7 +77,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 9
+    id: 7
 },
 //Air Conditioners
 {
@@ -93,7 +93,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 6
+    id: 8
 },
 //Washing Machines
 {
@@ -109,7 +109,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 6
+    id: 9
 },
 //VideoGames
 {
@@ -141,7 +141,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 10
+    id: 11
 },
 //Jewellery
 {
@@ -157,7 +157,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 13
+    id: 12
 },
 //Books
 {
@@ -173,7 +173,7 @@
         redirectUrl: 'div.details a.name'
     },
     isScroll: false,
-    id: 14
+    id: 13
 },
 //Cameras
 {

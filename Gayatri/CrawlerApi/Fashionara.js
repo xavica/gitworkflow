@@ -13,7 +13,7 @@
         redirectUrl: 'div.product-image-box > a'
     },
     isScroll: false,
-    id: 1
+    id: 12
 }];
 
 var casper = require('casper').create();

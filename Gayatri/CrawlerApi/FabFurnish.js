@@ -1,5 +1,5 @@
 ﻿var fabFurnishLinks = [
-// LAPTOPS
+// FURNITURE
 {
     url: "http://www.fabfurnish.com/furniture/recliners/?sort=discount&dir=desc&discount_percent=1-90",
     selectors: {

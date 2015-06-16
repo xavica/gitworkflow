@@ -1,55 +1,46 @@
-﻿var FashionAndYouLinks = [
-    //Fashion Jwellery
+﻿var greendustLinks = [
+// Jewellery
 {
-    url: "http://www.fashionandyou.com/women/fashion_jewelry",
+    url: "http://www.greendust.com/washing-machine-fully-automatic-c-247_249.html?cPath=247_249&salCategory=&price_id=&manufacturer=&proType=&filter_id_txt=&sortP=2",
     selectors: {
-        elements: 'div[class*="product"]',
-        title: 'div.prod-info > a.ev-prod-name',
+        elements: '#products-wfix div.product-dis',
+        title: 'div.product-dis-link > a',
         description: '',
-        imageUrl: 'div.prod-img > a > img',
-        actualPrice: 'div > span.old-price',
-        sellingPrice: 'div > span.new-price',
-        discount: 'div.discount-tag',
-        redirectUrl: 'div.prod-info > a.ev-prod-name'
+        imageUrl: 'a > img',
+        actualPrice: 'div.price-hold > span:nth-child(2)',
+        sellingPrice: 'div.price-hold > span.price',
+        discount: 'div.discountlabel > span:nth-child(1)',
+        redirectUrl: 'div.product-dis-link > a'
     },
     isScroll: false,
     id: 12
 }];
+
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
-    casper.thenOpen(FashionAndYouCrawler.url, function () {
+greendustLinks.forEach(function (greendustCrawler) {
+    casper.thenOpen(greendustCrawler.url, function () {
         this.echo("----------------------------------------");
-        //if (FashionAndYouCrawler.isScroll === true) {
-        //    this.scrollToBottom();
-        //    casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //        this.echo("first scroll over");
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("second scroll over");
-        //        });
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("third scroll over");
-        //        });
-        //    });
-        //}
+        if (greendustCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(greendustCrawler.selectors.elements, function () { });
+            });
+        }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
                 var parser = document.createElement('a');
                 var elements = document.querySelectorAll(stubCrawler.selectors.elements);
-                //__utils__.echo("elements length is : " + elements.length);
-
                 for (var i = 0; i < elements.length; i++) {
-                    //__utils__.echo("this is iteration : " + i);
-
                     var titleElement = elements[i].querySelector(stubCrawler.selectors.title);
                     var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
                     var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
@@ -57,8 +48,8 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
-
-                    var title = titleElement && titleElement.getAttribute('title') || '';
+//Here code change has been done
+                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
@@ -83,15 +74,13 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
                     else {
                         fullRedirectUrl = redirectUrl;
                     }
-                    if (title && actualPrice && redirectUrl) {
-                        __utils__.echo(title);
-                        __utils__.echo(imageUrl);
-                        __utils__.echo(actualPrice);
-                        __utils__.echo(sellingPrice);
-                        __utils__.echo(discount);
+                    if (title && discount && actualPrice && redirectUrl) {
+                        //__utils__.echo(title);
+                        //__utils__.echo(imageUrl);
+                        //__utils__.echo(actualPrice);
+                        //__utils__.echo(sellingPrice);
+                        //__utils__.echo(discount);
                         __utils__.echo(fullRedirectUrl);
-                        __utils__.echo("-----------------------------------");
-
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -104,7 +93,7 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
                     }
                 }
                 return tempProducts;
-            }, FashionAndYouCrawler);
+            }, greendustCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
