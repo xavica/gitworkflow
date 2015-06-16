@@ -1,16 +1,16 @@
-﻿var fashionaraLinks = [
+﻿var gadgetsGuruLinks = [
 // Cameras
 {
     url: "http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx",
     selectors: {
-        elements: 'div.category-products > div.products-page li.item',
-        title: 'div.product-image-box > a > img.little_image',
+        elements: '#ctl00_cphIndexProd_dlProd > tbody td > div',
+        title: 'div.hBlue',
         description: '',
-        imageUrl: 'div.product-image-box > a > img.little_image',
-        actualPrice: 'div.price-box > span.old-price > span',
-        sellingPrice: 'div.price-box > span.special-price > span.price',
-        discount: 'div.save-product-mask > div.percent',
-        redirectUrl: 'div.product-image-box > a'
+        imageUrl: 'div.hImg > a > img',
+        actualPrice: 'div.hBlak > s',
+        sellingPrice: 'div.hOrng',
+        discount: '',
+        redirectUrl: 'div.hImg > a'
     },
     isScroll: false,
     id: 12
@@ -20,19 +20,19 @@ var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
-fashionaraLinks.forEach(function (fashionaraCrawler) {
-    casper.thenOpen(fashionaraCrawler.url, function () {
+gadgetsGuruLinks.forEach(function (gadgetsGuruCrawler) {
+    casper.thenOpen(gadgetsGuruCrawler.url, function () {
         this.echo("----------------------------------------");
-        if (fashionaraCrawler.isScroll === true) {
+        if (gadgetsGuruCrawler.isScroll === true) {
             this.scrollToBottom();
-            casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+            casper.waitForSelectorTextChange(gadgetsGuruCrawler.selectors.elements, function () { });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(gadgetsGuruCrawler.selectors.elements, function () { });
             });
             casper.then(function () {
                 this.scrollToBottom();
-                casper.waitForSelectorTextChange(fashionaraCrawler.selectors.elements, function () { });
+                casper.waitForSelectorTextChange(gadgetsGuruCrawler.selectors.elements, function () { });
             });
         }
         casper.then(function () {
@@ -44,24 +44,31 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
                     var titleElement = elements[i].querySelector(stubCrawler.selectors.title);
                     var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
                     var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
-                    var discountElement = elements[i].querySelector(stubCrawler.selectors.discount);
+                    //var discountElement = elements[i].querySelector(stubCrawler.selectors.discount);
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
 
-                    var title = titleElement && titleElement.getAttribute('title') || '';
+                    //here a change has been made to title
+
+                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                     sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
-                    var str = discountElement && discountElement.textContent || '';
-                    var k = str.split("(");
-                    if (k.length > 1) {
-                        k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
-                    }
-                    else {
-                        k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
-                    }
+                    var discount = Math.floor(((actualPrice - sellingPrice) * 100) / actualPrice);
+
+                    //**********A change has been made to discount
+                    //var str = discountElement && discountElement.textContent || '';
+                    //var k = str.split("(");
+                    //if (k.length > 1) {
+                    //    k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
+                    //}
+                    //else {
+                    //    k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
+                    //}
+
+
                     var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                     var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -75,12 +82,12 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        //__utils__.echo(title);
+                        __utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
                         //__utils__.echo(discount);
-                        __utils__.echo(fullRedirectUrl);
+                        //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -93,7 +100,7 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
                     }
                 }
                 return tempProducts;
-            }, fashionaraCrawler);
+            }, gadgetsGuruCrawler);
             if (parsedItems) {
                 for (var i = 0; i < parsedItems.length; i++) {
                     productsList.push(parsedItems[i]);
@@ -102,4 +109,46 @@ fashionaraLinks.forEach(function (fashionaraCrawler) {
         });
     });
 });
+// pushing items to ProductStage Table.
+//casper.then(function () {
+//    //Creating proper input array.
+//    var productListToPush = productsList.map(function (item) {
+//        return {
+
+//            CategoryId: item.id,
+//            ShortDescription: item.title,
+//            Description: "Description",
+//            RedirectUrl: item.redirectUrl,
+//            ImageUrl: item.imageUrl,
+//            StoreName: "Gadgetsguru",
+//            ActualPrice: item.actualPrice,
+//            CurrentPrice: item.sellingPrice,
+//            DiscountPercentage: item.discount,
+//            IsShippingFree: 1,
+//            Star: 4,
+//            IsPublished: 0,
+//            ShowDate: "1/1/2015",
+//            Source: "Crawler",
+//            CreatedDate: "1/1/2015",
+//            LastUpdateDate: "1/1/2015"
+//        }
+//    });
+//    this.echo("productListToPush  :  " + productListToPush.length);
+//    var batchSize = 5;
+//    var pushingArray = [];
+//    pushingArray = _.chunk(productListToPush, batchSize);
+//    this.echo(pushingArray.length);
+
+//    pushingArray.forEach(function (batchArray) {
+//        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+//            method: 'post',
+//            data: JSON.stringify(batchArray),
+//            headers: {
+//                'Accept': 'application/json',
+//                'Content-Type': 'application/json'
+//            }
+//        });
+//    });
+//    this.echo("pushed items to productstage table");
+//});
 casper.run();

@@ -22,24 +22,24 @@ var productsList = [];
 FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
     casper.thenOpen(FashionAndYouCrawler.url, function () {
         this.echo("----------------------------------------");
-        //if (FashionAndYouCrawler.isScroll === true) {
-        //    this.scrollToBottom();
-        //    casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //        this.echo("first scroll over");
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("second scroll over");
-        //        });
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("third scroll over");
-        //        });
-        //    });
-        //}
+        if (FashionAndYouCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                this.echo("first scroll over");
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                    this.echo("second scroll over");
+                });
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                    this.echo("third scroll over");
+                });
+            });
+        }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
