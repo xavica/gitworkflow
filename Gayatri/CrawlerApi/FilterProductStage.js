@@ -1,9 +1,11 @@
 ﻿var request = require("request");
 var _ = require('lodash-node');
-var querystring = require('querystring');
+var fs = require('fs');
+var storage = require('azure-storage');
+var directoryName = 'Images/';
 
 // Reteving the productstage table data.
-var processArray = [], resultArray = [], discardedArray = [],resultArrayToPost = [];
+var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [];
 var getOptions = {
     method: 'GET',
     url: "http://localhost:16193/api/productstage/getall",
@@ -13,8 +15,8 @@ var getOptions = {
 };
 var rawProducts = [];
 request(getOptions, function (error, response, body) {
-   rawProducts = JSON.parse(body);
-   console.log(rawProducts.length);
+    rawProducts = JSON.parse(body);
+    console.log(rawProducts.length);
     // console.log(rawProducts);
     // console.log(rawProducts.length);
 
@@ -68,6 +70,7 @@ request(getOptions, function (error, response, body) {
         productFilter(arrayToFilter);
     });
 
+
     //removing status element
     resultArray.forEach(function (item) {
         resultArrayToPost.push({
@@ -92,14 +95,17 @@ request(getOptions, function (error, response, body) {
     // console.log(resultArrayToPost);
     console.log("resultArrayToPost:  " + resultArrayToPost.length);
 
+    downloadUploadImages(resultArrayToPost);
+    pushToProductTable(resultArrayToPost);
+
 }); // request close
 
- //ProductFilter function where Filtered as per categoryid will come here for process.
-function productFilter(processArray)    {
+//ProductFilter function where Filtered as per categoryid will come here for process.
+function productFilter(processArray) {
     var filterArray = [];
 
     // finding product length, and calculating xn.
-    for(var i=0; i<processArray.length;i++){
+    for (var i = 0; i < processArray.length; i++) {
         if (processArray[i].status === true) {
             var a = processArray[i].shortDescription.split(" ");
             for (j = i + 1; j < processArray.length ; j++) {
@@ -132,28 +138,85 @@ function productFilter(processArray)    {
             }
         }
     }
-}  
-var postArray = querystring.stringify(resultArrayToPost);
-var options = {
-    method: 'POST',
-    url: "http://localhost:16193/api/productbulk",
-    json: true,
-    headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': postArray.length
-    },
-    json: postArray
+}
+
+// azure image url update
+
+//Downloading Image 
+var downloadImage = function (uri, filename, callback) {
+    request.head(uri, function (err, res, body) {
+        console.log('content-type:', res.headers['content-type']);
+        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+    });
 };
 
-function callback(error, response, body) {
-    if (!error) {
-        console.log(response.statusCode);
-        console.log(body);
-    }
-    else {
-        console.log('Error happened: ' + error);
-    }
+//genarating uid for Downloaded Image 
+function generateUUID() {
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+    return uuid;
+};
+
+//uploading  Image 
+function uploadImage(sourceFileName, destinationFileName) {
+    var blobService = storage.createBlobService();
+    var containerName = 'images';
+    blobService.createBlockBlobFromLocalFile(
+    containerName,
+    destinationFileName,
+    sourceFileName,
+    function (error, result, response) {
+        //console.log(sourceFileName);
+        //console.log(destinationFileName);
+        if (error) {
+            console.log("Couldn't upload file %s", destinationFileName);
+            console.error(error);
+        } else {
+            console.log('File %s uploaded successfully', destinationFileName);
+        }
+    });
 }
-request(options, callback);
+
+//download upload images
+function downloadUploadImages(products) {
+    products.forEach(function (item) {
+        var downloadedFileName = generateUUID() + '.jpeg';
+        downloadImage(item.imageUrl, directoryName + downloadedFileName, function () {
+            console.log('download done');
+            uploadImage(directoryName + downloadedFileName, downloadedFileName);
+        });
+        var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + downloadedFileName;
+        item.imageUrl = resultImageUrl;
+        console.log(resultImageUrl);
+    });
+}
+
+
+//pushing to product table
+function pushToProductTable(products) {
+    var options = {
+        method: 'POST',
+        url: "http://localhost:16193/api/productbulk",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        json: products
+    };
+
+    function callback(error, response, body) {
+        if (!error) {
+            console.log(response.statusCode);
+            console.log(body);
+        }
+        else {
+            console.log('Error happened: ' + error);
+        }
+    }
+    request(options, callback);
+}
 
 
