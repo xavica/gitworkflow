@@ -93,7 +93,7 @@ function callbackBulk(error, response, body) {
     }
 }
 
-request(options, callbackBulk);
+//request(options, callbackBulk);
 //End post: to insert records
 //*************************************************************************************************************************
 
@@ -170,10 +170,10 @@ var updateOptions = {
         "Source": "Source"
     }
 };
-//request(updateOptions, function (error, response, body) {
-//    //var products = JSON.parse(JSON.stringify(body));
-//    console.log(response.statusCode);
-//});
+request(updateOptions, function (error, response, body) {
+    //var products = JSON.parse(JSON.stringify(body));
+    console.log(response.statusCode);
+});
 //End Put: to update records (parse search parameters)
 //*************************************************************************************************************************
 //Begin Delete: to delete record. (parse search parameters)
