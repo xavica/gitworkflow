@@ -114,18 +114,18 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
         });
     });
 });
-// pushing items to ProductStage Table.
-casper.then(function () {
-    //Creating proper input array.
-    var productListToPush = productsList.map(function (item) {
-        return {
+//// pushing items to ProductStage Table.
+//casper.then(function () {
+//    //Creating proper input array.
+//    var productListToPush = productsList.map(function (item) {
+//        return {
 
             CategoryId: item.id,
             ShortDescription: item.title,
             Description: "Description",
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Fashion & You",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,
@@ -144,16 +144,16 @@ casper.then(function () {
     pushingArray = _.chunk(productListToPush, batchSize);
     this.echo(pushingArray.length);
 
-    pushingArray.forEach(function (batchArray) {
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: JSON.stringify(batchArray),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-    });
-    this.echo("pushed items to productstage table");
-});
+//    pushingArray.forEach(function (batchArray) {
+//        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+//            method: 'post',
+//            data: JSON.stringify(batchArray),
+//            headers: {
+//                'Accept': 'application/json',
+//                'Content-Type': 'application/json'
+//            }
+//        });
+//    });
+//    this.echo("pushed items to productstage table");
+//});
 casper.run();

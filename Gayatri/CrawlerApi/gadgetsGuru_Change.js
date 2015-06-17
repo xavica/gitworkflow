@@ -1,5 +1,5 @@
 ﻿var _ = require('lodash');
-var fashionaraLinks = [
+var gadgetsGuruLinks = [
 // Cameras
 {
     url: "http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx",
@@ -58,18 +58,6 @@ gadgetsGuruLinks.forEach(function (gadgetsGuruCrawler) {
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
                     sellingPrice = sellingPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var discount = Math.floor(((actualPrice - sellingPrice) * 100) / actualPrice);
-
-                    //**********A change has been made to discount
-                    //var str = discountElement && discountElement.textContent || '';
-                    //var k = str.split("(");
-                    //if (k.length > 1) {
-                    //    k[0] = k[0].trim(); k[1] = k[1].trim(); k[1] = k[1].replace(/[^0-9]/g, ''); discount = k[1];
-                    //}
-                    //else {
-                    //    k[0] = k[0].trim(); k[0] = k[0].replace(/[^0-9]/g, ''); discount = k[0];
-                    //}
-
-
                     var redirectUrl = redirectUrlElement && redirectUrlElement.getAttribute('href') || '';
                     var imageUrl = imageUrlElement && imageUrlElement.getAttribute('src') || '';
 
@@ -87,7 +75,7 @@ gadgetsGuruLinks.forEach(function (gadgetsGuruCrawler) {
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
+                        __utils__.echo(discount);
                         //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
@@ -110,46 +98,46 @@ gadgetsGuruLinks.forEach(function (gadgetsGuruCrawler) {
         });
     });
 });
-// pushing items to ProductStage Table.
-//casper.then(function () {
-//    //Creating proper input array.
-//    var productListToPush = productsList.map(function (item) {
-//        return {
+//    pushing items to ProductStage Table.
+casper.then(function () {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
 
-//            CategoryId: item.id,
-//            ShortDescription: item.title,
-//            Description: "Description",
-//            RedirectUrl: item.redirectUrl,
-//            ImageUrl: item.imageUrl,
-//            StoreName: "Gadgetsguru",
-//            ActualPrice: item.actualPrice,
-//            CurrentPrice: item.sellingPrice,
-//            DiscountPercentage: item.discount,
-//            IsShippingFree: 1,
-//            Star: 4,
-//            IsPublished: 0,
-//            ShowDate: "1/1/2015",
-//            Source: "Crawler",
-//            CreatedDate: "1/1/2015",
-//            LastUpdateDate: "1/1/2015"
-//        }
-//    });
-//    this.echo("productListToPush  :  " + productListToPush.length);
-//    var batchSize = 5;
-//    var pushingArray = [];
-//    pushingArray = _.chunk(productListToPush, batchSize);
-//    this.echo(pushingArray.length);
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Gadgetsguru",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
 
-//    pushingArray.forEach(function (batchArray) {
-//        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-//            method: 'post',
-//            data: JSON.stringify(batchArray),
-//            headers: {
-//                'Accept': 'application/json',
-//                'Content-Type': 'application/json'
-//            }
-//        });
-//    });
-//    this.echo("pushed items to productstage table");
-//});
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+            method: 'post',
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        });
+    });
+    this.echo("pushed items to productstage table");
+});
 casper.run();
