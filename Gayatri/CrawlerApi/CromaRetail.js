@@ -218,6 +218,7 @@ cromaRetailLinks.forEach(function (cromaRetailCrawler) {
         });
     });
 });
+
 // pushing items to ProductStage Table.
 casper.then(function () {
     //Creating proper input array.
@@ -229,7 +230,7 @@ casper.then(function () {
             Description: "Description",
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "CromaRetail",
+            StoreName: "Flipkart",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

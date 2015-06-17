@@ -139,22 +139,22 @@ var infiBeamLinks = [
     },
     isScroll: false,
     id: 6
-},
-//Watches
-{
-    url: "http://www.infibeam.com/mens-watches/search?q=watches%20for%20men%20deals",
-    selectors: {
-        elements: 'div.resultsrow div.search-icon',
-        title: 'div.title > a',
-        description: '',
-        imageUrl: 'div.product-img > a > picture > img',
-        actualPrice: 'div.price> span.scratch',
-        sellingPrice: 'div.price > span.final-price',
-        discount: 'div.price > span.discount',
-        redirectUrl: 'div.title > a'
-    },
-    isScroll: false,
-    id: 6
+//},
+////Watches
+//{
+//    url: "http://www.infibeam.com/mens-watches/search?q=watches%20for%20men%20deals",
+//    selectors: {
+//        elements: 'div.resultsrow div.search-icon',
+//        title: 'div.title > a',
+//        description: '',
+//        imageUrl: 'div.product-img > a > picture > img',
+//        actualPrice: 'div.price> span.scratch',
+//        sellingPrice: 'div.price > span.final-price',
+//        discount: 'div.price > span.discount',
+//        redirectUrl: 'div.title > a'
+//    },
+//    isScroll: false,
+//    id: 6
 //},
 ////Accesories
 //{
