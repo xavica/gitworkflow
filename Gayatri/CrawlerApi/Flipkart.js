@@ -1,52 +1,52 @@
 ﻿var _ = require('lodash');
 var FilpkartLinks = [
-    //TABLETS
-{
-    url: "http://www.flipkart.com/tablets/pr?sid=tyy,hry&otracker=ch_vn_tablet_filter_Brands_ALL",
-    selectors: {
-        elements: 'div[data-pid*="TAB"]',
-        title: 'div.pu-title > a',
-        description: '',
-        imageUrl: 'a.pu-image > img',
-        actualPrice: '.pu-old',
-        sellingPrice: 'div.pu-final > span',
-        discount: 'span.pu-off-per',
-        redirectUrl: 'div.pu-title > a'
-    },
-    isScroll: false,
-    id: 2
-   // },
-   // //MOBILES
-   // {
-   //     url: "http://www.flipkart.com/mobiles/~mobileexclusives/pr?sid=tyy,4io&otracker=nmenu_sub_electronics_0_All%20Exclusive%20Mobiles",
-   //     selectors: {
-   //         elements: 'div[data-pid*="MOB"]',
-   //         title: 'div.pu-title > a',
-   //         description: '',
-   //         imageUrl: 'a.pu-image > img',
-   //         actualPrice: '.pu-old',
-   //         sellingPrice: 'div.pu-final > span',
-   //         discount: 'span.pu-off-per',
-   //         redirectUrl: 'div.pu-title > a'
-   //     },
-   //     isScroll: false,
-   //     id: 3
-   // },
-   // //TV
-   // {
-   //     url: "http://www.flipkart.com/home-entertainment/televisions/pr?p%5b%5d=sort=featured&sid=ckf,czl&otracker=ch_vn_television_filter_Brands_See%20All%20TVs",
-   //     selectors: {
-   //         elements: 'div[data-pid*="TVS"]',
-   //         title: 'div.pu-title > a',
-   //         description: '',
-   //         imageUrl: 'a.pu-image > img',
-   //         actualPrice: '.pu-old',
-   //         sellingPrice: 'div.pu-final > span',
-   //         discount: 'span.pu-off-per',
-   //         redirectUrl: 'div.pu-title > a'
-   //     },
-   //     isScroll: false,
-   //     id: 5
+//    //TABLETS
+//{
+//    url: "http://www.flipkart.com/tablets/pr?sid=tyy,hry&otracker=ch_vn_tablet_filter_Brands_ALL",
+//    selectors: {
+//        elements: 'div[data-pid*="TAB"]',
+//        title: 'div.pu-title > a',
+//        description: '',
+//        imageUrl: 'a.pu-image > img',
+//        actualPrice: '.pu-old',
+//        sellingPrice: 'div.pu-final > span',
+//        discount: 'span.pu-off-per',
+//        redirectUrl: 'div.pu-title > a'
+//    },
+//    isScroll: true,
+//    id: 2
+//    },
+//    //MOBILES
+//    {
+//        url: "http://www.flipkart.com/mobiles/~mobileexclusives/pr?sid=tyy,4io&otracker=nmenu_sub_electronics_0_All%20Exclusive%20Mobiles",
+//        selectors: {
+//            elements: 'div[data-pid*="MOB"]',
+//            title: 'div.pu-title > a',
+//            description: '',
+//            imageUrl: 'a.pu-image > img',
+//            actualPrice: '.pu-old',
+//            sellingPrice: 'div.pu-final > span',
+//            discount: 'span.pu-off-per',
+//            redirectUrl: 'div.pu-title > a'
+//        },
+//        isScroll: true,
+//        id: 3
+//    },
+//    //TV
+    {
+        url: "http://www.flipkart.com/home-entertainment/televisions/pr?p%5b%5d=sort=featured&sid=ckf,czl&otracker=ch_vn_television_filter_Brands_See%20All%20TVs",
+        selectors: {
+            elements: 'div[data-pid*="TVS"]',
+            title: 'div.pu-title > a',
+            description: '',
+            imageUrl: 'a.pu-image > img',
+            actualPrice: '.pu-old',
+            sellingPrice: 'div.pu-final > span',
+            discount: 'span.pu-off-per',
+            redirectUrl: 'div.pu-title > a'
+        },
+        isScroll: true,
+        id: 5
    // },
 
    // //SUNGLASSES
@@ -62,7 +62,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 6
    // },
    // //  Watches - Men
@@ -78,7 +78,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 6
    // },
    ////// BAG
@@ -94,7 +94,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 7
    // },
    //  //AIR CONDITONERS
@@ -110,7 +110,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 8
    // },
    // //WASHING MACHINE
@@ -126,7 +126,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 9
    // },
    // //GAME CONSOLE
@@ -142,7 +142,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 10
    // },
    // //TOYS
@@ -158,7 +158,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 11
    // },
    // // JWELLERY
@@ -174,7 +174,7 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 12
    // },
    // // BOOKS
@@ -190,12 +190,12 @@ var FilpkartLinks = [
    //         discount: 'span.pu-off-per',
    //         redirectUrl: 'div.pu-title > a'
    //     },
-   //     isScroll: false,
+   //     isScroll: true,
    //     id: 13
     }];
 
 var casper = require('casper').create();
-casper.options.pageSettings.loadImages = false;
+casper.options.pageSettings.loadImages = true;
 casper.start();
 var productsList = [];
 FilpkartLinks.forEach(function (FilpkartCrawler) {
@@ -289,7 +289,7 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
             StoreName: "Flipkart",

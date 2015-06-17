@@ -5,7 +5,7 @@ var storage = require('azure-storage');
 var directoryName = 'Images/';
 
 // Reteving the productstage table data.
-var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [];
+var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
 var getOptions = {
     method: 'GET',
     url: "http://localhost:16193/api/productstage/getall",
@@ -26,7 +26,7 @@ request(getOptions, function (error, response, body) {
             "id": item.id,
             "categoryId": item.categoryId,
             "shortDescription": item.shortDescription,
-            "description": item.description,
+            "description": item.shortDescription,
             "redirectUrl": item.redirectUrl,
             "imageUrl": item.imageUrl,
             "storeName": item.storeName,
@@ -45,20 +45,20 @@ request(getOptions, function (error, response, body) {
     });
     // converting into lower case
     _.forEach(processArray, function (item) {
-        item.shortDescription = item.shortDescription.toLowerCase();
+        item.description = item.description.toLowerCase();
     });
 
     //removal of common words
     var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
     _.forEach(processArray, function (item) {
         _.forEach(commonWords, function (word) {
-            item.shortDescription = item.shortDescription.replace(word, "");
+            item.description = item.description.replace(word, "");
         });
     });
     // console.log(processArray);
     console.log("Process Array:  " + processArray.length);
 
-    //actual filter
+    //calling filter function
 
     //Filter products on each category id wise
     _.times(14, function (id) {
@@ -67,13 +67,29 @@ request(getOptions, function (error, response, body) {
             if (+product.categoryId === +id)
                 arrayToFilter.push(product);
         });
-        productFilter(arrayToFilter);
+        productFilter(arrayToFilter);  // the function will push the filtered products to resultArray for each category it called
     });
 
+    //Top 10 products pick.
+    _.times(14, function (id) {
+        sortArray = [];
+        _.forEach(resultArray, function (item) {
+            if (+item.categoryId === +id)
+                sortArray.push(item);
+        });
+        sortArray = _.sortBy(sortArray, 'discountPercentage');
+        sortArray = _.take(sortArray.reverse(), 60);
+        sortArray.forEach(function (topSortedItem) {
+            topArrayToPost.push(topSortedItem);
+
+            console.log("product: " + id + " " + topArrayToPost.length);
+        });
+    });
 
     //removing status element
-    resultArray.forEach(function (item) {
+    topArrayToPost.forEach(function (item) {
         resultArrayToPost.push({
+            "id": item.id,
             "categoryId": item.categoryId,
             "shortDescription": item.shortDescription,
             "description": item.description,
@@ -88,8 +104,7 @@ request(getOptions, function (error, response, body) {
             "isPublished": item.isPublished,
             "showDate": item.showDate,
             "source": item.source,
-            "createdData": "1/1/2015",
-            "lastUpdateData": "1/1/2015"
+            "status": true
         });
     });
     // console.log(resultArrayToPost);
@@ -107,9 +122,9 @@ function productFilter(processArray) {
     // finding product length, and calculating xn.
     for (var i = 0; i < processArray.length; i++) {
         if (processArray[i].status === true) {
-            var a = processArray[i].shortDescription.split(" ");
+            var a = processArray[i].description.split(" ");
             for (j = i + 1; j < processArray.length ; j++) {
-                var b = processArray[j].shortDescription.split(" ");
+                var b = processArray[j].description.split(" ");
                 var c = _.intersection(a, b);
                 var maxn = Math.max(a.length, b.length);
                 var percent = Math.floor(c.length / maxn * 100);
@@ -195,7 +210,6 @@ function downloadUploadImages(products) {
     });
 }
 
-
 //pushing to product table
 function pushToProductTable(products) {
     var options = {
@@ -206,7 +220,7 @@ function pushToProductTable(products) {
         },
         json: products
     };
-
+    console.log("products inserted test");
     function callback(error, response, body) {
         if (!error) {
             console.log(response.statusCode);
