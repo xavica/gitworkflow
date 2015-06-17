@@ -5,7 +5,7 @@ var storage = require('azure-storage');
 var directoryName = 'Images/';
 
 // Reteving the productstage table data.
-var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [];
+var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
 var getOptions = {
     method: 'GET',
     url: "http://localhost:16193/api/productstage/getall",
@@ -58,7 +58,7 @@ request(getOptions, function (error, response, body) {
     // console.log(processArray);
     console.log("Process Array:  " + processArray.length);
 
-    //actual filter
+    //calling filter function
 
     //Filter products on each category id wise
     _.times(14, function (id) {
@@ -67,13 +67,29 @@ request(getOptions, function (error, response, body) {
             if (+product.categoryId === +id)
                 arrayToFilter.push(product);
         });
-        productFilter(arrayToFilter);
+        productFilter(arrayToFilter);  // the function will push the filtered products to resultArray for each category it called
     });
 
+    //Top 10 products pick.
+    _.times(14, function (id) {
+        sortArray = [];
+        _.forEach(resultArray, function (item) {
+            if (+item.categoryId === +id)
+                sortArray.push(item);
+        });
+        sortArray = _.sortBy(sortArray, 'discountPercentage');
+        sortArray = _.take(sortArray.reverse(), 60);
+        sortArray.forEach(function (topSortedItem) {
+            topArrayToPost.push(topSortedItem);
+
+            console.log("product: " + id + " " + topArrayToPost.length);
+        });
+    });
 
     //removing status element
-    resultArray.forEach(function (item) {
+    topArrayToPost.forEach(function (item) {
         resultArrayToPost.push({
+            "id": item.id,
             "categoryId": item.categoryId,
             "shortDescription": item.shortDescription,
             "description": item.description,
@@ -88,8 +104,7 @@ request(getOptions, function (error, response, body) {
             "isPublished": item.isPublished,
             "showDate": item.showDate,
             "source": item.source,
-            "createdData": "1/1/2015",
-            "lastUpdateData": "1/1/2015"
+            "status": true
         });
     });
     // console.log(resultArrayToPost);
@@ -97,7 +112,6 @@ request(getOptions, function (error, response, body) {
 
     downloadUploadImages(resultArrayToPost);
     pushToProductTable(resultArrayToPost);
-    console.log("test some");
 
 }); // request close
 
@@ -195,7 +209,6 @@ function downloadUploadImages(products) {
         console.log(resultImageUrl);
     });
 }
-
 
 //pushing to product table
 function pushToProductTable(products) {
