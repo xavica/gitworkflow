@@ -32,38 +32,36 @@ request(getOptions, function (error, response, body) {
     //console.log(parsed.length);
 
     //Begin Put: to update records (parse search parameters)
-
-    function updateProduct(pushingItem) {
-        url = "http://localhost:16193/api/products/" + pushingItem.id;
-        console.log("update url" + url);
-        var updateOptions = {
-            method: 'PUT',
-            url: url,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            json: {
-                "categoryId": pushingItem.categoryId,
-                "shortDescription": pushingItem.shortDescription,
-                "description": pushingItem.description,
-                "redirectUrl": pushingItem.redirectUrl,
-                "imageUrl": pushingItem.imageUrl,
-                "storeName": pushingItem.storeName,
-                "actualPrice": pushingItem.actualPrice,
-                "currentPrice": pushingItem.currentPrice,
-                "discountPercentage": pushingItem.discountPercentage,
-                "isShippingFree": pushingItem.isShippingFree,
-                "star": pushingItem.star,
-                "isPublished": pushingItem.isPublished,
-                "showDate": pushingItem.showDate,
-                "source": pushingItem.source,
-                //"createdData": "1/1/2015",
-                //"lastUpdateData": "1/1/2015"
-            }
-        };
-        request(updateOptions, function (error, response, body) {
-            console.log("url updated successfully" + response.statusCode);
-        });
-    }
-
 });
+function updateProduct(pushingItem) {
+    url = "http://localhost:16193/api/products/" + pushingItem.id;
+    console.log("update url" + url);
+    var updateOptions = {
+        method: 'PUT',
+        url: url,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        json: {
+            "categoryId": pushingItem.categoryId,
+            "shortDescription": pushingItem.shortDescription,
+            "description": pushingItem.description,
+            "redirectUrl": pushingItem.redirectUrl,
+            "imageUrl": pushingItem.imageUrl,
+            "storeName": pushingItem.storeName,
+            "actualPrice": pushingItem.actualPrice,
+            "currentPrice": pushingItem.currentPrice,
+            "discountPercentage": pushingItem.discountPercentage,
+            "isShippingFree": pushingItem.isShippingFree,
+            "star": pushingItem.star,
+            "isPublished": pushingItem.isPublished,
+            "showDate": pushingItem.showDate,
+            "source": pushingItem.source,
+            //"createdData": "1/1/2015",
+            //"lastUpdateData": "1/1/2015"
+        }
+    };
+    request(updateOptions, function (error, response, body) {
+        console.log("url updated successfully" + response.statusCode);
+    });
+}

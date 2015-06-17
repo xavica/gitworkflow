@@ -111,7 +111,7 @@ request(getOptions, function (error, response, body) {
     console.log("resultArrayToPost:  " + resultArrayToPost.length);
 
     downloadUploadImages(resultArrayToPost);
-    pushToProductTable(resultArrayToPost);
+   // pushToProductTable(resultArrayToPost);
 
 }); // request close
 
@@ -160,8 +160,13 @@ function productFilter(processArray) {
 //Downloading Image 
 var downloadImage = function (uri, filename, callback) {
     request.head(uri, function (err, res, body) {
-        console.log('content-type:', res.headers['content-type']);
-        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+        if (res && res.headers && res.headers['content-type'].indexOf('image')>-1)
+        {
+            //console.log(res);
+            //console.log('content-type:' + res.headers['content-type']);
+            request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+
+        }
     });
 };
 
@@ -201,8 +206,8 @@ function downloadUploadImages(products) {
     products.forEach(function (item) {
         var downloadedFileName = generateUUID() + '.jpeg';
         downloadImage(item.imageUrl, directoryName + downloadedFileName, function () {
-            console.log('download done');
-            uploadImage(directoryName + downloadedFileName, downloadedFileName);
+                console.log('download done');
+                uploadImage(directoryName + downloadedFileName, downloadedFileName);
         });
         var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + downloadedFileName;
         item.imageUrl = resultImageUrl;

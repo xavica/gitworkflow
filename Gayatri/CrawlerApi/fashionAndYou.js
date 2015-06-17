@@ -115,10 +115,10 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
     });
 });
 //// pushing items to ProductStage Table.
-//casper.then(function () {
-//    //Creating proper input array.
-//    var productListToPush = productsList.map(function (item) {
-//        return {
+casper.then(function () {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
 
             CategoryId: item.id,
             ShortDescription: item.title,
@@ -155,5 +155,5 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
 //        });
 //    });
 //    this.echo("pushed items to productstage table");
-//});
+});
 casper.run();
