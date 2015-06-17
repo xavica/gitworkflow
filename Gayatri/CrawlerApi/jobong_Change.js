@@ -15,22 +15,22 @@ var jobongLinks = [
     },
     isScroll: false,
     id: 6
-    //},
-    ////Watches
-    //{
-    //    url: "http://www.jabong.com/men/accessories/watches/?sort=discount&dir=desc",
-    //    selectors: {
-    //        elements: 'section.p-list > ul > li',
-    //        title: 'span.qa-brandTitle',
-    //        description: '',
-    //        imageUrl: 'img.itm-img',
-    //        actualPrice: ' a > span.price > strike',
-    //        sellingPrice: 'a > span.price > strong.qa-price',
-    //        discount: 'a > span.price >span.discount',
-    //        redirectUrl: 'li.added > a'
-    //    },
-    //    isScroll: false,
-    //    id: 6
+    },
+    //Watches
+    {
+        url: "http://www.jabong.com/men/accessories/watches/?sort=discount&dir=desc",
+        selectors: {
+            elements: 'section.p-list > ul > li',
+            title: 'span.qa-brandTitle',
+            description: '',
+            imageUrl: 'img.itm-img',
+            actualPrice: ' a > span.price > strike',
+            sellingPrice: 'a > span.price > strong.qa-price',
+            discount: 'a > span.price >span.discount',
+            redirectUrl: 'li.added > a'
+        },
+        isScroll: false,
+        id: 6
     //},
     ////Shoes
     //{
@@ -244,7 +244,7 @@ casper.then(function () {
             Description: "Description",
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Gadgetsguru",
+            StoreName: "Jabong",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

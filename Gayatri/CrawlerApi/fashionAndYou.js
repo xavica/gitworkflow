@@ -120,29 +120,29 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
 //    var productListToPush = productsList.map(function (item) {
 //        return {
 
-//            CategoryId: item.id,
-//            ShortDescription: item.title,
-//            Description: "Description",
-//            RedirectUrl: item.redirectUrl,
-//            ImageUrl: item.imageUrl,
-//            StoreName: "Flipkart",
-//            ActualPrice: item.actualPrice,
-//            CurrentPrice: item.sellingPrice,
-//            DiscountPercentage: item.discount,
-//            IsShippingFree: 1,
-//            Star: 4,
-//            IsPublished: 0,
-//            ShowDate: "1/1/2015",
-//            Source: "Crawler",
-//            CreatedDate: "1/1/2015",
-//            LastUpdateDate: "1/1/2015"
-//        }
-//    });
-//    this.echo("productListToPush  :  " + productListToPush.length);
-//    var batchSize = 5;
-//    var pushingArray = [];
-//    pushingArray = _.chunk(productListToPush, batchSize);
-//    this.echo(pushingArray.length);
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Fashion & You",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
 
 //    pushingArray.forEach(function (batchArray) {
 //        casper.thenOpen('http://localhost:16193/api/productstagebulk', {

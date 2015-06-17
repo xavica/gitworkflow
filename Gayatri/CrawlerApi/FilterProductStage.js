@@ -75,7 +75,7 @@ request(getOptions, function (error, response, body) {
     resultArray.forEach(function (item) {
         resultArrayToPost.push({
             "categoryId": item.categoryId,
-            "shortDescription": item.shortDescription,
+            "shortdescription": item.shortdescription,
             "description": item.description,
             "redirectUrl": item.redirectUrl,
             "imageUrl": item.imageUrl,
@@ -97,6 +97,7 @@ request(getOptions, function (error, response, body) {
 
     downloadUploadImages(resultArrayToPost);
     pushToProductTable(resultArrayToPost);
+    console.log("test some");
 
 }); // request close
 
@@ -206,7 +207,7 @@ function pushToProductTable(products) {
         },
         json: products
     };
-
+    console.log("products inserted test");
     function callback(error, response, body) {
         if (!error) {
             console.log(response.statusCode);
