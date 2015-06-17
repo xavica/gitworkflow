@@ -75,7 +75,7 @@ request(getOptions, function (error, response, body) {
     resultArray.forEach(function (item) {
         resultArrayToPost.push({
             "categoryId": item.categoryId,
-            "shortdescription": item.shortdescription,
+            "shortDescription": item.shortDescription,
             "description": item.description,
             "redirectUrl": item.redirectUrl,
             "imageUrl": item.imageUrl,
