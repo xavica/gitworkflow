@@ -45,14 +45,14 @@ request(getOptions, function (error, response, body) {
     });
     // converting into lower case
     _.forEach(processArray, function (item) {
-        item.shortDescription = item.shortDescription.toLowerCase();
+        item.description = item.description.toLowerCase();
     });
 
     //removal of common words
     var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
     _.forEach(processArray, function (item) {
         _.forEach(commonWords, function (word) {
-            item.shortDescription = item.shortDescription.replace(word, "");
+            item.description = item.description.replace(word, "");
         });
     });
     // console.log(processArray);
@@ -75,7 +75,7 @@ request(getOptions, function (error, response, body) {
     resultArray.forEach(function (item) {
         resultArrayToPost.push({
             "categoryId": item.categoryId,
-            "shortDescription": item.shortDescription,
+            "shortdescription": item.shortdescription,
             "description": item.description,
             "redirectUrl": item.redirectUrl,
             "imageUrl": item.imageUrl,
@@ -97,6 +97,7 @@ request(getOptions, function (error, response, body) {
 
     downloadUploadImages(resultArrayToPost);
     pushToProductTable(resultArrayToPost);
+    console.log("test some");
 
 }); // request close
 
@@ -107,9 +108,9 @@ function productFilter(processArray) {
     // finding product length, and calculating xn.
     for (var i = 0; i < processArray.length; i++) {
         if (processArray[i].status === true) {
-            var a = processArray[i].shortDescription.split(" ");
+            var a = processArray[i].description.split(" ");
             for (j = i + 1; j < processArray.length ; j++) {
-                var b = processArray[j].shortDescription.split(" ");
+                var b = processArray[j].description.split(" ");
                 var c = _.intersection(a, b);
                 var maxn = Math.max(a.length, b.length);
                 var percent = Math.floor(c.length / maxn * 100);
@@ -206,7 +207,7 @@ function pushToProductTable(products) {
         },
         json: products
     };
-
+    console.log("products inserted test");
     function callback(error, response, body) {
         if (!error) {
             console.log(response.statusCode);
