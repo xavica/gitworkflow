@@ -1,20 +1,20 @@
 var _ = require('lodash');
 var AmazonLinks = [
-//AC
-{
-    url: "http://www.amazon.in/s/ref=nb_sb_ss_i_1_14?url=search-alias%3Dkitchen&field-keywords=air+conditioner&sprefix=air+conditione%2Cstripbooks%2C278&rh=n%3A976442031%2Ck%3Aair+conditioner",
-    selectors: {
-        elements: 'li[data-asin*="B"]',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 8
+////AC
+//{
+//    url: "http://www.amazon.in/s/ref=nb_sb_ss_i_1_14?url=search-alias%3Dkitchen&field-keywords=air+conditioner&sprefix=air+conditione%2Cstripbooks%2C278&rh=n%3A976442031%2Ck%3Aair+conditioner",
+//    selectors: {
+//        elements: 'li[data-asin*="B"]',
+//        title: 'div.a-row > a',
+//        description: '',
+//        imageUrl: 'a > img',
+//        actualPrice: 'span.a-text-strike',
+//        sellingPrice: 'a > span',
+//        discount: 'span.a-size-small.a-color-price',
+//        redirectUrl: 'div.a-row.a-spacing-none > a'
+//    },
+//    isScroll: false,
+//    id: 8
 //},
 //{
 //    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976442031%2Ck%3Aair+conditioner&page=2&keywords=air+conditioner&ie=UTF8&qid=1431138179",
@@ -231,7 +231,7 @@ var AmazonLinks = [
 //        isScroll: false,
 //        id: 7
 //    },
-////Laptop
+//Laptop
 //{
 //    url: "http://www.amazon.in/s/ref=nb_sb_ss_i_0_6?url=search-alias%3Dcomputers&field-keywords=laptop&sprefix=laptop%2Ccomputers%2C292",
 //    selectors: {
@@ -461,51 +461,51 @@ var AmazonLinks = [
 //    isScroll: false,
 //    id: 2
 //},
-////TV
-//{
-//    url: "http://www.amazon.in/s/ref=nb_sb_ss_c_0_2?url=search-alias%3Daps&field-keywords=tv&sprefix=tv%2Caps%2C348",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 5
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_2?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=2&keywords=tv&ie=UTF8&qid=1430882098",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 5
-//},
-//{
-//    url: "http://www.amazon.in/s/ref=sr_pg_3?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=3&keywords=tv&ie=UTF8&qid=1430885364",
-//    selectors: {
-//        elements: 'li[data-asin*="B"]',
-//        title: 'div.a-row > a',
-//        description: '',
-//        imageUrl: 'a > img',
-//        actualPrice: 'span.a-text-strike',
-//        sellingPrice: 'a > span',
-//        discount: 'span.a-size-small.a-color-price',
-//        redirectUrl: 'div.a-row.a-spacing-none > a'
-//    },
-//    isScroll: false,
-//    id: 5
+//TV
+{
+    url: "http://www.amazon.in/s/ref=nb_sb_ss_c_0_2?url=search-alias%3Daps&field-keywords=tv&sprefix=tv%2Caps%2C348",
+    selectors: {
+        elements: 'li[data-asin*="B"]',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 5
+},
+{
+    url: "http://www.amazon.in/s/ref=sr_pg_2?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=2&keywords=tv&ie=UTF8&qid=1430882098",
+    selectors: {
+        elements: 'li[data-asin*="B"]',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 5
+},
+{
+    url: "http://www.amazon.in/s/ref=sr_pg_3?fst=as%3Aon&rh=n%3A976419031%2Cn%3A1389375031%2Cn%3A1389396031%2Ck%3Atv&page=3&keywords=tv&ie=UTF8&qid=1430885364",
+    selectors: {
+        elements: 'li[data-asin*="B"]',
+        title: 'div.a-row > a',
+        description: '',
+        imageUrl: 'a > img',
+        actualPrice: 'span.a-text-strike',
+        sellingPrice: 'a > span',
+        discount: 'span.a-size-small.a-color-price',
+        redirectUrl: 'div.a-row.a-spacing-none > a'
+    },
+    isScroll: false,
+    id: 5
 //},
 ////Toys
 //{
