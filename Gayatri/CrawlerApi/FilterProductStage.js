@@ -47,7 +47,6 @@ request(getOptions, function (error, response, body) {
     _.forEach(processArray, function (item) {
         item.description = item.description.toLowerCase();
     });
-
     //removal of common words
     var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
     _.forEach(processArray, function (item) {
