@@ -110,7 +110,7 @@ request(getOptions, function (error, response, body) {
     console.log("resultArrayToPost:  " + resultArrayToPost.length);
 
     downloadUploadImages(resultArrayToPost);
-   // pushToProductTable(resultArrayToPost);
+    pushToProductTable(resultArrayToPost);
 
 }); // request close
 
