@@ -1,4 +1,5 @@
-﻿var InLivingLinks = [
+﻿var _ = require('lodash');
+var InLivingLinks = [
     //Furniture
 {
     url: "http://www.inliving.com/deals-and-discounts",
@@ -152,10 +153,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "InLiving",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

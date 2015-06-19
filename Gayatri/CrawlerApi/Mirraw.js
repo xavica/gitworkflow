@@ -1,4 +1,5 @@
-﻿var mirrawLinks = [
+﻿var _ = require('lodash');
+var mirrawLinks = [
 // Jewellery
 {
     url: "http://www.mirraw.com/store/jewellery?min_price=1001&max_price=60000&sort=discount",
@@ -171,10 +172,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Mirraw",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

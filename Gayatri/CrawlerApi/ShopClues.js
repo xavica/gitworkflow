@@ -1,4 +1,5 @@
-﻿var shopCluesLinks = [
+﻿var _ = require('lodash');
+var shopCluesLinks = [
 // LAPTOPS
 {
     url: "http://www.shopclues.com/computers/laptop-special.html?sort_by=hotdeals&sort_order=desc",
@@ -302,10 +303,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "ShopClues",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

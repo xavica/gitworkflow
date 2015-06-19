@@ -1,4 +1,5 @@
-﻿var FashionAndYouLinks = [
+﻿var _ = require('lodash');
+var FashionAndYouLinks = [
     //Fashion Jwellery
 {
     url: "http://www.fashionandyou.com/women/fashion_jewelry",
@@ -22,24 +23,24 @@ var productsList = [];
 FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
     casper.thenOpen(FashionAndYouCrawler.url, function () {
         this.echo("----------------------------------------");
-        //if (FashionAndYouCrawler.isScroll === true) {
-        //    this.scrollToBottom();
-        //    casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //        this.echo("first scroll over");
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("second scroll over");
-        //        });
-        //    });
-        //    casper.then(function () {
-        //        this.scrollToBottom();
-        //        casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
-        //            this.echo("third scroll over");
-        //        });
-        //    });
-        //}
+        if (FashionAndYouCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                this.echo("first scroll over");
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                    this.echo("second scroll over");
+                });
+            });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(FashionAndYouCrawler.selectors.elements, function () {
+                    this.echo("third scroll over");
+                });
+            });
+        }
         casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
@@ -113,7 +114,7 @@ FashionAndYouLinks.forEach(function (FashionAndYouCrawler) {
         });
     });
 });
-// pushing items to ProductStage Table.
+//// pushing items to ProductStage Table.
 casper.then(function () {
     //Creating proper input array.
     var productListToPush = productsList.map(function (item) {
@@ -121,10 +122,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Fashion & You",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,
@@ -143,16 +144,16 @@ casper.then(function () {
     pushingArray = _.chunk(productListToPush, batchSize);
     this.echo(pushingArray.length);
 
-    pushingArray.forEach(function (batchArray) {
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: JSON.stringify(batchArray),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-    });
-    this.echo("pushed items to productstage table");
+//    pushingArray.forEach(function (batchArray) {
+//        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+//            method: 'post',
+//            data: JSON.stringify(batchArray),
+//            headers: {
+//                'Accept': 'application/json',
+//                'Content-Type': 'application/json'
+//            }
+//        });
+//    });
+//    this.echo("pushed items to productstage table");
 });
 casper.run();

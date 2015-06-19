@@ -1,4 +1,5 @@
-﻿var infiBeamLinks = [
+﻿var _ = require('lodash');
+var infiBeamLinks = [
 // MOBILES
 {
     url: "http://www.infibeam.com/Hot_Deals/search?keybn=home_elec_mobi_mobi",
@@ -300,10 +301,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "InfiBeam",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

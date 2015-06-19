@@ -1,4 +1,5 @@
-﻿var SaholicLinks = [
+﻿var _ = require('lodash');
+var SaholicLinks = [
     //Mobiles
 {
     url: "http://www.saholic.com/android?&page=3",
@@ -203,10 +204,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Saholic",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

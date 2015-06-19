@@ -1,5 +1,6 @@
-﻿var cromaRetailLinks = [
-// LAPTOPS
+﻿var _ = require('lodash');
+var cromaRetailLinks = [
+//// LAPTOPS
 {
     url: "http://www.cromaretail.com/Laptops-c-20.aspx#!SO=DISCOUNT",
     selectors: {
@@ -126,8 +127,8 @@
     },
     isScroll: false,
     id: 5
-
 }];
+
 
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -217,6 +218,7 @@ cromaRetailLinks.forEach(function (cromaRetailCrawler) {
         });
     });
 });
+
 // pushing items to ProductStage Table.
 casper.then(function () {
     //Creating proper input array.
@@ -225,10 +227,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Croma Retail",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

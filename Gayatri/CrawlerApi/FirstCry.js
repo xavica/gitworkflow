@@ -1,4 +1,5 @@
-﻿var firstCryLinks = [
+﻿var _ = require('lodash');
+var firstCryLinks = [
 // Kids and Toys
 {
     url: "http://www.firstcry.com/searchresult.aspx?sale=5&searchstring=brand@A@B@@1@0@20@@@@@@@@@@@&sort=newarrivals&ref2=onsale_menu_dd#sale=5&searchstring=brand@@@@1@0@20@@@@@@@@@@@@@@@@&rating=&sort=HighestDiscount&&vi=four&pmonths=&cgen=&skills=&measurement=&material=&Color=&Age=&gender=&ser=&PageNo=1&scrollPos=0&pview=four_view&tc=8624",
@@ -13,7 +14,7 @@
         redirectUrl: 'div.li_txt1 > a'
     },
     isScroll: false,
-    id: 10
+    id: 11
 }];
 
 var casper = require('casper').create();
@@ -75,12 +76,12 @@ firstCryLinks.forEach(function (firstCryCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        //__utils__.echo(title);
+                        __utils__.echo(title);
                         //__utils__.echo(imageUrl);
                         //__utils__.echo(actualPrice);
                         //__utils__.echo(sellingPrice);
-                        //__utils__.echo(discount);
-                        __utils__.echo(fullRedirectUrl);
+                        __utils__.echo(discount);
+                        //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -110,10 +111,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "FirstCry",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

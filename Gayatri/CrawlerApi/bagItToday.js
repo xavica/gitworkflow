@@ -1,4 +1,5 @@
-﻿var bagItTodayLinks = [
+﻿var _ = require('lodash');
+var bagItTodayLinks = [
 // LAPTOPS
 {
     url: "http://www.bagittoday.com/budget-laptops/c-2443/",
@@ -62,7 +63,6 @@
     },
     isScroll: true,
     id: 6
-
 }];
 
 var casper = require('casper').create();
@@ -159,10 +159,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "BagItToday",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,
@@ -193,4 +193,5 @@ casper.then(function () {
     });
     this.echo("pushed items to productstage table");
 });
+
 casper.run();

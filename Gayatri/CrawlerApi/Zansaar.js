@@ -1,4 +1,5 @@
-﻿var ZansaarLinks = [
+﻿var _ = require('lodash');
+var ZansaarLinks = [
     //FURNITURE
 {
     url: "http://www.zansaar.com/furniture/living-room-furniture/sofas?sort=discount",
@@ -156,12 +157,12 @@ ZansaarLinks.forEach(function (ZansaarCrawler) {
                         fullRedirectUrl = redirectUrl;
                     }
                     if (title && discount && actualPrice && redirectUrl) {
-                        __utils__.echo(title);
-                        __utils__.echo(imageUrl);
-                        __utils__.echo(actualPrice);
-                        __utils__.echo(sellingPrice);
-                        __utils__.echo(discount);
-                        __utils__.echo(fullRedirectUrl);
+                        //__utils__.echo(title);
+                        //__utils__.echo(imageUrl);
+                        //__utils__.echo(actualPrice);
+                        //__utils__.echo(sellingPrice);
+                        //__utils__.echo(discount);
+                        //__utils__.echo(fullRedirectUrl);
                         tempProducts.push({
                             "id": stubCrawler.id,
                             "title": title,
@@ -191,10 +192,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Zansaar",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,

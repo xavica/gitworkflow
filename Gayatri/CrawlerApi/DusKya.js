@@ -1,4 +1,4 @@
-﻿
+﻿var _ = require('lodash');
 var DusKyaLinks = [
 // Sun Glasses
 {
@@ -133,35 +133,48 @@ DusKyaLinks.forEach(function (DusKyaCrawler) {
         });
     });
 });
-// pushing DusKya items to ProductStage Table.
+// pushing items to ProductStage Table.
 casper.then(function () {
-    this.echo(productsList.length);
-    productsList.forEach(function (item) {
-        casper.thenOpen('http://localhost:16193/api/productstage', {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
+
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: item.title,
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "DusKya",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
+
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
             method: 'post',
-            data: {
-                CategoryId: item.id,
-                ShortDescription: item.title,
-                Description: "Description",
-                RedirectUrl: item.redirectUrl,
-                ImageUrl: item.imageUrl,
-                StoreName: "DusKya",
-                ActualPrice: item.actualPrice,
-                CurrentPrice: item.sellingPrice,
-                DiscountPercentage: item.discount,
-                IsShippingFree: 1,
-                Star: 4,
-                IsPublished: 0,
-                ShowDate: "1/1/2015",
-                Source: "Crawler",
-                CreatedDate: "1/1/2015",
-                LastUpdateDate: "1/1/2015"
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             }
         });
-
     });
-    this.echo("pushed  DusKya items to productstage table");
+    this.echo("pushed items to productstage table");
 });
-////Getting products from ProductStageTable
+
 
 casper.run();

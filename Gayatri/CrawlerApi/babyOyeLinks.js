@@ -1,10 +1,11 @@
-﻿var BabyOyeLinks = [
+﻿var _ = require('lodash');
+var BabyOyeLinks = [
 // kids Games
 {
     url: "http://www.babyoye.com/d/Toys/~pg=100-224999/~ageGroup=2-3%20years/~ageGroup=3-4%20years/~ageGroup=4-5%20years/~ageGroup=5-6%20years/~ageGroup=6-7%20years/~ageGroup=7-8%20years/~ageGroup=8-9%20years/~eoos=true/~SORT_BY=discountpercent??aff_id=103&utm_source=google&utm_medium=cpc&utm_campaign=Kids-Toys(BMM)&utm_term=keyword&utm_content=creative&gclid=CjwKEAjwndqrBRC16IyeqPicp3ASJAB-vB-c_2YBSXz1lUD-a8uuH_ijAevdmxcrSSRvt4VZ_UgGzxoCz2Dw_wcB",
     selectors: {
         elements: '.product_summary',
-        title: '.product_summary .big_prodetail_tab span',
+        title: 'div. product_image_border > a > img',
         description: '',
         imageUrl: 'div.gal_img > a > img',
         actualPrice: '.big_prodetail_tab_discount span.strikePrice',
@@ -49,7 +50,7 @@ BabyOyeLinks.forEach(function (BabyOyeCrawler) {
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
 
-                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
+                    var title = titleElement && titleElement.getAttribute('title') || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
@@ -102,35 +103,47 @@ BabyOyeLinks.forEach(function (BabyOyeCrawler) {
         });
     });
 });
-// pushing BabyOye items to ProductStage Table.
+// pushing items to ProductStage Table.
 casper.then(function () {
-    this.echo(productsList.length);
-    productsList.forEach(function (item) {
-        casper.thenOpen('http://localhost:16193/api/productstage', {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
+
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: item.title,
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "BabyOye",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
+
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
             method: 'post',
-            data: {
-                CategoryId: item.id,
-                ShortDescription: item.title,
-                Description: "Description",
-                RedirectUrl: item.redirectUrl,
-                ImageUrl: item.imageUrl,
-                StoreName: "BabyOye",
-                ActualPrice: item.actualPrice,
-                CurrentPrice: item.sellingPrice,
-                DiscountPercentage: item.discount,
-                IsShippingFree: 1,
-                Star: 4,
-                IsPublished: 0,
-                ShowDate: "1/1/2015",
-                Source: "Crawler",
-                CreatedDate: "1/1/2015",
-                LastUpdateDate: "1/1/2015"
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             }
         });
-
     });
-    this.echo("pushed  BabyOyeSite items to productstage table");
+    this.echo("pushed items to productstage table");
 });
-////Getting products from ProductStageTable
 
 casper.run();

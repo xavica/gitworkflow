@@ -1,4 +1,5 @@
-﻿var CashKaroLinks = [
+﻿var _ = require('lodash');
+var CashKaroLinks = [
     //Soft Toys
 {
     url: "http://cashkaro.com/product/babies-toys/baby-toys?page=2&sort=discount&Brand[]=Deals%20India",
@@ -12,8 +13,8 @@
         discount: 'div.product_img> span',
         redirectUrl: 'a.product_name'
     },
-    isScroll: true,
-    id: 15
+    isScroll: false,
+    id: 11
 },
     //Laptops
 {
@@ -28,7 +29,7 @@
         discount: 'div.product_img> span',
         redirectUrl: 'a.product_name'
     },
-    isScroll: true,
+    isScroll: false,
     id: 1
 },
    //Furniture
@@ -44,7 +45,7 @@
         discount: 'div.product_img> span',
         redirectUrl: 'a.product_name'
     },
-    isScroll: true,
+    isScroll: false,
     id: 15
 }];
 var casper = require('casper').create();
@@ -153,10 +154,10 @@ casper.then(function () {
 
             CategoryId: item.id,
             ShortDescription: item.title,
-            Description: "Description",
+            Description: item.title,
             RedirectUrl: item.redirectUrl,
             ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
+            StoreName: "Cashkaro",
             ActualPrice: item.actualPrice,
             CurrentPrice: item.sellingPrice,
             DiscountPercentage: item.discount,
