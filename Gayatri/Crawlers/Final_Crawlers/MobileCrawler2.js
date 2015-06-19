@@ -11,21 +11,21 @@
         redirectUrl: 'div.pu-title > a'
     },
     isScroll: true
-    //},
-    //    {
-    //        url: "http://deals.ebay.in/ebaydeals/mobiles-1",
-    //        selectors: {
-    //            elements: '.listingblock',
-    //            title: 'div.itemtitle > p > a',
-    //            description: '',
-    //            imageUrl: '',
-    //            actualPrice: 'div.itemPriceStriked > p',
-    //            sellingPrice: 'div.itemPrice > p',
-    //            discount: 'div.discountLabel > div > span',
-    //            redirectUrl: ''
-    //        },
-    //        isScroll: true
 },
+        {
+            url: "http://deals.ebay.in/ebaydeals/mobiles-1",
+            selectors: {
+                elements: '.listingblock',
+                title: 'div.itemtitle > p > a',
+                description: '',
+                imageUrl: 'div.imgListingContainer > a > img',
+                actualPrice: 'div.itemPriceStriked > p',
+                sellingPrice: 'div.itemPrice > p',
+                discount: 'div.discountLabel > div > span',
+                redirectUrl: 'div.imgListingContainer > a'
+            },
+            isScroll: true
+        },
     {
 
         url: "http://www.amazon.in/s/ref=amb_link_179803727_1?ie=UTF8&bbn=4192584031&rh=i%3Aelectronics%2Cn%3A976419031%2Cn%3A!1499770031%2Cn%3A!1499772031%2Cn%3A4192584031%2Cn%3A1389401031%2Cn%3A1389432031%2Cp_76%3A1318482031%2Cn%3A!1499772031%2Cn%3A!1499770031%2Cn%3A!1499770031%2Cn%3A!1499772031&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_s=merchandised-search-leftnav&pf_rd_r=0PX4ARTQZFAC6778SCX2&pf_rd_t=101&pf_rd_p=613139487&pf_rd_i=1389432031",

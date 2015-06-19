@@ -1,88 +1,109 @@
-﻿var http = require("http");
+﻿var request = require("request");
+var _ = require('lodash-node');
+var querystring = require('querystring');
+
+// Reteving the productstage table data.
+var processArray = [], resultArray = [], discardedArray = [],resultArrayToPost = [];
+var getOptions = {
+    method: 'GET',
+    url: "http://localhost:16193/api/productstage/getall",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+};
 var rawProducts = [];
-http.get('http://localhost:16193/api/productstage/getall', function (item) {
-    var data = "";
-    item.on("data", function (chunk) {
-        data += chunk;
-    });
+request(getOptions, function (error, response, body) {
+   rawProducts = JSON.parse(body);
+   console.log(rawProducts.length);
+    // console.log(rawProducts);
+    // console.log(rawProducts.length);
 
-    item.on("end", function () {
-        var parsed = JSON.parse(data);
-        console.log(parsed.length);
-        parsed.forEach(function (item) {
-            rawProducts.push({
-                "id": item.id,
-                "categoryId": item.categoryId,
-                "shortDescription": item.shortDescription,
-                "description": item.description,
-                "redirectUrl": item.redirectUrl,
-                "imageUrl": item.imageUrl,
-                "storeName": item.storeName,
-                "actualPrice": item.actualPrice,
-                "currentPrice": item.currentPrice,
-                "discountPercentage": item.discountPercentage,
-                "isShippingFree": item.isShippingFree,
-                "star": item.star,
-                "isPublished": item.isPublished,
-                "showDate": item.showDate,
-                "source": parsed.source
-            });
+    // Adding status field.
+    rawProducts.forEach(function (item) {
+        processArray.push({
+            "id": item.id,
+            "categoryId": item.categoryId,
+            "shortDescription": item.shortDescription,
+            "description": item.description,
+            "redirectUrl": item.redirectUrl,
+            "imageUrl": item.imageUrl,
+            "storeName": item.storeName,
+            "actualPrice": item.actualPrice,
+            "currentPrice": item.currentPrice,
+            "discountPercentage": item.discountPercentage,
+            "isShippingFree": item.isShippingFree,
+            "star": item.star,
+            "isPublished": item.isPublished,
+            "showDate": item.showDate,
+            "source": item.source,
+            "status": true
         });
-        console.log(rawProducts);
-        console.log(rawProducts.length);
+        // console.log(processArray);
+        // console.log("Process Array:  " + processArray.length);
     });
-});
+    // converting into lower case
+    _.forEach(processArray, function (item) {
+        item.shortDescription = item.shortDescription.toLowerCase();
+    });
 
-// Mapping array to add "Status" property.
-var processArray = rawProducts.map(function (item) {
-    return {
-        "id": item.id,
-        "categoryId": item.categoryId,
-        "shortDescription": item.shortDescription,
-        "description": item.description,
-        "redirectUrl": item.redirectUrl,
-        "imageUrl": item.imageUrl,
-        "storeName": item.storeName,
-        "actualPrice": item.actualPrice,
-        "currentPrice": item.currentPrice,
-        "discountPercentage": item.discountPercentage,
-        "isShippingFree": item.isShippingFree,
-        "star": item.star,
-        "isPublished": item.isPublished,
-        "showDate": item.showDate,
-        "source": item.source,
-        "status": true
-    }
-});
-//convert into lowercase
-_.forEach(processArray, function (item) {
-    item.name = item.name.toLowerCase();
-});
-console.log(processArray);
-//common keywords array
-commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-"];
+    //removal of common words
+    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
+    _.forEach(processArray, function (item) {
+        _.forEach(commonWords, function (word) {
+            item.shortDescription = item.shortDescription.replace(word, "");
+        });
+    });
+    // console.log(processArray);
+    console.log("Process Array:  " + processArray.length);
 
-//replace common keywords with nothing 
-for (i = 0; i < processArray.length; i++)
-    for (j = 0; j < commonWords.length; j++)
-        processArray[i].name = processArray[i].name.replace(commonWords[j], "");
+    //actual filter
 
-var resultArray = [];
-for (j = 1; j < 14; j++) {
-    for (i = 0; i < processArray.length; i++) {
+    //Filter products on each category id wise
+    _.times(14, function (id) {
         var arrayToFilter = [];
-        if (+processArray[i].categoryId === j)
-            arrayToFilter.push(processArray[i]);
-        productFilter(arraytoFilter);
-    }
-}
-function productFilter(processArray) {
-    var filterArray = [], discardedArray = [];
-    for (i = 0; i < processArray.length ; i++) {
+        _.forEach(processArray, function (product) {
+            if (+product.categoryId === +id)
+                arrayToFilter.push(product);
+        });
+        productFilter(arrayToFilter);
+    });
+
+    //removing status element
+    resultArray.forEach(function (item) {
+        resultArrayToPost.push({
+            "categoryId": item.categoryId,
+            "shortDescription": item.shortDescription,
+            "description": item.description,
+            "redirectUrl": item.redirectUrl,
+            "imageUrl": item.imageUrl,
+            "storeName": item.storeName,
+            "actualPrice": item.actualPrice,
+            "currentPrice": item.currentPrice,
+            "discountPercentage": item.discountPercentage,
+            "isShippingFree": item.isShippingFree,
+            "star": item.star,
+            "isPublished": item.isPublished,
+            "showDate": item.showDate,
+            "source": item.source,
+            "createdData": "1/1/2015",
+            "lastUpdateData": "1/1/2015"
+        });
+    });
+    // console.log(resultArrayToPost);
+    console.log("resultArrayToPost:  " + resultArrayToPost.length);
+
+}); // request close
+
+ //ProductFilter function where Filtered as per categoryid will come here for process.
+function productFilter(processArray)    {
+    var filterArray = [];
+
+    // finding product length, and calculating xn.
+    for(var i=0; i<processArray.length;i++){
         if (processArray[i].status === true) {
-            var a = processArray[i].name.split(" ");
+            var a = processArray[i].shortDescription.split(" ");
             for (j = i + 1; j < processArray.length ; j++) {
-                var b = processArray[j].name.split(" ");
+                var b = processArray[j].shortDescription.split(" ");
                 var c = _.intersection(a, b);
                 var maxn = Math.max(a.length, b.length);
                 var percent = Math.floor(c.length / maxn * 100);
@@ -111,42 +132,28 @@ function productFilter(processArray) {
             }
         }
     }
-}
-console.log(processArray.length);
-console.log(resultArray.length);
-console.log(resultArray);
-//console.log(discardedArray);
-
-// Posting data to Products Table in DB.
-
-var data = JSON.stringify(resultArray);
+}  
+var postArray = querystring.stringify(resultArrayToPost);
 var options = {
-    host: 'localhost:16193',
-    port: '80',
-    path: '/api/products',
     method: 'POST',
+    url: "http://localhost:16193/api/productbulk",
+    json: true,
     headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Content-Length': data.length
-    }
+        'Content-Type': 'application/json',
+        'Content-Length': postArray.length
+    },
+    json: postArray
 };
 
-var req = http.request(options, function (res) {
-    var msg = '';
-
-    res.setEncoding('utf8');
-    res.on('data', function (chunk) {
-        msg += chunk;
-    });
-    res.on('end', function () {
-        console.log(JSON.parse(msg));
-    });
-}).on('error', function (e) {
-    console.log("Got error: " + e.message);
-});
-
-req.write(data);
-req.end();
-
+function callback(error, response, body) {
+    if (!error) {
+        console.log(response.statusCode);
+        console.log(body);
+    }
+    else {
+        console.log('Error happened: ' + error);
+    }
+}
+request(options, callback);
 
 

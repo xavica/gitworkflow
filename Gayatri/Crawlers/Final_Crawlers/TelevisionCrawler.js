@@ -10,22 +10,22 @@
         discount: 'span.pu-off-per',
         redirectUrl: 'div.pu-title > a'
     },
-    isScroll: true
+    isScroll: false
 },
-//{
-//    url: "http://deals.ebay.in/ebaydeals/televisions-4",
-//    selectors: {
-//        elements: '.listingblock',
-//        title: 'div.itemtitle > p > a',
-//        description: '',
-//        imageUrl: '',
-//        actualPrice: 'div.itemPriceStriked > p',
-//        sellingPrice: 'div.itemPrice > p',
-//        discount: 'div.discountLabel > div > span',
-//        redirectUrl: ''
-//    },
-//    isScroll: true
-//},
+{
+    url: "http://deals.ebay.in/ebaydeals/televisions-4",
+    selectors: {
+        elements: '.listingblock',
+        title: 'div.itemtitle > p > a',
+        description: '',
+        imageUrl: 'div.imgListingContainer > a > img',
+        actualPrice: 'div.itemPriceStriked > p',
+        sellingPrice: 'div.itemPrice > p',
+        discount: 'div.discountLabel > div > span',
+        redirectUrl: 'div.imgListingContainer > a'
+    },
+    isScroll: false
+},
 {
     url: "http://www.amazon.in/s/ref=nb_sb_ss_c_0_2?url=search-alias%3Daps&field-keywords=tv&sprefix=tv%2Caps%2C348",
     selectors: {

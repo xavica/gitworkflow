@@ -11,21 +11,21 @@
         redirectUrl: 'div.pu-title > a'
     },
     isScroll: true
-    //},
-    //{
-    //    url: "http://deals.ebay.in/ebaydeals/tablets-6",
-    //    selectors: {
-    //        elements: '.listingblock',
-    //        title: '',
-    //        description: '',
-    //        imageUrl: '',
-    //        actualPrice: 'div.itemPriceStriked > p',
-    //        sellingPrice: 'div.itemPrice > p',
-    //        discount: 'div.discountLabel > div > span',
-    //        redirectUrl: ''
-    //    },
-    //    isScroll: true
 },
+    {
+        url: "http://deals.ebay.in/ebaydeals/tablets-6",
+        selectors: {
+            elements: '.listingblock',
+            title: 'div.itemtitle > p > a',
+            description: '',
+            imageUrl: 'div.imgListingContainer > a > img',
+            actualPrice: 'div.itemPriceStriked > p',
+            sellingPrice: 'div.itemPrice > p',
+            discount: 'div.discountLabel > div > span',
+            redirectUrl: 'div.imgListingContainer > a'
+        },
+        isScroll: true
+    },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_1?rh=n%3A976392031%2Cn%3A%21976393031%2Cn%3A1375458031%2Cp_76%3A1318482031&bbn=1375458031&ie=UTF8&qid=1430477874",
     selectors: {

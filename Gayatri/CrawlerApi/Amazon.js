@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var AmazonLinks = [
 //AC
 {
@@ -17,7 +18,7 @@ var AmazonLinks = [
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976442031%2Ck%3Aair+conditioner&page=2&keywords=air+conditioner&ie=UTF8&qid=1431138179",
-    selectors: { 
+    selectors: {
         elements: 'li[data-asin*="B"]',
         title: 'div.a-row > a',
         description: '',
@@ -111,7 +112,7 @@ var AmazonLinks = [
 //have to check
 {
     url: "http://www.amazon.in/Games/b/ref=sv_t_2?ie=UTF8&node=1378311031",
-    selectors: { 
+    selectors: {
         elements: 'li[data-asin*="B"]',
         title: 'div.a-row > a',
         description: '',
@@ -260,7 +261,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id:1
+    id: 1
 },
 {
     url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976392031%2Ck%3Alaptop&page=2&keywords=laptop&ie=UTF8&qid=1430888955",
@@ -474,7 +475,7 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-    id : 2
+    id: 2
 },
 //TV
 {
@@ -584,68 +585,68 @@ var AmazonLinks = [
         redirectUrl: 'div.a-row.a-spacing-none > a'
     },
     isScroll: false,
-},
+}
 //Books
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
-    selectors: { 
-        elements: '.s-result-item',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 13
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
-    selectors: {
-        elements: '.s-result-item',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 13
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
-    selectors: {
-        elements: '.s-result-item',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-    id: 13
-},
-{
-    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
-    selectors: {
-        elements: '.s-result-item',
-        title: 'div.a-row > a',
-        description: '',
-        imageUrl: 'a > img',
-        actualPrice: 'span.a-text-strike',
-        sellingPrice: 'a > span',
-        discount: 'span.a-size-small.a-color-price',
-        redirectUrl: 'div.a-row.a-spacing-none > a'
-    },
-    isScroll: false,
-        id: 13
-    }
+//{
+//    url: "http://www.amazon.in/s/ref=sr_pg_3?rh=n%3A976389031%2Ck%3Abooks&page=3&d=1&keywords=books&ie=UTF8&qid=1430913377&lo=none",
+//    selectors: { 
+//        elements: '.s-result-item',
+//        title: 'div.a-row > a',
+//        description: '',
+//        imageUrl: 'a > img',
+//        actualPrice: 'span.a-text-strike',
+//        sellingPrice: 'a > span',
+//        discount: 'span.a-size-small.a-color-price',
+//        redirectUrl: 'div.a-row.a-spacing-none > a'
+//    },
+//    isScroll: false,
+//    id: 13
+//},
+//{
+//    url: "http://www.amazon.in/s/ref=sr_pg_4?rh=n%3A976389031%2Ck%3Abooks&page=4&d=1&keywords=books&ie=UTF8&qid=1430913438&lo=none",
+//    selectors: {
+//        elements: '.s-result-item',
+//        title: 'div.a-row > a',
+//        description: '',
+//        imageUrl: 'a > img',
+//        actualPrice: 'span.a-text-strike',
+//        sellingPrice: 'a > span',
+//        discount: 'span.a-size-small.a-color-price',
+//        redirectUrl: 'div.a-row.a-spacing-none > a'
+//    },
+//    isScroll: false,
+//    id: 13
+//},
+//{
+//    url: "http://www.amazon.in/s/ref=sr_il_to_stripbooks?rh=n%3A976389031%2Ck%3Abooks&keywords=books&ie=UTF8&qid=1430912952&lo=none",
+//    selectors: {
+//        elements: '.s-result-item',
+//        title: 'div.a-row > a',
+//        description: '',
+//        imageUrl: 'a > img',
+//        actualPrice: 'span.a-text-strike',
+//        sellingPrice: 'a > span',
+//        discount: 'span.a-size-small.a-color-price',
+//        redirectUrl: 'div.a-row.a-spacing-none > a'
+//    },
+//    isScroll: false,
+//    id: 13
+//},
+//{
+//    url: "http://www.amazon.in/s/ref=sr_pg_2?rh=n%3A976389031%2Ck%3Abooks&page=2&d=1&keywords=books&ie=UTF8&qid=1430912969&lo=none",
+//    selectors: {
+//        elements: '.s-result-item',
+//        title: 'div.a-row > a',
+//        description: '',
+//        imageUrl: 'a > img',
+//        actualPrice: 'span.a-text-strike',
+//        sellingPrice: 'a > span',
+//        discount: 'span.a-size-small.a-color-price',
+//        redirectUrl: 'div.a-row.a-spacing-none > a'
+//    },
+//    isScroll: false,
+//        id: 13
+//    }
 
 ];
 
@@ -736,34 +737,47 @@ AmazonLinks.forEach(function (AmazonCrawler) {
     });
 });
 
-// pushing Amazon items to ProductStage Table.
+// pushing items to ProductStage Table.
 casper.then(function () {
-    this.echo(productsList.length);
-    productsList.forEach(function (item) {
-        casper.thenOpen('http://localhost:16193/api/productstage', {
+    //Creating proper input array.
+    var productListToPush = productsList.map(function (item) {
+        return {
+
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: "Description",
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: "Flipkart",
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: "1/1/2015",
+            Source: "Crawler",
+            CreatedDate: "1/1/2015",
+            LastUpdateDate: "1/1/2015"
+        }
+    });
+    this.echo("productListToPush  :  " + productListToPush.length);
+    var batchSize = 5;
+    var pushingArray = [];
+    pushingArray = _.chunk(productListToPush, batchSize);
+    this.echo(pushingArray.length);
+
+    pushingArray.forEach(function (batchArray) {
+        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
             method: 'post',
-            data: {
-                CategoryId: item.id,
-                ShortDescription: item.title,
-                Description: "Description",
-                RedirectUrl: item.redirectUrl,
-                ImageUrl: item.imageUrl,
-                StoreName: "Amazon",
-                ActualPrice: item.actualPrice,
-                CurrentPrice: item.sellingPrice,
-                DiscountPercentage: item.discount,
-                IsShippingFree: 1,
-                Star: 4,
-                IsPublished: 0,
-                ShowDate: "1/1/2015",
-                Source: "Crawler",
-                CreatedDate: "1/1/2015",
-                LastUpdateDate: "1/1/2015"
+            data: JSON.stringify(batchArray),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
             }
         });
-
     });
-    this.echo("pushed Amazon items to productstage table");
+    this.echo("pushed items to productstage table");
 });
 
 casper.run();

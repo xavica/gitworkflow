@@ -19,6 +19,8 @@ function CarInsuranceViewModel(){
 
 								 
      }
+     console.log(that.viewData);
+    
 
 };
 ko.applyBindings(new CarInsuranceViewModel());

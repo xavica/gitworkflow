@@ -18,5 +18,19 @@ function CarRentalViewModel()
 								 "  in "+that.selectedCarSize()+".");
 			
 	};
+	 that.namesArray=[{firstName:"Jagan",lastName:"Jonnala"},
+	 {firstName:"Siva",lastName:"Jonnala"},
+	 {firstName:"Gayatri",lastName:"Sarva"}];
+
+	 // function fullName(name){
+	 // 	return name=that.firstName+that.lastName;
+	 // };
+	 var data =_.map(namesArray,function(name){
+	 	return
+	     name=that.firstName+that.lastName;
+	 });
+	 debugger;
+	 console.log(data);
+	 console.log(that.firstName,that.lastName);
 }
 ko.applyBindings(new CarRentalViewModel());
