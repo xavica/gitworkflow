@@ -1,13 +1,3 @@
-function Product(title, description, imageUrl, actualPrice, discountPrice, discount, redirectUrl) {
-    this.title = title;
-    this.description = description;
-    this.imageUrl = imageUrl;
-    this.actualPrice = actualPrice;
-    this.discountPrice = discountPrice;
-    this.discount = discount;
-    this.redirectUrl = redirectUrl;
-
-}
 var productsList = [];
 var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
@@ -24,16 +14,18 @@ casper.then(function () {
         var tempProducts = [];
         var elements = document.querySelectorAll('.listingblock');
          for (i = 0; i < elements.length; i++) {
-            var titleElement = elements[i].querySelector('div.itemtitle > p > a');
+            var titleElement = elements[i].querySelector('.listingblock');
             var actualPriceElement = elements[i].querySelector('div.itemPriceStriked > p');
             var discountPriceElement = elements[i].querySelector('div.itemPrice > p');
             var discountElement = elements[i].querySelector('div.discountLabel > div > span');
+            var imageElement = elements[i].querySelector('div.imgListingContainer > a > img');
 
-            var title = titleElement && titleElement.innerText.trim() || '';
+            var title = titleElement && titleElement.getAttribute("title") || '';
             var actualPrice = actualPriceElement && actualPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
             var discountPrice = discountPriceElement && discountPriceElement.innerText.replace(/[^0-9]/g, '') || 0;
             var str = discountElement && discountElement.textContent || '';
             var discount = str.replace(/[^0-9]/g, '') || 0;
+            var imageUrl = imageElement && imageElement.getAttribute('src') || '';
            
             if (title && discount) {
             // __utils__.echo("begin");
@@ -47,7 +39,8 @@ casper.then(function () {
                     "title": title,
                     "actualPrice": actualPrice,
                     "discountPrice": discountPrice,
-                    "discount": discount
+                    "discount": discount,
+                    "imageUrl": imageUrl
                 });
             }
         }

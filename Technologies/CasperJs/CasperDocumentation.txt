@@ -1,0 +1,18 @@
+﻿CASPER JS
+
+ Loading Lodash
+-----------------------
+
+C:\Users\GAYATRI>npm install lodash
+lodash@3.9.3 node_modules\lodash // Msg u get back after installation.
+
+var _ = require('lodash'); 
+//include the above line in casperjs prog, and we can use lodash. but lodash will be loaded only in npm environment, 
+so u have to run your casperjs programs in Nodejs environment.
+
+
+ Regarding "Evaluate" Method:
+ ___________________________
+
+1. It does't accept forEach Method, it will iterate the loop but will not execute statements inside.
+2. It does't work for the string function "startsWith()"

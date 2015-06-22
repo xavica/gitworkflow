@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+
+    <!-- Vendor CSS -->
+    <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
+    <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <section id="main">
+
+
+
+        <section id="content">
+            <div class="container">
+                <div class="block-header">
+                    <h2>Form Validations</h2>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="">
+                                <i class="md md-trending-up"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="md md-done-all"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown">
+                                <i class="md md-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="">Refresh</a>
+                                </li>
+                                <li>
+                                    <a href="">Manage Widgets</a>
+                                </li>
+                                <li>
+                                    <a href="">Widgets Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Basic Example <small>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add .has-warning, .has-error, or .has-success to the parent element. Any .control-label, .form-control, and .help-block within that element will receive the validation styles.</small></h2>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <div class="form-group has-success">
+                            <div class="fg-line">
+                                <label class="control-label" for="inputSuccess1">Input with success</label>
+                                <input type="text" class="form-control" id="inputSuccess1" value="Vestibulum ante ipsum primis in faucibus orci luctus">
+                            </div>
+                            <small class="help-block">This is a successfull help block</small>
+                        </div>
+
+                        <div class="form-group has-warning">
+                            <div class="fg-line">
+                                <label class="control-label" for="inputWarning1">Input with warning</label>
+                                <input type="text" class="form-control" id="inputWarning1" value="Duis at suscipit nibh. Sed nec libero non">
+                            </div>
+                            <small class="help-block">This is a warning help block</small>
+                        </div>
+
+                        <div class="form-group has-error">
+                            <div class="fg-line">
+                                <label class="control-label" for="inputError1">Input with error</label>
+                                <input type="text" class="form-control" id="inputError1" value="Nam et eleifend massa. Cum sociis natoque penatibus">
+                            </div>
+                            <small class="help-block">This is an error help block</small>
+                        </div>
+
+                        <br />
+
+                        <div class="has-success">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <i class="input-helper"></i>
+                                    Checkbox with success
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="has-warning">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <i class="input-helper"></i>
+                                    Checkbox with warning
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="has-error">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <i class="input-helper"></i>
+                                    Checkbox with error
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Validation Stats with Icon <small>You can also add optional feedback icons with the addition of .has-feedback and the right icon.</small></h2>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <div class="form-group has-warning has-feedback">
+                            <label class="control-label" for="inputWarning2">Input with warning</label>
+                            <div class="fg-line">
+                                <input type="text" class="form-control" id="inputWarning2">
+                            </div>
+                            <span class="md md-warning form-control-feedback"></span>
+                        </div>
+
+                        <div class="form-group has-success has-feedback">
+                            <label class="control-label" for="inputSuccess2">Input with success</label>
+                            <div class="fg-line">
+                                <input type="text" class="form-control" id="inputSuccess2">
+                            </div>
+                            <span class="md md-check form-control-feedback"></span>
+                        </div>
+
+                        <div class="form-group has-error has-feedback">
+                            <label class="control-label" for="inputError2">Input with error</label>
+                            <div class="fg-line">
+                                <input type="text" class="form-control" id="inputError2">
+                            </div>
+                            <span class="md md-close form-control-feedback"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </section>
+
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+        <div class="ie-warning">
+            <h1 class="c-white">IE SUCKS!</h1>
+            <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser <br/>in order to access the maximum functionality of this website. </p>
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="img/browsers/chrome.png" alt="">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="img/browsers/firefox.png" alt="">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="img/browsers/opera.png" alt="">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="img/browsers/safari.png" alt="">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="img/browsers/ie.png" alt="">
+                        <div>IE (New)</div>
+                    </a>
+                </li>
+            </ul>
+            <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+        </div>
+    <![endif]-->
+    <!-- Javascript Libraries -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="vendors/auto-size/jquery.autosize.min.js"></script>
+    <script src="vendors/waves/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>
