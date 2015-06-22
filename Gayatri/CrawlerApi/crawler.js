@@ -8,7 +8,7 @@ var crawler = require('./xa-crawlerUtil.js'),
     productsList = [],
     vendors = [
         require('./amazonurls.js').getVendor(),
-        require('./bagItTodayurls.js').getVendor()
+        //require('./bagItTodayurls.js').getVendor()
     ];
 
 casper.start();
