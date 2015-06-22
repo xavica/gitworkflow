@@ -4,14 +4,14 @@ var TvDealsLinks = [
 {
     url: "http://www.tvdeal.in/Regular-LED-Televisions",
     selectors: {
-        elements: 'div.product-grid > div',
-        title: 'div.name > a',
+        elements: 'div[class*="three"]',
+        title: 'div.image > a > img',
         description: '',
         imageUrl: 'div.image > a > img',
         actualPrice: 'div.price > span.price-old',
         sellingPrice: 'div.price > span.price-new',
         discount: '',
-        redirectUrl: 'div.name > a'
+        redirectUrl: 'div.image > a'
     },
     isScroll: false,
     id: 5
@@ -20,14 +20,14 @@ var TvDealsLinks = [
 {
     url: "http://www.tvdeal.in/Smart-LED-TV",
     selectors: {
-        elements: 'div.product-grid > div',
-        title: 'div.name > a',
+       elements: 'div[class*="three"]',
+        title: 'div.image > a > img',
         description: '',
         imageUrl: 'div.image > a > img',
         actualPrice: 'div.price > span.price-old',
         sellingPrice: 'div.price > span.price-new',
         discount: '',
-        redirectUrl: 'div.name > a'
+        redirectUrl: 'div.image > a'
     },
     isScroll: false,
     id: 5
@@ -36,14 +36,14 @@ var TvDealsLinks = [
 {
     url: "http://www.tvdeal.in/Smart-Plus-3D-LED-TVs?limit=15",
     selectors: {
-        elements: 'div.product-grid > div',
-        title: 'div.name > a',
+       elements: 'div[class*="three"]',
+        title: 'div.image > a > img',
         description: '',
         imageUrl: 'div.image > a > img',
         actualPrice: 'div.price > span.price-old',
         sellingPrice: 'div.price > span.price-new',
         discount: '',
-        redirectUrl: 'div.name > a'
+        redirectUrl: 'div.image > a'
     },
     isScroll: false,
     id: 5
@@ -83,7 +83,7 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
 
-                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
+                    var title = titleElement && titleElement.getAttribute('title') || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
@@ -129,47 +129,47 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
         });
     });
 });
-// pushing items to ProductStage Table.
-casper.then(function () {
-    //Creating proper input array.
-    var productListToPush = productsList.map(function (item) {
-        return {
+// // pushing items to ProductStage Table.
+// casper.then(function () {
+//     //Creating proper input array.
+//     var productListToPush = productsList.map(function (item) {
+//         return {
 
-            CategoryId: item.id,
-            ShortDescription: item.title,
-            Description: item.title,
-            RedirectUrl: item.redirectUrl,
-            ImageUrl: item.imageUrl,
-            StoreName: "TvDeals",
-            ActualPrice: item.actualPrice,
-            CurrentPrice: item.sellingPrice,
-            DiscountPercentage: item.discount,
-            IsShippingFree: 1,
-            Star: 4,
-            IsPublished: 0,
-            ShowDate: "1/1/2015",
-            Source: "Crawler",
-            CreatedDate: "1/1/2015",
-            LastUpdateDate: "1/1/2015"
-        }
-    });
-    this.echo("productListToPush  :  " + productListToPush.length);
-    var batchSize = 5;
-    var pushingArray = [];
-    pushingArray = _.chunk(productListToPush, batchSize);
-    this.echo(pushingArray.length);
+//             CategoryId: item.id,
+//             ShortDescription: item.title,
+//             Description: item.title,
+//             RedirectUrl: item.redirectUrl,
+//             ImageUrl: item.imageUrl,
+//             StoreName: "TvDeals",
+//             ActualPrice: item.actualPrice,
+//             CurrentPrice: item.sellingPrice,
+//             DiscountPercentage: item.discount,
+//             IsShippingFree: 1,
+//             Star: 4,
+//             IsPublished: 0,
+//             ShowDate: "1/1/2015",
+//             Source: "Crawler",
+//             CreatedDate: "1/1/2015",
+//             LastUpdateDate: "1/1/2015"
+//         }
+//     });
+//     this.echo("productListToPush  :  " + productListToPush.length);
+//     var batchSize = 5;
+//     var pushingArray = [];
+//     pushingArray = _.chunk(productListToPush, batchSize);
+//     this.echo(pushingArray.length);
 
-    pushingArray.forEach(function (batchArray) {
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: JSON.stringify(batchArray),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-    });
-    this.echo("pushed items to productstage table");
-});
+//     pushingArray.forEach(function (batchArray) {
+//         casper.thenOpen('http://localhost:16193/api/productstagebulk', {
+//             method: 'post',
+//             data: JSON.stringify(batchArray),
+//             headers: {
+//                 'Accept': 'application/json',
+//                 'Content-Type': 'application/json'
+//             }
+//         });
+//     });
+//     this.echo("pushed items to productstage table");
+// });
 
 casper.run();

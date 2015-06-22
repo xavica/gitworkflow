@@ -1,6 +1,6 @@
 ﻿var _ = require('lodash');
 var cromaRetailLinks = [
-//// LAPTOPS
+// LAPTOPS
 {
     url: "http://www.cromaretail.com/Laptops-c-20.aspx#!SO=DISCOUNT",
     selectors: {
