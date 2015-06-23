@@ -5,7 +5,7 @@ var BookAddaLinks = [
     url: "http://www.bookadda.com/view-books/best-business-best-reads",
     selectors: {
         elements: 'div > div.results_outer > ul > li',
-        title: 'div.details > div:nth-child(1) > a > h2',
+        title: 'div.details > div:nth-child(1) > a',
         description: '',
         imageUrl: 'div.frame > a > img',
         actualPrice: 'div > strong:nth-child(2) > s',
@@ -95,7 +95,7 @@ BookAddaLinks.forEach(function (BookAddaCrawler) {
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
 
-                    var title = titleElement && titleElement.getAttribute('title') || titleElement.innerText || '';
+                    var title = titleElement && titleElement.getAttribute('title') || '';
                     var actualPrice = actualPriceElement && actualPriceElement.innerText || '';
                     actualPrice = actualPrice.replace('Rs.', '').replace(/[^0-9.]/g, '') || 0;
                     var sellingPrice = sellingPriceElement && sellingPriceElement.innerText || '';
