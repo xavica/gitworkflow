@@ -17,11 +17,12 @@ function Programtable(headers, programsData)
 
 function IndexViewModel()
 {
-	this.programs=	[	new Programtable( [	new TableHeaders('SL.No'),
+    this.programs=	[	new Programtable( [	new TableHeaders('SL.No'),
 											new TableHeaders('PROGRAM'),
 											new TableHeaders('DESCRIPTION')
-										  ],
+    ],
 										  [	 new Program(length++,'','',''),
+										  	 new Program(length++,'Minfos','kiran/minfos/index.html','Minfos website'),
 										     new Program(length++,'Car Insurance','Siva/CarInsuranceViewModel.html','program on displaying car insurance details using knockout binding'),
 										  	 new Program(length++,'Registration Form','Siva/SignUpFormViewModel.html','Program on registration form using knock out binding'),
 										  	 new Program(length++,'LIC planning','Siva/LicViewModel.html','LIC data display using knock binding'),
@@ -112,7 +113,7 @@ function IndexViewModel()
 											 new Program(length++,'bbc website dummy','Siva/bbcwebsite.html','dummt bbc website have done for practising'),
 											 new Program(length++,'myamcat-revised','Siva/myamcat.html','Example on developing amcat site')
 											 
-											]
+										  ]
 										 )
 
 					]
