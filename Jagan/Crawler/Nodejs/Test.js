@@ -1,6 +1,6 @@
 ﻿
 var _ = require('lodash-node');
-console.log("Heloo ");
+console.log("Hello....! ");
 console.log("this is a Sample Progrm In node js");
 var links = [{
     url: "",

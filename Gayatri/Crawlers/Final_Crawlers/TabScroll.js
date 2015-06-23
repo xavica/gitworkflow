@@ -16,7 +16,7 @@
     url: "http://deals.ebay.in/ebaydeals/tablets-6",
     selectors: {
         elements: '.listingblock',
-        title: '',
+        title: 'div.itemtitle > p > a',
         description: '',
         imageUrl: 'div.imgListingContainer > a > img',
         actualPrice: 'div.itemPriceStriked > p',
@@ -140,21 +140,21 @@ TabletLinks.forEach(function (tabletCrawler) {
                     //    fullRedirectUrl = redirectUrl;
                     //}
                     //if (title && discount && actualPrice && redirectUrl) {
-                        //__utils__.echo(title);
-                        //__utils__.echo(imageUrl);
-                        __utils__.echo(actualPrice);
-                        ////__utils__.echo(sellingPrice);
-                        ////__utils__.echo(discount);
-                        //__utils__.echo(fullRedirectUrl);
-                        tempProducts.push({
-                            "title": title,
-                            //"actualPrice": actualPrice,
-                            //"sellingPrice": sellingPrice,
-                            //"discount": discount,
-                            //"redirectUrl": fullRedirectUrl,
-                            //"imageUrl": imageUrl
-                        });
-                    }
+                    //__utils__.echo(title);
+                    //__utils__.echo(imageUrl);
+                    __utils__.echo(actualPrice);
+                    ////__utils__.echo(sellingPrice);
+                    ////__utils__.echo(discount);
+                    //__utils__.echo(fullRedirectUrl);
+                    tempProducts.push({
+                        "title": title,
+                        //"actualPrice": actualPrice,
+                        //"sellingPrice": sellingPrice,
+                        //"discount": discount,
+                        //"redirectUrl": fullRedirectUrl,
+                        //"imageUrl": imageUrl
+                    });
+                }
                 //}
                 return tempProducts;
             }, tabletCrawler);

@@ -1,35 +1,76 @@
-var http = require('http');
-// var data = JSON.stringify({
-//   'id': '2'
-// });
+var request = require("request");
+var _ = require('lodash-node');
 
+var productData = 
+   { "CategoryId": "9",
+    "ShortDescription": "New Insert",
+    "Description": "Description",
+    "RedirectUrl": "RedirectUrl",
+    "ImageUrl": "ImageUrl",
+    "StoreName": "StoreName",
+    "ActualPrice": "0.00",
+    "CurrentPrice": "0.00",
+    "DiscountPercentage": "10.00",
+    "IsShippingFree": "0",
+    "Star": "0",
+    "IsPublished": "0",
+    "ShowDate": "2015-05-02",
+    "Source": "Source" 
+  }
 var options = {
-  // host: 'localhost:16193',
-  // port: '80',
-  path: 'localhost:16193/api/products/getall'
-  // method: 'GET',
-  // headers: {
-  //   'Content-Type': 'application/json; charset=utf-8',
-  //   // 'Content-Length': data.length
-  // }
+    method: 'POST',
+    url: "http://localhost:16193/api/products",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    json: productData
+
 };
 
-var req = http.request(options, function(res) {
-  var msg = '';
 
-  res.setEncoding('utf8');
-  res.on('data', function(chunk) {
-    msg += chunk;
-  });
- 
-  res.on('end', function() {
-    console.log(JSON.parse(msg));
-  });
+function callback(error, response, body) {
+    if (!error) {
+        console.log(response.statusCode);
+        console.log(body);
+    }
+    else {
+        console.log('Error happened: ' + error);
+    }
+}
+request(options, callback);
 
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
-});
 
-// console.log(data);
-req.end();
+// var getOptions = {
+//     method: 'GET',
+//     url: "http://localhost:16193/api/products/getall",
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+// };
+// var rawProducts = [];
+// request(getOptions, function (error, response, body) {
+//     var parsed = JSON.parse(body);
+//     console.log(parsed.length);
+//     parsed.forEach(function (item) {
+//         rawProducts.push({
+//             "id": item.id,
+//             "categoryId": item.categoryId,
+//             "shortDescription": item.shortDescription,
+//             "description": item.description,
+//             "redirectUrl": item.redirectUrl,
+//             "imageUrl": item.imageUrl,
+//             "storeName": item.storeName,
+//             "actualPrice": item.actualPrice,
+//             "currentPrice": item.currentPrice,
+//             "discountPercentage": item.discountPercentage,
+//             "isShippingFree": item.isShippingFree,
+//             "star": item.star,
+//             "isPublished": item.isPublished,
+//             "showDate": item.showDate,
+//             "source": item.source
+//         });
+//     });
+//     console.log(rawProducts);
+//     console.log(rawProducts.length);
+// });
 
