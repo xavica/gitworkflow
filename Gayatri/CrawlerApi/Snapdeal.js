@@ -7,7 +7,7 @@ var SnapdealLinks = [
         elements: 'div[categoryid="175"]',
         title: 'div > a > img',
         description: '',
-        imageUrl: ' div > div.productWrapper > div.outerImg > div > a > img',
+        imageUrl: 'div > div.productWrapper > div.outerImg > div > a > img',
         actualPrice: 'div.product-price > div > span > strike',
         sellingPrice: '',
         discount: 'div.product-price > div > span > s',

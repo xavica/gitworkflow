@@ -24,36 +24,27 @@ var crawler = require('./xa-crawlerUtil.js'),
         //require('./InLiving.js').getVendor(),
         //require('./Mirraw.js').getVendor(),
         //require('./ShopClues.js').getVendor(),
+        //require('./RajMusical.js').getVendor(), 
+        //require('./BookAdda.js').getVendor(),  
+        //require('./Saholic.js').getVendor(), 
+        //require('./SbMusic.js').getVendor(), 
+        //require('./HomeShop18.js').getVendor(), 
+        //require('./TvDeals.js').getVendor(), 
+        //require('./Bajaao.js').getVendor(), 
+        //require('./GadgetsGuru.js').getVendor(),
+        //require('./Ebay.js').getVendor(),
+        //require('./GreenDust.js').getVendor(), 
 
-               //-----------No explicit Discount --------------------
-
-              //require('./BookAdda.js').getVendor(),  // explict Discount
-              //require('./Evok.js').getVendor(), // Explicit Discount
-              //require('./RajMusical.js').getVendor(), // Explicit Discount
-              //require('./Saholic.js').getVendor(), // Explicit Discount
-              //require('./SbMusic.js').getVendor(), // Explicit Discount
-              //require('./HomeShop18.js').getVendor(), // Explicit Discount
-              //require('./TvDeals.js').getVendor(), // Explicit Discount
-              //require('./Bajaao.js').getVendor(), // Explicit Discount
-
-              //-------------No discount n no title property---------------------
-
-                 //require('./GadgetsGuru.js').getVendor(),
-
-             //---------------------No title ----------------------
-
-                //require('./Ebay.js').getVendor(), //no title property
-                //require('./GreenDust.js').getVendor(), // no explicit title property
-               //require('./PepperFry.js').getVendor(), //no title property
-               //require('./Jabbong.js').getVendor(), //no title property
+                        //---------------------No title ----------------------
+               require('./Jabbong.js').getVendor(), //not executing even all selector are correct
 
                //---------------------Not pushing into productstage table -----------------------
 
                //require('./Zansaar.js').getVendor() // extracted but not pushed into productstage.
                //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
                //require('./GiftEase.js').getVendor(), // not pushing products
-               
-               // Not able to find selectors -- Snapdeal
+                //require('./Evok.js').getVendor(), 
+               //require('./PepperFry.js').getVendor(),
 
     ];
 

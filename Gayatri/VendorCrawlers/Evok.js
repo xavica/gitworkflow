@@ -99,21 +99,21 @@ var vendor = {
         isScroll: false,
         id: 15
     },
-{
-    url: "http://www.evok.in/furniture/dining-room/dining-tables.html?dir=asc&order=discount",
-    selectors: {
-        elements: 'div.category-products > ul > li',
-        title: 'h3.product-name',
-        description: '',
-        imageUrl: '.product-item img',
-        actualPrice: '.price-box p.old-price span.price',
-        sellingPrice: '.price-box p.special-price span.price',
-        discount: '',
-        redirectUrl: 'h3 > a'
+    {
+        url: "http://www.evok.in/furniture/dining-room/dining-tables.html?dir=asc&order=discount",
+        selectors: {
+            elements: 'div.category-products > ul > li',
+            title: 'h3.product-name',
+            description: '',
+            imageUrl: '.product-item img',
+            actualPrice: '.price-box p.old-price span.price',
+            sellingPrice: '.price-box p.special-price span.price',
+            discount: '',
+            redirectUrl: 'h3 > a'
+        },
+        isScroll: false,
+        id: 15
     },
-    isScroll: false,
-    id: 15
-},
     {
         url: "http://www.evok.in/furniture/dining-room/dining-benches-chairs.html?dir=asc&order=discount",
         selectors: {

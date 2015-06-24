@@ -10,7 +10,7 @@ var vendor = {
     {
         url: "http://deals.ebay.in/ebaydeals/cameras-2",
         selectors: {
-            elements: 'li[class*="span3"]',
+            elements: 'div[class*="listingblock"]',
             title: 'div.itemtitle > p > a',
             description: '',
             imageUrl: 'div.imgListingContainer > a > img',
@@ -26,7 +26,7 @@ var vendor = {
     {
         url: "http://deals.ebay.in/ebaydeals/laptops-3",
         selectors: {
-            elements: 'li[class*="span3"]',
+            elements: 'div[class*="listingblock"]',
             title: 'div.itemtitle > p > a',
             description: '',
             imageUrl: 'div.imgListingContainer > a > img',
@@ -42,7 +42,7 @@ var vendor = {
     {
         url: "http://deals.ebay.in/ebaydeals/mobiles-1",
         selectors: {
-            elements: 'li[class*="span3"]',
+            elements: 'div[class*="listingblock"]',
             title: 'div.itemtitle > p > a',
             description: '',
             imageUrl: 'div.imgListingContainer > a > img',
@@ -58,7 +58,7 @@ var vendor = {
     {
         url: "http://deals.ebay.in/ebaydeals/tablets-6",
         selectors: {
-            elements: 'li[class*="span3"]',
+            elements: 'div[class*="listingblock"]',
             title: 'div.itemtitle > p > a',
             description: '',
             imageUrl: 'div.imgListingContainer > a > img',
@@ -74,7 +74,7 @@ var vendor = {
     {
         url: "http://deals.ebay.in/ebaydeals/televisions-4",
         selectors: {
-            elements: 'li[class*="span3"]',
+            elements: 'div[class*="listingblock"]',
             title: 'div.itemtitle > p > a',
             description: '',
             imageUrl: 'div.imgListingContainer > a > img',
