@@ -8,35 +8,52 @@ var crawler = require('./xa-crawlerUtil.js'),
     productsList = [],
     vendors = [
         //require('./Amazon.js').getVendor(),
-        //require('./BabyOye.js').getVendor(),   
+        //require('./BabyOye.js').getVendor(),
         //require('./BagItToday.js').getVendor(),
-        //require('./BookAdda.js').getVendor(),  // not retreiving products
-        //require('./CashKaro.js').getVendor(), 
+        //require('./CashKaro.js').getVendor(),
         //require('./CraftsVilla.js').getVendor(),
-        //require('./CromaRetail.js').getVendor(), 
+        //require('./CromaRetail.js').getVendor(),
         //require('./DusKya.js').getVendor(),
-        //require('./Evok.js').getVendor(), // Explicit Discount
-         //require('./EzoneOnline.js').getVendor(), 
-         //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
-         //require('./FashionAndyou.js').getVendor(),
-         //require('./FashionEra.js').getVendor(),
-         //require('./FirstCry.js').getVendor(), 
-          //require('./Flipkart.js').getVendor(), 
-            //require('./GiftEase.js').getVendor(), // not pushing products
-            //require('./GreenDust.js').getVendor(), // no explicit title property
-            //require('./HomeShop18.js').getVendor() // Explicit Discount
-            //require('./IndiaTimes.js').getVendor(),
-             //require('./InfiBeam.js').getVendor() //last 2 links not working.
-             //require('./InLiving.js').getVendor(),
-               //require('./Mirraw.js').getVendor(),
+        //require('./EzoneOnline.js').getVendor(),
+        //require('./FashionAndyou.js').getVendor(),
+        //require('./FashionEra.js').getVendor(),
+        //require('./FirstCry.js').getVendor(),
+        //require('./Flipkart.js').getVendor(),
+        //require('./IndiaTimes.js').getVendor(),
+        //require('./InfiBeam.js').getVendor(),
+        //require('./InLiving.js').getVendor(),
+        //require('./Mirraw.js').getVendor(),
+        //require('./ShopClues.js').getVendor(),
+
+               //-----------No explicit Discount --------------------
+
+              //require('./BookAdda.js').getVendor(),  // explict Discount
+              //require('./Evok.js').getVendor(), // Explicit Discount
+              //require('./RajMusical.js').getVendor(), // Explicit Discount
+              //require('./Saholic.js').getVendor(), // Explicit Discount
+              //require('./SbMusic.js').getVendor(), // Explicit Discount
+              //require('./HomeShop18.js').getVendor(), // Explicit Discount
+              //require('./TvDeals.js').getVendor(), // Explicit Discount
+              //require('./Bajaao.js').getVendor(), // Explicit Discount
+
+              //-------------No discount n no title property---------------------
+
+                 //require('./GadgetsGuru.js').getVendor(),
+
+             //---------------------No title ----------------------
+
+                //require('./Ebay.js').getVendor(), //no title property
+                //require('./GreenDust.js').getVendor(), // no explicit title property
                //require('./PepperFry.js').getVendor(), //no title property
-               //require('./RajMusical.js').getVendor(), // Explicit Discount
-               //require('./Saholic.js').getVendor(), // Explicit Discount
-               //require('./SbMusic.js').getVendor(), // Explicit Discount
-               //require('./ShopClues.js').getVendor(),  // few links not working
-               //require('./TvDeals.js').getVendor(), // Explicit Discount
+               //require('./Jabbong.js').getVendor(), //no title property
+
+               //---------------------Not pushing into productstage table -----------------------
+
                //require('./Zansaar.js').getVendor() // extracted but not pushed into productstage.
-               // ebay, snapdeal, jabong, bajaao, gazetguru, 
+               //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
+               //require('./GiftEase.js').getVendor(), // not pushing products
+               
+               // Not able to find selectors -- Snapdeal
 
     ];
 
