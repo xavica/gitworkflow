@@ -44,6 +44,14 @@ exports.parseUrls = function (vendorLinks, casper) {
             });
 
             casper.then(function () {
+                if (!this.exists(TvDealsCrawler.selectors.elements) ||
+               !this.exists(TvDealsCrawler.selectors.title) ||
+               !this.exists(TvDealsCrawler.selectors.actualPrice) ||
+               !this.exists(TvDealsCrawler.selectors.sellingPrice) ||
+               !this.exists(TvDealsCrawler.selectors.redirectUrl) ||
+               !this.exists(TvDealsCrawler.selectors.imageUrl)) {
+                    this.emit('selector.changed');
+                }
                 parsedItems = casper.evaluate(function (stubCrawler) {
                     "use strict";
                     var index = 0,
@@ -115,9 +123,6 @@ exports.parseUrls = function (vendorLinks, casper) {
                         } else {
                             fullRedirectUrl = redirectUrl;
                         }
-                        //if (!title || !discount || !actualPrice || !redirectUrl || !imageUrl) {
-                        //    casper.emit("selector.changed");
-                        //}
                         if (title && discount && actualPrice && redirectUrl) {
                             __utils__.echo(title);
                             //__utils__.echo(imageUrl);

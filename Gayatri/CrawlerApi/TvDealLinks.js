@@ -11,42 +11,42 @@ var TvDealsLinks = [
         actualPrice: 'div.price > span.price-old',
         sellingPrice: 'div.price > span.price-new',
         discount: '',
-        redirectUrl: 'div.image > a'
+        redirectUrl: 'div.image'
     },
     isScroll: false,
     id: 5
-},
-// LED Tv's
-{
-    url: "http://www.tvdeal.in/Smart-LED-TV",
-    selectors: {
-       elements: 'div[class*="three"]',
-        title: 'div.image > a > img',
-        description: '',
-        imageUrl: 'div.image > a > img',
-        actualPrice: 'div.price > span.price-old',
-        sellingPrice: 'div.price > span.price-new',
-        discount: '',
-        redirectUrl: 'div.image > a'
-    },
-    isScroll: false,
-    id: 5
-},
-// Telivisions LED
-{
-    url: "http://www.tvdeal.in/Smart-Plus-3D-LED-TVs?limit=15",
-    selectors: {
-       elements: 'div[class*="three"]',
-        title: 'div.image > a > img',
-        description: '',
-        imageUrl: 'div.image > a > img',
-        actualPrice: 'div.price > span.price-old',
-        sellingPrice: 'div.price > span.price-new',
-        discount: '',
-        redirectUrl: 'div.image > a'
-    },
-    isScroll: false,
-    id: 5
+// },
+// // LED Tv's
+// {
+//     url: "http://www.tvdeal.in/Smart-LED-TV",
+//     selectors: {
+//        elements: 'div[class*="three"]',
+//         title: 'div.image > a > img',
+//         description: '',
+//         imageUrl: 'div.image > a > img',
+//         actualPrice: 'div.price > span.price-old',
+//         sellingPrice: 'div.price > span.price-new',
+//         discount: '',
+//         redirectUrl: 'div.image > a'
+//     },
+//     isScroll: false,
+//     id: 5
+// },
+// // Telivisions LED
+// {
+//     url: "http://www.tvdeal.in/Smart-Plus-3D-LED-TVs?limit=15",
+//     selectors: {
+//        elements: 'div[class*="three"]',
+//         title: 'div.image > a > img',
+//         description: '',
+//         imageUrl: 'div.image > a > img',
+//         actualPrice: 'div.price > span.price-old',
+//         sellingPrice: 'div.price > span.price-new',
+//         discount: '',
+//         redirectUrl: 'div.image > a'
+//     },
+//     isScroll: false,
+//     id: 5
 }];
 
 
@@ -54,8 +54,17 @@ var casper = require('casper').create();
 casper.options.pageSettings.loadImages = false;
 casper.start();
 var productsList = [];
+
 TvDealsLinks.forEach(function (TvDealsCrawler) {
     casper.thenOpen(TvDealsCrawler.url, function () {
+        if (!this.exists(TvDealsCrawler.selectors.elements) ||
+                !this.exists(TvDealsCrawler.selectors.title) ||
+                !this.exists(TvDealsCrawler.selectors.actualPrice) || 
+                !this.exists(TvDealsCrawler.selectors.sellingPrice) || 
+                !this.exists(TvDealsCrawler.selectors.redirectUrl) || 
+                !this.exists(TvDealsCrawler.selectors.imageUrl)) {
+                           this.emit('selector.changed');
+                        }
         this.echo("----------------------------------------");
         if (TvDealsCrawler.isScroll === true) {
             this.scrollToBottom();
@@ -69,7 +78,6 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
                 casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
             });
         }
-        casper.then(function () {
             var parsedItems = casper.evaluate(function (stubCrawler) {
                 var tempProducts = [];
                 var parser = document.createElement('a');
@@ -78,7 +86,6 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
                     var titleElement = elements[i].querySelector(stubCrawler.selectors.title);
                     var actualPriceElement = elements[i].querySelector(stubCrawler.selectors.actualPrice);
                     var sellingPriceElement = elements[i].querySelector(stubCrawler.selectors.sellingPrice);
-                    //var discountElement = elements[i].querySelector(stubCrawler.selectors.discount);
                     var redirectUrlElement = elements[i].querySelector(stubCrawler.selectors.redirectUrl);
                     var imageUrlElement = elements[i].querySelector(stubCrawler.selectors.imageUrl);
                     var fullRedirectUrl = '';
@@ -101,6 +108,7 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
                     else {
                         fullRedirectUrl = redirectUrl;
                     }
+                     
                     if (title && discount && actualPrice && redirectUrl) {
                         __utils__.echo(title);
                         //__utils__.echo(imageUrl);
@@ -126,50 +134,10 @@ TvDealsLinks.forEach(function (TvDealsCrawler) {
                     productsList.push(parsedItems[i]);
                 }
             }
-        });
     });
-});
-// // pushing items to ProductStage Table.
-// casper.then(function () {
-//     //Creating proper input array.
-//     var productListToPush = productsList.map(function (item) {
-//         return {
-
-//             CategoryId: item.id,
-//             ShortDescription: item.title,
-//             Description: item.title,
-//             RedirectUrl: item.redirectUrl,
-//             ImageUrl: item.imageUrl,
-//             StoreName: "TvDeals",
-//             ActualPrice: item.actualPrice,
-//             CurrentPrice: item.sellingPrice,
-//             DiscountPercentage: item.discount,
-//             IsShippingFree: 1,
-//             Star: 4,
-//             IsPublished: 0,
-//             ShowDate: "1/1/2015",
-//             Source: "Crawler",
-//             CreatedDate: "1/1/2015",
-//             LastUpdateDate: "1/1/2015"
-//         }
-//     });
-//     this.echo("productListToPush  :  " + productListToPush.length);
-//     var batchSize = 5;
-//     var pushingArray = [];
-//     pushingArray = _.chunk(productListToPush, batchSize);
-//     this.echo(pushingArray.length);
-
-//     pushingArray.forEach(function (batchArray) {
-//         casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-//             method: 'post',
-//             data: JSON.stringify(batchArray),
-//             headers: {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json'
-//             }
-//         });
-//     });
-//     this.echo("pushed items to productstage table");
-// });
+    casper.on('selector.changed', function () {
+        this.echo("from emit method");
+    });
+    });
 
 casper.run();
