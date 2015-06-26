@@ -1,44 +1,60 @@
-﻿casper.then(function () {
-    this.echo(productsList.length);
+﻿var _ = require('lodash');
+var TvDealsLinks = [
+//Telivisions 
+{
+    url: "http://www.tvdeal.in/Regular-LED-Televisions",
+    selectors: {
+        elements: 'div[class*="three"]',
+        title: 'div.image > a > img',
+        description: '',
+        imageUrl: 'div.image > a > img',
+        actualPrice: 'div.price > span.price-old',
+        sellingPrice: 'div.price > span.price-new',
+        discount: '',
+        redirectUrl: 'div.image'
+    },
+    isScroll: false,
+    id: 5
+}];
 
-    var tempArray = [];
-    var results = [], index = 0;
 
-    productsList.forEach(function (item) {
-        tempArray.push({
-            CategoryId: item.CategoryId,
-            ShortDescription: item.ShortDescription,
-            Description: "Description",
-            RedirectUrl: item.redirectUrl,
-            ImageUrl: item.imageUrl,
-            StoreName: "Flipkart",
-            ActualPrice: item.actualPrice,
-            CurrentPrice: item.sellingPrice,
-            DiscountPercentage: item.discount,
-            IsShippingFree: 1,
-            Star: 4,
-            IsPublished: 0,
-            ShowDate: "1/1/2015",
-            Source: "Crawler",
-            CreatedDate: "1/1/2015",
-            LastUpdateDate: "1/1/2015"
-        });
-        if (index % 50 === 0) {
-            results.push(tempArray);
-            tempArray = [];
+var casper = require('casper').create();
+casper.options.pageSettings.loadImages = false;
+casper.start();
+var productsList = [];
+
+TvDealsLinks.forEach(function (TvDealsCrawler) {
+    casper.thenOpen(TvDealsCrawler.url, function () {
+        if (!this.exists(TvDealsCrawler.selectors.elements) ||
+                !this.exists(TvDealsCrawler.selectors.title) ||
+                !this.exists(TvDealsCrawler.selectors.actualPrice) ||
+                !this.exists(TvDealsCrawler.selectors.sellingPrice) ||
+                !this.exists(TvDealsCrawler.selectors.redirectUrl) ||
+                !this.exists(TvDealsCrawler.selectors.imageUrl)) {
+            this.emit('selector.changed');
         }
-        index++;
+        this.echo("----------------------------------------");
+        if (TvDealsCrawler.isScroll === true) {
+            this.scrollToBottom();
+            casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
+            casper.then(function () {
+                this.scrollToBottom();
+                casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
+            });
+        }
+        var parsedItems = casper.evaluate(function (stubCrawler) {
+            
+            return "hello";
+        }, TvDealsCrawler);
+        if (parsedItems) {
+            for (var i = 0; i < parsedItems.length; i++) {
+                productsList.push(parsedItems[i]);
+            }
+        }
     });
-    if (tempArray.length) {
-        results.push(tempArray);
-    }
-
-    results.forEach(function (data) {
-        casper.echo(data);
-        casper.thenOpen('http://localhost:16193/api/productstagebulk', {
-            method: 'post',
-            data: data
-        });
+    casper.on('selector.changed', function () {
+        this.echo("from emit method");
     });
-    this.echo("pushed  Flipkart items to productstage table");
 });
+
+casper.run();

@@ -4,7 +4,7 @@ var greendustLinks = [
 {
     url: "http://www.greendust.com/washing-machine-fully-automatic-c-247_249.html?cPath=247_249&salCategory=&price_id=&manufacturer=&proType=&filter_id_txt=&sortP=2",
     selectors: {
-        elements: '#products-wfix div.product-dis',
+        elements: 'div[class*="product"]',
         title: 'div.product-dis-link > a',
         description: '',
         imageUrl: 'a > img',

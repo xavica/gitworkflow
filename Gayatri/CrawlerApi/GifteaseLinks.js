@@ -15,36 +15,36 @@ var GifteaseLinks = [
     },
     isScroll: false,
     id: 10
-},
-{
-    url: "http://www.giftease.com/books/business-management?dir=desc&order=saving",
-    selectors: {
-        elements: 'ul.products-grid li.item',
-        title: 'div.proListBox > h2',
-        description: '',
-        imageUrl: 'div.proListBox > a > img',
-        actualPrice: 'div.listingPrice > p.old-price > span:nth-child(2)',
-        sellingPrice: 'div.listingPrice > p:nth-child(3) > span:nth-child(2)',
-        discount: 'div.proListBox > div.f-right.yousave > div.price',
-        redirectUrl: 'div.proListBox > a'
-    },
-    isScroll: false,
-    id: 10
-},
-{
-    url: "http://www.giftease.com/books/childrens-books/story-books?dir=desc&order=saving",
-    selectors: {
-        elements: 'ul.products-grid li.item',
-        title: 'div.proListBox > h2',
-        description: '',
-        imageUrl: 'div.proListBox > a > img',
-        actualPrice: 'div.listingPrice > p.old-price > span:nth-child(2)',
-        sellingPrice: 'div.listingPrice > p:nth-child(3) > span:nth-child(2)',
-        discount: 'div.proListBox > div.f-right.yousave > div.price',
-        redirectUrl: 'div.proListBox > a'
-    },
-    isScroll: false,
-    id: 10
+//},
+//{
+//    url: "http://www.giftease.com/books/business-management?dir=desc&order=saving",
+//    selectors: {
+//        elements: 'ul.products-grid li.item',
+//        title: 'div.proListBox > h2',
+//        description: '',
+//        imageUrl: 'div.proListBox > a > img',
+//        actualPrice: 'div.listingPrice > p.old-price > span:nth-child(2)',
+//        sellingPrice: 'div.listingPrice > p:nth-child(3) > span:nth-child(2)',
+//        discount: 'div.proListBox > div.f-right.yousave > div.price',
+//        redirectUrl: 'div.proListBox > a'
+//    },
+//    isScroll: false,
+//    id: 10
+//},
+//{
+//    url: "http://www.giftease.com/books/childrens-books/story-books?dir=desc&order=saving",
+//    selectors: {
+//        elements: 'ul.products-grid li.item',
+//        title: 'div.proListBox > h2',
+//        description: '',
+//        imageUrl: 'div.proListBox > a > img',
+//        actualPrice: 'div.listingPrice > p.old-price > span:nth-child(2)',
+//        sellingPrice: 'div.listingPrice > p:nth-child(3) > span:nth-child(2)',
+//        discount: 'div.proListBox > div.f-right.yousave > div.price',
+//        redirectUrl: 'div.proListBox > a'
+//    },
+//    isScroll: false,
+//    id: 10
 }];
 
 var casper = require('casper').create();
