@@ -1,0 +1,76 @@
+﻿<html>
+<head>
+    <title>Hotel Billing System View Model</title>
+    <link rel="stylesheet" type="text/css" href="hotelStyles.css">
+</head>
+
+<body bgcolor="Bisque">
+    <h1>Hotel Billing System</h1>
+    <div class="border">
+        <h2>
+            Our Hotel Facilities below. Please select the Category and take the Boarding Pass .
+            Dont Forget To read Our terms And Conditions before taking any Bording pass
+        </h2>
+        <div class="butclass">
+            <button type="button" id="NewId"> Boarding Pass </button> <span><button type="button" id="billId"> Billing </button></span>
+        </div>
+        <div id="cat">
+            <label>
+                Select the category
+                <select data-bind="options:categories,value:categorySelected"></select>
+            </label>
+            <label>Enter The Date Of Entry here :</label><input type="date" data-bind="value:entryDate" />
+            <br /><br />
+            <button data-bind="click:ackBoarding"><b>Details</b></button>
+            <form data-bind="text:entryDetails"></form>
+            <div class="child2">
+                <button id="right" data-bind="click:totalDetails">Continue</button>
+                <form class="child2" data-bind="text:totDetails"></form>
+
+                <h3>Terms and Conditions .....Apply</h3><p>
+                    1. Room service will be charged if stayed for more than 3 days then continuously room service will be charged with a weekly interval.
+                    <br />2. Food bill will be charged with 10% service charge if ordered to room
+                    <br />3. Free Wi-Fi is provided up to 1 GB for 24 hrs afterwards charged @ $5 for 250 MB
+                    <br />4. National calls are @ free of cost, International calls are charged if countries are other than USA, Australia, UK, EU
+                    <br />5. Club access is free of cost if booked any room else $15 per access
+                    <br />6. No service is charged for customers booked villa
+                    <br />7. No service is charged for customers booked double or triple bed room for more than 4 week in a bulk booking
+                    <br />8. No room delivery charges for food if any booking is more than 5 days
+                </p>
+                <button type="submit" data-bind="click:alert">Ok</button>
+            </div>
+        </div>
+        <div id="billClick">
+            <h2>submit your Usage and pay bill as per Charged</h2>
+            <label>
+                Selected Category is:
+                <select data-bind="options:categories,value:categorySelected"></select><br /><br />
+                <label>Enter The Date Of Check-In :</label><input type="date" data-bind="value:entryDate" />
+                <label>Enter The Date Of Check-Out :</label><input type="date" data-bind="value:exitDate" />
+            </label>
+
+            <button id="right" data-bind="click:billDetails">View Payment Details</button>
+            <form class="child2" data-bind="text:billform"></form>
+        </div>
+    </div><br />
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="Javascript/HotelBillingSystemView.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#NewId").click(function () {
+                $("#cat").slideToggle("slow");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#billId").click(function () {
+                $("#billClick").slideToggle("slow");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
