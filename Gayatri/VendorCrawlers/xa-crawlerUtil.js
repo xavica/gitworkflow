@@ -78,6 +78,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                             redirectUrlElement,
                             imageUrlElement,
                             imageUrlAttributeName,
+                            tempImageUrl,
                             fullRedirectUrl,
                             title,
                             actualPrice,
@@ -127,7 +128,17 @@ exports.parseUrls = function (vendorLinks, casper) {
 
                             redirectUrl = (redirectUrlElement && redirectUrlElement.getAttribute('href')) || '';
                             imageUrlAttributeName = vendorLink.selectors.imageUrlAttribute || 'src';
-                            imageUrl = (imageUrlElement && imageUrlElement.getAttribute(imageUrlAttributeName))  || '';
+                            tempImageUrl = (imageUrlElement && imageUrlElement.getAttribute(imageUrlAttributeName)) || '';
+
+                            if (!tempImageUrl.match("^http")) {
+                                parser.href = stubCrawler.url;
+                                host = parser.protocol + "//" + parser.hostname;
+                                tempUrl = (tempImageUrl.match("^/") && tempImageUrl) || "/" + tempImageUrl;
+                                imageUrl = host + tempUrl;
+                            }
+                            else {
+                                imageUrl = tempImageUrl;
+                            }
 
                             if (!redirectUrl.match("^http")) {
                                 parser.href = stubCrawler.url;
