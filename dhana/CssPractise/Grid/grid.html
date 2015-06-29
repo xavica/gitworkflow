@@ -5,6 +5,9 @@
     <link href="../../../js/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../normalise.css" rel="stylesheet" />
     <link href="grid.css" rel="stylesheet" />
+    <link href="../../../material template/css/app.min.1.css" rel="stylesheet" />
+    <link href="../../../material template/css/app.min.2.css" rel="stylesheet" />
+    <link href="../../../material template/css/bootstrap.min.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -55,6 +58,7 @@
                     Lenovo
                 </p>
                 <button type="submit" class="btn btn-warning">Details</button>
+                <button class="btn btn-orange">Orange</button>
             </div>
 
         </div>
@@ -76,7 +80,9 @@
         <div class=" col-md-3 col-sm-6 co-xs-12 ">
             <div class="firstImage text-center">
                 <div>
-                    <img src="../../pics/colliers.png" />
+                    <a href="">
+                        <img src="../../pics/colliers.png" />
+                    </a>
                 </div>
                 <p class="text-primary  text-center">
                     Lenovo
@@ -101,7 +107,7 @@
         <div class=" col-md-3 col-sm-6 co-xs-12 ">
             <div class="firstImage text-center">
                 <div>
-                    <img src="../../pics/bjslogo.jpg"  />
+                    <img src="../../pics/bjslogo.jpg" />
                 </div>
                 <p class="text-warning  text-center hidden-sm">
                     Lenovo
@@ -112,12 +118,256 @@
         </div>
     </div>
 
-   
-    <!--<div class="well container">
+
+    <div class="well container blockButtons">
         <button type="button" class="btn btn-primary btn-sm btn-block">Block level button</button>
         <button type="button" class="btn btn-default btn-sm btn-block">Block level button</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+    </div>
+
+    <div class="Colorthemes">
+        <p class="bg-primary">Testing</p>
+        <p class="bg-success">Testing</p>
+        <p class="bg-info">Testing</p>
+        <p class="bg-warning">Testing</p>
+        <p class="bg-danger">Testing</p>
+    </div>
+    <div class="container">
+        <h1>Lighter, Secondary Text</h1>
+        <p>The small element is used to create a lighter, secondary text in any heading:</p>
+        <h1>h1 heading <small>secondary <mark>HighLight</mark></small></h1>
+        <h2>h2 heading <small>secondary text</small></h2>
+        <h3> <abbr title="Abbervation Tag">AT</abbr></h3>
+    </div>
+    <div class="container">
+        <h1>Description Lists</h1>
+        <p>The dl element indicates a description list:</p>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+    </div>
+    <div class="container">
+        <h1>Keyboard Inputs</h1>
+        <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+        <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+    </div>
+
+    <div class="container">
+        <h2>Typography</h2>
+        <p>The class .list-inline places all list items on a single line:</p>
+        <ul class="list-inline">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>snax</li>
+            <li>bread</li>
+            <li>Milk</li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Typography</h2>
+        <p>Use the .dl-horizontal class line up the description list side-by-side when the browser window expands:</p>
+        <dl class="dl-horizontal">
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+        <p><strong>Tip:</strong> Try to resize the browser window to see the behaviour of the description list.</p>
+    </div>
+
+    <!--<div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">ContactUs</a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <!--</div>-->
+    <div data-spy="scroll" data-target=".navbar" data-offset="12" class="test">
+        <div id="section1">
+            <div class="container-fluid">
+                <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+        </div>
+        <div id="section2">
+            <div class="container-fluid">
+                <h1>Section 1</h1>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>My first Bootstrap website!</h1>
+            <p>This page will grow as we add more and more components from Bootstrap...</p>
+            <a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search</a>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="col-md-3">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Submenu 1-1</a></li>
+                            <li><a href="#">Submenu 1-2</a></li>
+                            <li><a href="#">Submenu 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+            </div>
+            <div class="clearfix visible-lg"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Alerts</h2>
+        <div class="alert alert-success">
+            <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
+        <div class="alert alert-danger">
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+    </div>
+    <div class="container">
+        <h2>Badges</h2>
+        <a href="#">News <span class="badge">55</span></a><br>
+        <a href="#">Comments <span class="badge">10</span></a><br>
+        <a href="#">Updates <span class="badge">22</span></a>
+        <br />
+        <br />
+        <button type="submit" class="btn  btn-primary">Primary <span class="badge">7</span></button>
+        <button type="submit" class="btn  btn-success">Primary <span class="badge">7</span></button>
+        <button type="submit" class="btn  btn-danger">Primary <span class="badge">7</span></button>
+    </div>
+    <div class="container">
+        <h2>Pagination</h2>
+        <ul class="pagination pagination-sm">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <h2>Pagination</h2>
+        <ul class="pagination pagination-lg">
+            <li><a href="">1</a></li>
+            <li class="active"><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li class="disabled"><a href="">4</a></li>
+        </ul>
+        <ul class="pager">
+            
+            <li><a href="">Previous</a></li>
+            <li><a href="">Next</a></li>
+          
+        </ul>
+        <ul class="pager">
+            <li class="previous"><a href="#">Previous</a></li>
+            <li class="next"><a href="#">Next</a></li>
+        </ul>
+        <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-primary">Apple</a>
+            <a href="#" class="btn btn-primary">Samsung</a>
+            <a href="#" class="btn btn-primary">Sony</a>
+        </div>
+        <div class=" btn-group btn-group-vertical">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        <br />
+        <div class=" btn-group btn-group-lg">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40"
+             aria-valuemin="0" aria-valuemax="100" style="width:40%">
+            40% Complete (success)
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="5"
+             aria-valuemin="0" aria-valuemax="50" style="width:50%">
+            40% Complete (success)
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Basic Panel
+        </div>
+
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+         Headoing
+        </div>
+        <div class="panel-body">
+          content
+        </div>
+        <div class="panel-footer">
+           footer
+        </div>
 
     </div>-->
+    <!--<ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+    </ul>-->
+
+
+
     <script src="../../../js/jquery.js"></script>
     <script src="../../../js/bootstrap/js/bootstrap.min.js"></script>
 </body>

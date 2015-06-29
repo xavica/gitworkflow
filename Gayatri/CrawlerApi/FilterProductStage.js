@@ -1,88 +1,129 @@
-﻿var http = require("http");
+﻿var request = require("request");
+var _ = require('lodash-node');
+var fs = require('fs');
+var storage = require('azure-storage');
+var directoryName = 'Images/';
+
+// Reteving the productstage table data.
+var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
+var getOptions = {
+    method: 'GET',
+    url: "http://localhost:16193/api/productstage/getall",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+};
 var rawProducts = [];
-http.get('http://localhost:16193/api/productstage/getall', function (item) {
-    var data = "";
-    item.on("data", function (chunk) {
-        data += chunk;
-    });
+request(getOptions, function (error, response, body) {
+    rawProducts = JSON.parse(body);
+    console.log(rawProducts.length);
+    // console.log(rawProducts);
+    // console.log(rawProducts.length);
 
-    item.on("end", function () {
-        var parsed = JSON.parse(data);
-        console.log(parsed.length);
-        parsed.forEach(function (item) {
-            rawProducts.push({
-                "id": item.id,
-                "categoryId": item.categoryId,
-                "shortDescription": item.shortDescription,
-                "description": item.description,
-                "redirectUrl": item.redirectUrl,
-                "imageUrl": item.imageUrl,
-                "storeName": item.storeName,
-                "actualPrice": item.actualPrice,
-                "currentPrice": item.currentPrice,
-                "discountPercentage": item.discountPercentage,
-                "isShippingFree": item.isShippingFree,
-                "star": item.star,
-                "isPublished": item.isPublished,
-                "showDate": item.showDate,
-                "source": parsed.source
-            });
+    // Adding status field.
+    rawProducts.forEach(function (item) {
+        processArray.push({
+            "id": item.id,
+            "categoryId": item.categoryId,
+            "shortDescription": item.shortDescription,
+            "description": item.shortDescription,
+            "redirectUrl": item.redirectUrl,
+            "imageUrl": item.imageUrl,
+            "storeName": item.storeName,
+            "actualPrice": item.actualPrice,
+            "currentPrice": item.currentPrice,
+            "discountPercentage": item.discountPercentage,
+            "isShippingFree": item.isShippingFree,
+            "star": item.star,
+            "isPublished": item.isPublished,
+            "showDate": item.showDate,
+            "source": item.source,
+            "status": true
         });
-        console.log(rawProducts);
-        console.log(rawProducts.length);
+        // console.log(processArray);
+        // console.log("Process Array:  " + processArray.length);
     });
-});
+    // converting into lower case
+    _.forEach(processArray, function (item) {
+        item.description = item.description.toLowerCase();
+    });
+    //removal of common words
+    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
+    _.forEach(processArray, function (item) {
+        _.forEach(commonWords, function (word) {
+            item.description = item.description.replace(word, "");
+        });
+    });
+    // console.log(processArray);
+    console.log("Process Array:  " + processArray.length);
 
-// Mapping array to add "Status" property.
-var processArray = rawProducts.map(function (item) {
-    return {
-        "id": item.id,
-        "categoryId": item.categoryId,
-        "shortDescription": item.shortDescription,
-        "description": item.description,
-        "redirectUrl": item.redirectUrl,
-        "imageUrl": item.imageUrl,
-        "storeName": item.storeName,
-        "actualPrice": item.actualPrice,
-        "currentPrice": item.currentPrice,
-        "discountPercentage": item.discountPercentage,
-        "isShippingFree": item.isShippingFree,
-        "star": item.star,
-        "isPublished": item.isPublished,
-        "showDate": item.showDate,
-        "source": item.source,
-        "status": true
-    }
-});
-//convert into lowercase
-_.forEach(processArray, function (item) {
-    item.name = item.name.toLowerCase();
-});
-console.log(processArray);
-//common keywords array
-commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-"];
+    //calling filter function
 
-//replace common keywords with nothing 
-for (i = 0; i < processArray.length; i++)
-    for (j = 0; j < commonWords.length; j++)
-        processArray[i].name = processArray[i].name.replace(commonWords[j], "");
-
-var resultArray = [];
-for (j = 1; j < 14; j++) {
-    for (i = 0; i < processArray.length; i++) {
+    //Filter products on each category id wise
+    _.times(14, function (id) {
         var arrayToFilter = [];
-        if (+processArray[i].categoryId === j)
-            arrayToFilter.push(processArray[i]);
-        productFilter(arraytoFilter);
-    }
-}
+        _.forEach(processArray, function (product) {
+            if (+product.categoryId === +id)
+                arrayToFilter.push(product);
+        });
+        productFilter(arrayToFilter);  // the function will push the filtered products to resultArray for each category it called
+    });
+
+    //Top 10 products pick.
+    _.times(14, function (id) {
+        sortArray = [];
+        _.forEach(resultArray, function (item) {
+            if (+item.categoryId === +id)
+                sortArray.push(item);
+        });
+        sortArray = _.sortBy(sortArray, 'discountPercentage');
+        sortArray = _.take(sortArray.reverse(), 60);
+        sortArray.forEach(function (topSortedItem) {
+            topArrayToPost.push(topSortedItem);
+
+            console.log("product: " + id + " " + topArrayToPost.length);
+        });
+    });
+
+    //removing status element
+    topArrayToPost.forEach(function (item) {
+        resultArrayToPost.push({
+            "id": item.id,
+            "categoryId": item.categoryId,
+            "shortDescription": item.shortDescription,
+            "description": item.description,
+            "redirectUrl": item.redirectUrl,
+            "imageUrl": item.imageUrl,
+            "storeName": item.storeName,
+            "actualPrice": item.actualPrice,
+            "currentPrice": item.currentPrice,
+            "discountPercentage": item.discountPercentage,
+            "isShippingFree": item.isShippingFree,
+            "star": item.star,
+            "isPublished": item.isPublished,
+            "showDate": item.showDate,
+            "source": item.source,
+            "status": true
+        });
+    });
+    // console.log(resultArrayToPost);
+    console.log("resultArrayToPost:  " + resultArrayToPost.length);
+
+    downloadUploadImages(resultArrayToPost);
+    pushToProductTable(resultArrayToPost);
+
+}); // request close
+
+//ProductFilter function where Filtered as per categoryid will come here for process.
 function productFilter(processArray) {
-    var filterArray = [], discardedArray = [];
-    for (i = 0; i < processArray.length ; i++) {
+    var filterArray = [];
+
+    // finding product length, and calculating xn.
+    for (var i = 0; i < processArray.length; i++) {
         if (processArray[i].status === true) {
-            var a = processArray[i].name.split(" ");
+            var a = processArray[i].description.split(" ");
             for (j = i + 1; j < processArray.length ; j++) {
-                var b = processArray[j].name.split(" ");
+                var b = processArray[j].description.split(" ");
                 var c = _.intersection(a, b);
                 var maxn = Math.max(a.length, b.length);
                 var percent = Math.floor(c.length / maxn * 100);
@@ -112,41 +153,88 @@ function productFilter(processArray) {
         }
     }
 }
-console.log(processArray.length);
-console.log(resultArray.length);
-console.log(resultArray);
-//console.log(discardedArray);
 
-// Posting data to Products Table in DB.
+// azure image url update
 
-var data = JSON.stringify(resultArray);
-var options = {
-    host: 'localhost:16193',
-    port: '80',
-    path: '/api/products',
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'Content-Length': data.length
-    }
+//Downloading Image 
+var downloadImage = function (uri, filename, callback) {
+    request.head(uri, function (err, res, body) {
+        if (res && res.headers && res.headers['content-type'].indexOf('image')>-1)
+        {
+            //console.log(res);
+            //console.log('content-type:' + res.headers['content-type']);
+            request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+
+        }
+    });
 };
 
-var req = http.request(options, function (res) {
-    var msg = '';
-
-    res.setEncoding('utf8');
-    res.on('data', function (chunk) {
-        msg += chunk;
+//genarating uid for Downloaded Image 
+function generateUUID() {
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
-    res.on('end', function () {
-        console.log(JSON.parse(msg));
+    return uuid;
+};
+
+//uploading  Image 
+function uploadImage(sourceFileName, destinationFileName) {
+    var blobService = storage.createBlobService();
+    var containerName = 'images';
+    blobService.createBlockBlobFromLocalFile(
+    containerName,
+    destinationFileName,
+    sourceFileName,
+    function (error, result, response) {
+        //console.log(sourceFileName);
+        //console.log(destinationFileName);
+        if (error) {
+            console.log("Couldn't upload file %s", destinationFileName);
+            console.error(error);
+        } else {
+            console.log('File %s uploaded successfully', destinationFileName);
+        }
     });
-}).on('error', function (e) {
-    console.log("Got error: " + e.message);
-});
+}
 
-req.write(data);
-req.end();
+//download upload images
+function downloadUploadImages(products) {
+    products.forEach(function (item) {
+        var downloadedFileName = generateUUID() + '.jpeg';
+        downloadImage(item.imageUrl, directoryName + downloadedFileName, function () {
+                console.log('download done');
+                uploadImage(directoryName + downloadedFileName, downloadedFileName);
+        });
+        var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + downloadedFileName;
+        item.imageUrl = resultImageUrl;
+        console.log(resultImageUrl);
+    });
+}
 
+//pushing to product table
+function pushToProductTable(products) {
+    var options = {
+        method: 'POST',
+        url: "http://localhost:16193/api/productbulk",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        json: products
+    };
+    console.log("products inserted test");
+    function callback(error, response, body) {
+        if (!error) {
+            console.log(response.statusCode);
+            console.log(body);
+        }
+        else {
+            console.log('Error happened: ' + error);
+        }
+    }
+    request(options, callback);
+}
 
 

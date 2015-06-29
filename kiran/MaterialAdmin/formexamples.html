@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+
+    <!-- Vendor CSS -->
+    <link href="vendors/animate-css/animate.min.css" rel="stylesheet">
+    <link href="vendors/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+    <link href="vendors/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section id="main">
+
+
+        <section id="content">
+            <div class="container">
+                <div class="block-header">
+                    <h2>Form Examples</h2>
+
+                    <ul class="actions">
+                        <li>
+                            <a href="">
+                                <i class="md md-trending-up"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="md md-done-all"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" data-toggle="dropdown">
+                                <i class="md md-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="">Refresh</a>
+                                </li>
+                                <li>
+                                    <a href="">Manage Widgets</a>
+                                </li>
+                                <li>
+                                    <a href="">Widgets Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>
+                            Basic Example <small>
+                                Individual form controls automatically receive some global styling. All textual 'input', 'textarea', and 'select' elements with .form-control are set to width: 100%; by default. Wrap labels and controls in .form-group for optimum spacing.
+                            </small>
+                        </h2>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <form role="form">
+                            <div class="form-group fg-line">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+
+                            </div>
+                            <div class="form-group fg-line">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control input-sm" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <i class="input-helper"></i>
+                                    Don't forget to check me out
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm m-t-10">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Inline Form <small>Add '.form-inline' to your 'form' for left-aligned and inline-block controls. This only applies to forms within viewports that are at least 768px wide.</small></h2>
+                    </div>
+                    <div class="card-body card-padding">
+                        <form class="row" role="form">
+                            <div class="col-sm-3">
+                                <div class="form-group fg-line">
+                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                    <input type="email" class="form-control input-sm" id="exampleInputEmail2" placeholder="Enter email">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group fg-line">
+                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                    <input type="password" class="form-control input-sm" id="exampleInputPassword2" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-primary btn-sm m-t-5">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <form class="form-horizontal" role="form">
+                        <div class="card-header">
+                            <h2>Horizontal Form <small>Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding '.form-horizontal' to the form. Doing so changes '.form-groups' to behave as grid rows, so no need for '.row'.</small></h2>
+                        </div>
+
+                        <div class="card-body card-padding">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <div class="fg-line">
+                                        <input type="email" class="form-control input-sm" id="inputEmail3" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                                <div class="col-sm-10">
+
+                                    <div class="fg-line">
+                                        <input type="password" class="form-control input-sm" id="inputPassword3" placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <i class="input-helper"></i>
+                                            Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Multi Column <small>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</small></h2>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-3">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-3">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-3">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-3">
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-4">
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-4">
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-4">
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-6">
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-6">
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="fg-line form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".col-xs-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+        <div class="ie-warning">
+            <h1 class="c-white">IE SUCKS!</h1>
+            <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser <br/>in order to access the maximum functionality of this website. </p>
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="img/browsers/chrome.png" alt="">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="img/browsers/firefox.png" alt="">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="img/browsers/opera.png" alt="">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="img/browsers/safari.png" alt="">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="img/browsers/ie.png" alt="">
+                        <div>IE (New)</div>
+                    </a>
+                </li>
+            </ul>
+            <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+        </div>
+    <![endif]-->
+    <!-- Javascript Libraries -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="vendors/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="vendors/auto-size/jquery.autosize.min.js"></script>
+    <script src="vendors/waves/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/sweet-alert/sweet-alert.min.js"></script>
+
+    <script src="js/functions.js"></script>
+    <script src="js/demo.js"></script>
+
+
+</body>
+</html>

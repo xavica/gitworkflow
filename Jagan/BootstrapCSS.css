@@ -6,6 +6,16 @@ h2 {
 h2 ~ p{
    color:Blanchedalmond;
 }
+.headerpart{background-color:#222926;}
+a:hover{color:#fff;}
+li a:hover{color:#222926;background-color:red}
+li a{
+	color:#fff;
+	position: relative;
+    display: block;
+	font-size:1.0em;
+}
+
 #myCarousel{margin-top: 100px;}
 #myCarousel .item{	height: 400px;}
 .carousel-caption{font-size: 24px;}
