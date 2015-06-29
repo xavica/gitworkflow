@@ -39,7 +39,7 @@ function filterProcess(id) {
         removeCommonWords(rawProducts);
         var filteredArray = productFilter(rawProducts);
         var topProductArray = pickTopProducts(filteredArray);
-        ////var azureUrlArray = downloadUploadImages(topProductArray);
+        //var azureUrlArray = downloadUploadImages(topProductArray);
         var finalArray = transformProducts(topProductArray);
         pushToProductTable(finalArray);
         //console.log("category: " + id + "  completed");

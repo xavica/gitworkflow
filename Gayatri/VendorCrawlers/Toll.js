@@ -6,7 +6,7 @@ var http = require("http");
 // Reteving the productstage table data.
 var getOptions = {
     method: 'GET',
-    url: "http://localhost:16193/api/products/getall",
+    url: "http://web.xavica.local/tdweb/api/products/getall",
     headers: {
         'Content-Type': 'application/json'
     },
@@ -34,7 +34,7 @@ request(getOptions, function (error, response, body) {
     //Begin Put: to update records (parse search parameters)
 });
 function updateProduct(pushingItem) {
-    url = "http://localhost:16193/api/products/" + pushingItem.id;
+    url = "http://web.xavica.local/tdweb/api/products/" + pushingItem.id;
     console.log("update url" + url);
     var updateOptions = {
         method: 'PUT',
