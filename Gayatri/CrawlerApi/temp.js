@@ -1,60 +1,497 @@
-﻿var _ = require('lodash');
-var TvDealsLinks = [
-//Telivisions 
-{
-    url: "http://www.tvdeal.in/Regular-LED-Televisions",
-    selectors: {
-        elements: 'div[class*="three"]',
-        title: 'div.image > a > img',
-        description: '',
-        imageUrl: 'div.image > a > img',
-        actualPrice: 'div.price > span.price-old',
-        sellingPrice: 'div.price > span.price-new',
-        discount: '',
-        redirectUrl: 'div.image'
-    },
-    isScroll: false,
-    id: 5
-}];
+﻿var request = require("request");
+var _ = require('lodash-node');
+
+//var getlistOptions = {
+//    method: 'POST',
+//    url: "http://web.xavica.local/tdweb/api/productstage/getlist",
+//    headers: {
+//        'Content-Type': 'application/json',
+//    },
+//    json: {
+//        "pageNumber": 0,
+//        "pageSize": 0,
+//        "filters": [
+//          {
+//              "modelFieldName": "categoryId",
+//              "fieldValue": "4",
+//              "operation": "5",
+//              "logicalOperator": 0,
+//              "sortBy": 0
+//          }
+//        ]
+//    }
+//};
+//request(getlistOptions, function (error, response, body) {
+//    var products = [];
+//    products = JSON.parse(JSON.stringify(body));
+//    console.log("products for category: "+ id + "  are:  "  + products.length);
+//});
 
 
-var casper = require('casper').create();
-casper.options.pageSettings.loadImages = false;
-casper.start();
-var productsList = [];
+var filteredArray = [
+  {
+      "id": 18801,
+      "categoryId": 1,
+      "shortDescription": "Buy Wespro 7? Mini Laptop with Optical Mouse",
+      "description": "Buy Wespro 7? Mini Laptop with Optical Mouse",
+      "redirectUrl": "http://www.homeshop18.com/wespro-7-mini-laptop-optical-mouse/computers-tablets/laptops/product:16587431/cid:16321/?pos=1",
+      "imageUrl": "//stat.homeshop18.com/homeshop18/images/productImages/208/wespro-7-mini-laptop-with-optical-mouse-medium_d73e9a617e66e24bdeaf37530a7fcc9a.jpg",
+      "storeName": "HomeShop18",
+      "actualPrice": 6999,
+      "currentPrice": 3999,
+      "discountPercentage": 43,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 18802,
+      "categoryId": 1,
+      "shortDescription": "Buy Wespro 13.3'' Netbook (VIA WM8850 - 1GB - 8GB - 13.3'' - Google Android 4.0)",
+      "description": "Buy Wespro 13.3'' Netbook (VIA WM8850 - 1GB - 8GB - 13.3'' - Google Android 4.0)",
+      "redirectUrl": "http://www.homeshop18.com/wespro-13-3-netbook-via-wm8850-1gb-8gb-13-3-google-android-4-0/computers-tablets/laptops/product:30883607/cid:16321/?pos=3",
+      "imageUrl": "//stat.homeshop18.com/homeshop18/media/images/neo/common/blank.jpg",
+      "storeName": "HomeShop18",
+      "actualPrice": 12999,
+      "currentPrice": 7999,
+      "discountPercentage": 39,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 18803,
+      "categoryId": 1,
+      "shortDescription": "Buy Wespro 10\" Netbook with Optical Mouse - Black",
+      "description": "Buy Wespro 10\" Netbook with Optical Mouse - Black",
+      "redirectUrl": "http://www.homeshop18.com/wespro-10-netbook-optical-mouse-black/computers-tablets/laptops/product:30325628/cid:16321/?pos=4",
+      "imageUrl": "//stat.homeshop18.com/homeshop18/media/images/neo/common/blank.jpg",
+      "storeName": "HomeShop18",
+      "actualPrice": 8499,
+      "currentPrice": 5999,
+      "discountPercentage": 30,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 18804,
+      "categoryId": 1,
+      "shortDescription": "Buy Zing (VIA 8505 - 128MB - 2GB - 7'' - Win CE 6.0) Netbook",
+      "description": "Buy Zing (VIA 8505 - 128MB - 2GB - 7'' - Win CE 6.0) Netbook",
+      "redirectUrl": "http://www.homeshop18.com/zing-via-8505-128mb-2gb-7-win-ce-6-0-netbook/computers-tablets/laptops/product:30547565/cid:16321/?pos=5",
+      "imageUrl": "//stat.homeshop18.com/homeshop18/media/images/neo/common/blank.jpg",
+      "storeName": "HomeShop18",
+      "actualPrice": 5999,
+      "currentPrice": 4999,
+      "discountPercentage": 17,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 18805,
+      "categoryId": 1,
+      "shortDescription": "Buy HP 240 (E8D80PA) Laptop (Intel Pentium Dual Core B960- 2GB- 500GB HDD- 14 Inches Screen- DOS) - Black",
+      "description": "Buy HP 240 (E8D80PA) Laptop (Intel Pentium Dual Core B960- 2GB- 500GB HDD- 14 Inches Screen- DOS) - Black",
+      "redirectUrl": "http://www.homeshop18.com/hp-240-e8d80pa-laptop-intel-pentium-dual-core-b960-2gb-500gb-hdd-14-inches-screen-dos-black/computers-tablets/laptops/product:32398313/cid:16315/?pos=6",
+      "imageUrl": "//stat.homeshop18.com/homeshop18/media/images/neo/common/blank.jpg",
+      "storeName": "HomeShop18",
+      "actualPrice": 24999,
+      "currentPrice": 24350,
+      "discountPercentage": 3,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19116,
+      "categoryId": 1,
+      "shortDescription": "Lenovo Essential G580/59-356381",
+      "description": "Lenovo Essential G580/59-356381",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-essential-g580-59-356381-1005097",
+      "imageUrl": "http://static1.saholic.com/images/media/1005097/lenovo-essential-g580-59-356381-icon-1350992362000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 30890,
+      "currentPrice": 29148,
+      "discountPercentage": 6,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19117,
+      "categoryId": 1,
+      "shortDescription": "Acer Aspire V5 - 471 NX.M3BSI.011",
+      "description": "Acer Aspire V5 - 471 NX.M3BSI.011",
+      "redirectUrl": "http://www.saholic.com/laptops/acer-aspire-v5-471-nx.m3bsi.011-1007420",
+      "imageUrl": "http://static2.saholic.com/images/media/1007420/acer-aspire-v5-471-nx.m3bsi.011-icon-1371641673000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 39990,
+      "currentPrice": 39120,
+      "discountPercentage": 3,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19118,
+      "categoryId": 1,
+      "shortDescription": "Dell Inspiron 14R N5420 V560406IN8",
+      "description": "Dell Inspiron 14R N5420 V560406IN8",
+      "redirectUrl": "http://www.saholic.com/laptops/dell-inspiron-14r-n5420-v560406in8-1005989",
+      "imageUrl": "http://static2.saholic.com/images/media/1005989/dell-inspiron-14r-n5420-v560406in8-icon-1361269063000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 40491,
+      "currentPrice": 40199,
+      "discountPercentage": 1,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19119,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad Z580/59-333345",
+      "description": "Lenovo IdeaPad Z580/59-333345",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-z580-59-333345-1004274",
+      "imageUrl": "http://static0.saholic.com/images/media/1004274/lenovo-ideapad-z580-59-333345-icon-1339491991000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 48290,
+      "currentPrice": 43499,
+      "discountPercentage": 10,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19120,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad Z580/59-347604",
+      "description": "Lenovo IdeaPad Z580/59-347604",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-z580-59-347604-1005101",
+      "imageUrl": "http://static2.saholic.com/images/media/1005101/lenovo-ideapad-z580-59-347604-icon-1351236439000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 39390,
+      "currentPrice": 38001,
+      "discountPercentage": 4,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19121,
+      "categoryId": 1,
+      "shortDescription": "Sony Vaio Fit 15E SVF15218SNB",
+      "description": "Sony Vaio Fit 15E SVF15218SNB",
+      "redirectUrl": "http://www.saholic.com/laptops/sony-vaio-fit-15e-svf15218snb-1007453",
+      "imageUrl": "http://static2.saholic.com/images/media/1007453/sony-vaio-fit-15e-svf15218snb-icon-1372238205000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 46990,
+      "currentPrice": 44799,
+      "discountPercentage": 5,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19122,
+      "categoryId": 1,
+      "shortDescription": "Lenovo S400 59-355933",
+      "description": "Lenovo S400 59-355933",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-s400-59-355933-1005104",
+      "imageUrl": "http://static2.saholic.com/images/media/1005104/lenovo-s400-59-355933-icon-1371210956000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 31990,
+      "currentPrice": 29148,
+      "discountPercentage": 9,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19123,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad S405/59-348194",
+      "description": "Lenovo IdeaPad S405/59-348194",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-s405-59-348194-1005106",
+      "imageUrl": "http://static1.saholic.com/images/media/1005106/lenovo-ideapad-s405-59-348194-icon-1355395663000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 39390,
+      "currentPrice": 36438,
+      "discountPercentage": 8,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19124,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad Z580/59-347570",
+      "description": "Lenovo IdeaPad Z580/59-347570",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-z580-59-347570-1005099",
+      "imageUrl": "http://static0.saholic.com/images/media/1005099/lenovo-ideapad-z580-59-347570-icon-1351232447000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 39390,
+      "currentPrice": 38001,
+      "discountPercentage": 4,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19125,
+      "categoryId": 1,
+      "shortDescription": "Lenovo Essential G580/59-356384",
+      "description": "Lenovo Essential G580/59-356384",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-essential-g580-59-356384-1005098",
+      "imageUrl": "http://static2.saholic.com/images/media/1005098/lenovo-essential-g580-59-356384-icon-1350994112000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 35890,
+      "currentPrice": 33835,
+      "discountPercentage": 6,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19126,
+      "categoryId": 1,
+      "shortDescription": "Acer Aspire V5 571G-NX.M3NSI.003",
+      "description": "Acer Aspire V5 571G-NX.M3NSI.003",
+      "redirectUrl": "http://www.saholic.com/laptops/acer-aspire-v5-571g-nx.m3nsi.003-1005844",
+      "imageUrl": "http://static1.saholic.com/images/media/1005844/acer-aspire-v5-571g-nx.m3nsi.003-icon-1360048598000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 46503,
+      "currentPrice": 45720,
+      "discountPercentage": 2,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19127,
+      "categoryId": 1,
+      "shortDescription": "Lenovo S300 59-355929",
+      "description": "Lenovo S300 59-355929",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-s300-59-355929-1005103",
+      "imageUrl": "http://static1.saholic.com/images/media/1005103/lenovo-s300-59-355929-icon-1356093852000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 29790,
+      "currentPrice": 27065,
+      "discountPercentage": 10,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19128,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad S300/59-348107",
+      "description": "Lenovo IdeaPad S300/59-348107",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-s300-59-348107-1005105",
+      "imageUrl": "http://static0.saholic.com/images/media/1005105/lenovo-ideapad-s300-59-348107-icon-1351244067000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 38790,
+      "currentPrice": 35397,
+      "discountPercentage": 9,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19129,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad Yoga 13 59-341124",
+      "description": "Lenovo IdeaPad Yoga 13 59-341124",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-yoga-13-59-341124-1005761",
+      "imageUrl": "http://static2.saholic.com/images/media/1005761/lenovo-ideapad-yoga-13-59-341124-icon-1358933114000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 84290,
+      "currentPrice": 78409,
+      "discountPercentage": 7,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19130,
+      "categoryId": 1,
+      "shortDescription": "Lenovo Ideapad U310 59-342832",
+      "description": "Lenovo Ideapad U310 59-342832",
+      "redirectUrl": "http://www.saholic.com/laptops/lenovo-ideapad-u310-59-342832-1005118",
+      "imageUrl": "http://static1.saholic.com/images/media/1005118/lenovo-ideapad-u310-59-342832-icon-1354860477000.jpg",
+      "storeName": "Saholic",
+      "actualPrice": 55990,
+      "currentPrice": 48973,
+      "discountPercentage": 13,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19303,
+      "categoryId": 1,
+      "shortDescription": "DELL INSPIRON 15R 5537 LAPTOP (4TH GEN CI7/ 16GB/ 1TB/ WIN8 Gen) no touch",
+      "description": "DELL INSPIRON 15R 5537 LAPTOP (4TH GEN CI7/ 16GB/ 1TB/ WIN8 Gen) no touch",
+      "redirectUrl": "http://www.shopclues.com/dell-inspiron-15r-5537-laptop-4th-gen-ci7-16gb-1tb-win8-gen-no-touch.html",
+      "imageUrl": "http://cdn.shopclues.net/images/thumbnails/11358/200/200/72743360552314190682801422018811.jpg",
+      "storeName": "ShopClues",
+      "actualPrice": 67199,
+      "currentPrice": 57119,
+      "discountPercentage": 33,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19304,
+      "categoryId": 1,
+      "shortDescription": "HP 15-G222AU Laptop (AMD E1-6010 @1.35GHz / 4GB Ram / 500GB Hdd / 15.6\"/DOS)",
+      "description": "HP 15-G222AU Laptop (AMD E1-6010 @1.35GHz / 4GB Ram / 500GB Hdd / 15.6\"/DOS)",
+      "redirectUrl": "http://www.shopclues.com/hp-15-g222au-laptop-amd-e1-6010-1.35ghz-4gb-ram-500gb-hdd-15.6-dos.html",
+      "imageUrl": "http://cdn.shopclues.net/images/thumbnails/18214/200/200/HPG222AU1432373106.jpg",
+      "storeName": "ShopClues",
+      "actualPrice": 21085,
+      "currentPrice": 19398,
+      "discountPercentage": 9,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19305,
+      "categoryId": 1,
+      "shortDescription": "HP 15-r206TU (Notebook) (Core i3 5th Gen/ 4GB/ 500GB/ Win8.1) (K8U06PA)",
+      "description": "HP 15-r206TU (Notebook) (Core i3 5th Gen/ 4GB/ 500GB/ Win8.1) (K8U06PA)",
+      "redirectUrl": "http://www.shopclues.com/hp-15-r206tu-notebook-core-i3-5th-gen-4gb-500gb-win8.1-k8u06pa.html",
+      "imageUrl": "/blank.gif",
+      "storeName": "ShopClues",
+      "actualPrice": 36700,
+      "currentPrice": 31195,
+      "discountPercentage": 16,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19306,
+      "categoryId": 1,
+      "shortDescription": "Lenovo L Notebook (Core i3 (4th Generation) -500 GB -4 GB -14 inch - 14.9 inch",
+      "description": "Lenovo L Notebook (Core i3 (4th Generation) -500 GB -4 GB -14 inch - 14.9 inch",
+      "redirectUrl": "http://www.shopclues.com/lenovo-l-notebook-core-i3-4th-generation-500-gb-4-gb-14-inch-14.9-inch.html",
+      "imageUrl": "/blank.gif",
+      "storeName": "ShopClues",
+      "actualPrice": 46883,
+      "currentPrice": 39851,
+      "discountPercentage": 23,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19307,
+      "categoryId": 1,
+      "shortDescription": "Lenovo IdeaPad B40-70 (59-433780) Laptop (4th Gen Intel Core i3- 4GB RAM- 500GB",
+      "description": "Lenovo IdeaPad B40-70 (59-433780) Laptop (4th Gen Intel Core i3- 4GB RAM- 500GB",
+      "redirectUrl": "http://www.shopclues.com/lenovo-ideapad-b40-70-59-433780-laptop-4th-gen-intel-core-i3-4gb-ram-500gb-1.html",
+      "imageUrl": "/blank.gif",
+      "storeName": "ShopClues",
+      "actualPrice": 34136,
+      "currentPrice": 29016,
+      "discountPercentage": 22,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19308,
+      "categoryId": 1,
+      "shortDescription": "Asus X553MA-XX515D Laptop (Intel Pentium Quad Core N3540/2GB/500GB/DOS/Intel/Graphics 2Gb), Blackb-500gb-dos-laptop-black.html",
+      "description": "Asus X553MA-XX515D Laptop (Intel Pentium Quad Core N3540/2GB/500GB/DOS/Intel/Graphics 2Gb), Blackb-500gb-dos-laptop-black.html",
+      "redirectUrl": "http://www.shopclues.com/asus-x553ma-xx515d-laptop-intel-pentium-quad-core-n3540-2gb-500gb-dos-intel-graphics-2gb-blackb-500gb-dos-laptop-black.html.html",
+      "imageUrl": "/blank.gif",
+      "storeName": "ShopClues",
+      "actualPrice": 21800,
+      "currentPrice": 18530,
+      "discountPercentage": 26,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  },
+  {
+      "id": 19309,
+      "categoryId": 1,
+      "shortDescription": "HP 15-ab030TX Pavilion (Notebook) (Core i5 5th Gen/ 8GB/ 1TB/ Win8.1/ 2GB Graph)",
+      "description": "HP 15-ab030TX Pavilion (Notebook) (Core i5 5th Gen/ 8GB/ 1TB/ Win8.1/ 2GB Graph)",
+      "redirectUrl": "http://www.shopclues.com/hp-15-ab030tx-pavilion-notebook-core-i5-5th-gen-8gb-1tb-win8.1-2gb-graph.html",
+      "imageUrl": "/blank.gif",
+      "storeName": "ShopClues",
+      "actualPrice": 54879,
+      "currentPrice": 49391,
+      "discountPercentage": 13,
+      "isShippingFree": true,
+      "star": 4,
+      "isPublished": false,
+      "showDate": "2015-06-26T00:00:00",
+      "source": "Crawler"
+  }];
+var topProducts = _.chain(filteredArray)
+            .sortBy('discountPercentage')
+            .reverse()
+            .take(5)
+            .value();
+console.log(topProducts.length);
 
-TvDealsLinks.forEach(function (TvDealsCrawler) {
-    casper.thenOpen(TvDealsCrawler.url, function () {
-        if (!this.exists(TvDealsCrawler.selectors.elements) ||
-                !this.exists(TvDealsCrawler.selectors.title) ||
-                !this.exists(TvDealsCrawler.selectors.actualPrice) ||
-                !this.exists(TvDealsCrawler.selectors.sellingPrice) ||
-                !this.exists(TvDealsCrawler.selectors.redirectUrl) ||
-                !this.exists(TvDealsCrawler.selectors.imageUrl)) {
-            this.emit('selector.changed');
-        }
-        this.echo("----------------------------------------");
-        if (TvDealsCrawler.isScroll === true) {
-            this.scrollToBottom();
-            casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
-            casper.then(function () {
-                this.scrollToBottom();
-                casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
-            });
-        }
-        var parsedItems = casper.evaluate(function (stubCrawler) {
-            
-            return "hello";
-        }, TvDealsCrawler);
-        if (parsedItems) {
-            for (var i = 0; i < parsedItems.length; i++) {
-                productsList.push(parsedItems[i]);
-            }
-        }
-    });
-    casper.on('selector.changed', function () {
-        this.echo("from emit method");
-    });
-});
-
-casper.run();

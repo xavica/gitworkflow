@@ -16,7 +16,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 5
     },
     //AC
@@ -32,7 +32,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 8
     },
     {
@@ -47,7 +47,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 8
     },
     {
@@ -62,7 +62,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 8
     },
 // Camera 
@@ -78,7 +78,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 4
     },
     {
@@ -93,7 +93,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 4
     },
     {
@@ -108,7 +108,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 4
     },
 
@@ -125,7 +125,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 10
     },
     {
@@ -140,7 +140,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 11
     },
     {
@@ -155,7 +155,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 11
     },
     {
@@ -170,7 +170,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 11
     },
     {
@@ -185,7 +185,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 11
 
     },
@@ -202,7 +202,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 7
     },
     {
@@ -217,7 +217,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 7
     },
     {
@@ -232,7 +232,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 7
     },
     {
@@ -247,7 +247,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 7
     },
 //Laptop
@@ -263,7 +263,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 1
     },
     {
@@ -278,7 +278,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 1
     },
     {
@@ -293,7 +293,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 1
     },
     {
@@ -308,7 +308,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 1
     },
 //Men Fashion
@@ -324,7 +324,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 6
     },
     {
@@ -339,7 +339,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 6
     },
     {
@@ -354,7 +354,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 6
     },
     {
@@ -369,7 +369,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 6
     },
     {
@@ -384,7 +384,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 6
     },
 //Mobiles
@@ -401,7 +401,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 3
     },
     {
@@ -416,7 +416,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 3
     },
 //Tablets
@@ -432,7 +432,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 2
     },
     {
@@ -447,7 +447,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 2
     },
     {
@@ -462,7 +462,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 2
     },
     {
@@ -477,7 +477,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 2
     },
 //TV
@@ -493,7 +493,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 5
     },
     {
@@ -508,7 +508,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 5
     },
     {
@@ -523,7 +523,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 5
     },
     //Toys
@@ -539,7 +539,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 11
     },
 
@@ -556,7 +556,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 13
     },
     {
@@ -571,7 +571,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 13
     },
     {
@@ -586,7 +586,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 13
     },
     {
@@ -601,7 +601,7 @@ var vendor = {
             discount: 'span.a-size-small.a-color-price',
             redirectUrl: 'div.a-row.a-spacing-none > a'
         },
-        isScroll: false,
+          isScroll: false,
         id: 13
     }]
 };

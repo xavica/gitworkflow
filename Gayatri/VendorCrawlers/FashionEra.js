@@ -19,7 +19,7 @@ var vendor = {
             discount: 'div.save-product-mask > div.percent',
             redirectUrl: 'div.product-image-box > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 12
     }]
 };

@@ -19,7 +19,7 @@ var vendor = {
             discount: 'div.rupee > span.r3 > a',
             redirectUrl: 'div.li_txt1 > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 11
     }]
 };

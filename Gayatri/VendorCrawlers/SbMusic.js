@@ -19,7 +19,7 @@ var vendor = {
             discount: '',
             redirectUrl: 'div.catprodimg.leftnav.mt5 > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 14
     },
     {
@@ -34,7 +34,7 @@ var vendor = {
             discount: '',
             redirectUrl: 'div.catprodimg.leftnav.mt5 > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 14
     }]
 };

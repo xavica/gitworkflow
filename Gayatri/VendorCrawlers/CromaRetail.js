@@ -19,7 +19,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 1
     },
 //TABLETS
@@ -35,7 +35,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 2
     },
 //MOBILES
@@ -51,7 +51,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 3
     },
 //TELEVISIONS
@@ -67,7 +67,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 5
     },
 //AIR CONDITIONERS
@@ -83,7 +83,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 8
     },
 //WASHING MACHINES
@@ -99,7 +99,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 9
     },
 //CAMERAS
@@ -115,7 +115,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 4
     },
 //TELEVISIONS
@@ -131,7 +131,7 @@ var vendor = {
             discount: 'span.youSave',
             redirectUrl: 'a'
         },
-        isScroll: false,
+         isScroll: true,
         id: 5
     }]
 };

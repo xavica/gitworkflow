@@ -17,9 +17,9 @@ var vendor = {
             actualPrice: 'div > span.old-price',
             sellingPrice: 'div > span.new-price',
             discount: 'div.discount-tag',
-            redirectUrl: 'div.prod-info > a.ev-prod-name'
+            redirectUrl: 'div.prod-img > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 12
     }]
 };

@@ -4,23 +4,52 @@ var fs = require('fs');
 var storage = require('azure-storage');
 var directoryName = 'Images/';
 
-// Reteving the productstage table data.
-var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
-var getOptions = {
-    method: 'GET',
-    url: "http://web.xavica.local/tdweb/api/productstage/getall",
-    headers: {
-        'Content-Type': 'application/json'
-    },
+var resultArrayToPost = [];
+for (id = 1; id <= 15; id++) {
+    filterProcess(id);
 };
-var rawProducts = [];
-request(getOptions, function (error, response, body) {
-    rawProducts = JSON.parse(body);
-    console.log(rawProducts.length);
-    // console.log(rawProducts);
-    // console.log(rawProducts.length);
+//retreival of products by category, and complete filter process.
+function filterProcess(id) {
+    var getlistOptions = {
+        method: 'POST',
+        url: "http://web.xavica.local/tdweb/api/productstage/getlist",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        json: {
+            "pageNumber": 0,
+            "pageSize": 0,
+            "filters": [
+              {
+                  "modelFieldName": "categoryId",
+                  "fieldValue": "id",
+                  "operation": "5",
+                  "logicalOperator": 0,
+                  "sortBy": 0
+              }
+            ]
+        }
+    };
+    request(getlistOptions, function (error, response, body) {
+        var products = [];
+        rawProducts = JSON.parse(JSON.stringify(body));
+        rawProducts = addStatus(rawProducts);
+        var lowerCaseArray = convertLower(rawProducts);
+        var processArray = removeCommonWords(lowerCaseArray);
+        var filteredArray = productFilter(processArray);
+        var topProductArray = topProductPick(filteredArray);
+        var mapArray = removeStatus(topProductArray);
+        var azureUrlArray = downloadUploadImages(mapArray);
+        var finalArray = ChangeDateFormat(azureUrlArray);
+        pushToProductTable(finalArray);
+        console.log("category: " + id + "  completed");
 
-    // Adding status field.
+    });
+};
+
+// Adding status field.
+function addStatus(rawProducts) {
+    var processArray = [];
     rawProducts.forEach(function (item) {
         processArray.push({
             "id": item.id,
@@ -40,84 +69,32 @@ request(getOptions, function (error, response, body) {
             "source": item.source,
             "status": true
         });
-        // console.log(processArray);
-        // console.log("Process Array:  " + processArray.length);
     });
-    // converting into lower case
-    _.forEach(processArray, function (item) {
+    return processArray;
+};
+
+// converting into lower case
+function convertLower(productsArray) {
+    _.forEach(productsArray, function (item) {
         item.description = item.description.toLowerCase();
     });
-    //removal of common words
-    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&","buy"];
-    _.forEach(processArray, function (item) {
+    return productsArray;
+};
+
+//removal of common words
+function removeCommonWords(productsArray) {
+    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&", "buy"];
+    _.forEach(productsArray, function (item) {
         _.forEach(commonWords, function (word) {
             item.description = item.description.replace(word, "");
         });
     });
-    // console.log(processArray);
-    console.log("Process Array:  " + processArray.length);
+    return productsArray;
+};
 
-    //calling filter function
-
-    //Filter products on each category id wise
-    _.times(15, function (id) {
-        var arrayToFilter = [];
-        _.forEach(processArray, function (product) {
-            if (+product.categoryId === +id)
-                arrayToFilter.push(product);
-        });
-        productFilter(arrayToFilter);  // the function will push the filtered products to resultArray for each category it called
-    });
-
-    //Top 10 products pick.
-    _.times(14, function (id) {
-        sortArray = [];
-        _.forEach(resultArray, function (item) {
-            if (+item.categoryId === +id)
-                sortArray.push(item);
-        });
-        sortArray = _.sortBy(sortArray, 'discountPercentage');
-        sortArray = _.take(sortArray.reverse(), 60);
-        sortArray.forEach(function (topSortedItem) {
-            topArrayToPost.push(topSortedItem);
-
-            //console.log("product: " + id + " " + topArrayToPost.length);
-        });
-    });
-
-    //removing status element
-    topArrayToPost.forEach(function (item) {
-        resultArrayToPost.push({
-            "id": item.id,
-            "categoryId": item.categoryId,
-            "shortDescription": item.shortDescription,
-            "description": item.description,
-            "redirectUrl": item.redirectUrl,
-            "imageUrl": item.imageUrl,
-            "storeName": item.storeName,
-            "actualPrice": item.actualPrice,
-            "currentPrice": item.currentPrice,
-            "discountPercentage": item.discountPercentage,
-            "isShippingFree": item.isShippingFree,
-            "star": item.star,
-            "isPublished": item.isPublished,
-            "showDate": item.showDate,
-            "source": item.source,
-            "status": true
-        });
-    });
-    // console.log(resultArrayToPost);
-
-    //downloadUploadImages(resultArrayToPost);
-    ChangeDateFormat(resultArrayToPost);
-    console.log("resultArrayToPost:  " + resultArrayToPost.length);
-    pushToProductTable(resultArrayToPost);
-
-}); // request close
-
-//ProductFilter function where Filtered as per categoryid will come here for process.
+//filtering of products
 function productFilter(processArray) {
-    var filterArray = [];
+    var filterArray = [], resultArray = [];
 
     // finding product length, and calculating xn.
     for (var i = 0; i < processArray.length; i++) {
@@ -153,15 +130,47 @@ function productFilter(processArray) {
             }
         }
     }
+    return resultArray;
 }
+
+// Top 20 products pick
+function topProductPick(filteredArray) {
+    return _.chain(filteredArray)
+            .sortBy('discountPercentage')
+            .reverse()
+            .take(20);
+};
+
+//removing status property
+function removeStatus(topProductArray) {
+    topProductArray.forEach(function (item) {
+        resultArrayToPost.push({
+            "id": item.id,
+            "categoryId": item.categoryId,
+            "shortDescription": item.shortDescription,
+            "description": item.description,
+            "redirectUrl": item.redirectUrl,
+            "imageUrl": item.imageUrl,
+            "storeName": item.storeName,
+            "actualPrice": item.actualPrice,
+            "currentPrice": item.currentPrice,
+            "discountPercentage": item.discountPercentage,
+            "isShippingFree": item.isShippingFree,
+            "star": item.star,
+            "isPublished": item.isPublished,
+            "showDate": item.showDate,
+            "source": item.source,
+            "status": true
+        });
+    });
+};
 
 // azure image url update
 
 //Downloading Image 
 var downloadImage = function (uri, filename, callback) {
     request.head(uri, function (err, res, body) {
-        if (res && res.headers && res.headers['content-type'].indexOf('image')>-1)
-        {
+        if (res && res.headers && res.headers['content-type'].indexOf('image') > -1) {
             //console.log(res);
             //console.log('content-type:' + res.headers['content-type']);
             request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
@@ -206,8 +215,8 @@ function downloadUploadImages(products) {
     products.forEach(function (item) {
         var downloadedFileName = generateUUID() + '.jpeg';
         downloadImage(item.imageUrl, directoryName + downloadedFileName, function () {
-                console.log('download done');
-                uploadImage(directoryName + downloadedFileName, downloadedFileName);
+            console.log('download done');
+            uploadImage(directoryName + downloadedFileName, downloadedFileName);
         });
         var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + downloadedFileName;
         item.imageUrl = resultImageUrl;
@@ -215,32 +224,33 @@ function downloadUploadImages(products) {
     });
 }
 
+//Changing DateFormat
 function ChangeDateFormat(productsList) {
     d = new Date(),
        dformat = [(d.getMonth() + 1),
                d.getDate(),
                d.getFullYear()].join('/');
     resultArrayToPost = productsList.map(function (item) {
-           return {
-               CategoryId: item.id,
-               ShortDescription: item.title,
-               Description: item.title,
-               RedirectUrl: item.redirectUrl,
-               ImageUrl: item.imageUrl,
-               StoreName: item.storeName,
-               ActualPrice: item.actualPrice,
-               CurrentPrice: item.sellingPrice,
-               DiscountPercentage: item.discount,
-               IsShippingFree: 1,
-               Star: 4,
-               IsPublished: 0,
-               ShowDate: dformat,
-               Source: "Crawler",
-               CreatedDate: dformat,
-               LastUpdateDate: dformat
-           };
-       });
-    }
+        return {
+            CategoryId: item.id,
+            ShortDescription: item.title,
+            Description: item.title,
+            RedirectUrl: item.redirectUrl,
+            ImageUrl: item.imageUrl,
+            StoreName: item.storeName,
+            ActualPrice: item.actualPrice,
+            CurrentPrice: item.sellingPrice,
+            DiscountPercentage: item.discount,
+            IsShippingFree: 1,
+            Star: 4,
+            IsPublished: 0,
+            ShowDate: dformat,
+            Source: "Crawler",
+            CreatedDate: dformat,
+            LastUpdateDate: dformat
+        };
+    });
+}
 
 //pushing to product table
 function pushToProductTable(products) {
