@@ -9,6 +9,10 @@ for (id = 1; id <= 1; id++) {
     filterProcess(id);
 };
 var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
+var d = new Date(),
+       formattedDate = [(d.getMonth() + 1),
+               d.getDate(),
+               d.getFullYear()].join('/');
 //retreival of products by category, and complete filter process.
 function filterProcess(id) {
     var getlistOptions = {
@@ -24,8 +28,15 @@ function filterProcess(id) {
               {
                   "modelFieldName": "categoryId",
                   "fieldValue": id,
-                  "operation": "5",
+                  "operation": 5,
                   "logicalOperator": 0,
+                  "sortBy": 0
+              },
+              {
+                  "modelFieldName": "createdDate",
+                  "fieldValue": formattedDate,
+                  "operation": 15,
+                  "logicalOperator": 1,
                   "sortBy": 0
               }
             ]
@@ -37,6 +48,7 @@ function filterProcess(id) {
         rawProducts = addStatus(rawProducts);
         convertLower(rawProducts);
         removeCommonWords(rawProducts);
+        console.log("received products:  " + rawProducts.length);
         var filteredArray = productFilter(rawProducts);
         var topProductArray = pickTopProducts(filteredArray);
         //var azureUrlArray = downloadUploadImages(topProductArray);
@@ -75,7 +87,7 @@ function addStatus(rawProducts) {
 // converting into lower case
 function convertLower(productsArray) {
     _.forEach(productsArray, function (item) {
-        item.description = item.description.toLowerCase();
+        item.description = (item.description && item.description.toLowerCase()) || '';
     });
 }
 
@@ -201,7 +213,7 @@ function downloadUploadImages(products) {
 //prepare data for push
 function transformProducts(productsList) {
     var d = new Date(),
-        dformat = [(d.getMonth() + 1),
+        formattedDate = [(d.getMonth() + 1),
                 d.getDate(),
                 d.getFullYear()].join('/'),
     resultArrayToPost = productsList.map(function (item) {
@@ -218,10 +230,10 @@ function transformProducts(productsList) {
             IsShippingFree: 1,
             Star: 4,
             IsPublished: 0,
-            ShowDate: dformat,
+            ShowDate: formattedDate,
             Source: "Crawler",
-            CreatedDate: dformat,
-            LastUpdateDate: dformat
+            CreatedDate: formattedDate,
+            LastUpdateDate: formattedDate
         };
     });
     return resultArrayToPost;
