@@ -1,60 +1,35 @@
-﻿var _ = require('lodash');
-var TvDealsLinks = [
-//Telivisions 
-{
-    url: "http://www.tvdeal.in/Regular-LED-Televisions",
-    selectors: {
-        elements: 'div[class*="three"]',
-        title: 'div.image > a > img',
-        description: '',
-        imageUrl: 'div.image > a > img',
-        actualPrice: 'div.price > span.price-old',
-        sellingPrice: 'div.price > span.price-new',
-        discount: '',
-        redirectUrl: 'div.image'
-    },
-    isScroll: false,
-    id: 5
-}];
-
-
-var casper = require('casper').create();
-casper.options.pageSettings.loadImages = false;
-casper.start();
-var productsList = [];
-
-TvDealsLinks.forEach(function (TvDealsCrawler) {
-    casper.thenOpen(TvDealsCrawler.url, function () {
-        if (!this.exists(TvDealsCrawler.selectors.elements) ||
-                !this.exists(TvDealsCrawler.selectors.title) ||
-                !this.exists(TvDealsCrawler.selectors.actualPrice) ||
-                !this.exists(TvDealsCrawler.selectors.sellingPrice) ||
-                !this.exists(TvDealsCrawler.selectors.redirectUrl) ||
-                !this.exists(TvDealsCrawler.selectors.imageUrl)) {
-            this.emit('selector.changed');
+﻿var d = new Date(),
+       formattedDate = [(d.getMonth() + 1),
+               d.getDate(),
+               d.getFullYear()].join('/');    
+var getlistOptions = {
+        method: 'POST',
+        url: "http://web.xavica.local/tdweb/api/productstage/getlist",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        json: {
+            "pageNumber": 0,
+            "pageSize": 0,
+            "filters": [
+              {
+                  "modelFieldName": "categoryId",
+                  "fieldValue": "1",
+                  "operation": 5,
+                  "logicalOperator": 0,
+                  "sortBy": 0
+              },
+              {
+                  "modelFieldName": "createdDate",
+                  "fieldValue": formattedDate,
+                  "operation": 15,
+                  "logicalOperator": 1,
+                  "sortBy": 0
+              }
+            ]
         }
-        this.echo("----------------------------------------");
-        if (TvDealsCrawler.isScroll === true) {
-            this.scrollToBottom();
-            casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
-            casper.then(function () {
-                this.scrollToBottom();
-                casper.waitForSelectorTextChange(TvDealsCrawler.selectors.elements, function () { });
-            });
-        }
-        var parsedItems = casper.evaluate(function (stubCrawler) {
-            
-            return "hello";
-        }, TvDealsCrawler);
-        if (parsedItems) {
-            for (var i = 0; i < parsedItems.length; i++) {
-                productsList.push(parsedItems[i]);
-            }
-        }
+    }
+    request(getlistOptions, function (error, response, body) {
+        rawProducts = JSON.parse(JSON.stringify(body));
+        console.log(rawProducts);
     });
-    casper.on('selector.changed', function () {
-        this.echo("from emit method");
-    });
-});
-
-casper.run();

@@ -178,21 +178,21 @@ var vendor = {
     id: 7
 },
 //Air conditioners , image property srcset
-    //{
-//    url: "http://www.infibeam.com/split-ac#capacity=1-1-1-4-ton&capacity=1-5-ton&capacity=1-6-ton-and-above&capacity=1-ton&capacity=below-1-ton&starRating=2-star&starRating=3-star&starRating=4-star&starRating=5-star&sort=relevance",
-//    selectors: {
-//        elements: 'div.resultsrow div.search-icon',
-//        title: 'div.title > a',
-//        description: '',
-//        imageUrl: 'div.product-img > a > picture > img',
-//        actualPrice: 'div.price> span.scratch',
-//        sellingPrice: 'div.price > span.final-price',
-//        discount: 'div.price > span.discount',
-//        redirectUrl: 'div.title > a'
-//    },
-//    isScroll: false,
-//    id: 8
-//    },
+    {
+    url: "http://www.infibeam.com/split-ac#capacity=1-1-1-4-ton&capacity=1-5-ton&capacity=1-6-ton-and-above&capacity=1-ton&capacity=below-1-ton&starRating=2-star&starRating=3-star&starRating=4-star&starRating=5-star&sort=relevance",
+    selectors: {
+        elements: 'div.resultsrow div.search-icon',
+        title: 'div.title > a',
+        description: '',
+        imageUrl: 'div.product-img > a > picture > img',
+        actualPrice: 'div.price> span.scratch',
+        sellingPrice: 'div.price > span.final-price',
+        discount: 'div.price > span.discount',
+        redirectUrl: 'div.title > a'
+    },
+    isScroll: false,
+    id: 8
+    },
 //games
         {
             url: "http://www.infibeam.com/gaming-consoles-handheld/search#nothing",

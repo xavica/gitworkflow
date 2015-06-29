@@ -80,7 +80,7 @@ var options = {
     headers: {
         'Content-Type': 'application/json'
     },
-    data: productArray
+    json: productArray
 };
 
 

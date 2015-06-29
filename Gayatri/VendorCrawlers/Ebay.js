@@ -19,7 +19,7 @@ var vendor = {
             discount: 'div.discountLabel > div > span',
             redirectUrl: 'div.imgListingContainer > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 4
     },
 // Laptops
@@ -35,7 +35,7 @@ var vendor = {
             discount: 'div.discountLabel > div > span',
             redirectUrl: 'div.imgListingContainer > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 1
     },
 ////Mobiles
@@ -51,7 +51,7 @@ var vendor = {
             discount: 'div.discountLabel > div > span',
             redirectUrl: 'div.imgListingContainer > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 3
     },
 //// Tablets
@@ -67,7 +67,7 @@ var vendor = {
             discount: 'div.discountLabel > div > span',
             redirectUrl: 'div.imgListingContainer > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 2
     },
 ///// Telivisions
@@ -83,7 +83,7 @@ var vendor = {
             discount: 'div.discountLabel > div > span',
             redirectUrl: 'div.imgListingContainer > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 5
     }]
 };

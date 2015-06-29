@@ -8,7 +8,7 @@ var directoryName = 'Images/';
 var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
 var getOptions = {
     method: 'GET',
-    url: "http://localhost:16193/api/productstage/getall",
+    url: "http://web.xavica.local/tdweb/api/productstage/getall",
     headers: {
         'Content-Type': 'application/json'
     },
@@ -48,7 +48,7 @@ request(getOptions, function (error, response, body) {
         item.description = item.description.toLowerCase();
     });
     //removal of common words
-    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&"];
+    var commonWords = [",", "/", "(", ")", " for ", " with ", " is ", " via ", " only ", " star rating", " tablet ", " mobile ", "-", "&","buy"];
     _.forEach(processArray, function (item) {
         _.forEach(commonWords, function (word) {
             item.description = item.description.replace(word, "");
@@ -60,7 +60,7 @@ request(getOptions, function (error, response, body) {
     //calling filter function
 
     //Filter products on each category id wise
-    _.times(14, function (id) {
+    _.times(15, function (id) {
         var arrayToFilter = [];
         _.forEach(processArray, function (product) {
             if (+product.categoryId === +id)
@@ -81,7 +81,7 @@ request(getOptions, function (error, response, body) {
         sortArray.forEach(function (topSortedItem) {
             topArrayToPost.push(topSortedItem);
 
-            console.log("product: " + id + " " + topArrayToPost.length);
+            //console.log("product: " + id + " " + topArrayToPost.length);
         });
     });
 
@@ -107,9 +107,10 @@ request(getOptions, function (error, response, body) {
         });
     });
     // console.log(resultArrayToPost);
-    console.log("resultArrayToPost:  " + resultArrayToPost.length);
 
-    downloadUploadImages(resultArrayToPost);
+    //downloadUploadImages(resultArrayToPost);
+    ChangeDateFormat(resultArrayToPost);
+    console.log("resultArrayToPost:  " + resultArrayToPost.length);
     pushToProductTable(resultArrayToPost);
 
 }); // request close
@@ -214,11 +215,38 @@ function downloadUploadImages(products) {
     });
 }
 
+function ChangeDateFormat(productsList) {
+    d = new Date(),
+       dformat = [(d.getMonth() + 1),
+               d.getDate(),
+               d.getFullYear()].join('/');
+    resultArrayToPost = productsList.map(function (item) {
+           return {
+               CategoryId: item.id,
+               ShortDescription: item.title,
+               Description: item.title,
+               RedirectUrl: item.redirectUrl,
+               ImageUrl: item.imageUrl,
+               StoreName: item.storeName,
+               ActualPrice: item.actualPrice,
+               CurrentPrice: item.sellingPrice,
+               DiscountPercentage: item.discount,
+               IsShippingFree: 1,
+               Star: 4,
+               IsPublished: 0,
+               ShowDate: dformat,
+               Source: "Crawler",
+               CreatedDate: dformat,
+               LastUpdateDate: dformat
+           };
+       });
+    }
+
 //pushing to product table
 function pushToProductTable(products) {
     var options = {
         method: 'POST',
-        url: "http://localhost:16193/api/productbulk",
+        url: "http://web.xavica.local/tdweb/api/productbulk",
         headers: {
             'Content-Type': 'application/json',
         },
@@ -228,6 +256,7 @@ function pushToProductTable(products) {
     function callback(error, response, body) {
         if (!error) {
             console.log(response.statusCode);
+            console.log("error occured");
             console.log(body);
         }
         else {

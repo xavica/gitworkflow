@@ -19,7 +19,7 @@ var vendor = {
             discount: 'div.product_img> span',
             redirectUrl: 'a.product_name'
         },
-        isScroll: false,
+         isScroll: true,
         id: 11
     },
     //Laptops
@@ -35,7 +35,7 @@ var vendor = {
             discount: 'div.product_img> span',
             redirectUrl: 'a.product_name'
         },
-        isScroll: false,
+         isScroll: true,
         id: 1
     },
    //Furniture
@@ -51,7 +51,7 @@ var vendor = {
             discount: 'div.product_img> span',
             redirectUrl: 'a.product_name'
         },
-        isScroll: false,
+         isScroll: true,
         id: 15
     }]
 };

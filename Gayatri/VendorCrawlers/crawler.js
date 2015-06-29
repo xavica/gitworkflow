@@ -7,17 +7,13 @@ var crawler = require('./xa-crawlerUtil.js'),
     casper = require('casper').create(),
     productsList = [],
     vendors = [
-        //require('./Amazon.js').getVendor(),
-        //require('./BabyOye.js').getVendor(),
+        ////require('./Amazon.js').getVendor(),
         //require('./BagItToday.js').getVendor(),
         //require('./CashKaro.js').getVendor(),
         //require('./CraftsVilla.js').getVendor(),
         //require('./CromaRetail.js').getVendor(),
-        //require('./DusKya.js').getVendor(),
         //require('./EzoneOnline.js').getVendor(),
-        //require('./FashionAndyou.js').getVendor(),
         //require('./FashionEra.js').getVendor(),
-        //require('./FirstCry.js').getVendor(),
         //require('./Flipkart.js').getVendor(),
         //require('./IndiaTimes.js').getVendor(),
         //require('./InfiBeam.js').getVendor(),
@@ -28,22 +24,26 @@ var crawler = require('./xa-crawlerUtil.js'),
         //require('./BookAdda.js').getVendor(),  
         //require('./Saholic.js').getVendor(), 
         //require('./SbMusic.js').getVendor(), 
-        //require('./HomeShop18.js').getVendor(), 
+        require('./HomeShop18.js').getVendor(), 
         //require('./TvDeals.js').getVendor(), 
-        //require('./Bajaao.js').getVendor(), 
+         //require('./GreenDust.js').getVendor(), 
+        //require('./Bajaao.js').getVendor(),
         //require('./GadgetsGuru.js').getVendor(),
         //require('./Ebay.js').getVendor(),
-        //require('./GreenDust.js').getVendor(), 
+   
 
                         //---------------------No title ----------------------
-               require('./Jabbong.js').getVendor(), //not executing even all selector are correct
+               //require('./Jabbong.js').getVendor(), //not executing even all selector are correct
+                  //require('./FirstCry.js').getVendor(),
+                //require('./FashionAndyou.js').getVendor(),
+        //require('./BabyOye.js').getVendor(),
 
                //---------------------Not pushing into productstage table -----------------------
 
-               //require('./Zansaar.js').getVendor() // extracted but not pushed into productstage.
+               //require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
                //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
                //require('./GiftEase.js').getVendor(), // not pushing products
-                //require('./Evok.js').getVendor(), 
+               // require('./Evok.js').getVendor(), 
                //require('./PepperFry.js').getVendor(),
 
     ];
@@ -66,9 +66,17 @@ vendors.forEach(function (vendor) {
     }
 });
 
+casper.on("selector.changed", function (vendorLink) {
+    this.echo("Some Selector has been changed: from emit method " + vendorLink.url);
+});
+casper.on('url.failed', function (vendorLink) {
+    this.echo("Url not working, from emit method: , " + vendorLink.url);
+});
+
 casper.then(function () {
     casper.echo('Finished all the vendors.');
 });
 
-
-casper.run();
+casper.run(function () {
+    casper.exit();
+});

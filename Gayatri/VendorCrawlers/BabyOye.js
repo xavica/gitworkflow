@@ -16,7 +16,7 @@ var vendor = {
             discount: '.offBg span.number',
             redirectUrl: 'div.big_prodetail_tab > a'
         },
-        isScroll: false,
+        isScroll: true,
         id: 11
     }]
 };

@@ -10,14 +10,14 @@ var vendor = {
     {
         url: "http://shopping.indiatimes.com/books/",
         selectors: {
-            elements: 'div.productlisting div.product-wrap',
+            elements: 'div[class="product-wrap flt"]',
             title: 'div.product-wrap > a.itemname',
             description: '',
             imageUrl: 'a > div.product > div > img',
             actualPrice: 'a > div.price-details > span.oldprice',
             sellingPrice: 'a > div.price-details > span.offerprice',
             discount: 'a > div.price-details > span.discount-price',
-            redirectUrl: 'div.product-wrap > a.itemname'
+            redirectUrl: 'a.itemname'
         },
         isScroll: false,
         id: 13
