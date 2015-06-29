@@ -5,16 +5,18 @@ var storage = require('azure-storage');
 var directoryName = 'Images/';
 
 var resultArrayToPost = [];
-for (id = 1; id <= 1; id++) {
+for (id = 1; id <= 15; id++) {
     filterProcess(id);
 };
 var processArray = [], resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
-var d = new Date(),
-       formattedDate = [(d.getMonth() + 1),
-               d.getDate(),
-               d.getFullYear()].join('/');
+
 //retreival of products by category, and complete filter process.
 function filterProcess(id) {
+    var d = new Date(),
+           formattedDate = [(d.getMonth() + 1),
+                   d.getDate(),
+                   d.getFullYear()].join('/');
+    console.log("formattedDate is:  " + formattedDate);
     var getlistOptions = {
         method: 'POST',
         url: "http://web.xavica.local/tdweb/api/productstage/getlist",
@@ -54,7 +56,6 @@ function filterProcess(id) {
         //var azureUrlArray = downloadUploadImages(topProductArray);
         var finalArray = transformProducts(topProductArray);
         pushToProductTable(finalArray);
-        //console.log("category: " + id + "  completed");
 
     });
 }
