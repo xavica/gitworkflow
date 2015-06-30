@@ -11,6 +11,8 @@ var storage = require('azure-storage');
 var directoryName = 'Images/';
 var Q = require('q');
 
+
+
 var resultArrayToPost = [];
 
 function generateUUID() {
@@ -99,7 +101,7 @@ function Category(id) {
         var topProducts = _.chain(filteredArray)
                         .sortBy('discountPercentage')
                         .reverse()
-                        .take(n || 20)
+                        .take(n || 2)
                         .value();
         return topProducts;
     }
@@ -187,7 +189,6 @@ function Category(id) {
             url = "http://web.xavica.local/tdweb/api/productstage/getlist",
             options = getOptionsProductStage(url, this.id, formattedDate);
         request(options, function (error, response, body) {
-
             var tempProducts = JSON.parse(JSON.stringify(body));
             that._rawProducts = _.map(tempProducts, function (item) {
                 return {
@@ -210,7 +211,8 @@ function Category(id) {
                     "status": true
                 };
             });
-            console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::"  + that._rawProducts.length);
+            console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length);
+            
             deferred.resolve(that._rawProducts);
         });
         return deferred.promise;
@@ -292,7 +294,7 @@ function Category(id) {
 
 }
 
-var categoryIds = [1, 2];//, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+var categoryIds = [1, 2, 3, 4];//, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 var categories = categoryIds.map(function (categoryId) {
     return new Category(categoryId);
 });
