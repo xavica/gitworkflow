@@ -1,0 +1,64 @@
+﻿body {
+}
+
+.banner {
+    background-image: url('pics/11-sea-beach-sand-wallpaper.jpg');
+    height: 500px;
+    margin-top:-30px;
+}
+.leftsideheading {
+    margin-top:100px;
+    margin-left:50px;
+}
+.leftPart{
+    margin-left:30px;
+}
+.leftPart2{
+    margin-left:44px;
+}
+/*.leftPart input{
+    width:200px;
+}*/
+.title{
+    text-align:center;
+    
+    /*color:blue;*/
+    text-decoration:underline;
+    
+}
+.circle{
+    height:150px;
+    width:150px;
+    /*border:1px solid black;*/
+    border-radius:78px;
+    background-color:pink;
+    font-size:15px;
+    /*padding-left:5px;*/
+   
+    text-align:center;
+}
+.circle >.icon {
+    position:relative;
+    top:50px;
+}
+.services{
+    margin-left:100px;
+}
+/*.editcontent1 p{
+    text-align:justify;
+}*/
+.service-block {
+  padding: 20px 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  /*background-color:black;*/
+}
+
+.service-block p,
+.service-block h3 {
+  color: black;
+}
+
+.service-block h3 a:hover{
+  text-decoration: none;
+}
