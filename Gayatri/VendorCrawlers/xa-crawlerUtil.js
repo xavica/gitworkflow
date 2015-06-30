@@ -127,7 +127,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                             }
 
                             redirectUrl = (redirectUrlElement && redirectUrlElement.getAttribute('href')) || '';
-                            imageUrlAttributeName = vendorLink.selectors.imageUrlAttribute || 'src';
+                            imageUrlAttributeName = stubCrawler.selectors.imageUrlAttribute || 'src';
                             tempImageUrl = (imageUrlElement && imageUrlElement.getAttribute(imageUrlAttributeName)) || '';
 
                             if (!tempImageUrl.match("^http")) {
