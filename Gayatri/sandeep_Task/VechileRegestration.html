@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Vehicle Registration View Model</title>
+    <link rel="stylesheet" type="text/css" href="costcostyles.css">
+    <style>
+        #newClick, #TranClick {
+            display: none;
+        }
+    </style>
+</head>
+
+<body bgcolor="lightblue">
+    <div class="border">
+        <p>Select the  type Of Registration Below</p>
+        <button type="button" id="NewId"> New </button> <span><button type="button" id="tranId"> Transfer </button></span>
+        <div id="newClick">
+            <u><h2> New Vehicle Registration details</h2></u>
+            <b>
+                <label>Vehicle Type <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></label>
+                <label>Select Region <select data-bind="options:region,value:regionSelected"></select></label>
+            </b>
+            <br /><br />
+            <!--<label>
+                Is It Union Territory..?<br><input type="radio" value="Yes" data-bind="checked:unionTerritory" />Yes
+                <input type="radio" value="No" data-bind="checked:unionTerritory" />No
+            </label>-->
+            <div class="but">
+                <button data-bind="click:newRegisterDetails"><b>View your Details here</b></button>
+                <form data-bind="text:details"></form>
+            </div>
+        </div>
+        <div id="TranClick">
+            <u><h2>Tranferring Registrations Details</h2></u>
+
+            <b>
+                <label>
+                    Is It Govt Vehicle..?<br><input type="radio" value="Yes" data-bind="checked:govtVehicle" />Yes
+                    <input type="radio" value="No" data-bind="checked:govtVehicle" />No
+                </label><br />
+            </b>
+            <button data-bind="click:govtVehicleType"><b>Submit</b></button>
+            <form data-bind="text:govtDetails"></form>
+            <b>
+                <label>Vehicle Type <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></label>
+                <br />
+                <label>Select Transfer Registration Types<select data-bind="options:transfer,value:transferSelected"></select></label>
+                <br />
+                <!-- <label>Manufacture Date of vehicle:</label><input type="date" data-bind="value:manufactureDate" /><br />-->
+                <label>Manufactured Year of vehicle:</label><input type="text" data-bind="value:manufactureDate" /><br />
+
+                <label>
+                    Is It Fancy Number..?<br><input type="radio" value="Yes" data-bind="checked:fancyNumber" />Yes
+                    <input type="radio" value="No" data-bind="checked:fancyNumber" />No
+                </label>
+            </b>
+            <br /><br />
+            <div class="but">
+                <button data-bind="click:transferRegisterDetails"><b>View your Details here</b></button>
+                <form data-bind="text:transDetails"></form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/knockout-3.3.0.js"></script>
+    <script type="text/javascript" src="VechileRegestration.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#NewId").click(function () {
+                $("#newClick").slideToggle("slow");
+            });
+        });
+
+        $(document).ready(function () {
+            $("#tranId").click(function () {
+                $("#TranClick").slideToggle("slow");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
