@@ -8,25 +8,32 @@
 //var log4js = require('log4js');
 //var logger = log4js.getLogger('uploader');
 var _ = require('lodash');
-
+exports.logString = "";
+var starString = "**********************************************************************";
+exports.logAppend = function(str){
+    exports.logString +=  str;
+}
 exports.defaultScroll = function (casper, crawlerDefinition) {
     if (crawlerDefinition.isScroll === true) {
         casper.scrollToBottom();
         casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-            casper.echo('completed First scroll');
+            casper.echo('Completed First scroll');
+            exports.logAppend('Completed First scroll\r\n');
         });
-        casper.then(function () {
-            casper.scrollToBottom();
-            casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-                casper.echo('completed Second scroll');
-            });
-        });
-        casper.then(function () {
-            casper.scrollToBottom();
-            casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-                casper.echo('completed Third scroll');
-            });
-        });
+        //casper.then(function () {
+        //    casper.scrollToBottom();
+        //    casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
+        //        casper.echo('Completed Second scroll');
+        //        exports.logAppend('Completed Second scroll \r\n');
+        //    });
+        //});
+        //casper.then(function () {
+        //    casper.scrollToBottom();
+        //    casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
+        //        casper.echo('Completed Third scroll');
+        //        exports.logAppend( 'Completed Third scroll\r\n');
+        //    });
+        //});
     }
 };
 
@@ -35,8 +42,10 @@ exports.parseUrls = function (vendorLinks, casper) {
     vendorLinks.forEach(function (vendorLink) {
         casper.thenOpen(vendorLink.url, function (response) {
             var parsedItems = [], proceed = true;
-            casper.echo("*********************************************************");
+            casper.echo(starString);
+            exports.logAppend( starString + "\r\n");
             casper.echo("Opening Link ::" + vendorLink.url);
+            exports.logAppend( " Opening Link ::" + vendorLink.url + "\r\n");
             casper.then(function () {
                 if (response.status === undefined || response.status >= 400) {
                     proceed = false;
@@ -65,6 +74,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                 //----------------------   if selectors not there, then below else wont get executed.
 
                 if (proceed) {
+                    exports.logAppend( "Started Processing URL \r\n");
                     parsedItems = casper.evaluate(function (stubCrawler) {
                         "use strict";
                         var index = 0,
@@ -91,7 +101,8 @@ exports.parseUrls = function (vendorLinks, casper) {
                             tempUrl,
                             host;
                         //__utils__.echo('started document parsing');
-                        __utils__.echo("** STARTED PROCESSING URL ** ");
+                        __utils__.echo("** STARTED PROCESSING URL **");
+                        
                         for (index = 0; index < elements.length; index = index + 1) {
                             titleElement = elements[index].querySelector(stubCrawler.selectors.title);
                             actualPriceElement = elements[index].querySelector(stubCrawler.selectors.actualPrice);
@@ -130,7 +141,9 @@ exports.parseUrls = function (vendorLinks, casper) {
                             redirectUrl = (redirectUrlElement && redirectUrlElement.getAttribute('href')) || '';
                             imageUrlAttributeName = stubCrawler.selectors.imageUrlAttribute || 'src';
                             tempImageUrl = (imageUrlElement && imageUrlElement.getAttribute(imageUrlAttributeName)) || '';
-
+                            if (tempImageUrl.indexOf("//") === 0) {
+                               tempImageUrl = tempImageUrl.replace("//", "");
+                            }
                             if (!tempImageUrl.match("^http")) {
                                 parser.href = stubCrawler.url;
                                 host = parser.protocol + "//" + parser.hostname;
@@ -167,7 +180,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                                 });
                             }
                         }
-                        __utils__.echo("** COMPLETED URL ** ");
+                        __utils__.echo("** Completed URL ** ");
                         return tempProducts;
                     }, vendorLink);
 
@@ -175,6 +188,7 @@ exports.parseUrls = function (vendorLinks, casper) {
             });
             casper.then(function () {
                 if (parsedItems) {
+                    exports.logAppend( "Products Extracted from URL [ " + vendorLink.url + " ] are:: " + parsedItems.length + "\r\n");
                     _.each(parsedItems, function (item) {
                         productsList.push(item);
                     });
@@ -232,6 +246,6 @@ exports.defaultPushToStage = function (productsList, storeName, casper) {
     });
     casper.then(function () {
         casper.echo(storeName + "  Products Pushed To 'Productstage' Table");
+        exports.logAppend( storeName + "Products Pushed To 'Productstage' Table\r\n");
     });
 };
-

@@ -57,16 +57,16 @@ var vendor = {
         },
         {
             //WATCHES
-            url: "http://www.bagittoday.com/faces/tiles/search.jsp?q=watches+for+men&searchKeyword_q_tmp=watches&productID=&narrowcatalogueID=2&narrowcategoryID=&narrowparentCategoryID=&catalogueID=2&categoryID=&parentCategoryID=&sid=&bid=&prc=&k1=&k2=&k3=&k4=&k5=&k6=&k7=&k8=&k9=&k10=&k11=&k12=&vt=g&rpp=&col=&sort=16&pn=1&dcty=&bnm=&narr=&entityType=&entityId=&topParent=&pageName=%2Ftiles%2Fsearch.jsp&brandId=&brandCmsFlag=&cnm=&cartSize=0&boutiqueID=&parentBoutiqueID=&narrowboutiqueID=&sortCall=sortCall&keywordText=watches+for+men&booksORnonbooks=&callTextSearchOrNot=Y&listSize=0&searchselectinparam=N",
+            url: "http://www.bagittoday.com/faces/tiles/search.jsp?q=watches%20for%20men&catalogueID=2&categoryID=44&cnm=",
             selectors: {
-                elements: 'div[class="apprprobox"]',
-                title: 'div.apprimgbox_search > a > img',
+                elements: 'div[class="eleprobox"]',
+                title: 'div.proimgbox > a > img',
                 description: '',
-                imageUrl: 'div.apprimgbox_search > a > img',
-                actualPrice: 'span.oldprc > span:nth-child(2)',
-                sellingPrice: 'span.newprc',
-                discount: 'div.discont-value',
-                redirectUrl: 'div.apprimgbox_search > a'
+                imageUrl: 'div.proimgbox > a > img',
+                actualPrice: 'div.proprcbox > span.oldprc > span:nth-child(2)',
+                sellingPrice: 'div.proprcbox > span.newprc',
+                discount: 'div.proprcbox .discont-value',
+                redirectUrl: 'div.proimgbox > a'
             },
             isScroll: true,
             id: 6

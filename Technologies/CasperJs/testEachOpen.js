@@ -13,13 +13,13 @@ function append(file, content, callback) {
     }
 }
 
-// pushing Flipkart items to ProductStage Table.
+// writing data to text file
 casper.then(function () {
     var items = ['www.google.com', 'www.amazon.com', 'www.murthy.com', 'www.deals2buy.com'];
     items.forEach(function (url) {
         casper.thenOpen(url, {}, function () {
             console.log(url + ' opened');
-            append("logs/06-30-2015.txt", url + ' opened \n', function (err) {
+            append("logs/06-30-2015.txt", url + ' opened \n' + url, function (err) {
                 if (err) {
                     return console.log(err);
                 }
@@ -40,6 +40,5 @@ casper.then(function () {
         casper.exit();
     });
 });
-////Getting products from ProductStageTable
 
 casper.run();

@@ -145,7 +145,7 @@ function Category(id) {
         request.head(uri, function (err, res, body) {
             if (res && res.headers && res.headers['content-type'].indexOf('image') > -1) {
                 //console.log(res);
-                //console.log('content-type:' + res.headers['content-type']);
+                console.log('content-type:' + res.headers['content-type']);
                 request(uri).pipe(fs.createWriteStream(destinationFile))
                             .on('close', function () {
                                 product.imageFileName = downloadedFileName;
@@ -212,7 +212,7 @@ function Category(id) {
                 };
             });
             console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length);
-            
+
             deferred.resolve(that._rawProducts);
         });
         return deferred.promise;
@@ -221,7 +221,7 @@ function Category(id) {
     this.processProducts = function () {
 
         if (that._rawProducts && that._rawProducts.length) {
-            console.log('Started Processing of Category Id: ' + that.id );
+            console.log('Started Processing of Category Id: ' + that.id);
             removeCommonWords(that._rawProducts);
             that.products = filterProductsByDiscount(that._rawProducts);
             console.log('Finished Filtering Products of Category Id: ' + that.id);
@@ -238,13 +238,13 @@ function Category(id) {
         var lastPromise = that.processedProducts.reduce(function (promise, product) {
             return promise.then(function (result) {
                 if (result) {
-                   //Console.log (previous file downloaded);
+                    //Console.log (previous file downloaded);
                 }
                 return downloadImage(product);
             });
         }, Q.resolve());
         lastPromise.then(function () {
-            console.log('Finished Downloaded of Product Images of Category ::' + that.id );
+            console.log('Finished Downloaded of Product Images of Category ::' + that.id);
         });
         return lastPromise;
     };
@@ -288,13 +288,13 @@ function Category(id) {
             }
             request(options, callback);
         }
-       
+
         return deferred.promise;
     };
 
 }
 
-var categoryIds = [1,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+var categoryIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 var categories = categoryIds.map(function (categoryId) {
     return new Category(categoryId);
 });

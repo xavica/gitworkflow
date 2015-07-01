@@ -1,0 +1,15 @@
+**********************************************************************
+ Opening Link ::http://www.rajmusical.com/musical-instruments/guitars/electric-guitars.html
+** STARTED PROCESSING URL ** 
+Products Extracted from URL [ http://www.rajmusical.com/musical-instruments/guitars/electric-guitars.html ] are:: 27
+**********************************************************************
+ Opening Link ::http://www.rajmusical.com/hot-deals/deal-of-the-day.html
+**********************************************************************
+From Emit Method ==>> Some Selector Has Been Changed for URL :: http://www.rajmusical.com/hot-deals/deal-of-the-day.html
+Products Extracted from URL [ http://www.rajmusical.com/hot-deals/deal-of-the-day.html ] are:: 0
+**********************************************************************
+**********************************************************************
+Total Products Extracted From  RajMusical  Are:: 27
+RajMusicalProducts Pushed To 'Productstage' Table
+Finished Processing All Vendors
+**********************************************************************
