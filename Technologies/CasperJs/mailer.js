@@ -1,5 +1,5 @@
 ﻿var nodemailer = require("nodemailer");
-var rootFolder = "/logs/";
+var rootFolder = "logs/";
 // create reusable transport method (opens pool of SMTP connections)
 var smtpTransport = nodemailer.createTransport("SMTP", {
     service: "Gmail",

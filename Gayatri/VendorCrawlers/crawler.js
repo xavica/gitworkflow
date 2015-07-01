@@ -7,9 +7,9 @@ var crawler = require('./xa-crawlerUtil.js'),
     casper = require('casper').create(),
     productsList = [],
     vendors = [
-        ////require('./Amazon.js').getVendor(),
+        ////require('./Amazon.js').getVendor(), //need to fix title 
         //require('./BagItToday.js').getVendor(),
-        require('./CashKaro.js').getVendor(),
+        //require('./CashKaro.js').getVendor(),
         //require('./CraftsVilla.js').getVendor(),
         //require('./CromaRetail.js').getVendor(),
         //require('./EzoneOnline.js').getVendor(),
@@ -26,25 +26,23 @@ var crawler = require('./xa-crawlerUtil.js'),
         //require('./SbMusic.js').getVendor(), 
         //require('./HomeShop18.js').getVendor(), 
         //require('./TvDeals.js').getVendor(), 
-         //require('./GreenDust.js').getVendor(), 
+        // require('./GreenDust.js').getVendor(), 
         //require('./Bajaao.js').getVendor(),
         //require('./GadgetsGuru.js').getVendor(),
+       //require('./FirstCry.js').getVendor(),
+         //require('./GiftEase.js').getVendor(), 
         //require('./Ebay.js').getVendor(),
-   
 
-                        //---------------------No title ----------------------
-               //require('./Jabbong.js').getVendor(), //not executing even all selector are correct
-                  //require('./FirstCry.js').getVendor(),
-                //require('./FashionAndyou.js').getVendor(),
-        //require('./BabyOye.js').getVendor(),
+       //require('./Jabbong.js').getVendor(), 
+      //require('./FashionAndyou.js').getVendor(),
+      //  require('./BabyOye.js').getVendor(),
 
                //---------------------Not pushing into productstage table -----------------------
 
-               //require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
-               //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
-               //require('./GiftEase.js').getVendor(), // not pushing products
-               // require('./Evok.js').getVendor(), 
-               //require('./PepperFry.js').getVendor(),
+               require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
+               require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
+                require('./Evok.js').getVendor(), 
+               require('./PepperFry.js').getVendor(),
 
     ];
 
@@ -58,7 +56,8 @@ vendors.forEach(function (vendor) {
         });
         casper.then(function () {
             if (productsList) {
-                casper.echo('Vendor Name' + vendor.storeName + ", Total Products List:" + productsList.length);
+                //casper.echo('Vendor Name' + vendor.storeName + ", Total Products List:" + productsList.length);
+                casper.echo("Total Products Extracted From  " + vendor.storeName + "  Are:: " + productsList.length);
                 // pushing items to ProductStage Table.
                 crawler.defaultPushToStage(productsList, vendor.storeName, casper);
             }
@@ -67,14 +66,20 @@ vendors.forEach(function (vendor) {
 });
 
 casper.on("selector.changed", function (vendorLink) {
-    this.echo("Some Selector has been changed: from emit method " + vendorLink.url);
+    this.echo("From Emit Method ==>> Some Selector Has Been Changed ");
+    this.echo("------------------------------------------------");
+    this.echo(vendorLink.url);
+    this.echo("___________________________________________");
 });
 casper.on('url.failed', function (vendorLink) {
-    this.echo("Url not working, from emit method: , " + vendorLink.url);
+    this.echo("From Emit Method ==>> URL Not Working ");
+    this.echo("-----------------------------------------------");
+    this.echo(vendorLink.url);
+    this.echo("___________________________________________");
 });
 
 casper.then(function () {
-    casper.echo('Finished all the vendors.');
+    casper.echo('Finished Processing All Vendors');
 });
 
 casper.run(function () {

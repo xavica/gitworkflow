@@ -13,18 +13,18 @@ exports.defaultScroll = function (casper, crawlerDefinition) {
     if (crawlerDefinition.isScroll === true) {
         casper.scrollToBottom();
         casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-            casper.echo('waiting for scroll');
+            casper.echo('completed First scroll');
         });
         casper.then(function () {
             casper.scrollToBottom();
             casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-                casper.echo('waiting for scroll');
+                casper.echo('completed Second scroll');
             });
         });
         casper.then(function () {
             casper.scrollToBottom();
             casper.waitForSelectorTextChange(crawlerDefinition.selectors.elements, function () {
-                casper.echo('waiting for scroll');
+                casper.echo('completed Third scroll');
             });
         });
     }
@@ -35,16 +35,15 @@ exports.parseUrls = function (vendorLinks, casper) {
     vendorLinks.forEach(function (vendorLink) {
         casper.thenOpen(vendorLink.url, function (response) {
             var parsedItems = [], proceed = true;
-
-            casper.echo("Opening link: " + vendorLink.url);
-            casper.echo("----------------------------------------");
+            casper.echo("*********************************************************");
+            casper.echo("Opening Link ::" + vendorLink.url);
             casper.then(function () {
                 if (response.status === undefined || response.status >= 400) {
                     proceed = false;
                     this.emit('url.failed', vendorLink);
                 }
             });
-            casper.echo("Opened Url, Identifying Selectors");
+            //casper.echo("Opened Url, Identifying Selectors");
             casper.then(function () {
                 if (proceed && (!this.exists(vendorLink.selectors.elements) ||
                              !this.exists(vendorLink.selectors.title) ||
@@ -64,6 +63,7 @@ exports.parseUrls = function (vendorLinks, casper) {
 
             casper.then(function () {
                 //----------------------   if selectors not there, then below else wont get executed.
+
                 if (proceed) {
                     parsedItems = casper.evaluate(function (stubCrawler) {
                         "use strict";
@@ -90,7 +90,8 @@ exports.parseUrls = function (vendorLinks, casper) {
                             imageUrl,
                             tempUrl,
                             host;
-                        __utils__.echo('started document parsing');
+                        //__utils__.echo('started document parsing');
+                        __utils__.echo("** STARTED PROCESSING URL ** ");
                         for (index = 0; index < elements.length; index = index + 1) {
                             titleElement = elements[index].querySelector(stubCrawler.selectors.title);
                             actualPriceElement = elements[index].querySelector(stubCrawler.selectors.actualPrice);
@@ -149,7 +150,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                                 fullRedirectUrl = redirectUrl;
                             }
                             if (title && discount && actualPrice && redirectUrl) {
-                                __utils__.echo(title);
+                                //__utils__.echo(title);
                                 //__utils__.echo(imageUrl);
                                 //__utils__.echo(actualPrice);
                                 //__utils__.echo(sellingPrice);
@@ -166,6 +167,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                                 });
                             }
                         }
+                        __utils__.echo("** COMPLETED URL ** ");
                         return tempProducts;
                     }, vendorLink);
 
@@ -186,7 +188,7 @@ exports.parseUrls = function (vendorLinks, casper) {
 
 exports.defaultPushToStage = function (productsList, storeName, casper) {
     //Creating proper input array.
-    var batchSize = 20,
+    var batchSize = 100,
         d = new Date(),
         dformat = [(d.getMonth() + 1),
                 d.getDate(),
@@ -212,10 +214,10 @@ exports.defaultPushToStage = function (productsList, storeName, casper) {
                 LastUpdateDate: dformat
             };
         });
-    casper.echo("--------------------------------------------------------");
-    casper.echo("Total products extracted From  :  "  + storeName + "  are:  " + productListToPush.length);
+    //casper.echo("--------------------------------------------------------");
+    //casper.echo("Total products extracted From  "  + storeName + "  are:: " + productListToPush.length);
     pushingArray = _.chunk(productListToPush, batchSize);
-    casper.echo("No.of Chunks for Batch Push:   " + pushingArray.length + " Of each batch 20");
+    //casper.echo("No.of Chunks for Batch Push:   " + pushingArray.length + " Of each batch 20");
 
     pushingArray.forEach(function (batchArray) {
 
@@ -229,7 +231,7 @@ exports.defaultPushToStage = function (productsList, storeName, casper) {
         });
     });
     casper.then(function () {
-        casper.echo(storeName + "  products pushed to productstage table");
+        casper.echo(storeName + "  Products Pushed To 'Productstage' Table");
     });
 };
 
