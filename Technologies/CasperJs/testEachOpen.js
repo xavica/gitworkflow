@@ -3,13 +3,15 @@ var fs = require('fs');
 var casper = require('casper').create();
 casper.start();
 casper.echo(fs);
-fs.write("logs/test", "Hey there!", function (err) {
-    if (err) {
-        return console.log(err);
-    }
 
-    console.log("The file was saved!");
-});
+function append(file, content, callback) {
+    if (fs.appendFile) {
+        fs.appendFile(file, content, callback);
+    } else {
+        fs.write(file, content, 'a');
+        callback();
+    }
+}
 
 // pushing Flipkart items to ProductStage Table.
 casper.then(function () {
@@ -17,7 +19,14 @@ casper.then(function () {
     items.forEach(function (url) {
         casper.thenOpen(url, {}, function () {
             console.log(url + ' opened');
-           
+            append("logs/06-30-2015.txt", url + ' opened \n', function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+
+                console.log("The file was saved!");
+            });
+
             setTimeout(function () { 
                 console.log(i);
             }, Math.floor((Math.random() * 500) + 1000));
