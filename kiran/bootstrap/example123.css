@@ -62,3 +62,6 @@
 .service-block h3 a:hover{
   text-decoration: none;
 }
+.heading h1{
+    text-align:center;
+}
