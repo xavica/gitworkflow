@@ -1,8 +1,15 @@
 ﻿
-
+var fs = require('fs');
 var casper = require('casper').create();
 casper.start();
+casper.echo(fs);
+fs.write("logs/test", "Hey there!", function (err) {
+    if (err) {
+        return console.log(err);
+    }
 
+    console.log("The file was saved!");
+});
 
 // pushing Flipkart items to ProductStage Table.
 casper.then(function () {
@@ -10,6 +17,7 @@ casper.then(function () {
     items.forEach(function (url) {
         casper.thenOpen(url, {}, function () {
             console.log(url + ' opened');
+           
             setTimeout(function () { 
                 console.log(i);
             }, Math.floor((Math.random() * 500) + 1000));
