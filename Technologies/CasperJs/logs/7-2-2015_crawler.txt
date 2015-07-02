@@ -1,0 +1,82 @@
+**********************************************************************
+ Opening Link ::http://www.inliving.com/deals-and-discounts
+Started Processing URL 
+Products Extracted from URL [ http://www.inliving.com/deals-and-discounts ] are:: 30
+**********************************************************************
+ Opening Link ::http://www.inliving.com/deals-and-discounts?p=2
+Started Processing URL 
+Products Extracted from URL [ http://www.inliving.com/deals-and-discounts?p=2 ] are:: 26
+**********************************************************************
+ Opening Link ::http://www.inliving.com/deals-and-discounts?p=2
+Started Processing URL 
+Products Extracted from URL [ http://www.inliving.com/deals-and-discounts?p=2 ] are:: 26
+**********************************************************************
+Total Products Extracted From  InLiving  Are:: 82
+InLivingProducts Pushed To 'Productstage' Table
+**********************************************************************
+ Opening Link ::http://www.mirraw.com/store/jewellery?min_price=1001&max_price=60000&sort=discount
+Started Processing URL 
+Products Extracted from URL [ http://www.mirraw.com/store/jewellery?min_price=1001&max_price=60000&sort=discount ] are:: 48
+**********************************************************************
+ Opening Link ::http://www.mirraw.com/store/necklace-sets?sort=discount
+Started Processing URL 
+Products Extracted from URL [ http://www.mirraw.com/store/necklace-sets?sort=discount ] are:: 48
+**********************************************************************
+ Opening Link ::http://www.mirraw.com/store/mangalsutra?sort=discount
+Started Processing URL 
+Products Extracted from URL [ http://www.mirraw.com/store/mangalsutra?sort=discount ] are:: 48
+**********************************************************************
+ Opening Link ::http://www.mirraw.com/women/jewellery/earrings/studs?sort=discount
+Started Processing URL 
+Products Extracted from URL [ http://www.mirraw.com/women/jewellery/earrings/studs?sort=discount ] are:: 48
+**********************************************************************
+ Opening Link ::http://www.mirraw.com/store/anklets?sort=discount
+Started Processing URL 
+Products Extracted from URL [ http://www.mirraw.com/store/anklets?sort=discount ] are:: 48
+**********************************************************************
+Total Products Extracted From  Mirraw  Are:: 240
+MirrawProducts Pushed To 'Productstage' Table
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/special-deals
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/special-deals ] are:: 17
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/special-deals?page=2
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/special-deals?page=2 ] are:: 18
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/guitar-deals?sort_by=price-ascending
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/guitar-deals?sort_by=price-ascending ] are:: 19
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/guitar-deals?page=2&sort_by=price-ascending
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/guitar-deals?page=2&sort_by=price-ascending ] are:: 19
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/drum-deals
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/drum-deals ] are:: 18
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/drum-deals?page=2
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/drum-deals?page=2 ] are:: 15
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/keyboard-deals
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/keyboard-deals ] are:: 20
+**********************************************************************
+ Opening Link ::http://www.bajaao.com/collections/keyboard-deals?page=2
+Started Processing URL 
+Products Extracted from URL [ http://www.bajaao.com/collections/keyboard-deals?page=2 ] are:: 11
+**********************************************************************
+Total Products Extracted From  Bajaao  Are:: 137
+BajaaoProducts Pushed To 'Productstage' Table
+**********************************************************************
+ Opening Link ::http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx
+Started Processing URL 
+Products Extracted from URL [ http://www.gadgetsguru.com/cameras-digitalcameras-accessories-cheap-sale.aspx ] are:: 27
+**********************************************************************
+Total Products Extracted From  GadgetsGuru  Are:: 27
+GadgetsGuruProducts Pushed To 'Productstage' Table
+Finished Processing All Vendors
+**********************************************************************

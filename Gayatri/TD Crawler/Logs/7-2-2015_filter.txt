@@ -1,0 +1,37 @@
+**********************************************************************
+Category Id::1:: Recieved Products From Product Stage ::20
+Started Processing of Category Id: 1
+Finished Filtering Products of Category Id: 1
+Filtered Products Count ::20
+Finished Downloaded of Product Images of Category ::1
+Finished Uploaded Images of Category ::1
+Finsihed Pushed into Products table for Category id: 1, Products Count::20
+Category Id: 1:: Finished Processing
+**********************************************************************
+Category Id::2:: Recieved Products From Product Stage ::0 WARN
+[FAIL] - No products received from Product Stage of Category Id to Process2
+[WARN]- No products received from Product Stage of Category Id to Process2
+[WARN]- Not Downloaded any images of Category ::2
+[WARN] - Not Uploaded any imaages of Category ::2
+[WARN] - No products are pushed to Product of Category Id :2
+Category Id: 2:: Finished Processing
+**********************************************************************
+Category Id::3:: Recieved Products From Product Stage ::37
+Started Processing of Category Id: 3
+Finished Filtering Products of Category Id: 3
+Filtered Products Count ::27
+Finished Downloaded of Product Images of Category ::3
+Finished Uploaded Images of Category ::3
+Finsihed Pushed into Products table for Category id: 3, Products Count::20
+Category Id: 3:: Finished Processing
+**********************************************************************
+Category Id::4:: Recieved Products From Product Stage ::18
+Started Processing of Category Id: 4
+Finished Filtering Products of Category Id: 4
+Filtered Products Count ::18
+Finished Downloaded of Product Images of Category ::4
+Finished Uploaded Images of Category ::4
+Finsihed Pushed into Products table for Category id: 4, Products Count::18
+Category Id: 4:: Finished Processing
+**********************************************************************
+Finished All Categories Processing
