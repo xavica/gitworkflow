@@ -1,35 +1,31 @@
-﻿var d = new Date(),
-       formattedDate = [(d.getMonth() + 1),
-               d.getDate(),
-               d.getFullYear()].join('/');    
-var getlistOptions = {
-        method: 'POST',
-        url: "http://web.xavica.local/tdweb/api/productstage/getlist",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        json: {
-            "pageNumber": 0,
-            "pageSize": 0,
-            "filters": [
-              {
-                  "modelFieldName": "categoryId",
-                  "fieldValue": "1",
-                  "operation": 5,
-                  "logicalOperator": 0,
-                  "sortBy": 0
-              },
-              {
-                  "modelFieldName": "createdDate",
-                  "fieldValue": formattedDate,
-                  "operation": 15,
-                  "logicalOperator": 1,
-                  "sortBy": 0
-              }
-            ]
+﻿function img() {
+    var imageUrlAttribute = '',
+        parser = document.createElement('a');
+    var ele = document.querySelectorAll('.grid-view .box.product_div .inside');
+    for (i = 0; i < ele.length; i++) {
+        var imageUrlElement = ele[i].querySelector('p.product_image > a > img');
+
+        //imageUrlAttributeName = imageUrlAttribute || 'src';
+        tempImageUrl = (imageUrlElement &&
+                       (imageUrlAttributeName && imageUrlElement.getAttribute(imageUrlAttributeName)) || imageUrlElement.getAttribute('src'))
+                       || '';
+        if (tempImageUrl.indexOf("//") === 0) {
+            tempImageUrl = tempImageUrl.replace("//", "");
         }
+        if (!tempImageUrl.match("^http")) {
+            parser.href = "http://www.homeshop18.com/laptops/categoryid:3291/search:laptops/sort:Discounts/";
+            host = parser.protocol + "//" + parser.hostname;
+            tempUrl = (tempImageUrl.match("^/") && tempImageUrl) || "/" + tempImageUrl;
+            imageUrl = host + tempUrl;
+        }
+        else {
+            imageUrl = tempImageUrl;
+        }
+        console.log(imageUrl);
     }
-    request(getlistOptions, function (error, response, body) {
-        rawProducts = JSON.parse(JSON.stringify(body));
-        console.log(rawProducts);
-    });
+}
+
+
+for (i = 0; i < ele.length; i++) {
+    console.log(ele[i].querySelector('p.product_image > a > img').getAttribute('src'));
+}

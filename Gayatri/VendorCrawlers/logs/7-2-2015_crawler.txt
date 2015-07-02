@@ -1,0 +1,9 @@
+**********************************************************************
+ Opening Link ::http://www.shopclues.com/computers/laptop-special.html?sort_by=hotdeals&sort_order=desc
+Started Processing URL 
+Products Extracted from URL [ http://www.shopclues.com/computers/laptop-special.html?sort_by=hotdeals&sort_order=desc ] are:: 36
+**********************************************************************
+Total Products Extracted From  ShopClues  Are:: 36
+ShopCluesProducts Pushed To 'Productstage' Table
+Finished Processing All Vendors
+**********************************************************************

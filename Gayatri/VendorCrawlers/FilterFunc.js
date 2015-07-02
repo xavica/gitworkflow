@@ -10,9 +10,26 @@ var fs = require('fs');
 var storage = require('azure-storage');
 var directoryName = 'Images/';
 var Q = require('q');
-
-
-
+var configurations = require('./configurations.js').configurations,
+    urlsConfig = configurations.urls;
+var starString = "**********************************************************************",
+starStringWithNewLine = "**********************************************************************\r\n",
+filterString = "",
+d = new Date(),
+        dformat = [(d.getMonth() + 1),
+                d.getDate(),
+                d.getFullYear()].join('-'),
+logAppend = function (str) {
+    filterString += str;
+}
+function append(file, content, callback) {
+    if (fs.appendFile) {
+        fs.appendFile(file, content, callback);
+    } else {
+        fs.write(file, content, 'a');
+        callback();
+    }
+}
 var resultArrayToPost = [];
 
 function generateUUID() {
@@ -26,9 +43,6 @@ function generateUUID() {
                 });
     return uuid;
 }
-
-
-
 var resultArray = [], discardedArray = [], resultArrayToPost = [], topArrayToPost = [];
 
 
@@ -172,10 +186,11 @@ function Category(id) {
                             if (error) {
                                 console.log("Couldn't upload file %s", destinationFileName);
                                 console.error(error);
+                                logAppend("[WARN] - Couldn't upload file %s", destinationFileName + " \r\n");
                                 deferred.reject(false, 'Having trouble to upload image :' + destinationFileName);
 
                             } else {
-                                var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + destinationFileName;
+                                var resultImageUrl = urlsConfig.azureImageUrl + destinationFileName;
                                 product.imageUrl = resultImageUrl;
                                 deferred.resolve(true, destinationFileName);
                             }
@@ -190,7 +205,7 @@ function Category(id) {
 
     this.getProducts = function () {
         var deferred = Q.defer(),
-            url = "http://web.xavica.local/tdweb/api/productstage/getlist",
+            url = urlsConfig.productGetlist,
             options = getOptionsProductStage(url, this.id, formattedDate);
         request(options, function (error, response, body) {
             if (response.statusCode != 200) {
@@ -220,6 +235,7 @@ function Category(id) {
                     };
                 });
                 console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length);
+                logAppend('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length + "\r\n");
                 deferred.resolve(that._rawProducts);
             }
 
@@ -231,13 +247,17 @@ function Category(id) {
 
         if (that._rawProducts && that._rawProducts.length) {
             console.log('Started Processing of Category Id: ' + that.id);
+            logAppend('Started Processing of Category Id: ' + that.id +"\r\n");
             removeCommonWords(that._rawProducts);
             that.products = filterProductsByDiscount(that._rawProducts);
             console.log('Finished Filtering Products of Category Id: ' + that.id);
             console.log('Filtered Products Count ::' + that.products.length);
+            logAppend('Finished Filtering Products of Category Id: ' + that.id + "\r\n");
+            logAppend('Filtered Products Count ::' + that.products.length + "\r\n");
         }
         else {
             console.log('No products received from Product Stage of Category Id to Process' + that.id);
+            logAppend('[FAIL] - No products received from Product Stage of Category Id to Process' + that.id + "\r\n");
         }
 
     };
@@ -248,6 +268,7 @@ function Category(id) {
         }
         else {
             console.log('No products received from Product Stage for Sort and Pick of Category Id::' + that.id);
+            logAppend('[WARN]- No products received from Product Stage of Category Id to Process' + that.id + "\r\n");
         }
     };
 
@@ -265,9 +286,11 @@ function Category(id) {
         lastPromise.then(function () {
             if (that.processedProducts.length === 0) {
                 console.log('Not Downloaded any images of Category ::' + that.id);
+                logAppend('[WARN]- Not Downloaded any images of Category ::' + that.id + "\r\n");
             }
             else {
                 console.log('Finished Downloaded of Product Images of Category ::' + that.id);
+                logAppend('Finished Downloaded of Product Images of Category ::' + that.id + "\r\n");
             }
         });
         return lastPromise;
@@ -288,9 +311,11 @@ function Category(id) {
         lastPromise.then(function () {
             if (that.processedProducts.length === 0) {
                 console.log('Not Uploaded any imaages of Category ::' + that.id);
+                logAppend('[WARN] - Not Uploaded any imaages of Category ::' + that.id + "\r\n");
             }
             else {
                 console.log('Finished Uploaded Images of Category ::' + that.id);
+                logAppend('Finished Uploaded Images of Category ::' + that.id + "\r\n");
             }
 
         });
@@ -301,7 +326,7 @@ function Category(id) {
         var deferred = Q.defer();
         var options = {
             method: 'POST',
-            url: "http://web.xavica.local/tdweb/api/productbulk",
+            url: urlsConfig.postProductBulk,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -311,6 +336,8 @@ function Category(id) {
             function callback(error, response, body) {
                 if (!error) {
                     console.log('Finsihed Pushed into Products table for Category id: ' + that.id + ", Products Count::" + that.processedProducts.length);
+                    logAppend('Finsihed Pushed into Products table for Category id: ' + that.id + ", Products Count::" + that.processedProducts.length + "\r\n");
+
                     deferred.resolve(true);
                 }
                 else {
@@ -321,6 +348,7 @@ function Category(id) {
         }
         else {
             console.log('No products are pushed to Product of Category Id :' + that.id);
+            logAppend('[FAIL] - No products are pushed to Product of Category Id :' + that.id + "\r\n");
             //For continue to other categories
             deferred.resolve(true);
         }
@@ -330,44 +358,54 @@ function Category(id) {
 
 }
 
-var categoryIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+var categoryIds = [1, 2, 3, 4 ]; //, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 var categories = categoryIds.map(function (categoryId) {
     return new Category(categoryId);
 });
 
 console.log("**********************************************************************");
+logAppend(starStringWithNewLine);  
 var lastPromise = categories.reduce(function (promise, category) {
     return promise.then(function () {
         return category.getProducts()
                .then(category.processProducts, function (err) {
                    //Error occured from product stage.
                    console.log(err);
+                   logAppend(err);
                })
                .then(category.sortAndPickProducts)
                .then(category.downloadImages)
                .then(category.uploadImages, function (err) {
                    console.log(err);
+                   logAppend(err);
                })
                .then(category.uploadProducts, function (err) {
                    console.log(err);
+                   logAppend(err);
                })
                .then(function () {
                    console.log("Category Id: " + category.id + ":: Finished Processing");
                    console.log("**********************************************************************");
+                   logAppend("Category Id: " + category.id + ":: Finished Processing\r\n");
+                   logAppend(starString);
                }, function (err) {
                    console.log(err);
                });
-        //.fail(function (err) {
-        //    console.log(err);
-        //})
-        //.catch(function (err) {
-        //    console.log(err);
-        //});
-
     });
 }, Q.resolve());
 
 lastPromise.then(function () {
     console.log('Finished All Categories Processing');
+    logAppend('Finished All Categories Processing');
+    var fileName = "logs/" + dformat + "_filter.txt";
+    append(fileName, filterString, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("The file was saved!");
+    });
+
+    setTimeout(function () {
+    }, Math.floor((Math.random() * 500) + 1000));
 });
 

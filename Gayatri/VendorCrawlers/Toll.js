@@ -3,16 +3,23 @@ var _ = require('lodash-node');
 var querystring = require('querystring');
 var http = require("http");
 fs = require('fs');
-var tollString = "\r\ni am test string",
+var configurations = require('./configurations.js').configurations,
+    urlsConfig = configurations.urls;
+var starString = "**********************************************************************",
+starStringWithNewLine = "**********************************************************************\r\n",
+tollString = "",
 d = new Date(),
         dformat = [(d.getMonth() + 1),
                 d.getDate(),
-                d.getFullYear()].join('-');
+                d.getFullYear()].join('-'),
+logAppend = function (str) {
+    tollString += str;
+}
 
 // Reteving the productstage table data.
 var getOptions = {
     method: 'GET',
-    url: "http://web.xavica.local/tdweb/api/products/getall",
+    url: urlsConfig.productsGetall,
     headers: {
         'Content-Type': 'application/json'
     },
@@ -20,28 +27,31 @@ var getOptions = {
 var parsed = [];
 request(getOptions, function (error, response, body) {
     parsed = JSON.parse(body);
+    logAppend(starStringWithNewLine);
+    logAppend("Total Products Extracted From Products Table:: [" + parsed.length + "]\r\n")
     console.log(parsed.length);
+    recordCount = parsed.length;
 
     parsed.forEach(function (verifierProduct) {
+        i++;
         http.get(verifierProduct.redirectUrl, function (response) {
 
-            console.log("reponseCode:  " + response.statusCode);
-            tollString += "\r\n reponseCode:: " + response.statusCode;
-            
+            logAppend(starStringWithNewLine);
             if (response.statusCode != 400 && response.statusCode != 500) {
                 verifierProduct.isPublished = body.indexOf(verifierProduct.shortDescription) > -1 || body.indexOf(verifierProduct.discount) > -1 || body.indexOf(verifierProduct.actualPrice) > -1 || body.indexOf(verifierProduct.sellingPrice) > -1;
             }
             else {
+                logAppend("URL Incorrect::[ " + verifierProduct.redirectUrl + "\r\n");
                 verifierProduct.isPublished = false;
             }
             updateProduct(verifierProduct);
         });
+            exportToLog(tollString);
     });
-    exportToLog(tollString);
 });
 function updateProduct(pushingItem) {
-    url = "http://web.xavica.local/tdweb/api/products/" + pushingItem.id;
-    console.log("update url" + url);
+    url = urlsConfig.productUpdate + pushingItem.id;
+    //console.log("update url" + url);
     var updateOptions = {
         method: 'PUT',
         url: url,
@@ -63,13 +73,12 @@ function updateProduct(pushingItem) {
             "isPublished": pushingItem.isPublished,
             "showDate": pushingItem.showDate,
             "source": pushingItem.source,
-            //"createdData": "1/1/2015",
-            //"lastUpdateData": "1/1/2015"
+            //"createdDate": "1/1/2015",
+            //"lastUpdateDate": "1/1/2015"
         }
     };
     request(updateOptions, function (error, response, body) {
-        console.log("url updated successfully" + response.statusCode);
-        tollString += "\r\n url updated successfully ::" + response.statusCode;
+        logAppend("Updated URL ID:: [" + pushingItem.id + "\r\n");
     });
 }
 function append(file, content, callback) {
@@ -82,14 +91,14 @@ function append(file, content, callback) {
 }
 
 function exportToLog(str) {
-        var fileName = "logs/" + dformat + "_toll.txt";
-        append(fileName, str, function (err) {
-            if (err) {
-                return console.log(err);
-            }
-            console.log("The file was saved!");
-        });
+    var fileName = "logs/" + dformat + "_toll.txt";
+    append(fileName, str, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("The file was saved!");
+    });
 
-        setTimeout(function () {
-        }, Math.floor((Math.random() * 500) + 1000));
+    setTimeout(function () {
+    }, Math.floor((Math.random() * 500) + 1000));
 }

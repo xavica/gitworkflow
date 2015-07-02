@@ -7,69 +7,101 @@ var vendor = {
     storeName: 'EzoneOnline',
     links: [
         {
-            // LAPTOPS
-
-            url: "http://www.bagittoday.com/budget-laptops/c-2443/",
-            selectors: {
-                elements: 'div[class="eleprobox"]',
-                title: 'div.proimgbox > a > img',
-                description: '',
-                imageUrl: 'div.proimgbox > a > img',
-                actualPrice: 'div.proprcbox > span.oldprc > span:nth-child(2)',
-                sellingPrice: 'div.proprcbox > span.newprc',
-                discount: 'div.proprcbox .discont-value',
-                redirectUrl: 'div.proimgbox > a'
-            },
-            isScroll: true,
-            id: 1
+            //Air Conditioners
+    {
+        url: "http://www.ezoneonline.in/Categories/Home-Appliances/Air-Conditioners/c/airconditioners?gclid=CjwKEAjwndqrBRC16IyeqPicp3ASJAB-vB-cDB02AmeoTzxi0c6ceGwHyn0Wgnqy9c13cvVqajFayRoCP5Lw_wcB",
+        selectors: {
+            elements: 'ul > section > li',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
         },
-        {
-            //TABLETS
-            url: "http://www.bagittoday.com/android-tablets/c-2146/",
-            selectors: {
-                elements: 'div[class="eleprobox"]',
-                title: 'div.proimgbox > a > img',
-                description: '',
-                imageUrl: 'div.proimgbox > a > img',
-                actualPrice: 'div.proprcbox > span.oldprc > span:nth-child(2)',
-                sellingPrice: 'div.proprcbox > span.newprc',
-                discount: 'div.proprcbox .discont-value',
-                redirectUrl: 'div.proimgbox > a'
-            },
-            isScroll: true,
-            id: 2
+        isScroll: false,
+        id: 8
+    },
+//Mobiles
+    {
+        url: "http://www.ezoneonline.in/Categories/Phones/Mobile-Phones/c/mobilephones",
+        selectors: {
+            elements: 'ul > section > li ',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
         },
-        {
-            //SUNGLASSES
-            url: "http://www.bagittoday.com/sunglasses/c-34/",
-            selectors: {
-                elements: 'div[class="eleprobox"]',
-                title: 'div.proimgbox > a > img',
-                description: '',
-                imageUrl: 'div.proimgbox > a > img',
-                actualPrice: 'div.proprcbox > span.oldprc > span:nth-child(2)',
-                sellingPrice: 'div.proprcbox > span.newprc',
-                discount: 'div.proprcbox .discont-value',
-                redirectUrl: 'div.proimgbox > a'
-            },
-            isScroll: true,
-            id: 6
+        isScroll: false,
+        id: 3
+    },
+//Mobiles
+    {
+        url: "http://www.ezoneonline.in/Categories/Phones/Mobile-Phones/c/mobilephones?q=%3Aproduct-boost&page=1",
+        selectors: {
+            elements: 'ul > section > li ',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
         },
-        {
-            //WATCHES
-            url: "http://www.bagittoday.com/faces/tiles/search.jsp?q=watches+for+men&searchKeyword_q_tmp=watches&productID=&narrowcatalogueID=2&narrowcategoryID=&narrowparentCategoryID=&catalogueID=2&categoryID=&parentCategoryID=&sid=&bid=&prc=&k1=&k2=&k3=&k4=&k5=&k6=&k7=&k8=&k9=&k10=&k11=&k12=&vt=g&rpp=&col=&sort=16&pn=1&dcty=&bnm=&narr=&entityType=&entityId=&topParent=&pageName=%2Ftiles%2Fsearch.jsp&brandId=&brandCmsFlag=&cnm=&cartSize=0&boutiqueID=&parentBoutiqueID=&narrowboutiqueID=&sortCall=sortCall&keywordText=watches+for+men&booksORnonbooks=&callTextSearchOrNot=Y&listSize=0&searchselectinparam=N",
-            selectors: {
-                elements: 'div[class="eleprobox"]',
-                title: 'div.proimgbox > a > img',
-                description: '',
-                imageUrl: 'div.proimgbox > a > img',
-                actualPrice: 'div.proprcbox > span.oldprc > span:nth-child(2)',
-                sellingPrice: 'div.proprcbox > span.newprc',
-                discount: 'div.proprcbox .discont-value',
-                redirectUrl: 'div.proimgbox > a'
-            },
-            isScroll: true,
-            id: 6
+        isScroll: false,
+        id: 3
+    },
+//camera
+    {
+        url: "http://www.ezoneonline.in/Categories/Photography/Digital-SLR-Cameras/c/digitalslrcameras",
+        selectors: {
+            elements: 'ul > section > li ',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
+        },
+        isScroll: false,
+        id: 4
+    },
+//Televisions
+    {
+        url: "http://www.ezoneonline.in/Categories/Home-Entertainment/LCD-LED-Plasma-TV/c/lcdledplasmatv?sort=topRated&q=%3Aprice-asc#",
+        selectors: {
+            elements: 'ul > section > li ',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
+        },
+        isScroll: false,
+        id: 5
+    },
+//Laptops
+    {
+        url: "http://www.ezoneonline.in/Categories/Computers/Laptops-%26-Macbooks/Laptops/c/laptops",
+        selectors: {
+            elements: 'ul > section > li ',
+            title: 'a.productMainLink > img',
+            description: '',
+            imageUrl: 'a.productMainLink > img',
+            actualPrice: 'div > span.old-price',
+            sellingPrice: 'span > span.price',
+            discount: '',
+            redirectUrl: 'div > a'
+        },
+        isScroll: false,
+        id: 1
         }]
 };
 

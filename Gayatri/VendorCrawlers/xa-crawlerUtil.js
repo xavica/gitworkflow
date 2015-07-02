@@ -8,10 +8,12 @@
 //var log4js = require('log4js');
 //var logger = log4js.getLogger('uploader');
 var _ = require('lodash');
+var configurations = require('./configurations.js').configurations,
+    urlsConfig = configurations.urls;
 exports.logString = "";
 var starString = "**********************************************************************";
-exports.logAppend = function(str){
-    exports.logString +=  str;
+exports.logAppend = function (str) {
+    exports.logString += str;
 }
 exports.defaultScroll = function (casper, crawlerDefinition) {
     if (crawlerDefinition.isScroll === true) {
@@ -43,9 +45,9 @@ exports.parseUrls = function (vendorLinks, casper) {
         casper.thenOpen(vendorLink.url, function (response) {
             var parsedItems = [], proceed = true;
             casper.echo(starString);
-            exports.logAppend( starString + "\r\n");
+            exports.logAppend(starString + "\r\n");
             casper.echo("Opening Link ::" + vendorLink.url);
-            exports.logAppend( " Opening Link ::" + vendorLink.url + "\r\n");
+            exports.logAppend(" Opening Link ::" + vendorLink.url + "\r\n");
             casper.then(function () {
                 if (response.status === undefined || response.status >= 400) {
                     proceed = false;
@@ -74,7 +76,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                 //----------------------   if selectors not there, then below else wont get executed.
 
                 if (proceed) {
-                    exports.logAppend( "Started Processing URL \r\n");
+                    exports.logAppend("Started Processing URL \r\n");
                     parsedItems = casper.evaluate(function (stubCrawler) {
                         "use strict";
                         var index = 0,
@@ -102,7 +104,7 @@ exports.parseUrls = function (vendorLinks, casper) {
                             host;
                         //__utils__.echo('started document parsing');
                         __utils__.echo("** STARTED PROCESSING URL **");
-                        
+
                         for (index = 0; index < elements.length; index = index + 1) {
                             titleElement = elements[index].querySelector(stubCrawler.selectors.title);
                             actualPriceElement = elements[index].querySelector(stubCrawler.selectors.actualPrice);
@@ -140,9 +142,11 @@ exports.parseUrls = function (vendorLinks, casper) {
 
                             redirectUrl = (redirectUrlElement && redirectUrlElement.getAttribute('href')) || '';
                             imageUrlAttributeName = stubCrawler.selectors.imageUrlAttribute || 'src';
-                            tempImageUrl = (imageUrlElement && imageUrlElement.getAttribute(imageUrlAttributeName)) || '';
+                            tempImageUrl = (imageUrlElement &&
+                                           (imageUrlAttributeName && imageUrlElement.getAttribute(imageUrlAttributeName)) || imageUrlElement.getAttribute('src'))
+                                            || '';
                             if (tempImageUrl.indexOf("//") === 0) {
-                               tempImageUrl = tempImageUrl.replace("//", "");
+                                tempImageUrl = tempImageUrl.replace("//", "");
                             }
                             if (!tempImageUrl.match("^http")) {
                                 parser.href = stubCrawler.url;
@@ -188,7 +192,7 @@ exports.parseUrls = function (vendorLinks, casper) {
             });
             casper.then(function () {
                 if (parsedItems) {
-                    exports.logAppend( "Products Extracted from URL [ " + vendorLink.url + " ] are:: " + parsedItems.length + "\r\n");
+                    exports.logAppend("Products Extracted from URL [ " + vendorLink.url + " ] are:: " + parsedItems.length + "\r\n");
                     _.each(parsedItems, function (item) {
                         productsList.push(item);
                     });
@@ -235,7 +239,7 @@ exports.defaultPushToStage = function (productsList, storeName, casper) {
 
     pushingArray.forEach(function (batchArray) {
 
-        casper.thenOpen('http://web.xavica.local/tdweb/api/productstagebulk', {
+        casper.thenOpen(urlsConfig.postProductStage, {
             method: 'post',
             data: JSON.stringify(batchArray),
             headers: {
@@ -246,6 +250,6 @@ exports.defaultPushToStage = function (productsList, storeName, casper) {
     });
     casper.then(function () {
         casper.echo(storeName + "  Products Pushed To 'Productstage' Table");
-        exports.logAppend( storeName + "Products Pushed To 'Productstage' Table\r\n");
+        exports.logAppend(storeName + "Products Pushed To 'Productstage' Table\r\n");
     });
 };

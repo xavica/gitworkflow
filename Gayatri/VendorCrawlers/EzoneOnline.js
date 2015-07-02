@@ -10,13 +10,13 @@ var vendor = {
     {
         url: "http://www.ezoneonline.in/Categories/Home-Appliances/Air-Conditioners/c/airconditioners?gclid=CjwKEAjwndqrBRC16IyeqPicp3ASJAB-vB-cDB02AmeoTzxi0c6ceGwHyn0Wgnqy9c13cvVqajFayRoCP5Lw_wcB",
         selectors: {
-            elements: 'ul > section > li ',
+            elements: 'ul > section > li',
             title: 'a.productMainLink > img',
             description: '',
             imageUrl: 'a.productMainLink > img',
             actualPrice: 'div > span.old-price',
             sellingPrice: 'span > span.price',
-            discount: 'div > span',
+            discount: '',
             redirectUrl: 'div > a'
         },
         isScroll: false,
@@ -32,7 +32,7 @@ var vendor = {
             imageUrl: 'a.productMainLink > img',
             actualPrice: 'div > span.old-price',
             sellingPrice: 'span > span.price',
-            discount: 'div > span',
+            discount: '',
             redirectUrl: 'div > a'
         },
         isScroll: false,
@@ -48,7 +48,7 @@ var vendor = {
             imageUrl: 'a.productMainLink > img',
             actualPrice: 'div > span.old-price',
             sellingPrice: 'span > span.price',
-            discount: 'div > span',
+            discount: '',
             redirectUrl: 'div > a'
         },
         isScroll: false,
@@ -64,7 +64,7 @@ var vendor = {
             imageUrl: 'a.productMainLink > img',
             actualPrice: 'div > span.old-price',
             sellingPrice: 'span > span.price',
-            discount: 'div > span',
+            discount: '',
             redirectUrl: 'div > a'
         },
         isScroll: false,
@@ -80,7 +80,7 @@ var vendor = {
             imageUrl: 'a.productMainLink > img',
             actualPrice: 'div > span.old-price',
             sellingPrice: 'span > span.price',
-            discount: 'div > span',
+            discount: '',
             redirectUrl: 'div > a'
         },
         isScroll: false,
@@ -96,7 +96,7 @@ var vendor = {
         imageUrl: 'a.productMainLink > img',
         actualPrice: 'div > span.old-price',
         sellingPrice: 'span > span.price',
-        discount: 'div > span',
+        discount: '',
         redirectUrl: 'div > a'
     },
     isScroll: false,

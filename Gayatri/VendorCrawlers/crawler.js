@@ -26,7 +26,7 @@ d = new Date(),
         //require('./InfiBeam.js').getVendor(),
         //require('./InLiving.js').getVendor(),
         //require('./Mirraw.js').getVendor(),
-        //require('./ShopClues.js').getVendor(),
+        require('./ShopClues.js').getVendor(),
         //require('./RajMusical.js').getVendor(), 
         //require('./BookAdda.js').getVendor(),  
         //require('./Saholic.js').getVendor(), 
@@ -37,7 +37,7 @@ d = new Date(),
         //require('./Bajaao.js').getVendor(),
         //require('./GadgetsGuru.js').getVendor(),
        //require('./FirstCry.js').getVendor(), //not processing
-         require('./GiftEase.js').getVendor(), 
+         //require('./GiftEase.js').getVendor(), 
       //  require('./Ebay.js').getVendor(),
 
       // require('./Jabbong.js').getVendor(), 
@@ -78,18 +78,21 @@ vendors.forEach(function (vendor) {
                 // pushing items to ProductStage Table.
                 crawler.defaultPushToStage(productsList, vendor.storeName, casper);
             }
+            else {
+                crawler.logAppend("[FAIL] - No Products Received From vendor [ " + vendor.storeName + " ]\r\n");
+            }
         });
     }
 });
 
 casper.on("selector.changed", function (vendorLink) {
     this.echo("From Emit Method ==>> Some Selector Has Been Changed for URL :: " + vendorLink.url);
-    crawler.logString += starStringWithNewLine;
-    crawler.logAppend("From Emit Method ==>> Some Selector Has Been Changed for URL :: " + vendorLink.url + "\r\n");
+    crawler.logAppend(starStringWithNewLine);
+    crawler.logAppend("[WARN] - From Emit Method ==>> Some Selector Has Been Changed for URL :: " + vendorLink.url + "\r\n");
 });
 casper.on('url.failed', function (vendorLink) {
     this.echo("From Emit Method ==>> URL Not Working :: " + vendorLink.url);
-    crawler.logAppend("From Emit Method ==>> URL Not Working :: " + vendorLink.url + "\r\n");
+    crawler.logAppend("[WARN] - From Emit Method ==>> URL Not Working :: " + vendorLink.url + "\r\n");
 
 });
 
