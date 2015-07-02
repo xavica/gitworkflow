@@ -2,6 +2,8 @@
 /*global define, jQuery, $, document, require, exports, __utils__ */
 /* latedef: nofunc*/
 /*jshint onevar: true */
+var configurations = require('./configurations.js').configurations,
+    categoriesConfig = configurations.categories;
 
 var vendor = {
     storeName: 'GiftEase',
@@ -20,7 +22,7 @@ var vendor = {
             redirectUrl: 'div.proListBox > a'
         },
         isScroll: false,
-        id: 10
+        id: categoriesConfig.gamesConsoles
     },
     {
         url: "http://www.giftease.com/books/business-management?dir=desc&order=saving",
@@ -35,7 +37,7 @@ var vendor = {
             redirectUrl: 'div.proListBox > a'
         },
         isScroll: false,
-        id: 10
+        id: categoriesConfig.gamesConsoles
     },
     {
         url: "http://www.giftease.com/books/childrens-books/story-books?dir=desc&order=saving",
@@ -50,7 +52,7 @@ var vendor = {
             redirectUrl: 'div.proListBox > a'
         },
         isScroll: false,
-        id: 10
+        id: categoriesConfig.gamesConsoles
     }]
 };
 

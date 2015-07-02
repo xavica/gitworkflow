@@ -101,7 +101,7 @@ function Category(id) {
         var topProducts = _.chain(filteredArray)
                         .sortBy('discountPercentage')
                         .reverse()
-                        .take(n || 2)
+                        .take(n || 20)
                         .value();
         return topProducts;
     }
@@ -144,8 +144,6 @@ function Category(id) {
                     destinationFile = directoryName + downloadedFileName;
         request.head(uri, function (err, res, body) {
             if (res && res.headers && res.headers['content-type'].indexOf('image') > -1) {
-                //console.log(res);
-                console.log('content-type:' + res.headers['content-type']);
                 request(uri).pipe(fs.createWriteStream(destinationFile))
                             .on('close', function () {
                                 product.imageFileName = downloadedFileName;
@@ -266,7 +264,7 @@ function Category(id) {
         }, Q.resolve());
         lastPromise.then(function () {
             if (that.processedProducts.length === 0) {
-                console.log('Not Downloaded any imaages of Category ::' + that.id);
+                console.log('Not Downloaded any images of Category ::' + that.id);
             }
             else {
                 console.log('Finished Downloaded of Product Images of Category ::' + that.id);

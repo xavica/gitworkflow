@@ -15,10 +15,10 @@ d = new Date(),
     productsList = [],
     vendors = [
         ////require('./Amazon.js').getVendor(), //need to fix title 
-        require('./BagItToday.js').getVendor(),
+        //require('./BagItToday.js').getVendor(),
         //require('./CashKaro.js').getVendor(),
         //require('./CraftsVilla.js').getVendor(),
-        //require('./CromaRetail.js').getVendor(),
+        //require('./CromaRetail.js').getVendor(), //timeout
         //require('./EzoneOnline.js').getVendor(),
         //require('./FashionEra.js').getVendor(),
         //require('./Flipkart.js').getVendor(),
@@ -36,20 +36,20 @@ d = new Date(),
         // require('./GreenDust.js').getVendor(), 
         //require('./Bajaao.js').getVendor(),
         //require('./GadgetsGuru.js').getVendor(),
-       //require('./FirstCry.js').getVendor(),
-         //require('./GiftEase.js').getVendor(), 
-        //require('./Ebay.js').getVendor(),
+       //require('./FirstCry.js').getVendor(), //not processing
+         require('./GiftEase.js').getVendor(), 
+      //  require('./Ebay.js').getVendor(),
 
-       //require('./Jabbong.js').getVendor(), 
+      // require('./Jabbong.js').getVendor(), 
       //require('./FashionAndyou.js').getVendor(),
       //  require('./BabyOye.js').getVendor(),
 
-               //---------------------Not pushing into productstage table -----------------------
+      //         //---------------------Not pushing into productstage table -----------------------
 
-               //require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
-               //require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
-               // require('./Evok.js').getVendor(),
-               //require('./PepperFry.js').getVendor(),
+      //         require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
+      //         require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
+      //          require('./Evok.js').getVendor(),
+      //         require('./PepperFry.js').getVendor(),
 
     ];
 
