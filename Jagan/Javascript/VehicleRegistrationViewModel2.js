@@ -9,11 +9,14 @@ function VehicleRegistrationViewModel() {
     that.transfer = ['Select.....', 'to A Different State', 'to a state in different region', 'within the State(local)'];
     that.transferSelected = ko.observable('');
     that.manufactureYear = ko.observable('');
+    that.statesTransfer = ['Select...', 'Andhra Pradesh', 'Jammu & Kashmir', 'Himachal Pradesh', 'Uttar Pradesh', 'Haryana',
+        'Punjab', 'Uttaranchal', 'Kerala', 'Karnataka', 'Tamil Nadu', 'Assam', 'Manipur', 'Meghalaya', 'Sikkim', 'Orissa',
+        'West', 'Bengal', 'Mizoram ', 'Tripura', 'Goa', 'Gujarat', 'Rajasthan', 'Maharshtra', 'Madhya Pradesh', 'Chattisgarh',
+        'Andaman & Nicobar', 'Chandigarh', 'Delhi / New Delhi', 'Lakshadweep', 'Pondicherry', ' Dadar & Nagar Haveli', 'Daman & Diu']
     that.transferFrom = ko.observable('');
     that.transferTo = ko.observable('');
     that.registerFee = '';
     that.transferFee = '';
-    that.final = ko.observable('');
     that.details = ko.observable('');
     that.transDetails = ko.observable('');
     that.selectedArray = { 'Twowheelers': 200, 'Threewheelers': 300, 'Fourwheelers': 400, 'MorethanFourwheelers': 1000 };
@@ -22,6 +25,7 @@ function VehicleRegistrationViewModel() {
     console.log(that.selectedArray['Twowheelers']);
     that.govtVehicle = ko.observable('');
     that.fancyNumber = ko.observable();
+    that.north = ['Jammu & Kashmir', 'Himachal Pradesh', 'Uttar Pradesh', 'Haryana', 'Punjab', 'Uttaranchal'];
     that.newRegisterDetails = function () {
         console.log(that.vehicleTypeSelected());
         if (that.vehicleTypeSelected() === 'Select.....' || that.regionSelected() === 'Select.....') {
@@ -52,6 +56,17 @@ function VehicleRegistrationViewModel() {
     //        that.govtDetails("Your Vehicle is Not A Govt. vehicle,  So Continue With Below to Know Your registration charges... Thank you");
     //};
     that.transferRegisterDetails = function () {
+
+        _.forEach(that.north, function (region) {
+            console.log(region);
+            if (that.transferFrom() === region) {
+                that.transferSelected() = 'within the State(local)';
+                console.log(that.transferSelected());
+            }
+            //else {
+            //    that.transferSelected() = 'to A Different State';
+            //}
+        });
         console.log(that.govtVehicle());
         if (that.manufactureYear().length === 0) {
             alert("please fill Year Of manufacture");
@@ -104,13 +119,23 @@ function VehicleRegistrationViewModel() {
         }
         that.transDetails("Your vehicle is " + that.vehicleTypeSelected() + " type, your type of Registration is  " + that.transferSelected() + " and your Transfer registration fee is:: " + that.transferFee);
     };
+    $('#TranClick,#newClick').hide();
+
+    $('#New').click(function () {
+        $(' #TranClick ').hide();
+        $('#newClick').show();
+        $('#newselect').show();
+        $('.butt').hide();
+        $('.but').show();
+    });
+
+    $('#Transfer').click(function () {
+        $('#newClick').show();
+        $('#TranClick').show();
+        $('#newselect').hide();
+        $('.but').hide();
+        $('.butt').show();
+        //$('#TranClick').removeAttr('disabled');
+    });
 };
 ko.applyBindings(new VehicleRegistrationViewModel());
-
-
-$('input:radio[name="radionew"]').change(function () {
-    if ($(this).val() === 'New') {
-        $('#disable,#disable1').attr('disabled', true) && $('#newselection').attr('disabled', false);
-    } else if ($(this).val() === 'Transfer')
-        $('#newselection').attr('disabled', true) && $('#disable,#disable1').attr('disabled', false);
-});
