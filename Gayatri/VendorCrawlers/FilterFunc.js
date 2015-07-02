@@ -152,6 +152,9 @@ function Category(id) {
                                 deferred.resolve(true);
                             });
             }
+            else {
+                deferred.reject('Downloading image has an issue of Product::' + uri);
+            }
         });
         return deferred.promise;
     }
@@ -171,7 +174,7 @@ function Category(id) {
                             if (error) {
                                 console.log("Couldn't upload file %s", destinationFileName);
                                 console.error(error);
-                                deferred.reject(false, 'not good');
+                                deferred.reject(false, 'Having trouble to upload image :' + destinationFileName);
 
                             } else {
                                 var resultImageUrl = "https://smamidi.blob.core.windows.net/images/" + destinationFileName;
@@ -179,6 +182,9 @@ function Category(id) {
                                 deferred.resolve(true, destinationFileName);
                             }
                         });
+        }
+        else {
+            deferred.reject(false, 'Having trouble to upload image because file name is empty:' + product.id);
         }
 
         return deferred.promise;
@@ -189,31 +195,36 @@ function Category(id) {
             url = "http://web.xavica.local/tdweb/api/productstage/getlist",
             options = getOptionsProductStage(url, this.id, formattedDate);
         request(options, function (error, response, body) {
-            var tempProducts = JSON.parse(JSON.stringify(body));
-            that._rawProducts = _.map(tempProducts, function (item) {
-                return {
-                    "id": item.id,
-                    "categoryId": item.categoryId,
-                    "shortDescription": item.shortDescription,
-                    "description": (item.shortDescription && item.shortDescription.toLowerCase()) || '',
-                    "redirectUrl": item.redirectUrl,
-                    "imageUrl": item.imageUrl,
-                    "imageFileName": '',
-                    "storeName": item.storeName,
-                    "actualPrice": item.actualPrice,
-                    "currentPrice": item.currentPrice,
-                    "discountPercentage": item.discountPercentage,
-                    "isShippingFree": item.isShippingFree,
-                    "star": item.star,
-                    "isPublished": item.isPublished,
-                    "showDate": item.showDate,
-                    "source": item.source,
-                    "status": true
-                };
-            });
-            console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length);
+            if (response.statusCode != 200) {
+                deferred.reject('Having an issue with getlist Product Stage:' + url);
+            }
+            else {
+                var tempProducts = JSON.parse(JSON.stringify(body));
+                that._rawProducts = _.map(tempProducts, function (item) {
+                    return {
+                        "id": item.id,
+                        "categoryId": item.categoryId,
+                        "shortDescription": item.shortDescription,
+                        "description": (item.shortDescription && item.shortDescription.toLowerCase()) || '',
+                        "redirectUrl": item.redirectUrl,
+                        "imageUrl": item.imageUrl,
+                        "imageFileName": '',
+                        "storeName": item.storeName,
+                        "actualPrice": item.actualPrice,
+                        "currentPrice": item.currentPrice,
+                        "discountPercentage": item.discountPercentage,
+                        "isShippingFree": item.isShippingFree,
+                        "star": item.star,
+                        "isPublished": item.isPublished,
+                        "showDate": item.showDate,
+                        "source": item.source,
+                        "status": true
+                    };
+                });
+                console.log('Category Id::' + that.id + ":: Recieved Products From Product Stage ::" + that._rawProducts.length);
+                deferred.resolve(that._rawProducts);
+            }
 
-            deferred.resolve(that._rawProducts);
         });
         return deferred.promise;
     };
@@ -227,11 +238,19 @@ function Category(id) {
             console.log('Finished Filtering Products of Category Id: ' + that.id);
             console.log('Filtered Products Count ::' + that.products.length);
         }
+        else {
+            console.log('No products received from Product Stage of Category Id to Process' + that.id);
+        }
 
     };
 
     this.sortAndPickProducts = function (n) {
-        that.processedProducts = pickTopProducts(that.products, n);
+        if (that.products && that.products.length) {
+            that.processedProducts = pickTopProducts(that.products, n);
+        }
+        else {
+            console.log('No products received from Product Stage for Sort and Pick of Category Id::' + that.id);
+        }
     };
 
     this.downloadImages = function () {
@@ -241,10 +260,17 @@ function Category(id) {
                     //Console.log (previous file downloaded);
                 }
                 return downloadImage(product);
+            }, function (err) {
+                console.log(err);
             });
         }, Q.resolve());
         lastPromise.then(function () {
-            console.log('Finished Downloaded of Product Images of Category ::' + that.id);
+            if (that.processedProducts.length === 0) {
+                console.log('Not Downloaded any imaages of Category ::' + that.id);
+            }
+            else {
+                console.log('Finished Downloaded of Product Images of Category ::' + that.id);
+            }
         });
         return lastPromise;
     };
@@ -257,10 +283,18 @@ function Category(id) {
                     //This is not great code but we have to live with this.
                 }
                 return uploadImage(product);
+            }, function (err) {
+                console.log(err);
             });
         }, Q.resolve());
         lastPromise.then(function () {
-            console.log('Finished Uploaded Images of Category::' + that.id);
+            if (that.processedProducts.length === 0) {
+                console.log('Not Uploaded any imaages of Category ::' + that.id);
+            }
+            else {
+                console.log('Finished Uploaded Images of Category ::' + that.id);
+            }
+
         });
         return lastPromise;
     };
@@ -282,11 +316,15 @@ function Category(id) {
                     deferred.resolve(true);
                 }
                 else {
-                    console.log('Error happened: ' + error);
-                    deferred.reject('error occured');
+                    deferred.reject('Error happened for category id: ' + that.id + ', Error:' + error);
                 }
             }
             request(options, callback);
+        }
+        else {
+            console.log('No products are pushed to Product of Category Id :' + that.id);
+            //For continue to other categories
+            deferred.resolve(true);
         }
 
         return deferred.promise;
@@ -303,16 +341,30 @@ console.log("*******************************************************************
 var lastPromise = categories.reduce(function (promise, category) {
     return promise.then(function () {
         return category.getProducts()
-               .then(category.processProducts)
+               .then(category.processProducts, function (err) {
+                   //Error occured from product stage.
+                   console.log(err);
+               })
                .then(category.sortAndPickProducts)
                .then(category.downloadImages)
-               .then(category.uploadImages)
-               .then(category.uploadProducts)
+               .then(category.uploadImages, function (err) {
+                   console.log(err);
+               })
+               .then(category.uploadProducts, function (err) {
+                   console.log(err);
+               })
                .then(function () {
                    console.log("Category Id: " + category.id + ":: Finished Processing");
                    console.log("**********************************************************************");
-
+               }, function (err) {
+                   console.log(err);
                });
+        //.fail(function (err) {
+        //    console.log(err);
+        //})
+        //.catch(function (err) {
+        //    console.log(err);
+        //});
 
     });
 }, Q.resolve());
