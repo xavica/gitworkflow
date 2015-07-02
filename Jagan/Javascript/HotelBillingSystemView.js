@@ -11,6 +11,7 @@ function HotelBillingSystemViewModel() {
     that.totDetails = ko.observable('');
     that.billform = ko.observable('');
     that.daysStay = ko.observable();
+    that.lastPay = '';
     that.alert = function () {
         alert("You are Successfully Registred");
     }
@@ -52,8 +53,41 @@ function HotelBillingSystemViewModel() {
         var times = timeDifferenceInHours / 24;
         that.daysStay(times);
         console.log(that.daysStay());
-        that.billform("you stayed " + that.daysStay() + "days your payment is : $" + (that.daysStay() * that.selectionArray[that.categorySelected()]) +
-            " Coz you selected '" + that.categorySelected() + "' type Seeterms And conditions Once.");
+        if (that.categorySelected() === 'Villa') {
+            alert("no service Service Charge For You");
+            if (that.daysStay() === 1) {
+                that.lastPay = "0 you payed already you take Boarding pass with payment.";
+            }
+            else if (that.daysStay() > 3) {
+                alert("you stay More that 3 days .. Room Service Charges also applicable for you with a weekly interval time.")
+                that.lastPay = (that.daysStay() * that.selectionArray[that.categorySelected()]);
+            }
+            else {
+                that.lastPay = (that.daysStay() * that.selectionArray[that.categorySelected()]);
+            }
+        }
+        else if (that.categorySelected() === 'Double Bed Room' || that.categorySelected() === 'Triple Bed Room') {
+            if (that.daysStay() === 1) {
+                that.lastPay = "0 you payed already you take Boarding pass with payment.";
+            }
+            else if (that.daysStay() > 3) {
+                alert("you stay More that 3 days .. Room Service Charges also applicable for you with a weekly interval time.")
+                that.lastPay = (that.daysStay() * that.selectionArray[that.categorySelected()]);
+            }
+            else {
+                that.lastPay = (that.daysStay() * that.selectionArray[that.categorySelected()]);
+            }
+        }
+        else {
+            if (that.daysStay() === 1) {
+                that.lastPay = "0 you payed already you take Boarding pass with payment.";
+            }
+            else {
+                that.lastPay = (that.daysStay() * that.selectionArray[that.categorySelected()]);
+            }
+        }
+        that.billform("you stayed " + that.daysStay() + "days your payment is : $" + that.lastPay +
+            " you selected '" + that.categorySelected() + "' type See terms And conditions Once.");
     };
 };
 ko.applyBindings(new HotelBillingSystemViewModel());

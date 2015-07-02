@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-    <title>Vehicle Registration View Model</title>
+    <title>Vehicle Registration View Model type 2</title>
     <link rel="stylesheet" type="text/css" href="costcostyles.css">
 </head>
 
@@ -17,7 +17,7 @@
         <div id="newClick">
             <!--<h2> New Vehicle Registration details</h2>-->
             <b>
-                <label>Vehicle Type</label>
+                <label class="vehi">Vehicle Type</label>
                 <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select>
                 <br />
                 <label id="newselect">
@@ -25,15 +25,11 @@
                     <select id="newselection" data-bind="options:region,value:regionSelected"></select>
                 </label>
             </b>
-            <br />
-            <!--<label>
-                Is It Union Territory..?<br><input type="radio" value="Yes" data-bind="checked:unionTerritory" />Yes
-                <input type="radio" value="No" data-bind="checked:unionTerritory" />No
-            </label>-->
-            <!--<div class="but">
-                <button data-bind="click:newRegisterDetails"><b>View your Details here</b></button>
+            <br /><br />
+            <div class="but">
+                <button data-bind="click:newRegisterDetails"><b>Details</b></button>
                 <form data-bind="text:details"></form>
-            </div>-->
+            </div>
         </div>
         <div id="TranClick">
             <!--<h2>Tranferring Registrations Details</h2>-->
@@ -48,9 +44,9 @@
             <b>
                 <!--<label>Vehicle Type <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></label>
                 <br />-->
-                <label>Enter state transfer from</label><input type="text" id="disable" data-bind="value:transferFrom" /><br />
-                <label>Enter state transfer to</label><input type="text" id="disable" data-bind="value:transferTo" />
-                <!--<label>Select Transfer Registration Types<select id="disable" data-bind="options:transfer,value:transferSelected"></select>--></label>
+                <label>Enter state transfer from</label><select type="text" id="disable" data-bind="options:statesTransfer,value:transferFrom"></select>
+                <label> to</label><select type="text" id="disable" data-bind="options:statesTransfer,value:transferTo"></select>
+                <!--<label>Select Transfer Registration Types<select data-bind="options:transfer,value:transferSelected"></select></label>-->
                 <br />
                 <!-- <label>Manufacture Date of vehicle:</label><input type="date" data-bind="value:manufactureDate" /><br />-->
                 <label>Manufactured Year of vehicle:</label><input type="text" id="disable" data-bind="value:manufactureYear" /><br />
@@ -63,11 +59,11 @@
                     <input type="radio" value="No" id="disable" data-bind="checked:fancyNumber" />No
                 </label>
             </b>
-        </div>
-        <br /><br />
-        <div class="but">
-            <button data-bind="click:transferRegisterDetails"><b>Details</b></button>
-            <form data-bind="text:transDetails"></form>
+            <br /><br />
+            <div class="butt">
+                <button data-bind="click:transferRegisterDetails"><b>Details</b></button>
+                <form data-bind="text:transDetails"></form>
+            </div>
         </div>
     </div>
     <div class="material">
@@ -90,7 +86,9 @@
     </div>
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/knockout-3.3.0.js"></script>
-    <script type="text/javascript" src="Javascript/VehicleRegistrationViewModel.js"></script>
+    <script src="../js/lodashmin.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Javascript/VehicleRegistrationViewModel2.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $("#NewId").click(function () {
