@@ -26,7 +26,7 @@ d = new Date(),
         //require('./InfiBeam.js').getVendor(),
         //require('./InLiving.js').getVendor(),
         //require('./Mirraw.js').getVendor(),
-        require('./ShopClues.js').getVendor(),
+        //require('./ShopClues.js').getVendor(),
         //require('./RajMusical.js').getVendor(), 
         //require('./BookAdda.js').getVendor(),  
         //require('./Saholic.js').getVendor(), 
@@ -38,18 +38,15 @@ d = new Date(),
         //require('./GadgetsGuru.js').getVendor(),
        //require('./FirstCry.js').getVendor(), //not processing
          //require('./GiftEase.js').getVendor(), 
+         require('./Zansaar.js').getVendor(),
+         require('./FabFurnish.js').getVendor(),
+         require('./Evok.js').getVendor(),
+         require('./PepperFry.js').getVendor(),
       //  require('./Ebay.js').getVendor(),
 
       // require('./Jabbong.js').getVendor(), 
       //require('./FashionAndyou.js').getVendor(),
       //  require('./BabyOye.js').getVendor(),
-
-      //         //---------------------Not pushing into productstage table -----------------------
-
-      //         require('./Zansaar.js').getVendor(), // extracted but not pushed into productstage.
-      //         require('./FabFurnish.js').getVendor(), //extracted 1042, not pushed
-      //          require('./Evok.js').getVendor(),
-      //         require('./PepperFry.js').getVendor(),
 
     ];
 
