@@ -1,0 +1,11 @@
+﻿body {
+    background: url('customassests/coming-soon-temp.jpg');
+}
+
+.rocket {
+    position: relative;
+    bottom: -270px;
+    left: 860px;
+    width: 15%;
+}
+}
