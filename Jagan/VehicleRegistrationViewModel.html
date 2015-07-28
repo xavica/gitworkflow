@@ -7,31 +7,36 @@
 <body bgcolor="lightblue">
     <h1> Vehicle Registration System</h1>
     <div class="border">
-        <p>Select the  type Of Registration Below</p>
-        <button type="button" id="NewId"> New </button> <span><button type="button" id="tranId"> Transfer </button></span>
+        <label>
+            Select the  type Of Registration Below
+            <br><input type="radio" value="New" id="New" name="radionew" />New
+            <input type="radio" value="Transfer" id="Transfer" name="radionew" />Transfer
+        </label>
+        <br /><br />
+        <!--<button type="button" id="NewId"> New </button> <span><button type="button" id="tranId"> Transfer </button></span>-->
         <div id="newClick">
-            <h2> New Vehicle Registration details</h2>
-            <table>
-                <tr>
-                    <td>Vehicle Type</td>
-                    <td> <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></td>
-                    <td>Select Region</td>
-                    <td> <select data-bind="options:region,value:regionSelected"></select></td>
-                </tr>
-            </table>
-            <br /><br />
+            <!--<h2> New Vehicle Registration details</h2>-->
+            <b>
+                <label>Vehicle Type</label>
+                <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select>
+                <br />
+                <label id="newselect">
+                    Select Region
+                    <select id="newselection" data-bind="options:region,value:regionSelected"></select>
+                </label>
+            </b>
+            <br />
             <!--<label>
                 Is It Union Territory..?<br><input type="radio" value="Yes" data-bind="checked:unionTerritory" />Yes
                 <input type="radio" value="No" data-bind="checked:unionTerritory" />No
             </label>-->
-            <div class="but">
+            <!--<div class="but">
                 <button data-bind="click:newRegisterDetails"><b>View your Details here</b></button>
                 <form data-bind="text:details"></form>
-            </div>
+            </div>-->
         </div>
         <div id="TranClick">
-            <h2>Tranferring Registrations Details</h2>
-
+            <!--<h2>Tranferring Registrations Details</h2>-->
             <b>
                 <!--<label>
                     Is It Govt Vehicle..?<br><input type="radio" value="Yes" data-bind="checked:govtVehicle" />Yes
@@ -41,26 +46,28 @@
             <!--<button data-bind="click:govtVehicleType"><b>Submit</b></button>
             <form data-bind="text:govtDetails"></form>-->
             <b>
-                <label>Vehicle Type <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></label>
-                <br />
-                <label>Select Transfer Registration Types<select data-bind="options:transfer,value:transferSelected"></select></label>
+                <!--<label>Vehicle Type <select data-bind="options:vehicleType,value:vehicleTypeSelected"></select></label>
+                <br />-->
+                <label>Enter state transfer from</label><input type="text" id="disable" data-bind="value:transferFrom" /><br />
+                <label>Enter state transfer to</label><input type="text" id="disable" data-bind="value:transferTo" />
+                <!--<label>Select Transfer Registration Types<select id="disable" data-bind="options:transfer,value:transferSelected"></select>--></label>
                 <br />
                 <!-- <label>Manufacture Date of vehicle:</label><input type="date" data-bind="value:manufactureDate" /><br />-->
-                <label>Manufactured Year of vehicle:</label><input type="text" data-bind="value:manufactureYear" /><br />
+                <label>Manufactured Year of vehicle:</label><input type="text" id="disable" data-bind="value:manufactureYear" /><br />
                 <label>
-                    Is It Govt Vehicle..?<br><input type="radio" value="Yes" data-bind="checked:govtVehicle" />Yes
-                    <input type="radio" value="No" data-bind="checked:govtVehicle" />No
+                    Is It Govt Vehicle..?<br><input type="radio" value="Yes" id="disable" data-bind="checked:govtVehicle" />Yes
+                    <input type="radio" value="No" id="disable" data-bind="checked:govtVehicle" />No
                 </label><br />
                 <label>
-                    Is It Fancy Number..?<br><input type="radio" value="Yes" data-bind="checked:fancyNumber" />Yes
-                    <input type="radio" value="No" data-bind="checked:fancyNumber" />No
+                    Is It Fancy Number..?<br><input type="radio" value="Yes" id="disable" data-bind="checked:fancyNumber" />Yes
+                    <input type="radio" value="No" id="disable" data-bind="checked:fancyNumber" />No
                 </label>
             </b>
-            <br /><br />
-            <div class="but">
-                <button data-bind="click:transferRegisterDetails"><b>View your Details here</b></button>
-                <form data-bind="text:transDetails"></form>
-            </div>
+        </div>
+        <br /><br />
+        <div class="but">
+            <button data-bind="click:transferRegisterDetails"><b>Details</b></button>
+            <form data-bind="text:transDetails"></form>
         </div>
     </div>
     <div class="material">

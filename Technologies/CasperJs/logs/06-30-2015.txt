@@ -1,4 +1,5 @@
 www.google.com opened 
-www.amazon.com opened 
-www.murthy.com opened 
-www.deals2buy.com opened 
+www.google.comwww.amazon.com opened 
+www.amazon.comwww.murthy.com opened 
+www.murthy.comwww.deals2buy.com opened 
+www.deals2buy.com

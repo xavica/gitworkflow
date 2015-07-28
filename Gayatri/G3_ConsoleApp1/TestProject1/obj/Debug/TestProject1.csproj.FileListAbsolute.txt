@@ -1,7 +1,0 @@
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\bin\Debug\TestProject1.dll
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\bin\Debug\TestProject1.pdb
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\bin\Debug\MyClassLibrary_G3.dll
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\bin\Debug\MyClassLibrary_G3.pdb
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\obj\Debug\ResolveAssemblyReference.cache
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\obj\Debug\TestProject1.dll
-F:\Practise_C#\G3_ConsoleApp1\TestProject1\obj\Debug\TestProject1.pdb

@@ -39,11 +39,11 @@ button {
     font-size: 18px;
 }
 
-.but button {
+.but button, .butt button {
     background-color: darkcyan;
     color: yellow;
     height: 45px;
-    width: 200px;
+    /*width: 200px;*/
     font-size: 18px;
 }
 
@@ -56,9 +56,9 @@ button:hover {
 	background-color:orange;
 /*	float:left;
 }*/
-#newClick, #TranClick {
+/*#newClick, #TranClick {
     display: none;
-}
+}*/
 
 form {
     font-size: 22px;

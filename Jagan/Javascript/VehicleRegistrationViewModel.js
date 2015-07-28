@@ -6,11 +6,14 @@ function VehicleRegistrationViewModel() {
     that.vehicleTypeSelected = ko.observable('');
     that.region = ['Select.....', 'Westeren', 'Southern', 'Eastern', 'Northen', 'UnionTerritory'];
     that.regionSelected = ko.observable('');
-    that.transfer = ['Select.....', 'to A Different State', 'to a state in different region','within the State(local)'];
+    that.transfer = ['Select.....', 'to A Different State', 'to a state in different region', 'within the State(local)'];
     that.transferSelected = ko.observable('');
     that.manufactureYear = ko.observable('');
+    that.transferFrom = ko.observable('');
+    that.transferTo = ko.observable('');
     that.registerFee = '';
     that.transferFee = '';
+    that.final = ko.observable('');
     that.details = ko.observable('');
     that.transDetails = ko.observable('');
     that.selectedArray = { 'Twowheelers': 200, 'Threewheelers': 300, 'Fourwheelers': 400, 'MorethanFourwheelers': 1000 };
@@ -80,7 +83,7 @@ function VehicleRegistrationViewModel() {
                     }
                 }
                 else if (that.transferSelected() === 'to A Different State' || that.transferSelected() === 'to a state in different region') {
-                    that.transferFee = (that.selectedArray[that.vehicleTypeSelected()] / 2) - ((that.selectedArray[that.vehicleTypeSelected()] / 2) * that.transferType[that.transferSelected()] / 100);
+                    that.transferFee = (that.selectedArray[that.vehicleTypeSelected()]) - ((that.selectedArray[that.vehicleTypeSelected()]) * that.transferType[that.transferSelected()] / 100);
                     if (that.manufactureYear() < 2000 && that.fancyNumber() === 'Yes') {
                         that.transferFee = that.transferFee * 3 * 10;
                     }
@@ -103,3 +106,11 @@ function VehicleRegistrationViewModel() {
     };
 };
 ko.applyBindings(new VehicleRegistrationViewModel());
+
+
+$('input:radio[name="radionew"]').change(function () {
+    if ($(this).val() === 'New') {
+        $('#disable,#disable1').attr('disabled', true) && $('#newselection').attr('disabled', false);
+    } else if ($(this).val() === 'Transfer')
+        $('#newselection').attr('disabled', true) && $('#disable,#disable1').attr('disabled', false);
+});
